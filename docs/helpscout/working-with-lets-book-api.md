@@ -1,5 +1,4 @@
-Working with Let's Book API
-===========================
+# Working with Let's Book API
 
 Let's Book has an API that allows you to connect the system with third-party software.
 
@@ -11,19 +10,14 @@ Contact Us
 
 Last updated on January 26, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

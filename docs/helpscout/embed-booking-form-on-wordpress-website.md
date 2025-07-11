@@ -1,5 +1,4 @@
-Embed booking form on Wordpress website
-=======================================
+# Embed booking form on Wordpress website
 
 To add the booking form to your WordPress website, follow these steps:
 
@@ -19,19 +18,14 @@ Contact Us
 
 Last updated on November 21, 2024
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

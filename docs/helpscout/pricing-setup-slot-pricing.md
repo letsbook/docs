@@ -1,19 +1,17 @@
-Pricing - Setup slot pricing
-============================
+# Pricing - Setup slot pricing
 
-Walkthrough
------------
+## Walkthrough
 
 Walkthrough: Setting up new slot pricing. Make sure you have created a slot schedule first.
 
 #### 1. Basic information
 
-* Give this slot pricing setup a name – we used 'Default - summer' – and choose whether VAT should be charged.
-* Select the slot schedule that the prices will apply to. In our case that's 'Default summer slots'.
+- Give this slot pricing setup a name – we used 'Default - summer' – and choose whether VAT should be charged.
+- Select the slot schedule that the prices will apply to. In our case that's 'Default summer slots'.
 
-### 
+###
 
-* Set the prices for each slot. The yellow dots indicate where something is still missing.
+- Set the prices for each slot. The yellow dots indicate where something is still missing.
 
 Do you want to add something on top of the standard prices? Then choose '**add pricing element**'.In this example, customers will pay $5 extra for every passenger:
 
@@ -49,19 +47,14 @@ Contact Us
 
 Last updated on July 12, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

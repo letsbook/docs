@@ -1,8 +1,6 @@
-Schedules - Setup weekly schedule
-=================================
+# Schedules - Setup weekly schedule
 
-Walkthrough
------------
+## Walkthrough
 
 To set up a weekly schedule, go to the schedules overview page and click new weekly schedule.
 
@@ -18,8 +16,8 @@ See an extra explanation of the interface with an example of how it would work i
 
 There are two options for setting trip duration:
 
-* **Fixed lengths**: Offer a limited number of duration options.
-* **Within Range**: Determine conditions and let the platform generate a list of durations.
+- **Fixed lengths**: Offer a limited number of duration options.
+- **Within Range**: Determine conditions and let the platform generate a list of durations.
 
 #### Fixed lengths example
 
@@ -57,19 +55,14 @@ Contact Us
 
 Last updated on January 26, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

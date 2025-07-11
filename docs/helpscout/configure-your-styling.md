@@ -1,16 +1,10 @@
-Configure your styling
-======================
+# Configure your styling
 
-  
-
-Styling for your brand
-----------------------
+## Styling for your brand
 
 The booking form will sit right on top of your website – like it belongs there. The closer it matches your company branding, the more likely customers are to hit that “book now” button. A consistent look and feel builds trust and makes the whole booking (and sailing!) experience seamless.
 
 To style it your way: head over to **Styling**
-
-  
 
 **1. Upload Logo**
 
@@ -40,19 +34,14 @@ Contact Us
 
 Last updated on December 17, 2024
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

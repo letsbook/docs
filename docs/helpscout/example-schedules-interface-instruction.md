@@ -1,5 +1,4 @@
-Schedules - Interface example
-=============================
+# Schedules - Interface example
 
 Here is an example schedule with explanation:
 
@@ -13,19 +12,14 @@ Contact Us
 
 Last updated on January 26, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

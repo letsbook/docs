@@ -1,5 +1,4 @@
-Remote boat control: Implementation guide
-=========================================
+# Remote boat control: Implementation guide
 
 **In short**
 
@@ -15,13 +14,11 @@ Connect your boats to Let's Book. At the moment this can be done via Trackunit, 
 
 Via Notifications, you can manage what information your customers receive about their booking and trip. For example, you can include additional instructions in the booking confirmation to explain how they can start the boat themselves.
 
-* **Text messages**
+- **Text messages**
 
-  You can add extra text messages to a notification flow by clicking ‘Add.’ Schedule messages to send, for example, one day or 15 minutes before the trip starts. These include a link to the booking detail page with the start interface.
+    You can add extra text messages to a notification flow by clicking ‘Add.’ Schedule messages to send, for example, one day or 15 minutes before the trip starts. These include a link to the booking detail page with the start interface.
 
-  Due to country-specific regulations, the text cannot be edited, and supported countries are limited. Currently, messages are sent in Dutch, English, Danish, Spanish, Swedish, Italian, or Portuguese. For other languages, the message will be in English.
-
-  
+    Due to country-specific regulations, the text cannot be edited, and supported countries are limited. Currently, messages are sent in Dutch, English, Danish, Spanish, Swedish, Italian, or Portuguese. For other languages, the message will be in English.
 
 ### **3. Manage texts in the interface**
 
@@ -35,19 +32,14 @@ Contact Us
 
 Last updated on December 19, 2024
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

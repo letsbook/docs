@@ -1,8 +1,6 @@
-Pricing - Setup simple pricing
-==============================
+# Pricing - Setup simple pricing
 
-Walkthrough
------------
+## Walkthrough
 
 This page takes you through the simple pricing setup flow.
 
@@ -48,19 +46,14 @@ Contact Us
 
 Last updated on September 20, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

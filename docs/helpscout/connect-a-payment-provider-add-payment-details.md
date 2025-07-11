@@ -1,55 +1,50 @@
-Connect payment provider
-========================
+# Connect payment provider
 
-Quick to: What's a payment provider  •  Connect Stripe  •  Connect Mollie  •  Go live
+Quick to: What's a payment provider • Connect Stripe • Connect Mollie • Go live
 
-What's a payment provider
--------------------------
+## What's a payment provider
 
 A payment provider (also called a PSP or payment service provider) allows you to accept payments from customers — including credit cards, iDEAL, bank transfers, and more.
 
 👉 You need to choose a provider before you can start receiving payments. This choice is final — switching later isn’t possible.
 
-  
-
-How to connect Stripe
----------------------
+## How to connect Stripe
 
 1. **Create an account**
 
-   Sign up at Stripe.
+    Sign up at Stripe.
+
 2. **Connect in Let’s Book**
 
-   Go to Integrations in Let’s Book and click **‘Connect Stripe’**.
+    Go to Integrations in Let’s Book and click **‘Connect Stripe’**.
+
 3. **Follow Stripe’s setup steps**
 
-   You’ll be redirected to Stripe to enter your business details.
+    You’ll be redirected to Stripe to enter your business details.
+
 4. **Set Stripe as your active provider**
 
-   Back in Let’s Book, under **Current Payment Provider**, select **Stripe**. The default is **Demo** — you can switch to Stripe when you're ready to accept real payments.
+    Back in Let’s Book, under **Current Payment Provider**, select **Stripe**. The default is **Demo** — you can switch to Stripe when you're ready to accept real payments.
 
-  
-
-How to connect Mollie
----------------------
+## How to connect Mollie
 
 1. **Create an account**
 
-   Sign up at Mollie.
+    Sign up at Mollie.
+
 2. **Connect in Let’s Book**
 
-   Go to Integrations and click **‘Connect via Mollie’**.
+    Go to Integrations and click **‘Connect via Mollie’**.
+
 3. **Follow Mollie’s setup steps**
 
-   Complete your business details at Mollie.
+    Complete your business details at Mollie.
+
 4. **Set Mollie as your active provider**
 
-   Back in Let’s Book, choose **Mollie** under **Current Payment Provider**.
+    Back in Let’s Book, choose **Mollie** under **Current Payment Provider**.
 
-  
-
-Go live
--------
+## Go live
 
 By default, your account is set to **Demo mode** — perfect for testing.
 
@@ -61,19 +56,14 @@ Contact Us
 
 Last updated on April 23, 2025
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

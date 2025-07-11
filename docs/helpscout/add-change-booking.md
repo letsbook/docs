@@ -1,8 +1,6 @@
-Add or cancel a Booking
-=======================
+# Add or cancel a Booking
 
-Create a booking
-----------------
+## Create a booking
 
 1. **Add a new booking**
 
@@ -20,10 +18,7 @@ Then confirm to create the booking.
 
 Once the booking is created, it will appear in the booking overview. You can view or edit the booking details and send a payment request to the customer.
 
-  
-
-**Cancel or delete a booking**
-------------------------------
+## **Cancel or delete a booking**
 
 **How to cancel a booking**
 
@@ -39,19 +34,14 @@ Contact Us
 
 Last updated on June 17, 2025
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

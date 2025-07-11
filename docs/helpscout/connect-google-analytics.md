@@ -1,9 +1,6 @@
-Tracking conversion with Google analytics
-=========================================
+# Tracking conversion with Google analytics
 
 You can let Google measure how many successful bookings you achieve with, for example, an ads campaign.
-
-  
 
 **Here's how:**
 
@@ -11,8 +8,6 @@ You can let Google measure how many successful bookings you achieve with, for ex
 2. Create a 'Thank you' page on your own website. Then use the URL to that page to set up a custom return URL that customers will see when their payment was successful. Let's Book adds info about the booking and payment to that URL.
 3. Create a campaign via https://ads.google.com/. Is this new to you? Maybe these tips from Google can help you.
 4. Copy and paste the following script onto your 'Thank you' page. Make sure it is placed after the GA4 or GTM script. You can change this script to your liking, but it essentially forwards the relevant data, which was added to the URL by Let's Book, to Google Analytics.
-
-  
 
 ```
 <script>
@@ -25,7 +20,7 @@ You can let Google measure how many successful bookings you achieve with, for ex
 
 var args = new URL(document.location).searchParams;
 
-  
+
 
 
 // Do not record a purchase when there's no lbPaymentRequestId
@@ -42,7 +37,7 @@ return;
 
 }
 
-  
+
 
 
 var eventDetails = {
@@ -91,7 +86,7 @@ item_category2: args.get('lbBoatModelName'),
 
 };
 
-  
+
 
 
 var purchaseEventSent = false;
@@ -112,7 +107,7 @@ return;
 
 }
 
-  
+
 
 
 // Attempt to use gtag first (GA4)
@@ -129,7 +124,7 @@ gtag('event', 'purchase', eventDetails);
 
 purchaseEventSent = true;
 
-  
+
 
 
 return;
@@ -138,7 +133,7 @@ return;
 
 }
 
-  
+
 
 
 // If gtag is not available, use dataLayer which is part of GTM
@@ -163,7 +158,7 @@ purchaseEventSent = true;
 
 }
 
-  
+
 
 
 addEventListener('load', sendPurchaseEvent);
@@ -189,19 +184,14 @@ Contact Us
 
 Last updated on October 12, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

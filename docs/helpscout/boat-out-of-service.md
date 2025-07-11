@@ -1,24 +1,21 @@
-Take a boat out of service
-==========================
+# Take a boat out of service
 
-Remove a boat (temporarily) from rental
----------------------------------------
+## Remove a boat (temporarily) from rental
 
 1
-:   **Find the specific boat**  
-     Go to the boat model overview, click the model and find the specific boat in the list.
+: **Find the specific boat**  
+ Go to the boat model overview, click the model and find the specific boat in the list.
 
 2
-:   **Take a boat out of service** Click the boat and choose "temporarily out of service" to immediately remove it from rental. You can do this, for example, if the boat is undergoing maintenance or repair.
+: **Take a boat out of service** Click the boat and choose "temporarily out of service" to immediately remove it from rental. You can do this, for example, if the boat is undergoing maintenance or repair.
 
 3
-:   **Set when it's back in service** If known, set the date when the boat will be available for rental again.
+: **Set when it's back in service** If known, set the date when the boat will be available for rental again.
 
 4
-:   **Check your planning** Check the planning to see if the boat's removal causes any issues and adjust bookings as needed.
+: **Check your planning** Check the planning to see if the boat's removal causes any issues and adjust bookings as needed.
 
-Example
--------
+## Example
 
 In this example, we remove a boat from rental immediately and set it to be available a few days later.
 
@@ -30,19 +27,14 @@ Contact Us
 
 Last updated on January 26, 2023
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use

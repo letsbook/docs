@@ -1,5 +1,4 @@
-Embed the booking form on a Wix website
-=======================================
+# Embed the booking form on a Wix website
 
 Here's how you can make the form appear on your Wix website:
 
@@ -19,19 +18,14 @@ Contact Us
 
 Last updated on December 18, 2024
 
-
-
-
-
-
 Toggle Search
 
 ### Categories
 
-* Getting Started
-* Bookings
-* Inventory
-* Rental Method
-* Settings
-* Account
-* How to use
+- Getting Started
+- Bookings
+- Inventory
+- Rental Method
+- Settings
+- Account
+- How to use
