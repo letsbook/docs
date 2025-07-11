@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <path pathLength="100" stroke-width="28" stroke-linecap="round" fill="none" stroke="#ffffff" d="M 128 142 L 94 141 C 76 141 55 142 45 149 C 25 162 23 186 31 198 C 39 211 55 221 81 211 C 105 201 125 148 128 142 C 128 142 163 87 163 68 C 163 48 147 30 127 30 C 108 30 92 48 92 68 C 92 86 124 137 128 142 C 128 142 158 201 174 211 C 192 221 215 216 225 199 C 235 182 227 159 210 149"/>
+</svg>

@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'LetsBook Documentation',
-  tagline: 'Your comprehensive guide to LetsBook',
+  title: 'Let\'s Book Documentation',
+  tagline: 'Your comprehensive guide to Let\'s Book',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -73,10 +73,11 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'LetsBook Documentation',
+      title: 'Let\'s Book documentation',
       logo: {
         alt: 'LetsBook Logo',
         src: 'img/logo.svg',
+        srcDark: 'img/logo-dark.svg',
       },
       items: [
         {
