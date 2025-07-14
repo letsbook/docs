@@ -4,7 +4,6 @@
     padding: 6rem 0;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 .Root::before {
@@ -24,6 +23,7 @@
 }
 
 .Title {
+    color: white;
     font-family:
         'IBM Plex Sans',
         -apple-system,
@@ -129,6 +129,72 @@
     border-color: #12c19b;
 }
 
+.SearchDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 0.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.SearchResult {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.SearchResult:hover {
+    background-color: #f8fafc;
+}
+
+.SearchResult:last-child {
+    border-bottom: none;
+}
+
+.SearchResultCategory {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #081690;
+    margin-bottom: 0.25rem;
+}
+
+.SearchResultSubcategory {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #475569;
+    margin-bottom: 0.5rem;
+}
+
+.SearchResultText {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+.SearchResultText mark,
+.SearchResultText .algolia-docsearch-suggestion--highlight {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 0.1em 0.2em;
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+.SearchNoResults {
+    padding: 2rem;
+    text-align: center;
+    color: #64748b;
+    font-style: italic;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .Root {
@@ -147,5 +213,20 @@
     .SuggestionChip {
         width: 100%;
         text-align: center;
+    }
+
+    .SearchDropdown {
+        max-height: 300px;
+        margin-top: 0.25rem;
+    }
+
+    .SearchResult {
+        padding: 0.75rem;
+    }
+
+    .SearchResultCategory,
+    .SearchResultSubcategory,
+    .SearchResultText {
+        font-size: 0.8rem;
     }
 }

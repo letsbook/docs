@@ -46,7 +46,7 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
-                    editUrl: 'https://github.com/letsbook/docs/tree/main/',
+                    editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
                 },
                 blog: {
                     showReadingTime: true,
@@ -56,8 +56,7 @@ const config: Config = {
                     },
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/letsbook/docs/tree/main/',
+                    editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
                     // Useful options to enforce blogging best practices
                     onInlineTags: 'warn',
                     onInlineAuthors: 'warn',
@@ -70,11 +69,13 @@ const config: Config = {
         ],
     ],
 
+    plugins: [require.resolve('docusaurus-lunr-search')],
+
     themeConfig: {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'Let\'s Book documentation',
+            title: 'Let\'s Book Support',
             logo: {
                 alt: 'LetsBook Logo',
                 src: 'img/logo.svg',
@@ -91,12 +92,7 @@ const config: Config = {
                     to: '/blog',
                     label: 'Blog',
                     position: 'left',
-                },
-                {
-                    href: 'https://github.com/letsbook/docs',
-                    label: 'GitHub',
-                    position: 'right',
-                },
+                }
             ],
         },
         footer: {

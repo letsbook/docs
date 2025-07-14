@@ -30,7 +30,8 @@
 
 ## Build and debug
 
-- **Building the app is done using docusaurus built-in bundler.** Use `npm run build` to build the app. Never use `npm run start`.
+- **Don't use watch mode.** So NEVER use `npm run start` or `npm run serve`.
+- **Building the app is done using docusaurus built-in bundler.** Use `npm run build` to build the app. 
 - **Never check prettier, just fix potential issues** Use `npm run prettier` to run it.
 - **Always check the types after a change** Use `npx tsc` to run it.
 - **Debugging the app is done using the browser's developer tools.** Use the "Sources" tab to view and debug the code.
