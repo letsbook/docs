@@ -83,10 +83,11 @@ const config: Config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
+            style: 'primary',
             title: 'Let\'s Book Support',
             logo: {
                 alt: 'LetsBook Logo',
-                src: 'img/logo.svg',
+                src: 'img/logo-dark.svg',
                 srcDark: 'img/logo-dark.svg',
             },
             items: [

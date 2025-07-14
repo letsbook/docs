@@ -1,6 +1,6 @@
 .Root {
-    background: #081690;
-    color: white;
+    background: var(--ifm-color-primary);
+    color: var(--ifm-color-content-inverse);
     padding: 6rem 0;
     text-align: center;
     position: relative;
@@ -23,7 +23,7 @@
 }
 
 .Title {
-    color: white;
+    color: var(--ifm-color-content-inverse);
     font-family:
         'IBM Plex Sans',
         -apple-system,
