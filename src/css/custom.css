@@ -18,6 +18,8 @@
     --ifm-heading-font-family: "Rubik", -apple-system, BlinkMacSystemFont, sans-serif;
     --ifm-font-family-base: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
 
+    --ifm-spacing-horizontal: 2rem;
+
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
