@@ -1,25 +1,16 @@
 # Billing
 
-Quick to: [Enter billing details](#enter-billing-details) • [What's on the invoice](#whats-on-the-invoice)
+Quick links to: [Enter billing details](#enter-billing-details) • [What's on the invoice](#whats-on-the-invoice)
 
 ## Enter billing details
 
 Before you go live, we need information on how we can send you invoices. Go to Billing and:
 
-1
-: #### **Enter invoice address**
+1. **Enter invoice address**: This will be used on the invoice
 
-    This will be used on the invoice
+2. **Enter a billing contact**: This is the person and email address the invoice will be sent to
 
-2
-: #### Enter a billing contact
-
-    This is the person and email address the invoice will be sent to
-
-3
-: #### Tax ID
-
-    You can enter your Tax ID here. If you are registered in the EU (outside of the Netherlands), no tax will be charged on bills (VAT reverse-charged).
+3. **Tax ID**: You can enter your Tax ID here. If you are registered in the EU (outside of the Netherlands), no tax will be charged on bills (VAT reverse-charged).
 
 ## What's on the invoice
 
@@ -34,8 +25,4 @@ Additionally, there may be platform costs charged for each transaction. If you a
 
 ## Pausing my account
 
-I want to pause or cancel my account
-
-###
-
-###
+If you want to pause or cancel your account, please contact our support team for assistance.

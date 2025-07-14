@@ -85,5 +85,3 @@ Your bookings will now show up in your Apple Calendar.
 Your bookings will now sync to Outlook based on its refresh settings.
 
 **Please note:** some calendar apps, like **Samsung Calendar**, _don't_ accept iCal feeds. You would need to add the feed to a connected calendar, like **Google**. The iCal feed would then be imported from that source.
-
-###

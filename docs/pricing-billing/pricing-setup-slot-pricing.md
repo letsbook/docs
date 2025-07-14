@@ -9,7 +9,7 @@ Walkthrough: Setting up new slot pricing. Make sure you have created a slot sche
 - Give this slot pricing setup a name – we used 'Default - summer' – and choose whether VAT should be charged.
 - Select the slot schedule that the prices will apply to. In our case that's 'Default summer slots'.
 
-###
+#### 2. Set slot prices
 
 - Set the prices for each slot. The yellow dots indicate where something is still missing.
 

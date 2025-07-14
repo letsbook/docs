@@ -23,8 +23,6 @@ We have defined several default team roles:
 1. Go to the team overview and click roles & permissions
 2. Click 'add', and adjust the settings
 
-###
-
 ### Edit hierarchy
 
 Determine which role can create and delete other roles. The role below in the list cannot remove the one above it. The most important role is administrator, which will always exist.
@@ -38,5 +36,3 @@ Determine which role can create and delete other roles. The role below in the li
 2. Click add team member
 3. Enter the email address and select the role for the new team member
 4. The new team member will receive an invitation
-
-###

@@ -10,8 +10,6 @@ A slot schedule is a collection of slots that occur throughout the week. Choose 
 
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/62166f32528a5515a2fcbcf4/file-YNnoFp9lm0.png)
 
-###
-
 ### 2. Create slots
 
 To create slots for this schedule, click "Add new" and set up the timeline for the slot.
@@ -31,8 +29,6 @@ In this example, the multi-day 'Weekend Wanderlust' slot runs from Friday 4:00 P
 You can also give customers the option to pick up the boat before the initial pick-up time (10 minutes in this example).
 
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/621672141173d072c69fb134/file-P4P5ArFHZB.png)
-
-###
 
 ### 3. Save slot schedule
 

@@ -1,6 +1,6 @@
 # Text & Translations
 
-Quick to: [Change copy](#change-copy) • [Language packs](#language-packs) • [Variables](#variables) • [Manually add translation](#add-manual-translated-language)
+Quick links to: [Change copy](#change-copy) • [Language packs](#language-packs) • [Variables](#variables) • [Manually add translation](#add-manual-translated-language)
 
 ## Change copy
 

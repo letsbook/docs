@@ -1,14 +1,12 @@
 # About Rental Methods
 
-Quick to: [Introduction](#introduction) • [Setup individual parts](#1-set-the-individual-parts) • [Combine in Rental Setup](#2-combine-them-in-the-rental-setup)
+Quick links to: [Introduction](#introduction) • [Setup individual parts](#1-set-the-individual-parts) • [Combine in Rental Setup](#2-combine-them-in-the-rental-setup)
 
 ## Introduction
 
 The Rental Method is the foundation of the Let's Book system. In a nutshell, it allows you to link your schedule, pricing, and notifications to a combination of a dock and a boat type. Here's how it works:
 
-1. Set the individual parts
-
----
+### 1. Set the individual parts
 
 First create your individual settings for:
 
@@ -19,21 +17,13 @@ First create your individual settings for:
 
 You can create different versions of the above to allow flexibility, such as using different prices or schedules for different boats.
 
-2. Combine them in the Rental Setup
+### 2. Combine them in the Rental Setup
 
----
+1. **Find dock / boat combination**: To set up your rental method, go to the Rental Setup section and click on the dock/boat model combination you want to configure.
 
-1. **Find dock / boat combination**
+2. **Set timings and select settings**: Choose the period in which the rules will apply and select the schedule, pricing, confirmation method, and notification flow.
 
-    To set up your rental method, go to the Rental Setup section and click on the dock/boat model combination you want to configure.
-
-2. **Set timings and select settings**
-
-    Choose the period in which the rules will apply and select the schedule, pricing, confirmation method, and notification flow.
-
-3. **Save**
-
-    Save changes and test booking form to ensure proper functionality.
+3. **Save**: Save changes and test booking form to ensure proper functionality.
 
 ## Transition period
 
