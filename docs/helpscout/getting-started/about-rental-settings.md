@@ -1,6 +1,6 @@
 # About Rental Methods
 
-Quick to: Introduction • Setup individual parts • Combine in Rental Setup
+Quick to: [Introduction](#introduction) • [Setup individual parts](#1-set-the-individual-parts) • [Combine in Rental Setup](#2-combine-them-in-the-rental-setup)
 
 ## Introduction
 

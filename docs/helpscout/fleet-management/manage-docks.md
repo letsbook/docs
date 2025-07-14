@@ -1,6 +1,6 @@
 # Manage Docks
 
-Quick to: Add dock • Docked boats
+Quick to: [Add dock](#add-dock) • [Docked boats](#docked-boats)
 
 ## Add dock
 

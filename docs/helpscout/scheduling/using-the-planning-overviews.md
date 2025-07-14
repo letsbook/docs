@@ -1,6 +1,6 @@
 # Using the Planning Overview
 
-All views, quick to: Timeline Availability Fleet
+All views, quick to: [Timeline](#1-timeline) • [Availability](#2-availability) • [Fleet](#3-fleet)
 
 1. Timeline
 
