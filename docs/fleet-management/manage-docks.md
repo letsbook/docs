@@ -1,6 +1,5 @@
 # Manage Docks
 
-Quick links to: [Add dock](#add-dock) • [Docked boats](#docked-boats)
 
 ## Add dock
 

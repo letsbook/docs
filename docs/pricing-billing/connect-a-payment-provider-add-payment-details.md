@@ -1,6 +1,5 @@
 # Connect payment provider
 
-Quick links to: [What's a payment provider](#whats-a-payment-provider) • [Connect Stripe](#how-to-connect-stripe) • [Connect Mollie](#how-to-connect-mollie) • [Go live](#go-live)
 
 ## What's a payment provider
 

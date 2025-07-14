@@ -1,6 +1,5 @@
 # Manage Add-ons
 
-Quick links to: [Adding add-on](#add-add-on) • [tiles in the booking form](#add-on-on-booking-form) • [Stock](#working-with-stock)
 
 ## Add add-on
 

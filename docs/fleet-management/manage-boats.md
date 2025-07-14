@@ -1,6 +1,5 @@
 # Manage Boats
 
-Quick links to: [Add boat model](#add-boat-model) • [Edit a boat](#edit-specific-boats) • [Move a boat](#move-a-boat) • [Take out of service](#take-a-boat-out-of-service)
 
 ## Add boat model
 

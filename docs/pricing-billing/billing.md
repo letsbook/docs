@@ -1,6 +1,5 @@
 # Billing
 
-Quick links to: [Enter billing details](#enter-billing-details) • [What's on the invoice](#whats-on-the-invoice)
 
 ## Enter billing details
 
