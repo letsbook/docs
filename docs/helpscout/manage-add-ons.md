@@ -46,21 +46,3 @@ Go to your categories and select from the following options:
 #### Working with stock
 
 ## At the moment you cannot keep track of product stock via Let's Book.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 26, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

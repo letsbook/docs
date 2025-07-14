@@ -50,29 +50,3 @@ In this example, multi-day slots with a pickup between June 1 and June 30 are gr
 ## Documents
 
 When you connect WaiverForever to Let's Book, you can also select which documents your renters must sign when they book boats from this dock. Read more about it here.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 19, 2024
-
-### Related Articles
-
-- Pricing
-- Manage Boats
-- Schedules
-- Confirmation methods
-- Manage Docks
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

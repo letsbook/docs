@@ -39,21 +39,3 @@ I want to pause or cancel my account
 ###
 
 ###
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on January 26, 2023
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

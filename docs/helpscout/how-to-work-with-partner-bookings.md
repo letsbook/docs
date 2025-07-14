@@ -25,21 +25,3 @@ Easily track bookings within your Let's Book dashboard, using the unique partner
 You can also use the partner code to set specific pricing. Go to pricing and choose a setup from 'slot pricing' or 'flexible pricing'. When setting a price, under "conditions", select "booked via partner" and then proceed with the desired settings.
 
 By following these steps, you can efficiently manage partner bookings and foster collaboration with your affiliates. For additional assistance or inquiries, reach out to our dedicated support team at support@letsbook.com.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on November 21, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

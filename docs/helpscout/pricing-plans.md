@@ -39,21 +39,3 @@ Contact support@lets-book.com to learn more.
 **Switch plan**
 
 Easily switch plans in the plan section in your account at any time.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 17, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

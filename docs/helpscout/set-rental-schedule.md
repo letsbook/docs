@@ -35,21 +35,3 @@ Weekly Schedules allow you to set flexible availability within your chosen openi
 - Allows overlapping start and end times, which might require more oversight.
 
 Learn how to setup a weekly schedule
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 24, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

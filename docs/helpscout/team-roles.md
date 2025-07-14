@@ -47,21 +47,3 @@ Determine which role can create and delete other roles. The role below in the li
 4. The new team member will receive an invitation
 
 ###
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on January 26, 2023
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

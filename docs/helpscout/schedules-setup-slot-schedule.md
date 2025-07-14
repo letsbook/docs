@@ -41,21 +41,3 @@ After creating your slots, the schedule should look something like this:
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/62166e9d1173d072c69fb116/file-StMtJXqt3l.png)
 
 After saving, you can proceed to the pricing section to set the costs for this schedule.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on May 16, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

@@ -26,21 +26,3 @@ Each custom question offers flexible settings:
 Click 'rearrange' to drag and drop questions in a logical flow.
 
 Responses are displayed on the booking detail page.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on January 23, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

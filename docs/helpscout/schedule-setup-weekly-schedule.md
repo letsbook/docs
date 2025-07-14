@@ -48,21 +48,3 @@ In this example you'll have 30 minutes after every trip for cleaning.
 ### 5. Save
 
 Save the schedule and connect it to a boat/dock combination in the Rental setup
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on January 26, 2023
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

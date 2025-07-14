@@ -38,21 +38,3 @@ To ensure customers know they need to sign a waiver, edit your booking confirmat
 By completing this step, waivers will be fully integrated into your Let's Book system, ensuring all necessary legal documents are properly managed.
 
 Need help? Our support team is ready to assist!
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 27, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

@@ -40,21 +40,3 @@ Add a deposit that can be refunded later. This example shows a deposit of €150
 ### 5. Save
 
 Save your pricing setup and apply it to the rental setup
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on July 12, 2023
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

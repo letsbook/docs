@@ -56,21 +56,3 @@ We won't automatically refund when a booking is canceled, so you can do the furt
 
 1. Select the customer type and view the Detail page.
 2. Click the three dots after 'Name & description' and choose 'Revoke'.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on March 14, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

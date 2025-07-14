@@ -27,21 +27,3 @@ This is a list of parameters to the return page. As a result, you can obtain mor
 | lbCurrency           | The currency of the paid amount                                                    |
 | lbCouponCode         | The applied coupon code. Will be `null` when no coupon is applied.                 |
 | lbPartnerCode        | The used partner code. Will be `null` when the booking is not linked to a partner. |
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on April 23, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

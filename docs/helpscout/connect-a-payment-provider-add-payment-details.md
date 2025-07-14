@@ -49,21 +49,3 @@ A payment provider (also called a PSP or payment service provider) allows you to
 By default, your account is set to **Demo mode** — perfect for testing.
 
 Once you’re ready to accept real payments, go to Integrations and choose **Stripe** or **Mollie**, click **Save**, and you’re live.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on April 23, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

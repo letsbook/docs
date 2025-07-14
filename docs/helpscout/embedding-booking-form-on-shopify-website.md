@@ -54,21 +54,3 @@ Shopify will take a moment to create a duplicate of your live theme.
 - Now link you buttons / tekst to this url's. The booking form will automatically open on top of your website.
 
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/661fec90e6d7a114e7690de0/file-o5Wdo9cMfX.png)
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on November 21, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

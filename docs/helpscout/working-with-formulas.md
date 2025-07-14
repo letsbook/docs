@@ -78,21 +78,3 @@ Use this function when you need to ensure a value does not go below a certain up
 - Use parentheses where necessary to maintain the correct order of operations.
 
 Following these guidelines will ensure your formulas always work correctly in Let's Book!
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 27, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

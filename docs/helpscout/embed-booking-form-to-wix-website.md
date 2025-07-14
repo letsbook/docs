@@ -11,21 +11,3 @@ Here's how you can make the form appear on your Wix website:
 7. At 'Place Code in': choose 'Head' and click Apply.
 
 From now on you can link texts and buttons to the url's you can generate at booking form settings. This will automatically open the booking form on your Wix website.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 18, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

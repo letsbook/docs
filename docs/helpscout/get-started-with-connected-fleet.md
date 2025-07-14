@@ -25,21 +25,3 @@ Via Notifications, you can manage what information your customers receive about 
 Fine-tune your interface texts via Text & languages. You’ll find the relevant copy in the 'Browse' section under 'Booking details'. This allows you to add specific directions or tips that are helpful for your customers.
 
 Once live, the booking detail page shows when a customer has picked, started, paused, or stopped a boat, or switched to another boat. You can also manually link boats to bookings from this page or via your fleet overview.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 19, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

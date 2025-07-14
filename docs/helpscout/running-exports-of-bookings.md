@@ -23,21 +23,3 @@ _ **Add-ons**
 2
 : Click the export icon and choose "Export Excel file." This will generate a file with all relevant information for processing financials.
 : ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/62c2bcc803382e4311cf0f68/file-RO5dxvEL1c.png)
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 26, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

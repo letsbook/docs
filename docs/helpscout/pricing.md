@@ -37,21 +37,3 @@ With this feature, you have the flexibility to pass booking fees directly to you
     - **Custom fee** - This gives you the option to work with a formula or a fixed amount.
 
 Once enabled, the fee will be added to the total price at checkout, ensuring clear cost breakdowns for your customers.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on March 4, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

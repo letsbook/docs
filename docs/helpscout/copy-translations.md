@@ -59,21 +59,3 @@ Choose a starting point for your translations when adding an unsupported languag
 - If you prefer to start fresh, you can create a new translation from scratch. While doing so, you'll have access to the reference text to guide you as you translate.
 
 \*Note that variables (words within `\{}`) should not be translated. However, if a variable contains another variable (e.g., `\{xxx \{yyy}}`), only translate the inner content `\{yyy}`.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 19, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

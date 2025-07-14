@@ -45,21 +45,3 @@ You can use the "add to timeline" button to schedule when a boat will be docked 
 ## Take a boat out of service
 
 To remove a boat from rental, select "out of service." This is useful if the boat is undergoing maintenance or otherwise unavailable for rent.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 26, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

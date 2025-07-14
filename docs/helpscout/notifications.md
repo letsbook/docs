@@ -65,25 +65,3 @@ Please note that regulations for sending automated text messages vary by country
 You can create different flows to tailor the information for specific boat types or locations. This allows you to include details such as directions to the jetty or special instructions for a particular boat.
 
 For example, renting a canoe for 2 hours requires far less communication than renting a yacht for several weeks. With multiple flows, you have full control over what information is shared and when.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 19, 2024
-
-### Related Articles
-
-- Remote boat control: Implementation guide
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

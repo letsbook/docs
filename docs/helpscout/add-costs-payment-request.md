@@ -26,21 +26,3 @@ In order to send out a request, a negative balance must first be created. So if 
 - On the Payment Request overview page, choose how to send the payment link (via email or text message).
 
 To revoke the request, click the three dots next to "details."
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 26, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

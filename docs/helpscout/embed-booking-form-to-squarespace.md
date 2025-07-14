@@ -12,21 +12,3 @@ In 3 steps you can make the form appear on your Squarespace website:
 : Go to the input field for the 'header' section and paste the Booking Form code. Hit 'Save'.
 
      To link to the booking form on your website, use the URL provided in step 2. This will open the booking form when clicked.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on November 25, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

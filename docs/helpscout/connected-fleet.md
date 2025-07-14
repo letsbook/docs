@@ -48,21 +48,3 @@ First make sure the hardware is installed in your boat. Then follow these steps:
 ### **Ready?**
 
 Then continue with further setting up your connected fleet
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on March 11, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

@@ -87,21 +87,3 @@ Your bookings will now sync to Outlook based on its refresh settings.
 **Please note:** some calendar apps, like **Samsung Calendar**, _don't_ accept iCal feeds. You would need to add the feed to a connected calendar, like **Google**. The iCal feed would then be imported from that source.
 
 ###
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 27, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

@@ -27,21 +27,3 @@ Choose a color palette that complements your brand color. These shades will be a
 Adjust the corner style for elements like buttons and background panels to match your design preferences.
 
 Preview the styling to confirm everything looks as intended, including the booking flow. You can update and fine-tune the styling anytime.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on December 17, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

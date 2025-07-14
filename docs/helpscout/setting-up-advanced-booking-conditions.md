@@ -306,21 +306,3 @@ If your expression isn't working as expected:
 ## Conclusion
 
 Expressions provide a flexible way to create custom booking conditions. By combining variables, operators, and functions, you can implement complex business rules without writing code.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 27, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

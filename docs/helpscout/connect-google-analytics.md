@@ -177,21 +177,3 @@ sendPurchaseEvent();
 
 
 ```
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on October 12, 2023
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

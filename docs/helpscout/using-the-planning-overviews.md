@@ -25,21 +25,3 @@ The Availability Chart offers a time-based overview of your fleet's availability
 The Fleet Overview screen gives you a snapshot of your boats’ current status. You can instantly see which boats are ready to start a trip, actively in use, or overdue for return. Detailed information, such as the primary renter and the last recorded action, ensures you're always informed about the current state of your fleet. This view is particularly useful for keeping your operations organized and responding quickly to issues, like delayed returns or unlinked bookings.
 
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/67768a4b7aa7755adceaea1d/file-g23EHoyZRz.png)
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on January 2, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

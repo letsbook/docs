@@ -9,21 +9,3 @@ To get started:
 - Want full control? You can turn off automatic suggestions per category or on the alternatives page.
 
 If no boats are available that day, we’ll suggest alternative time slots or dates — so your customers stay in the flow.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 27, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

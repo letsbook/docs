@@ -89,21 +89,3 @@ Events are dispatched on the `window` . If you want to show the booking form as 
 ### Using multiple booking forms on a single page
 
 It may sometimes be necessary to load multiple forms on one page. If you have multiple booking forms on the same page, you can add a `data-id` to both the container and the trigger. It can be any ID as long as they match.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 17, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

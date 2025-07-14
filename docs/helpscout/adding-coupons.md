@@ -45,21 +45,3 @@ C
 - On the detail page, you will find a button to export the codes to Excel.
 
 These exports can be helpful for finding a specific code or for sending to a copy shop to print physical coupons with unique codes.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 26, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

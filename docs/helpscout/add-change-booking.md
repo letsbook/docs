@@ -27,21 +27,3 @@ Once the booking is created, it will appear in the booking overview. You can vie
 3. Select **Cancel booking** from the menu.
 4. Enter a **reason for cancellation** when prompted.
 5. Confirm to cancel the booking.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 17, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

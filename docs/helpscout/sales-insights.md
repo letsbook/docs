@@ -13,21 +13,3 @@
 - Some tips:
 
 ![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5ec3f479042863474d1b00dc/images/6582cb23dcdba22513abac93/file-FGawzyTyOl.png)
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on March 5, 2024
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

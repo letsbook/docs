@@ -37,21 +37,3 @@ Coming soon..
 Setup 'immediate confirmation"
 
 Coming soon..
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on January 26, 2023
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use

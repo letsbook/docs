@@ -22,21 +22,3 @@ Go to your docks overview and hit add. Now enter
 ### Docked boats
 
 On the dock detail page, you can view which boats are currently docked at the location. Enter a date to see which boats are rented out at that time. To edit the boat placements, go to the boat section and select specific boats.
-
-Still need help?
-Contact Us
-Contact Us
-
-Last updated on June 26, 2025
-
-Toggle Search
-
-### Categories
-
-- Getting Started
-- Bookings
-- Inventory
-- Rental Method
-- Settings
-- Account
-- How to use
