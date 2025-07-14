@@ -29,15 +29,19 @@ In this section, you'll discover how to:
 ## Key Features
 
 ### Boat Management
+
 Efficiently organize your boat inventory with detailed configurations, specifications, and availability settings.
 
 ### Dock Organization
+
 Structure your marina or docking facilities for optimal boat placement and customer convenience.
 
 ### Add-on Services
+
 Expand your revenue streams by offering additional equipment, services, and upgrades to your customers.
 
 ### Connected Fleet
+
 Leverage technology to monitor and manage your boats remotely with real-time data and insights.
 
 ## Getting Started

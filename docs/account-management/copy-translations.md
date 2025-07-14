@@ -1,6 +1,5 @@
 # Text & Translations
 
-
 ## Change copy
 
 You can customize all text that your customers see to match your own style and preferences. Go to text & languages. Use **search** or **browse** to find the desired word or phrase. At the 'edit' section, you will find the reference and editable text fields.

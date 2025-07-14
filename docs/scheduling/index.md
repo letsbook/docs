@@ -30,15 +30,19 @@ In this section, you'll discover how to:
 ## Key Concepts
 
 ### Weekly Schedules
+
 Set up recurring availability patterns that repeat weekly, perfect for consistent operating hours and seasonal patterns.
 
 ### Slot-Based Scheduling
+
 Configure specific time slots for bookings, ideal for structured rental periods and high-demand scenarios.
 
 ### Calendar Integration
+
 Keep your external calendars in sync with your Let's Book scheduling to avoid conflicts and streamline operations.
 
 ### Planning Tools
+
 Use comprehensive planning overviews to visualize bookings, manage availability, and optimize your scheduling strategy.
 
 ## Getting Started

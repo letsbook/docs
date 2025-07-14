@@ -1,6 +1,5 @@
 # Manage Docks
 
-
 ## Add dock
 
 Go to your docks overview and hit add. Now enter:

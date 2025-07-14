@@ -1,266 +1,151 @@
-.hero {
-    background: var(--ifm-color-primary);
+.Root {
+    background: #081690;
     color: white;
     padding: 6rem 0;
+    text-align: center;
     position: relative;
     overflow: hidden;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
 }
 
-.hero::before {
+.Root::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.1);
-    z-index: 1;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
 }
 
-.heroContainer {
+.HeaderContent {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
 }
 
-.heroContent {
-    text-align: left;
-}
-
-.heroTitle {
+.Title {
+    font-family:
+        'IBM Plex Sans',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        sans-serif;
     font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.heroSubtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+.Subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
     opacity: 0.9;
 }
 
-.heroDescription {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    opacity: 0.85;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.SearchContainer {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
 }
 
-.heroButtons {
+.ChatInterface {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ChatInputContainer {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
+    background: white;
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+
+.ChatInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: #333;
+}
+
+.ChatInput::placeholder {
+    color: #64748b;
+}
+
+.SendButton {
+    width: 36px;
+    height: 36px;
+    background: #12c19b;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.SendButton:hover {
+    background: #081690;
+}
+
+.SendButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.ChatSuggestions {
+    display: flex;
+    gap: 0.5rem;
     flex-wrap: wrap;
 }
 
-.heroButton {
-    min-width: 150px;
-    font-weight: 600;
-    border-radius: 8px;
+.SuggestionChip {
+    background: #f7f8fe;
+    color: #081690;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
     transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
 }
 
-.heroButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.SuggestionChip:hover {
+    background: #12c19b;
+    color: white;
+    border-color: #12c19b;
 }
 
-.heroVisual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.heroImage {
-    max-width: 500px;
-    width: 100%;
-}
-
-.mockupContainer {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 1rem;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.mockupHeader {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-}
-
-.mockupDots {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.mockupDots span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.mockupDots span:nth-child(1) {
-    background: #ff5f57;
-}
-
-.mockupDots span:nth-child(2) {
-    background: #ffbd2e;
-}
-
-.mockupDots span:nth-child(3) {
-    background: #28ca42;
-}
-
-.mockupContent {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    padding: 2rem;
-    color: #2e3440;
-}
-
-.mockupDashboard {
-    display: grid;
-    gap: 1rem;
-}
-
-.mockupCard {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e1e8ed;
-}
-
-.mockupIcon {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.mockupText {
-    font-weight: 500;
-    color: #2e3440;
-}
-
-@media screen and (max-width: 996px) {
-    .hero {
+/* Responsive styles */
+@media (max-width: 768px) {
+    .Root {
         padding: 4rem 0;
-        min-height: auto;
     }
 
-    .heroContainer {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-
-    .heroContent {
-        text-align: center;
-        order: 1;
-    }
-
-    .heroVisual {
-        order: 2;
-    }
-
-    .heroTitle {
+    .Title {
         font-size: 2.5rem;
     }
 
-    .heroSubtitle {
-        font-size: 1.3rem;
-    }
-
-    .heroDescription {
-        font-size: 1rem;
-    }
-
-    .heroButtons {
-        justify-content: center;
-    }
-
-    .heroButton {
-        min-width: 180px;
-    }
-
-    .heroImage {
-        max-width: 400px;
-    }
-
-    .mockupContent {
-        padding: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .hero {
-        padding: 3rem 0;
-    }
-
-    .heroContainer {
-        gap: 2rem;
-    }
-
-    .heroTitle {
-        font-size: 2rem;
-    }
-
-    .heroSubtitle {
-        font-size: 1.1rem;
-    }
-
-    .heroButtons {
+    .ChatSuggestions {
         flex-direction: column;
         align-items: center;
-        gap: 0.75rem;
     }
 
-    .heroButton {
-        width: 200px;
-    }
-
-    .heroImage {
-        max-width: 300px;
-    }
-
-    .mockupContent {
-        padding: 1rem;
-    }
-
-    .mockupCard {
-        padding: 0.75rem;
-    }
-
-    .mockupIcon {
-        width: 32px;
-        height: 32px;
-        font-size: 1.2rem;
+    .SuggestionChip {
+        width: 100%;
+        text-align: center;
     }
 }

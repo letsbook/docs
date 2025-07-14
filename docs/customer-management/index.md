@@ -22,53 +22,66 @@ In this section, you'll discover how to:
 ## Customer Management Guides
 
 ### Booking Operations
+
 - [Add/Change Booking](./add-change-booking.md) - Manage customer booking modifications
 - [How to Work with Partner Bookings](./how-to-work-with-partner-bookings.md) - Handle third-party booking integrations
 
 ### Customer Data & Types
+
 - [Customer Types](./customer-types.md) - Configure and manage different customer categories
 - [Anonymize Customer](./anonymize-customer.md) - Handle customer data privacy and anonymization
 
 ### Communication & Confirmation
+
 - [Confirmation Methods](./confirmation-methods.md) - Set up booking confirmation processes
 - [Notifications](./notifications.md) - Configure customer communication and alerts
 
 ### Documentation & Compliance
+
 - [Documents, Waivers and Contracts](./documents-waivers-and-contracts.md) - Manage legal documents and agreements
 
 ### Customer Experience
+
 - [Add Additional Questions](./add-additional-questions.md) - Customize the booking process with custom questions
 
 ## Key Features
 
 ### Flexible Booking Management
+
 Easily modify, update, and manage customer bookings with comprehensive booking management tools.
 
 ### Customer Segmentation
+
 Organize customers into different types and categories for targeted service and pricing.
 
 ### Automated Communications
+
 Set up automated notifications and confirmation methods to keep customers informed.
 
 ### Legal Compliance
+
 Manage waivers, contracts, and required documentation to ensure legal compliance.
 
 ### Partner Integration
+
 Seamlessly work with partner bookings and third-party booking platforms.
 
 ## Best Practices
 
 ### Customer Service Excellence
+
 - Respond promptly to booking changes and customer inquiries
 - Maintain clear communication throughout the booking process
 - Use customer types to provide personalized service
 
 ### Data Management
+
 - Keep customer information up-to-date and accurate
 - Respect privacy requirements and handle anonymization properly
 - Organize customer data for easy access and management
 
 ### Documentation
+
 - Ensure all required waivers and contracts are properly signed
 - Keep digital copies of important documents
 - Regularly review and update legal documentation

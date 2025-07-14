@@ -27,22 +27,27 @@ In this section, you'll discover how to:
 ## Key Features
 
 ### Team Roles & Permissions
+
 Organize your team with appropriate access levels and permissions to ensure secure and efficient collaboration.
 
 ### Multilingual Support
+
 Manage translations and multilingual content to serve customers in their preferred language.
 
 ### Account Lifecycle
+
 Handle account operations including temporary pausing and permanent cancellation with proper data management.
 
 ## Best Practices
 
 ### Team Organization
+
 - Assign roles based on job responsibilities and required access levels
 - Regularly review team permissions to maintain security
 - Use appropriate role hierarchies for efficient management
 
 ### Translation Management
+
 - Keep translations up-to-date with your primary content
 - Maintain consistency across different language versions
 - Test multilingual functionality regularly

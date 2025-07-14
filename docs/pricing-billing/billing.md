@@ -1,6 +1,5 @@
 # Billing
 
-
 ## Enter billing details
 
 Before you go live, we need information on how we can send you invoices. Go to Billing and:

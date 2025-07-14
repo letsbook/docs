@@ -1,6 +1,5 @@
 # About Rental Methods
 
-
 ## Introduction
 
 The Rental Method is the foundation of the Let's Book system. In a nutshell, it allows you to link your schedule, pricing, and notifications to a combination of a dock and a boat type. Here's how it works:

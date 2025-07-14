@@ -21,6 +21,7 @@ In this section, you'll discover how to:
 ## Integration Guides
 
 ### Platform-Specific Integration
+
 - [Embedding Booking Form](./embedding-booking-form.md) - General embedding guide
 - [Embed Booking Form on WordPress Website](./embed-booking-form-on-wordpress-website.md) - WordPress integration
 - [Embedding Booking Form on Shopify Website](./embedding-booking-form-on-shopify-website.md) - Shopify integration
@@ -28,6 +29,7 @@ In this section, you'll discover how to:
 - [Embed Booking Form to Wix Website](./embed-booking-form-to-wix-website.md) - Wix integration
 
 ### Customization & Configuration
+
 - [Configure Your Styling](./configure-your-styling.md) - Customize form appearance
 - [Booking Form Working with Alternative Options](./booking-form-working-with-alternative-options.md) - Advanced form options
 - [Set a Custom Return URL](./set-a-custom-return-url.md) - Configure post-booking redirects
@@ -35,29 +37,37 @@ In this section, you'll discover how to:
 ## Key Features
 
 ### Multi-Platform Support
+
 Seamlessly integrate booking forms across popular website builders and e-commerce platforms.
 
 ### Custom Styling
+
 Match your booking forms to your brand with comprehensive styling and customization options.
 
 ### Flexible Configuration
+
 Configure booking forms with alternative options and custom behaviors to suit your business needs.
 
 ### Seamless User Experience
+
 Provide customers with smooth booking experiences that integrate naturally with your website.
 
 ## Integration Benefits
 
 ### Increased Conversions
+
 Reduce friction in the booking process by embedding forms directly on your website.
 
 ### Brand Consistency
+
 Maintain your brand identity with customizable styling and seamless integration.
 
 ### Better User Experience
+
 Keep customers on your website throughout the entire booking process.
 
 ### Easy Maintenance
+
 Centrally manage booking forms while they automatically update across all integrated platforms.
 
 ## Getting Started

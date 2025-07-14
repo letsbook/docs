@@ -1,6 +1,5 @@
 # Manage Add-ons
 
-
 ## Add add-on
 
 Add-ons are extras that customers can add to their trip to enhance their experience. To create an add-on, go to the add-ons section and click "new add-on".

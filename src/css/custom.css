@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-    --ifm-color-primary: #081690;
+    --ifm-color-primary: #081590;
     --ifm-color-primary-dark: #071382;
     --ifm-color-primary-darker: #07127a;
     --ifm-color-primary-darkest: #060f65;
@@ -15,8 +15,10 @@
     --ifm-color-primary-lightest: #0a1bbb;
     --ifm-code-font-size: 95%;
 
-    --ifm-heading-font-family: "Rubik", -apple-system, BlinkMacSystemFont, sans-serif;
-    --ifm-font-family-base: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    --ifm-heading-font-family:
+        'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
+    --ifm-font-family-base:
+        'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
     --ifm-spacing-horizontal: 2rem;
 

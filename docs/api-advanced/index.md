@@ -26,26 +26,33 @@ In this section, you'll discover how to:
 ## Key Features
 
 ### API Access
+
 Comprehensive API access to Let's Book functionality, enabling custom integrations and automated workflows.
 
 ### Advanced Booking Conditions
+
 Configure sophisticated booking rules, restrictions, and conditions to match complex business requirements.
 
 ### Custom Integration Support
+
 Build tailored solutions that integrate seamlessly with your existing systems and workflows.
 
 ## Use Cases
 
 ### Custom Booking Flows
+
 Create specialized booking experiences that go beyond standard configurations.
 
 ### System Integration
+
 Connect Let's Book with your existing business systems, CRM, or custom applications.
 
 ### Automated Operations
+
 Build automated workflows for booking management, customer communication, and business operations.
 
 ### Advanced Business Rules
+
 Implement complex pricing models, availability rules, and booking restrictions.
 
 ## Prerequisites

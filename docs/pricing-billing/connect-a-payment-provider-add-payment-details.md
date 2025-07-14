@@ -1,6 +1,5 @@
 # Connect payment provider
 
-
 ## What's a payment provider
 
 A payment provider (also called a PSP or payment service provider) allows you to accept payments from customers — including credit cards, iDEAL, bank transfers, and more.

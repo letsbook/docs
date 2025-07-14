@@ -27,26 +27,33 @@ In this section, you'll discover how to:
 ## Key Features
 
 ### Analytics Integration
+
 Connect popular analytics platforms like Google Analytics to track website performance, user behavior, and conversion metrics.
 
 ### Data Export Capabilities
+
 Export your booking data, customer information, and business metrics for detailed analysis and reporting.
 
 ### Sales Performance Insights
+
 Access comprehensive sales analytics to understand revenue trends, booking patterns, and business performance.
 
 ## Benefits of Analytics
 
 ### Data-Driven Decisions
+
 Make informed business decisions based on real data and performance metrics rather than assumptions.
 
 ### Performance Optimization
+
 Identify areas for improvement in your booking process, pricing strategy, and customer experience.
 
 ### Revenue Growth
+
 Understand your most profitable services, peak booking times, and customer segments to maximize revenue.
 
 ### Customer Insights
+
 Gain deeper understanding of customer behavior, preferences, and booking patterns.
 
 ## Getting Started

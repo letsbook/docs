@@ -1,6 +1,5 @@
 # Add costs, payment and payment request
 
-
 At booking detail level you can see the current balance of a booking in the 'finance' tab. If this number is negative, the customer must pay an additional amount. If it is positive, the customer has paid too much.
 
 ## Add costs

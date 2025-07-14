@@ -1,6 +1,5 @@
 # Manage Boats
 
-
 ## Add boat model
 
 Always add a boat model first, and then link your actual boats to it. That way you can rent out several of the same boats under the same name.

@@ -1,11 +1,11 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import type { ReactNode } from 'react';
-
-import Hero from '@site/src/components/Homepage/Hero';
+import Courses from '@site/src/components/Homepage/Courses';
 import Features from '@site/src/components/Homepage/Features';
 import GettingStarted from '@site/src/components/Homepage/GettingStarted';
-import Benefits from '@site/src/components/Homepage/Benefits';
+import Hero from '@site/src/components/Homepage/Hero';
+import QuickActions from '@site/src/components/Homepage/QuickActions';
+import Layout from '@theme/Layout';
+import type { ReactNode } from 'react';
 
 export default function Home(): ReactNode {
     const { siteConfig } = useDocusaurusContext();
@@ -16,8 +16,9 @@ export default function Home(): ReactNode {
         >
             <Hero />
             <main>
+                <QuickActions />
                 <Features />
-                <Benefits />
+                <Courses />
                 <GettingStarted />
             </main>
         </Layout>

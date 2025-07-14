@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+
 import styles from './styles.module.css';
 
 interface Benefit {
@@ -10,24 +11,28 @@ interface Benefit {
 const benefits: Benefit[] = [
     {
         title: 'Save Time',
-        description: 'Automate repetitive tasks and streamline your booking process to focus on what matters most.',
-        icon: '⏰'
+        description:
+            'Automate repetitive tasks and streamline your booking process to focus on what matters most.',
+        icon: '⏰',
     },
     {
         title: 'Increase Revenue',
-        description: 'Optimize pricing, reduce no-shows, and maximize your fleet utilization with smart scheduling.',
-        icon: '📈'
+        description:
+            'Optimize pricing, reduce no-shows, and maximize your fleet utilization with smart scheduling.',
+        icon: '📈',
     },
     {
         title: 'Better Customer Experience',
-        description: 'Provide seamless booking experiences that keep customers coming back for more.',
-        icon: '⭐'
+        description:
+            'Provide seamless booking experiences that keep customers coming back for more.',
+        icon: '⭐',
     },
     {
         title: 'Real-time Insights',
-        description: 'Make data-driven decisions with comprehensive analytics and reporting tools.',
-        icon: '📊'
-    }
+        description:
+            'Make data-driven decisions with comprehensive analytics and reporting tools.',
+        icon: '📊',
+    },
 ];
 
 export default function Benefits(): ReactNode {
@@ -39,7 +44,8 @@ export default function Benefits(): ReactNode {
                         Why choose Let's Book?
                     </h2>
                     <p className={styles.benefitsSubtitle}>
-                        Join thousands of boat rental businesses that trust Let's Book to power their operations
+                        Join thousands of boat rental businesses that trust
+                        Let's Book to power their operations
                     </p>
                 </div>
                 <div className={styles.benefitsGrid}>
@@ -60,7 +66,9 @@ export default function Benefits(): ReactNode {
                 <div className={styles.statsSection}>
                     <div className={styles.stat}>
                         <div className={styles.statNumber}>10,000+</div>
-                        <div className={styles.statLabel}>Bookings Processed</div>
+                        <div className={styles.statLabel}>
+                            Bookings Processed
+                        </div>
                     </div>
                     <div className={styles.stat}>
                         <div className={styles.statNumber}>500+</div>
