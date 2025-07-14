@@ -41,3 +41,7 @@
         --ifm-spacing-horizontal: 2rem;
     }
 }
+
+body {
+     word-wrap: normal;
+}

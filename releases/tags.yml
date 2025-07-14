@@ -1,0 +1,34 @@
+new-features:
+    label: New Features
+    permalink: /new-features
+    description: New features and functionality added to Let's Book
+
+bug-fixes:
+    label: Bug Fixes
+    permalink: /bug-fixes
+    description: Bug fixes and stability improvements
+
+improvements:
+    label: Improvements
+    permalink: /improvements
+    description: Performance improvements and enhancements
+
+security:
+    label: Security
+    permalink: /security
+    description: Security updates and patches
+
+api-changes:
+    label: API Changes
+    permalink: /api-changes
+    description: Changes to the Let's Book API
+
+mobile:
+    label: Mobile
+    permalink: /mobile
+    description: Mobile app updates and improvements
+
+web:
+    label: Web
+    permalink: /web
+    description: Web application updates

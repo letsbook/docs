@@ -49,10 +49,18 @@ const config: Config = {
                     editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
                 },
                 blog: {
-                    showReadingTime: true,
+                    path: 'releases',
+                    routeBasePath: 'releases',
+                    blogTitle: 'Release Notes',
+                    blogDescription: 'Let\'s Book Release Notes and Updates',
+                    blogSidebarTitle: 'Recent Releases',
+                    blogSidebarCount: 'ALL',
+                    showReadingTime: false,
                     feedOptions: {
                         type: ['rss', 'atom'],
                         xslt: true,
+                        title: 'Let\'s Book Release Notes',
+                        description: 'Stay updated with the latest Let\'s Book releases',
                     },
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
@@ -89,8 +97,8 @@ const config: Config = {
                     label: 'Documentation',
                 },
                 {
-                    to: '/blog',
-                    label: 'Blog',
+                    to: '/releases',
+                    label: 'Release Notes',
                     position: 'left',
                 }
             ],
@@ -111,8 +119,8 @@ const config: Config = {
                     title: 'More',
                     items: [
                         {
-                            label: 'Blog',
-                            to: '/blog',
+                            label: 'Release Notes',
+                            to: '/releases',
                         },
                         {
                             label: 'GitHub',
