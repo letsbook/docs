@@ -1,0 +1,192 @@
+.benefits {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.benefitsHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefitsTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2e3440;
+    line-height: 1.3;
+}
+
+.benefitsSubtitle {
+    font-size: 1.2rem;
+    color: #5e6c84;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefitCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #e1e8ed;
+}
+
+.benefitCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.benefitIcon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.benefitTitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2e3440;
+}
+
+.benefitDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5e6c84;
+    margin: 0;
+}
+
+.statsSection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 0 1rem 0;
+    border-top: 1px solid #e1e8ed;
+}
+
+.stat {
+    text-align: center;
+    padding: 1rem;
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 1rem;
+    color: #5e6c84;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 996px) {
+    .benefits {
+        padding: 4rem 0;
+    }
+    
+    .benefitsTitle {
+        font-size: 2rem;
+    }
+    
+    .benefitsSubtitle {
+        font-size: 1.1rem;
+    }
+    
+    .benefitsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .benefitCard {
+        padding: 1.5rem;
+    }
+    
+    .statsSection {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 2rem 0 1rem 0;
+    }
+    
+    .statNumber {
+        font-size: 2rem;
+    }
+    
+    .statLabel {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .benefits {
+        padding: 3rem 0;
+    }
+    
+    .benefitsHeader {
+        margin-bottom: 3rem;
+    }
+    
+    .benefitsTitle {
+        font-size: 1.8rem;
+    }
+    
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .benefitCard {
+        padding: 1.25rem;
+    }
+    
+    .benefitIcon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .benefitTitle {
+        font-size: 1.2rem;
+    }
+    
+    .statsSection {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem 0 1rem 0;
+    }
+    
+    .stat {
+        padding: 0.5rem;
+    }
+    
+    .statNumber {
+        font-size: 1.8rem;
+    }
+    
+    .statLabel {
+        font-size: 0.85rem;
+    }
+}
