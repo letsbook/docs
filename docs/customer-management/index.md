@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Customer Management
 
 Handle customer relationships, bookings, and communications effectively.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Getting Started
 
 Get started with Let's Book - setup guides and fundamental concepts.

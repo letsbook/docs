@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Fleet Management
 
 Manage your boats, docks, add-ons and fleet operations.

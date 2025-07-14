@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Booking Forms & Integration
 
 Embed and customize booking forms for seamless customer experience.

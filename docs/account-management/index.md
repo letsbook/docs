@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Account Management
 
 Manage team roles, account settings, translations, and account operations.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Scheduling
 
 Set up schedules, manage availability, and configure rental timings.

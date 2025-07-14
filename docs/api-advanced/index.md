@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # API & Advanced Configuration
 
 Advanced API integration and complex booking configuration options.

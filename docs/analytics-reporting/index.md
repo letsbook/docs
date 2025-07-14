@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Analytics & Reporting
 
 Track performance, analyze data, and generate insights for your boat rental business.
