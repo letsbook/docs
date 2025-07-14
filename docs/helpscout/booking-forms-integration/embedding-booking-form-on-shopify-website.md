@@ -34,7 +34,7 @@ Shopify will take a moment to create a duplicate of your live theme.
 
     _If there's code directly above it, just add in extra lines between them with the ENTER or RETURN key._
 
-- Be careful not to overwrite or remove any other code. Removing a single < or > accidentally can actually cause the code (ie. your site) to no longer function.
+- Be careful not to overwrite or remove any other code. Removing a single `<` or `>` accidentally can actually cause the code (ie. your site) to no longer function.
 - Hit Save
 - You can also hit the 'Older versions' link that appears at the top if you need to rollback to a previous version of this file, in case something goes wrong.
 

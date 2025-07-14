@@ -276,7 +276,7 @@ Let's implement the scenario described in the introduction:
 
 This can be written as
 
-```
+```python
 (future_bookings.count_per_day.weekend <= 1
     and
   future_bookings.count_per_day.weekday <= 1)

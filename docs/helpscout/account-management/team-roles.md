@@ -8,17 +8,10 @@ Different team members may need access to different information within Let's Boo
 
 We have defined several default team roles:
 
-a
-: **Administrator** This person has all permissions and cannot have their permissions changed.
-
-b
-: **Operations manager** This person is responsible for managing global planning, incoming bookings, rental settings, and payments.
-
-c
-: **Planner** This person is responsible for managing the current booking schedule.
-
-d
-: **Dock host** This person welcomes customers, gives instructions, and waves them off.
+- **Administrator** This person has all permissions and cannot have their permissions changed.
+- **Operations manager** This person is responsible for managing global planning, incoming bookings, rental settings, and payments.
+- **Planner** This person is responsible for managing the current booking schedule.
+- **Dock host** This person welcomes customers, gives instructions, and waves them off.
 
 ### Edit existing roles
 

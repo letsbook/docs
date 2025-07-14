@@ -1,0 +1,8 @@
+{
+    "label": "Scheduling",
+    "position": 4,
+    "link": {
+        "type": "generated-index",
+        "description": "Set up schedules, manage availability, and configure rental timings"
+    }
+}
