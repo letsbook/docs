@@ -40,6 +40,23 @@ const config: Config = {
         'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap',
     ],
 
+    headTags: [
+        {
+            tagName: 'script',
+            attributes: {
+                type: 'text/javascript',
+            },
+            innerHTML: `!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});`,
+        },
+        {
+            tagName: 'script',
+            attributes: {
+                type: 'text/javascript',
+            },
+            innerHTML: `window.Beacon('init', '${process.env.HELPSCOUT_BEACON_ID}');`,
+        },
+    ],
+
     presets: [
         [
             'classic',
