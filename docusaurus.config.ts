@@ -74,7 +74,7 @@ const config: Config = {
                     blogSidebarCount: 'ALL',
                     showReadingTime: false,
                     feedOptions: {
-                        type: ['rss', 'atom'],
+                        type: ['atom', 'json'],
                         xslt: true,
                         title: 'Let\'s Book Release Notes',
                         description: 'Stay updated with the latest Let\'s Book releases',
