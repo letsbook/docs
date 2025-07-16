@@ -1,0 +1,19 @@
+description: Validation error
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - errors
+      properties:
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          example:
+            return:
+              - The return date is before the pickup date.
+            dockId:
+              - The dockId could not be found.

@@ -1,0 +1,19 @@
+type: object
+description: Tenant the user has access to
+required:
+  - id
+  - name
+  - slug
+properties:
+  id:
+    type: string
+    example: '1e48f449-d111-4323-87c5-eeab2d2ceb91'
+    description: The ID of the tenant
+  name:
+    type: string
+    example: 'My tenant'
+    description: The name of the tenant
+  slug:
+    type: string
+    example: 'my-tenant'
+    description: The slug which is used in the customer facing URLs

@@ -1,0 +1,31 @@
+description: The location from where boats can be picked up
+required:
+  - id
+  - name
+  - slug
+  - address
+  - media
+  - opensAt
+properties:
+  id:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the Dock
+  name:
+    type: string
+    example: Amsterdam East
+    description: Name of the Dock
+  slug:
+    type: string
+    example: amsterdam-east
+    description: The slug is automatically generated from the name
+  address:
+    $ref: ./DockAddress.yaml
+  media:
+    type: array
+    items:
+      $ref: ./Media.yaml
+  opensAt:
+    type: string
+    example: 2022-02-08T09:30:26+0000
+    description: The time when the dock opens in ISO 8601 format

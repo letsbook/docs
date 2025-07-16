@@ -1,0 +1,68 @@
+description: |
+  Cost of the booking. Can be both rental costs or other costs like add-ons
+  or insurance.
+required:
+  - id
+  - description
+  - taxRateId
+  - amountIncludingTax
+  - amountExcludingTax
+properties:
+  id:
+    type: string
+    format: uuid
+    description: ID of cost
+    example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+  description:
+    type: string
+    description: Description of the cost
+    example: Crate of beer (24 bottles)
+  type:
+    type: string
+    description: |
+      
+      `pricing_structure` costs are automatically calculated from the 
+      pricing settings. This is usually the rental of the boat. 
+
+      `manual` is used when the cost is manually added to the booking by a 
+      staf member.
+      
+      `add_on` costs are costs linked to an order line of an add-ons order.
+      
+      `coupon` is usually a negative cost as it is a discount, given by using 
+      a coupon code.
+    enum:
+      - pricing_structure
+      - manual
+      - add_on
+      - coupon
+    example: pricing_structure
+  taxRateId:
+    type: string
+    format: uuid
+    description: ID of the applied tax rate
+    example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+  amountIncludingTax:
+    type: integer
+    description: Amount including tax in cents
+    example: 1750
+  amountExcludingTax:
+    type: integer
+    description: Amount excluding tax in cents
+    example: 1446
+  vatRateId:
+    deprecated: true
+    type: string
+    format: uuid
+    description: Deprecated. Use taxRateId instead.
+    example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+  amountIncludingVat:
+    deprecated: true
+    type: integer
+    description: Deprecated. Use amountIncludingTax instead.
+    example: 1750
+  amountExcludingVat:
+    deprecated: true
+    type: integer
+    description: Deprecated. Use amountExcludingTax instead.
+    example: 1446

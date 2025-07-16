@@ -1,0 +1,27 @@
+description: |
+  Deposits can be both uncaptured credit card authorizations as well as charges
+  made to credit cards and other payment methods.
+required:
+  - id
+  - description
+  - amount
+  - createdAt
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Deposit ID
+    example: cbfa2986-7759-4d52-9b6e-2fa7fbdb54d2
+  description:
+    type: string
+    description: Description of the deposit
+    example: Deposit for booking \#H8K13L
+  amount:
+    type: integer
+    description: Amount paid or authorized in cents
+    example: 15000
+  createdAt:
+    type: string
+    format: date-time
+    description: Date and time when the deposit was done
+    example: 2022-01-01T12:00:00Z

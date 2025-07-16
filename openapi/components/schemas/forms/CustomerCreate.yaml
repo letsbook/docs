@@ -1,0 +1,20 @@
+allOf:
+  - $ref: ./CustomerBase.yaml
+  - type: object
+    description: Parameters for creating a new customer.
+    properties:
+      addAliasOnDuplicate:
+        type: boolean
+        default: false
+        example: false
+        description: |
+          If set to true, the customer will be added as an alias to the
+          existing customer with the same email address. If set to false,
+          an error will be returned if the customer already exists.
+      notifyCustomer:
+        default: false
+        type: boolean
+        description: |
+          If set to true, the customer will receive an email containing
+          their login credentials.
+        example: true

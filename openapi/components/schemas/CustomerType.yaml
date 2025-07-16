@@ -1,0 +1,27 @@
+description: A customer type is like a role. It defines the permissions of a customer.
+required:
+  - id
+  - name
+  - abbreviation
+  - type
+properties:
+  id:
+    type: string
+    example: d1f59518-9be6-441f-8ce8-c810d1d9b332
+    description: ID of the Customer Type
+  name:
+    type: string
+    example: Premium member
+    description: Name as configured in the dashboard
+  abbreviation:
+    type: string
+    example: PM
+    description: Short capitalized name
+  type:
+    type: string
+    example: custom
+    enum:
+      - custom
+      - default
+      - guest
+    description: Type of the object

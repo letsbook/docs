@@ -1,0 +1,26 @@
+type: object
+description: Parameters for creating a new booking.
+required:
+  - customerId
+  - dockId
+  - boatModelId
+  - pickup
+  - return
+allOf:
+  - $ref: ./BookingBase.yaml
+  - type: object
+    properties:
+      notifyCustomer:
+        type: boolean
+        default: false
+        description: |
+          If set to true, the customer will receive a booking
+          confirmation email.
+        example: false
+      includePaymentLink:
+        default: true
+        type: boolean
+        description: |
+          Whether or not the booking confirmation email should contain a
+          payment request link. Only applicable if notifyCustomer is true.
+        example: true

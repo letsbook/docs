@@ -1,0 +1,11 @@
+description: Parameters not acceptable (e.g. no availability)
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string
+          example: No availability for the selected dates

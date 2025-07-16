@@ -1,0 +1,46 @@
+description: A boat model
+required:
+  - id
+  - name
+  - slug
+  - capacity
+  - shortDescription
+  - description
+  - media
+  - categoryId
+properties:
+  id:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the Boat model
+  name:
+    type: string
+    example: Outboard boat
+    description: Name of the Boat model
+  slug:
+    type: string
+    example: outboard-boat
+    description: The slug is automatically generated from the name
+  capacity:
+    type: integer
+    example: 2
+    description: Number of people the boat can accommodate
+  shortDescription:
+    type: string
+    example: A short description
+    description: A short description of the boat model
+  description:
+    type: string
+    example: A longer description
+    description: A longer description of the boat model
+  media:
+    type: array
+    description: A list of photos of the boat model
+    items:
+      $ref: ./Media.yaml
+  categoryId:
+    type: string
+    nullable: true
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the category. Can also be `null`.
+

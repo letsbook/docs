@@ -1,0 +1,12 @@
+type: object
+description: Parameters for updating an existing booking.
+allOf:
+  - $ref: ./BookingBase.yaml
+  - type: object
+    properties:
+      notifyCustomer:
+        type: boolean
+        default: false
+        description: |
+          If set to true, the customer will receive a booking updated email.
+        example: false

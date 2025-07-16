@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type * as Redocusaurus from 'redocusaurus';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -92,6 +93,35 @@ const config: Config = {
                 },
             } satisfies Preset.Options,
         ],
+        // Redocusaurus config
+        [
+            'redocusaurus',
+            {
+                openapi: {
+                    // Folder to scan for *.openapi.yaml files
+                    path: 'openapi',
+                    routeBasePath: '/api',
+                },
+                specs: [
+                    // Optionally provide individual files/urls to load
+                    // {
+                    //     // Pass it a path to a local OpenAPI YAML file
+                    //     spec: 'api.yaml',
+                    //     id: 'from-manual-file',
+                    //     route: '/api/from-manual-file',
+                    // },
+                    // // You can also pass it an OpenAPI spec URL
+                    // {
+                    //     spec: 'https://redocly.github.io/redoc/openapi.yaml',
+                    //     id: 'from-remote-file',
+                    //     route: '/api/from-remote-file',
+                    // },
+                ],
+                theme: {
+                    primaryColor: '#081590',
+                },
+            },
+        ] satisfies Redocusaurus.PresetEntry,
     ],
 
     plugins: [require.resolve('docusaurus-lunr-search')],
@@ -117,6 +147,11 @@ const config: Config = {
                 {
                     to: '/releases',
                     label: 'Release Notes',
+                    position: 'left',
+                },
+                {
+                    to: '/api/index',
+                    label: 'API documentation',
                     position: 'left',
                 }
             ],

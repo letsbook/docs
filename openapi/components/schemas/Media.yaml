@@ -1,0 +1,29 @@
+type: object
+description: Photo of the item
+required:
+  - id
+  - type
+  - variants
+properties:
+  id:
+    type: string
+    example: a74c7c12-90f1-45ab-88ca-d2a63a424ed1
+    description: ID of the media item
+  type:
+    type: string
+    enum:
+      - video
+      - image
+    example: image
+    description: The type of the media item
+  variants:
+    type: object
+    description: The variants (sizes)of the media item
+    required:
+      - fullSize
+      - thumb
+    properties:
+      fullSize:
+        $ref: ./MediaVariant.yaml
+      thumb:
+        $ref: ./MediaVariant.yaml

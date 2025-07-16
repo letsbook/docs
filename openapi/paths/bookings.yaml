@@ -1,0 +1,92 @@
+get:
+  summary: List all bookings
+  description: Retrieves a comprehensive list of all bookings.
+  operationId: listBookings
+  tags:
+    - Bookings
+  parameters:
+    - $ref: ../components/parameters/page.yaml
+    - name: status
+      in: query
+      description: Display only bookings with the specified status
+      schema:
+        type: string
+        enum:
+          - draft
+          - expired
+          - option
+          - confirmed
+          - completed
+          - canceled
+          - all
+    - name: updatedAfter
+      in: query
+      description: Display only bookings updated after the specified date and time in ISO8601 format
+      schema:
+        type: string
+        format: date-time
+        example: 2022-01-01T00:00:00Z
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - pagination
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/Booking.yaml
+              pagination:
+                $ref: ../components/schemas/Pagination.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
+post:
+  summary: Create a booking
+  description: Creates a new booking with `confirmed` status.
+  operationId: createBooking
+  tags:
+    - Bookings
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/BookingCreate.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+            type: object
+            properties:
+              data:
+                type: object
+                required:
+                  - bookingId
+                properties:
+                  bookingId:
+                    type: string
+                    description: The unique identifier of the newly created booking.
+                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '406':
+      $ref: ../components/responses/BookingParametersNotAcceptable.yaml
+    '422':
+      $ref: ../components/responses/BookingValidationError.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

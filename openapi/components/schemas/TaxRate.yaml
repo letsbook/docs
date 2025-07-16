@@ -1,0 +1,24 @@
+type: object
+description: Applied tax rate
+required:
+  - id
+  - name
+  - percentage
+properties:
+  id:
+    type: string
+    format: uuid
+    description: ID of the tax rate
+    example: d8f8feb5-b8cc-4b8e-9d5c-a9d9d9d9d9d9
+  name:
+    type: string
+    description: Name of the tax rate
+    example: NL High
+  percentage:
+    type: number
+    description: Rate of the tax in 0 - 100 range
+    example: 21
+  readOnly:
+    type: boolean
+    description: Cannot be edited if true
+    example: false

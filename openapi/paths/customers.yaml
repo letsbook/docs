@@ -1,0 +1,86 @@
+get:
+  summary: List all customers
+  description: Retrieves a comprehensive list of your customers.
+  operationId: listCustomers
+  tags:
+    - Customers
+  parameters:
+    - $ref: ../components/parameters/page.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - pagination
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/Customer.yaml
+              pagination:
+                $ref: ../components/schemas/Pagination.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
+post:
+  summary: Create a customer
+  description: Registers a new customer in the system
+  operationId: createCustomer
+  tags:
+    - Customers
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          required:
+            - customerTypeId
+            - givenName
+            - familyName
+            - emailAddress
+          allOf:
+            - $ref: ../components/schemas/forms/CustomerCreate.yaml
+            - type: object
+              properties:
+                addAliasOnDuplicate:
+                  type: boolean
+                  default: false
+                  example: false
+                  description: |
+                    When set to true, the customer will be added as an alias to the
+                    existing customer with the same email address. When set to false,
+                    an error will be returned if the customer already exists.
+                notifyCustomer:
+                  default: false
+                  type: boolean
+                  description: |
+                    When set to true, the customer will receive an email containing
+                    their login credentials.
+                  example: true
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: ../components/schemas/Customer.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '422':
+      $ref: ../components/responses/CustomerValidationError.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

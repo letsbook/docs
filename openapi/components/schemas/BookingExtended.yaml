@@ -1,0 +1,120 @@
+allOf:
+  - $ref: ./Booking.yaml
+  - type: object
+    required:
+      - url
+      - financialDetails
+    properties:
+      url:
+        type: string
+        description: URL to view the booking
+        format: uri
+        example: https://barrysboats.letsbook.app/bookings/BK8J3L
+      customer:
+        nullable: true
+        description: Customer details of the person who booked
+        allOf:
+          - $ref: ./Customer.yaml
+      financialDetails:
+        description: Financial information about a booking
+        required:
+          - psp
+          - currency
+          - balance
+          - applicationFee
+          - costs
+          - payments
+          - deposits
+        properties:
+          psp:
+            type: string
+            description: Payment service provider used for this booking
+            enum:
+              - mollie
+              - stripe
+              - demo
+            example: stripe
+          currency:
+            type: string
+            description: Currency of the amount
+            example: EUR
+          balance:
+            type: integer
+            description: Balance between costs and payments in cents
+            example: 0
+          applicationFee:
+            type: object
+            description: Application fee charged by Let's Book in cents
+            properties:
+              amount:
+                type: integer
+                description: The amount paid in cents
+                example: 35
+              currency:
+                type: string
+                description: The currency of the amount
+                example: EUR
+          costs:
+            type: object
+            description: |
+              Costs of the booking. Can be both rental costs or other costs like add-ons
+              or insurance.
+            required:
+              - totalIncludingTax
+              - totalExcludingTax
+              - lines
+            properties:
+              totalIncludingTax:
+                type: integer
+                description: Total costs including tax in cents
+                example: 1750
+              totalExcludingTax:
+                type: integer
+                description: Total costs excluding tax in cents
+                example: 1466
+              totalIncludingVat:
+                deprecated: true
+                type: integer
+                description: Deprecated. Use totalIncludingTax instead.
+                example: 1750
+              totalExcludingVat:
+                deprecated: true
+                type: integer
+                description: Deprecated. Use totalExcludingTax instead.
+                example: 1466
+              lines:
+                type: array
+                items:
+                  $ref: ./Cost.yaml
+          payments:
+            type: object
+            description: |
+              Payments made for the booking. Can be both payments made by the customer
+              or 'cash' payments, manually added by a staff member.
+            required:
+              - total
+              - lines
+            properties:
+              total:
+                type: integer
+                description: Total paid in cents
+                example: 1750
+              lines:
+                type: array
+                items:
+                  $ref: ./Payment.yaml
+          deposits:
+            type: object
+            description: Open deposits for the booking.
+            required:
+              - total
+              - lines
+            properties:
+              total:
+                type: integer
+                description: Total paid in cents
+                example: 15000
+              lines:
+                type: array
+                items:
+                  $ref: ./Deposit.yaml

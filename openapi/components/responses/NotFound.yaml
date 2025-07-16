@@ -1,0 +1,13 @@
+description: Not found
+content:
+  application/json:
+    schema:
+      type: object
+      description: Not found response
+      required:
+        - error
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: 'Resource with ID "e0ba0827-c5a3-4f86-9775-44d97ce269df" not found.'

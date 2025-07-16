@@ -1,0 +1,38 @@
+get:
+  summary: Search customers
+  description: Returns a list of all customers matching the query
+  operationId: searchCustomers
+  tags:
+    - Customers
+  parameters:
+    - name: emailAddress
+      in: query
+      required: false
+      description: The email address to search for
+      schema:
+        type: string
+        format: email
+        example: john.doe@example.com
+    - $ref: ../components/parameters/page.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - pagination
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/Customer.yaml
+              pagination:
+                $ref: ../components/schemas/Pagination.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

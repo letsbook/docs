@@ -1,0 +1,8 @@
+name: page
+in: query
+description: The page number to fetch
+required: false
+schema:
+  type: integer
+  example: 1
+  default: 1

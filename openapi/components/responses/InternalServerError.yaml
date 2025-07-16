@@ -1,0 +1,16 @@
+description: Internal server error
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - error
+      description: |
+        Server error response. We will be notified automatically when this
+        occurs. You should retry later or report this issue to our support
+        team at support@lets-book.com.
+      properties:
+        error:
+          type: string
+          description: Detailed error message
+          example: 'Server error occurred'

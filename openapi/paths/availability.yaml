@@ -1,0 +1,118 @@
+get:
+  summary: Calculate availability
+  description: |
+    Get availability for a boat model at a dock during a date/time period
+  operationId: getAvailability
+  tags:
+    - Availability
+  parameters:
+    - name: dockId
+      in: query
+      required: true
+      description: The dock ID
+      schema:
+        type: string
+        format: uuid
+        example: 878f1403-9677-482d-a09d-392004de8c46
+
+    - name: boatModelId
+      in: query
+      required: true
+      description: The boat model ID
+      schema:
+        type: string
+        format: uuid
+        example: 2d2071f6-0a1d-4aca-a49d-4d112b141c44
+
+    - name: period
+      in: query
+      required: true
+      description: The period of time to check availability
+      schema:
+        type: string
+        format: date-time-period
+        example: 2022-01-01T00:00:00Z/2022-01-03T00:00:00Z
+
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - parameters
+            properties:
+              data:
+                type: object
+                description: The availability result
+                required:
+                  - lowestAvailability
+                  - perMoment
+                properties:
+                  lowestAvailability:
+                    type: integer
+                    example: 4
+                  perMoment:
+                    type: array
+                    description: The availability per moment
+                    items:
+                      type: object
+                      required:
+                        - availability
+                        - moment
+                      properties:
+                        moment:
+                          type: string
+                          format: date-time
+                          example: 2022-01-01T00:00:00Z
+                        availability:
+                          type: integer
+                          example: 4
+              parameters:
+                type: object
+                description: |
+                  The parameters used to calculate availability. Can be used to
+                  verify the query parameters were parsed correctly.
+                required:
+                  - dockId
+                  - boatModelId
+                  - period
+                properties:
+                  dockId:
+                    type: string
+                    format: uuid
+                    description: The dock ID
+                    example: 878f1403-9677-482d-a09d-392004de8c46
+                  boatModelId:
+                    type: string
+                    format: uuid
+                    description: The boat model ID
+                    example: 2d2071f6-0a1d-4aca-a49d-4d112b141c44
+                  period:
+                    type: object
+                    description: |
+                      The period of time to check availability for. This period
+                      is limited to 14 days.
+                    required:
+                      - start
+                      - end
+                    properties:
+                      start:
+                        type: string
+                        format: date-time
+                        description: Start of the period in ISO 8601 format
+                        example: 2022-01-01T00:00:00Z
+                      end:
+                        type: string
+                        format: date-time
+                        description: End of the period in ISO 8601 format
+                        example: 2022-01-03T00:00:00Z
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '422':
+      $ref: ../components/responses/AvailabilityValidationError.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

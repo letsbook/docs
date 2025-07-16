@@ -1,0 +1,29 @@
+description: Webhook
+required:
+  - id
+  - description
+  - events
+  - url
+properties:
+  id:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the Webhook
+  description:
+    type: string
+    example: Get notified of all booking changes
+    description: Name of the Webhook
+  events:
+    type: array
+    items:
+      type: string
+      enum:
+        - booking.drafted
+        - booking.confirmed
+        - booking.canceled
+        - customer.registered
+      description: Event to get notified about
+  url:
+    type: string
+    example: https://example.com/my-letsbook-webhook-endpoint
+    description: URL to send the webhook to

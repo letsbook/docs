@@ -1,0 +1,88 @@
+description: Comprehensive booking details
+required:
+  - id
+  - reference
+  - status
+  - dockId
+  - boatModelId
+  - pickup
+  - return
+  - boats
+  - passengers
+  - createdAt
+  - updatedAt
+properties:
+  id:
+    type: string
+    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
+    description: Unique identifier of the booking
+  reference:
+    type: string
+    example: BK8J3L
+    description: |
+      A 6-character alphanumeric booking reference. The reference is unique
+      to the booking (per tenant) and is used to identify the booking by both
+      customers and staff.
+  status:
+    type: string
+    example: confirmed
+    default: draft
+    enum:
+      - draft
+      - expired
+      - option
+      - confirmed
+      - completed
+      - canceled
+    description: Current status of the booking
+#  source:
+#    type: string
+#    example: api
+#    enum:
+#      - api
+#      - booking_form
+#      - dashboard
+#    description: Source of the booking
+  customerId:
+    type: string
+    nullable: true
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: Unique identifier of the customer. Can be null for draft bookings.
+  dockId:
+    type: string
+    example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
+    description: Unique identifier of the dock
+  boatModelId:
+    type: string
+    example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
+    description: Unique identifier of the boat model
+  pickup:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Pickup date and time
+  return:
+    type: string
+    format: date-time
+    example: 2022-01-03T00:00:00Z
+    description: Return date and time
+  boats:
+    type: integer
+    example: 1
+    description: Number of boats booked
+    default: 1
+  passengers:
+    type: integer
+    example: 1
+    description: Number of passengers including the customer who booked the boat
+    default: 1
+  createdAt:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Timestamp of when the booking was initially created in ISO 8601 format
+  updatedAt:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Timestamp of when the booking was most recently updated in ISO 8601 format

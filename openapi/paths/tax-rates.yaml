@@ -1,0 +1,27 @@
+get:
+  summary: List all tax rates
+  description: |
+    Returns a list of tax rates used in costs, add-ons, etc. The response is
+    not paginated.
+  operationId: listTaxRates
+  tags:
+    - Tax rates
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/TaxRate.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

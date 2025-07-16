@@ -1,0 +1,53 @@
+type: object
+description: The address of the dock
+required:
+  - country
+  - line1
+  - city
+  - postalCode
+  - gps
+  - timeZoneName
+properties:
+  country:
+    type: string
+    example: NL
+    description: Two-letter country code
+  line1:
+    type: string
+    example: Church street 1
+    description: The first line of the address
+  line2:
+    type: string
+    example: Apt. 1
+    description: The second line of the address
+  city:
+    type: string
+    example: Amsterdam
+    description: The name of the city
+  postalCode:
+    type: string
+    example: 1071XA
+    description: Postal code in a format matching the country
+  stateOrRegion:
+    type: string
+    example: NY
+    description: The state or region. For now only applicable to US.
+  gps:
+    type: object
+    description: The GPS coordinates of the dock
+    required:
+      - lat
+      - long
+    properties:
+      lat:
+        type: number
+        example: 52.37
+        description: The latitude of the dock
+      long:
+        type: number
+        example: 4.89
+        description: The longitude of the dock
+  timeZoneName:
+    type: string
+    example: Europe/Amsterdam
+    description: The timezone of the dock

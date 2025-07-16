@@ -1,0 +1,50 @@
+description: Booking
+properties:
+  customerId:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the customer
+  dockId:
+    type: string
+    example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
+    description: ID of the dock
+  boatModelId:
+    type: string
+    example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
+    description: ID of the boat model
+  pickup:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Pickup date and time in ISO 8601 format
+  return:
+    type: string
+    format: date-time
+    example: 2022-01-03T00:00:00Z
+    description: Return date and time in ISO 8601 format
+  boats:
+    type: integer
+    example: 1
+    description: Number of boats booked
+    default: 1
+  passengers:
+    type: integer
+    example: 1
+    description: Number of passengers including the customer who booked the boat
+    default: 1
+  paid:
+    type: boolean
+    description: |
+      If set to true, the booking will be marked as paid by adding
+      a cash payment equal to the unpaid costs. It will be ignored when the
+      booking is already fully paid.
+      
+      Note that slot based pricing may fail to calculate the correct amount
+      as the slot is not known when the booking is created using the API.
+    default: true
+    example: true
+  createdAt:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: The time this booking was first created in ISO 8601 format

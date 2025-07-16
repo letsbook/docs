@@ -1,0 +1,13 @@
+description: Too many requests
+content:
+  application/json:
+    schema:
+      type: object
+      description: Authorization error
+      required:
+        - error
+      properties:
+        error:
+          type: string
+          description: Error message
+          example: Too Many Attempts.

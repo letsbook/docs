@@ -1,0 +1,48 @@
+description: Data of the customer
+required:
+  - id
+  - customerTypeId
+  - givenName
+  - familyName
+  - fullName
+  - emailAddress
+  - registeredAt
+properties:
+  id:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the Customer
+  customerTypeId:
+    type: string
+    example: a6fe15b1-8131-4f48-8082-311e0369f599
+    description: ID of the customer type
+  givenName:
+    type: string
+    example: John
+    description: First name of the Customer
+  familyName:
+    type: string
+    example: Doe
+    description: Last name of the Customer
+  fullName:
+    type: string
+    example: John Doe
+    description: Full name of the Customer
+  emailAddress:
+    type: string
+    format: email
+    example: john.doe@example.com
+    description: Email address of the Customer
+  phoneNumber:
+    type: string
+    example: "+49123456789"
+    description: Phone number of the Customer in E.164 format
+  preferredLocale:
+    type: string
+    example: sv_SE
+    description: Preferred locale of the customer in `language_COUNTRY` format.
+  registeredAt:
+    type: string
+    format: date-time
+    example: 2022-01-01T13:37:00Z
+    description: Date and time when the customer was registered in ISO 8601 format

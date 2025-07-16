@@ -1,0 +1,37 @@
+description: |
+  Payment for a booking. It can be the full amount, or paid in installments and
+  it can be paid by the customer or 'cash' payments, manually added by a
+  staff member.
+#discriminator:
+#  propertyName: source
+#  mapping:
+#    payment_request: ./PaymentRequestPayment.yaml
+required:
+  - id
+  - source
+  - amount
+  - createdAt
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Payment ID
+    example: 'd5a81709-8922-4c81-a854-c2c0c487b903'
+  source:
+    type: string
+    description: The source of the payment
+    enum:
+      - cash
+      - payment_request
+      - payment_request_authorization
+      - deposit_capture
+      - refund
+  amount:
+    type: integer
+    description: Amount paid in cents
+    example: 1750
+  createdAt:
+    type: string
+    format: date-time
+    description: Date and time when the payment was created
+    example: 2022-01-01T12:00:00Z

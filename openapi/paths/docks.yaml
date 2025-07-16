@@ -1,0 +1,27 @@
+get:
+  summary: List all docks
+  description: |
+    Returns a list of your docks. The docks are sort by the order as defined
+    in the dashboard. The response is not paginated.
+  operationId: listDocks
+  tags:
+    - Docks
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/Dock.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

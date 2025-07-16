@@ -1,0 +1,36 @@
+type: object
+description: Pagination to iterate large result sets.
+required:
+- totalItems
+- perPage
+- page
+- totalPages
+- nextPageUrl
+- previousPageUrl
+properties:
+  totalItems:
+    type: integer
+    example: 1337
+    description: Total number of items
+  perPage:
+    type: integer
+    example: 100
+    description: Number of items per page
+  page:
+    type: integer
+    example: 1
+    description: The current page number
+  totalPages:
+    type: integer
+    example: 14
+    description: Total number of pages
+  nextPageUrl:
+    type: string
+    nullable: true
+    example: https://api.letsbook.localhost/v1/customers?page=2,
+    description: URL to the next page. Null if last page.
+  previousPageUrl:
+    type: string
+    nullable: true
+    example: null
+    description: URL to the previous page. Null if first page.

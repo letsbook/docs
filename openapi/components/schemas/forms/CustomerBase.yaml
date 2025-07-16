@@ -1,0 +1,36 @@
+type: object
+properties:
+  customerTypeId:
+    type: string
+    description: Customer type ID
+    example: a6fe15b1-8131-4f48-8082-311e0369f599
+  givenName:
+    type: string
+    description: First name of the customer
+    example: John
+  familyName:
+    type: string
+    description: Last name of the customer
+    example: Doe
+  emailAddress:
+    type: string
+    description: Email address of the customer
+    format: email
+    example: john.doe@example.com
+  phoneNumber:
+    type: string
+    description: Phone number of the customer in E.164 format
+    example: "+49123456789"
+  preferredLocale:
+    type: string
+    description: Preferred locale of the customer in `language_COUNTRY` format.
+    example: sv_SE
+  password:
+    type: string
+    description: |
+      Password of the customer. Should be left empty if you don't want to
+      change the password. It will be set to a random password if you don't
+      specify one when creating a new customer.
+
+      **Note:** The password must be at least 8 characters long.
+    example: correcthorsebatterystaple

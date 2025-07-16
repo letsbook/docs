@@ -1,0 +1,25 @@
+get:
+  summary: List all customer types
+  description: Returns a list of all customer types. The response is not paginated.
+  operationId: listCustomerTypes
+  tags:
+    - Customers
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/CustomerType.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
