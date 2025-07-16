@@ -1,179 +1,74 @@
-# Tracking conversion with Google analytics
+# Google Analytics Integration
 
-You can let Google measure how many successful bookings you achieve with, for example, an ads campaign.
+Let's Book now provides seamless Google Analytics (GA4) integration that automatically tracks page views, custom events,
+and ecommerce events without requiring custom return URLs or manual script implementation.
 
-**Here's how:**
+## Updated Embed Script
 
-1. Make sure you're using Google Analytics (GA4) on your website already.
-2. Create a 'Thank you' page on your own website. Then use the URL to that page to set up a custom return URL that customers will see when their payment was successful. Let's Book adds info about the booking and payment to that URL.
-3. Create a campaign via https://ads.google.com/. Is this new to you? Maybe these tips from Google can help you.
-4. Copy and paste the following script onto your 'Thank you' page. Make sure it is placed after the GA4 or GTM script. You can change this script to your liking, but it essentially forwards the relevant data, which was added to the URL by Let's Book, to Google Analytics.
+Replace your existing Let's Book embed script with the following updated version that includes analytics functionality:
 
+```html
+<!-- Start of Let's Book widget -->
+<script src="https://cdn.letsbook.app/assets/lb-widgets.min.js" type="module" defer></script>
+<script src="https://cdn.letsbook.app/assets/lb-analytics.min.js" type="module" defer></script>
+<!-- End of Let's Book widget -->
 ```
-<script>
 
+The key addition is the `lb-analytics.min.js` script, which enables automatic event tracking to your Google Analytics (
+GA4) property.
 
+## Automatic Event Tracking
 
-(function() {
+Once the updated embed script is installed, you'll automatically receive the following events in your GA4 dashboard:
 
+### Custom Events
 
+- **`booking_form_open`**: Triggered when the booking form is opened
+- **`booking_form_close`**: Triggered when the booking form is closed
 
-var args = new URL(document.location).searchParams;
+### Page View Tracking
 
+- **`page_view`**: Tracks navigation within the booking form using the hash as the path format:
+  `<your_website_url>#<path_within_letsbook>`
 
+### Ecommerce Events
 
+The following standard GA4 ecommerce events are automatically tracked throughout the booking process. Each of these
+events contain all financial information relevant to GA4:
 
-// Do not record a purchase when there's no lbPaymentRequestId
+- **`begin_checkout`**: When a customer starts the checkout process by completing the draft booking
+- **`add_shipping_info`**: When a customer entered their personal details
+- **`add_payment_info`**: When payment information is provided
+- **`purchase`**: When a booking is successfully completed
 
+## Important Changes
 
+### No Custom Return URL Required
 
-if (! args.get('lbPaymentRequestId')) {
+**Important**: Custom return URLs (thank you pages) are no longer needed with the new analytics integration. In fact, if
+you still have a custom return URL configured, the automatic `purchase` event tracking will not work, and you would
+need to implement the tracking manually.
 
+For optimal analytics tracking, we recommend removing any custom return URLs you may have previously configured.
 
+## Debug Mode
 
-return;
+To troubleshoot and verify what events are being sent to Google Analytics, you can enable debug mode by adding
+`?debug=true` to the analytics script URL:
 
+```html
 
-
-}
-
-
-
-
-var eventDetails = {
-
-
-
-transaction_id: args.get('lbPaymentRequestId'),
-
-
-
-value: args.get('lbTotalIncVatInCents').slice(0, -2) + '.' + args.get('lbTotalIncVatInCents').slice(-2),
-
-
-
-currency: args.get('lbCurrency'),
-
-
-
-coupon: args.get('lbCouponCode'),
-
-
-
-items: [{
-
-
-
-item_id: args.get('lbBookingReference'),
-
-
-
-item_name: 'Payment request',
-
-
-
-item_category: args.get('lbDockName'),
-
-
-
-item_category2: args.get('lbBoatModelName'),
-
-
-
-}]
-
-
-
-};
-
-
-
-
-var purchaseEventSent = false;
-
-
-
-function sendPurchaseEvent() {
-
-
-
-if (purchaseEventSent) {
-
-
-
-return;
-
-
-
-}
-
-
-
-
-// Attempt to use gtag first (GA4)
-
-
-
-if (typeof gtag === 'function') {
-
-
-
-gtag('event', 'purchase', eventDetails);
-
-
-
-purchaseEventSent = true;
-
-
-
-
-return;
-
-
-
-}
-
-
-
-
-// If gtag is not available, use dataLayer which is part of GTM
-
-
-
-if (typeof dataLayer !== 'undefined') {
-
-
-
-dataLayer.push({ event: 'purchase', ecommerce: eventDetails });
-
-
-
-purchaseEventSent = true;
-
-
-
-}
-
-
-
-}
-
-
-
-
-addEventListener('load', sendPurchaseEvent);
-
-
-
-sendPurchaseEvent();
-
-
-
-})();
-
-
-
-</script>
-
-
+<script src="https://cdn.letsbook.app/assets/lb-analytics.min.js?debug=true" type="module" defer></script>
 ```
+
+When debug mode is active, you'll see detailed information about the events being tracked in your browser's developer
+console.
+
+## Setup Requirements
+
+1. **Ensure GA4 or GTM is installed**: The script will automatically detect your Tag Manager (GTM) or Analytics (GA4)
+   configuration you already have on your site.
+2. **Update embed script**: Replace your existing Let's Book embed script with the new version above
+3. **Remove custom return URLs**: If you have any custom return URLs configured, consider removing them to enable
+   automatic purchase tracking
+4. **Test the integration**: Use debug mode to verify events are being tracked correctly

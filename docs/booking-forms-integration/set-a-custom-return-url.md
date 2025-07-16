@@ -1,12 +1,18 @@
 # Set a custom return URL
 
-To set up a customer "thank you page" / return URL, follow these steps:
+## Important: Analytics Integration Considerations
+
+**Before setting up a custom return URL**, please note that Let's Book now offers [automatic Google Analytics integration](../analytics-reporting/connect-google-analytics.md) that tracks purchase events without requiring custom return URLs.
+
+**If you're using the new analytics integration**: Custom return URLs will disable automatic `purchase` event tracking. For optimal analytics tracking, we recommend using the automatic integration instead of custom return URLs.
+
+**If you still need a custom return URL** (for custom tracking implementations or specific business requirements), follow these steps:
 
 1. Go to Settings and select General Info.
 2. Look for the 'Custom return URL' option.
 3. Enter the url where you want to send your customers after making a successful booking.
 
-By following these instructions, you can easily configure a personalized page for your customers.
+By following these instructions, you can configure a personalized page for your customers, but remember that this will require manual implementation of purchase event tracking if you want analytics data.
 
 **Advanced**
 
