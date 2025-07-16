@@ -1,7 +1,7 @@
 get:
   summary: List all boat models
   description: |
-    Returns a list of boat models. The boat models are sort by the order as
+    Returns a list of boat models. The boat models are sorted by the order as
     defined in the dashboard. The response is not paginated.
   operationId: listBoatModels
   tags:

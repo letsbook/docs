@@ -1,6 +1,6 @@
 get:
   summary: Search customers
-  description: Returns a list of all customers matching the query
+  description: Returns a list of all customers matching the query.
   operationId: searchCustomers
   tags:
     - Customers

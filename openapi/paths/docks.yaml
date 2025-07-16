@@ -1,7 +1,7 @@
 get:
   summary: List all docks
   description: |
-    Returns a list of your docks. The docks are sort by the order as defined
+    Returns a list of your docks. The docks are sorted by the order as defined
     in the dashboard. The response is not paginated.
   operationId: listDocks
   tags:

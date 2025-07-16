@@ -1,7 +1,7 @@
 get:
   summary: Retrieve a booking
   description: |
-    Retrieve a booking and its financial details and customer details.
+    Retrieve a booking with its financial and customer details.
   operationId: getBooking
   parameters:
     - name: id

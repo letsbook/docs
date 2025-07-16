@@ -31,7 +31,7 @@ get:
 
 post:
   summary: Create a customer
-  description: Registers a new customer in the system
+  description: Registers a new customer in the system.
   operationId: createCustomer
   tags:
     - Customers

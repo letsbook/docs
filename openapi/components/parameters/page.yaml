@@ -1,6 +1,6 @@
 name: page
 in: query
-description: The page number to fetch
+description: The page number to fetch.
 required: false
 schema:
   type: integer

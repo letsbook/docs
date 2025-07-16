@@ -1,7 +1,7 @@
 get:
   summary: Calculate availability
   description: |
-    Get availability for a boat model at a dock during a date/time period
+    Get availability for a boat model at a dock during a date/time period.
   operationId: getAvailability
   tags:
     - Availability

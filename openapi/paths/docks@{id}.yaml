@@ -1,6 +1,6 @@
 get:
   summary: Retrieve a dock
-  description: Retrieve a Dock object by ID
+  description: Retrieve a Dock object by ID.
   operationId: getDock
   parameters:
     - name: id

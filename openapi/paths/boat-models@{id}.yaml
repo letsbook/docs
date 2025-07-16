@@ -1,6 +1,6 @@
 get:
   summary: Retrieve a boat model
-  description: Retrieve a BoatModel object by ID
+  description: Retrieve a BoatModel object by ID.
   operationId: getBoatModel
   parameters:
     - name: id

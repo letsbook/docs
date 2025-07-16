@@ -1,6 +1,6 @@
 get:
   summary: Retrieve a customer
-  description: Retrieve a Customer object by ID
+  description: Retrieve a Customer object by ID.
   operationId: getCustomer
   parameters:
     - name: id
@@ -31,7 +31,7 @@ get:
 
 post:
   summary: Update a customer
-  description: Update an existing customer
+  description: Update an existing customer.
   operationId: updateCustomer
   tags:
     - Customers

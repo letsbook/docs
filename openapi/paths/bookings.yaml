@@ -21,7 +21,7 @@ get:
           - all
     - name: updatedAfter
       in: query
-      description: Display only bookings updated after the specified date and time in ISO8601 format
+      description: Display only bookings updated after the specified date and time in ISO 8601 format
       schema:
         type: string
         format: date-time

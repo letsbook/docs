@@ -16,15 +16,15 @@ info:
     base URL: `https://api.letsbook.app`. The OpenAPI specification is
     available at [https://developers.lets-book.com/api-spec.json](https://developers.lets-book.com/api-spec.json).
 
-    You can be assured that all GET requests will not modify any data and are therefore
-    idempotent, while POST/PUT/DELETE requests are not. We utilize HTTP status codes
+    You can be assured that all GET requests do not modify any data and are therefore
+    idempotent, while POST/PUT/DELETE requests are not. We use HTTP status codes
     to communicate errors whenever possible.
 
     # Authentication
 
-    To access the API, you will need an API key, which can be obtained from the
+    To access the API, you need an API key, which can be obtained from the
     [dashboard](https://dashboard.letsbook.app/integrations). The API key is
-    utilized as a Bearer Authentication token. Please note that the API key is case-
+    used as a Bearer Authentication token. Please note that the API key is case-
     sensitive. Most tooling supports Bearer Authentication natively.
     If you are using a tool that does not support it, you can construct the Authorization
     header manually as follows: `Authorization: Bearer <API_KEY>`.
@@ -47,7 +47,7 @@ info:
 
     ### Example
 
-    You can utilize the `/me` endpoint to retrieve a list of all tenants to which you
+    You can use the `/me` endpoint to retrieve a list of all tenants to which you
     have access. You can then use the `id` of the desired tenant.
     For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`,
     you would configure the header as follows:
