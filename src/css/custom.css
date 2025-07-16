@@ -45,3 +45,7 @@
 body {
     word-wrap: normal;
 }
+
+.redoc-wrap [role="search"] {
+    display: none;
+}
