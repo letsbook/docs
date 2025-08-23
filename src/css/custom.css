@@ -46,6 +46,6 @@ body {
     word-wrap: normal;
 }
 
-.redoc-wrap [role="search"] {
+.redoc-wrap [role='search'] {
     display: none;
 }

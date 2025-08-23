@@ -4,3 +4,10 @@ letsbook-team:
     url: https://lets-book.com
     image_url: /img/logo.svg
     page: false
+
+letsbook:
+    name: Let's Book
+    title: Product Team
+    url: https://lets-book.com
+    image_url: /img/logo.svg
+    page: false
