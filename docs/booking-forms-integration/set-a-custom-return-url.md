@@ -25,7 +25,7 @@ This is a list of parameters that are sent to the return page. These parameters 
 statistics and tracking data.
 
 |                      |                                                                                  |
-|----------------------|----------------------------------------------------------------------------------|
+| -------------------- | -------------------------------------------------------------------------------- |
 | lbBookingReference   | The booking reference                                                            |
 | lbPaymentRequestId   | A unique ID for the paid payment request                                         |
 | lbDockId             | The ID of the dock where the trip starts                                         |
@@ -48,7 +48,6 @@ the [parameters](#return-url-parameters) and implementing the script below, whic
 Google Analytics. Feel free to modify it to your needs.
 
 ```html
-
 <script>
     (function () {
         var args = new URL(document.location).searchParams;
@@ -58,15 +57,20 @@ Google Analytics. Feel free to modify it to your needs.
         }
         var eventDetails = {
             transaction_id: args.get('lbPaymentRequestId'),
-            value: args.get('lbTotalIncVatInCents').slice(0, -2) + '.' + args.get('lbTotalIncVatInCents').slice(-2),
+            value:
+                args.get('lbTotalIncVatInCents').slice(0, -2) +
+                '.' +
+                args.get('lbTotalIncVatInCents').slice(-2),
             currency: args.get('lbCurrency'),
             coupon: args.get('lbCouponCode'),
-            items: [{
-                item_id: args.get('lbBookingReference'),
-                item_name: 'Payment request',
-                item_category: args.get('lbDockName'),
-                item_category2: args.get('lbBoatModelName'),
-            }]
+            items: [
+                {
+                    item_id: args.get('lbBookingReference'),
+                    item_name: 'Payment request',
+                    item_category: args.get('lbDockName'),
+                    item_category2: args.get('lbBoatModelName'),
+                },
+            ],
         };
         var purchaseEventSent = false;
 
@@ -84,7 +88,7 @@ Google Analytics. Feel free to modify it to your needs.
             if (typeof dataLayer !== 'undefined') {
                 dataLayer.push({
                     event: 'purchase',
-                    ecommerce: eventDetails
+                    ecommerce: eventDetails,
                 });
                 purchaseEventSent = true;
             }

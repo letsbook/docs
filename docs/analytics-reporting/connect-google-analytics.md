@@ -10,8 +10,16 @@ Replace your existing Let's Book embed script with the following updated version
 
 ```html
 <!-- Start of Let's Book widget -->
-<script src="https://cdn.letsbook.app/assets/lb-widgets.min.js" type="module" defer></script>
-<script src="https://cdn.letsbook.app/assets/lb-analytics.min.js" type="module" defer></script>
+<script
+    src="https://cdn.letsbook.app/assets/lb-widgets.min.js"
+    type="module"
+    defer
+></script>
+<script
+    src="https://cdn.letsbook.app/assets/lb-analytics.min.js"
+    type="module"
+    defer
+></script>
 <!-- End of Let's Book widget -->
 ```
 
@@ -59,8 +67,11 @@ To troubleshoot and verify what events are being sent to Google Analytics, you c
 `?debug=true` to the analytics script URL:
 
 ```html
-
-<script src="https://cdn.letsbook.app/assets/lb-analytics.min.js?debug=true" type="module" defer></script>
+<script
+    src="https://cdn.letsbook.app/assets/lb-analytics.min.js?debug=true"
+    type="module"
+    defer
+></script>
 ```
 
 When debug mode is active, you'll see detailed information about the events being tracked in your browser's developer
