@@ -21,13 +21,13 @@ const helpOptions: HelpOption[] = [
         title: 'Join our community',
         description: 'Find every answer you are looking for',
         icon: '👋',
-        link: '/docs/intro',
+        link: '/guides/intro',
     },
     {
         title: 'Book an expert',
         description: 'Find a specialist for your situation',
         icon: '🏠',
-        link: '/docs/intro',
+        link: '/guides/intro',
     },
 ];
 
@@ -249,7 +249,7 @@ export default function GettingStarted(): ReactNode {
                         </p>
                         <div className={styles.CTAButtons}>
                             <Link
-                                to="/docs/intro"
+                                to="/guides/intro"
                                 className={`${styles.Btn} ${styles.BtnPrimary}`}
                             >
                                 💬 Start chat

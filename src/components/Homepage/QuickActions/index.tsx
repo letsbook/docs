@@ -16,25 +16,25 @@ const quickActions: QuickAction[] = [
         description:
             'Manually add a booking to your schedule and handle payment',
         icon: '⛵',
-        link: '/docs/customer-management',
+        link: '/guides/customer-management',
     },
     {
         title: 'View schedule',
         description: 'Get an overview of all bookings and available boats',
         icon: '📋',
-        link: '/docs/scheduling',
+        link: '/guides/scheduling',
     },
     {
         title: 'Handle payments',
         description: 'Send payment links and manage refunds and deposits',
         icon: '💳',
-        link: '/docs/pricing-billing',
+        link: '/guides/pricing-billing',
     },
     {
         title: 'Get started',
         description: "Complete guide to get started with Let's Book right away",
         icon: '🚀',
-        link: '/docs/getting-started',
+        link: '/guides/getting-started',
     },
 ];
 

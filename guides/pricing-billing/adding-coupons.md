@@ -1,3 +1,7 @@
+---
+roles: [operator, dockhost]
+---
+
 # Working with Coupons
 
 **Quick to**: New coupon • Add codes to coupon • Export codes

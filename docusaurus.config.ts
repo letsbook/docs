@@ -63,6 +63,8 @@ const config: Config = {
             'classic',
             {
                 docs: {
+                    path: 'guides',
+                    routeBasePath: 'guides',
                     sidebarPath: './sidebars.ts',
                     editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
                 },
@@ -99,7 +101,7 @@ const config: Config = {
             {
                 openapi: {
                     // Folder to scan for *.openapi.yaml files
-                    path: 'openapi',
+                    path: 'api',
                     routeBasePath: '/api',
                 },
                 specs: [
@@ -165,11 +167,11 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: 'Guides',
                     items: [
                         {
                             label: 'Documentation',
-                            to: '/docs/intro',
+                            to: '/guides/getting-started',
                         },
                     ],
                 },
