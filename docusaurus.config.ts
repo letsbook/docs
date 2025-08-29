@@ -129,6 +129,11 @@ const config: Config = {
     themeConfig: {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
+        colorMode: {
+            defaultMode: 'light',
+            disableSwitch: true,
+            respectPrefersColorScheme: false,
+        },
         navbar: {
             style: 'primary',
             title: 'Let\'s Book Support',
@@ -141,8 +146,8 @@ const config: Config = {
                 {
                     type: 'docSidebar',
                     sidebarId: 'docsSidebar',
+                    label: 'Guides',
                     position: 'left',
-                    label: 'Documentation',
                 },
                 {
                     to: '/releases',
@@ -151,7 +156,7 @@ const config: Config = {
                 },
                 {
                     to: '/api/index',
-                    label: 'API documentation',
+                    label: 'Developer docs',
                     position: 'left',
                 }
             ],
@@ -186,7 +191,6 @@ const config: Config = {
         },
         prism: {
             theme: prismThemes.github,
-            darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
 };
