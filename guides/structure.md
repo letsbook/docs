@@ -1,79 +1,78 @@
-Bookings
-- Adding a booking
-- Customer notifications
-- Finding a specific booking
-- Finding bookings based on parameters
-- Booking statuses explained
+### Manage bookings
+- Add a booking
+- Send customer notifications
+- Search bookings
+- Filter bookings
+- Understand booking statuses
 
-Keeping track of everything
-- Planning overview
-- Add-on orders
-- Assigning boats to bookings
-- Engine control
-- Locating a boat (todo)
-- Calendar integration
+### Keep track of operations
+- View planning overview
+- Manage add-on orders
+- Assign boats to bookings
+- Control engines remotely
+- Locate a boat
+- Integrate calendar
 
-Managing availability
-- Availability overview
-- Blockout periods
-- Placing boats at the docks
+### Manage availability
+- View availability overview
+- Block out periods
+- Assign boats to docks
 
-Reporting
-- Interpreting sales insights
-- Data exports
+### Report performance
+- View sales insights
+- Export data
 
-Generating extra revenue
-- Shifting the booking fee
-- Creating coupons
-- Sell out giftcards
-- Setting up auto-extend booking
+### Generate extra revenue
+- Shift booking fees
+- Create coupons
+- Sell gift cards
+- Enable auto-extend bookings
 
-Managing your customers
-- Adding a customer
-- Anonymizing existing customers
-- Profiling a customer (notes, # of bookings)
-- Configuring what a customer can do
+### Manage customers
+- Add a customer
+- Anonymize customers
+- View customer history
+- Configure customer permissions
 
-Changing operations
-- Configuring pickup locations
-- Configuring boat models and boats
-- Connecting a boat engine
-- Planning operational changes
-- Setting up opening hours
-- Tweak pricing for your bookings
-- Determining booking confirmation
-- Setting up customer notifications
-- Managing available add-ons
+### Change operations
+- Configure pickup locations
+- Configure boat models and boats
+- Connect a boat engine
+- Plan operational changes
+- Set opening hours
+- Adjust booking pricing
+- Configure booking confirmation
+- Manage available add-ons
 
-Booking form
-- Integrating the form with your website
-- Tweaking the logo and styling
-- Setting up tracking 
-- Customizing the customer journey
-	- Return URL
-	- Additional questions
-	- Date picker 
-	- Phone number
-	- Alternatives
-- Working with taxes	
+### Configure booking form
+- Integrate booking form with your website
+- Customize logo and styling
+- Setup tracking
+- Customize customer journey
+  - Set return URL
+  - Add custom questions
+  - Configure date picker
+  - Require phone number
+  - Offer alternatives
+- Configure taxes
 - Configure supported languages
 
-Implementing business rules
-- Simultaneous pickup/return (dock)
-- Customer rules 
-- Booking cancellation
+### Implement business rules
+- Configure simultaneous pickup and return
+- Define customer rules
+- Configure cancellation rules
 
-Receiving payments
-- Setting up Mollie
-- Setting up Stripe
-- Application fees
+### Receive payments
+- Setup Mollie
+- Setup Stripe
+- Manage application fees
 
-Waivers and contracts
-- Setting it up
-- Using customer waivers
-- Using booking contracts
+### Setup waivers and contracts
+- Setup waivers and contracts
+- Use customer waivers
+- Use booking contracts
 
-Collaborating
-- Managing team members
-- Managing permissions
-- Keeping track of changes
+### Collaborate with your team
+- Manage team members
+- Manage permissions
+- Track changes
