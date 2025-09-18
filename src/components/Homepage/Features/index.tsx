@@ -23,8 +23,14 @@ const categories: Category[] = [
                 title: 'Add or cancel a Booking',
                 link: '/guides/customer-management',
             },
-            { title: 'Using the Planning Overview', link: '/guides/scheduling' },
-            { title: 'Sync planning with calendar', link: '/guides/scheduling' },
+            {
+                title: 'Using the Planning Overview',
+                link: '/guides/scheduling',
+            },
+            {
+                title: 'Sync planning with calendar',
+                link: '/guides/scheduling',
+            },
             {
                 title: 'Take a boat out of service',
                 link: '/guides/fleet-management',
@@ -50,9 +56,15 @@ const categories: Category[] = [
         icon: '💳',
         links: [
             { title: 'Payment processing', link: '/guides/pricing-billing' },
-            { title: 'Refunds & cancellations', link: '/guides/pricing-billing' },
+            {
+                title: 'Refunds & cancellations',
+                link: '/guides/pricing-billing',
+            },
             { title: 'Deposit management', link: '/guides/pricing-billing' },
-            { title: 'Financial reporting', link: '/guides/analytics-reporting' },
+            {
+                title: 'Financial reporting',
+                link: '/guides/analytics-reporting',
+            },
             { title: 'Tax integration', link: '/guides/analytics-reporting' },
         ],
     },
