@@ -20,8 +20,8 @@ In this section, you'll discover how to:
 
 ## API & Advanced Guides
 
-- [Working with Let's Book API](./working-with-lets-book-api.md) - Complete guide to API integration
-- [Setting Up Advanced Booking Conditions](./setting-up-advanced-booking-conditions.md) - Configure complex booking rules
+- [Working with Let's Book API](working-with-lets-book-api.md) - Complete guide to API integration
+- [Setting Up Advanced Booking Conditions](setting-up-advanced-booking-conditions.md) - Configure complex booking rules
 
 ## Key Features
 
@@ -66,6 +66,6 @@ Before working with advanced features:
 
 ## Getting Started
 
-Ready for advanced configuration? Start with [Working with Let's Book API](./working-with-lets-book-api.md) to understand our API structure and authentication, then explore [Setting Up Advanced Booking Conditions](./setting-up-advanced-booking-conditions.md) for complex booking scenarios.
+Ready for advanced configuration? Start with [Working with Let's Book API](working-with-lets-book-api.md) to understand our API structure and authentication, then explore [Setting Up Advanced Booking Conditions](setting-up-advanced-booking-conditions.md) for complex booking scenarios.
 
 For technical support with API integration, consult our API documentation or contact our technical support team.

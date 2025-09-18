@@ -22,17 +22,17 @@ In this section, you'll discover how to:
 
 ### Platform-Specific Integration
 
-- [Embedding Booking Form](./embedding-booking-form.md) - General embedding guide
-- [Embed Booking Form on WordPress Website](./embed-booking-form-on-wordpress-website.md) - WordPress integration
-- [Embedding Booking Form on Shopify Website](./embedding-booking-form-on-shopify-website.md) - Shopify integration
-- [Embed Booking Form to Squarespace](./embed-booking-form-to-squarespace.md) - Squarespace integration
-- [Embed Booking Form to Wix Website](./embed-booking-form-to-wix-website.md) - Wix integration
+- [Embedding Booking Form](embedding-booking-form.md) - General embedding guide
+- [Embed Booking Form on WordPress Website](embed-booking-form-on-wordpress-website.md) - WordPress integration
+- [Embedding Booking Form on Shopify Website](embedding-booking-form-on-shopify-website.md) - Shopify integration
+- [Embed Booking Form to Squarespace](embed-booking-form-to-squarespace.md) - Squarespace integration
+- [Embed Booking Form to Wix Website](embed-booking-form-to-wix-website.md) - Wix integration
 
 ### Customization & Configuration
 
-- [Configure Your Styling](./configure-your-styling.md) - Customize form appearance
-- [Booking Form Working with Alternative Options](./booking-form-working-with-alternative-options.md) - Advanced form options
-- [Set a Custom Return URL](./set-a-custom-return-url.md) - Configure post-booking redirects
+- [Configure Your Styling](configure-your-styling.md) - Customize form appearance
+- [Booking Form Working with Alternative Options](booking-form-working-with-alternative-options.md) - Advanced form options
+- [Set a Custom Return URL](set-a-custom-return-url.md) - Configure post-booking redirects
 
 ## Key Features
 
@@ -72,11 +72,11 @@ Centrally manage booking forms while they automatically update across all integr
 
 ## Getting Started
 
-New to booking form integration? Start with [Embedding Booking Form](./embedding-booking-form.md) for general guidance, then choose your specific platform guide:
+New to booking form integration? Start with [Embedding Booking Form](embedding-booking-form.md) for general guidance, then choose your specific platform guide:
 
-- **WordPress users**: [Embed Booking Form on WordPress Website](./embed-booking-form-on-wordpress-website.md)
-- **Shopify users**: [Embedding Booking Form on Shopify Website](./embedding-booking-form-on-shopify-website.md)
-- **Squarespace users**: [Embed Booking Form to Squarespace](./embed-booking-form-to-squarespace.md)
-- **Wix users**: [Embed Booking Form to Wix Website](./embed-booking-form-to-wix-website.md)
+- **WordPress users**: [Embed Booking Form on WordPress Website](embed-booking-form-on-wordpress-website.md)
+- **Shopify users**: [Embedding Booking Form on Shopify Website](embedding-booking-form-on-shopify-website.md)
+- **Squarespace users**: [Embed Booking Form to Squarespace](embed-booking-form-to-squarespace.md)
+- **Wix users**: [Embed Booking Form to Wix Website](embed-booking-form-to-wix-website.md)
 
-After integration, explore [Configure Your Styling](./configure-your-styling.md) to customize the appearance and [Set a Custom Return URL](./set-a-custom-return-url.md) for post-booking redirects.
+After integration, explore [Configure Your Styling](configure-your-styling.md) to customize the appearance and [Set a Custom Return URL](set-a-custom-return-url.md) for post-booking redirects.

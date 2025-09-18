@@ -8,6 +8,12 @@ the whole booking (and sailing!) experience seamless.
 
 To style it your way: head over to **Styling**
 
+:::warning
+
+Some **content** with some _Markdown_ `syntax`.
+
+:::
+
 **1. Upload Logo**
 
 Upload a horizontal version of your logo in JPG or PNG format with a minimum width of 320 px.

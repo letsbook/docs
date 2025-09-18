@@ -23,22 +23,22 @@ In this section, you'll discover how to:
 
 ### Pricing Configuration
 
-- [Pricing](./pricing.md) - Overview of pricing concepts and strategies
-- [Pricing Setup - Simple Pricing](./pricing-setup-simple-pricing.md) - Basic pricing configuration
-- [Pricing Setup - Flexible Pricing](./pricing-setup-flexible-pricing.md) - Advanced flexible pricing options
-- [Pricing Setup - Slot Pricing](./pricing-setup-slot-pricing.md) - Time-slot based pricing
-- [Pricing Plans](./pricing-plans.md) - Create and manage pricing plans
+- [Pricing](pricing.md) - Overview of pricing concepts and strategies
+- [Pricing Setup - Simple Pricing](pricing-setup-simple-pricing.md) - Basic pricing configuration
+- [Pricing Setup - Flexible Pricing](pricing-setup-flexible-pricing.md) - Advanced flexible pricing options
+- [Pricing Setup - Slot Pricing](pricing-setup-slot-pricing.md) - Time-slot based pricing
+- [Pricing Plans](pricing-plans.md) - Create and manage pricing plans
 
 ### Payment & Billing Operations
 
-- [Billing](./billing.md) - Billing processes and management
-- [Connect a Payment Provider/Add Payment Details](./connect-a-payment-provider-add-payment-details.md) - Payment gateway setup
-- [Add Costs/Payment Request](./add-costs-payment-request.md) - Handle additional costs and payment requests
+- [Billing](billing.md) - Billing processes and management
+- [Connect a Payment Provider/Add Payment Details](connect-a-payment-provider-add-payment-details.md) - Payment gateway setup
+- [Add Costs/Payment Request](add-costs-payment-request.md) - Handle additional costs and payment requests
 
 ### Promotions & Advanced Features
 
-- [Adding Coupons](./adding-coupons.md) - Create and manage discount coupons
-- [Working with Formulas](./working-with-formulas.md) - Advanced pricing calculations
+- [Adding Coupons](adding-coupons.md) - Create and manage discount coupons
+- [Working with Formulas](working-with-formulas.md) - Advanced pricing calculations
 
 ## Key Features
 
@@ -102,10 +102,10 @@ Advanced pricing calculations for complex business rules and custom pricing logi
 
 ## Getting Started
 
-New to pricing and billing? Start with [Pricing](./pricing.md) to understand the concepts, then choose your pricing model:
+New to pricing and billing? Start with [Pricing](pricing.md) to understand the concepts, then choose your pricing model:
 
-- **Simple operations**: [Pricing Setup - Simple Pricing](./pricing-setup-simple-pricing.md)
-- **Dynamic pricing needs**: [Pricing Setup - Flexible Pricing](./pricing-setup-flexible-pricing.md)
-- **Time-slot operations**: [Pricing Setup - Slot Pricing](./pricing-setup-slot-pricing.md)
+- **Simple operations**: [Pricing Setup - Simple Pricing](pricing-setup-simple-pricing.md)
+- **Dynamic pricing needs**: [Pricing Setup - Flexible Pricing](pricing-setup-flexible-pricing.md)
+- **Time-slot operations**: [Pricing Setup - Slot Pricing](pricing-setup-slot-pricing.md)
 
-Next, set up payment processing with [Connect a Payment Provider/Add Payment Details](./connect-a-payment-provider-add-payment-details.md) and explore [Adding Coupons](./adding-coupons.md) for promotional strategies.
+Next, set up payment processing with [Connect a Payment Provider/Add Payment Details](connect-a-payment-provider-add-payment-details.md) and explore [Adding Coupons](adding-coupons.md) for promotional strategies.

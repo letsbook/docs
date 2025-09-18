@@ -20,9 +20,9 @@ In this section, you'll discover how to:
 
 ## Analytics & Reporting Guides
 
-- [Connect Google Analytics](./connect-google-analytics.md) - Integrate Google Analytics for web tracking
-- [Running Exports of Bookings](./running-exports-of-bookings.md) - Export booking data for analysis
-- [Sales Insights](./sales-insights.md) - Understand and analyze your sales performance
+- [Connect Google Analytics](connect-google-analytics.md) - Integrate Google Analytics for web tracking
+- [Running Exports of Bookings](running-exports-of-bookings.md) - Export booking data for analysis
+- [Sales Insights](sales-insights.md) - Understand and analyze your sales performance
 
 ## Key Features
 
@@ -58,4 +58,4 @@ Gain deeper understanding of customer behavior, preferences, and booking pattern
 
 ## Getting Started
 
-New to analytics and reporting? Start with [Connect Google Analytics](./connect-google-analytics.md) to set up basic web tracking, then explore [Sales Insights](./sales-insights.md) to understand your business performance. Use [Running Exports of Bookings](./running-exports-of-bookings.md) when you need detailed data for custom analysis.
+New to analytics and reporting? Start with [Connect Google Analytics](connect-google-analytics.md) to set up basic web tracking, then explore [Sales Insights](sales-insights.md) to understand your business performance. Use [Running Exports of Bookings](running-exports-of-bookings.md) when you need detailed data for custom analysis.

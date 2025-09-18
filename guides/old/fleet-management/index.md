@@ -20,11 +20,11 @@ In this section, you'll discover how to:
 
 ## Fleet Management Guides
 
-- [Manage Boats](./manage-boats.md) - Add, edit, and configure your boat inventory
-- [Manage Docks](./manage-docks.md) - Set up and organize your docking facilities
-- [Manage Add-ons](./manage-add-ons.md) - Configure additional services and equipment
-- [Connected Fleet](./connected-fleet.md) - Set up and manage connected boat features
-- [Boat Out of Service](./boat-out-of-service.md) - Handle maintenance and unavailable boats
+- [Manage Boats](manage-boats.md) - Add, edit, and configure your boat inventory
+- [Manage Docks](manage-docks.md) - Set up and organize your docking facilities
+- [Manage Add-ons](manage-add-ons.md) - Configure additional services and equipment
+- [Connected Fleet](connected-fleet.md) - Set up and manage connected boat features
+- [Boat Out of Service](boat-out-of-service.md) - Handle maintenance and unavailable boats
 
 ## Key Features
 
@@ -46,4 +46,4 @@ Leverage technology to monitor and manage your boats remotely with real-time dat
 
 ## Getting Started
 
-New to fleet management? Start with [Manage Boats](./manage-boats.md) to learn the basics of adding and configuring your boat inventory, then explore dock management and add-on services to build a comprehensive fleet operation.
+New to fleet management? Start with [Manage Boats](manage-boats.md) to learn the basics of adding and configuring your boat inventory, then explore dock management and add-on services to build a comprehensive fleet operation.

@@ -20,9 +20,9 @@ In this section, you'll discover how to:
 
 ## Account Management Guides
 
-- [Team Roles](./team-roles.md) - Configure team member roles and permissions
-- [Copy Translations](./copy-translations.md) - Manage multilingual content and translations
-- [Pause or Cancel My Account](./pause-or-cancel-my-account.md) - Handle account lifecycle operations
+- [Team Roles](team-roles.md) - Configure team member roles and permissions
+- [Copy Translations](copy-translations.md) - Manage multilingual content and translations
+- [Pause or Cancel My Account](pause-or-cancel-my-account.md) - Handle account lifecycle operations
 
 ## Key Features
 
@@ -54,4 +54,4 @@ Handle account operations including temporary pausing and permanent cancellation
 
 ## Getting Started
 
-New to account management? Start with [Team Roles](./team-roles.md) to understand how to set up your team structure, then explore translation management if you serve multilingual customers. For account lifecycle operations, refer to the pause or cancel guide when needed.
+New to account management? Start with [Team Roles](team-roles.md) to understand how to set up your team structure, then explore translation management if you serve multilingual customers. For account lifecycle operations, refer to the pause or cancel guide when needed.

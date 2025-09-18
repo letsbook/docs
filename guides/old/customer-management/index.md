@@ -23,26 +23,26 @@ In this section, you'll discover how to:
 
 ### Booking Operations
 
-- [Add/Change Booking](./add-change-booking.md) - Manage customer booking modifications
-- [How to Work with Partner Bookings](./how-to-work-with-partner-bookings.md) - Handle third-party booking integrations
+- [Add/Change Booking](add-change-booking.md) - Manage customer booking modifications
+- [How to Work with Partner Bookings](how-to-work-with-partner-bookings.md) - Handle third-party booking integrations
 
 ### Customer Data & Types
 
-- [Customer Types](./customer-types.md) - Configure and manage different customer categories
-- [Anonymize Customer](./anonymize-customer.md) - Handle customer data privacy and anonymization
+- [Customer Types](customer-types.md) - Configure and manage different customer categories
+- [Anonymize Customer](anonymize-customer.md) - Handle customer data privacy and anonymization
 
 ### Communication & Confirmation
 
-- [Confirmation Methods](./confirmation-methods.md) - Set up booking confirmation processes
-- [Notifications](./notifications.md) - Configure customer communication and alerts
+- [Confirmation Methods](confirmation-methods.md) - Set up booking confirmation processes
+- [Notifications](notifications.md) - Configure customer communication and alerts
 
 ### Documentation & Compliance
 
-- [Documents, Waivers and Contracts](./documents-waivers-and-contracts.md) - Manage legal documents and agreements
+- [Documents, Waivers and Contracts](documents-waivers-and-contracts.md) - Manage legal documents and agreements
 
 ### Customer Experience
 
-- [Add Additional Questions](./add-additional-questions.md) - Customize the booking process with custom questions
+- [Add Additional Questions](add-additional-questions.md) - Customize the booking process with custom questions
 
 ## Key Features
 
@@ -88,4 +88,4 @@ Seamlessly work with partner bookings and third-party booking platforms.
 
 ## Getting Started
 
-New to customer management? Start with [Customer Types](./customer-types.md) to understand how to organize your customers, then explore [Add/Change Booking](./add-change-booking.md) for booking management basics. Set up [Confirmation Methods](./confirmation-methods.md) and [Notifications](./notifications.md) to automate customer communications, and don't forget to configure [Documents, Waivers and Contracts](./documents-waivers-and-contracts.md) for legal compliance.
+New to customer management? Start with [Customer Types](customer-types.md) to understand how to organize your customers, then explore [Add/Change Booking](add-change-booking.md) for booking management basics. Set up [Confirmation Methods](confirmation-methods.md) and [Notifications](notifications.md) to automate customer communications, and don't forget to configure [Documents, Waivers and Contracts](documents-waivers-and-contracts.md) for legal compliance.

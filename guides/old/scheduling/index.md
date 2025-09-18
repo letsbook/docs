@@ -20,12 +20,12 @@ In this section, you'll discover how to:
 
 ## Scheduling Guides
 
-- [Set Rental Schedule](./set-rental-schedule.md) - Configure basic rental scheduling parameters
-- [Schedule Setup - Weekly Schedule](./schedule-setup-weekly-schedule.md) - Set up recurring weekly availability
-- [Schedule Setup - Slot Schedule](./schedule-setup-slot-schedule.md) - Configure time-slot based bookings
-- [Using the Planning Overviews](./using-the-planning-overviews.md) - Navigate and use planning interfaces
-- [Sync Planning with My Own Calendar](./sync-planning-with-my-own-calendar.md) - Integrate with external calendars
-- [Example Schedules Interface Instruction](./example-schedules-interface-instruction.md) - Practical scheduling examples
+- [Set Rental Schedule](set-rental-schedule.md) - Configure basic rental scheduling parameters
+- [Schedule Setup - Weekly Schedule](schedule-setup-weekly-schedule.md) - Set up recurring weekly availability
+- [Schedule Setup - Slot Schedule](schedule-setup-slot-schedule.md) - Configure time-slot based bookings
+- [Using the Planning Overviews](using-the-planning-overviews.md) - Navigate and use planning interfaces
+- [Sync Planning with My Own Calendar](sync-planning-with-my-own-calendar.md) - Integrate with external calendars
+- [Example Schedules Interface Instruction](example-schedules-interface-instruction.md) - Practical scheduling examples
 
 ## Key Concepts
 
@@ -47,4 +47,4 @@ Use comprehensive planning overviews to visualize bookings, manage availability,
 
 ## Getting Started
 
-New to scheduling? Start with [Set Rental Schedule](./set-rental-schedule.md) to understand the basics, then explore weekly or slot-based scheduling depending on your business model. Don't forget to check out the planning overview tools to effectively manage your configured schedules.
+New to scheduling? Start with [Set Rental Schedule](set-rental-schedule.md) to understand the basics, then explore weekly or slot-based scheduling depending on your business model. Don't forget to check out the planning overview tools to effectively manage your configured schedules.

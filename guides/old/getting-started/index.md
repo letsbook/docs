@@ -20,9 +20,9 @@ In this section, you'll discover:
 
 ## Quick Start Guides
 
-- [Get Started with Let's Book](./get-started-lets-book.md) - Your first steps with the platform
-- [About Rental Settings](./about-rental-settings.md) - Configure your rental parameters
-- [Get Started with Connected Fleet](./get-started-with-connected-fleet.md) - Set up your connected boats
+- [Get Started with Let's Book](get-started-lets-book.md) - Your first steps with the platform
+- [About Rental Settings](about-rental-settings.md) - Configure your rental parameters
+- [Get Started with Connected Fleet](get-started-with-connected-fleet.md) - Set up your connected boats
 
 ## Next Steps
 
@@ -33,7 +33,7 @@ Once you've completed the getting started guides, you can explore other sections
 - **Booking Forms & Integration** - Customize your booking experience
 - **Customer Management** - Handle customer relationships and communications
 
-Ready to begin? Start with [Get Started with Let's Book](./get-started-lets-book.md) to take your first steps!
+Ready to begin? Start with [Get Started with Let's Book](get-started-lets-book.md) to take your first steps!
 
 # Let's Book Dashboard Guide
 
