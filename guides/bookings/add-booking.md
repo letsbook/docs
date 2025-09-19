@@ -1,0 +1,44 @@
+## Step 1: Start adding a booking
+
+- From **Bookings** → **[Add Booking](https://dashboard.letsbook.app/bookings/add)** (main method)
+- Use the **Quick Add** button in the menu bar, the green button on the dashboard overview or click the icon in the planning overviews
+
+## Step 2: Add the customer
+
+- Existing customer? Type their name and select
+- New customer? Click **Add New customer**
+
+**Step 3: Fill booking details** 
+
+Fill in date, boat, duration, and extras. 
+
+
+:::note[Override mode options] 
+
+By default, you follow the same rules as customers (availability, duration limits, pricing). Need to break the rules? Turn on **Override mode**.
+
+- **Ignore settings** - Book with different pick-up times or durations than allowed
+- **Ignore availability** - Place bookings even when no boats are available
+- **Ignore cost changes** - Skip automatic price calculations
+
+:::
+
+**Step 4: Check and adjust** 
+
+Your booking is now created but needs confirmation. You can still make manual adjustments (like changing the price) before finalizing.
+
+**Step 5: Confirm the booking** 
+
+Hit **Confirm Booking** to complete the process.
+
+:::note[confirmation options]
+
+You'll find these confirmation options:
+
+- **Send confirmation email to customer** - Toggle on/off
+- **Add payment link in email** - Include payment request in the confirmation
+- **Payment deadline** - Click the suggested date to set how long customers have to pay
+
+:::
+
+**What happens next:** Your booking appears instantly in the overview. You can immediately edit details, add notes, or send payment requests.
