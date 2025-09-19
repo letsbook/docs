@@ -13,8 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "prettier-check": "prettier --check src docs blog",
-    "prettier": "prettier -w src docs blog | grep -v \"(unchanged)\""
+    "prettier-check": "prettier --check src guides releases",
+    "prettier": "prettier -w src guides releases | grep -v \"(unchanged)\""
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
