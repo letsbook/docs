@@ -56,8 +56,8 @@ body {
 }
 
 .theme-doc-markdown a {
-    background: var(--ifm-color-primary-lighter);
-    padding: 0 0.5rem;
+    font-weight: 500;
+    text-decoration: underline dotted;
 }
 
 /**
