@@ -1,6 +1,6 @@
 # Export bookings
 
-Head to the [Bookings overview](https://dashboard.letsbook.app/booking) and export everything to an Excel file with a couple of clicks. Exports are handy for reporting, number‑crunching, or sending data to a third‑party system that insists on living in its own little universe. When you’re ready, click the export button in the top right to kick things off. 
+Head to the [Bookings overview](https://dashboard.letsbook.app/bookings) and export everything to an Excel file with a couple of clicks. Exports are handy for reporting, number‑crunching, or sending data to a third‑party system that insists on living in its own little universe. When you’re ready, click the export button in the top right to kick things off. 
 
 ![Export screenshot](./graphics/export.png)
 
