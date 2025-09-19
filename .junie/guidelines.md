@@ -55,6 +55,7 @@ Let's Book is an **all-in-one boat rental management software (SaaS)** designed 
 ## Tone of voice
 
 - Texts should be to the point, witty and short. 
+- Don't use em dashes - ever.
 
 ---
 
