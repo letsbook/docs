@@ -55,6 +55,9 @@ body {
     margin-bottom: 1rem;
 }
 
+/**
+ * Anchor styling
+ */
 .theme-doc-markdown a {
     font-weight: 500;
     text-decoration: underline dotted;
@@ -70,4 +73,15 @@ body {
 
 .navbar--primary {
     --ifm-navbar-search-input-color: var(--ifm-color-emphasis-500);
+}
+
+/**
+ * Tweak the default header sizes
+ */
+.markdown > h2 {
+    --ifm-h2-font-size: 1.6rem;
+}
+
+.markdown > h3 {
+    --ifm-h3-font-size: 1.3rem;
 }
