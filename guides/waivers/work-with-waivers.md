@@ -3,8 +3,6 @@
 Get every passenger to sign before they step aboard. If you have not set it up yet, start with the [setup guide](./set-up-waivers.md).
 
 ## Set it up
-### Set it up
-#### Set it up
 
 To collect a signature from every passenger, set your [boat model](https://dashboard.letsbook.app/models) to ask for passenger count. Not tracking headcount? Choose "Unlimited" for the document.
 

@@ -6,7 +6,7 @@ Turn your season into a scoreboard. The [Sales insights](https://dashboard.letsb
 
 Curious about every button, toggle, and gizmo? Start with the infographic below.
 
-![Screenshot of the Sales insights dashboard](./graphics/sales-insights.png)
+![Screenshot of the Sales insights dashboard](graphics/sales-insights.png)
 
 ## Compare seasons
 

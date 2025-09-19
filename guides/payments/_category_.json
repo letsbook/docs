@@ -1,0 +1,8 @@
+{
+    "label": "Receive payments",
+    "position": 110,
+    "link": {
+        "type": "generated-index",
+        "description": "Learn how you can set up a Mollie or Stripe integration and tweak how booking fees are handled."
+    }
+}
