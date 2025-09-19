@@ -16,6 +16,7 @@
 
     --ifm-heading-font-family:
         'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
+    --ifm-heading-font-weight: 500;
     --ifm-font-family-base:
         'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -33,14 +34,28 @@ body {
     word-wrap: normal;
 }
 
+
+/**
+ * Hide the ugly search on the developer docs
+ */
 .redoc-wrap [role='search'] {
     display: none;
 }
 
-/* Release notes image constraints */
+/**
+ * Images inside the release notes
+ */
 .blog-wrapper .main-wrapper img {
     max-width: 420px;
     height: auto;
     float: right;
     margin-bottom: 1rem;
+}
+
+/**
+ * Images inside the guides
+ */
+.theme-doc-markdown img {
+    box-shadow: 0 1px 1px var(--ifm-color-primary-dark);
+    border-radius: 5px;
 }
