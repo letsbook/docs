@@ -11,7 +11,7 @@ Editing can change the price. If it does, send a fresh payment request, register
 :::
 
 :::note[Add-ons heads up]
-You won't get a notification when changing add-ons, so don't forget to inform others if needed.
+Changing add-ons won’t notify anyone. Give the team a heads up if needed.
 :::
 
 ## Cancel a booking

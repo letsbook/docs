@@ -78,7 +78,7 @@ body {
 /**
  * Tweak the default header sizes
  */
-.markdown h1:first-child {
+h1 {
     --ifm-h1-font-size: 2.4rem;
 }
 
