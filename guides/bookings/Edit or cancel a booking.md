@@ -1,3 +1,4 @@
+# Edit or cancel a booking
 
 ## Edit a booking
 
