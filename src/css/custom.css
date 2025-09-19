@@ -6,12 +6,13 @@
 
 :root {
     --ifm-color-primary: #081590;
-    --ifm-color-primary-dark: #071382;
-    --ifm-color-primary-darker: #07127a;
-    --ifm-color-primary-darkest: #060f65;
-    --ifm-color-primary-light: #09179e;
-    --ifm-color-primary-lighter: #0918a6;
-    --ifm-color-primary-lightest: #0a1bbb;
+    --ifm-color-primary-dark: #050f6a;
+    --ifm-color-primary-darker: #01094e;
+    --ifm-color-primary-darkest: #01094e;
+    --ifm-color-primary-light: #d1d4f2;
+    --ifm-color-primary-lighter: #e6e9fd;
+    --ifm-color-primary-lightest: #f7f8fe;
+
     --ifm-code-font-size: 95%;
 
     --ifm-container-width-xl: 1080px;
@@ -19,10 +20,11 @@
     --ifm-heading-font-family:
         'Rubik', -apple-system, BlinkMacSystemFont, sans-serif;
     --ifm-heading-font-weight: 500;
+    --ifm-heading-color: var(--ifm-color-primary);
+
     --ifm-font-family-base:
         'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    --ifm-heading-color: var(--ifm-color-primary);
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -53,10 +55,19 @@ body {
     margin-bottom: 1rem;
 }
 
+.theme-doc-markdown a {
+    background: var(--ifm-color-primary-lighter);
+    padding: 0 0.5rem;
+}
+
 /**
  * Images inside the guides
  */
 .theme-doc-markdown img {
     box-shadow: 0 5px 20px #d5d7f4;
     border-radius: 5px;
+}
+
+.navbar--primary {
+    --ifm-navbar-search-input-color: var(--ifm-color-emphasis-500);
 }
