@@ -4,7 +4,8 @@
 
 1. Open the booking
 2. Click **Edit booking** and make adjustments
-3. Save
+3. Save. You'll find it back in the [bookings overview](https://dashboard.letsbook.app/bookings)
+
 
 :::note[Watch out for pricing changes]
 When you edit a booking, the price might change. Keep this in mind and send a new payment request, register a cash payment, or charge the credit card again if needed.
@@ -23,6 +24,5 @@ You won't get a notification when changing add-ons, so don't forget to inform ot
 
 Done. The booking is cancelled and your customer gets notified.
 
-![ghjghjghjgjh](./graphics/delete.gif)
 
 
