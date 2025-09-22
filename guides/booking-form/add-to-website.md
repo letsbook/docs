@@ -3,7 +3,7 @@
 Add the booking form in two quick steps.
 
 :::note
-Using WordPress, Wix, or Squarespace? See our platform-specific guides.
+Using [WordPress](./integrate-with-wordpress.md), [Wix](./integrate-with-wix.md), or [Squarespace](./integrate-with-squarespace.md)? See our platform-specific guides.
 :::
 
 ## 1. Add the script
