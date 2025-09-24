@@ -1,3 +1,7 @@
+---
+sidebar_class_name: hidden
+---
+
 # Embed booking form on Wordpress website
 
 To add the booking form to your WordPress website, follow these steps:

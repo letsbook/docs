@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: hidden
 ---
 
 # Embed our booking form in Squarespace

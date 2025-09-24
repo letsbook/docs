@@ -24,21 +24,21 @@ require manual implementation of purchase event tracking if you want analytics d
 This is a list of parameters that are sent to the return page. These parameters allow you to obtain more specific
 statistics and tracking data.
 
-|                      |                                                                                  |
-| -------------------- | -------------------------------------------------------------------------------- |
-| lbBookingReference   | The booking reference                                                            |
-| lbPaymentRequestId   | A unique ID for the paid payment request                                         |
-| lbDockId             | The ID of the dock where the trip starts                                         |
-| lbDockName           | The name of the dock                                                             |
-| lbBoatModelId        | The ID of the boat model the booking is for                                      |
-| lbBoatModelName      | The name of the boat model                                                       |
-| lbNumberOfPassengers | The number of passengers. Can be `null` when not requested.                      |
-| lbDurationInHours    | The duration of the booking in hours                                             |
-| lbNumberOfBoats      | The number of boats the booking is for                                           |
-| lbTotalIncVatInCents | The total amount paid including VAT/TAX, but excluding the deposit.              |
-| lbCurrency           | The currency of the paid amount                                                  |
-| lbCouponCode         | The applied coupon code. Will be `null` if no coupon is applied.                 |
-| lbPartnerCode        | The used partner code. Will be `null` if the booking is not linked to a partner. |
+| Parameter name         | Explanation                                                                      |
+|------------------------|----------------------------------------------------------------------------------|
+| `lbBookingReference`   | The booking reference                                                            |
+| `lbPaymentRequestId`   | A unique ID for the paid payment request                                         |
+| `lbDockId`             | The ID of the dock where the trip starts                                         |
+| `lbDockName`           | The name of the dock                                                             |
+| `lbBoatModelId`        | The ID of the boat model the booking is for                                      |
+| `lbBoatModelName`      | The name of the boat model                                                       |
+| `lbNumberOfPassengers` | The number of passengers. Can be `null` when not requested.                      |
+| `lbDurationInHours`    | The duration of the booking in hours                                             |
+| `lbNumberOfBoats`      | The number of boats the booking is for                                           |
+| `lbTotalIncVatInCents` | The total amount paid including VAT/TAX, but excluding the deposit.              |
+| `lbCurrency`           | The currency of the paid amount                                                  |
+| `lbCouponCode`         | The applied coupon code. Will be `null` if no coupon is applied.                 |
+| `lbPartnerCode`        | The used partner code. Will be `null` if the booking is not linked to a partner. |
 
 ## Manually tracking bookings with Google Analytics
 
