@@ -1,15 +1,43 @@
-# Export bookings
+# Running exports of bookings
 
-Head to the [Bookings overview](https://dashboard.letsbook.app/bookings) and export everything to an Excel file with a couple of clicks. Exports are handy for reporting, number‑crunching, or sending data to a third‑party system that insists on living in its own little universe. When you’re ready, click the export button in the top right to kick things off.
+## Export bookings
 
-![Export screenshot](./graphics/export.png)
+1. Go to the [bookings overview](https://dashboard.letsbook.app/bookings)
+2. Click the export icon in the top right corner
+3. Set your filters to select exactly what you want to export
+4. The export will download as an Excel file (.xlsx)
 
-## Filtering
+## Using filters for exports
 
-By default, the date range shows only future bookings (from now onward). To include completed trips, adjust the date range to the relevant period and select the “completed” booking status.
+You can use the same filters for exports as you can for the regular bookings overview. 
 
-Need a specific subset of bookings? You can filter by date range, dock(s), boat model(s), booking status, and more.
+The main filters you can use for exports include:
 
-## Export limits
+**Date range:** Select specific start and end dates - all bookings with departures within this range will be included
 
-Exports are capped at 1,000 bookings per file. If you’ve got more than that (nice job!), slice the data into multiple exports using filters. Date ranges work especially well.
+**Docks:** Filter by specific dock locations to export only bookings from selected docks
+
+**Status:** Export only bookings with specific statuses (Draft, Confirmed, Completed, etc.)
+
+**Add-ons:** Toggle "only with add-ons" to export only bookings that have add-ons attached
+
+**And all other filters:** Boat model, Payment status, Partner, Document, Labels - use any combination to get exactly the data you need
+
+## Tips for exports
+
+- Apply your filters first, then click the export button
+- The export will only include bookings that match your current filter settings
+- Check your filter selection carefully before exporting to ensure you get the right data
+- **Export limit:** There's a maximum of approximately 1,000 results per export. If you have more bookings, split your results by using smaller date ranges or additional filters
+
+## What's included in the export
+
+The Excel export contains comprehensive booking information including:
+
+**Customer details:** Reference, First name, Last name, Email address, Phone number, Customer type
+
+**Booking information:** Booked at, Status, Dock, Boat model, # of boats, # of passengers, Pickup, Return, Duration (hrs), Created by, User and Notes
+
+**Promotions:** Coupon, Coupon code, Partner code
+
+**Financial details:** Pricing costs (inc/exc tax), Add-ons (inc/exc tax), Manually added costs (inc/exc tax), Booking fee costs (inc/exc tax), Total costs (inc/exc tax), Paid through Let's Book, Paid in cash, Balance, Deposit, Deposit returned
