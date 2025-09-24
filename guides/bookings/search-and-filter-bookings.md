@@ -1,0 +1,62 @@
+## Finding bookings
+
+There are two ways to quickly find a specific booking in LetsBook:
+
+### Method 1: Via Dashboard
+
+1. Go to your [https://dashboard.letsbook.app/](https://dashboard.letsbook.app/)(main page after login)
+2. Use the search field in the center top of the page (next to the magnifying glass icon)
+3. Start typing to search immediately
+
+### Method 2: Via Bookings page
+
+1. Navigate to **Bookings** in the left menu, or go directly to [https://dashboard.letsbook.app/bookings](https://dashboard.letsbook.app/bookings)
+2. Click in the search field at the top of the page
+3. Start typing directly - the system searches automatically as you type
+
+## What can you search?
+
+You can search by customer name or booking ID. The system shows results as you type.
+
+## Filtering bookings
+
+To filter your bookings, click the filter icon on the Bookings page. This opens the filter options where you can refine your results.
+
+### Available filters:
+
+**Date range:** Set a specific time period using the date picker
+
+**Dock:** Filter by specific dock location
+
+**Boat model:** Filter by boat type or model
+
+**Status:** Filter by booking status
+
+- Draft
+- Expired
+- In option
+- Confirmed (selected by default)
+- Completed (selected by default)
+- Canceled
+
+**Payment:** Filter by payment status
+
+- Unpaid
+- Partially paid
+- Paid
+- Overpaid
+
+**Partner:** Filter by specific partners
+
+**Document:** Filter by specific waiver types
+
+**Labels:** Filter using your custom labels
+
+**Add-ons:** Toggle to show only bookings with add-ons. For more specific features around orders with add-ons, you can also use [the order overview](https://dashboard.letsbook.app/orders)
+### Default filters
+
+By default, bookings with "Confirmed" and "Completed" status are pre-selected, but you can adjust these filters according to your needs.
+
+### Active filters
+
+Applied filters appear as blue tags below the filter options. You can remove individual filters by clicking the 'x' on each tag.
