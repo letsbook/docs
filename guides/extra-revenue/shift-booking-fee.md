@@ -1,0 +1,46 @@
+# Pass booking fees to customers
+
+Instead of absorbing platform fees yourself, you can now pass them directly to your customers. This gives you more control over your profit margins and pricing strategy.
+
+## How it works
+
+When enabled, the booking fee is automatically added to the final customer price at checkout. The customer pays the rental cost plus the booking fee, rather than you absorbing this cost.
+
+**Example:**
+
+- Rental cost: $100
+- Booking fee: $3.50
+- **Customer pays:** $103.50 (instead of you paying the $3.50 fee)
+
+## How to enable
+
+1. Go to [Pricing settings](https://dashboard.letsbook.app/pricing)
+2. Find the option **"Pass the booking fee to customer"**
+3. Toggle it on and choose your fee type:
+    - **Let's Book fee:** Use the standard platform percentage
+    - **Custom fee:** Set your own formula or fixed amount
+4. Choose when customers see the fee:
+    - **Show immediately:** Fee appears as soon as it can be calculated
+    - **Display only at payment step:** Fee only shows during checkout
+5. Click Save
+
+## Key benefits
+
+**Better margin control:** Your profits remain unaffected by platform fees
+**Flexible pricing:** You decide whether to absorb the fee or pass it on
+**Seamless integration:** The fee is automatically calculated and added at checkout
+**Full transparency:** Customers see exactly what they're paying for
+
+## Customer experience
+
+- The booking fee appears as a separate line item
+- Customers see the total cost (rental + fee) before completing payment
+- The fee is clearly labeled as "Booking fee"
+- Payment processing includes both amounts in one transaction
+
+## Best practices
+
+- **Be transparent:** Make sure your terms clearly mention booking fees
+- **Test both display options:** See which timing works better for your conversion rates
+- **Monitor impact:** Track if the additional fee affects your booking completion rates
+- **Clear labeling:** The system automatically labels it as "Booking fee" for clarity
