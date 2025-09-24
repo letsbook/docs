@@ -49,6 +49,13 @@ Connected fleet creates a seamless link between your bookings and physical boats
 6. Copy the four generated values: Client ID, Client Secret, Username, Password
 7. Paste all values into Let's Book modal and click "Save"
 
+Steps:
+
+![[trackunit_steps_1.jpg]]
+
+![[trackunit_steps_2.jpg]]
+
+
 ### Qondor integration
 
 **Prerequisites:** Qondor hardware installed in boats
