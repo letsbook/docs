@@ -82,8 +82,6 @@ const config: Config = {
                         title: 'Let\'s Book Release Notes',
                         description: 'Stay updated with the latest Let\'s Book releases',
                     },
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
                     // Useful options to enforce blogging best practices
                     onInlineTags: 'warn',
@@ -121,6 +119,45 @@ const config: Config = {
                 ],
                 theme: {
                     primaryColor: '#081590',
+                    options: {
+                        "hideDownloadButton": true,
+                        "expandResponses": "200",
+                        "jsonSampleExpandLevel": 3,
+                        "theme": {
+                            "colors": {
+                                "primary": {
+                                    "main": "#081590",
+                                    "light": "#7c85d3"
+                                },
+                                "text": {
+                                    "primary": "#000",
+                                    "secondary": "#7c85d3"
+                                }
+                            },
+                            "sidebar": {
+                                "activeBgColor": "#f7f8fe",
+                                "activeTextColor": "#050f6a",
+                                "backgroundColor": "#ffffff",
+                                "fontFamily": "Rubik",
+                                "textColor": "#050f6a"
+                            },
+                            "rightPanel": {
+                                "backgroundColor": "#050f6a",
+                                "textColor": "#ffffff"
+                            },
+                            "spacing": {
+                                "sectionVertical": "16"
+                            },
+                            "typography": {
+                                "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif",
+                                "fontSize": "16px",
+                                "headings": {
+                                    "fontFamily": "Rubik",
+                                    "fontWeight": "800"
+                                }
+                            }
+                        }
+                    }
                 },
             },
         ] satisfies Redocusaurus.PresetEntry,

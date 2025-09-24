@@ -89,3 +89,14 @@ h1 {
 .markdown > h3 {
     --ifm-h3-font-size: 1.3rem;
 }
+
+/**
+ * Hide the navigation link when it has the hidden class
+ */
+.theme-doc-sidebar-item-link.hidden {
+  display: none;
+}
+
+.footer--dark {
+    --ifm-footer-background-color: #050f6a;
+}
