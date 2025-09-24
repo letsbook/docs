@@ -1,16 +1,18 @@
+# Search and filter booking
+
 ## Finding bookings
 
 There are two ways to quickly find a specific booking in LetsBook:
 
 ### Method 1: Via Dashboard
 
-1. Go to your [https://dashboard.letsbook.app/](https://dashboard.letsbook.app/)(main page after login)
+1. Go to your [dashboard](https://dashboard.letsbook.app/)(main page after login)
 2. Use the search field in the center top of the page (next to the magnifying glass icon)
 3. Start typing to search immediately
 
 ### Method 2: Via Bookings page
 
-1. Navigate to **Bookings** in the left menu, or go directly to [https://dashboard.letsbook.app/bookings](https://dashboard.letsbook.app/bookings)
+1. Navigate to your [bookings](https://dashboard.letsbook.app/bookings)
 2. Click in the search field at the top of the page
 3. Start typing directly - the system searches automatically as you type
 
