@@ -14,7 +14,7 @@ There are two ways to quickly find a specific booking in LetsBook:
 2. Click in the search field at the top of the page
 3. Start typing directly - the system searches automatically as you type
 
-## What can you search?
+### How to search
 
 You can search by customer name or booking ID. The system shows results as you type.
 
@@ -22,7 +22,7 @@ You can search by customer name or booking ID. The system shows results as you t
 
 To filter your bookings, click the filter icon on the Bookings page. This opens the filter options where you can refine your results.
 
-### Available filters:
+### Available filters
 
 **Date range:** Set a specific time period using the date picker
 
