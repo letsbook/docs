@@ -9,7 +9,7 @@
 
 ## Using filters for exports
 
-You can use the same filters for exports as you can for the regular bookings overview. 
+You can use the same filters for exports as you can for the regular bookings overview.
 
 The main filters you can use for exports include:
 

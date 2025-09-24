@@ -55,6 +55,7 @@ To filter your bookings, click the filter icon on the Bookings page. This opens 
 **Labels:** Filter using your custom labels
 
 **Add-ons:** Toggle to show only bookings with add-ons. For more specific features around orders with add-ons, you can also use [the order overview](https://dashboard.letsbook.app/orders)
+
 ### Default filters
 
 By default, bookings with "Confirmed" and "Completed" status are pre-selected, but you can adjust these filters according to your needs.

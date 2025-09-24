@@ -94,7 +94,7 @@ h1 {
  * Hide the navigation link when it has the hidden class
  */
 .theme-doc-sidebar-item-link.hidden {
-  display: none;
+    display: none;
 }
 
 .footer--dark {

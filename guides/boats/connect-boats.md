@@ -55,7 +55,6 @@ Steps:
 
 ![[trackunit_steps_2.jpg]]
 
-
 ### Qondor integration
 
 **Prerequisites:** Qondor hardware installed in boats

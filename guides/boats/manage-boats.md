@@ -2,7 +2,6 @@
 sidebar_class_name: hidden
 ---
 
-
 # Manage boats and fleet
 
 Your boat fleet is the foundation of your rental business. Let's Book uses a two-tier system: boat models (the type customers see and book) and individual boats (specific units assigned to docks).

@@ -25,7 +25,7 @@ This is a list of parameters that are sent to the return page. These parameters 
 statistics and tracking data.
 
 | Parameter name         | Explanation                                                                      |
-|------------------------|----------------------------------------------------------------------------------|
+| ---------------------- | -------------------------------------------------------------------------------- |
 | `lbBookingReference`   | The booking reference                                                            |
 | `lbPaymentRequestId`   | A unique ID for the paid payment request                                         |
 | `lbDockId`             | The ID of the dock where the trip starts                                         |
