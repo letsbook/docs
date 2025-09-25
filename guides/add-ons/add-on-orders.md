@@ -7,7 +7,7 @@ sidebar_position: 2
 Track and manage add-on orders for fulfillment, reporting, and supplier reconciliation.
 
 <div class="button-container">
-  <a href="https://dashboard.letsbook.app/add-ons/orders" class="button button--primary" target="_blank" rel="noopener noreferrer">View orders</a>
+  <a href="https://dashboard.letsbook.app/orders" class="button button--primary" target="_blank" rel="noopener noreferrer">View orders</a>
 </div>
 
 ## Order overview
