@@ -1,7 +1,4 @@
 {
     "label": "Dive deeper",
-    "position": 120,
-    "link": {
-        "type": "generated-index"
-    }
+    "position": 120
 }

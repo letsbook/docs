@@ -1,8 +1,4 @@
 {
     "label": "Let's Book Documentation",
-    "position": 1,
-    "link": {
-        "type": "generated-index",
-        "description": "Complete documentation for Let's Book - organized by topic for easy navigation"
-    }
+    "position": 1
 }
