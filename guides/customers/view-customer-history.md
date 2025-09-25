@@ -21,7 +21,7 @@ Access customer booking history through their profile.
 In the customer profile, use the dropdown to filter bookings:
 
 - **All** - Shows all bookings
-- **Past** - Shows completed bookings only  
+- **Past** - Shows completed bookings only
 - **Upcoming** - Shows future bookings only
 
 Each booking shows dates, booking details, and current status. Booking records are kept for at least 3 years.

@@ -46,8 +46,6 @@ Control when add-ons are available by setting conditions:
   <a href="https://dashboard.letsbook.app/add-ons/categories" class="button button--primary" target="_blank" rel="noopener noreferrer">Manage categories</a>
 </div>
 
-
-
 **Layout options per category:**
 
 - **Grid** - Large square photos with prices
