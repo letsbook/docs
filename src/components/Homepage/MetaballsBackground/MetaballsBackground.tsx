@@ -72,10 +72,28 @@ export default function MetaballsBackground(): React.ReactElement | null {
         const fieldCtx = fieldCanvas.getContext('2d');
 
         let last = performance.now();
+        let acc = 0;
+        let isVisible = true;
+
+        // Pause when not visible to save CPU
+        const io = new IntersectionObserver((entries) => {
+            isVisible = entries.some((e) => e.isIntersecting);
+        });
+        io.observe(canvas);
+
         const animate = () => {
             const now = performance.now();
-            const dt = Math.min(32, now - last);
+            const dtRaw = now - last;
             last = now;
+            acc += dtRaw;
+
+            // Target ~45fps
+            if (acc < 1000 / 45 || !isVisible || document.hidden) {
+                rafRef.current = requestAnimationFrame(animate);
+                return;
+            }
+            const dt = Math.min(32, acc);
+            acc = 0;
 
             const dpr = dpiRef.current;
             const W = canvas.width;
@@ -93,33 +111,45 @@ export default function MetaballsBackground(): React.ReactElement | null {
                 if (b.y < margin || b.y > maxY - margin) b.vy *= -1;
             });
 
-            // Compute scalar field at full resolution to avoid blur
-            const scale = 1; // render field at native res to remove scaling blur
-            const fw = Math.max(64, Math.floor(W * scale));
-            const fh = Math.max(64, Math.floor(H * scale));
-            fieldCanvas.width = fw;
-            fieldCanvas.height = fh;
+            // Compute scalar field at reduced resolution to cut CPU cost
+            // Adaptive scale: lower for high DPR and large canvases
+            const scale = Math.max(0.33, Math.min(0.75, 1 / dpr));
+            const fw = Math.max(96, Math.floor(W * scale));
+            const fh = Math.max(96, Math.floor(H * scale));
+            if (fieldCanvas.width !== fw || fieldCanvas.height !== fh) {
+                fieldCanvas.width = fw;
+                fieldCanvas.height = fh;
+            }
 
-            const img = fieldCtx!.createImageData(fw, fh);
+            // Reuse a single ImageData buffer per size
+            const img = fieldCtx!.getImageData(0, 0, fw, fh);
             const data = img.data;
 
             // Precompute constants
             const invScale = 1 / scale / dpr;
             const threshold = 1.0; // iso-surface threshold
+            const balls = ballsRef.current;
 
             for (let y = 0; y < fh; y++) {
                 for (let x = 0; x < fw; x++) {
                     const px = x * invScale;
                     const py = y * invScale;
                     let field = 0;
-                    for (let i = 0; i < ballsRef.current.length; i++) {
-                        const b = ballsRef.current[i];
+                    for (let i = 0; i < balls.length; i++) {
+                        const b = balls[i];
                         const dx = px - b.x;
                         const dy = py - b.y;
                         const d2 = dx * dx + dy * dy + 0.0001; // avoid div by 0
-                        // Classic metaball contribution ~ (r^2 / d^2)
+
                         const influence = (b.r * b.r) / d2;
                         field += influence;
+
+                        // Ignore very distant pixels to cut work
+                        const cutoff = b.r * b.r * 0.25;
+                        if (d2 < cutoff) {
+                            // Classic metaball contribution ~ (r^2 / d^2)
+                            field += (b.r * b.r) / d2;
+                        }
                     }
                     // Alpha from field threshold
                     const a = Math.max(
@@ -186,6 +216,7 @@ export default function MetaballsBackground(): React.ReactElement | null {
             if (rafRef.current) cancelAnimationFrame(rafRef.current);
             window.removeEventListener('resize', resize);
             observer.disconnect();
+            io.disconnect();
         };
     }, []);
 
