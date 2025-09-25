@@ -25,195 +25,99 @@ From there, you use the syntax and variables described below. You can copy paste
 
 ## Available variables
 
-You can use the following variables in your expressions:
-
-- `booking.dock_id` : The ID of the dock where the booking is made
-
-    **Example:** `booking.dock_id == "123e4567-e89b-12d3-a456-426614174000"`
-
-- `booking.boat_model_id` : The ID of the boat model being booked
-
-    **Example:** `booking.boat_model_id == "52248719-c7df-4762-b7b2-bf5867cafcd0"`
-
-- `booking.passengers.total` : The total number of passengers for the booking
-
-    **Example:** `booking.passengers.total <= 5`
-
-- `booking.boats` : The boats included in the booking
-
-    **Example:** `booking.boats > 0`
-
-- `booking.booked_at` : The date and time when the booking was made
-
-    **Example:** `is_after(booking.booked_at, "2025-06-01")`
-
-### Rental Period
-
-- `booking.rental_period.pickup` : The pickup date and time
-
-    **Example:** `is_before(booking.rental_period.pickup, "2025-06-01")`
-
-- `booking.rental_period.return` : The return date and time
-
-    **Example:** `is_before(booking.rental_period.pickup, "2025-06-01")`
-
-- `booking.rental_period.dates` : The dates included in the rental period
-
-    **Example:** `"2023-06-15" in booking.rental_period.dates`
-
-- `booking.rental_period.in_hours` : The rental period duration in hours
-
-    **Example:** `booking.rental_period.in_hours <= 4`
-
-- `booking.rental_period.in_days` : The rental period duration in days
-
-    **Example:** `booking.rental_period.in_days <= 2`
-
-- `booking.rental_period.day_count` : The number of days in the rental period
-
-    **Example:** `booking.rental_period.day_count == 1`
-
-- `booking.rental_period.days` : The days of the week in the rental period
-
-    **Example:** `"sat" in booking.rental_period.days`
-
-- `booking.rental_period.overlaps_weekend` : Whether the rental period includes weekend days
-
-    **Example:** `booking.rental_period.overlaps_weekend and booking.passengers.total <= 5`
-
-### Booking Timing
-
-- `booked_ahead.in_hours` : How many hours in advance the booking was made
-
-    **Example:** `booked_ahead.in_hours >= 24`
-
-- `booked_ahead.in_days` : How many full days (24h) in advance the booking was made
-
-    **Example:** `booked_ahead.in_days >= 1`
-
-- `booked_ahead.day_count` : The number of days between booking and pickup
-
-    **Example:** `booked_ahead.day_count >= 1`
-
-- `time_until_pickup.in_hours` : Hours remaining until pickup
-
-    **Example:** `time_until_pickup.in_hours >= 24`
-
-- `time_until_pickup.in_days` : Days (of 24h) remaining until pickup
-
-    **Example:** `time_until_pickup.in_days >= 1`
-
-- `time_until_pickup.day_count` : Number of days until pickup
-
-    **Example:** `time_until_pickup.day_count >= 1`
-
-### Future Bookings
-
-- `count_of_future_bookings` : Number of future bookings for the customer
-
-    **Example:** `count_of_future_bookings < 3`
-
-- `future_bookings.total_duration.in_hours` : Total duration of future bookings in hours
-
-    **Example:** `future_bookings.total_duration.in_hours <= 12`
-
-- `future_bookings.total_duration.in_days` : Total duration of future bookings in days (24h)
-
-    **Example:** `future_bookings.total_duration.in_days <= 5`
-
-- `future_bookings.total_duration.day_count` : Total number of days of future bookings
-
-    **Example:** `future_bookings.total_duration.day_count <= 5`
-
-### Future Bookings by Day
-
-- `future_bookings.count_per_day.mon` : Number of future bookings on Mondays
-
-    **Example:** `future_bookings.count_per_day.mon <= 1`
-
-- `future_bookings.count_per_day.tue` : Number of future bookings on Tuesdays
-
-    **Example:** `future_bookings.count_per_day.tue <= 1`
-
-- `future_bookings.count_per_day.wed` : Number of future bookings on Wednesdays
-
-    **Example:** `future_bookings.count_per_day.wed <= 1`
-
-- `future_bookings.count_per_day.thu` : Number of future bookings on Thursdays
-
-    **Example:** `future_bookings.count_per_day.thu <= 1`
-
-- `future_bookings.count_per_day.fri` : Number of future bookings on Fridays
-
-    **Example:** `future_bookings.count_per_day.fri <= 1`
-
-- `future_bookings.count_per_day.sat` : Number of future bookings on Saturdays
-
-    **Example:** `future_bookings.count_per_day.sat <= 1`
-
-- `future_bookings.count_per_day.sun` : Number of future bookings on Sundays
-
-    **Example:** `future_bookings.count_per_day.sun <= 1`
-
-- `future_bookings.count_per_day.weekend` : Number of future bookings on weekends
-
-    **Example:** `future_bookings.count_per_day.weekend <= 1`
-
-- `future_bookings.count_per_day.weekday` : Number of future bookings on weekdays (mon thru fri)
-
-    **Example:** `future_bookings.count_per_day.weekday <= 2`
-
-### Future Booking Duration by Day
-
-- `future_bookings.total_duration_per_day_in_hours.mon` : Total hours of future bookings taking place on a Monday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.mon <= 4`
-
-- `future_bookings.total_duration_per_day_in_hours.tue` : Total hours of future bookings taking place on a Tuesday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.tue <= 4`
-
-- `future_bookings.total_duration_per_day_in_hours.wed` : Total hours of future bookings taking place on a Wednesday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.wed <= 4`
-
-- `future_bookings.total_duration_per_day_in_hours.thu` : Total hours of future bookings taking place on a Thursday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.thu <= 4`
-
-- `future_bookings.total_duration_per_day_in_hours.fri` : Total hours of future bookings taking place on a Friday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.fri <= 4`
-
-- `future_bookings.total_duration_per_day_in_hours.sat` : Total hours of future bookings taking place on a Saturday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.sat <= 4`
-
-- `future_bookings.total_duration_per_day_in_hours.sun` : Total hours of future bookings taking place on a Sunday
-
-    **Example:** `future_bookings.total_duration_per_day_in_hours.sun <= 4`
-
-### Bookings in Same Month/Year
-
-- `count_of_bookings_in_month_of_pickup` : Number of bookings in the same month as pickup
-
-    **Example:** `count_of_bookings_in_month_of_pickup <= 5`
-
-- `total_duration_of_bookings_in_month_of_pickup.day_count` : Total number of days of bookings in the same month as pickup
-
-    **Example:** `total_duration_of_bookings_in_month_of_pickup.day_count <= 7`
-
-- `total_duration_of_bookings_in_month_of_pickup.in_hours` : Total hours of bookings in the same month as pickup
-
-    **Example:** `total_duration_of_bookings_in_month_of_pickup.in_hours <= 24`
-
-- `total_duration_of_bookings_in_month_of_pickup.in_days` : Total days (24h) of bookings in the same month as pickup
-
-    **Example:** `total_duration_of_bookings_in_month_of_pickup.in_days <= 3`
-
-- `count_of_bookings_in_year_of_pickup` : Number of bookings in the same year as pickup
-
-    **Example:** `count_of_bookings_in_year_of_pickup <= 20`
+Prefix: `booking.`
+
+| Variable           | Description                                    | Example                                                           |
+| ------------------ | ---------------------------------------------- | ----------------------------------------------------------------- |
+| `dock_id`          | The ID of the dock where the booking is made   | `booking.dock_id == "123e4567-e89b-12d3-a456-426614174000"`       |
+| `boat_model_id`    | The ID of the boat model being booked          | `booking.boat_model_id == "52248719-c7df-4762-b7b2-bf5867cafcd0"` |
+| `passengers.total` | The total number of passengers for the booking | `booking.passengers.total <= 5`                                   |
+| `boats`            | The boats included in the booking              | `booking.boats > 0`                                               |
+| `booked_at`        | The date and time when the booking was made    | `is_after(booking.booked_at, "2025-06-01")`                       |
+
+### Rental period
+
+Prefix: `booking.rental_period.`
+
+| Variable           | Description                                     | Example                                                                    |
+| ------------------ | ----------------------------------------------- | -------------------------------------------------------------------------- |
+| `pickup`           | The pickup date and time                        | `is_before(booking.rental_period.pickup, "2025-06-01")`                    |
+| `return`           | The return date and time                        | `is_before(booking.rental_period.pickup, "2025-06-01")`                    |
+| `dates`            | The dates included in the rental period         | `"2023-06-15" in booking.rental_period.dates`                              |
+| `in_hours`         | The rental period duration in hours             | `booking.rental_period.in_hours <= 4`                                      |
+| `in_days`          | The rental period duration in days              | `booking.rental_period.in_days <= 2`                                       |
+| `day_count`        | The number of days in the rental period         | `booking.rental_period.day_count == 1`                                     |
+| `days`             | The days of the week in the rental period       | `"sat" in booking.rental_period.days`                                      |
+| `overlaps_weekend` | Whether the rental period includes weekend days | `booking.rental_period.overlaps_weekend and booking.passengers.total <= 5` |
+
+### Booking timing
+
+Prefix: `booked_ahead.`
+
+| Variable    | Description                                              | Example                       |
+| ----------- | -------------------------------------------------------- | ----------------------------- |
+| `in_hours`  | How many hours in advance the booking was made           | `booked_ahead.in_hours >= 24` |
+| `in_days`   | How many full days (24h) in advance the booking was made | `booked_ahead.in_days >= 1`   |
+| `day_count` | The number of days between booking and pickup            | `booked_ahead.day_count >= 1` |
+
+Prefix: `time_until_pickup.`
+
+| Variable    | Description                          | Example                            |
+| ----------- | ------------------------------------ | ---------------------------------- |
+| `in_hours`  | Hours remaining until pickup         | `time_until_pickup.in_hours >= 24` |
+| `in_days`   | Days (of 24h) remaining until pickup | `time_until_pickup.in_days >= 1`   |
+| `day_count` | Number of days until pickup          | `time_until_pickup.day_count >= 1` |
+
+### Future bookings
+
+Prefix: `future_bookings.`
+
+| Variable                   | Description                                     | Example                                         |
+| -------------------------- | ----------------------------------------------- | ----------------------------------------------- |
+| `count_of`                 | Number of future bookings for the customer      | `count_of_future_bookings < 3`                  |
+| `total_duration.in_hours`  | Total duration of future bookings in hours      | `future_bookings.total_duration.in_hours <= 12` |
+| `total_duration.in_days`   | Total duration of future bookings in days (24h) | `future_bookings.total_duration.in_days <= 5`   |
+| `total_duration.day_count` | Total number of days of future bookings         | `future_bookings.total_duration.day_count <= 5` |
+
+### Future bookings by day
+
+Prefix: `future_bookings.count_per_day.`
+
+| Variable  | Description                                          | Example                                      |
+| --------- | ---------------------------------------------------- | -------------------------------------------- |
+| `mon`     | Number of future bookings on Mondays                 | `future_bookings.count_per_day.mon <= 1`     |
+| `tue`     | Number of future bookings on Tuesdays                | `future_bookings.count_per_day.tue <= 1`     |
+| `wed`     | Number of future bookings on Wednesdays              | `future_bookings.count_per_day.wed <= 1`     |
+| `thu`     | Number of future bookings on Thursdays               | `future_bookings.count_per_day.thu <= 1`     |
+| `fri`     | Number of future bookings on Fridays                 | `future_bookings.count_per_day.fri <= 1`     |
+| `sat`     | Number of future bookings on Saturdays               | `future_bookings.count_per_day.sat <= 1`     |
+| `sun`     | Number of future bookings on Sundays                 | `future_bookings.count_per_day.sun <= 1`     |
+| `weekend` | Number of future bookings on weekends                | `future_bookings.count_per_day.weekend <= 1` |
+| `weekday` | Number of future bookings on weekdays (mon thru fri) | `future_bookings.count_per_day.weekday <= 2` |
+
+### Future booking duration by day
+
+Prefix: `future_bookings.total_duration_per_day_in_hours.`
+
+| Variable | Description                                                | Example                                                    |
+| -------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| `mon`    | Total hours of future bookings taking place on a Monday    | `future_bookings.total_duration_per_day_in_hours.mon <= 4` |
+| `tue`    | Total hours of future bookings taking place on a Tuesday   | `future_bookings.total_duration_per_day_in_hours.tue <= 4` |
+| `wed`    | Total hours of future bookings taking place on a Wednesday | `future_bookings.total_duration_per_day_in_hours.wed <= 4` |
+| `thu`    | Total hours of future bookings taking place on a Thursday  | `future_bookings.total_duration_per_day_in_hours.thu <= 4` |
+| `fri`    | Total hours of future bookings taking place on a Friday    | `future_bookings.total_duration_per_day_in_hours.fri <= 4` |
+| `sat`    | Total hours of future bookings taking place on a Saturday  | `future_bookings.total_duration_per_day_in_hours.sat <= 4` |
+| `sun`    | Total hours of future bookings taking place on a Sunday    | `future_bookings.total_duration_per_day_in_hours.sun <= 4` |
+
+### Bookings in same month/year
+
+| Variable                                                  | Description                                                  | Example                                                        |
+| --------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------- |
+| `count_of_bookings_in_month_of_pickup`                    | Number of bookings in the same month as pickup               | `count_of_bookings_in_month_of_pickup <= 5`                    |
+| `total_duration_of_bookings_in_month_of_pickup.day_count` | Total number of days of bookings in the same month as pickup | `total_duration_of_bookings_in_month_of_pickup.day_count <= 7` |
+| `total_duration_of_bookings_in_month_of_pickup.in_hours`  | Total hours of bookings in the same month as pickup          | `total_duration_of_bookings_in_month_of_pickup.in_hours <= 24` |
+| `total_duration_of_bookings_in_month_of_pickup.in_days`   | Total days (24h) of bookings in the same month as pickup     | `total_duration_of_bookings_in_month_of_pickup.in_days <= 3`   |
+| `count_of_bookings_in_year_of_pickup`                     | Number of bookings in the same year as pickup                | `count_of_bookings_in_year_of_pickup <= 20`                    |
 
 ## Variable availability
 
