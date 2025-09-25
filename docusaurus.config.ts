@@ -66,6 +66,7 @@ const config: Config = {
                     path: 'guides',
                     routeBasePath: 'guides',
                     sidebarPath: './sidebars.ts',
+                    breadcrumbs: false,
                     editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
                 },
                 blog: {
