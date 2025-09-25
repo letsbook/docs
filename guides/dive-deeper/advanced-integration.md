@@ -1,5 +1,5 @@
 ---
-sidebar_label: Advanced website integration
+sidebar_label: Explore custom integration
 sidebar_position: 60
 ---
 
