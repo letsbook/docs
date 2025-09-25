@@ -121,43 +121,45 @@ const config: Config = {
                 theme: {
                     primaryColor: '#081590',
                     options: {
-                        "hideDownloadButton": true,
-                        "expandResponses": "200",
-                        "jsonSampleExpandLevel": 3,
-                        "theme": {
-                            "colors": {
-                                "primary": {
-                                    "main": "#081590",
-                                    "light": "#7c85d3"
+                        hideDownloadButton: true,
+                        expandResponses: "200",
+                        jsonSampleExpandLevel: 3,
+
+                        // @ts-ignore
+                        theme: {
+                            colors: {
+                                primary: {
+                                    main: "#081590",
+                                    light: "#7c85d3"
                                 },
-                                "text": {
-                                    "primary": "#000000",
-                                    "secondary": "#7c85d3"
+                                text: {
+                                    primary: "#000000",
+                                    secondary: "#7c85d3"
                                 }
                             },
-                            "sidebar": {
-                                "activeBgColor": "#f7f8fe",
-                                "activeTextColor": "#050f6a",
-                                "backgroundColor": "#ffffff",
-                                "fontFamily": "Rubik",
-                                "textColor": "#050f6a"
+                            sidebar: {
+                                activeBgColor: "#f7f8fe",
+                                activeTextColor: "#050f6a",
+                                backgroundColor: "#ffffff",
+                                fontFamily: "Rubik",
+                                textColor: "#050f6a"
                             },
-                            "rightPanel": {
-                                "backgroundColor": "#050f6a",
-                                "textColor": "#ffffff"
+                            rightPanel: {
+                                backgroundColor: "#050f6a",
+                                textColor: "#ffffff"
                             },
-                            "spacing": {
-                                "sectionVertical": "16"
+                            spacing: {
+                                sectionVertical: "16"
                             },
-                            "typography": {
-                                "fontFamily": "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif",
-                                "fontSize": "16px",
-                                "headings": {
-                                    "fontFamily": "Rubik",
-                                    "fontWeight": "500"
+                            typography: {
+                                fontFamily: "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif",
+                                fontSize: "16px",
+                                headings: {
+                                    fontFamily: "Rubik",
+                                    fontWeight: "500"
                                 },
-                                "heading1": {
-                                    "color": "#ff0000"
+                                heading1: {
+                                    color: "#ff0000"
                                 }
                             }
                         }
