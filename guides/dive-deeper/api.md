@@ -1,0 +1,23 @@
+# Implement our API
+
+## How the API works
+
+Read the full reference in our [API docs](/api/index). The API lets one key talk to multiple boat rental companies, so your integrations do not need a key per brand.
+
+<div class="button-container">
+    <a href="/api/index" class="button button--primary">To the API docs</a>
+</div>
+
+## Webhooks (Coming soon)
+
+Webhooks are in the works, so your app can nap until something changes instead of polling like a caffeine enthusiast.
+
+## Obtaining an API key
+
+Create API keys from the [integrations](https://dashboard.letsbook.app/integrations) page. Copy it once and stash it somewhere safe. We only show it at creation.
+
+If your user has access to multiple companies, you see a company selector. You can grant one key access to several companies. Franchises love this because one integration can cover all their Let's Book companies without juggling keys.
+
+:::warning
+API keys are not tied to a specific dock and automatically have administrator rights.
+:::

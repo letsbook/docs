@@ -201,7 +201,7 @@ const config: Config = {
                 },
                 {
                     to: '/api/index',
-                    label: 'Developer docs',
+                    label: 'API docs',
                     position: 'left',
                 }
             ],
