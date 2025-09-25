@@ -1,78 +1,97 @@
-# Frontend Coding Standards
+# LLM Writing Guidelines for Let's Book Documentation
+
+## Project Context
+
+You're writing customer-facing documentation for Let's Book, a boat rental management platform. Your audience is boat rental operators and boat club managers who need practical, actionable guidance.
+
+**What Let's Book does:** All-in-one SaaS for managing boat rentals - bookings, scheduling, payments, fleet tracking, customer communication, and optional self-service hardware.
+
+**Your job:** Help operators understand HOW to use features, not WHY they exist. Get them working efficiently, fast.
 
 ---
 
-## Project context
+## Writing Voice & Style
 
-*This section describes the "why" behind the project, the problems it aims to solve, and the desired user experience.*
+### Core Principles
+- **Concise first, clever second** - Never sacrifice clarity for wit
+- **Action-oriented** - Lead with what users should DO
+- **Conversational but professional** - Like a knowledgeable colleague, not a textbook
+- **Confident and direct** - No hedging with "you might want to" or "perhaps consider"
 
-### Problem Statement
+### Tone Guidelines
+- **Be helpfully cheeky** - Light humor that makes users smile, not groan
+- **Show personality** - You're human, not a corporate robot
+- **Stay practical** - Wit should enhance understanding, not distract from it
+- **Respect user intelligence** - They're smart operators running businesses
 
-This project is the customer facing documentation for Let's Book. Let's Book is software for managing boat rental companies. Managing boat rentals involves complex tasks like handling bookings, scheduling, payments, fleet tracking, customer communication, and staffing for check-ins/outs. Traditional methods or disparate systems can be inefficient, time-consuming, and costly, hindering growth and negatively impacting the customer experience. 
-
-### Target Audience
-
-The primary users are **Boat Rental Companies** of all sizes, including:
-- Small to large operators
-- Businesses with multiple locations
-- Operators of various fleet types (e.g., city electric boats, sailboats, yacht charters)
-
-It also caters specifically to **Boat Clubs** with membership systems.
-
-### Proposed Solution
-
-Let's Book is an **all-in-one boat rental management software (SaaS)** designed specifically for the needs of boat rental operators and clubs.
-
-**Core Value Proposition:** To centralize and streamline all aspects of boat rental management, automating processes, improving efficiency, and enhancing the customer experience.
-
-**Key Features:**
-- Embeddable online booking widget for the operator's website.
-- Automated booking confirmation and payment processing.
-- Comprehensive dashboard for managing bookings, scheduling, and fleet availability.
-- Customer communication tools.
-- Customizable branding to match the operator's identity.
-- Optional "Connected Fleet" hardware add-on for customer self-service pickup/operation via smartphone.
-- Reporting and performance visibility.
-- REST API for potential integrations (`developers.lets-book.com`).
-
-### User Experience Goals
-
-**For End-Customers (Renters):**
-- Simple, clear, and seamless online booking process.
-- Immediate booking confirmation.
-- Timely and relevant communication.
-- Effortless self-service pickup (with Connected Fleet).
-
-**For Operators (Rental Companies/Clubs):**
-- **Efficiency:** Streamline operations, automate manual tasks (bookings, payments).
-- **Control:** Gain complete visibility and control over bookings, scheduling, fleet, payments, and communication.
-- **Cost/Time Savings:** Reduce administrative overhead and potentially staffing needs (especially with Connected Fleet).
-- **Flexibility:** Customize branding, offer add-ons, manage different fleet types.
-- **Growth:** Provide tools to manage and scale the business effectively.
+### Style Rules
+- **NEVER use em dashes (—)** - Use regular hyphens or restructure sentences
+- **Sentence case for all headers** - "Managing your fleet" not "Managing Your Fleet"
+- **Short paragraphs** - 1-3 sentences max
+- **Active voice always** - "Click Save" not "Save should be clicked"
+- **Present tense for instructions** - "The system sends" not "The system will send"
 
 ---
 
-## Tone of voice
+## Content Structure
 
-- Texts should be to the point but allow room for wittiness.
-- Rewrite the texts where useful and try to maintain anchors
-- Leave page titles intact
-- Write without the use of em dashes - ever
-- Titles should be in European style, so not capitalized besides the first character
+### Lead with Action
+```
+❌ "Let's Book provides a comprehensive fleet management system that allows you to..."
+✅ "Add boats to your fleet from the dashboard."
+```
+
+### Use Concrete Examples
+```
+❌ "Set appropriate pricing for your various vessel types"
+✅ "Charge $50/hour for kayaks, $200/hour for speedboats"
+```
+
+### Dashboard Integration
+- **Always include direct dashboard links** when referencing features
+- Format: `https://dashboard.letsbook.app/[specific-path]`
+- Place links at the start of relevant sections
+
+### Effective Wit Examples
+```
+✅ "Your customers will thank you (and actually mean it this time)"
+✅ "Because nobody enjoys playing phone tag about boat availability"
+✅ "Set it once, forget it exists - like that gym membership you bought"
+✅ "Automated emails that don't sound like they were written by a robot having a bad day"
+```
+
+### Avoid These Patterns
+```
+❌ "First things first" / "Let's start by" / "Now that we've covered"
+❌ Long introductory explanations about why features matter  
+❌ Overly cute puns that slow down comprehension
+❌ Corporate buzzwords: "leverage," "utilize," "seamlessly integrate"
+```
 
 ---
 
-## Build and debug
+## Technical Guidelines
 
-- **Don't use watch mode.** So NEVER use `npm run start` or `npm run serve`.
-- **Building the app is done using docusaurus built-in bundler.** Use `npm run build` to build the app. 
-- **Never check prettier, just fix potential issues** Use `npm run prettier` to run it.
-- **Always check the types after a change** Use `npx tsc` to run it.
-- **Debugging the app is done using the browser's developer tools.** Use the "Sources" tab to view and debug the code.
-- Check the `./technical-guidelines.md` file when working with code (css/ts files).
+### Development Commands
+- **Build:** `npm run build` (never use watch mode)
+- **Format:** `npm run prettier` (always run before completing)
+- **Type check:** `npx tsc` (run after all changes)
+
+### Quality Standards
+- All content must pass Prettier formatting
+- Maintain existing anchor links when rewriting
+- Preserve page titles exactly as written
+- Reference `./technical-guidelines.md` for code-related work
 
 ---
 
-## Quality checks
+## Content Checklist
 
-**Make sure all generated code passes the Prettier check before completing the task**
+Before publishing any content, verify:
+- [ ] Gets to the point within first sentence
+- [ ] Includes actionable steps or dashboard links
+- [ ] Uses sentence case for headers
+- [ ] No em dashes anywhere
+- [ ] Wit enhances (doesn't hinder) understanding
+- [ ] Passes Prettier check
+- [ ] TypeScript compiles without errors
