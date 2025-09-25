@@ -6,12 +6,10 @@ sidebar_position: 1
 
 kan je iets minder focussen op grootte van iemands vloot? want sommige hebben 1 boot die ze heel duur verhuren
 Begin met opsomming van wat je altijd krijgt. Dat met die stats vind ik te opschepperig.
-linkjes naar 'get started' op de site. 
+linkjes naar 'get started' op de site.
 'when upgrade' stuk mag veel compacter. die maand berekening gaat niet echt op bij bootverhuur want sterk seizoensafhankelijk.
-custom plan is echt voor boatclubs. We hebben er veels als klant en maken speciale prijsafspraak. 
+custom plan is echt voor boatclubs. We hebben er veels als klant en maken speciale prijsafspraak.
 next steps deel: je moet eerst inlog van ons krijgen en daarna kan je setup doen. Maar eigenlijk doen wij die altijd voor z
-
-
 
 # Choose the best plan for your boat rental business
 
@@ -23,6 +21,7 @@ Let's Book is built for every boat rental company, whether you're just getting s
 Over 50,000 trips booked yearly across 10 countries, generating $20+ million for our customers. From city-center electric fleets to Caribbean cruising adventures, you're in safe hands.
 
 **Everything included, no surprises**
+
 - All features unlocked from day one
 - Free onboarding and personalized setup
 - Free ongoing support
@@ -37,6 +36,7 @@ Over 50,000 trips booked yearly across 10 countries, generating $20+ million for
 Perfect for small and medium-sized rental businesses getting started or with steady seasonal operations.
 
 **Ideal for:**
+
 - New boat rental businesses
 - Seasonal operations
 - Small to medium fleets (1-10 boats)
@@ -44,13 +44,14 @@ Perfect for small and medium-sized rental businesses getting started or with ste
 
 **Why it works:** Low fixed cost with reasonable booking fees means you only pay more when you're making more. Perfect for testing the waters or managing a boutique operation.
 
-## Pro Plan  
+## Pro Plan
 
 **$175/month (€150/month) + 1% booking fee**
 
 The smart choice for growing rental businesses with higher volume and annual turnover of $100,000+.
 
 **Ideal for:**
+
 - Established rental businesses
 - Year-round operations
 - Growing fleets (10+ boats)
@@ -73,8 +74,9 @@ $20,000 monthly bookings = $350/month fees (Pro) vs $500/month fees (Standard)
 Running a boat club or large-scale rental business? Managing multiple locations or need specialized features?
 
 **Perfect for:**
+
 - Boat clubs with membership systems
-- Multi-location operations  
+- Multi-location operations
 - Enterprise-level businesses
 - Unique operational requirements
 
@@ -100,6 +102,7 @@ Your monthly fee covers everything, but keep these optional extras in mind:
 Join leading rental companies worldwide who trust Let's Book to handle their operations, from automated bookings to payment processing to fleet management.
 
 **Next steps:**
+
 1. **[Start your 10-step setup](./10-step-setup-guide.md)** - Get your rental system operational
 2. **Choose your plan** - Start with Standard and upgrade when you're ready
 3. **Go live** - Begin accepting bookings and payments automatically
@@ -108,4 +111,4 @@ Your journey to effortless boat rental management starts here. Let's Book handle
 
 ---
 
-*Questions about which plan fits your business? Contact our team at [support@lets-book.com](mailto:support@lets-book.com) for personalized advice.*
+_Questions about which plan fits your business? Contact our team at [support@lets-book.com](mailto:support@lets-book.com) for personalized advice._
