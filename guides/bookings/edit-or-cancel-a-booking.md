@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Edit or cancel a booking
 
 ## Edit a booking
