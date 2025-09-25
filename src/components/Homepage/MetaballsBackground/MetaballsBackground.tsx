@@ -49,11 +49,11 @@ export default function MetaballsBackground(): React.ReactElement | null {
         // Initialize balls
         const initBalls = () => {
             const baseCount = 4;
-            const count = prefersReduced ? 0 : baseCount * 5; // 5x as many balls
+            const count = prefersReduced ? 0 : baseCount;
             const w = canvas.width / dpiRef.current;
             const h = canvas.height / dpiRef.current;
             ballsRef.current = Array.from({ length: count }).map(() => {
-                const r = Math.min(w, h) * (0.06 + Math.random() * 0.04); // smaller radii to fit more balls
+                const r = Math.min(w, h) * (0.06 + Math.random() * 0.04) * 5; // 5x larger radii
                 const speed = 0.08 + Math.random() * 0.18; // px/ms baseline
                 return {
                     x: (0.05 + 0.9 * Math.random()) * w,
@@ -61,7 +61,7 @@ export default function MetaballsBackground(): React.ReactElement | null {
                     vx: (Math.random() > 0.5 ? 1 : -1) * speed,
                     vy: (Math.random() > 0.5 ? 1 : -1) * speed,
                     r,
-                    color: '#d1d4f2',
+                    color: '#2232bd',
                 };
             });
         };
@@ -84,7 +84,7 @@ export default function MetaballsBackground(): React.ReactElement | null {
             // Move balls
             const maxX = W / dpr;
             const maxY = H / dpr;
-            const speedScale = 0.05; // slower for large blobs
+            const speedScale = 0.25; // slower for large blobs
             ballsRef.current.forEach((b) => {
                 b.x += b.vx * dt * speedScale;
                 b.y += b.vy * dt * speedScale;
@@ -93,8 +93,8 @@ export default function MetaballsBackground(): React.ReactElement | null {
                 if (b.y < margin || b.y > maxY - margin) b.vy *= -1;
             });
 
-            // Compute scalar field at reduced resolution
-            const scale = 0.33; // render field at third res then scale up
+            // Compute scalar field at full resolution to avoid blur
+            const scale = 1; // render field at native res to remove scaling blur
             const fw = Math.max(64, Math.floor(W * scale));
             const fh = Math.max(64, Math.floor(H * scale));
             fieldCanvas.width = fw;
@@ -151,18 +151,18 @@ export default function MetaballsBackground(): React.ReactElement | null {
             ctx.fillStyle = bgGrad;
             ctx.fillRect(0, 0, W, H);
 
-            // Draw field mask scaled up with smoothing
+            // Draw field mask with no smoothing to avoid blur
             ctx.save();
             ctx.globalCompositeOperation = 'source-over';
-            ctx.imageSmoothingEnabled = true;
-            ctx.imageSmoothingQuality = 'high';
+            ctx.imageSmoothingEnabled = false;
+            ctx.imageSmoothingQuality = 'low';
 
-            // Draw the mask without blur
+            // Draw the mask at 1:1 resolution
             ctx.drawImage(fieldCanvas, 0, 0, W, H);
 
             // Solid tint using the required single color
             ctx.globalCompositeOperation = 'source-atop';
-            ctx.fillStyle = '#d1d4f2';
+            ctx.fillStyle = '#2232bd';
             ctx.fillRect(0, 0, W, H);
 
             ctx.restore();
