@@ -8,7 +8,7 @@ You can customize all text that your customers see to match your own style and p
 
 Sometimes, a translation contains a variable. It will be displayed between curly braces. e.g. `{variableName}`. You should not translate or change these variables.
 
-See our [advanced translations](./advanced-translations.md) guide for a more thorough explanation.
+See our [advanced translations](../dive-deeper/advanced-translations.md) guide for a more thorough explanation.
 
 ## Translating your inventory
 

@@ -1,7 +1,7 @@
 # Google Analytics Integration
 
 Let's Book now provides seamless Google Analytics (GA4) integration that automatically tracks page views, custom events,
-and ecommerce events without requiring custom [return URLs](../booking-form/set-a-custom-return-url.md) or
+and ecommerce events without requiring custom [return URLs](./custom-return-url.md) or
 manual script implementation.
 
 ## Updated Embed Script
@@ -54,7 +54,7 @@ events contain all financial information relevant to GA4:
 
 ### No Custom Return URL Required
 
-**Important**: Custom [return URLs](../booking-form/set-a-custom-return-url.md) (thank you pages) are no
+**Important**: Custom [return URLs](./custom-return-url.md) (thank you pages) are no
 longer needed with the new analytics integration. In fact, if you still have a custom return URL configured, the
 automatic `purchase` event tracking will not work, and you would
 need to implement the tracking manually.

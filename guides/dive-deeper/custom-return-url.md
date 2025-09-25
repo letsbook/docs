@@ -6,7 +6,7 @@ sidebar_label: Redirect after booking
 # Set a custom return URL
 
 :::note[Analytics Integration Considerations]
-Use our [automatic Google Analytics integration](../dive-deeper/connect-google-analytics.md). It tracks purchases without a return URL. Only use a custom return URL if you need a custom confirmation page.
+Use our [automatic Google Analytics integration](connect-google-analytics.md). It tracks purchases without a return URL. Only use a custom return URL if you need a custom confirmation page.
 :::
 
 ## Set it up
@@ -41,7 +41,7 @@ We append these query parameters to your return URL. Use them for receipts and a
 
 ## Track purchases manually (Google Analytics)
 
-Overlay integrations have [built‑in tracking](../dive-deeper/connect-google-analytics.md). With a custom return URL, send the purchase event yourself using the query parameters above. Start with this example and adapt it to your setup.
+Overlay integrations have [built‑in tracking](connect-google-analytics.md). With a custom return URL, send the purchase event yourself using the query parameters above. Start with this example and adapt it to your setup.
 
 ```html
 <script>
