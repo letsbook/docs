@@ -1,4 +1,4 @@
-# Getting Started with Let's Book: Step by step onboarding 
+# Getting Started with Let's Book: Step by step onboarding
 
 Lola dit is even eerste opzetje hoor, maar zoiets kan wellicht werken. Dus een soort hoofdlink en daaronder kunnen we dan wat uitleg linkjes naar elders in help documentatie kwijt.
 

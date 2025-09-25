@@ -1,21 +1,22 @@
 # Set a custom return URL
 
 :::note[Analytics Integration Considerations]
-Let's Book now offers [automatic Google Analytics integration](../dive-deeper/connect-google-analytics.md) that tracks purchase events without requiring custom return URLs. For optimal analytics tracking, we recommend using the automatic integration instead of custom return URLs.
+Use our [automatic Google Analytics integration](../dive-deeper/connect-google-analytics.md). It tracks purchases without a return URL. Only use a custom return URL if you need a custom confirmation page.
 :::
 
-## Implementing a custom return URL
+## Set it up
 
-1. Go to [Settings -> General Info](https://dashboard.letsbook.app/general-info)
-2. Look for the 'Custom return URL' option.
-3. Enter the URL where you want to send your customers after making a successful booking.
+1. Open [Settings → General Info](https://dashboard.letsbook.app/general-info).
+1. Find Custom return URL.
+1. Enter the URL of your confirmation page.
 
-By following these instructions, you can configure a personalized page for your customers, but remember that this will require manual implementation of purchase event tracking if you want analytics data.
+:::note
+When you use a custom return URL, you are responsible for sending purchase events to your analytics tool.
+:::
 
 ## Return URL parameters
 
-This is a list of parameters that are sent to the return page. These parameters allow you to obtain more specific
-statistics and tracking data.
+We append these query parameters to your return URL. Use them for receipts and analytics.
 
 | Parameter name         | Explanation                                                                      |
 | ---------------------- | -------------------------------------------------------------------------------- |
@@ -28,14 +29,14 @@ statistics and tracking data.
 | `lbNumberOfPassengers` | The number of passengers. Can be `null` when not requested.                      |
 | `lbDurationInHours`    | The duration of the booking in hours                                             |
 | `lbNumberOfBoats`      | The number of boats the booking is for                                           |
-| `lbTotalIncVatInCents` | The total amount paid including VAT/TAX, but excluding the deposit.              |
+| `lbTotalIncVatInCents` | Total paid amount in cents, incl. VAT/tax. Excludes deposit.                     |
 | `lbCurrency`           | The currency of the paid amount                                                  |
 | `lbCouponCode`         | The applied coupon code. Will be `null` if no coupon is applied.                 |
 | `lbPartnerCode`        | The used partner code. Will be `null` if the booking is not linked to a partner. |
 
-## Manually tracking bookings with Google Analytics
+## Track purchases manually (Google Analytics)
 
-We offer [out-of-the-box tracking](../dive-deeper/connect-google-analytics.md) for overlay integrations. However, when using custom return URLs, you need to track `purchase` events manually. You can do this by reading the [parameters](#return-url-parameters) and implementing the script below, which automatically sends purchase events to Google Analytics. Feel free to modify it to your needs.
+Overlay integrations have [built‑in tracking](../dive-deeper/connect-google-analytics.md). With a custom return URL, send the purchase event yourself using the query parameters above. Start with this example and adapt it to your setup.
 
 ```html
 <script>
