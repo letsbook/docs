@@ -1,0 +1,43 @@
+# Match the booking form to your brand
+
+Make the booking form feel like your site. Keep it clean, on-brand, and accessible.
+
+To get started, go to [Styling](https://dashboard.letsbook.app/styling).
+
+## What to set
+
+### 1. Logo
+
+- Use a horizontal logo.
+- PNG or JPG.
+- Min width 320px.
+
+### 2. Fonts
+
+- Pick title and body fonts from [Google Fonts](https://fonts.google.com/).
+- Featured options are tested to look great in the form.
+
+### 3. Brand color
+
+- Set your primary brand color (HEX or RGB) or use the picker with the eyedropper.
+- We auto-pick accessible text contrast for buttons and key UI.
+
+### 4. Interface colors
+
+- Choose a supporting palette for secondary UI elements.
+- Keep contrast high for readability.
+
+### 5. Corner style
+
+- Rounded or sharp corners for buttons and panels.
+- Change anytime to match your brand.
+
+## Preview in context
+
+- Use the booking form link in the dashboard to preview.
+- Then verify on your site after the form is [integrated](./add-to-website.mdx).
+
+## Accessibility
+
+- Ensure sufficient color contrast on light and dark backgrounds.
+- Avoid text baked into images for critical info.
