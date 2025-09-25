@@ -5,6 +5,8 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import type { ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
+import MetaballsBackground from '../MetaballsBackground/MetaballsBackground';
+
 import styles from './styles.module.css';
 
 // Create a search adapter similar to LunrSearchAdapter
@@ -288,6 +290,8 @@ export default function Hero(): ReactNode {
 
     return (
         <section className={styles.Root}>
+            <MetaballsBackground />
+
             <div className="container">
                 <div className={styles.HeaderContent}>
                     <h1 className={styles.Title}>Let's Book Help Center</h1>
