@@ -1,0 +1,61 @@
+---
+title: Manage blockout periods
+description: Block your schedule for private events, closures, or to pause availability
+sidebar_position: 3
+---
+
+# Manage blockout periods
+
+Need to block your schedule for a few hours, days, or even months? With blockout periods, you can instantly pause availability for private events, seasonal closures, or simply when you want to stop taking bookings.
+
+## What are blockout periods?
+
+Blockout periods temporarily remove availability from your booking system. You can block specific boats, entire docks, or your whole fleet for any time period - from minutes to months.
+
+**Common uses:**
+- Private events or company outings
+- Seasonal closures
+- Weather-related shutdowns
+- Staff training periods
+- Special occasions when you want to pause bookings
+
+## Creating blockout periods
+
+### Method 1: From blockout periods page
+
+1. Go to [blockout periods overview](https://dashboard.letsbook.app/blocks) and click [Add new blockout](https://dashboard.letsbook.app/blocks/new)
+2. Fill in the details:
+   - **Reason:** Brief description (e.g., "Company outing", "Holiday closure")
+   - **Period:** Select dates and times (can customize start/end times beyond midnight)
+   - **Dock:** Choose specific docks or "All docks"
+   - **Boat model:** Select specific boat types or "All boat models"
+3. Click **Save**
+
+### Method 2: From planning overview
+
+1. Go to [planning overview](https://dashboard.letsbook.app/planning)
+2. Click the **"Add blockout period"** button in the top right
+3. Follow the same steps as above
+
+## Viewing active blockouts
+
+### In blockout periods list
+Visit your [blockout periods overview](https://dashboard.letsbook.app/blocks) to see all current and future blockouts with their details, duration, and affected boats.
+
+### In planning overview
+Blockouts appear directly in your planning timeline:
+1. Go to [planning overview](https://dashboard.letsbook.app/planning) 
+2. Click **"Availability"** in the top right corner
+3. Blocked periods show as unavailable time slots
+
+This visual integration ensures you never miss active blockouts when viewing your schedule.
+
+## Managing existing blockouts
+
+From your [blockout periods overview](https://dashboard.letsbook.app/blocks), you can:
+- View all active and upcoming blockouts
+- Edit existing blockout details
+- Remove blockouts by opening a specific blockout, clicking the three dots in the top right, and selecting "Remove"
+- See which boats and docks are affected
+
+Blockout periods give you complete control over your availability, ensuring you can manage your fleet effectively while keeping customers informed about when boats aren't available for booking.

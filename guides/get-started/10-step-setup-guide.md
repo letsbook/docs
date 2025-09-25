@@ -219,7 +219,7 @@ Once you're satisfied with your testing:
 
 1. **Add billing information** for your Let's Book account
 2. **Publish your setup** to make it live
-3. **[Add the booking form to your website](../booking-form/add-to-website.md)** - see our platform-specific guides for [WordPress](../booking-form/integrate-with-wordpress.md), [Wix](../booking-form/integrate-with-wix.md), or [Squarespace](../booking-form/integrate-with-squarespace.md)
+3. **[Add the booking form to your website](../booking-form/add-to-website.md)** - see our platform-specific guides
 4. **Share your booking link** with potential customers
 
 ---
@@ -251,10 +251,7 @@ For more detailed information on specific features:
 
 **Website integration:**
 
-- [Add booking form to your website](../booking-form/add-to-website.md) - General integration guide
-- [WordPress integration](../booking-form/integrate-with-wordpress.md) - WordPress-specific setup
-- [Wix integration](../booking-form/integrate-with-wix.md) - Wix-specific setup
-- [Squarespace integration](../booking-form/integrate-with-squarespace.md) - Squarespace-specific setup
+- [Add booking form to your website](../booking-form/add-to-website.md) - General integration guide with platform-specific instructions
 - [Advanced integration options](../booking-form/advanced-integration.md) - Custom implementations
 
 **Additional resources:**
