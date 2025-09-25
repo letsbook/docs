@@ -1,7 +1,3 @@
----
-sidebar_class_name: hidden
----
-
 # Assign boats to docks and manage placement
 
 Once you've created boat models, you need to assign individual boats to specific docks and manage their locations over time. Let's Book provides flexible tools for both batch assignments and individual boat placement.
