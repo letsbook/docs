@@ -51,9 +51,9 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 Steps:
 
-![[trackunit_steps_1.jpg]]
+![Trackunit steps 1](./graphics/trackunit_steps_1.jpg)
 
-![[trackunit_steps_2.jpg]]
+![Trackunit steps 2](./graphics/trackunit_steps_2.jpg)
 
 ### Qondor integration
 
