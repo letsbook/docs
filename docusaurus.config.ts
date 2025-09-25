@@ -130,7 +130,7 @@ const config: Config = {
                                     "light": "#7c85d3"
                                 },
                                 "text": {
-                                    "primary": "#000",
+                                    "primary": "#000000",
                                     "secondary": "#7c85d3"
                                 }
                             },
@@ -153,7 +153,10 @@ const config: Config = {
                                 "fontSize": "16px",
                                 "headings": {
                                     "fontFamily": "Rubik",
-                                    "fontWeight": "800"
+                                    "fontWeight": "500"
+                                },
+                                "heading1": {
+                                    "color": "#ff0000"
                                 }
                             }
                         }
