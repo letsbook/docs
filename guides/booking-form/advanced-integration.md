@@ -1,3 +1,8 @@
+---
+sidebar_label: Advanced integration
+sidebar_position: 60
+---
+
 # Advanced website integration
 
 Need more control over the embed? This short guide is for developers.

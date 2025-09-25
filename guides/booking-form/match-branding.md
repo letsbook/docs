@@ -1,3 +1,8 @@
+---
+sidebar_label: Match your brand
+sidebar_position: 10
+---
+
 # Match the booking form to your brand
 
 Make the booking form feel like your site. Keep it clean, on-brand, and accessible.

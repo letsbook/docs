@@ -1,6 +1,11 @@
 ---
-sidebar_position: 50
-sidebar_label: Offer alternatives
+sidebar_position: 31
 ---
 
-# Offer alternatives when boats are fully booked
+# Tweak the form
+
+## Date pickertje
+
+## Phone number
+
+## More..

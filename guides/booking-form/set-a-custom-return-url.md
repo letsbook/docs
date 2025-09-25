@@ -1,3 +1,8 @@
+---
+sidebar_position: 40
+sidebar_label: Redirect after booking
+---
+
 # Set a custom return URL
 
 :::note[Analytics Integration Considerations]

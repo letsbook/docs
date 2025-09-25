@@ -1,13 +1,18 @@
+---
+sidebar_position: 20
+---
+
 # Pick supported languages
 
-We support virtually any language that is left-to-right for the booking form, allowing your customers to book in a familiar language. 
+We support virtually any left-to-right language for the booking form, so customers can book in a familiar language.
 
 ## Adding a new language
 
-Go [text & languages](https://dashboard.letsbook.app/localization) and find the 'My languages' section for a list of the languages currently in use. Click the add language button. We provide 6 language packs that have been thoroughly reviewed and verified. Additionally, we offer 5 AI-translated language packs. While these have been translated using advanced AI tools, there may be minor errors. If you come across any incorrect translations, we’d greatly appreciate it if you let us know!
+Go to [text & languages](https://dashboard.letsbook.app/localization) and open the My languages section to see what you’re using today. Click Add language. We provide 6 reviewed language packs and 5 AI-translated packs. AI packs are good, but not perfect; if you spot an error, tell us and we’ll fix it.
 
-## Adding a language that's not supported out of the box
-YOu can still do this, but you'll need to translate the interface yourself using [overrides](#managing-texts).
+## Adding a language that’s not supported out of the box
+
+You can still do this, but you’ll need to translate the interface yourself using the overrides in our [modify texts and translations](./texts-and-translations.md) guide.
 
 Choose a starting point for your translations when adding an unsupported language:
 
@@ -17,7 +22,7 @@ Choose a starting point for your translations when adding an unsupported languag
 
 ## Removing a language
 
-You can remove a language. Not that any custom translations will be removed along with it. Additionally, customers having this language configured as their preferred language will be migrated to your default language.
+You can remove a language. Note that any custom translations will be removed with it. Customers who set this language as their preference will automatically switch to your default language.
 
 :::note
 You cannot remove your default language
