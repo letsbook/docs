@@ -1,8 +1,4 @@
 {
     "label": "Booking form",
-    "position": 80,
-    "link": {
-        "type": "generated-index",
-        "description": "Learn how to tune the customer facing booking form to your liking"
-    }
+    "position": 80
 }

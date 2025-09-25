@@ -1,8 +1,4 @@
 {
     "label": "Collaborate with the team",
-    "position": 100,
-    "link": {
-        "type": "generated-index",
-        "description": "Find out how you can invite others to your dashboard and run the day-to-day together."
-    }
+    "position": 100
 }
