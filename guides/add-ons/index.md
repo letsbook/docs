@@ -45,12 +45,16 @@ Control when add-ons are available by setting conditions:
   <a href="https://dashboard.letsbook.app/add-ons/categories" class="button button--primary" target="_blank" rel="noopener noreferrer">Manage categories</a>
 </div>
 
+
+
 **Layout options per category:**
-- **Grid view** - Shows photos and prices clearly
-- **List view** - Compact text-based display
-- **Detailed view** - Full descriptions and multiple photos
+- **Grid** - Large square photos with prices
+- **Bars** - Medium-sized photos with descriptive text
+- **Table** - Compact view for smaller display
 
 **Category ordering:** Arrange categories to guide customers (essentials first, luxury items last).
+
+![Organizing add-ons](./graphics/Organizing_Add-ons.png)
 
 ## Stock management
 

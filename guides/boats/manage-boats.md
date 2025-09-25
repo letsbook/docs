@@ -12,7 +12,9 @@ Your boat fleet is the foundation of your rental business. Let's Book uses a two
 
 ## Adding a new boat model
 
-Go to [Boat Models](https://dashboard.letsbook.app/models) and click [Add New](https://dashboard.letsbook.app/models/add).
+<div class="button-container">
+  <a href="https://dashboard.letsbook.app/models/add" class="button button--primary" target="_blank" rel="noopener noreferrer">Add new boat model</a>
+</div>
 
 ### Basic setup
 
@@ -30,7 +32,7 @@ Use categories to organize different boat types when you have many models (e.g.,
 
 ## Managing individual boats
 
-After creating a boat model, set up the individual boats with unique names (like "Boat #1" or "Blue Thunder") and assign them to specific docks **(link invoegen)**.
+After creating a boat model, set up the individual boats with unique names (like "Boat #1" or "Blue Thunder") and [assign them to specific docks](./assign-boats-to-docks.md).
 
 ### Editing and removing boats
 
