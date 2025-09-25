@@ -114,7 +114,8 @@ h1 {
     transition: opacity 0.2s ease;
 }
 
-.menu__caret, .menu__link--sublist-caret::after {
+.menu__caret,
+.menu__link--sublist-caret::after {
     transition: opacity 0.2s ease;
     opacity: 0;
 }
