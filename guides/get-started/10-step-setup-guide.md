@@ -1,19 +1,6 @@
 # 10-step setup guide
 
-Welcome to Let's Book! This step-by-step guide will help you get your boat rental platform fully operational. We'll walk you through the entire process, from basic setup to your first successful booking.
-
-→ **Set your general information**  
-→ **Compose your notifications**  
-→ **Create a dock to store your boats**  
-→ **Add your boats and assign them to the dock**  
-→ **Set up when the boats are available for rental**  
-→ **Decide on your pricing**  
-→ **Configure when a booking is confirmed**  
-→ **Bind it all together in the rental setup**  
-→ **Customize your styling**  
-→ **Connect your payment provider**
-
-Once you complete all these steps, you'll be ready to start renting out your boats!
+This step-by-step guide will help you get your boat rental platform fully operational. We'll walk you through the entire process, from basic setup to your first successful booking.
 
 ---
 
