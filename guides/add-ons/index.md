@@ -23,8 +23,9 @@ Add-ons let customers enhance their trip with extras like drinks, snacks, equipm
 ### Pricing and limits
 
 Set price per item with optional quantity limits:
+
 - **Per booking** - Maximum items per entire booking
-- **Per boat** - Limit based on boat capacity  
+- **Per boat** - Limit based on boat capacity
 - **Per passenger** - Items per person
 - **Per passenger per hour** - Useful for consumables (e.g. 2 beers per person per hour)
 
@@ -33,7 +34,7 @@ Set price per item with optional quantity limits:
 Control when add-ons are available by setting conditions:
 
 - **Between times** - Limit to specific hours (e.g. breakfast 8-10am)
-- **Between dates** - Only offer seasonal items during certain periods  
+- **Between dates** - Only offer seasonal items during certain periods
 - **Only at dock using boat model** - Restrict to specific location and boat combinations
 - **Days of the week** - Weekend-only specials or weekday offers
 - **Trip duration** - Require minimum rental length for premium add-ons
@@ -46,6 +47,7 @@ Control when add-ons are available by setting conditions:
 </div>
 
 **Layout options per category:**
+
 - **Grid view** - Shows photos and prices clearly
 - **List view** - Compact text-based display
 - **Detailed view** - Full descriptions and multiple photos
@@ -58,4 +60,4 @@ Mark add-ons as "Out of stock" when they're temporarily unavailable.
 
 ---
 
-*Add-ons typically increase average booking value by 20-40%. Start with a few popular items and expand based on customer feedback.*
+_Add-ons typically increase average booking value by 20-40%. Start with a few popular items and expand based on customer feedback._
