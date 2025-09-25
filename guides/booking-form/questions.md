@@ -12,7 +12,7 @@ Answers are stored for up to 2 weeks after the trip.
 
 ## How it works
 
-Go to [Booking Form > Additional questions > Add question](https://dashboard.letsbook.test/booking-form/additional-questions/add). Fill in:
+Go to [Booking Form > Additional questions > Add question](https://dashboard.letsbook.app/booking-form/additional-questions/add). Fill in:
 
 - The question.
 - Optional hint text (visible in the answer field).
@@ -44,4 +44,4 @@ Show the question only when the booking matches specific criteria:
 
 ## Rearranging questions
 
-Click [rearrange](https://dashboard.letsbook.test/booking-form/additional-questions/rearrange) to drag and drop questions into a logical flow.
+Click [rearrange](https://dashboard.letsbook.app/booking-form/additional-questions/rearrange) to drag and drop questions into a logical flow.

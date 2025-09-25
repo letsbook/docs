@@ -5,19 +5,30 @@ sidebar_label: Offer alternatives
 
 # Offer alternatives when boats are fully booked
 
-We’ve added a powerful new feature to avoid ‘dead ends’ in the booking flow: Smart Alternatives. If a boat is unavailable, we suggests a similar one from the same category, keeping customers on board and your calendar nicely filled.
+Keep bookings moving even when a boat is taken. Smart alternatives suggest another boat, time, or date - so your customer stays in the flow and your calendar stays full.
 
-## Different boat model as alternative
+## Offer different times and dates
 
-We consider boats from the same category to be valid subtitudes for each other. So in order for it to work, they need to be in the same category.
+If no boats are available at the requested time, we suggest nearby time slots or another date.
 
-1. Make sure your boats are assigned to a category by editing them from your [boat models](https://dashboard.letsbook.test/models) page.
-1. Decide which categories should be looking for [alternatives](https://dashboard.letsbook.test/booking-form/alternatives) with their category.
+How it works:
 
-## Different times and dates
+- First, we look for alternative times on the same day.
+- If none fit, we check the next day, then the next week, and so on.
 
-By default, if no boats are available that day, we’ll suggest alternative time slots or dates. This makes sure your customers stay in the flow and always find a suitable moment. We first try to find a suitable time and if that fails, we'll look for a different date the next day, the next week and so on.
+Because nobody enjoys playing phone tag about availability.
 
-## Disabling alternative
+## Suggest another boat from the same category
 
-Don't want alternatives that may confuse your customers? You can turn off automatic suggestions per category or on the [alternatives](https://dashboard.letsbook.test/booking-form/alternatives) page. 
+We treat boats in the same category as valid substitutes. If Model A is booked, we can offer Model B from that same category.
+
+To enable, do this:
+
+1. Assign each [boat](https://dashboard.letsbook.app/models) to a category
+2. Enable [alternatives](https://dashboard.letsbook.app/booking-form/alternatives) for the categories that should suggest other models
+
+Example: Put "Speedboats" together. If Speedboat X is booked at 2:00 PM, the system can suggest Speedboat Y at 2:00 PM.
+
+## Turn alternatives off
+
+Prefer to keep choices simple? [Turn off](https://dashboard.letsbook.app/booking-form/alternatives) automatic suggestions per category or globally on the alternatives page.

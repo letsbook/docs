@@ -13,11 +13,13 @@ See your bookings automatically appear in your personal calendar by connecting L
 Let's Book generates a unique calendar feed link for your account that syncs your booking schedule with your external calendar app. This is a view-only connection - you can see your bookings but cannot edit them from your personal calendar.
 
 **What gets synced:**
+
 - Bookings from the past 7 days
 - Bookings for the next 30 days
 - Automatic updates based on your calendar app's refresh settings
 
 **Update frequency:**
+
 - **Google Calendar:** Updates every 12 hours automatically
 - **Apple Calendar:** You control the refresh rate (minimum 5 minutes)
 - **Outlook:** Depends on your local settings

@@ -25,7 +25,7 @@ You're writing customer-facing documentation for Let's Book, a boat rental manag
 - **Respect user intelligence** - They're smart operators running businesses
 
 ### Style Rules
-- **NEVER use em dashes (—)** - Use regular hyphens or restructure sentences
+- **NEVER use em dashes (—)** - Restructure sentences instead
 - **Sentence case for all headers** - "Managing your fleet" not "Managing Your Fleet"
 - **Short paragraphs** - 1-3 sentences max
 - **Active voice always** - "Click Save" not "Save should be clicked"
