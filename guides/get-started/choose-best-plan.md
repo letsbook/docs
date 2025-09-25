@@ -24,6 +24,7 @@ Let's Book is built for every boat rental company, whether you're just getting s
 Perfect for small and medium-sized rental businesses getting started or with seasonal operations.
 
 **Ideal for:**
+
 - New boat rental businesses
 - Seasonal operations
 - Annual revenue under $100,000
@@ -34,13 +35,14 @@ Perfect for small and medium-sized rental businesses getting started or with sea
   <a href="https://lets-book.com/en/get-started" class="button button--primary" target="_blank" rel="noopener noreferrer">Get Started with Standard</a>
 </div>
 
-## Pro Plan  
+## Pro Plan
 
 **$175/month (€150/month) + 1% booking fee**
 
 The smart choice for growing rental businesses with higher volume and annual turnover of $100,000+.
 
 **Ideal for:**
+
 - Established rental businesses
 - Year-round operations
 - Annual revenue over $100,000
@@ -78,6 +80,7 @@ Your monthly fee covers everything, but keep these optional extras in mind:
 ## Ready to get started?
 
 **Next steps:**
+
 1. **[Get started](https://lets-book.com/get-started)** - Request your login credentials
 2. **Setup assistance** - We'll help configure everything for your business
 3. **Go live** - Begin accepting bookings and payments automatically
@@ -86,4 +89,4 @@ Let's Book handles the technology so you can focus on creating amazing experienc
 
 ---
 
-*Questions about which plan fits your business? Contact our team at [support@lets-book.com](mailto:support@lets-book.com) for personalized advice.*
+_Questions about which plan fits your business? Contact our team at [support@lets-book.com](mailto:support@lets-book.com) for personalized advice._
