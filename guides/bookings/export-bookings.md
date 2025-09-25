@@ -1,6 +1,8 @@
-# Running exports of bookings
+---
+sidebar_position: 5
+---
 
-## Export bookings
+# Export bookings
 
 1. Go to the [bookings overview](https://dashboard.letsbook.app/bookings)
 2. Click the export icon in the top right corner

@@ -94,6 +94,29 @@ Documentation is auto-generated from folder structure via `sidebars.ts`. Main se
 - Images are stored close to the content they're used in
 - Edit URLs configured for GitHub integration (disabled in production)
 
+## Writing Guidelines
+
+### Tone of Voice
+- **To the point, witty, short** - no long-winded explanations
+- **NEVER use em dashes** (no —)
+- **Customer-facing** for boat rental operators and boat clubs
+- Focus on **HOW things work**, not WHY they work
+- **Get straight to the action** - no fluff phrases like "First things first"
+
+### Content Structure
+- **Sentence case for headers** (only first letter capital, except proper nouns)
+- **Direct dashboard links at top** of each section
+- **Minimal explanatory text** - let users get to work quickly
+- **Concrete examples** where helpful, but keep them brief
+- **Step-by-step workflow** focus
+
+### Style Guidelines
+- No unnecessary introductory phrases
+- No long bullet point descriptions
+- Maximum efficiency in word choice
+- Use dashboard links: `https://dashboard.letsbook.app/...`
+- Target audience: boat rental companies who want practical solutions
+
 ### API Documentation
 
 - OpenAPI specs split across multiple YAML files in `openapi/` directory

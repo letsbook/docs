@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # Understand booking statuses
 
 Bookings in LetsBook go through different statuses throughout their lifecycle. Understanding these statuses helps you manage your bookings effectively and know exactly where each booking stands.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Connect boats
 
 Create a hardware connection between your boats and Let's Book software, allowing customers to start boats themselves with their smartphone and giving you complete remote control over your fleet.

@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Search and filter booking
 
 ## Finding bookings

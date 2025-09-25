@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Add a booking manually
 
 ## Step 1: Start adding a booking
