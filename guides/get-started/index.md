@@ -1,23 +1,17 @@
-# Getting Started with Let's Book: Step by step onboarding
-
-Lola dit is even eerste opzetje hoor, maar zoiets kan wellicht werken. Dus een soort hoofdlink en daaronder kunnen we dan wat uitleg linkjes naar elders in help documentatie kwijt.
+# 10-step setup guide
 
 Welcome to Let's Book! This step-by-step guide will help you get your boat rental platform fully operational. We'll walk you through the entire process, from basic setup to your first successful booking.
 
-## 🚀 Complete setup checklist
-
-Before we begin, here's an overview of all the steps we'll cover:
-
-✅ **Set your general information**  
-✅ **Compose your notifications**  
-✅ **Create a dock to store your boats**  
-✅ **Add your boats and assign them to the dock**  
-✅ **Set up when the boats are available for rental**  
-✅ **Decide on your pricing**  
-✅ **Configure when a booking is confirmed**  
-✅ **Bind it all together in the rental setup**  
-✅ **Customize your styling**  
-✅ **Connect your payment provider**
+→ **Set your general information**  
+→ **Compose your notifications**  
+→ **Create a dock to store your boats**  
+→ **Add your boats and assign them to the dock**  
+→ **Set up when the boats are available for rental**  
+→ **Decide on your pricing**  
+→ **Configure when a booking is confirmed**  
+→ **Bind it all together in the rental setup**  
+→ **Customize your styling**  
+→ **Connect your payment provider**
 
 Once you complete all these steps, you'll be ready to start renting out your boats!
 
@@ -25,7 +19,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 1: Set your general information
 
-👉 **[Start here: General Information](https://dashboard.letsbook.app/general-info)**
+→ **[Start here: General Information](https://dashboard.letsbook.app/general-info)**
 
 **First things first** - let's establish your business basics. This information will appear throughout your booking system and in communications with customers.
 
@@ -43,7 +37,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 2: Compose your notifications
 
-👉 **[Configure notifications](https://dashboard.letsbook.app/notifications)**
+→ **[Configure notifications](https://dashboard.letsbook.app/notifications)**
 
 **Stay connected** with your customers through automated notifications. Set up email templates for different booking scenarios.
 
@@ -61,7 +55,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 3: Create a dock to store your boats
 
-👉 **[Create your first dock](https://dashboard.letsbook.app/docks/add)**
+→ **[Create your first dock](https://dashboard.letsbook.app/docks/add)**
 
 **Organize your fleet** by creating docks - these are locations where your boats are stored and where customers will pick them up.
 
@@ -78,7 +72,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 4: Add your boats and assign them to the dock
 
-👉 **[Add your boats](https://dashboard.letsbook.app/models/add)**
+→ **[Add your boats](https://dashboard.letsbook.app/models/add)**
 
 **Time to add your fleet!** This is where you'll input all the details about each boat you want to rent out.
 
@@ -98,7 +92,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 5: Set up when the boats are available for rental
 
-👉 **[Set up schedules](https://dashboard.letsbook.app/schedules)**
+→ **[Set up schedules](https://dashboard.letsbook.app/schedules)**
 
 **Control your availability** by creating weekly rental schedules. This determines when customers can book your boats.
 
@@ -116,7 +110,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 6: Decide on your pricing
 
-👉 **[Configure pricing](https://dashboard.letsbook.app/pricing)**
+→ **[Configure pricing](https://dashboard.letsbook.app/pricing)**
 
 **Set your rates** with flexible pricing options that can adapt to different seasons, durations, and demand.
 
@@ -134,7 +128,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 7: Configure when a booking is confirmed
 
-👉 **[Set confirmation methods](https://dashboard.letsbook.app/confirmation-methods)**
+→ **[Set confirmation methods](https://dashboard.letsbook.app/confirmation-methods)**
 
 **Decide your confirmation flow** - when do bookings become official and how do customers receive confirmation?
 
@@ -151,7 +145,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 8: Bind it all together in the rental setup
 
-👉 **[Build your rental setup](https://dashboard.letsbook.app/rental-setup)**
+→ **[Build your rental setup](https://dashboard.letsbook.app/rental-setup)**
 
 **Connect all the pieces** by creating your rental flow. This combines boats, pricing, schedules, and settings into a bookable experience.
 
@@ -169,7 +163,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 9: Customize your styling
 
-👉 **[Customize styling](https://dashboard.letsbook.app/styling)**
+→ **[Customize styling](https://dashboard.letsbook.app/styling)**
 
 **Make it yours** by customizing the look and feel of your booking interface to match your brand.
 
@@ -187,7 +181,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ## Step 10: Connect your payment provider
 
-👉 **[Connect payment provider](https://dashboard.letsbook.app/styling)** _(Note: This links to the payment setup section)_
+→ **[Connect payment provider](https://dashboard.letsbook.app/styling)** _(Note: This links to the payment setup section)_
 
 **Get paid securely** by connecting a payment provider to handle customer transactions safely.
 
@@ -202,7 +196,7 @@ Once you complete all these steps, you'll be ready to start renting out your boa
 
 ---
 
-## 🧪 Testing phase: Before you go live
+## Testing phase: Before you go live
 
 Before accepting real bookings, thoroughly test your setup:
 
@@ -219,7 +213,7 @@ Before accepting real bookings, thoroughly test your setup:
 
 ---
 
-## 🎯 Going live: You're ready to rent!
+## Going live: You're ready to rent!
 
 Once you're satisfied with your testing:
 
@@ -230,7 +224,7 @@ Once you're satisfied with your testing:
 
 ---
 
-## 🏆 Success! You're now ready to start renting
+## Success! You're now ready to start renting
 
 Congratulations! You've successfully set up Let's Book and you're ready to start accepting bookings. Your boat rental business is now equipped with:
 
@@ -246,7 +240,7 @@ Congratulations! You've successfully set up Let's Book and you're ready to start
 
 ---
 
-## 📚 Related guides
+## Related guides
 
 For more detailed information on specific features:
 
