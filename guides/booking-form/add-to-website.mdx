@@ -1,0 +1,64 @@
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
+
+# Add the booking form to your website
+
+Add it in two quick steps.
+
+## Add the script
+
+Paste this snippet on your site. You can also find it in the [integration instructions](https://dashboard.letsbook.app/booking-form/integration-instructions).
+
+```html
+<!-- Start of Let's Book widget -->
+<script
+    src="https://cdn.letsbook.app/assets/lb-widgets.min.js"
+    type="module"
+    defer
+></script>
+<!-- End of Let's Book widget -->
+```
+
+Pick your platform:
+
+<Tabs queryString="platform">
+    <TabItem label="WordPress" value="wordpress" default>
+        1. Download our [WordPress plugin](https://lets-book.com/s/letsbook-easy-embed-fpes.zip).
+        1. Log in to WordPress. Go to Plugins, then Add New Plugin.
+        1. Click Upload Plugin. Select the zip you downloaded (letsbook-easy-embed.zip).
+        1. Click Activate Plugin.
+    </TabItem>
+
+    <TabItem label="Wix" value="wix">
+        1. In Wix, go to Settings.
+        1. Open Advanced, then select Custom Code.
+        1. Click + Add Custom Code.
+        1. Paste the snippet. Name it (for example: Lets Book booking form).
+        1. Under Add Code to Pages, choose All pages to load it everywhere.
+        1. Under Place Code in, choose Head, then click Apply.
+    </TabItem>
+
+    <TabItem label="Squarespace" value="squarespace">
+        1. Log in to Squarespace.
+        1. Go to Pages > Custom code > Code injection. You may need to scroll to the bottom of the page.
+        1. In the Header field, paste the snippet.
+        1. Click Save.
+    </TabItem>
+
+    <TabItem label="Other" value="general">
+        Add the snippet to your site. Prefer the <code>&lt;head&gt;</code> section. Contact us if you need help.
+    </TabItem>
+
+</Tabs>
+
+## Link to your booking form
+
+Add a button, image, or text link to your booking form URL. Find it in Step 2 of your [booking form settings](https://dashboard.letsbook.app/booking-form/integration-instructions). Use preselects (language, boat model, dock) and optional panels (login, coupon) to tailor the first view.
+
+:::note[Partner Bookings]
+Let partners embed your form to track referral bookings.
+:::
+
+## Advanced integrations
+
+Want more control? See [Advanced integration](./advanced-integration.md).
