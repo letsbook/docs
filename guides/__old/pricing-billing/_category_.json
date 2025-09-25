@@ -1,8 +1,0 @@
-{
-    "label": "Pricing & Billing",
-    "position": 3,
-    "link": {
-        "type": "generated-index",
-        "description": "Configure pricing strategies, payment providers, billing and financial operations"
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "label": "Account Management",
-    "position": 8,
-    "link": {
-        "type": "generated-index",
-        "description": "Manage team roles, account settings, translations, and account operations"
-    }
-}
