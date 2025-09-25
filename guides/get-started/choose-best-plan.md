@@ -4,6 +4,15 @@ description: Find the perfect Let's Book plan for your boat rental business - fr
 sidebar_position: 1
 ---
 
+kan je iets minder focussen op grootte van iemands vloot? want sommige hebben 1 boot die ze heel duur verhuren
+Begin met opsomming van wat je altijd krijgt. Dat met die stats vind ik te opschepperig.
+linkjes naar 'get started' op de site. 
+'when upgrade' stuk mag veel compacter. die maand berekening gaat niet echt op bij bootverhuur want sterk seizoensafhankelijk.
+custom plan is echt voor boatclubs. We hebben er veels als klant en maken speciale prijsafspraak. 
+next steps deel: je moet eerst inlog van ons krijgen en daarna kan je setup doen. Maar eigenlijk doen wij die altijd voor z
+
+
+
 # Choose the best plan for your boat rental business
 
 Let's Book is built for every boat rental company, whether you're just getting started or scaling up fast. All plans include every feature - the only difference is pricing that grows with your business.
