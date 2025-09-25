@@ -13,6 +13,12 @@
     --ifm-color-primary-lighter: #e6e9fd;
     --ifm-color-primary-lightest: #f7f8fe;
 
+    --ifm-menu-color: #081590;
+    --ifm-menu-color-background-active: #f7f8ff;
+    --ifm-menu-color-background-hover: #f7f8ff;
+    --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="%23081590" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+    --ifm-menu-link-padding-vertical: 0.5rem;
+
     --ifm-code-font-size: 95%;
 
     --ifm-container-width-xl: 1080px;
@@ -99,4 +105,25 @@ h1 {
 
 .footer--dark {
     --ifm-footer-background-color: #050f6a;
+}
+
+/**
+ * Dim the links when hovering one of the links
+ */
+.menu .theme-doc-sidebar-item-category-level-1 {
+    transition: opacity 0.2s ease;
+}
+
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
+    .theme-doc-sidebar-item-category-level-1 {
+    opacity: 0.5;
+}
+
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
+    .theme-doc-sidebar-item-category-level-1:hover {
+    opacity: 1;
+}
+
+.menu__list-item:not(:first-child) {
+    margin-top: 0;
 }
