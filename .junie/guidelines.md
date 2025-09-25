@@ -58,7 +58,7 @@ Let's Book is an **all-in-one boat rental management software (SaaS)** designed 
 - Rewrite the texts where useful and try to maintain anchors
 - Leave page titles intact
 - Write without the use of em dashes - ever
-- Titles should be in European style, so not capitalized
+- Titles should be in European style, so not capitalized besides the first character
 
 ---
 
