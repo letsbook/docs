@@ -6,7 +6,7 @@ sidebar_class_name: hidden
 
 Follow these quick steps:
 
-1. Copy your [embed code](https://dashboard.letsbook.test/booking-form/integration-instructions) from the Let's Book dashboard.
+1. Copy your [embed code](https://dashboard.letsbook.app/booking-form/integration-instructions) from the Let's Book dashboard.
 1. In your Wix site, go to Settings.
 1. Open Advanced, then select Custom Code.
 1. Click + Add Custom Code.

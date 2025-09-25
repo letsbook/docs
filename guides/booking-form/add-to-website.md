@@ -22,7 +22,7 @@ Add the script tag to your site. Prefer the `<head>` section; other places work 
 
 ## Link to your booking form
 
-Add a button, image, or text link to your unique booking form URL. Find it in Step 2 of your [booking form settings](https://dashboard.letsbook.test/booking-form/integration-instructions). Use preselects (language, boat model, dock) and optional panels (login, coupon) to tailor the first view.
+Add a button, image, or text link to your unique booking form URL. Find it in Step 2 of your [booking form settings](https://dashboard.letsbook.app/booking-form/integration-instructions). Use preselects (language, boat model, dock) and optional panels (login, coupon) to tailor the first view.
 
 :::note[Partner Bookings]
 Let partners embed your booking form on their site to track referral bookings.
