@@ -14,8 +14,8 @@
     --ifm-color-primary-lightest: #f7f8fe;
 
     --ifm-menu-color: #081590;
-    --ifm-menu-color-background-active: #f7f8ff;
-    --ifm-menu-color-background-hover: #f7f8ff;
+    --ifm-menu-color-background-active: var(--ifm-color-primary-lightest);
+    --ifm-menu-color-background-hover: var(--ifm-color-primary-lightest);
     --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="%23081590" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
     --ifm-menu-link-padding-vertical: 0.5rem;
 
@@ -112,4 +112,8 @@ body {
 
 .table-of-contents li:first-child {
     margin-top: 0;
+}
+
+.menu {
+    --ifm-menu-color-background-active: var(--ifm-color-primary-dark);
 }
