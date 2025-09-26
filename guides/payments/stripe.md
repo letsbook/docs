@@ -1,70 +1,72 @@
 # Set up Stripe integration
 
-Collect online payments with Stripe Connect directly from your Let's Book checkout.
+Collect online payments in your Let's Book checkout using Stripe Connect.
 
-## How to connect Stripe
+## Connect Stripe
 
-### 1. Create your Stripe account {#create-your-stripe-account}
+Open the [Integrations page](https://dashboard.letsbook.app/integrations).
 
-New to Stripe? Create an account. It unlocks cards, wallets like Apple Pay and Google Pay, and local methods like iDEAL depending on your region.
+### 1. Create your Stripe account
 
-- Sign up at https://dashboard.stripe.com/register
-- Confirm your email and complete basic business details
+New to Stripe? Create an account so you can accept cards, Apple Pay, Google Pay, and local methods like iDEAL.
 
-### 2. Log in to the Stripe dashboard {#log-in-to-the-stripe-dashboard}
+- Sign up on the [Stripe registration page](https://dashboard.stripe.com/register)
+- Confirm your email and complete your business profile
 
-You will approve the connection from Stripe.
+### 2. Log in to Stripe
 
-- Open https://dashboard.stripe.com and sign in
-- Keep this tab open while you connect from Let's Book
+You approve the connection from Stripe.
 
-### 3. Open Let's Book integrations {#open-lets-book-integrations}
+- Open the [Stripe dashboard](https://dashboard.stripe.com) and sign in
+- Keep this tab open
 
-Connect from your Let's Book dashboard.
+### 3. Connect from Let's Book
 
-- Go to https://dashboard.letsbook.app/integrations
+- Go to the [Integrations page](https://dashboard.letsbook.app/integrations)
 - Click Connect via Stripe
 
-### 4. Approve the Stripe Connect screen {#approve-the-stripe-connect-screen}
+### 4. Approve the Stripe Connect screen
 
-Authorize Let's Book to manage payments on your behalf using Stripe Connect. This creates a secure connection as described in the Stripe Connect docs: https://docs.stripe.com/connect.
+Authorize Let's Book in Stripe. This creates a secure connection using [Stripe Connect](https://docs.stripe.com/connect)
 
-### 5. Return to Let's Book {#return-to-lets-book}
+![Screenshot of connect screen](./graphics/stripe-connect.png)
 
-Stripe redirects you back to your Let's Book dashboard once the connection succeeds.
+### 5. Return to Let's Book
 
-- You see Stripe listed under Connected integrations
-- New online bookings can now use Stripe checkout
+After approval, Stripe sends you back to your dashboard.
 
-### 6. Complete Stripe onboarding if prompted {#complete-stripe-onboarding-if-prompted}
+- Stripe appears under Connected integrations
+- New online bookings can use Stripe checkout
 
-Stripe might need more information to enable live payouts due to KYC. You can typically accept payments immediately, but payouts start only after onboarding is finished.
+### 6. Complete onboarding if prompted
 
-- If you see a message about completing verification, follow the Stripe link and finish onboarding
-- Provide any requested company documents and bank account details
+To enable live payouts, Stripe may ask for KYC details. You can usually take payments right away. Payouts start after onboarding is finished.
 
-### 7. Understand verification and payouts {#understand-verification-and-payouts}
+- If you see a verification banner, click it and finish onboarding
+- Provide requested company documents and bank details
 
-Payments can succeed while verification is pending. Payouts start after Stripe approves your account.
+### 7. Verification and payouts
 
-- Keep taking bookings without interruption
-- Expect your first payout once Stripe completes checks
+Payments can succeed while verification is pending. Payouts start once Stripe approves your account.
 
-### 8. Go live {#go-live}
+- Keep taking bookings
+- Expect your first payout after checks complete
 
-When you are ready to accept real payments, set the integration to Live.
+### 8. Go live
 
-- Go to https://dashboard.letsbook.app/integrations
-- Select Stripe as the current payment provider and hit Save
+Switch from test to live when you are ready to charge real customers.
+
+- Go to the [Integrations page](https://dashboard.letsbook.app/integrations)
+- Select Stripe as the current payment provider and click Save
 - Your checkout now charges real cards and supported local methods
 
-## How payment methods show up in checkout
+## Payment methods in checkout
 
-Your checkout shows payment methods based on two things: your [Stripe account](https://dashboard.stripe.com/settings/payment_methods), the customer's context, and our settings.
+Your checkout shows payment methods based on three things: your [Stripe settings](https://dashboard.stripe.com/settings/payment_methods), the customer’s context, and your Let's Book configuration.
 
 ### Customer context
 
-Stripe tailors options to the customer country, currency, and device. For example, iDEAL appears for customers in the Netherlands paying in EUR, Apple Pay appears on supported devices and browsers that pass domain verification.
+Stripe tailors options to the customer country, currency, and device.
 
 **Examples**
 
@@ -73,10 +75,10 @@ Stripe tailors options to the customer country, currency, and device. For exampl
 - SEPA Direct Debit appears for EUR bank debits once enabled and supported for the account.
 
 :::info[Tip]
-If a method you expect is missing, check all three layers: the Stripe account's payment method activation and capabilities, the customer's country and currency, and the device your on (ApplePay only works on Apple devices).
+If a method you expect is missing, check all three layers: Stripe payment method activation and capabilities, the customer’s country and currency, and the device you are on (Apple Pay only works on Apple devices).
 :::
 
 ## Learn more
 
-- Stripe Connect overview: https://docs.stripe.com/connect
-- Payment methods by country and currency: https://docs.stripe.com/connect/payment-methods
+- [Stripe Connect overview](https://docs.stripe.com/connect)
+- [Payment methods by country and currency](https://docs.stripe.com/connect/payment-methods)
