@@ -12,29 +12,24 @@ type QuickAction = {
 
 const quickActions: QuickAction[] = [
     {
-        title: 'Add new booking',
-        description:
-            'Manually add a booking to your schedule and handle payment',
-        icon: '⛵',
-        link: '/guides/customer-management',
-    },
-    {
-        title: 'View schedule',
-        description: 'Get an overview of all bookings and available boats',
-        icon: '📋',
-        link: '/guides/scheduling',
-    },
-    {
-        title: 'Handle payments',
-        description: 'Send payment links and manage refunds and deposits',
-        icon: '💳',
-        link: '/guides/pricing-billing',
-    },
-    {
         title: 'Get started',
         description: "Complete guide to get started with Let's Book right away",
-        icon: '🚀',
-        link: '/guides/getting-started',
+        icon: '→',
+        link: '/guides/get-started/10-step-setup-guide',
+    },
+    {
+        title: 'Working with planning overview',
+        description:
+            'Navigate your daily operations using Timeline, Availability, and Fleet views',
+        icon: '⊞',
+        link: '/guides/day-to-day/planning-overview',
+    },
+    {
+        title: 'Track sales insights',
+        description:
+            'Turn your season into a scoreboard with sales analytics',
+        icon: '▲',
+        link: '/guides/day-to-day/sales-insights',
     },
 ];
 
@@ -44,7 +39,7 @@ export default function QuickActions(): ReactNode {
             <div className="container">
                 <h2 className={styles.SectionTitle}>Quick start</h2>
                 <p className={styles.SectionSubtitle}>
-                    The most commonly used features to get started right away
+                    Get up and running quickly
                 </p>
 
                 <div className={styles.ActionsGrid}>

@@ -1,7 +1,7 @@
 ---
 title: Sync with personal calendar
 description: Connect Let's Book to your Google Calendar, Apple Calendar, or Outlook to see your bookings automatically
-sidebar_position: 2
+sidebar_position: 5
 ---
 
 # Sync planning with personal calendar

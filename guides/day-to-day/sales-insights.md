@@ -1,3 +1,9 @@
+---
+title: Track sales insights
+description: Turn your season into a scoreboard with sales analytics
+sidebar_position: 3
+---
+
 # Track sales insights
 
 Turn your season into a scoreboard. The [Sales insights](https://dashboard.letsbook.app/sales) dashboard shows what’s working, what’s not, and what deserves a victory lap.
