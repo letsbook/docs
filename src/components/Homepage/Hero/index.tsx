@@ -321,10 +321,28 @@ export default function Hero(): ReactNode {
                                     onClick={() => handleSearch()}
                                     disabled={isLoading}
                                 >
-                                    {isLoading ? '⏳' : (
-                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                                            <circle cx="11" cy="11" r="8" stroke="white" strokeWidth="2"/>
-                                            <path d="m21 21-4.35-4.35" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                    {isLoading ? (
+                                        '⏳'
+                                    ) : (
+                                        <svg
+                                            width="18"
+                                            height="18"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                        >
+                                            <circle
+                                                cx="11"
+                                                cy="11"
+                                                r="8"
+                                                stroke="white"
+                                                strokeWidth="2"
+                                            />
+                                            <path
+                                                d="m21 21-4.35-4.35"
+                                                stroke="white"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                            />
                                         </svg>
                                     )}
                                 </button>

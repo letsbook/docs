@@ -26,8 +26,7 @@ const quickActions: QuickAction[] = [
     },
     {
         title: 'Track sales insights',
-        description:
-            'Turn your season into a scoreboard with sales analytics',
+        description: 'Turn your season into a scoreboard with sales analytics',
         icon: '▲',
         link: '/guides/day-to-day/sales-insights',
     },

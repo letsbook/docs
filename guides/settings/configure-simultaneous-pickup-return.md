@@ -28,6 +28,7 @@ When the toggle is **off**, there are no limits on simultaneous operations - mul
 When you enable **"Limit the number of simultaneous pickups and/or returns"**, you can choose what to restrict:
 
 **Limit simultaneous:**
+
 - **Pickups** - Control how many boats can start their rental at the same time
 - **Returns** - Control how many boats can end their rental at the same time
 - **Pickups and returns** - Control the total combined number of pickups and returns happening simultaneously
@@ -42,6 +43,7 @@ When you enable **"Limit the number of simultaneous pickups and/or returns"**, y
 ### By number of bookings
 
 **Use when you want to limit:**
+
 - How many customer groups arrive at the same time
 - Staff workload during check-in/check-out processes
 - Crowding at your dock facility
@@ -52,6 +54,7 @@ Limit to 3 simultaneous pickups by bookings - even if those 3 groups rent 8 boat
 ### By number of boats
 
 **Use when you want to limit:**
+
 - Time spent on boat preparation, cleaning, and safety checks
 - Physical handling of multiple boats
 - Dock congestion from too many boats being moved

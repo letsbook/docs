@@ -17,7 +17,7 @@ type Category = {
 
 const categories: Category[] = [
     {
-        title: 'Get started with Let\'s Book',
+        title: "Get started with Let's Book",
         icon: '',
         links: [
             {
@@ -236,20 +236,20 @@ const categories: Category[] = [
 
 export default function Features(): ReactNode {
     const [showAll, setShowAll] = useState(false);
-    
+
     const priorityCategories = [
         'Day to day use',
-        'Manage bookings', 
+        'Manage bookings',
         'Booking form',
         'Extra revenue',
         'Dive deeper',
-        'Get started with Let\'s Book'
+        "Get started with Let's Book",
     ];
-    
-    const displayedCategories = showAll 
-        ? categories 
-        : categories.filter(category => 
-            priorityCategories.includes(category.title)
+
+    const displayedCategories = showAll
+        ? categories
+        : categories.filter((category) =>
+              priorityCategories.includes(category.title)
           );
 
     return (
@@ -283,13 +283,13 @@ export default function Features(): ReactNode {
                         </div>
                     ))}
                 </div>
-                
+
                 <div className={styles.ViewMoreContainer}>
-                    <button 
+                    <button
                         className={styles.ViewMoreButton}
                         onClick={() => setShowAll(!showAll)}
                     >
-                        {showAll ? 'View less' : 'View more'} 
+                        {showAll ? 'View less' : 'View more'}
                         <span className={styles.ViewMoreArrow}>
                             {showAll ? '↑' : '↓'}
                         </span>

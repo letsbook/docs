@@ -15,6 +15,7 @@ Go to your [planning overview](https://dashboard.letsbook.app/planning) to see a
 ## View toggles
 
 Switch between the three planning views using the tabs:
+
 - **Timeline**: Detailed booking schedule view
 - **Availability**: Capacity utilization overview
 - **Fleet**: Individual boat status management
@@ -28,17 +29,19 @@ Your detailed booking schedule showing exact trip timing and customer informatio
 ![Planning Timeline View](./graphics/planning-timeline.png)
 
 **What you see:**
+
 - All bookings arranged chronologically across time slots
 - Customer names and booking details with member indicators
 - Boat assignments and trip status with color-coded indicators:
-  - **White/Default bars**: Standard confirmed bookings
-  - **Green indicators**: On-time active trips
-  - **Red indicators**: Overdue returns (with delay time like "+15 min.")
-  - **Orange indicators**: Late pick-ups or delayed starts
+    - **White/Default bars**: Standard confirmed bookings
+    - **Green indicators**: On-time active trips
+    - **Red indicators**: Overdue returns (with delay time like "+15 min.")
+    - **Orange indicators**: Late pick-ups or delayed starts
 - Interactive booking cards with customer details and trip information
 - Boat model assignments clearly displayed (Bowrider, Pontoon, etc.)
 
 **Interactive features:**
+
 - Click on bookings to see full details and manage trips
 - Hover for quick booking information
 - Switch between Day, Week, and 30 Days view using the controls in bottom right
@@ -56,11 +59,12 @@ Visual representation of your fleet capacity and utilization.
 ![Planning Availability View](./graphics/planning-availability.png)
 
 **What you see:**
+
 - Time-based chart showing boat availability throughout the day
 - Color-coded capacity bars:
-  - **Green**: Available boats
-  - **Orange/Yellow**: Partially booked capacity
-  - **Red**: Fully booked time slots
+    - **Green**: Available boats
+    - **Orange/Yellow**: Partially booked capacity
+    - **Red**: Fully booked time slots
 - Numbers indicating exact boat counts available at each time
 - Capacity breakdown explanations (e.g., "4 bowriders are rented out, 8 remain available")
 - Current time indicator showing real-time status
@@ -75,11 +79,12 @@ Real-time status of all your individual boats.
 ![Planning Fleet View](./graphics/planning-fleet.png)
 
 **What you see:**
+
 - Current status of each physical boat with Start/Stop buttons
 - Trip status indicators:
-  - **Green dots**: Active trips in progress
-  - **Red dots**: Overdue rentals (with delay time like "+5 min.")
-  - **Grey/No dot**: Available boats ready for rental
+    - **Green dots**: Active trips in progress
+    - **Red dots**: Overdue rentals (with delay time like "+5 min.")
+    - **Grey/No dot**: Available boats ready for rental
 - Primary renter information for boats currently in use
 - Last instruction timestamps showing recent activity
 - Immediate action buttons to start trips or stop active rentals

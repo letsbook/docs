@@ -82,6 +82,8 @@ You're writing customer-facing documentation for Let's Book, a boat rental manag
 
 ### Development Commands
 
+Only run any of these commands when changing files with one of the following extensions: `.tsx`, `.ts`, `.css`, `.mdx`.
+
 - **Build:** `npm run build` (never use watch mode)
 - **Format:** `npm run prettier` (always run before completing)
 - **Type check:** `npx tsc` (run after all changes)
