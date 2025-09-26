@@ -1,7 +1,7 @@
 ---
 title: Limit pickups and returns
 description: Control how many boats can be picked up or returned at the same time at your dock
-sidebar_position: 2
+sidebar_position: 6
 ---
 
 # Limit pickups and returns

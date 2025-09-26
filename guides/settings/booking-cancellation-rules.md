@@ -1,7 +1,7 @@
 ---
 title: Set booking and cancellation rules
 description: Configure standard booking conditions and cancellation policies for different customer types
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 # Set booking and cancellation rules

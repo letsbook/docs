@@ -114,8 +114,27 @@ body {
     margin-top: 0;
 }
 
-@media (max-width: 996px) {
-    .menu {
-        --ifm-menu-color-background-active: var(--ifm-color-primary-dark);
-    }
+/**
+ * Custom table styling for schedules comparison
+ */
+.theme-doc-markdown table {
+    width: 100%;
+    max-width: 800px;
+}
+
+.theme-doc-markdown table th {
+    background-color: #F7F8FE;
+    border-color: #e1e4f7;
+}
+
+.theme-doc-markdown table tbody tr:nth-child(even) td {
+    background-color: #F7F8FE;
+}
+
+.theme-doc-markdown table tbody tr:nth-child(odd) td {
+    background-color: white;
+}
+
+.theme-doc-markdown table td {
+    border-color: #e1e4f7;
 }
