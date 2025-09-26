@@ -16,6 +16,15 @@
     font-size: 3.5rem;
     font-weight: 500;
     margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.BrandName {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 0.1rem;
 }
 
 .Subtitle {
@@ -25,46 +34,43 @@
 }
 
 .SearchContainer {
-    max-width: 700px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
     position: relative;
 }
 
-.ChatInterface {
-    background: rgba(255, 255, 255, 0.95);
+.SearchInterface {
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    border-radius: 16px;
-    padding: 1rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
-.ChatInputContainer {
+.SearchInputContainer {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    background: white;
-    border-radius: 12px;
-    padding: 0.75rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
-.ChatInput {
+.SearchInput {
     flex: 1;
     border: none;
     outline: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
     background: transparent;
-    color: #333;
+    color: white;
+    font-weight: 400;
 }
 
-.ChatInput::placeholder {
-    color: #64748b;
+.SearchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.SendButton {
-    width: 36px;
-    height: 36px;
+.SearchButton {
+    width: 40px;
+    height: 40px;
     background: #12c19b;
     border: none;
     border-radius: 8px;
@@ -73,56 +79,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
+    transition: all 0.2s ease;
     font-size: 1.2rem;
-    font-weight: bold;
+    margin-left: 0.5rem;
 }
 
-.SendButton:hover {
-    background: #081690;
+.SearchButton:hover {
+    background: #0ea57a;
+    transform: scale(1.05);
 }
 
-.SendButton:disabled {
+.SearchButton:disabled {
     cursor: not-allowed;
-    opacity: 0.7;
-}
-
-.ChatSuggestions {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.SuggestionChip {
-    background: #f7f8fe;
-    color: #081690;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
-}
-
-.SuggestionChip:hover {
-    background: #12c19b;
-    color: white;
-    border-color: #12c19b;
+    opacity: 0.5;
 }
 
 .SearchDropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     background: white;
-    border-radius: 12px;
+    border-radius: 0 0 12px 12px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     max-height: 400px;
     overflow-y: auto;
     z-index: 1000;
-    margin-top: 0.5rem;
-    border: 1px solid #e2e8f0;
 }
 
 .SearchResult {

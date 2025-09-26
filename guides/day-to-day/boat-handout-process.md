@@ -1,7 +1,7 @@
 ---
 title: Boat handout process
 description: How to assign boats to customers and manage your fleet during operations
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Boat handout process

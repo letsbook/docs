@@ -1,5 +1,5 @@
 .Root {
-    padding: 4rem 0;
+    padding: 3rem 0;
     background: #f7f8fe;
 }
 
@@ -27,14 +27,14 @@
 
 .CategoriesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
 }
 
 .CategoryCard {
     background: white;
-    border-radius: 20px;
-    padding: 2.5rem;
+    border-radius: 16px;
+    padding: 1.5rem;
     box-shadow: 0 8px 32px rgba(8, 22, 144, 0.08);
     transition: all 0.3s ease;
     position: relative;
@@ -65,7 +65,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     position: relative;
     z-index: 2;
 }
@@ -91,8 +91,8 @@
         'Segoe UI',
         Roboto,
         sans-serif;
-    color: #081690;
-    font-size: 1.5rem;
+    color: #081590;
+    font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
 }
@@ -106,43 +106,77 @@
 }
 
 .CategoryLinks li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.3rem;
 }
 
 .CategoryLink {
-    color: #64748b;
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 0;
-    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
     position: relative;
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
 }
 
 .CategoryLink:hover {
-    color: #081690;
-    background: rgba(18, 193, 155, 0.1);
+    color: #000000;
+    background: rgba(8, 22, 144, 0.08);
     text-decoration: none;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
 }
 
 .CategoryLink::before {
     content: '→';
-    color: #12c19b;
+    color: #081690;
     font-weight: bold;
     opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.3s ease;
+    transform: translateX(-8px);
+    transition: all 0.2s ease;
     position: absolute;
-    left: 0;
+    left: 0.8rem;
+    font-size: 1rem;
 }
 
 .CategoryLink:hover::before {
     opacity: 1;
     transform: translateX(0);
+}
+
+.ViewMoreContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.ViewMoreButton {
+    background: #081590;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ViewMoreButton:hover {
+    background: #0a1aa0;
+    transform: translateY(-1px);
+}
+
+.ViewMoreArrow {
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
 }
 
 /* Responsive styles */

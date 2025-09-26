@@ -294,21 +294,20 @@ export default function Hero(): ReactNode {
 
             <div className="container">
                 <div className={styles.HeaderContent}>
-                    <h1 className={styles.Title}>Let's Book Help Center</h1>
-                    <p className={styles.Subtitle}>
-                        Everything you need to run your boat rental business
-                        smoothly
-                    </p>
+                    <h1 className={styles.Title}>
+                        <span className={styles.BrandName}>Let's Book</span>
+                        Support Center
+                    </h1>
                     <div
                         className={styles.SearchContainer}
                         ref={searchContainerRef}
                     >
-                        <div className={styles.ChatInterface}>
-                            <div className={styles.ChatInputContainer}>
+                        <div className={styles.SearchInterface}>
+                            <div className={styles.SearchInputContainer}>
                                 <input
                                     type="text"
-                                    className={styles.ChatInput}
-                                    placeholder="Ask me anything about Let's Book... 💬"
+                                    className={styles.SearchInput}
+                                    placeholder="How can we help you today?"
                                     value={searchQuery}
                                     onChange={(e) => {
                                         const value = e.target.value;
@@ -318,11 +317,16 @@ export default function Hero(): ReactNode {
                                     onKeyPress={handleKeyPress}
                                 />
                                 <button
-                                    className={styles.SendButton}
+                                    className={styles.SearchButton}
                                     onClick={() => handleSearch()}
                                     disabled={isLoading}
                                 >
-                                    {isLoading ? '⏳' : '→'}
+                                    {isLoading ? '⏳' : (
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="11" cy="11" r="8" stroke="white" strokeWidth="2"/>
+                                            <path d="m21 21-4.35-4.35" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                                        </svg>
+                                    )}
                                 </button>
                             </div>
                             {showDropdown && searchResults.length > 0 && (
@@ -377,21 +381,6 @@ export default function Hero(): ReactNode {
                                         </div>
                                     </div>
                                 )}
-                            <div className={styles.ChatSuggestions}>
-                                {suggestions.map((suggestion, index) => (
-                                    <button
-                                        key={index}
-                                        className={styles.SuggestionChip}
-                                        onClick={() =>
-                                            handleSuggestionClick(
-                                                suggestion.query
-                                            )
-                                        }
-                                    >
-                                        {suggestion.text}
-                                    </button>
-                                ))}
-                            </div>
                         </div>
                     </div>
                 </div>
