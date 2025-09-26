@@ -72,7 +72,6 @@ Stripe tailors options to the customer country, currency, and device.
 
 - Charge EUR for a Dutch customer. Expect iDEAL and cards.
 - Charge USD from a US customer. Expect cards and wallets like Apple Pay or Google Pay if available.
-- SEPA Direct Debit appears for EUR bank debits once enabled and supported for the account.
 
 :::info[Tip]
 If a method you expect is missing, check all three layers: Stripe payment method activation and capabilities, the customer’s country and currency, and the device you are on (Apple Pay only works on Apple devices).
