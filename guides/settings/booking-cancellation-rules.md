@@ -31,8 +31,8 @@ By default, bookings are unrestricted. You can add multiple conditions that work
 1. Click **Add condition**
 2. Select the first condition type from the dropdown
 3. Configure the specific parameters (times, numbers, dates)
-4. Click **Add condition** again to add additional restrictions
-5. All conditions must be satisfied for the booking to be allowed
+
+To add multiple restrictions, click **Add condition** again to layer additional rules. All conditions must be satisfied for the booking to be allowed.
 
 Conditions are combined with "and" logic - customers must meet every condition you set.
 
@@ -50,14 +50,7 @@ Conditions are combined with "and" logic - customers must meet every condition y
 - **Maximum total duration of bookings in the future** - Limit total reserved time
 - **Maximum total booking duration per month** - Monthly usage caps
 - **Maximum total booking duration on specific days of the week per month** - Weekend/weekday limits
-- **Custom condition** - Advanced rules using expressions
-
-### Setting up conditions
-
-1. Click **Add condition**
-2. Select the condition type from the dropdown
-3. Configure the specific parameters (times, numbers, dates)
-4. The condition applies immediately to new bookings
+- **Custom condition** - Advanced rules using expressions. For complex scenarios, see [custom booking conditions](../dive-deeper/custom-booking-conditions) where you can create highly specific rules using code expressions.
 
 ## Configuring cancellation settings
 
@@ -65,41 +58,12 @@ Conditions are combined with "and" logic - customers must meet every condition y
 
 Toggle **"Allow customers of this type to cancel"** to enable/disable cancellation rights.
 
-### Cancellation conditions
-
-Add conditions that must be met for cancellations:
-
-- **Minimum time until pickup** - Require cancellation X hours before rental (e.g., 24 hours notice)
-- Other standard conditions can also apply to cancellations
-
 ### Cancellation message
 
-Customize the message customers see when cancelling by editing the text field. This explains your cancellation policy to customers.
+Customize the message customers see when cancelling. Use this to explain your cancellation policy and any associated costs (e.g., "Cancellations within 24 hours incur a 25% processing fee").
 
-## Customer type examples
-
-**Guest customers:**
-- Minimum 2 hours booked ahead
-- Maximum 4-hour rental duration  
-- No cancellation allowed
-
-**Members:**
-- Can book same-day rentals
-- Up to 8-hour rentals
-- Can cancel up to 2 hours before pickup
-- Maximum 2 active future bookings
-
-**Premium members:**
-- No booking restrictions
-- Full cancellation flexibility
-- Unlimited future bookings
-
-## How conditions work
-
-- Conditions apply when customers attempt to book through your booking form
-- If conditions aren't met, the booking is blocked with an explanation
-- Multiple conditions can be combined (all must be satisfied)
-- Different customer types can have completely different rule sets
+**Cancellation conditions (optional)**
+Set time requirements like minimum 24 hours notice before pickup.
 
 ## Important notes
 
