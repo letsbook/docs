@@ -36,12 +36,14 @@ Use this when customers arrive and you want to look up their specific booking fi
 Once boats are assigned and trips are running, you have several control options:
 
 ### From booking details
+
 - **Trip timeline:** See complete history of boat assignments, switches, and trip events
 - **Switch boat:** Change to a different boat if needed during the trip
 - **Pause trip:** Temporarily pause for lunch breaks, fuel stops, or other interruptions
 - **End trip:** Complete the rental and release the boat
 
 ### From fleet overview
+
 - **Stop button:** End any active trip directly from the fleet view
 - **Status monitoring:** See which boats are in use, available, along with which booking is assigned to each boat and expected return times
 
@@ -61,7 +63,7 @@ Let's Book uses a two-tier planning system that maximizes your booking capacity:
 **Boat models vs. individual boats:** Customers book boat types (e.g., "Speedboat 6p") rather than specific boats (e.g., "Speedboat 6p #3"). This means you can:
 
 - Accept more bookings by not locking boats too early
-- Handle maintenance or issues without affecting customer bookings  
+- Handle maintenance or issues without affecting customer bookings
 - Optimize your schedule without gaps caused by pre-assigned boats
 - Make last-minute boat switches seamlessly
 

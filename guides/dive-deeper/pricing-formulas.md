@@ -2,7 +2,6 @@
 
 In Let's Book, you can enter formulas for discounts, commissions, and other calculations. they work very similar to how you'd use formulas / expressions in Excel. To ensure everything works correctly, it's important to use the proper notation. Below, we explain how to do this.
 
-
 ## Using mathematical operators
 
 You can write formulas much like Excel. These operators are available:

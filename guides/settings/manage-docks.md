@@ -23,6 +23,7 @@ Docks are pickup locations where customers collect their boats. Each dock has it
 ### Location details
 
 **Address:** Enter the complete address including:
+
 - Country selection
 - Street address (Address line 1 and optional line 2)
 - City and postal code
@@ -32,6 +33,7 @@ Docks are pickup locations where customers collect their boats. Each dock has it
 ### Visual elements
 
 **Photos:** Upload horizontal images (JPG, PNG, or WebP format) showing:
+
 - Dock entrance and signage
 - Parking area
 - Key landmarks customers should look for
@@ -61,7 +63,7 @@ To modify which boats are at which dock, use the boat placement tools in the [bo
 Each dock has a unique identifier useful for API integration and booking form customization:
 
 1. Open the dock details page
-2. Click **Show ID** 
+2. Click **Show ID**
 3. Copy the dock ID for use in integrations or custom booking links
 
 Proper dock setup ensures customers can find your location easily while giving you operational control over pickup and return scheduling.
