@@ -1,6 +1,5 @@
 .Root {
     background: var(--ifm-color-primary);
-    color: var(--ifm-color-content-inverse);
     padding: 6rem 0;
     text-align: center;
     position: relative;
@@ -27,134 +26,6 @@
     margin-bottom: 0.1rem;
 }
 
-.Subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 3rem;
-    opacity: 0.9;
-}
-
-.SearchContainer {
-    max-width: 600px;
-    margin: 2rem auto 0 auto;
-    position: relative;
-}
-
-.SearchInterface {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.SearchInputContainer {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-}
-
-.SearchInput {
-    flex: 1;
-    border: none;
-    outline: none;
-    font-size: 1.1rem;
-    background: transparent;
-    color: white;
-    font-weight: 400;
-}
-
-.SearchInput::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.SearchButton {
-    width: 40px;
-    height: 40px;
-    background: #12c19b;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-}
-
-.SearchButton:hover {
-    background: #0ea57a;
-    transform: scale(1.05);
-}
-
-.SearchButton:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-}
-
-.SearchDropdown {
-    background: white;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    max-height: 400px;
-    overflow-y: auto;
-    z-index: 1000;
-}
-
-.SearchResult {
-    padding: 1rem;
-    border-bottom: 1px solid #f1f5f9;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.SearchResult:hover {
-    background-color: #f8fafc;
-}
-
-.SearchResult:last-child {
-    border-bottom: none;
-}
-
-.SearchResultCategory {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #081690;
-    margin-bottom: 0.25rem;
-}
-
-.SearchResultSubcategory {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #475569;
-    margin-bottom: 0.5rem;
-}
-
-.SearchResultText {
-    font-size: 0.875rem;
-    color: #64748b;
-    line-height: 1.4;
-}
-
-.SearchResultText mark,
-.SearchResultText .algolia-docsearch-suggestion--highlight {
-    background-color: #fef3c7;
-    color: #92400e;
-    padding: 0.1em 0.2em;
-    border-radius: 0.25rem;
-    font-weight: 500;
-}
-
-.SearchNoResults {
-    padding: 2rem;
-    text-align: center;
-    color: #64748b;
-    font-style: italic;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
     .Root {
         padding: 4rem 0;
@@ -162,30 +33,5 @@
 
     .Title {
         font-size: 2.5rem;
-    }
-
-    .ChatSuggestions {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .SuggestionChip {
-        width: 100%;
-        text-align: center;
-    }
-
-    .SearchDropdown {
-        max-height: 300px;
-        margin-top: 0.25rem;
-    }
-
-    .SearchResult {
-        padding: 0.75rem;
-    }
-
-    .SearchResultCategory,
-    .SearchResultSubcategory,
-    .SearchResultText {
-        font-size: 0.8rem;
     }
 }

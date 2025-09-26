@@ -186,8 +186,6 @@ const config: Config = {
         ] satisfies Redocusaurus.PresetEntry,
     ],
 
-    plugins: [require.resolve('docusaurus-lunr-search')],
-
     themeConfig: {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
@@ -204,6 +202,7 @@ const config: Config = {
                 src: 'img/logo-dark.svg',
                 srcDark: 'img/logo-dark.svg',
             },
+            hideOnScroll: true,
             items: [
                 {
                     type: 'docSidebar',
@@ -221,10 +220,14 @@ const config: Config = {
                     label: 'API docs',
                     position: 'left',
                 },
+                {
+                    type: 'search',
+                    position: 'right',
+                },
             ],
         },
         mermaid: {
-            theme: { light: 'neutral', dark: 'forest' },
+            theme: { light: 'neutral' },
         },
         footer: {
             style: 'dark',
@@ -257,6 +260,13 @@ const config: Config = {
         prism: {
             theme: prismThemes.github,
         },
+        // algolia: {
+        // appId: '',
+        // apiKey: '',
+        // indexName: 'docs',
+        // contextualSearch: true,
+        // searchParameters: {},
+        // },
     } satisfies Preset.ThemeConfig,
 };
 
