@@ -157,7 +157,7 @@ h1 {
 }
 
 .table-of-contents .table-of-contents__link--active {
-    font-weight: 500;
+    color: var(--ifm-color-primary);
 }
 
 .table-of-contents__left-border {
