@@ -20,7 +20,7 @@ You can create additional custom customer types with specific rules, but these t
 
 ## Accessing the settings
 
-1. Go to your [customer types](https://dashboard.letsbook.app/customer-types) 
+1. Go to your [customer types](https://dashboard.letsbook.app/customer-types)
 2. Click on the customer type you want to configure (Guest, Member, etc.)
 3. Scroll down to the **Booking conditions** and **Cancellation settings** sections
 
