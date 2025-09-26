@@ -1,13 +1,13 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type { Config } from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-    title: 'Let\'s Book Documentation',
-    tagline: 'Your comprehensive guide to Let\'s Book',
+    title: "Let's Book Documentation",
+    tagline: "Your comprehensive guide to Let's Book",
     favicon: 'img/favicon.ico',
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -58,6 +58,10 @@ const config: Config = {
         },
     ],
 
+    markdown: {
+        mermaid: true,
+    },
+
     presets: [
         [
             'classic',
@@ -67,23 +71,30 @@ const config: Config = {
                     routeBasePath: 'guides',
                     sidebarPath: './sidebars.ts',
                     breadcrumbs: false,
-                    editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
+                    editUrl:
+                        process.env.NODE_ENV === 'production'
+                            ? undefined
+                            : 'https://github.com/letsbook/docs/tree/main/',
                 },
                 blog: {
                     path: 'releases',
                     routeBasePath: 'releases',
                     blogTitle: 'Release Notes',
-                    blogDescription: 'Let\'s Book Release Notes and Updates',
+                    blogDescription: "Let's Book Release Notes and Updates",
                     blogSidebarTitle: 'Recent Releases',
                     blogSidebarCount: 'ALL',
                     showReadingTime: false,
                     feedOptions: {
                         type: ['atom', 'json'],
                         xslt: true,
-                        title: 'Let\'s Book Release Notes',
-                        description: 'Stay updated with the latest Let\'s Book releases',
+                        title: "Let's Book Release Notes",
+                        description:
+                            "Stay updated with the latest Let's Book releases",
                     },
-                    editUrl: process.env.NODE_ENV === 'production' ? undefined : 'https://github.com/letsbook/docs/tree/main/',
+                    editUrl:
+                        process.env.NODE_ENV === 'production'
+                            ? undefined
+                            : 'https://github.com/letsbook/docs/tree/main/',
                     // Useful options to enforce blogging best practices
                     onInlineTags: 'warn',
                     onInlineAuthors: 'warn',
@@ -122,48 +133,49 @@ const config: Config = {
                     primaryColor: '#081590',
                     options: {
                         hideDownloadButton: true,
-                        expandResponses: "200",
+                        expandResponses: '200',
                         jsonSampleExpandLevel: 3,
 
                         // @ts-ignore
                         theme: {
                             colors: {
                                 primary: {
-                                    main: "#081590",
-                                    light: "#7c85d3"
+                                    main: '#081590',
+                                    light: '#7c85d3',
                                 },
                                 text: {
-                                    primary: "#000000",
-                                    secondary: "#7c85d3"
-                                }
+                                    primary: '#000000',
+                                    secondary: '#7c85d3',
+                                },
                             },
                             sidebar: {
-                                activeBgColor: "#f7f8fe",
-                                activeTextColor: "#050f6a",
-                                backgroundColor: "#ffffff",
-                                fontFamily: "Rubik",
-                                textColor: "#050f6a"
+                                activeBgColor: '#f7f8fe',
+                                activeTextColor: '#050f6a',
+                                backgroundColor: '#ffffff',
+                                fontFamily: 'Rubik',
+                                textColor: '#050f6a',
                             },
                             rightPanel: {
-                                backgroundColor: "#050f6a",
-                                textColor: "#ffffff"
+                                backgroundColor: '#050f6a',
+                                textColor: '#ffffff',
                             },
                             spacing: {
-                                sectionVertical: "16"
+                                sectionVertical: '16',
                             },
                             typography: {
-                                fontFamily: "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif",
-                                fontSize: "16px",
+                                fontFamily:
+                                    "'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif",
+                                fontSize: '16px',
                                 headings: {
-                                    fontFamily: "Rubik",
-                                    fontWeight: "500"
+                                    fontFamily: 'Rubik',
+                                    fontWeight: '500',
                                 },
                                 heading1: {
-                                    color: "#ff0000"
-                                }
-                            }
-                        }
-                    }
+                                    color: '#ff0000',
+                                },
+                            },
+                        },
+                    },
                 },
             },
         ] satisfies Redocusaurus.PresetEntry,
@@ -181,7 +193,7 @@ const config: Config = {
         },
         navbar: {
             style: 'primary',
-            title: 'Let\'s Book Support',
+            title: "Let's Book Support",
             logo: {
                 alt: 'LetsBook Logo',
                 src: 'img/logo-dark.svg',
@@ -203,7 +215,7 @@ const config: Config = {
                     to: '/api/index',
                     label: 'API docs',
                     position: 'left',
-                }
+                },
             ],
         },
         footer: {
