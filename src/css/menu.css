@@ -1,0 +1,55 @@
+/**
+ * Dim the links when hovering one of the links
+ */
+.menu .theme-doc-sidebar-item-category-level-1 {
+    transition: opacity 0.2s ease;
+}
+
+.menu__caret,
+.menu__link--sublist-caret::after {
+    transition: all 0.2s ease;
+    opacity: 0;
+}
+
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
+    .theme-doc-sidebar-item-category-level-1 {
+    opacity: 0.5;
+}
+
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
+    .theme-doc-sidebar-item-category-level-1:hover {
+    opacity: 1;
+}
+
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
+    .theme-doc-sidebar-item-category-level-1:hover
+    .menu__caret,
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
+    .theme-doc-sidebar-item-category-level-1:hover
+    .menu__link--sublist-caret::after {
+    opacity: 1;
+}
+
+/**
+ * Tweak the spacing
+ */
+.menu__list-item:not(:first-child) {
+    margin-top: 0;
+}
+
+/**
+ * Make sidebar sub-items less bold
+ */
+.theme-doc-sidebar-item-link-level-1 {
+    font-weight: 800;
+}
+
+.theme-doc-sidebar-item-link-level-2,
+.theme-doc-sidebar-item-link-level-3,
+.theme-doc-sidebar-item-link-level-4 {
+    font-weight: 400;
+}
+
+.theme-doc-sidebar-container {
+    padding-top: 1rem;
+}

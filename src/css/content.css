@@ -1,0 +1,39 @@
+
+/**
+ * Anchor styling
+ */
+.theme-doc-markdown a {
+    font-weight: 500;
+    text-decoration: underline dotted;
+}
+
+/**
+ * Images inside the guides
+ */
+.theme-doc-markdown img {
+    box-shadow: 0 5px 20px #d5d7f4;
+    border-radius: 5px;
+}
+
+.theme-doc-markdown img[src$=".svg"] {
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+/**
+ * Tweak the default header sizes
+ */
+.markdown > h1 {
+    --ifm-h1-font-size: 2.25rem;
+}
+
+.markdown > h2 {
+    --ifm-h2-font-size: 1.6rem;
+}
+
+.markdown > h3 {
+    --ifm-h3-font-size: 1.2rem;
+}

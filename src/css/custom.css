@@ -40,6 +40,13 @@
     }
 }
 
+/**
+ * Base styles
+ */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     word-wrap: normal;
 }
@@ -62,49 +69,10 @@ body {
 }
 
 /**
- * Anchor styling
+ * Search bar color
  */
-.theme-doc-markdown a {
-    font-weight: 500;
-    text-decoration: underline dotted;
-}
-
-/**
- * Images inside the guides
- */
-.theme-doc-markdown img {
-    box-shadow: 0 5px 20px #d5d7f4;
-    border-radius: 5px;
-}
-
-/**
- * SVG images without shadow and larger size
- */
-.theme-doc-markdown img[src$=".svg"] {
-    box-shadow: none;
-    border-radius: 0;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-}
-
 .navbar--primary {
     --ifm-navbar-search-input-color: var(--ifm-color-emphasis-500);
-}
-
-/**
- * Tweak the default header sizes
- */
-h1 {
-    --ifm-h1-font-size: 2.25rem;
-}
-
-.markdown > h2 {
-    --ifm-h2-font-size: 1.6rem;
-}
-
-.markdown > h3 {
-    --ifm-h3-font-size: 1.2rem;
 }
 
 /**
@@ -114,44 +82,11 @@ h1 {
     display: none;
 }
 
+/**
+ * Footer style for dark
+ */
 .footer--dark {
     --ifm-footer-background-color: #050f6a;
-}
-
-/**
- * Dim the links when hovering one of the links
- */
-.menu .theme-doc-sidebar-item-category-level-1 {
-    transition: opacity 0.2s ease;
-}
-
-.menu__caret,
-.menu__link--sublist-caret::after {
-    transition: opacity 0.2s ease;
-    opacity: 0;
-}
-
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1 {
-    opacity: 0.5;
-}
-
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1:hover {
-    opacity: 1;
-}
-
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1:hover
-    .menu__caret,
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1:hover
-    .menu__link--sublist-caret::after {
-    opacity: 1;
-}
-
-.menu__list-item:not(:first-child) {
-    margin-top: 0;
 }
 
 /**
@@ -173,51 +108,4 @@ h1 {
 
 .table-of-contents__left-border {
     border-left-width: 2px;
-}
-
-/**
- * Smooth scrolling for all anchor links
- */
-html {
-    scroll-behavior: smooth;
-}
-
-/**
- * Make sidebar sub-items less bold
- */
-.theme-doc-sidebar-item-link-level-1 {
-    font-weight: 800;
-}
-
-.theme-doc-sidebar-item-link-level-2,
-.theme-doc-sidebar-item-link-level-3,
-.theme-doc-sidebar-item-link-level-4 {
-    font-weight: 400;
-}
-
-/**
- * Arrow direction for collapsible menu items
- */
-/* Default closed state - arrow points right */
-.menu__link--sublist-caret::after {
-    transform: rotate(0deg);
-    transition: transform 0.2s ease;
-}
-
-/* On hover when closed - arrow points down */
-.menu__list-item--collapsed .menu__link--sublist:hover .menu__link--sublist-caret::after {
-    transform: rotate(90deg);
-}
-
-/* When expanded - arrow points up */
-.menu__list-item:not(.menu__list-item--collapsed) .menu__link--sublist-caret::after {
-    transform: rotate(-90deg);
-}
-
-/**
- * Add margin to sidebar to align with logo
- */
-.theme-doc-sidebar-container {
-    padding-left: 1.3rem;
-    padding-top: 1rem;
 }

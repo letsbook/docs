@@ -102,7 +102,11 @@ const config: Config = {
                     onUntruncatedBlogPosts: 'ignore',
                 },
                 theme: {
-                    customCss: './src/css/custom.css',
+                    customCss: [
+                        './src/css/menu.css',
+                        './src/css/content.css',
+                        './src/css/custom.css',
+                    ],
                 },
             } satisfies Preset.Options,
         ],
