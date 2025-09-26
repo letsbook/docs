@@ -1,4 +1,3 @@
-
 /**
  * Anchor styling
  */
@@ -28,12 +27,16 @@
  */
 .markdown > h1 {
     --ifm-h1-font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .markdown > h2 {
     --ifm-h2-font-size: 1.6rem;
+    margin-bottom: 1.25rem;
 }
 
 .markdown > h3 {
     --ifm-h3-font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
