@@ -3,9 +3,9 @@
 - **Use TypeScript for all code.** Prefer strict typing and always enable `strict` mode in `tsconfig.json`.
 - **Use `type` over `interface` when possible.**
 - **Name files, variables, and types consistently:**
-  - Files: `PascalCase` for components (`MyComponent.tsx`), `camelCase` for hooks/utilities (`useMyHook.ts`, `formatDate.ts`).
-  - Types/interfaces: `PascalCase` (`User`, `BookingDetails`).
-  - Variables/functions: `camelCase`.
+    - Files: `PascalCase` for components (`MyComponent.tsx`), `camelCase` for hooks/utilities (`useMyHook.ts`, `formatDate.ts`).
+    - Types/interfaces: `PascalCase` (`User`, `BookingDetails`).
+    - Variables/functions: `camelCase`.
 - **Import ordering is enforced by Prettier and `@trivago/prettier-plugin-sort-imports`.** Do not manually reorder imports.
 - **Use default imports and exports.** Avoid named exports.
 - **Don't create `index.ts`** Just import the exact file directly
@@ -40,10 +40,10 @@
 - **Always handle loading, error, and empty states in UI components.**
 - **Use the `clsx` library for conditional class names.** Example: `clsx(styles.Root, { [styles.active]: isActive })`.
 - **Accessibility (a11y) is mandatory:**
-  - Use semantic HTML elements.
-  - Use `aria-*` attributes as needed.
-  - All interactive elements must be keyboard accessible.
-  - Use `react-aria-components` for complex widgets.
+    - Use semantic HTML elements.
+    - Use `aria-*` attributes as needed.
+    - All interactive elements must be keyboard accessible.
+    - Use `react-aria-components` for complex widgets.
 - **Do not use inline styles except for dynamic values.** Prefer CSS Modules.
 - **Avoid anonymous functions in JSX when possible.** Extract handlers to named functions.
 
@@ -61,14 +61,11 @@ type MyComponentProps = {
 
 const MyComponent = ({ title, onClick }: MyComponentProps) => {
     return (
-        <button
-            className={styles.Root}
-            onClick={onClick}
-        >
-          {title}
+        <button className={styles.Root} onClick={onClick}>
+            {title}
         </button>
     );
-}
+};
 
 export default MyComponent;
 ```
@@ -83,17 +80,17 @@ export default MyComponent;
 
 - **Use CSS Modules for all component styles.** File names must be `ComponentName.module.css`.
 - **Class names in CSS Modules must follow the following rules:**
-  - The root element must use `.Root` as its class name.
-  - Elements must use `PascalCase`. Example: `.Label`.
-  - Modifiers must use `camelCase`. Example: `.active`.
-  - Modifiers of element must this format: `.Label_active`.
+    - The root element must use `.Root` as its class name.
+    - Elements must use `PascalCase`. Example: `.Label`.
+    - Modifiers must use `camelCase`. Example: `.active`.
+    - Modifiers of element must this format: `.Label_active`.
 - **Do not use global CSS except for resets and design tokens.**
 - **No inline styles except for dynamic values.**
 - **Use design tokens and variables for colors, spacing, and typography.** Integrate with the design system.
 - **Responsive design is required:** Use CSS media queries or utility classes for breakpoints.
 - **Animations and transitions:**
-  - Use CSS transitions for simple effects.
-  - Keep animations performant and accessible (respect `prefers-reduced-motion`).
+    - Use CSS transitions for simple effects.
+    - Keep animations performant and accessible (respect `prefers-reduced-motion`).
 - **Do not use `!important` in CSS.**
 - **Avoid deep selector nesting.** Keep selectors flat and component-scoped. Extract to a new React component if necessary.
 - **Theme support:** Use CSS variables or context for theming; do not hardcode theme values.
