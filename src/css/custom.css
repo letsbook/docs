@@ -114,6 +114,8 @@ body {
     margin-top: 0;
 }
 
-.menu {
-    --ifm-menu-color-background-active: var(--ifm-color-primary-dark);
+@media (max-width: 996px) {
+    .menu {
+        --ifm-menu-color-background-active: var(--ifm-color-primary-dark);
+    }
 }

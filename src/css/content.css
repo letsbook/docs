@@ -14,7 +14,7 @@
     border-radius: 5px;
 }
 
-.theme-doc-markdown img[src$=".svg"] {
+.theme-doc-markdown img[src$='.svg'] {
     box-shadow: none;
     border-radius: 0;
     width: 100%;
