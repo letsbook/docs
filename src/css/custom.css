@@ -77,6 +77,17 @@ body {
     border-radius: 5px;
 }
 
+/**
+ * SVG images without shadow and larger size
+ */
+.theme-doc-markdown img[src$=".svg"] {
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
 .navbar--primary {
     --ifm-navbar-search-input-color: var(--ifm-color-emphasis-500);
 }
@@ -169,4 +180,44 @@ h1 {
  */
 html {
     scroll-behavior: smooth;
+}
+
+/**
+ * Make sidebar sub-items less bold
+ */
+.theme-doc-sidebar-item-link-level-1 {
+    font-weight: 800;
+}
+
+.theme-doc-sidebar-item-link-level-2,
+.theme-doc-sidebar-item-link-level-3,
+.theme-doc-sidebar-item-link-level-4 {
+    font-weight: 400;
+}
+
+/**
+ * Arrow direction for collapsible menu items
+ */
+/* Default closed state - arrow points right */
+.menu__link--sublist-caret::after {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+/* On hover when closed - arrow points down */
+.menu__list-item--collapsed .menu__link--sublist:hover .menu__link--sublist-caret::after {
+    transform: rotate(90deg);
+}
+
+/* When expanded - arrow points up */
+.menu__list-item:not(.menu__list-item--collapsed) .menu__link--sublist-caret::after {
+    transform: rotate(-90deg);
+}
+
+/**
+ * Add margin to sidebar to align with logo
+ */
+.theme-doc-sidebar-container {
+    padding-left: 1.3rem;
+    padding-top: 1rem;
 }

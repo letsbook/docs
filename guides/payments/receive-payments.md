@@ -27,20 +27,7 @@ Payout timing depends on your provider and region. New accounts often have a lon
 
 Here's a high level diagram to explain how the money paid by the customer reaches your bank account.
 
-```mermaid
-graph TD
-  %% Roles
-  C[Customer] -->|pays booking| CH[Checkout]
-  CH -->|card, iDEAL, etc.| PSP[Payment service provider]
-
-  %% Fee splits inside PSP
-  PSP -->|application fee| LB[Let's Book]
-  PSP -->|psp fees| F[PSP fees]
-  PSP -->|net amount| ACC[Your connected PSP account]
-
-  %% Settlement
-  ACC -->|payouts| BANK[Your bank account]
-```
+![Payment flow diagram](./graphics/payment_flow.svg)
 
 ## Refunds and disputes
 
