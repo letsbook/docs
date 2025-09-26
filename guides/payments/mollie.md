@@ -1,22 +1,78 @@
 # Set up Mollie integration
 
-We have a great integration with Mollie to make it easy for you to receive payments.
+Collect online payments with Mollie directly from your Let's Book checkout.
 
 ## How to connect Mollie
 
-- create an account if you don't have one already
-- Log in to your [Mollie dashboard](https://my.mollie.com/)
-- Go to [Integrations](https://dashboard.letsbook.app/integrations) and click **‘Connect via Mollie’**.
-- Complete the Mollie flow by entering the details to connect.
-  ![Mollie Connect screenshot](./graphics/mollie-connect.png)
-  :::warning
-  Make sure you select the correct company from the dropdown if you have multiple
-  :::
-- You will automatically be redirected back to the dashboard.
-- Sometimes, you'll see a warning like "Before you can receive payments, Mollie needs more information." In that case, continue onboarding
-- If you have multiple 'profiles', select the correct one from the dropdown
-- Sometimes Mollie needs to verify your details, but you can already receive payments. The payout to your bank account will only happen once you completed all enquiries.
+### Create your Mollie account
+
+If you are new to Mollie, create an account first. It takes a few minutes and unlocks popular payment methods like iDEAL, Bancontact, credit cards, and Apple Pay.
+
+- Sign up at https://www.mollie.com/signup
+- Confirm your email and complete the basic company details
+
+### Log in to the Mollie dashboard
+
+Access your Mollie settings and profiles.
+
+- Open https://my.mollie.com and sign in to your account
+- Keep this tab open while you connect from Let's Book
+
+### Open Let's Book integrations
+
+Connect from your Let's Book dashboard.
+
+- Go to https://dashboard.letsbook.app/integrations
+- Click Connect via Mollie
+
+### Approve the Mollie Connect screen
+
+Authorize Let's Book to manage payments on your behalf using Mollie Connect. This creates a secure OAuth connection as described in the Mollie Connect docs.
+
+- Select the correct organization if your Mollie account has more than one
+- Pick the right website profile if you use multiple profiles for different brands or sites
+- Review the requested permissions and click Connect
+
+![Mollie Connect screenshot](./graphics/mollie-connect.png)
+
+:::warning
+Select the correct company and profile if you have multiple. This ensures payments and payouts land in the right place.
+:::
+
+### Return to Let's Book
+
+Mollie redirects you back to your Let's Book dashboard once the connection succeeds.
+
+- You see Mollie listed under Connected integrations
+- New online bookings can now use Mollie checkout
+
+### Complete Mollie onboarding if prompted
+
+Sometimes Mollie needs more information to activate payouts. You can usually accept payments immediately, although payouts only start after you finish onboarding.
+
+- If you see the message "Before you can receive payments, Mollie needs more information," follow the link to complete onboarding
+- Provide any requested KYC details and bank account verification
+
+### Choose the right profile
+
+If you manage multiple websites or brands, choose the correct Mollie profile for this Let's Book environment.
+
+- Open Integrations in Let's Book and verify the selected profile matches your live site
+- This keeps payment descriptions, webhooks, and statements tidy
+
+### Understand verification and payouts
+
+Mollie may perform extra verification. Payments can succeed while verification is pending. Payouts start after Mollie approves your account.
+
+- Keep taking bookings without interruption
+- Expect your first payout once all checks are completed
 
 ## Go live
 
-Once you’re ready to accept real payments, go to Integrations and choose **Mollie**, click **Save**, and you’re live.
+When you are ready to accept real payments, set the integration to Live.
+
+- Go to https://dashboard.letsbook.app/integrations
+- Select Mollie as the current payment provider and hit Save.
+- Your checkout now charges real cards and local methods.
+
+Need a refresher on how Mollie Connect works under the hood? See the official overview: https://docs.mollie.com/docs/connect-overview
