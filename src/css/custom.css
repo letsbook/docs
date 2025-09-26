@@ -142,3 +142,31 @@ h1 {
 .menu__list-item:not(:first-child) {
     margin-top: 0;
 }
+
+/**
+ * Make Table of Contents (right sidebar) bigger
+ */
+.table-of-contents {
+    font-size: 0.9rem;
+}
+
+.table-of-contents .table-of-contents__link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    line-height: 1.3;
+}
+
+.table-of-contents .table-of-contents__link--active {
+    font-weight: 500;
+}
+
+.table-of-contents__left-border {
+    border-left: 2px solid var(--ifm-color-emphasis-300);
+}
+
+/**
+ * Smooth scrolling for all anchor links
+ */
+html {
+    scroll-behavior: smooth;
+}
