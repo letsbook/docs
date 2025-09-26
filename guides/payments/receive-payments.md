@@ -6,13 +6,6 @@ sidebar_position: 1
 
 Get paid directly to your own payout account. Connect one of our supported Payment Service Providers (PSP) in minutes and Let’s Book routes every customer payment to you.
 
-_Flow of payment_
-
-```mermaid
-graph TD;
-    
-```
-
 ## Connect your payment provider
 
 - Hook up Let's Book to [Stripe](./stripe.md) or [Mollie](./mollie.md).
@@ -32,9 +25,26 @@ Note: Exact fee amounts and models depend on your Let’s Book plan and contract
 
 Payout timing depends on your provider and region. New accounts often have a longer first payout. After that it follows your configured schedule.
 
+Here's a high level diagram to explain how the money paid by the customer reaches your bank account.
+
+```mermaid
+graph TD
+  %% Roles
+  C[Customer] -->|pays booking| CH[Checkout]
+  CH -->|card, iDEAL, etc.| PSP[Payment service provider]
+
+  %% Fee splits inside PSP
+  PSP -->|application fee| LB[Let's Book]
+  PSP -->|psp fees| F[PSP fees]
+  PSP -->|net amount| ACC[Your connected PSP account]
+
+  %% Settlement
+  ACC -->|payouts| BANK[Your bank account]
+```
+
 ## Refunds and disputes
 
-- You can refund from your provider's dashboard.
+- You can refund from your provider's dashboard by visiting the Finance tab in the Let's Book dashboard and clicking on a payment or deposit.
 - For chargebacks or disputes, the provider handles the process and may debit the disputed amount from your next payout.
 
 ## Tips
