@@ -1,3 +1,9 @@
+---
+title: 10 step setup guide
+description: Complete step-by-step guide to get started with Let's Book right away
+sidebar_position: 2
+---
+
 # 10-step setup guide
 
 This step-by-step guide will help you get your boat rental platform fully operational. We'll walk you through the entire process, from basic setup to your first successful booking.

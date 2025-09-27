@@ -21,13 +21,13 @@ const helpOptions: HelpOption[] = [
         title: 'Join our community',
         description: 'Find every answer you are looking for',
         icon: '👋',
-        link: '/guides/intro',
+        link: '/guides/get-started/10-step-setup-guide',
     },
     {
         title: 'Book an expert',
         description: 'Find a specialist for your situation',
         icon: '🏠',
-        link: '/guides/intro',
+        link: 'https://letsbook.app/contact',
     },
 ];
 
@@ -249,7 +249,7 @@ export default function GettingStarted(): ReactNode {
                         </p>
                         <div className={styles.CTAButtons}>
                             <Link
-                                to="/guides/intro"
+                                to="/guides/get-started/10-step-setup-guide"
                                 className={`${styles.Btn} ${styles.BtnPrimary}`}
                             >
                                 💬 Start chat

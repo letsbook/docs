@@ -48,7 +48,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(18, 193, 155, 0.03);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -58,7 +57,7 @@
 }
 
 .CategoryCard:hover::before {
-    opacity: 1;
+    opacity: 0;
 }
 
 .CategoryHeader {
@@ -116,8 +115,8 @@
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 0.6rem;
+    justify-content: space-between;
+    padding: 0.5rem 0.8rem;
     border-radius: 6px;
     position: relative;
     margin: 0.2rem 0;
@@ -126,26 +125,22 @@
 
 .CategoryLink:hover {
     color: #000000;
-    background: rgba(8, 22, 144, 0.08);
+    background: #f7f8fe;
     text-decoration: none;
-    padding-left: 2rem;
 }
 
-.CategoryLink::before {
+.CategoryLink::after {
     content: '→';
     color: #081690;
     font-weight: bold;
     opacity: 0;
-    transform: translateX(-8px);
-    transition: all 0.2s ease;
-    position: absolute;
-    left: 0.8rem;
+    transition: opacity 0.2s ease;
     font-size: 1rem;
+    margin-left: auto;
 }
 
-.CategoryLink:hover::before {
+.CategoryLink:hover::after {
     opacity: 1;
-    transform: translateX(0);
 }
 
 .ViewMoreContainer {

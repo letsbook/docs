@@ -8,6 +8,7 @@ type QuickAction = {
     description: string;
     icon: string;
     link: string;
+    cta: string;
 };
 
 const quickActions: QuickAction[] = [
@@ -15,7 +16,8 @@ const quickActions: QuickAction[] = [
         title: 'Get started',
         description: "Complete guide to get started with Let's Book right away",
         icon: '→',
-        link: '/guides/get-started/10-step-setup-guide',
+        link: '/guides/get-started/step-setup-guide',
+        cta: 'Start setup'
     },
     {
         title: 'Working with planning overview',
@@ -23,12 +25,14 @@ const quickActions: QuickAction[] = [
             'Navigate your daily operations using Timeline, Availability, and Fleet views',
         icon: '⊞',
         link: '/guides/day-to-day/planning-overview',
+        cta: 'Learn more'
     },
     {
         title: 'Track sales insights',
         description: 'Turn your season into a scoreboard with sales analytics',
         icon: '▲',
         link: '/guides/day-to-day/sales-insights',
+        cta: 'View guide'
     },
 ];
 
@@ -57,7 +61,9 @@ export default function QuickActions(): ReactNode {
                             <p className={styles.ActionDescription}>
                                 {action.description}
                             </p>
-                            <div className={styles.ActionLink}>Start now →</div>
+                            <div className={styles.ActionLink}>
+                                {action.cta}
+                            </div>
                         </Link>
                     ))}
                 </div>

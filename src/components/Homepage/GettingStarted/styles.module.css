@@ -49,7 +49,6 @@
 
 .HelpOption:hover {
     background: #f7f8fe;
-    transform: translateX(8px);
     text-decoration: none;
     color: inherit;
 }
