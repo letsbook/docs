@@ -102,6 +102,15 @@
     align-items: center;
 }
 
+.SupportImage {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(8, 22, 144, 0.15);
+    object-fit: cover;
+}
+
 .HelpIllustration svg {
     max-width: 100%;
     height: auto;
@@ -109,7 +118,7 @@
 
 .FooterCTA {
     padding: 4rem 0;
-    background: #fcf1cd;
+    background: #e8f5f2;
     text-align: center;
     border-radius: 20px;
     margin-top: 2rem;

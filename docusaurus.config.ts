@@ -205,6 +205,12 @@ const config: Config = {
             hideOnScroll: true,
             items: [
                 {
+                    to: '/',
+                    label: 'Home',
+                    position: 'left',
+                    exact: true,
+                },
+                {
                     type: 'docSidebar',
                     sidebarId: 'docsSidebar',
                     label: 'Guides',
@@ -233,20 +239,36 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Guides',
+                    title: 'Documentation',
                     items: [
                         {
-                            label: 'Documentation',
-                            to: '/guides/getting-started',
+                            label: 'Getting started guide',
+                            to: '/guides/get-started/step-setup-guide',
+                        },
+                        {
+                            label: 'Planning overview',
+                            to: '/guides/day-to-day/planning-overview',
+                        },
+                        {
+                            label: 'Manage bookings',
+                            to: '/guides/bookings/add-booking',
+                        },
+                        {
+                            label: 'All guides',
+                            to: '/guides',
                         },
                     ],
                 },
                 {
-                    title: 'More',
+                    title: 'Resources',
                     items: [
                         {
-                            label: 'Release Notes',
+                            label: 'Release notes',
                             to: '/releases',
+                        },
+                        {
+                            label: 'API documentation',
+                            to: '/api/index',
                         },
                         {
                             label: 'GitHub',
@@ -254,8 +276,25 @@ const config: Config = {
                         },
                     ],
                 },
+                {
+                    title: "Let's Book",
+                    items: [
+                        {
+                            label: 'Dashboard',
+                            href: 'https://dashboard.letsbook.app',
+                        },
+                        {
+                            label: 'Main website',
+                            href: 'https://letsbook.app',
+                        },
+                        {
+                            label: 'Contact support',
+                            href: 'mailto:support@lets-book.com',
+                        },
+                    ],
+                },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} LetsBook.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Let's Book.`,
         },
         prism: {
             theme: prismThemes.github,
