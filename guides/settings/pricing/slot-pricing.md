@@ -42,11 +42,11 @@ Add costs on top of base slot prices:
 
 ### Adding pricing elements
 
-1. Click **Add pricing element** 
+1. Click **Add pricing element**
 2. Choose calculation type:
-   - **Formula:** Based on variables like passenger count
-   - **Fixed amount:** Set fee per booking  
-   - **Table:** Different rates for different scenarios
+    - **Formula:** Based on variables like passenger count
+    - **Fixed amount:** Set fee per booking
+    - **Table:** Different rates for different scenarios
 3. Add conditions if needed (e.g., only apply for groups over 6 people)
 
 ## Additional charges
@@ -58,8 +58,9 @@ Calculate extra costs beyond slot and element pricing:
 **Tax settings:** Include/exclude tax and rate
 
 **Charge options:**
+
 - **Formula:** Calculate based on booking variables
-- **Fixed amount:** Set price (e.g., €25 equipment fee)  
+- **Fixed amount:** Set price (e.g., €25 equipment fee)
 - **Table:** Variable rates based on conditions
 
 Add conditions to apply charges selectively (e.g., cleaning fee only for rentals over 4 hours).
@@ -69,6 +70,7 @@ Add conditions to apply charges selectively (e.g., cleaning fee only for rentals
 Secure slot bookings with deposits:
 
 **Price calculation:**
+
 - **Formula:** Percentage of total booking (e.g., 30% deposit)
 - **Fixed amount:** Set amount (e.g., €200 deposit)
 - **Table:** Different deposits for different slots/conditions
@@ -82,8 +84,9 @@ Use **Add condition** to require deposits only for specific slots, seasons, or b
 **Multiple price parts:** Create complex pricing structures with different calculation methods combined.
 
 **Conditional pricing:** Apply different rates based on:
+
 - Booking duration or advance time
-- Customer type (member vs guest)  
+- Customer type (member vs guest)
 - Number of passengers or boats
 - Seasonal periods
 - Days of the week

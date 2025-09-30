@@ -145,12 +145,12 @@ body {
 }
 
 .theme-doc-markdown table th {
-    background-color: #F7F8FE;
+    background-color: #f7f8fe;
     border-color: #e1e4f7;
 }
 
 .theme-doc-markdown table tbody tr:nth-child(even) td {
-    background-color: #F7F8FE;
+    background-color: #f7f8fe;
 }
 
 .theme-doc-markdown table tbody tr:nth-child(odd) td {

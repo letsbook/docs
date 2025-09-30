@@ -1,10 +1,10 @@
 ---
-title: Set up slot schedule  
+title: Set up slot schedule
 description: Create fixed departure times and durations for structured rental packages
 sidebar_position: 3
 ---
 
-# Set up slot schedule  
+# Set up slot schedule
 
 Slot schedules offer fixed departure times and trip durations. Perfect for multi-day rentals, guided trips, or structured packages.
 
@@ -33,12 +33,14 @@ Give each slot a descriptive name that helps you organize different options.
 Choose the slot type using the toggle buttons:
 
 **Single day:** Fixed start and end times on the same day
+
 - **Pickup time:** When customers collect their boat (e.g., 10:00 AM)
 - **Return time:** When they must bring it back (e.g., 6:00 PM)
 - **Duration:** Automatically calculated (8 hours in this example)
 
 **Multi-day:** Rentals spanning multiple days
-- **Pickup time:** Start time on first day (e.g., Friday 10:00 AM) 
+
+- **Pickup time:** Start time on first day (e.g., Friday 10:00 AM)
 - **Return options:** Choose from preset options like "one night later", "2 nights later", up to "21 nights later"
 - **Return time:** Final return time (e.g., Sunday 6:00 PM)
 

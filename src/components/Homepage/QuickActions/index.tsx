@@ -17,7 +17,7 @@ const quickActions: QuickAction[] = [
         description: "Complete guide to get started with Let's Book right away",
         icon: '→',
         link: '/guides/get-started/step-setup-guide',
-        cta: 'Start setup'
+        cta: 'Start setup',
     },
     {
         title: 'Working with planning overview',
@@ -25,14 +25,14 @@ const quickActions: QuickAction[] = [
             'Navigate your daily operations using Timeline, Availability, and Fleet views',
         icon: '⊞',
         link: '/guides/day-to-day/planning-overview',
-        cta: 'Learn more'
+        cta: 'Learn more',
     },
     {
         title: 'Track sales insights',
         description: 'Turn your season into a scoreboard with sales analytics',
         icon: '▲',
         link: '/guides/day-to-day/sales-insights',
-        cta: 'View guide'
+        cta: 'View guide',
     },
 ];
 

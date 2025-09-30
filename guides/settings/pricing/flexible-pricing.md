@@ -27,9 +27,10 @@ Set your base pricing calculation method:
 ### Pricing methods
 
 **Formula:** Calculate rates based on variables
+
 - Duration in hours
 - Duration in days (24h periods)
-- Number of passengers in booking  
+- Number of passengers in booking
 - Number of passengers on a boat
 - Hours booked in advance
 - Days booked in advance
@@ -46,9 +47,10 @@ Set your base pricing calculation method:
 Click **Add condition** to create complex rules:
 
 **Available conditions:**
+
 - **Booking duration:** Different rates for trip length
 - **Number of boats:** Bulk discounts or premiums
-- **Number of passengers:** Group size adjustments  
+- **Number of passengers:** Group size adjustments
 - **Customer type:** Different rates for members vs guests
 - **Days of the week:** Weekend vs weekday pricing
 - **Time period:** Different rates for specific hours (e.g., 10 AM-1 PM)
@@ -58,7 +60,8 @@ Click **Add condition** to create complex rules:
 - **Booked via partner:** Different rates for partner bookings
 
 **Example conditions:**
-- Monday and Wednesday: €10/hour discount  
+
+- Monday and Wednesday: €10/hour discount
 - 4-hour trips between 9 AM-2 PM: €300 discount
 - Groups over 8 people: €5/person surcharge
 
@@ -71,6 +74,7 @@ Build complex pricing structures with multiple calculation parts:
 Each element can use different calculation methods (formula, fixed amount, table) and have its own conditions.
 
 **Example structure:**
+
 - Base rate: €50/hour
 - Peak season element: +€15/hour (July-August condition)
 - Group discount element: -€200 (8+ passengers condition)
@@ -85,6 +89,7 @@ Add extra costs beyond base pricing:
 **Display timing:** Show during booking or only at payment step
 
 **Price calculation:**
+
 - **Formula:** Calculate based on variables
 - **Fixed amount:** Set fee (e.g., €30 cleaning charge)
 - **Table:** Variable rates with conditions
@@ -96,6 +101,7 @@ Use **Advanced mode** for complex formulas with multiple variables.
 Create sophisticated deposit requirements:
 
 **Price calculation methods:**
+
 - **Formula:** Calculate based on booking variables (e.g., 25% of total cost)
 - **Fixed amount:** Set deposit amount
 - **Table:** Different deposits for different scenarios
@@ -103,6 +109,7 @@ Create sophisticated deposit requirements:
 **Multiple deposit parts:** Create deposits with different calculation methods combined.
 
 **Conditional deposits:** Apply deposits only when specific conditions are met:
+
 - Seasonal requirements
 - Booking value thresholds
 - Customer type differences
@@ -117,8 +124,9 @@ Create sophisticated deposit requirements:
 **Advanced mode:** Access advanced formula options for complex mathematical calculations. See [Working with pricing formulas](../../dive-deeper/pricing-formulas) for detailed formula syntax and examples.
 
 **Variable selection:** Use booking data in formulas:
+
 - Duration measurements
-- Passenger counts  
+- Passenger counts
 - Dock/boat information
 - Booking timing details
 - Previous pricing results

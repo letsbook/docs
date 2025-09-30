@@ -17,9 +17,11 @@ Control your rental rates and deposit policies to match your business model. Set
 Let's Book supports flexible pricing based on your schedule type and business needs.
 
 ### Weekly schedule pricing
+
 Set hourly rates that apply within your operating windows.
 
-### Slot schedule pricing  
+### Slot schedule pricing
+
 Configure fixed prices for specific time slots and packages.
 
 ## Deposit settings
@@ -27,20 +29,25 @@ Configure fixed prices for specific time slots and packages.
 Configure deposit requirements to secure bookings and protect your business.
 
 ### Deposit amount
+
 Set deposit as a percentage of total booking cost or fixed amount.
 
 ### Deposit timing
+
 Choose when deposits are collected during the booking process.
 
 ## Advanced pricing options
 
 ### Seasonal adjustments
+
 Create different rates for peak and off-peak periods.
 
 ### Customer type pricing
+
 Set different rates for members vs guests.
 
 ### Duration-based pricing
+
 Adjust rates based on rental length.
 
 ## Managing pricing changes

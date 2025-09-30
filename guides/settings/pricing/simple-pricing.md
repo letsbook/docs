@@ -20,13 +20,14 @@ Simple pricing charges based on sailing time with optional passenger group tiers
 
 **Tax settings:** Choose whether prices include or exclude tax, and select your tax rate from the dropdown.
 
-## Rental pricing  
+## Rental pricing
 
 Set your base rates based on trip duration:
 
 **Pricing basis:** Choose what drives your rates:
+
 - **Minutes:** Per-minute pricing
-- **Hours:** Hourly rates (most common)  
+- **Hours:** Hourly rates (most common)
 - **Days of 24h:** Daily rates
 
 **Time-based rates:** Enter prices for different rental lengths. If someone books an unusual duration (like 3.5 hours), the system charges the next highest rate you've set.
@@ -59,8 +60,9 @@ Add extra costs on top of base rental rates:
 ### Advanced conditions
 
 Click **Add condition** to create complex pricing rules:
+
 - Booking duration requirements
-- Number of boats/passengers thresholds  
+- Number of boats/passengers thresholds
 - Customer type differences
 - Day of week variations
 - Time period restrictions
@@ -75,6 +77,7 @@ Secure bookings with refundable deposits:
 - **Tax settings:** Include/exclude tax and rate
 
 **Price options:**
+
 - **Formula:** Calculate based on variables (e.g., 20% of total cost)
 - **Fixed amount:** Set amount (e.g., €150 deposit)
 - **Table:** Different deposits for different scenarios

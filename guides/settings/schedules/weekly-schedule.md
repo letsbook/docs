@@ -35,13 +35,15 @@ Define when boats can be picked up and returned using the timeline interface:
 Choose how customers select trip length:
 
 ### Fixed lengths
+
 Offer specific duration choices like 2, 3, 4, or 6 hours.
 
 **Highlighted options:** Mark your preferred durations to stand out on the booking form.
 
 **Pickup frequency:** Set how often trips can start (every 15, 30, or 60 minutes).
 
-### Within range  
+### Within range
+
 Let the system generate all possible durations between your minimum and maximum.
 
 **Example:** 2-6 hour range creates options for 2, 3, 4, 5, and 6-hour trips.
@@ -51,9 +53,11 @@ Choose fixed lengths for simpler choice, or within range for maximum flexibility
 ## Advanced settings
 
 ### Early pickup
+
 Allow customers to collect boats before their scheduled pickup time. Useful for eager customers or operational flexibility.
 
 ### Margins around bookings
+
 Add buffer time after each trip for boat cleaning or late returns.
 
 **Example:** 30-minute margin gives you cleanup time between rentals and handles boats returned slightly late.

@@ -17,16 +17,19 @@ Rental setup is where everything comes together. Connect your schedules, pricing
 Rental setup connects your components into working rental operations:
 
 ### Required components
+
 - **[Docks](manage-docks)** - Pickup and return locations
 - **[Boat models](../../boats/manage-boats)** - Types of boats customers can rent
 
 ### Connect to each dock-boat combination
+
 - **[Schedules](../schedules)** - When boats are available for rental
 - **[Pricing](../pricing)** - Rental rates and deposit structures
 - **[Confirmation methods](https://dashboard.letsbook.app/confirmation-methods)** - How bookings get approved (see [setup guide](https://support.letsbook.app/article/40-get-started-lets-book))
 - **[Notifications](https://dashboard.letsbook.app/notifications)** - Which emails customers receive (see [notification flows](https://support.letsbook.app/article/88-notifications))
 
 ### Optional extras
+
 - **Waivers** - Documents customers must sign (WaiverForever integration)
 - **Time periods** - Different settings for different seasons
 
@@ -35,9 +38,11 @@ Each dock-boat combination gets its own **rental method** containing these setti
 ## Setting up rental methods
 
 ### 1. Find your dock-boat combination
+
 In [rental setup](https://dashboard.letsbook.app/rental-setup), locate the combination you want to configure. Each row represents a dock-boat pairing.
 
 ### 2. Configure the rental method
+
 Click on a combination to set up:
 
 - **Time period:** When these rules apply (start and end dates)
@@ -47,11 +52,13 @@ Click on a combination to set up:
 - **Notifications:** Which message flow customers receive
 
 ### 3. Save and test
+
 Save your configuration and test the booking form to ensure everything works correctly.
 
 ## Advanced features
 
 ### Transition periods
+
 Handle schedule changes smoothly by allowing trips from the previous period to continue:
 
 1. Click on a dock-boat combination
@@ -61,6 +68,7 @@ Handle schedule changes smoothly by allowing trips from the previous period to c
 **Example:** Multi-day bookings picked up in June can return until August 7th, even though the new schedule starts August 1st.
 
 ### Seasonal configurations
+
 Create different rental methods for different seasons:
 
 - **Summer schedule + peak pricing** (June-August)
@@ -68,6 +76,7 @@ Create different rental methods for different seasons:
 - **Maintenance periods** with blocked availability
 
 ### Document requirements
+
 If you use WaiverForever integration, specify which waivers customers must sign for each dock-boat combination.
 
 ## Common patterns
