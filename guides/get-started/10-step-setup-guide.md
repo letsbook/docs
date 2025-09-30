@@ -134,6 +134,8 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 **Consider your workflow:** Choose a method that fits your availability to review bookings and your customers' expectations.
 
+**Learn more:** See our detailed guide on [booking confirmation settings](../settings/booking-confirmation-settings)
+
 ---
 
 ## Step 8: Bind it all together in the rental setup
