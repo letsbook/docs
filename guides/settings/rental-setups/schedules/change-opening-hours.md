@@ -55,7 +55,7 @@ Consider setting closing times 30-60 minutes after your actual preferred end tim
 
 For temporary schedule changes:
 
-1. Create [blocked availability](../day-to-day/block-boat-availability.md) for specific dates
+1. Create [blocked availability](../../../day-to-day/blockout-periods.md) for specific dates
 2. Use the dock-specific settings if only certain locations have different hours
 3. Update your general hours when seasonal changes begin and end
 
