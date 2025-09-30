@@ -27,7 +27,7 @@ const helpOptions: HelpOption[] = [
         title: 'Book a call',
         description: 'Get expert setup assistance',
         icon: '🎯',
-        link: 'https://letsbook.app/contact',
+        link: "javascript:Beacon('open')",
     },
 ];
 
@@ -37,7 +37,9 @@ export default function GettingStarted(): ReactNode {
             <div className="container">
                 <div className={styles.HelpContent}>
                     <div className={styles.HelpText}>
-                        <h2 className={styles.Title}>Need help? We've got you covered</h2>
+                        <h2 className={styles.Title}>
+                            Need help? We've got you covered
+                        </h2>
 
                         <div className={styles.HelpOptions}>
                             {helpOptions.map((option, index) => (
@@ -63,8 +65,8 @@ export default function GettingStarted(): ReactNode {
                     </div>
 
                     <div className={styles.HelpIllustration}>
-                        <img 
-                            src="/img/support-team.jpg" 
+                        <img
+                            src="/img/support-team.jpg"
                             alt="Let's Book support team member ready to help"
                             className={styles.SupportImage}
                         />
@@ -77,7 +79,8 @@ export default function GettingStarted(): ReactNode {
                             Can't find what you need?
                         </h2>
                         <p className={styles.CTADescription}>
-                            Our support team responds fast and knows Let's Book inside out
+                            Our support team responds fast and knows Let's Book
+                            inside out
                         </p>
                         <div className={styles.CTAButtons}>
                             <Link

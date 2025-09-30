@@ -285,7 +285,7 @@ const config: Config = {
                         },
                         {
                             label: 'Main website',
-                            href: 'https://letsbook.app',
+                            href: 'https://lets-book.com',
                         },
                         {
                             label: 'Contact support',
