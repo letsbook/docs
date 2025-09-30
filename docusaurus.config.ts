@@ -1,9 +1,10 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
+import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const beaconId = process.env.HELPSCOUT_BEACON_ID;
 
 const config: Config = {
     title: "Let's Book Documentation",
@@ -53,7 +54,7 @@ const config: Config = {
             attributes: {
                 type: 'text/javascript',
             },
-            innerHTML: `window.Beacon('init', '${process.env.HELPSCOUT_BEACON_ID}');`,
+            innerHTML: `window.Beacon('init', '${beaconId}');`,
         },
     ],
 
