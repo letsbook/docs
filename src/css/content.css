@@ -3,7 +3,16 @@
  */
 .theme-doc-markdown a {
     font-weight: 500;
-    text-decoration: underline dotted;
+    text-decoration: none;
+
+    background: var(--ifm-color-primary-lighter);
+    padding: 3px 8px;
+
+    border-radius: 5px;
+}
+
+.theme-doc-markdown a:hover {
+    background: var(--ifm-color-primary-lightest);
 }
 
 /**
