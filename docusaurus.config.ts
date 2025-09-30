@@ -81,15 +81,15 @@ const config: Config = {
                 blog: {
                     path: 'releases',
                     routeBasePath: 'releases',
-                    blogTitle: 'Release Notes',
-                    blogDescription: "Let's Book Release Notes and Updates",
-                    blogSidebarTitle: 'Recent Releases',
+                    blogTitle: 'Releases',
+                    blogDescription: "Let's Book release Notes and Updates",
+                    blogSidebarTitle: 'Recent releases',
                     blogSidebarCount: 'ALL',
                     showReadingTime: false,
                     feedOptions: {
                         type: ['atom', 'json'],
                         xslt: true,
-                        title: "Let's Book Release Notes",
+                        title: "Let's Book releases",
                         description:
                             "Stay updated with the latest Let's Book releases",
                     },
@@ -219,7 +219,7 @@ const config: Config = {
                 },
                 {
                     to: '/releases',
-                    label: 'Release Notes',
+                    label: 'Releases',
                     position: 'left',
                 },
                 {
@@ -264,7 +264,7 @@ const config: Config = {
                     title: 'Resources',
                     items: [
                         {
-                            label: 'Release notes',
+                            label: 'Releases',
                             to: '/releases',
                         },
                         {

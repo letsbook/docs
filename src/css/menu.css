@@ -19,24 +19,10 @@
 /**
  * Dim the links when hovering one of the links
  */
-.menu .theme-doc-sidebar-item-category-level-1 {
-    transition: opacity 0.2s ease;
-}
-
 .menu__caret,
 .menu__link--sublist-caret::after {
     transition: all 0.2s ease;
     opacity: 0;
-}
-
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1 {
-    opacity: 0.5;
-}
-
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1:hover {
-    opacity: 1;
 }
 
 .menu:has(.theme-doc-sidebar-item-category-level-1:hover)

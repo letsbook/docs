@@ -40,3 +40,10 @@
     --ifm-h3-font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+
+/**
+ * Button styles
+ */
+a.button {
+    text-decoration: none;
+}

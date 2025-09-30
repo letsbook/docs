@@ -118,24 +118,6 @@ body {
     font-size: 0.9rem;
 }
 
-.table-of-contents .table-of-contents__link {
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    line-height: 1.3;
-}
-
-.table-of-contents .table-of-contents__link--active {
-    color: var(--ifm-color-primary);
-}
-
-.table-of-contents__left-border {
-    border-left-width: 2px;
-}
-
-.table-of-contents li:first-child {
-    margin-top: 0;
-}
-
 /**
  * Custom table styling for schedules comparison
  */
