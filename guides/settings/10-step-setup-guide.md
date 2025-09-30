@@ -1,7 +1,7 @@
 ---
 title: 10 step setup guide
 description: Complete step-by-step guide to get started with Let's Book right away
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # 10-step setup guide
