@@ -52,7 +52,7 @@ body {
 }
 
 /**
- * Navbar active link styling
+ * Navbar (top bar) active link styling
  */
 .navbar__item.navbar__link {
     transition: background-color 0.2s ease;
@@ -159,4 +159,10 @@ body {
 
 .theme-doc-markdown table td {
     border-color: #e1e4f7;
+}
+
+@media (max-width: 996px) {
+    .menu {
+        --ifm-menu-color-background-active: var(--ifm-color-primary-dark);
+    }
 }
