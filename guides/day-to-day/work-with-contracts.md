@@ -1,13 +1,13 @@
 # Work with contracts
 
-Use our waiver integration to collect signatures on your rental agreement and other documents. If you have not set it up yet, start with the [setup guide](./set-up-waivers.md).
+Use our waiver integration to collect signatures on your rental agreement and other documents. If you have not set it up yet, start with the [setup guide](../settings/waivers/set-up-waivers.md).
 
 ## How it works for customers
 
 - After payment, the renter lands on the booking details page.
 - The page shows a clear prompt to sign the contract.
 
-![Screenshot of sign contract](./graphics/sign-contract.png)
+![Screenshot of sign contract](graphics/sign-contract.png)
 
 - When the renter clicks "Sign", we open the WaiverForever document.
 - After signing, it can take up to one minute for the signed status to appear on the booking page.
@@ -22,7 +22,7 @@ Use the Document filter on the [Bookings overview](https://dashboard.letsbook.ap
 
 If the customer arrives without signing, open the form for them with the "Show form" button. Or have them scan the QR code on their own device.
 
-![Screenshot of signed contract](./graphics/signed-documents.png)
+![Screenshot of signed contract](graphics/signed-documents.png)
 
 ## Remind your customers
 

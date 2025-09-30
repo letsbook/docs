@@ -27,7 +27,7 @@ Payout timing depends on your provider and region. New accounts often have a lon
 
 Here's a high level diagram to explain how the money paid by the customer reaches your bank account.
 
-![Payment flow diagram](./graphics/payment_flow.svg)
+![Payment flow diagram](graphics/payment_flow.svg)
 
 ## Refunds and disputes
 

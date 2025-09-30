@@ -33,7 +33,7 @@ Authorize Let's Book to manage payments on your behalf using [Mollie Connect](ht
 - Pick the right website profile if you use multiple profiles for different brands or sites
 - Review the requested permissions and click Connect
 
-![Mollie Connect screenshot](./graphics/mollie-connect.png)
+![Mollie Connect screenshot](graphics/mollie-connect.png)
 
 :::warning
 Select the correct company and profile if you have multiple. This ensures payments and payouts land in the right place.

@@ -40,7 +40,7 @@ To get started, go to [Styling](https://dashboard.letsbook.app/styling).
 ## Preview in context
 
 - Use the booking form link in the dashboard to preview.
-- Then verify on your site after the form is [integrated](./add-to-website.mdx).
+- Then verify on your site after the form is [integrated](add-to-website.mdx).
 
 ## Accessibility
 

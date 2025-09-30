@@ -79,7 +79,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 **Photography tip:** Great photos are crucial - they're often the deciding factor for customers choosing between rental options.
 
-**Need more details?** Check our comprehensive guides on [managing boats and fleet](../boats/manage-boats.md) and [assigning boats to docks](../boats/assign-boats-to-docks.md).
+**Need more details?** Check our comprehensive guides on [managing boats and fleet](boats/manage-boats.md) and [assigning boats to docks](boats/assign-boats-to-docks.md).
 
 ---
 
@@ -134,7 +134,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 **Consider your workflow:** Choose a method that fits your availability to review bookings and your customers' expectations.
 
-**Learn more:** See our detailed guide on [booking confirmation settings](../settings/booking-confirmation-settings)
+**Learn more:** See our detailed guide on [booking confirmation settings](rental-setups/booking-confirmation-settings.md)
 
 ---
 
@@ -214,7 +214,7 @@ Once you're satisfied with your testing:
 
 1. **Add billing information** for your Let's Book account
 2. **Publish your setup** to make it live
-3. **[Add the booking form to your website](../booking-form/add-to-website.mdxx)** - see our platform-specific guides
+3. **[Add the booking form to your website](booking-form/add-to-website.mdxx)** - see our platform-specific guides
 4. **Share your booking link** with potential customers
 
 ---
@@ -241,12 +241,12 @@ For more detailed information on specific features:
 
 **Fleet management:**
 
-- [Managing boats and fleet](../boats/manage-boats.md) - Complete boat model setup and organization
-- [Assigning boats to docks](../boats/assign-boats-to-docks.md) - Dock placement and boat movement
+- [Managing boats and fleet](boats/manage-boats.md) - Complete boat model setup and organization
+- [Assigning boats to docks](boats/assign-boats-to-docks.md) - Dock placement and boat movement
 
 **Website integration:**
 
-- [Add booking form to your website](../booking-form/add-to-website.mdx) - General integration guide with platform-specific instructions
+- [Add booking form to your website](booking-form/add-to-website.mdx) - General integration guide with platform-specific instructions
 - [Advanced integration options](../dive-deeper/advanced-integration.md) - Custom implementations
 
 **Additional resources:**

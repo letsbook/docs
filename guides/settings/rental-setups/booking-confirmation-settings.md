@@ -62,7 +62,7 @@ Customer completes booking → pays down payment → booking confirmed → you c
 - Going to the Finance tab
 - Sending a payment request link to the customer
 
-The customer receives an email with a secure payment link to complete their payment. Learn more about [receiving payments](/guides/payments/receive-payments).
+The customer receives an email with a secure payment link to complete their payment. Learn more about [receiving payments](/guides/settings/payments/receive-payments).
 
 ### Payment options explained
 

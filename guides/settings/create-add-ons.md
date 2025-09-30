@@ -54,7 +54,7 @@ Control when add-ons are available by setting conditions:
 
 **Category ordering:** Arrange categories to guide customers (essentials first, luxury items last).
 
-![Organizing add-ons](./graphics/Organizing_Add-ons.png)
+![Organizing add-ons](graphics/add-on-layouts.png)
 
 ## Stock management
 

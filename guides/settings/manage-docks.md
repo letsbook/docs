@@ -56,7 +56,7 @@ On each dock's detail page, you can see:
 - **Future placements:** Check specific dates to see boat availability
 - **Timeline view:** When boats will arrive or depart from this location
 
-To modify which boats are at which dock, use the boat placement tools in the [boat management section](../boats/assign-boats-to-docks.md).
+To modify which boats are at which dock, use the boat placement tools in the [boat management section](boats/assign-boats-to-docks.md).
 
 ## Getting your dock ID
 

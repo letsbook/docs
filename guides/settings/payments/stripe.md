@@ -29,7 +29,7 @@ You approve the connection from Stripe.
 
 Authorize Let's Book in Stripe. This creates a secure connection using [Stripe Connect](https://docs.stripe.com/connect)
 
-![Screenshot of connect screen](./graphics/stripe-connect.png)
+![Screenshot of connect screen](graphics/stripe-connect.png)
 
 ### 5. Return to Let's Book
 

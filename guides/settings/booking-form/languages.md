@@ -12,7 +12,7 @@ Go to [text & languages](https://dashboard.letsbook.app/localization) and open t
 
 ## Adding a language that’s not supported out of the box
 
-You can still do this, but you’ll need to translate the interface yourself using the overrides in our [modify texts and translations](./texts-and-translations.md) guide.
+You can still do this, but you’ll need to translate the interface yourself using the overrides in our [modify texts and translations](texts-and-translations.md) guide.
 
 Choose a starting point for your translations when adding an unsupported language:
 
