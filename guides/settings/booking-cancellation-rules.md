@@ -52,6 +52,16 @@ Conditions are combined with "and" logic - customers must meet every condition y
 - **Maximum total booking duration on specific days of the week per month** - Weekend/weekday limits
 - **Custom condition** - Advanced rules using expressions. For complex scenarios, see [custom booking conditions](../dive-deeper/custom-booking-conditions) where you can create highly specific rules using code expressions.
 
+## Control advance booking time
+
+**Minimum time booked ahead**
+Require advance booking to give yourself prep time. Set 2 hours for quick operations, 24 hours for standard rentals, or 7 days for specialized charters.
+
+**Maximum time booked ahead**
+Limit how far ahead customers can book. Common settings: 30 days for seasonal ops, 90 days for standard operations, 180+ days for event bookings.
+
+**Combining both:** Set a booking window, like "between 24 hours and 90 days in advance."
+
 ## Configuring cancellation settings
 
 ### Basic cancellation control

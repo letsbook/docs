@@ -13,24 +13,24 @@ type QuickAction = {
 
 const quickActions: QuickAction[] = [
     {
-        title: 'Get started',
-        description: "Complete guide to get started with Let's Book right away",
-        icon: '→',
-        link: '/guides/get-started/step-setup-guide',
-        cta: 'Start setup',
+        title: 'Day to day operations',
+        description: "Essential tools for managing your daily rental operations",
+        icon: '📅',
+        link: '/guides/day-to-day',
+        cta: 'View overview',
     },
     {
         title: 'Working with planning overview',
         description:
             'Navigate your daily operations using Timeline, Availability, and Fleet views',
-        icon: '⊞',
+        icon: '📊',
         link: '/guides/day-to-day/planning-overview',
         cta: 'Learn more',
     },
     {
         title: 'Track sales insights',
         description: 'Turn your season into a scoreboard with sales analytics',
-        icon: '▲',
+        icon: '📈',
         link: '/guides/day-to-day/sales-insights',
         cta: 'View guide',
     },

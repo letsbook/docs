@@ -5,10 +5,10 @@ import styles from './styles.module.css';
 type Course = {
     title: string;
     description: string;
-    icon: string;
+    image: string;
     level: string;
     duration: string;
-    imageClass: string;
+    slug: string;
 };
 
 const courses: Course[] = [
@@ -16,46 +16,37 @@ const courses: Course[] = [
         title: "Let's Book Fundamentals",
         description:
             "In this course you'll learn all the basic functions of Let's Book. From your first booking to setting up your payments.",
-        icon: '⛵',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
         level: 'Beginner',
         duration: '2h 15m',
-        imageClass: 'boat',
+        slug: 'fundamentals',
     },
     {
         title: 'Planning & Season Management',
         description:
             'Optimize your planning for busy periods. Learn how to set seasonal rates and manage your fleet efficiently.',
-        icon: '📋',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
         level: 'Beginner - Intermediate',
         duration: '1h 45m',
-        imageClass: 'planning',
+        slug: 'planning',
     },
     {
         title: 'Payments & Finance',
         description:
             'Manage your revenue professionally. From sending payment links to generating tax reports.',
-        icon: '💳',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
         level: 'Beginner',
         duration: '3h 20m',
-        imageClass: 'payment',
+        slug: 'payments',
     },
     {
         title: 'Analytics & Growth',
         description:
             'Use data to grow your business. Discover which boats are most popular and when you should expand.',
-        icon: '📊',
+        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
         level: 'Beginner - Intermediate',
         duration: '2h 5m',
-        imageClass: 'analytics',
-    },
-    {
-        title: 'Marketing & Customer Retention',
-        description:
-            'Automate your communication and retain more customers. From welcome emails to encouraging repeat bookings.',
-        icon: '📧',
-        level: 'Intermediate',
-        duration: '1h 30m',
-        imageClass: 'marketing',
+        slug: 'analytics',
     },
 ];
 
@@ -70,14 +61,32 @@ export default function Courses(): ReactNode {
 
                 <div className={styles.CoursesGrid}>
                     {courses.map((course, index) => (
-                        <div key={index} className={styles.CourseCard}>
-                            <div
-                                className={`${styles.CourseImage} ${styles[course.imageClass]}`}
-                            >
-                                <div className={styles.CourseVisual}>
-                                    <div className={styles.FloatingIcon}>
-                                        {course.icon}
-                                    </div>
+                        <a
+                            key={index}
+                            href={`/courses/${course.slug}`}
+                            className={styles.CourseCard}
+                        >
+                            <div className={styles.CourseImage}>
+                                <img src={course.image} alt={course.title} />
+                                <div className={styles.PlayButton}>
+                                    <svg
+                                        width="48"
+                                        height="48"
+                                        viewBox="0 0 48 48"
+                                        fill="none"
+                                    >
+                                        <circle
+                                            cx="24"
+                                            cy="24"
+                                            r="24"
+                                            fill="white"
+                                            fillOpacity="0.95"
+                                        />
+                                        <path
+                                            d="M20 16L32 24L20 32V16Z"
+                                            fill="#081590"
+                                        />
+                                    </svg>
                                 </div>
                             </div>
                             <div className={styles.CourseContent}>
@@ -96,7 +105,7 @@ export default function Courses(): ReactNode {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>

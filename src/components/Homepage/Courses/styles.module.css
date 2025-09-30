@@ -38,6 +38,9 @@
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    text-decoration: none;
+    display: block;
+    color: inherit;
 }
 
 .CourseCard:hover {
@@ -48,10 +51,14 @@
 
 .CourseImage {
     height: 200px;
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
+}
+
+.CourseImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .CourseImage::before {
@@ -63,59 +70,24 @@
     bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(8, 22, 144, 0.7) 0%,
-        rgba(18, 193, 155, 0.7) 100%
+        rgba(8, 22, 144, 0.3) 0%,
+        rgba(18, 193, 155, 0.3) 100%
     );
+    z-index: 1;
 }
 
-.boat {
-    background-image: linear-gradient(135deg, #081690 0%, #12c19b 100%);
-}
-
-.planning {
-    background-image: linear-gradient(135deg, #081690 0%, #12c19b 100%);
-}
-
-.payment {
-    background-image: linear-gradient(135deg, #081690 0%, #12c19b 100%);
-}
-
-.analytics {
-    background-image: linear-gradient(135deg, #081690 0%, #12c19b 100%);
-}
-
-.marketing {
-    background-image: linear-gradient(135deg, #081690 0%, #12c19b 100%);
-}
-
-.CourseVisual {
+.PlayButton {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.FloatingIcon {
-    font-size: 3rem;
-    color: white;
     z-index: 2;
-    position: relative;
-    animation: courseFloat 4s ease-in-out infinite;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-@keyframes courseFloat {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.CourseCard:hover .PlayButton {
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
 .CourseContent {

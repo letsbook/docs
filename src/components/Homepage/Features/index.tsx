@@ -1,6 +1,5 @@
 import Link from '@docusaurus/Link';
 import type { ReactNode } from 'react';
-import { useState } from 'react';
 
 import styles from './styles.module.css';
 
@@ -103,6 +102,18 @@ const categories: Category[] = [
             {
                 title: 'Manage docks',
                 link: '/guides/settings/manage-docks',
+            },
+            {
+                title: 'Understanding rental setup',
+                link: '/guides/settings/understanding-rental-setup',
+            },
+            {
+                title: 'Booking and cancellation rules',
+                link: '/guides/settings/booking-cancellation-rules',
+            },
+            {
+                title: 'Configure pricing',
+                link: '/guides/settings/pricing',
             },
         ],
     },
@@ -235,33 +246,22 @@ const categories: Category[] = [
 ];
 
 export default function Features(): ReactNode {
-    const [showAll, setShowAll] = useState(false);
-
-    const priorityCategories = [
-        'Day to day use',
-        'Manage bookings',
-        'Booking form',
-        'Extra revenue',
-        'Dive deeper',
-        "Get started with Let's Book",
-    ];
-
-    const displayedCategories = showAll
-        ? categories
-        : categories.filter((category) =>
-              priorityCategories.includes(category.title)
-          );
+    const topCategories = [
+        categories.find((c) => c.title === 'Day to day use'),
+        categories.find((c) => c.title === 'Manage bookings'),
+        categories.find((c) => c.title === 'Settings'),
+    ].filter(Boolean);
 
     return (
         <section className={styles.Root}>
             <div className="container">
-                <h2 className={styles.SectionTitle}>All guides</h2>
+                <h2 className={styles.SectionTitle}>Popular guides</h2>
                 <p className={styles.SectionSubtitle}>
-                    Discover all the possibilities of Let's Book
+                    Quick access to the most used sections
                 </p>
 
                 <div className={styles.CategoriesGrid}>
-                    {displayedCategories.map((category, index) => (
+                    {topCategories.map((category, index) => (
                         <div key={index} className={styles.CategoryCard}>
                             <div className={styles.CategoryHeader}>
                                 <h3 className={styles.CategoryTitle}>
@@ -269,7 +269,7 @@ export default function Features(): ReactNode {
                                 </h3>
                             </div>
                             <ul className={styles.CategoryLinks}>
-                                {category.links.map((link, linkIndex) => (
+                                {category.links.slice(0, 4).map((link, linkIndex) => (
                                     <li key={linkIndex}>
                                         <Link
                                             to={link.link}
@@ -285,15 +285,15 @@ export default function Features(): ReactNode {
                 </div>
 
                 <div className={styles.ViewMoreContainer}>
-                    <button
+                    <Link
+                        to="/guides/day-to-day"
                         className={styles.ViewMoreButton}
-                        onClick={() => setShowAll(!showAll)}
                     >
-                        {showAll ? 'View less' : 'View more'}
+                        View all guides
                         <span className={styles.ViewMoreArrow}>
-                            {showAll ? '↑' : '↓'}
+                            →
                         </span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>
