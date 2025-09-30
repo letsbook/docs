@@ -32,70 +32,46 @@ const helpOptions: HelpOption[] = [
 ];
 
 export default function GettingStarted(): ReactNode {
+    const openBeacon = (e: React.MouseEvent) => {
+        e.preventDefault();
+        if (typeof window !== 'undefined' && (window as any).Beacon) {
+            (window as any).Beacon('open');
+        }
+    };
+
     return (
         <section className={styles.Root}>
             <div className="container">
-                <div className={styles.HelpContent}>
-                    <div className={styles.HelpText}>
-                        <h2 className={styles.Title}>
-                            Need help? We've got you covered
-                        </h2>
-
-                        <div className={styles.HelpOptions}>
-                            {helpOptions.map((option, index) => (
-                                <Link
-                                    key={index}
-                                    to={option.link || '#'}
-                                    className={styles.HelpOption}
-                                >
-                                    <div className={styles.HelpIcon}>
-                                        {option.icon}
-                                    </div>
-                                    <div className={styles.HelpDetails}>
-                                        <h3 className={styles.HelpTitle}>
-                                            {option.title}
-                                        </h3>
-                                        <p className={styles.HelpDescription}>
-                                            {option.description}
-                                        </p>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className={styles.HelpIllustration}>
-                        <img
-                            src="/img/support-team.jpg"
-                            alt="Let's Book support team member ready to help"
-                            className={styles.SupportImage}
-                        />
-                    </div>
-                </div>
-
-                <div className={styles.FooterCTA}>
-                    <div className={styles.CTAContent}>
-                        <h2 className={styles.CTATitle}>
-                            Can't find what you need?
-                        </h2>
-                        <p className={styles.CTADescription}>
-                            Our support team responds fast and knows Let's Book
-                            inside out
+                <div className={styles.Content}>
+                    <div className={styles.TextContent}>
+                        <h2 className={styles.Title}>Our team is here to help</h2>
+                        <p className={styles.Description}>
+                            Get answers from our support team who know Let's Book inside out. 
+                            We respond fast and help you get the most out of the platform.
                         </p>
-                        <div className={styles.CTAButtons}>
-                            <Link
-                                to="/guides/get-started/step-setup-guide"
+                        
+                        <div className={styles.Actions}>
+                            <button
+                                onClick={openBeacon}
                                 className={`${styles.Btn} ${styles.BtnPrimary}`}
                             >
-                                🚀 Get started now
-                            </Link>
-                            <Link
-                                to="mailto:support@lets-book.com"
+                                Contact support
+                            </button>
+                            <a
+                                href="mailto:support@lets-book.com"
                                 className={`${styles.Btn} ${styles.BtnSecondary}`}
                             >
-                                ⚡ Contact support
-                            </Link>
+                                Send email
+                            </a>
                         </div>
+                    </div>
+
+                    <div className={styles.ImageContent}>
+                        <img 
+                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop" 
+                            alt="Support team member" 
+                            className={styles.SupportImage}
+                        />
                     </div>
                 </div>
             </div>
