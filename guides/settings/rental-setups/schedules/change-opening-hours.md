@@ -23,6 +23,7 @@ Configure your regular operating schedule for each day of the week:
 **Day selection:** Click on any day to enable/disable it for operations
 
 **Time ranges:** Set opening and closing times using the time picker
+
 - Opening time: When first pickups can occur
 - Closing time: When last returns must be completed
 

@@ -48,8 +48,8 @@ Customers make a partial payment to secure their booking, with the remainder due
 3. Select **when a down payment is made**
 4. Give your method a name (e.g., "Down payment confirmation" or "Partial payment")
 5. Choose your down payment type:
-   - **Percentage**: Enter a percentage of the total amount (e.g., 30%)
-   - **Fixed amount**: Enter a specific amount in your currency (e.g., €50)
+    - **Percentage**: Enter a percentage of the total amount (e.g., 30%)
+    - **Fixed amount**: Enter a specific amount in your currency (e.g., €50)
 6. Set the **draft booking timeout** (same as pay to confirm)
 7. Click **Save**
 
@@ -58,6 +58,7 @@ Customers make a partial payment to secure their booking, with the remainder due
 Customer completes booking → pays down payment → booking confirmed → you collect remaining balance before the trip.
 
 **Collecting the remaining balance:** You need to manually request payment for the remaining amount. Do this by:
+
 - Opening the booking in your dashboard
 - Going to the Finance tab
 - Sending a payment request link to the customer
@@ -66,7 +67,7 @@ The customer receives an email with a secure payment link to complete their paym
 
 ### Payment options explained
 
-**Percentage**: Calculated over the total rental amount *excluding* any separate deposit charges. For example, 30% of a €200 rental = €60 down payment.
+**Percentage**: Calculated over the total rental amount _excluding_ any separate deposit charges. For example, 30% of a €200 rental = €60 down payment.
 
 **Fixed amount**: Same amount regardless of rental price. Useful for consistent booking fees across all rentals.
 
