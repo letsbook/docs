@@ -53,6 +53,12 @@
 /**
  * Button styles
  */
-a.button {
+.markdown a.button {
     text-decoration: none;
+    background: var(--ifm-color-primary);
+}
+
+.markdown a.button:hover {
+    text-decoration: none;
+    background: var(--ifm-color-primary-dark);
 }
