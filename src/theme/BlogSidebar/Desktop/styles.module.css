@@ -1,0 +1,48 @@
+.sidebar {
+    max-height: calc(100vh - var(--ifm-navbar-height));
+    overflow-y: auto;
+    position: sticky;
+    top: var(--ifm-navbar-height);
+
+    display: block;
+    width: var(--doc-sidebar-width);
+    padding: 0 calc(1rem + var(--ifm-menu-link-padding-horizontal)) 1rem;
+    border-right: 1px solid var(--ifm-toc-border-color);
+    will-change: width;
+    transition: width var(--ifm-transition-fast) ease;
+    clip-path: inset(0);
+}
+
+.sidebarItemTitle {
+    font-size: var(--ifm-h3-font-size);
+    font-weight: var(--ifm-font-weight-bold);
+    color: var(--ifm-heading-color);
+}
+
+.sidebarItem {
+    margin-top: 0.7rem;
+}
+
+.sidebarItemLink {
+    color: var(--ifm-link-color);
+    display: block;
+}
+
+.sidebarItemLink:hover {
+    text-decoration: none;
+}
+
+.sidebarItemLinkActive {
+    color: var(--ifm-color-primary) !important;
+}
+
+@media (max-width: 996px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.yearGroupHeading {
+    margin-top: 1.6rem;
+    margin-bottom: 0.4rem;
+}
