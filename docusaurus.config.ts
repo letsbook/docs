@@ -82,13 +82,12 @@ const config: Config = {
                     path: 'releases',
                     routeBasePath: 'releases',
                     blogTitle: 'Releases',
-                    blogDescription: "Let's Book release Notes and Updates",
+                    blogDescription: "Let's Book releases",
                     blogSidebarTitle: 'Recent releases',
-                    blogSidebarCount: 'ALL',
+                    blogSidebarCount: 20,
                     showReadingTime: false,
                     feedOptions: {
                         type: ['atom', 'json'],
-                        xslt: true,
                         title: "Let's Book releases",
                         description:
                             "Stay updated with the latest Let's Book releases",
@@ -203,7 +202,7 @@ const config: Config = {
                 src: 'img/logo-dark.svg',
                 srcDark: 'img/logo-dark.svg',
             },
-            hideOnScroll: true,
+            hideOnScroll: false,
             items: [
                 {
                     to: '/',
