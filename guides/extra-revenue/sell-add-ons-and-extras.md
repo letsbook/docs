@@ -26,45 +26,48 @@ Customers already decided to rent. The marginal yes to extras is easier than the
 
 Full setup guide in [create add-ons](/guides/settings/create-add-ons).
 
-Key decisions:
+**Layout style:** Grid (large photos) for visual items like drinks and gear. Bars (medium photos) for mixed content. Table (compact) for simple lists.
 
-**Layout style:** Grid (large photos) works best for visual items like drinks and gear. Bars (medium photos) for mixed content. Table (compact) for simple lists.
+**Pricing:** Choose per booking, per boat, per passenger, or per passenger per hour.
 
-**Pricing:** Per booking, per person, per boat, or per hour. Insurance typically per booking, drinks per person.
+**Quantity limits:** Set maximum items per booking, per boat, per passenger, or per passenger per hour.
+
+**Availability conditions:** Between times, between dates, only at dock using boat model, days of the week, trip duration, minimum time upfront.
 
 **Questions:** Collect preferences like beer/wine ratio, vegetarian options, or t-shirt sizes.
 
-**Availability conditions:** Control when add-ons show up - specific times, dates, docks, boat models, trip durations, or days of the week.
+## Smart strategies
 
-**Boat/dock specific:** Different add-ons for different boats or docks. Show premium items only on luxury boats, or dock-specific services.
+**Time-based availability:** Breakfast packages only 8-10am using "between times". Happy hour drinks 4-7pm. Automatically hide items outside their time window.
 
-## Boosting add-on sales
+**Seasonal rotation:** Summer items (cooling, sun protection, water toys) appear June-August with "between dates". Switch to winter gear (heating, rain protection) for off-season. Update once per year.
 
-**Make them visible:** Show add-ons with attractive square photos. Grid layout with clear images beats text-only lists.
+**Boat-specific offerings:** Show premium add-ons only on luxury boats using "only at dock using boat model". Basic safety gear for all boats, advanced equipment restricted to specific models. Match add-ons to boat capabilities.
+
+**Dock-specific services:** Marina-only captain service, harbor-only fuel packages. Different docks have different capabilities, show relevant add-ons per location.
+
+**Trip-length requirements:** Full-day picnic basket only for 4+ hour rentals using "trip duration". Prevents short-trip customers ordering items they won't use.
+
+**Prep-time items:** Catering packages require 48 hours notice using "minimum time upfront". Photography service needs 7 days. Gives you time to prepare or book external services.
+
+**Weekend specials:** Celebration packages only Friday-Sunday using "days of the week". Weekday equipment discounts Monday-Thursday. Match offerings to customer behavior patterns.
+
+**Per-passenger-per-hour pricing:** Perfect for consumables like drinks. "2 beers per person per hour" automatically calculates correct quantity for group size and trip length. Prevents over/under ordering.
+
+## Boosting sales
+
+**Make them visible:** Upload attractive square photos. Grid layout with clear images beats text-only lists.
 
 **Strategic pricing:** "€5 per person" sounds better than "€40 per group" even when identical.
 
-**Seasonal offerings:** Summer - cooling, sun protection, water toys. Winter - heating, rain gear, hot drinks.
-
-**Stock management:** Mark items as "out of stock" when unavailable instead of removing them entirely.
+**Stock management:** Mark items "out of stock" when unavailable instead of removing them entirely.
 
 ## Handling orders
 
 Daily workflow covered in [handle add-on orders](/guides/day-to-day/add-on-orders).
 
-Quick overview:
-- Orders appear on planning overview
-- Filter by date, dock, boat model, category, or product
-- Print order lists for staff fulfillment
-- Export summaries for supplier reconciliation
-- Track inventory and mark items as out of stock
+Orders appear on planning overview. Filter by date, dock, boat model, category, or product. Print order lists for staff. Export summaries for supplier reconciliation.
 
 ## Revenue impact
 
-Add-ons typically increase booking value by 20-40%. Operators see:
-- Higher transaction values per booking
-- Better customer satisfaction (convenience)
-- Improved reviews (complete experience vs bare boat)
-- More repeat bookings
-
-Focus on 3-5 popular add-ons first. Add more once you nail the basics.
+Add-ons typically increase booking value by 20-40%. Focus on 3-5 popular items first. Add more once you nail the basics.

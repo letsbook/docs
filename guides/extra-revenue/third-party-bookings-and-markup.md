@@ -1,105 +1,94 @@
 # Third-party bookings and markup
 
-> **⚠️ FIRST DRAFT** - This article needs review and refinement.
+> **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
 
-👉 **[Booking form settings](https://dashboard.letsbook.app/settings/booking-form)**
+👉 **[Partner booking links](https://dashboard.letsbook.app/booking-form/integration-instructions)** | **[Partner guide](/guides/dive-deeper/partner-bookings)**
 
-Embed your booking form on partner websites and accommodation sites. Automatically charge higher prices for third-party bookings while tracking where bookings come from.
+Embed your booking form on partner websites. Track which bookings come from which partner and set partner-specific pricing.
 
-## Why use third-party integration
+## Why work with partners
 
-Reach customers through hotels, campsites, tourism boards, and partner websites. They send you bookings, you handle operations. Win-win if pricing reflects the channel.
+Reach customers through hotels, campsites, tourism boards, and partner websites. They send you bookings, you handle operations. Track performance per partner.
 
-## How markup works
+## Setting up partner bookings
 
-Set different prices for different domains automatically. When your booking form loads on a partner site, it shows their pricing tier.
+1. Go to [booking form settings](https://dashboard.letsbook.app/booking-form/integration-instructions)
+2. Toggle "Integrate on partner website" in step 2
+3. Enter unique partner identifier (e.g., partner name)
+4. Copy the generated link
+5. Share link and [embedding instructions](/guides/settings/booking-form/add-to-website) with partner
 
-**Example scenario:**
-- Your website: €100/hour (standard)
-- Hotel partner: €120/hour (+20% commission built in)
-- Tourism portal: €115/hour (+15%)
+Each partner gets their own trackable URL. System automatically tags bookings with partner identifier.
 
-Customers see the partner-specific price. You set it once, system handles the rest.
+## Tracking partner performance
 
-## Setting up third-party pricing
+See which partners drive bookings in [bookings overview](https://dashboard.letsbook.app/bookings):
 
-1. Go to [advanced integration settings](https://dashboard.letsbook.app/settings/advanced-integration)
-2. Add partner domain (e.g., `beachhotel.com`)
-3. Set markup percentage or fixed amount
-4. Save and test
+- Click filter icon → Partner → Select identifier
+- View only that partner's bookings
+- Export to Excel for analysis
+- Open booking to see partner on booking details
 
-The booking form automatically detects the referring domain and adjusts prices.
+Compare conversion rates, booking values, and seasonal patterns per partner.
 
-## Tracking booking sources
+## Setting partner-specific pricing
 
-Every booking shows where it originated:
-- Direct from your website
-- Partner domain name
-- Embedded on which page
+Charge different rates per partner using flexible or slot pricing:
 
-Filter your booking overview by source to see which partnerships perform. Track partner conversion rates and revenue.
+1. Go to your [pricing setup](https://dashboard.letsbook.app/pricing)
+2. Choose Slot pricing or Flexible pricing
+3. Add or edit a price rule
+4. Under Conditions, select "Booked via partner"
+5. Pick the partner identifier
+6. Save
+
+**Example setup:**
+- Base rate: €50/hour
+- Hotel partner condition: +€10/hour (20% markup built in)
+- Tourism board condition: +€7.50/hour (15% markup)
+
+Partners see their specific pricing automatically. System applies correct rate based on booking source.
 
 ## Embedding options
 
-### Standard embed
-Simple iframe that works anywhere. Copy code, paste into partner's website. Full guide in [add booking form to website](/guides/settings/booking-form/add-to-website).
+**Standard embed:** Partner embeds your form using iframe. Works on any website. Full guide in [add booking form to website](/guides/settings/booking-form/add-to-website).
 
-### Branded embed
-Match partner's visual style. Customize colors, fonts, logo. Covered in [style booking form](/guides/settings/booking-form/match-branding).
+**Branded embed:** Match partner's visual style. Customize colors, fonts, logo in [style booking form](/guides/settings/booking-form/match-branding).
 
-### Direct link with tracking
-Rather than embedding, give partners a direct link with tracking parameter. Shows up in booking source.
+**Direct link:** Share trackable URL instead of embedding. Partner links to your booking form. Still tracks booking source.
 
-## Partner commission strategies
+## Partner pricing strategies
 
-### Built-in markup
-Include commission in displayed price. Clean for customers, simple for partners.
+**Built-in markup:** Include commission in displayed price. Customer sees one price, partner doesn't handle money. Simple for everyone.
 
-**Pros:** Customer sees one price, partner doesn't handle money.
-**Cons:** Higher prices might reduce conversion.
+**Split payment:** Customer pays standard rate, you invoice partner separately for commission. Lower prices, better conversion. More admin.
 
-### Split payment
-Customer pays you directly, you invoice partner separately for commission.
-
-**Pros:** Lower prices, better conversion.
-**Cons:** More admin, trust required.
-
-### Referral codes
-Partners get coupon codes that give customers a discount while flagging the booking source. You pay commission based on code usage.
-
-**Pros:** Trackable, flexible.
-**Cons:** Requires coupon setup, manual commission calculation.
+**Referral codes:** Combine partner links with [discount codes](/guides/extra-revenue/discount-codes-and-coupon-setup). Give customers discount while tracking source.
 
 ## Best partner types
 
-**Accommodations:** Hotels, B&Bs, campsites near water. Guests already there, boat rental is add-on entertainment.
+**Accommodations:** Hotels, B&Bs, campsites near water. Guests already there, boat rental is convenient add-on.
 
-**Tourism sites:** Official tourism boards, activity booking platforms, regional portals.
+**Tourism sites:** Official tourism boards, activity portals, regional information sites.
 
-**Concierge services:** Yacht clubs, marinas, waterfront restaurants.
+**Concierge services:** Yacht clubs, marinas, waterfront restaurants. Premium audience.
 
-**Event planners:** Corporate events, team building agencies, wedding planners.
+**Event planners:** Corporate events, team building, weddings. Group bookings.
 
-## Setting markup levels
+## Markup levels
 
-**20-30% markup:** Accommodations with captive audience (hotel guests with limited transport options).
+Test these ranges based on partner value:
 
-**10-20% markup:** Tourism portals with comparison shopping (customers check multiple options).
+**20-30%:** Accommodations with captive audience (hotel guests, limited alternatives)
 
-**5-15% markup:** Partner marinas and yacht clubs (easier customer, premium audience, but they compare).
+**10-20%:** Tourism portals with comparison shopping (customers browse multiple options)
 
-Test and adjust based on conversion rates. Monitor if higher prices kill too many bookings.
+**5-15%:** Marinas and yacht clubs (premium audience but price-sensitive)
 
-## Technical requirements
+Monitor conversion rates. Adjust if higher prices reduce bookings too much.
 
-Partners need:
-- Basic website with ability to embed iframe OR
-- Direct link capability
+## Advanced options
 
-No technical integration needed. Your booking form works standalone. Full customization options in [booking form tweaks](/guides/settings/booking-form/tweaks).
+Need more control? Check [custom integrations](/guides/dive-deeper/advanced-integration) for advanced partner setups.
 
-## Alternative: partner bookings
-
-For partners who want to create bookings directly in your system (without customers using your form), check [partner bookings](/guides/dive-deeper/partner-bookings).
-
-Gives partners dashboard access to create bookings at their commission rate. More control, more trust required.
+Want partners to create bookings directly? See [partner dashboard access](/guides/dive-deeper/partner-bookings) for giving partners backend access at their commission rate.
