@@ -43,6 +43,14 @@
     overflow: hidden;
     text-decoration: none;
     color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+
+.CardContent {
+    flex: 1;
 }
 
 .ActionCard:hover {
@@ -52,9 +60,10 @@
 }
 
 .ActionIcon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    display: block;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
     transition: color 0.3s ease;
     color: #081690;
 }
@@ -74,19 +83,21 @@
 }
 
 .ActionDescription {
-    color: #64748b;
+    color: #1e293b;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
 
 .ActionLink {
-    color: #12c19b;
+    color: #4d6dd9;
     font-weight: 600;
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 0.5rem;
     transition: color 0.3s ease;
     position: relative;
+    margin-top: auto;
 }
 
 .ActionLink::after {

@@ -1,256 +1,241 @@
 import Link from '@docusaurus/Link';
+import { useState } from 'react';
 import type { ReactNode } from 'react';
 
 import styles from './styles.module.css';
 
 type CategoryLink = {
     title: string;
+    description: string;
     link: string;
 };
 
 type Category = {
     title: string;
-    icon: string;
     links: CategoryLink[];
 };
 
 const categories: Category[] = [
     {
-        title: "Get started with Let's Book",
-        icon: '',
-        links: [
-            {
-                title: '10 step setup guide',
-                link: '/guides/get-started/10-step-setup-guide',
-            },
-            {
-                title: 'Choose best plan',
-                link: '/guides/get-started/choose-best-plan',
-            },
-        ],
-    },
-    {
         title: 'Day to day use',
-        icon: '',
         links: [
             {
                 title: 'Working with planning overview',
+                description: 'Navigate Timeline, Availability, and Fleet views',
                 link: '/guides/day-to-day/planning-overview',
             },
             {
                 title: 'Boat handout process',
+                description: 'Check customers in and hand out boats efficiently',
                 link: '/guides/day-to-day/boat-handout-process',
             },
             {
                 title: 'Track sales insights',
+                description: 'Monitor revenue and booking trends',
                 link: '/guides/day-to-day/sales-insights',
             },
             {
                 title: 'Manage blockout periods',
+                description: 'Block dates when boats are unavailable',
                 link: '/guides/day-to-day/blockout-periods',
             },
             {
                 title: 'Sync with personal calendar',
+                description: 'Connect your calendar to stay organized',
                 link: '/guides/day-to-day/sync-personal-calendar',
+            },
+            {
+                title: 'Handle no-shows',
+                description: 'Manage customers who miss their booking',
+                link: '/guides/day-to-day/handle-no-shows',
             },
         ],
     },
     {
         title: 'Manage bookings',
-        icon: '',
         links: [
             {
                 title: 'Add booking',
+                description: 'Create new reservations for customers',
                 link: '/guides/bookings/add-booking',
             },
             {
                 title: 'Edit or cancel a booking',
+                description: 'Modify or cancel existing reservations',
                 link: '/guides/bookings/edit-or-cancel-a-booking',
             },
             {
                 title: 'Search and filter bookings',
+                description: 'Find specific bookings quickly',
                 link: '/guides/bookings/search-and-filter-bookings',
             },
             {
                 title: 'Export bookings',
+                description: 'Download booking data to CSV or Excel',
                 link: '/guides/bookings/export-bookings',
             },
-        ],
-    },
-    {
-        title: 'Extra revenue',
-        icon: '',
-        links: [
             {
-                title: 'Discount codes and coupon setup',
-                link: '/guides/extra-revenue/discount-codes-and-coupon-setup',
+                title: 'Process refunds',
+                description: 'Handle cancellations and refund payments',
+                link: '/guides/bookings/process-refunds',
             },
             {
-                title: 'Offer memberships or subscriptions',
-                link: '/guides/extra-revenue/offer-memberships-or-subscriptions',
-            },
-            {
-                title: 'Shift booking fee',
-                link: '/guides/extra-revenue/shift-booking-fee',
+                title: 'Booking notifications',
+                description: 'Set up automated customer emails',
+                link: '/guides/bookings/booking-notifications',
             },
         ],
     },
     {
         title: 'Settings',
-        icon: '',
         links: [
             {
                 title: 'Manage docks',
+                description: 'Add and organize your rental locations',
                 link: '/guides/settings/manage-docks',
             },
             {
                 title: 'Understanding rental setup',
+                description: 'Configure which boats are available where',
                 link: '/guides/settings/understanding-rental-setup',
             },
             {
                 title: 'Booking and cancellation rules',
+                description: 'Set policies for reservations and refunds',
                 link: '/guides/settings/booking-cancellation-rules',
             },
             {
                 title: 'Configure pricing',
+                description: 'Set rental rates and seasonal pricing',
                 link: '/guides/settings/pricing',
             },
-        ],
-    },
-    {
-        title: 'Boats',
-        icon: '',
-        links: [
             {
-                title: 'Manage boats',
-                link: '/guides/boats/manage-boats',
+                title: 'Payment methods',
+                description: 'Connect Stripe and manage payments',
+                link: '/guides/settings/payment-methods',
             },
             {
-                title: 'Assign boats to docks',
-                link: '/guides/boats/assign-boats-to-docks',
-            },
-            {
-                title: 'Connect boats',
-                link: '/guides/boats/connect-boats',
-            },
-        ],
-    },
-    {
-        title: 'Add-ons',
-        icon: '',
-        links: [
-            {
-                title: 'Create add-ons',
-                link: '/guides/add-ons/create-add-ons',
-            },
-            {
-                title: 'Add-on orders',
-                link: '/guides/add-ons/add-on-orders',
-            },
-        ],
-    },
-    {
-        title: 'Customers',
-        icon: '',
-        links: [
-            {
-                title: 'Add customer',
-                link: '/guides/customers/add-customer',
-            },
-            {
-                title: 'View customer history',
-                link: '/guides/customers/view-customer-history',
-            },
-            {
-                title: 'Anonymize customers',
-                link: '/guides/customers/anonymize-customers',
+                title: 'Email templates',
+                description: 'Customize automated customer emails',
+                link: '/guides/settings/email-templates',
             },
         ],
     },
     {
         title: 'Booking form',
-        icon: '',
         links: [
             {
                 title: 'Add to website',
+                description: 'Embed the booking form on your site',
                 link: '/guides/booking-form/add-to-website',
             },
             {
                 title: 'Alternatives',
+                description: 'Share direct links or use the widget',
                 link: '/guides/booking-form/alternatives',
             },
             {
                 title: 'Custom questions',
+                description: 'Collect additional customer information',
                 link: '/guides/booking-form/questions',
             },
             {
                 title: 'Match branding',
+                description: 'Style the form to match your website',
                 link: '/guides/booking-form/match-branding',
             },
-        ],
-    },
-    {
-        title: 'Waivers and contracts',
-        icon: '',
-        links: [
             {
-                title: 'Set up waivers',
-                link: '/guides/waivers/set-up-waivers',
+                title: 'Form analytics',
+                description: 'Track conversions and drop-off rates',
+                link: '/guides/booking-form/form-analytics',
             },
             {
-                title: 'Work with contracts',
-                link: '/guides/waivers/work-with-contracts',
-            },
-            {
-                title: 'Work with waivers',
-                link: '/guides/waivers/work-with-waivers',
+                title: 'Multi-language support',
+                description: 'Offer booking form in multiple languages',
+                link: '/guides/booking-form/multi-language',
             },
         ],
     },
     {
-        title: 'Collaborate with the team',
-        icon: '',
+        title: 'Boats',
         links: [
             {
-                title: 'Invite team members',
-                link: '/guides/collaborate/invite-team-members',
+                title: 'Manage boats',
+                description: 'Add boats and configure their details',
+                link: '/guides/boats/manage-boats',
             },
             {
-                title: 'Roles and permissions',
-                link: '/guides/collaborate/roles-permissions',
+                title: 'Assign boats to docks',
+                description: 'Set which boats are available at each location',
+                link: '/guides/boats/assign-boats-to-docks',
+            },
+            {
+                title: 'Connect boats',
+                description: 'Link GPS trackers and IoT devices',
+                link: '/guides/boats/connect-boats',
+            },
+            {
+                title: 'Boat availability',
+                description: 'Set specific hours and schedules per boat',
+                link: '/guides/boats/boat-availability',
+            },
+            {
+                title: 'Maintenance mode',
+                description: 'Mark boats as out of service temporarily',
+                link: '/guides/boats/maintenance-mode',
+            },
+            {
+                title: 'Boat capacity',
+                description: 'Set passenger limits and weight restrictions',
+                link: '/guides/boats/boat-capacity',
             },
         ],
     },
     {
-        title: 'Dive deeper',
-        icon: '',
+        title: 'Customers',
         links: [
             {
-                title: 'API',
-                link: '/guides/dive-deeper/api',
+                title: 'Add customer',
+                description: 'Create customer profiles manually',
+                link: '/guides/customers/add-customer',
             },
             {
-                title: 'Advanced integration',
-                link: '/guides/dive-deeper/advanced-integration',
+                title: 'View customer history',
+                description: 'See all bookings and payments per customer',
+                link: '/guides/customers/view-customer-history',
             },
             {
-                title: 'Connect Google Analytics',
-                link: '/guides/dive-deeper/connect-google-analytics',
+                title: 'Anonymize customers',
+                description: 'Remove personal data for GDPR compliance',
+                link: '/guides/customers/anonymize-customers',
             },
             {
-                title: 'Custom booking conditions',
-                link: '/guides/dive-deeper/custom-booking-conditions',
+                title: 'Customer tags',
+                description: 'Organize customers with custom labels',
+                link: '/guides/customers/customer-tags',
+            },
+            {
+                title: 'Export customer data',
+                description: 'Download customer lists and history',
+                link: '/guides/customers/export-customer-data',
+            },
+            {
+                title: 'Customer loyalty',
+                description: 'Reward returning customers with discounts',
+                link: '/guides/customers/customer-loyalty',
             },
         ],
     },
 ];
 
 export default function Features(): ReactNode {
-    const topCategories = [
-        categories.find((c) => c.title === 'Day to day use'),
-        categories.find((c) => c.title === 'Manage bookings'),
-        categories.find((c) => c.title === 'Settings'),
-    ].filter(Boolean);
+    const [activeTab, setActiveTab] = useState(0);
+    const [direction, setDirection] = useState<'left' | 'right'>('right');
+
+    const handleTabClick = (newIndex: number) => {
+        setDirection(newIndex > activeTab ? 'left' : 'right');
+        setActiveTab(newIndex);
+    };
 
     return (
         <section className={styles.Root}>
@@ -260,28 +245,51 @@ export default function Features(): ReactNode {
                     Quick access to the most used sections
                 </p>
 
-                <div className={styles.CategoriesGrid}>
-                    {topCategories.map((category, index) => (
-                        <div key={index} className={styles.CategoryCard}>
-                            <div className={styles.CategoryHeader}>
-                                <h3 className={styles.CategoryTitle}>
-                                    {category.title}
-                                </h3>
-                            </div>
-                            <ul className={styles.CategoryLinks}>
-                                {category.links.slice(0, 4).map((link, linkIndex) => (
-                                    <li key={linkIndex}>
-                                        <Link
-                                            to={link.link}
-                                            className={styles.CategoryLink}
-                                        >
-                                            {link.title}
-                                        </Link>
-                                    </li>
+                <div className={styles.TabsContainer}>
+                    <div className={styles.TabsList}>
+                        {categories.map((category, index) => (
+                            <button
+                                key={index}
+                                onClick={() => handleTabClick(index)}
+                                className={`${styles.Tab} ${
+                                    activeTab === index ? styles.TabActive : ''
+                                }`}
+                            >
+                                {category.title}
+                            </button>
+                        ))}
+                    </div>
+
+                    <div className={styles.TabContent}>
+                        <div 
+                            key={activeTab} 
+                            className={`${styles.TabContentInner} ${
+                                direction === 'right' ? styles.SlideFromRight : styles.SlideFromLeft
+                            }`}
+                        >
+                            <div className={styles.LinksGrid}>
+                                {categories[activeTab].links.map((link, index) => (
+                                    <Link
+                                        key={index}
+                                        to={link.link}
+                                        className={styles.GuideLink}
+                                    >
+                                        <div>
+                                            <div className={styles.GuideLinkTitle}>
+                                                {link.title}
+                                            </div>
+                                            <div className={styles.GuideLinkDescription}>
+                                                {link.description}
+                                            </div>
+                                        </div>
+                                        <span className={styles.GuideLinkArrow}>
+                                            →
+                                        </span>
+                                    </Link>
                                 ))}
-                            </ul>
+                            </div>
                         </div>
-                    ))}
+                    </div>
                 </div>
 
                 <div className={styles.ViewMoreContainer}>
@@ -290,9 +298,7 @@ export default function Features(): ReactNode {
                         className={styles.ViewMoreButton}
                     >
                         View all guides
-                        <span className={styles.ViewMoreArrow}>
-                            →
-                        </span>
+                        <span className={styles.ViewMoreArrow}>→</span>
                     </Link>
                 </div>
             </div>
