@@ -25,6 +25,7 @@ Reach customers through hotels, campsites, tourism boards, and partner websites.
 ## How it works
 
 Each partner gets a unique trackable URL. When customers book through that URL, the system automatically:
+
 - Tags the booking with partner identifier
 - Applies partner-specific pricing (if configured)
 - Shows booking source in your dashboard
@@ -44,10 +45,12 @@ Build commission into retail rates so you receive your net rate automatically:
 **Example in Flexible pricing:**
 
 **Direct bookings:**
+
 - Base rate: Duration in hours × €50
 - Customer pays **€50/hour retail rate**
 
 **Partner bookings:**
+
 - Base rate: Duration in hours × €50
 - Additional charge: Duration in hours × €10
 - Condition: Booked via partner → "beachhotel"
@@ -87,6 +90,7 @@ Monitor conversion rates. If partner bookings drop significantly, retail rate mi
 ## Track partner performance
 
 Filter bookings by partner in [bookings overview](https://dashboard.letsbook.app/bookings):
+
 - Click filter → Partner → Select identifier
 - Export to Excel for analysis
 - Calculate actual net rates after commission
@@ -96,17 +100,20 @@ Identify which partnerships drive real value vs which ones just add complexity.
 ## Getting started
 
 **Before approaching partners:**
+
 - Calculate your required net rate per booking
 - Decide on commission structure (10-20% is typical starting point)
 - Set up tracking URLs (see [partner bookings setup](/guides/dive-deeper/partner-bookings))
 
 **First 2-3 partners:**
+
 - Start with standard pricing (no markup yet)
 - Test the tracking system
 - See actual booking volume
 - Calculate real commission costs
 
 **After proof of concept:**
+
 - Add partner-specific pricing for high-volume partners
 - Adjust commission levels based on booking value
 - Negotiate better terms with successful partners

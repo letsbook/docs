@@ -26,7 +26,8 @@ const categories: Category[] = [
             },
             {
                 title: 'Boat handout process',
-                description: 'Check customers in and hand out boats efficiently',
+                description:
+                    'Check customers in and hand out boats efficiently',
                 link: '/guides/day-to-day/boat-handout-process',
             },
             {
@@ -226,32 +227,48 @@ export default function Features(): ReactNode {
                     </div>
 
                     <div className={styles.TabContent}>
-                        <div 
-                            key={activeTab} 
+                        <div
+                            key={activeTab}
                             className={`${styles.TabContentInner} ${
-                                direction === 'right' ? styles.SlideFromRight : styles.SlideFromLeft
+                                direction === 'right'
+                                    ? styles.SlideFromRight
+                                    : styles.SlideFromLeft
                             }`}
                         >
                             <div className={styles.LinksGrid}>
-                                {categories[activeTab].links.map((link, index) => (
-                                    <Link
-                                        key={index}
-                                        to={link.link}
-                                        className={styles.GuideLink}
-                                    >
-                                        <div>
-                                            <div className={styles.GuideLinkTitle}>
-                                                {link.title}
+                                {categories[activeTab].links.map(
+                                    (link, index) => (
+                                        <Link
+                                            key={index}
+                                            to={link.link}
+                                            className={styles.GuideLink}
+                                        >
+                                            <div>
+                                                <div
+                                                    className={
+                                                        styles.GuideLinkTitle
+                                                    }
+                                                >
+                                                    {link.title}
+                                                </div>
+                                                <div
+                                                    className={
+                                                        styles.GuideLinkDescription
+                                                    }
+                                                >
+                                                    {link.description}
+                                                </div>
                                             </div>
-                                            <div className={styles.GuideLinkDescription}>
-                                                {link.description}
-                                            </div>
-                                        </div>
-                                        <span className={styles.GuideLinkArrow}>
-                                            →
-                                        </span>
-                                    </Link>
-                                ))}
+                                            <span
+                                                className={
+                                                    styles.GuideLinkArrow
+                                                }
+                                            >
+                                                →
+                                            </span>
+                                        </Link>
+                                    )
+                                )}
                             </div>
                         </div>
                     </div>

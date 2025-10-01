@@ -57,10 +57,12 @@ Stack multiple charges in one flexible pricing structure:
 **Base rate:** Duration in hours × €50
 
 **Additional charges:**
+
 - Early bird discount: Duration in hours × €-10 (condition: 30+ days ahead)
 - Last minute surcharge: Duration in hours × €15 (condition: under 24 hours)
 
 Result:
+
 - **30+ days ahead:** €40/hour (discount shows on booking)
 - **1-29 days ahead:** €50/hour (standard)
 - **Under 24 hours:** €65/hour (surcharge shows on booking)
@@ -72,11 +74,13 @@ Each charge has its own condition. System applies all matching charges automatic
 For percentage-based pricing, use **Advanced mode**:
 
 **15% early bird discount:**
+
 ```
 Duration in hours * Base price * -0.15
 ```
 
 **20% last minute surcharge:**
+
 ```
 Duration in hours * Base price * 0.20
 ```
@@ -86,6 +90,7 @@ Access advanced mode when setting up the charge formula. See [pricing formulas](
 ## Testing your setup
 
 Before going live:
+
 - Create test bookings at different advance times
 - Verify calculations match expected prices
 - Check booking form displays charges with correct names

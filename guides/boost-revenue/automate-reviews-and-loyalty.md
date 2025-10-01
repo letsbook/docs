@@ -31,6 +31,7 @@ Full list and setup: [edit customer notifications](/guides/settings/rental-setup
 Booking confirmed. Customer is excited and engaged. Great moment for add-ons.
 
 **Use cases:**
+
 - Upsell add-ons: "90% of customers add the drinks package"
 - Set expectations: "Here's what to expect on your trip"
 - Social proof: "Join 5,000+ happy customers this season"
@@ -44,6 +45,7 @@ Booking confirmed. Customer is excited and engaged. Great moment for add-ons.
 Customers check email before heading out. Perfect timing for practical info.
 
 **Use cases:**
+
 - Parking instructions and alternative routes
 - What to bring: "Bring: sunscreen, water, towels, ID, comfortable shoes"
 - Weather-specific tips: "Rain forecast - we provide rain gear" or "Sunny day - bring extra water"
@@ -58,6 +60,7 @@ Customers check email before heading out. Perfect timing for practical info.
 Best time to ask for reviews. Memory is fresh, emotions are positive, damage deposits returned.
 
 **Use cases:**
+
 - Request Google/TripAdvisor/Yelp review
 - Offer discount code for next booking as thank you
 - Collect feedback on experience
@@ -72,6 +75,7 @@ Create discount codes in [discount codes](/guides/boost-revenue/create-discount-
 They haven't booked in almost a year. Automated reminder with incentive brings them back.
 
 **Use cases:**
+
 - Seasonal angle: "Remember last summer? Book your 2025 trip now"
 - Exclusive offer: "We miss you! Here's 15% off as a welcome back gift"
 - New features: "We added sunset tours since your last visit"
@@ -85,6 +89,7 @@ They haven't booked in almost a year. Automated reminder with incentive brings t
 Booking canceled. Don't lose the customer forever.
 
 **Use cases:**
+
 - Sorry it didn't work out: "Book again anytime with 10% off: RAINCHECK10"
 - Collect feedback: "What made you cancel? Help us improve"
 - Stay connected: "Follow us on Instagram for seasonal deals and boat life inspiration"
@@ -95,6 +100,7 @@ Booking canceled. Don't lose the customer forever.
 ## Getting review links
 
 **Google Business:**
+
 1. Open your Google Business profile
 2. Go to "Ask for reviews"
 3. Copy short URL
@@ -109,11 +115,13 @@ Booking canceled. Don't lose the customer forever.
 ## Discount code strategy
 
 Fun, memorable codes work best: `SUMMER10`, `WELCOME15`, `NEXTTIME10`
+
 - Easy to remember and share
 - Clear value in the name
 - Track which campaigns drive bookings
 
 **Settings:**
+
 - Discount: 10-15% off
 - Usage limit: Unlimited for awareness campaigns, or 50-100 uses for scarcity
 - Expiry: 6-12 months for seasonal codes, 3 months for urgency
@@ -123,11 +131,13 @@ Create in [discount codes](/guides/boost-revenue/create-discount-codes-to-boost-
 ## Legal boundaries
 
 **Allowed:**
+
 - Discount for ANY review (positive or negative)
 - Thank you after review posted
 - Win-back offers
 
 **Not allowed:**
+
 - Payment for positive reviews only
 - Discount conditional on star rating
 - Fake reviews
