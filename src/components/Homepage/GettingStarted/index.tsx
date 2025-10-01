@@ -43,11 +43,18 @@ export default function GettingStarted(): ReactNode {
         <section className={styles.Root}>
             <div className="container">
                 <div className={styles.Content}>
+                    <div className={styles.ImageContent}>
+                        <img 
+                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop" 
+                            alt="Support team member" 
+                            className={styles.SupportImage}
+                        />
+                    </div>
+
                     <div className={styles.TextContent}>
                         <h2 className={styles.Title}>Our team is here to help</h2>
                         <p className={styles.Description}>
-                            Get answers from our support team who know Let's Book inside out. 
-                            We respond fast and help you get the most out of the platform.
+                            Get answers from our support team who know Let's Book inside out.
                         </p>
                         
                         <div className={styles.Actions}>
@@ -64,14 +71,6 @@ export default function GettingStarted(): ReactNode {
                                 Send email
                             </a>
                         </div>
-                    </div>
-
-                    <div className={styles.ImageContent}>
-                        <img 
-                            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop" 
-                            alt="Support team member" 
-                            className={styles.SupportImage}
-                        />
                     </div>
                 </div>
             </div>
