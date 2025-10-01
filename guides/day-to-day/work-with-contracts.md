@@ -1,6 +1,6 @@
 # Work with contracts
 
-Use our waiver integration to collect signatures on your rental agreement and other documents. If you have not set it up yet, start with the [setup guide](../settings/waivers/set-up-waivers.md).
+Use our waiver integration to collect signatures on your rental agreement and other documents. If you have not set it up yet, start with the [setup guide](/guides/settings/waivers/set-up-waivers).
 
 ## How it works for customers
 

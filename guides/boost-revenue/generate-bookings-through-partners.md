@@ -60,7 +60,7 @@ Build commission into retail rates so you receive your net rate automatically:
 
 **Standard rate + separate commission:** Keep retail rate the same for all channels. Customer pays €50, you receive €50, then invoice or pay partner €10 commission separately. Better conversion (lower price), more administrative work.
 
-**Discount codes:** Combine partner tracking with [discount codes](/guides/extra-revenue/discount-codes-and-coupon-setup). Give customers a discount while still tracking which partner sent them.
+**Discount codes:** Combine partner tracking with [discount codes](/guides/boost-revenue/create-discount-codes-to-boost-bookings). Give customers a discount while still tracking which partner sent them.
 
 ## Commission structure guidelines
 

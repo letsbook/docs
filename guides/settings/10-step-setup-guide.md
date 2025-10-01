@@ -79,7 +79,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 **Photography tip:** Great photos are crucial - they're often the deciding factor for customers choosing between rental options.
 
-**Need more details?** Check our comprehensive guides on [managing boats and fleet](boats/manage-boats.md) and [assigning boats to docks](boats/assign-boats-to-docks.md).
+**Need more details?** Check our comprehensive guides on [managing boats and fleet](/guides/settings/boats/manage-boats) and [assigning boats to docks](/guides/settings/boats/assign-boats-to-docks).
 
 ---
 
@@ -134,7 +134,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 **Consider your workflow:** Choose a method that fits your availability to review bookings and your customers' expectations.
 
-**Learn more:** See our detailed guide on [booking confirmation settings](rental-setups/booking-confirmation-settings.md)
+**Learn more:** See our detailed guide on [booking confirmation settings](/guides/settings/rental-setups/booking-confirmation-settings)
 
 ---
 
@@ -214,7 +214,7 @@ Once you're satisfied with your testing:
 
 1. **Add billing information** for your Let's Book account
 2. **Publish your setup** to make it live
-3. **[Add the booking form to your website](booking-form/add-to-website.mdxx)** - see our platform-specific guides
+3. **[Add the booking form to your website](/guides/settings/booking-form/add-to-website)** - see our platform-specific guides
 4. **Share your booking link** with potential customers
 
 ---
@@ -241,16 +241,16 @@ For more detailed information on specific features:
 
 **Fleet management:**
 
-- [Managing boats and fleet](boats/manage-boats.md) - Complete boat model setup and organization
-- [Assigning boats to docks](boats/assign-boats-to-docks.md) - Dock placement and boat movement
+- [Managing boats and fleet](/guides/settings/boats/manage-boats) - Complete boat model setup and organization
+- [Assigning boats to docks](/guides/settings/boats/assign-boats-to-docks) - Dock placement and boat movement
 
 **Website integration:**
 
-- [Add booking form to your website](booking-form/add-to-website.mdx) - General integration guide with platform-specific instructions
-- [Advanced integration options](../dive-deeper/advanced-integration.md) - Custom implementations
+- [Add booking form to your website](/guides/settings/booking-form/add-to-website) - General integration guide with platform-specific instructions
+- [Advanced integration options](/guides/dive-deeper/advanced-integration) - Custom implementations
 
 **Additional resources:**
 
-- [Set custom return URL](../dive-deeper/custom-return-url.md) - Redirect customers after booking
+- [Set custom return URL](/guides/dive-deeper/custom-return-url) - Redirect customers after booking
 
 _This guide covers the essential setup steps. For more detailed information on any specific feature, check out our comprehensive documentation or contact our support team._

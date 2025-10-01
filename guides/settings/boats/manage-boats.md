@@ -32,7 +32,7 @@ Use categories to organize different boat types when you have many models (e.g.,
 
 ## Managing individual boats
 
-After creating a boat model, set up the individual boats with unique names (like "Boat #1" or "Blue Thunder") and [assign them to specific docks](assign-boats-to-docks.md).
+After creating a boat model, set up the individual boats with unique names (like "Boat #1" or "Blue Thunder") and [assign them to specific docks](/guides/settings/boats/assign-boats-to-docks).
 
 ### Editing and removing boats
 

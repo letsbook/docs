@@ -18,14 +18,14 @@ Rental setup connects your components into working rental operations:
 
 ### Required components
 
-- **[Docks](manage-docks)** - Pickup and return locations
-- **[Boat models](../../boats/manage-boats)** - Types of boats customers can rent
+- **[Docks](/guides/settings/manage-docks)** - Pickup and return locations
+- **[Boat models](/guides/settings/boats/manage-boats)** - Types of boats customers can rent
 
 ### Connect to each dock-boat combination
 
-- **[Schedules](schedules)** - When boats are available for rental
-- **[Pricing](pricing)** - Rental rates and deposit structures
-- **[Confirmation methods](booking-confirmation-settings.md)** - How bookings get approved
+- **[Schedules](/guides/settings/rental-setups/schedules)** - When boats are available for rental
+- **[Pricing](/guides/settings/rental-setups/pricing)** - Rental rates and deposit structures
+- **[Confirmation methods](/guides/settings/rental-setups/booking-confirmation-settings)** - How bookings get approved
 - **[Notifications](https://dashboard.letsbook.app/notifications)** - Which emails customers receive (see [notification flows](https://support.letsbook.app/article/88-notifications))
 
 ### Optional extras
@@ -90,6 +90,6 @@ If you use WaiverForever integration, specify which waivers customers must sign 
 
 - **No availability showing?** Check that your rental method has an active time period covering today's date
 - **Wrong prices?** Verify the correct pricing structure is connected to your combination
-- **Missing boats?** Ensure boat models are assigned to the right docks via [boat management](../../boats/assign-boats-to-docks)
+- **Missing boats?** Ensure boat models are assigned to the right docks via [boat management](/guides/settings/boats/assign-boats-to-docks)
 
 Rental setup gives you complete control over how each dock-boat combination operates throughout the year. Start simple with one configuration, then add complexity as your business grows.

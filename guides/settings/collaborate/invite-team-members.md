@@ -1,6 +1,6 @@
 # Invite team members
 
-Invite new users from your [Users](https://dashboard.letsbook.aoo/users) page. Click Add, enter their email, and send.
+Invite new users from your [Users](https://dashboard.letsbook.app/users) page. Click Add, enter their email, and send.
 
 ![Add user dialog in the dashboard](graphics/add-user.png)
 

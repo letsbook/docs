@@ -1,6 +1,6 @@
 # Work with waivers
 
-Get every passenger to sign before they step aboard. If you have not set it up yet, start with the [setup guide](../settings/waivers/set-up-waivers.md).
+Get every passenger to sign before they step aboard. If you have not set it up yet, start with the [setup guide](/guides/settings/waivers/set-up-waivers).
 
 ## What customers see
 

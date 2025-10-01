@@ -65,7 +65,7 @@ Best time to ask for reviews. Memory is fresh, emotions are positive, damage dep
 **Example message:**
 "Loved your trip? Leave us a review on Google and get 10% off your next adventure: SUMMER10"
 
-Create discount codes in [coupon setup](/guides/extra-revenue/discount-codes-and-coupon-setup).
+Create discount codes in [discount codes](/guides/boost-revenue/create-discount-codes-to-boost-bookings).
 
 ## 50 weeks later: Win them back
 
@@ -118,7 +118,7 @@ Fun, memorable codes work best: `SUMMER10`, `WELCOME15`, `NEXTTIME10`
 - Usage limit: Unlimited for awareness campaigns, or 50-100 uses for scarcity
 - Expiry: 6-12 months for seasonal codes, 3 months for urgency
 
-Create in [discount codes](/guides/extra-revenue/discount-codes-and-coupon-setup).
+Create in [discount codes](/guides/boost-revenue/create-discount-codes-to-boost-bookings).
 
 ## Legal boundaries
 

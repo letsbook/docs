@@ -8,7 +8,7 @@ Get paid directly to your own payout account. Connect one of our supported Payme
 
 ## Connect your payment provider
 
-- Hook up Let's Book to [Stripe](./stripe.md) or [Mollie](./mollie.md).
+- Hook up Let's Book to [Stripe](/guides/settings/payments/stripe) or [Mollie](/guides/settings/payments/mollie).
 - Complete the onboarding with your business details and bank account.
 - Back in Let’s Book, set the payment provider to Stripe or Mollie and click Save.
 
