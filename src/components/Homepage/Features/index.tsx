@@ -40,19 +40,54 @@ const categories: Category[] = [
                 link: '/guides/day-to-day/blockout-periods',
             },
             {
-                title: 'Sync with personal calendar',
-                description: 'Connect your calendar to stay organized',
-                link: '/guides/day-to-day/sync-personal-calendar',
+                title: 'Work with waivers',
+                description: 'Collect digital signatures from customers',
+                link: '/guides/day-to-day/work-with-waivers',
             },
             {
-                title: 'Handle no-shows',
-                description: 'Manage customers who miss their booking',
-                link: '/guides/day-to-day/handle-no-shows',
+                title: 'Work with contracts',
+                description: 'Send and manage rental agreements',
+                link: '/guides/day-to-day/work-with-contracts',
             },
         ],
     },
     {
-        title: 'Manage bookings',
+        title: 'Boost revenue',
+        links: [
+            {
+                title: 'Set early bird and last minute pricing',
+                description: 'Optimize rates based on booking timing',
+                link: '/guides/boost-revenue/set-early-bird-and-last-minute-pricing',
+            },
+            {
+                title: 'Create discount codes',
+                description: 'Set up promo codes to boost bookings',
+                link: '/guides/boost-revenue/create-discount-codes-to-boost-bookings',
+            },
+            {
+                title: 'Sell add-ons and extras',
+                description: 'Increase revenue with additional services',
+                link: '/guides/boost-revenue/sell-add-ons-and-extras',
+            },
+            {
+                title: 'Offer memberships or subscriptions',
+                description: 'Create recurring revenue streams',
+                link: '/guides/boost-revenue/offer-memberships-or-subscriptions',
+            },
+            {
+                title: 'Shift booking fee',
+                description: 'Pass processing fees to customers',
+                link: '/guides/boost-revenue/shift-booking-fee',
+            },
+            {
+                title: 'Generate bookings through partners',
+                description: 'Expand reach with distribution partners',
+                link: '/guides/boost-revenue/generate-bookings-through-partners',
+            },
+        ],
+    },
+    {
+        title: 'Track bookings',
         links: [
             {
                 title: 'Add booking',
@@ -70,129 +105,24 @@ const categories: Category[] = [
                 link: '/guides/bookings/search-and-filter-bookings',
             },
             {
+                title: 'Booking statuses',
+                description: 'Understand different booking states',
+                link: '/guides/bookings/booking-statuses',
+            },
+            {
                 title: 'Export bookings',
                 description: 'Download booking data to CSV or Excel',
                 link: '/guides/bookings/export-bookings',
             },
             {
-                title: 'Process refunds',
-                description: 'Handle cancellations and refund payments',
-                link: '/guides/bookings/process-refunds',
-            },
-            {
-                title: 'Booking notifications',
-                description: 'Set up automated customer emails',
-                link: '/guides/bookings/booking-notifications',
+                title: 'Handle add-on orders',
+                description: 'Manage extras purchased with bookings',
+                link: '/guides/day-to-day/add-on-orders',
             },
         ],
     },
     {
-        title: 'Settings',
-        links: [
-            {
-                title: 'Manage docks',
-                description: 'Add and organize your rental locations',
-                link: '/guides/settings/manage-docks',
-            },
-            {
-                title: 'Understanding rental setup',
-                description: 'Configure which boats are available where',
-                link: '/guides/settings/understanding-rental-setup',
-            },
-            {
-                title: 'Booking and cancellation rules',
-                description: 'Set policies for reservations and refunds',
-                link: '/guides/settings/booking-cancellation-rules',
-            },
-            {
-                title: 'Configure pricing',
-                description: 'Set rental rates and seasonal pricing',
-                link: '/guides/settings/pricing',
-            },
-            {
-                title: 'Payment methods',
-                description: 'Connect Stripe and manage payments',
-                link: '/guides/settings/payment-methods',
-            },
-            {
-                title: 'Email templates',
-                description: 'Customize automated customer emails',
-                link: '/guides/settings/email-templates',
-            },
-        ],
-    },
-    {
-        title: 'Booking form',
-        links: [
-            {
-                title: 'Add to website',
-                description: 'Embed the booking form on your site',
-                link: '/guides/booking-form/add-to-website',
-            },
-            {
-                title: 'Alternatives',
-                description: 'Share direct links or use the widget',
-                link: '/guides/booking-form/alternatives',
-            },
-            {
-                title: 'Custom questions',
-                description: 'Collect additional customer information',
-                link: '/guides/booking-form/questions',
-            },
-            {
-                title: 'Match branding',
-                description: 'Style the form to match your website',
-                link: '/guides/booking-form/match-branding',
-            },
-            {
-                title: 'Form analytics',
-                description: 'Track conversions and drop-off rates',
-                link: '/guides/booking-form/form-analytics',
-            },
-            {
-                title: 'Multi-language support',
-                description: 'Offer booking form in multiple languages',
-                link: '/guides/booking-form/multi-language',
-            },
-        ],
-    },
-    {
-        title: 'Boats',
-        links: [
-            {
-                title: 'Manage boats',
-                description: 'Add boats and configure their details',
-                link: '/guides/boats/manage-boats',
-            },
-            {
-                title: 'Assign boats to docks',
-                description: 'Set which boats are available at each location',
-                link: '/guides/boats/assign-boats-to-docks',
-            },
-            {
-                title: 'Connect boats',
-                description: 'Link GPS trackers and IoT devices',
-                link: '/guides/boats/connect-boats',
-            },
-            {
-                title: 'Boat availability',
-                description: 'Set specific hours and schedules per boat',
-                link: '/guides/boats/boat-availability',
-            },
-            {
-                title: 'Maintenance mode',
-                description: 'Mark boats as out of service temporarily',
-                link: '/guides/boats/maintenance-mode',
-            },
-            {
-                title: 'Boat capacity',
-                description: 'Set passenger limits and weight restrictions',
-                link: '/guides/boats/boat-capacity',
-            },
-        ],
-    },
-    {
-        title: 'Customers',
+        title: 'Manage customers',
         links: [
             {
                 title: 'Add customer',
@@ -210,19 +140,54 @@ const categories: Category[] = [
                 link: '/guides/customers/anonymize-customers',
             },
             {
-                title: 'Customer tags',
-                description: 'Organize customers with custom labels',
-                link: '/guides/customers/customer-tags',
+                title: 'Sync with personal calendar',
+                description: 'Connect your calendar to stay organized',
+                link: '/guides/day-to-day/sync-personal-calendar',
             },
             {
-                title: 'Export customer data',
-                description: 'Download customer lists and history',
-                link: '/guides/customers/export-customer-data',
+                title: 'Automate reviews and loyalty',
+                description: 'Set up automated review requests',
+                link: '/guides/boost-revenue/automate-reviews-and-loyalty',
             },
             {
-                title: 'Customer loyalty',
-                description: 'Reward returning customers with discounts',
-                link: '/guides/customers/customer-loyalty',
+                title: 'Customer communication',
+                description: 'Send emails and notifications to customers',
+                link: '/guides/customers/add-customer',
+            },
+        ],
+    },
+    {
+        title: 'Rental setup',
+        links: [
+            {
+                title: '10 step setup guide',
+                description: 'Complete walkthrough to get started',
+                link: '/guides/settings/step-setup-guide',
+            },
+            {
+                title: 'Booking and cancellation rules',
+                description: 'Set policies for reservations and refunds',
+                link: '/guides/settings/booking-cancellation-rules',
+            },
+            {
+                title: 'Manage docks',
+                description: 'Add and organize your rental locations',
+                link: '/guides/settings/manage-docks',
+            },
+            {
+                title: 'Configure simultaneous pickup and return',
+                description: 'Allow multiple boats to start/end at once',
+                link: '/guides/settings/configure-simultaneous-pickup-return',
+            },
+            {
+                title: 'Create add-ons',
+                description: 'Set up extras customers can purchase',
+                link: '/guides/settings/create-add-ons',
+            },
+            {
+                title: 'Manage boats',
+                description: 'Add boats and configure their details',
+                link: '/guides/settings/boats/manage-boats',
             },
         ],
     },
