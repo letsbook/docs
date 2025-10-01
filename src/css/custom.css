@@ -149,5 +149,9 @@ body {
     }
 }
 
-/* Import footer styles */
-@import './footer.css';
+/**
+ * Smooth scrolling for all anchor links
+ */
+.docs-wrapper, .blog-wrapper {
+    scroll-behavior: smooth;
+}
