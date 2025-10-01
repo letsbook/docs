@@ -4,8 +4,6 @@ sidebar_position: 6
 
 # Generate bookings through partners
 
-> **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
-
 👉 **[Setup partner bookings](/guides/dive-deeper/partner-bookings)** | **[Pricing setup](https://dashboard.letsbook.app/pricing)**
 
 Get your booking form on partner websites. Track which bookings come from which partner and set partner-specific retail rates to build in commission.

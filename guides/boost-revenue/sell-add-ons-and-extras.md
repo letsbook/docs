@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # Sell add-ons and extras
 
-> **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
-
 👉 **[Create add-ons](https://dashboard.letsbook.app/add-ons/add)** | **[Setup guide](/guides/settings/create-add-ons)**
 
 Turn every booking into extra revenue. Drinks, safety gear, insurance, food - all automatically offered during checkout.
