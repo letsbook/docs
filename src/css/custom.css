@@ -152,6 +152,7 @@ body {
 /**
  * Smooth scrolling for all anchor links
  */
-.docs-wrapper, .blog-wrapper {
+.docs-wrapper,
+.blog-wrapper {
     scroll-behavior: smooth;
 }
