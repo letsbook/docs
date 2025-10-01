@@ -1,155 +1,166 @@
-# Leverage reviews for bookings
+# Automate reviews and loyalty
 
-> **⚠️ FIRST DRAFT** - This article needs review and refinement.
+> **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
 
-👉 **[Customize booking confirmation](https://dashboard.letsbook.app/settings/rental-setups/booking-confirmation)**
+👉 **[Manage notifications](https://dashboard.letsbook.app/notifications)** | **[Setup guide](/guides/settings/rental-setups/edit-customer-notifications)**
 
-Turn happy customers into marketing machines. Automatically request reviews after trips, then use those reviews to drive new bookings with targeted discount codes.
+Send the right message at the right time. Automated emails drive reviews, repeat bookings, and upsells without manual work.
 
-## Why reviews matter
+## Why email timing matters
 
-Boat rental is trust-based. Customers put safety and money in your hands. Reviews prove you deliver. More reviews = higher conversion rate = more bookings at same ad spend.
+Customers are most receptive at specific moments. Right after their trip for reviews. 6 hours before for practical info. 50 weeks later for rebooking. Automate these touchpoints once, benefit forever.
 
-## The review loop
+## Available notification triggers
 
-1. Customer completes trip
-2. Automatic email requests review
-3. They post review on Google/TripAdvisor/Facebook
-4. You send thank-you with discount code for next booking
-5. They share code with friends
-6. New bookings arrive
+**Email after the trip** - Strike while memory is fresh
+**Email 6h before pickup** - Last-minute practical info
+**Email after 50 weeks of inactivity** - Win back past customers
+**Email when confirmed** - Upsell opportunity
+**Email when canceled** - Keep the relationship alive
 
-## Setting up review requests
+Full list and setup: [edit customer notifications](/guides/settings/rental-setups/edit-customer-notifications)
 
-### Timing matters
+## After trip: Reviews and thank you
 
-Send review request 2-3 days after trip. Fresh memory, emotions settled, damage deposits returned.
+Best time to ask for reviews. Memory is fresh, emotions are positive, damage deposits returned.
 
-### Email automation
+**Use cases:**
+- Request Google/TripAdvisor/Facebook review
+- Offer discount code for next booking as thank you
+- Ask permission to use their photos in marketing
+- Collect feedback on experience
 
-Customize your post-booking emails in [customer notifications](/guides/settings/rental-setups/edit-customer-notifications).
+**Example message:**
+"Loved your trip? Leave us a review on Google and get 10% off your next adventure: THANKS-JOHN-2024"
 
-Add review request block with direct links to your review platforms.
+Create discount codes in [coupon setup](/guides/extra-revenue/discount-codes-and-coupon-setup).
 
-**Keep it short:**
-"Enjoyed your trip? Share your experience - takes 60 seconds."
+## 6 hours before: Last-minute details
 
-Include one-click links to:
-- Google Business
-- TripAdvisor
-- Facebook
-- Trustpilot (if applicable)
+Customers check email before heading out. Perfect timing for practical info and last-minute upsells.
 
-## Platforms that work
+**Use cases:**
+- Parking instructions and alternative routes
+- Weather update: "Sunny day - bring sunscreen!"
+- Last-minute add-on offer: "Add sunset snack package, just €15"
+- Merchandise preview: "Check out our new caps at the dock"
+- What to bring reminder: water, towels, ID
 
-### Google Business (highest priority)
-Shows in Google Maps and search results. Customers search "boat rental [location]" - your stars appear first.
+**Example message:**
+"Your boat is ready tomorrow! Park at lot B (see map). Don't forget sunscreen - it's going to be sunny. PS: We have cold drinks at the dock."
 
-Get Google Business link:
+## 50 weeks later: Win them back
+
+They haven't booked in almost a year. Automated reminder with incentive brings them back.
+
+**Use cases:**
+- Seasonal angle: "Remember last summer? Book your 2025 trip now"
+- Exclusive offer: "We miss you! Here's 15% off as a welcome back gift"
+- New features: "We added sunset tours since your last visit"
+- Referral ask: "Know someone who'd love a boat trip?"
+
+**Example message:**
+"Almost a year since your last trip! Ready to get back on the water? Book this month and save 15%: COMEBACK2025"
+
+## When confirmed: Upsells and prep
+
+Booking confirmed. Customer is excited and engaged. Great moment for add-ons and cross-sells.
+
+**Use cases:**
+- Upsell add-ons: "90% of customers add the drinks package"
+- Upgrade offer: "Premium boat available for just €20 more"
+- Set expectations: "Here's what to expect on your trip"
+- Social proof: "Join 5,000+ happy customers this season"
+
+**Example message:**
+"Booking confirmed! Most customers add our drinks package (beer, wine, soft drinks) for €25. Add now - can't be added later."
+
+## When canceled: Keep the relationship
+
+Booking canceled. Don't lose the customer forever.
+
+**Use cases:**
+- Sorry it didn't work out: "Book again anytime with 10% off: RAINCHECK10"
+- Collect feedback: "What made you cancel? Help us improve"
+- Alternative offer: "Can't make this date? We have availability next weekend"
+- Stay in touch: "We'll send you seasonal deals"
+
+**Example message:**
+"Sorry your plans changed! Your 10% discount is waiting when you're ready to reschedule: RAINCHECK10"
+
+## Getting review links
+
+**Google Business:**
 1. Open your Google Business profile
-2. Copy "Ask for reviews" short URL
-3. Add to email template
+2. Go to "Ask for reviews"
+3. Copy short URL
+4. Add as button in email
 
-### TripAdvisor (tourism focus)
-Tourist customers check TripAdvisor. Critical for vacation destinations.
+**TripAdvisor:** Get review link from business dashboard.
 
-### Facebook (local customers)
-Your local Facebook page builds community. Reviews appear to friends of reviewers.
+**Facebook:** Link to your page reviews section.
 
-### Industry platforms
-Depending on location:
-- GetYourGuide
-- Viator  
-- Local tourism sites
+## Discount code strategy
 
-## The discount code strategy
-
-Reward reviewers with discount for next booking. Two benefits: thank loyal customers AND create referral codes they share.
-
-### Automatic flow
-
-Use [custom return URL](/guides/dive-deeper/custom-return-url) on review platforms to redirect reviewers to thank-you page with personalized discount code.
-
-Or simpler: automated email after detecting new review (manual check).
-
-### Code structure
-
-**Personal codes** work best: `THANKS-JOHN-2024`
+Personal codes work best: `THANKS-JOHN-2024`
 - Customer feels special
-- You know who shared the code
-- Track which reviewers drive bookings
+- You track who shared the code
+- See which reviewers drive referrals
 
-Create in [discount codes setup](/guides/extra-revenue/discount-codes-and-coupon-setup).
+**Settings:**
+- Discount: 10-15% off
+- Usage limit: 5-10 uses (viral sharing)
+- Expiry: 6-12 months
 
-### Sweet spot discounts
+Create in [discount codes](/guides/extra-revenue/discount-codes-and-coupon-setup).
 
-10-15% off next booking for reviewer. Generous enough to feel appreciated, not so much it kills margins.
-
-**Usage limit:** 5-10 uses per code. They share with friends, you track viral effect.
-
-**Expiry:** 6-12 months. Long enough for realistic rebooking, short enough to create urgency.
-
-## Incentivizing reviews (legal boundaries)
+## Legal boundaries
 
 **Allowed:**
-- "Share your experience and get 10% off next trip"
 - Discount for ANY review (positive or negative)
-- Thank you gesture after review posted
+- Thank you after review posted
+- Win-back offers
 
-**Not allowed (in most jurisdictions):**
+**Not allowed:**
 - Payment for positive reviews only
-- Discount conditional on 5-star rating
-- Fake reviews (obviously)
+- Discount conditional on star rating
+- Fake reviews
 
-Check local regulations. Focus on quantity (more reviews) not manipulation (only good ones).
+Focus on quantity, not manipulation. Check local regulations.
 
-## Making reviews visible
+## Setting it up
 
-### On your website
-Embed review widgets showing latest reviews. Builds trust on your own site.
+1. Go to [manage notifications](https://dashboard.letsbook.app/notifications)
+2. Select your notification flow (or create new)
+3. Find the trigger you want to use
+4. Edit email content
+5. Add buttons for links (review platforms, discount codes, etc.)
+6. Save
 
-### In booking form
-Show star rating and review count in booking flow. [Style your booking form](/guides/settings/booking-form/match-branding) to include social proof.
-
-### In email campaigns
-Highlight great reviews in newsletters and promotional emails. "See why customers rate us 4.9/5 stars."
-
-## Handling negative reviews
-
-Respond publicly, fix privately.
-
-**Public response (within 24h):**
-"Thanks for feedback. We take this seriously. Please contact us at [email] to make things right."
-
-**Private outreach:**
-Solve the problem. Refund, free future booking, whatever makes sense. Many customers update reviews after good resolution.
-
-## Advanced: review-triggered campaigns
-
-Connect review platforms to email automation (via Zapier or similar):
-
-1. New 5-star review posted → Trigger email
-2. Email thanks reviewer with discount code
-3. Email asks permission to feature review in marketing
-4. Follow-up email 2 months later: "Ready to book again?"
-
-This requires technical setup but automates the entire review-to-rebooking loop.
-
-## Measuring impact
-
-Track in your booking notes:
-- How many customers came via review platform discovery
-- Discount code usage from reviewers
-- Conversion rate difference for listings with 50+ vs 10 reviews
-
-Most operators see 20-40% higher conversion rate once review count exceeds 50.
+Full customization guide: [edit customer notifications](/guides/settings/rental-setups/edit-customer-notifications)
 
 ## Getting started
 
-Start simple:
-1. Add review request to post-trip email (this week)
-2. Create reviewer discount codes (this week)  
-3. Thank reviewers manually with codes (this month)
-4. Automate once you prove the system works (next quarter)
+**Week 1:**
+- Set up "Email after trip" with review request
+- Get review platform links
+- Create first discount codes
+- Test emails
 
-Build review momentum now. Compounds over time.
+**Week 2:**
+- Add "6h before pickup" with practical info
+- Test parking instructions accuracy
+- Monitor open rates
+
+**Month 1:**
+- Activate "50 weeks inactivity" email
+- Track review rate
+- Monitor discount code usage
+- See which emails drive action
+
+**Quarter 1:**
+- Refine messaging based on results
+- Add upsell to confirmation email
+- Test different discount amounts
+
+Start simple. Add complexity once you see what works.

@@ -2,93 +2,111 @@
 
 > **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
 
-👉 **[Partner booking links](https://dashboard.letsbook.app/booking-form/integration-instructions)** | **[Partner guide](/guides/dive-deeper/partner-bookings)**
+👉 **[Setup partner bookings](/guides/dive-deeper/partner-bookings)** | **[Pricing setup](https://dashboard.letsbook.app/pricing)**
 
-Embed your booking form on partner websites. Track which bookings come from which partner and set partner-specific pricing.
+Get your booking form on partner websites. Track which bookings come from which partner and set partner-specific retail rates to build in commission.
 
 ## Why work with partners
 
-Reach customers through hotels, campsites, tourism boards, and partner websites. They send you bookings, you handle operations. Track performance per partner.
+Reach customers through hotels, campsites, tourism boards, and partner websites. They send bookings, you handle operations. Everyone wins when pricing reflects the channel.
 
-## Setting up partner bookings
+## Understanding pricing terms
 
-1. Go to [booking form settings](https://dashboard.letsbook.app/booking-form/integration-instructions)
-2. Toggle "Integrate on partner website" in step 2
-3. Enter unique partner identifier (e.g., partner name)
-4. Copy the generated link
-5. Share link and [embedding instructions](/guides/settings/booking-form/add-to-website) with partner
+**Retail rate:** The price customers pay when booking.
 
-Each partner gets their own trackable URL. System automatically tags bookings with partner identifier.
+**Net rate:** What you receive after partner commission.
 
-## Tracking partner performance
+**Commission:** Percentage the partner earns for referring the booking.
 
-See which partners drive bookings in [bookings overview](https://dashboard.letsbook.app/bookings):
+**Example:** €100 retail rate with 20% commission = €80 net rate for you, €20 commission for partner.
 
-- Click filter icon → Partner → Select identifier
-- View only that partner's bookings
-- Export to Excel for analysis
-- Open booking to see partner on booking details
+## How it works
 
-Compare conversion rates, booking values, and seasonal patterns per partner.
+Each partner gets a unique trackable URL. When customers book through that URL, the system automatically:
+- Tags the booking with partner identifier
+- Applies partner-specific pricing (if configured)
+- Shows booking source in your dashboard
+
+Full setup guide: [partner bookings](/guides/dive-deeper/partner-bookings)
 
 ## Setting partner-specific pricing
 
-Charge different rates per partner using flexible or slot pricing:
+Build commission into retail rates so you receive your net rate automatically:
 
-1. Go to your [pricing setup](https://dashboard.letsbook.app/pricing)
+1. Go to [pricing](https://dashboard.letsbook.app/pricing)
 2. Choose Slot pricing or Flexible pricing
-3. Add or edit a price rule
-4. Under Conditions, select "Booked via partner"
-5. Pick the partner identifier
-6. Save
+3. Add a condition: "Booked via partner"
+4. Select the partner identifier
+5. Set higher retail rate to include commission
 
-**Example setup:**
-- Base rate: €50/hour
-- Hotel partner condition: +€10/hour (20% markup built in)
-- Tourism board condition: +€7.50/hour (15% markup)
+**Example in Flexible pricing:**
 
-Partners see their specific pricing automatically. System applies correct rate based on booking source.
+**Direct bookings:**
+- Base rate: Duration in hours × €50
+- Customer pays **€50/hour retail rate**
 
-## Embedding options
+**Partner bookings:**
+- Base rate: Duration in hours × €50
+- Additional charge: Duration in hours × €10
+- Condition: Booked via partner → "beachhotel"
+- Customer pays **€60/hour retail rate**
+- You receive €60, keep €50 net rate, pay partner €10 commission
 
-**Standard embed:** Partner embeds your form using iframe. Works on any website. Full guide in [add booking form to website](/guides/settings/booking-form/add-to-website).
+## Pricing strategies
 
-**Branded embed:** Match partner's visual style. Customize colors, fonts, logo in [style booking form](/guides/settings/booking-form/match-branding).
+**Built-in commission (recommended):** Include commission in retail rate shown to customers. Customer pays €60, you keep €50 net rate, pay partner €10. Clean, automated, no invoicing hassle.
 
-**Direct link:** Share trackable URL instead of embedding. Partner links to your booking form. Still tracks booking source.
+**Standard rate + separate commission:** Keep retail rate the same for all channels. Customer pays €50, you receive €50, then invoice or pay partner €10 commission separately. Better conversion (lower price), more administrative work.
 
-## Partner pricing strategies
+**Discount codes:** Combine partner tracking with [discount codes](/guides/extra-revenue/discount-codes-and-coupon-setup). Give customers a discount while still tracking which partner sent them.
 
-**Built-in markup:** Include commission in displayed price. Customer sees one price, partner doesn't handle money. Simple for everyone.
+## Commission structure guidelines
 
-**Split payment:** Customer pays standard rate, you invoice partner separately for commission. Lower prices, better conversion. More admin.
+**20-30%:** Accommodations with captive audience (hotel guests, limited alternatives). Higher commission justified by exclusive access to customers.
 
-**Referral codes:** Combine partner links with [discount codes](/guides/extra-revenue/discount-codes-and-coupon-setup). Give customers discount while tracking source.
+**10-20%:** Tourism portals where customers comparison shop. Balance commission with competitive pricing.
+
+**5-15%:** Marinas and yacht clubs. Premium audience but price-aware, they'll compare options.
+
+Monitor conversion rates. If partner bookings drop significantly, retail rate might be too high relative to direct bookings.
 
 ## Best partner types
 
-**Accommodations:** Hotels, B&Bs, campsites near water. Guests already there, boat rental is convenient add-on.
+**Accommodations:** Hotels, B&Bs, campsites near water. Their guests need activities.
 
-**Tourism sites:** Official tourism boards, activity portals, regional information sites.
+**Tourism organizations:** Official boards, regional portals. High-intent customers researching activities.
 
-**Concierge services:** Yacht clubs, marinas, waterfront restaurants. Premium audience.
+**Marinas and yacht clubs:** Premium audience already on water.
 
-**Event planners:** Corporate events, team building, weddings. Group bookings.
+**Event planners:** Corporate retreats, team building, weddings. Group bookings.
 
-## Markup levels
+**Concierge services:** High-end hotels, restaurants. Customers expect curated recommendations.
 
-Test these ranges based on partner value:
+## Track partner performance
 
-**20-30%:** Accommodations with captive audience (hotel guests, limited alternatives)
+Filter bookings by partner in [bookings overview](https://dashboard.letsbook.app/bookings):
+- Click filter → Partner → Select identifier
+- Export to Excel for analysis
+- Calculate actual net rates after commission
 
-**10-20%:** Tourism portals with comparison shopping (customers browse multiple options)
+Identify which partnerships drive real value vs which ones just add complexity.
 
-**5-15%:** Marinas and yacht clubs (premium audience but price-sensitive)
+## Getting started
 
-Monitor conversion rates. Adjust if higher prices reduce bookings too much.
+**Before approaching partners:**
+- Calculate your required net rate per booking
+- Decide on commission structure (10-20% is typical starting point)
+- Set up tracking URLs (see [partner bookings setup](/guides/dive-deeper/partner-bookings))
 
-## Advanced options
+**First 2-3 partners:**
+- Start with standard pricing (no markup yet)
+- Test the tracking system
+- See actual booking volume
+- Calculate real commission costs
 
-Need more control? Check [custom integrations](/guides/dive-deeper/advanced-integration) for advanced partner setups.
+**After proof of concept:**
+- Add partner-specific pricing for high-volume partners
+- Adjust commission levels based on booking value
+- Negotiate better terms with successful partners
 
-Want partners to create bookings directly? See [partner dashboard access](/guides/dive-deeper/partner-bookings) for giving partners backend access at their commission rate.
+Don't overcomplicate at the start. Get a few partners working first, optimize later.
