@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Offer memberships or subscriptions
 
 Create different customer types with specific rules and privileges to offer membership programs. While payment processing happens outside the system, Let's Book gives you powerful tools to manage what each member type can access and book.

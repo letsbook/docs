@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Sell add-ons and extras
 
 > **⚠️ FIRST DRAFT** - Lola check deze nog even goed.

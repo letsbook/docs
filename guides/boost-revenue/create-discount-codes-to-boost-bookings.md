@@ -1,4 +1,8 @@
-# Discount codes and coupons setup
+---
+sidebar_position: 2
+---
+
+# Create discount codes to boost bookings
 
 Coupons are a great way to offer special deals or discounts to customers. You can create and manage [coupons](https://dashboard.letsbook.app/coupons) in the inventory section.
 

@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+---
+
 # Pass booking fees to customers
 
 Instead of absorbing platform fees yourself, you can now pass them directly to your customers. This gives you more control over your profit margins and pricing strategy.

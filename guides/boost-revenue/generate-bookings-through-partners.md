@@ -1,4 +1,8 @@
-# Third-party bookings and markup
+---
+sidebar_position: 6
+---
+
+# Generate bookings through partners
 
 > **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
 

@@ -1,4 +1,8 @@
-# Early bird and last minute pricing
+---
+sidebar_position: 5
+---
+
+# Set early bird and last minute pricing
 
 > **⚠️ FIRST DRAFT** - Lola check deze nog even goed.
 
