@@ -7,8 +7,6 @@ const SearchIcon = () => (
     </svg>
 );
 
-import MetaballsBackground from '../MetaballsBackground/MetaballsBackground';
-
 import styles from './styles.module.css';
 
 export default function Hero(): ReactNode {
@@ -23,7 +21,15 @@ export default function Hero(): ReactNode {
 
     return (
         <section className={styles.Root}>
-            <MetaballsBackground />
+            <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className={styles.VideoBackground}
+            >
+                <source src="/img/video_header.mp4" type="video/mp4" />
+            </video>
 
             <div className="container">
                 <div className={styles.HeaderContent}>
