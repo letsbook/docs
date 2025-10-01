@@ -1,6 +1,24 @@
 .Root {
     padding: 4rem 0;
-    background: #f8fafc;
+    background: #F7F8FE;
+    position: relative;
+    overflow: hidden;
+}
+
+.Root::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    width: 700px;
+    height: 340px;
+    background-image: url('/img/wiebertjes.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .SectionTitle {
@@ -16,6 +34,8 @@
     color: #081690;
     margin-bottom: 1rem;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 .SectionSubtitle {
@@ -27,6 +47,8 @@
 
 .TabsContainer {
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .TabsList {

@@ -26,6 +26,68 @@
     margin-bottom: 0.1rem;
 }
 
+.SearchContainer {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.SearchForm {
+    width: 100%;
+    max-width: 500px;
+}
+
+.SearchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.SearchWrapper svg {
+    position: absolute;
+    left: 1.375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.SearchWrapper::before {
+    content: '';
+    position: absolute;
+    left: 0.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.75rem;
+    height: 2.75rem;
+    background: #12c19b;
+    border-radius: 50%;
+}
+
+.SearchInput {
+    width: 100%;
+    padding: 1.125rem 1.5rem 1.125rem 4.25rem;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background: white;
+    color: #1e293b;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgba(8, 22, 144, 0.1);
+    height: 3.75rem;
+}
+
+.SearchInput::placeholder {
+    color: #94a3b8;
+}
+
+.SearchInput:focus {
+    outline: none;
+    border-color: #4d6dd9;
+    box-shadow: 0 8px 32px rgba(77, 109, 217, 0.2);
+}
+
 @media (max-width: 768px) {
     .Root {
         padding: 4rem 0;
