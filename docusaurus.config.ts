@@ -104,6 +104,7 @@ const config: Config = {
                 theme: {
                     customCss: [
                         './src/css/menu.css',
+                        './src/css/footer.css',
                         './src/css/content.css',
                         './src/css/custom.css',
                     ],

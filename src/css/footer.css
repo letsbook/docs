@@ -1,44 +1,43 @@
-/* Footer styling */
-footer.footer {
-    padding: 5rem 0 4rem 0 !important;
-    background: var(--ifm-color-primary) !important;
+.footer {
+    padding: 5rem 0 4rem 0;
+    background: var(--ifm-color-primary);
 }
 
 .footer__title {
-    margin-bottom: 1.5rem !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .footer__item {
-    line-height: 1.4 !important;
+    line-height: 1.4;
 }
 
 .footer__link-item {
-    display: inline-block !important;
-    padding: 0.5rem 1rem !important;
-    border-radius: 8px !important;
-    transition: background 0.2s ease !important;
-    background: transparent !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .footer__link-item:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: white !important;
-    text-decoration: none !important;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
 }
 
 .footer__bottom {
-    margin-top: 3rem !important;
-    padding-top: 2rem !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer__links {
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
 }
 
 .footer__col {
-    margin-bottom: 2rem !important;
+    margin-bottom: 2rem;
 }
