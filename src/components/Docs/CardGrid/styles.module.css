@@ -105,7 +105,7 @@ a.card {
 }
 
 [data-theme='dark'] .cardContent p {
-    color: var(--ifm-color-emphasis-700);
+    color: var(--ifm-color-emphasis-700, #b3b3b3);
 }
 
 /* Responsive adjustments */

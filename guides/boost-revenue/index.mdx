@@ -4,97 +4,81 @@ description: Smart strategies to maximize revenue from every booking
 sidebar_position: 0
 ---
 
-import styles from './index.module.css';
+import { CardGrid, CardLink } from '@site/src/components/Docs/CardGrid';
 
 # Boost revenue
 
 Smart tools to boost your bottom line. From add-ons to automation, everything you need to maximize revenue per booking.
 
-<div className={styles.cardGrid}>
-  <a href="./sell-add-ons-and-extras" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop" alt="Add-ons and extras" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Sell add-ons and extras</h3>
-        <p>Boost revenue 20-40% with drinks, gear, insurance, and services automatically offered at checkout</p>
-      </div>
-    </div>
-  </a>
+<CardGrid>
+  <CardLink
+    href="./sell-add-ons-and-extras"
+    imageSrc="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&auto=format&fit=crop"
+    imageAlt="Add-ons and extras"
+    title="Sell add-ons and extras"
+  >
+    Boost revenue 20-40% with drinks, gear, insurance, and services automatically offered at checkout
+  </CardLink>
 
-  <a href="./create-discount-codes-to-boost-bookings" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=800&auto=format&fit=crop" alt="Discount codes" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Create discount codes to boost bookings</h3>
-        <p>Drive bookings with coupons for early birds, seasonal deals, and partner promotions</p>
-      </div>
-    </div>
-  </a>
+<CardLink
+    href="./create-discount-codes-to-boost-bookings"
+    imageSrc="https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=800&auto=format&fit=crop"
+    imageAlt="Discount codes"
+    title="Create discount codes to boost bookings"
+>
+    Drive bookings with coupons for early birds, seasonal deals, and partner
+    promotions
+</CardLink>
 
-  <a href="./offer-memberships-or-subscriptions" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop" alt="Memberships" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Offer memberships or subscriptions</h3>
-        <p>Build recurring revenue with member-only rates, priority access, and exclusive perks</p>
-      </div>
-    </div>
-  </a>
+<CardLink
+    href="./offer-memberships-or-subscriptions"
+    imageSrc="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&auto=format&fit=crop"
+    imageAlt="Memberships"
+    title="Offer memberships or subscriptions"
+>
+    Build recurring revenue with member-only rates, priority access, and
+    exclusive perks
+</CardLink>
 
-  <a href="./automate-reviews-and-loyalty" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop" alt="Reviews and loyalty" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Automate reviews and loyalty</h3>
-        <p>Turn customers into repeat bookers with smart email timing and review incentives</p>
-      </div>
-    </div>
-  </a>
+<CardLink
+    href="./automate-reviews-and-loyalty"
+    imageSrc="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop"
+    imageAlt="Reviews and loyalty"
+    title="Automate reviews and loyalty"
+>
+    Turn customers into repeat bookers with smart email timing and review
+    incentives
+</CardLink>
 
-  <a href="./set-early-bird-and-last-minute-pricing" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop" alt="Dynamic pricing" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Set early bird and last minute pricing</h3>
-        <p>Reward early bookers with discounts and charge premium rates for last-minute bookings</p>
-      </div>
-    </div>
-  </a>
+<CardLink
+    href="./set-early-bird-and-last-minute-pricing"
+    imageSrc="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&auto=format&fit=crop"
+    imageAlt="Dynamic pricing"
+    title="Set early bird and last minute pricing"
+>
+    Reward early bookers with discounts and charge premium rates for last-minute
+    bookings
+</CardLink>
 
-  <a href="./generate-bookings-through-partners" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&auto=format&fit=crop" alt="Partner bookings" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Generate bookings through partners</h3>
-        <p>Reach customers through hotels and tourism sites with trackable booking links and partner pricing</p>
-      </div>
-    </div>
-  </a>
+<CardLink
+    href="./generate-bookings-through-partners"
+    imageSrc="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&auto=format&fit=crop"
+    imageAlt="Partner bookings"
+    title="Generate bookings through partners"
+>
+    Reach customers through hotels and tourism sites with trackable booking
+    links and partner pricing
+</CardLink>
 
-  <a href="./shift-booking-fee" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop" alt="Booking fees" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Pass booking fees to customers</h3>
-        <p>Protect your margins by automatically adding platform fees to customer checkout</p>
-      </div>
-    </div>
-  </a>
-</div>
+  <CardLink
+    href="./shift-booking-fee"
+    imageSrc="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop"
+    imageAlt="Booking fees"
+    title="Pass booking fees to customers"
+  >
+    Protect your margins by automatically adding platform fees to customer checkout
+  </CardLink>
+</CardGrid>
 
 ## Related areas
 

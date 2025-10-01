@@ -4,109 +4,69 @@ description: Essential tools and workflows for managing your daily rental operat
 sidebar_position: 1
 ---
 
-import styles from './index.module.css';
+import { CardGrid, CardLink } from '@site/src/components/Docs/CardGrid';
 
 # Day to day use
 
 Your daily command center. Quick access to the tools you use every day to run smooth operations.
 
-<div className={styles.cardGrid}>
-  <a href="./planning-overview" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src={require('./graphics/day-to-day/planning.png').default} alt="Planning overview" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Planning overview</h3>
-        <p>Real-time view of bookings, availability, and fleet status across your entire operation</p>
-      </div>
-    </div>
-  </a>
+<CardGrid>
+  <CardLink
+    href="./planning-overview"
+    imageSrc={require('./graphics/day-to-day/planning.png').default}
+    imageAlt="Planning overview"
+    title="Planning overview"
+  >
+    Real-time view of bookings, availability, and fleet status across your entire operation
+  </CardLink>
 
-<a href="./boat-handout-process" className={styles.card}>
-    <div className={styles.cardImage}>
-        <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
-            alt="Boat handout"
-        />
-    </div>
-    <div className={styles.cardBody}>
-        <div className={styles.cardContent}>
-            <h3>Boat handout process</h3>
-            <p>
-                Streamlined check-in and check-out workflow to get customers on
-                the water faster
-            </p>
-        </div>
-    </div>
-</a>
+<CardLink
+    href="./boat-handout-process"
+    imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+    imageAlt="Boat handout"
+    title="Boat handout process"
+>
+    Streamlined check-in and check-out workflow to get customers on the water
+    faster
+</CardLink>
 
-<a href="./blockout-periods" className={styles.card}>
-    <div className={styles.cardImage}>
-        <img
-            src={require('./graphics/day-to-day/blockout.png').default}
-            alt="Blockout periods"
-        />
-    </div>
-    <div className={styles.cardBody}>
-        <div className={styles.cardContent}>
-            <h3>Manage blockout periods</h3>
-            <p>
-                Pause availability for private events, closures, or seasonal
-                changes in seconds
-            </p>
-        </div>
-    </div>
-</a>
+<CardLink
+    href="./blockout-periods"
+    imageSrc={require('./graphics/day-to-day/blockout.png').default}
+    imageAlt="Blockout periods"
+    title="Manage blockout periods"
+>
+    Pause availability for private events, closures, or seasonal changes in
+    seconds
+</CardLink>
 
-<a href="./sales-insights" className={styles.card}>
-    <div className={styles.cardImage}>
-        <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
-            alt="Sales insights"
-        />
-    </div>
-    <div className={styles.cardBody}>
-        <div className={styles.cardContent}>
-            <h3>Sales insights</h3>
-            <p>
-                Track revenue, booking trends, and performance metrics at a
-                glance
-            </p>
-        </div>
-    </div>
-</a>
+<CardLink
+    href="./sales-insights"
+    imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+    imageAlt="Sales insights"
+    title="Sales insights"
+>
+    Track revenue, booking trends, and performance metrics at a glance
+</CardLink>
 
-<a href="./sync-personal-calendar" className={styles.card}>
-    <div className={styles.cardImage}>
-        <img
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
-            alt="Sync calendar"
-        />
-    </div>
-    <div className={styles.cardBody}>
-        <div className={styles.cardContent}>
-            <h3>Sync personal calendar</h3>
-            <p>
-                Connect your planning with Google Calendar or Outlook for
-                unified scheduling
-            </p>
-        </div>
-    </div>
-</a>
+<CardLink
+    href="./sync-personal-calendar"
+    imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+    imageAlt="Sync calendar"
+    title="Sync personal calendar"
+>
+    Connect your planning with Google Calendar or Outlook for unified scheduling
+</CardLink>
 
-  <a href="../bookings/export-bookings" className={styles.card}>
-    <div className={styles.cardImage}>
-      <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop" alt="Export bookings" />
-    </div>
-    <div className={styles.cardBody}>
-      <div className={styles.cardContent}>
-        <h3>Export bookings</h3>
-        <p>Download booking data for accounting, reporting, or external analysis</p>
-      </div>
-    </div>
-  </a>
-</div>
+  <CardLink
+    href="../bookings/export-bookings"
+    imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+    imageAlt="Export bookings"
+    title="Export bookings"
+  >
+    Download booking data for accounting, reporting, or external analysis
+  </CardLink>
+</CardGrid>
 
 ## Other essential guides
 
