@@ -148,3 +148,6 @@ body {
         --ifm-menu-color-background-active: var(--ifm-color-primary-dark);
     }
 }
+
+/* Import footer styles */
+@import './footer.css';
