@@ -37,7 +37,7 @@ export default function Hero(): ReactNode {
                 playsInline
                 className={styles.VideoBackground}
             >
-                <source src="/img/video_header.mp4" type="video/mp4" />
+                <source src="/video/video_header.mp4" type="video/mp4" />
             </video>
 
             <div className="container">
