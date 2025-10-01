@@ -34,18 +34,17 @@
 /**
  * Tweak the default header sizes
  */
-.markdown > h1 {
+.main-wrapper h1, .main-wrapper h1 {
     --ifm-h1-font-size: 2.25rem;
     margin-bottom: 1.5rem;
-    margin-top: 0.5rem;
 }
 
-.markdown > h2 {
+.main-wrapper h2 {
     --ifm-h2-font-size: 1.6rem;
     margin-bottom: 1.25rem;
 }
 
-.markdown > h3 {
+.main-wrapper h3 {
     --ifm-h3-font-size: 1.2rem;
     margin-bottom: 1rem;
 }
@@ -53,12 +52,12 @@
 /**
  * Button styles
  */
-.markdown a.button {
+.main-wrapper a.button {
     text-decoration: none;
     background: var(--ifm-color-primary);
 }
 
-.markdown a.button:hover {
+.main-wrapper a.button:hover {
     text-decoration: none;
     background: var(--ifm-color-primary-dark);
 }

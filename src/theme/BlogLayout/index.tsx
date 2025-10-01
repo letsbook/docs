@@ -8,7 +8,6 @@ import styles from './BlogLayout.module.css';
 
 export default function BlogLayout(props: Props): ReactNode {
     const { sidebar, toc, children, ...layoutProps } = props;
-    const hasSidebar = sidebar && sidebar.items.length > 0;
 
     return (
         <Layout {...layoutProps}>
@@ -16,12 +15,9 @@ export default function BlogLayout(props: Props): ReactNode {
                 <BlogSidebar sidebar={sidebar} />
 
                 <main className="container">
-                    <div
-                        className={clsx('col', styles.Content, {
-                            'col--7': hasSidebar,
-                            'col--9 col--offset-1': !hasSidebar,
-                        })}
-                    >
+                    <div className={styles.Content}>
+                        {!toc && <h1>Released versions</h1>}
+
                         {children}
                     </div>
 
