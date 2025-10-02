@@ -12,17 +12,7 @@ Track and manage add-on orders for fulfillment, reporting, and supplier reconcil
 
 ## Order overview
 
-See all upcoming add-on orders organized by day. Each order shows:
-
-- Time and customer details
-- Booking reference
-- Ordered add-ons with quantities
-
-**Use for:**
-
-- **Planning** - Complete view of all upcoming add-ons per day and in total
-- **Fulfillment** - Clear timeline of what needs to go out and when
-- **Reporting** - Easy validation and reconciliation with suppliers
+See all upcoming add-on orders by day, week or whatever works for you. Use this view to plan your day with a complete picture of what is coming up, coordinate fulfillment with a clear timeline of what goes out and when, and validate totals for easy reconciliation with suppliers.
 
 ## Filtering orders
 
@@ -40,19 +30,12 @@ Print order lists for staff fulfillment:
 
 - Select print destination and settings
 - Choose date range to print
-- Generate clear order lists for preparation teams
+- Hit the print button in your browser or just above the overview
 
 ## Exporting summaries
 
-Export order summaries with or without financial data:
+Export an Excel sheet order with summaries, with or without financial data. The Excel file contains the following information:
 
-- **Product summaries** - Total quantities per add-on item
-- **Category breakdowns** - Orders grouped by add-on category
-- **Financial reporting** - Include pricing for supplier reconciliation
-- **Monthly settlements** - Export data for supplier invoicing
-
-**Export formats:** Excel spreadsheets with customizable data fields
-
----
-
-_Use order exports for monthly reconciliation with add-on suppliers and internal reporting._
+:::info[Tip]
+Use order exports for monthly reconciliation with add-on suppliers and internal reporting.
+:::
