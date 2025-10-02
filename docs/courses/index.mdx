@@ -1,33 +1,135 @@
 ---
-id: index
-title: Courses overview
-sidebar_label: Overview
+title: Courses
+description: Master Let's Book with step-by-step video courses
 ---
 
-Add courses to train your team fast.
+import styles from './courses.module.css';
 
-- Browse step by step lessons
-- Track progress in your own workflow
-- Link straight to the dashboard so you can do, not just read
+<div className={styles.coursesHero}>
+  <div className={styles.heroContent}>
+    <h1>Master Let's Book</h1>
+    <p>Learn from real experts. Watch, follow along, and transform your rental operations.</p>
+  </div>
+</div>
 
-Quick links
+<div className={styles.coursesContainer}>
 
-- Dashboard home: https://dashboard.letsbook.app/
-- Bookings: https://dashboard.letsbook.app/bookings
-- Fleet: https://dashboard.letsbook.app/fleet
+<div className={styles.coursesGrid}>
 
-Get started
+<a href="./daily-operations-walkthrough" className={styles.courseCard}>
+  <div className={styles.courseImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&auto=format&fit=crop)'}}>
+    <div className={styles.playButton}>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95"/>
+        <path d="M26 20L42 32L26 44V20Z" fill="#081590"/>
+      </svg>
+    </div>
+    <div className={styles.courseMeta}>
+      <div className={styles.courseLevel}>Beginner</div>
+      <div className={styles.courseDuration}>10 min</div>
+    </div>
+  </div>
+  <div className={styles.courseContent}>
+    <h2>Daily operations walkthrough</h2>
+    <p>Quick tour of everything you do daily: bookings, planning, customer check-ins. Perfect for staff training.</p>
+  </div>
+</a>
 
-Open your first lesson below. Set it once, forget it exists like that gym membership you bought.
+<a href="./onboarding-guide" className={styles.courseCard}>
+  <div className={styles.courseImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=1600&auto=format&fit=crop)'}}>
+    <div className={styles.playButton}>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95"/>
+        <path d="M26 20L42 32L26 44V20Z" fill="#081590"/>
+      </svg>
+    </div>
+    <div className={styles.courseMeta}>
+      <div className={styles.courseLevel}>Beginner</div>
+      <div className={styles.courseDuration}>30 min</div>
+    </div>
+  </div>
+  <div className={styles.courseContent}>
+    <h2>Getting started guide</h2>
+    <p>From zero to first booking in 30 minutes. Add your fleet, configure pricing, accept your first booking.</p>
+  </div>
+</a>
 
-## Managing bookings like a pro
+<a href="./dock-host-operations" className={styles.courseCard}>
+  <div className={styles.courseImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&auto=format&fit=crop)'}}>
+    <div className={styles.playButton}>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95"/>
+        <path d="M26 20L42 32L26 44V20Z" fill="#081590"/>
+      </svg>
+    </div>
+    <div className={styles.courseMeta}>
+      <div className={styles.courseLevel}>Intermediate</div>
+      <div className={styles.courseDuration}>20 min</div>
+    </div>
+  </div>
+  <div className={styles.courseContent}>
+    <h2>Dock host operations</h2>
+    <p>Run a marina or dock with multiple boat owners. Master fleet management and multi-location operations.</p>
+  </div>
+</a>
 
-Read the lesson, then jump into the dashboard to do it for real.
+<a href="./seasonal-planning" className={styles.courseCard}>
+  <div className={styles.courseImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=1600&auto=format&fit=crop)'}}>
+    <div className={styles.playButton}>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95"/>
+        <path d="M26 20L42 32L26 44V20Z" fill="#081590"/>
+      </svg>
+    </div>
+    <div className={styles.courseMeta}>
+      <div className={styles.courseLevel}>Intermediate</div>
+      <div className={styles.courseDuration}>20 min</div>
+    </div>
+  </div>
+  <div className={styles.courseContent}>
+    <h2>Seasonal planning strategies</h2>
+    <p>Maximize revenue across seasons. Configure schedules, blockouts, seasonal pricing, and peak demand management.</p>
+  </div>
+</a>
 
-- Add a manual booking
-- Send a payment link
-- Mark a checkout complete
+<a href="./boat-club-setup" className={styles.courseCard}>
+  <div className={styles.courseImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1600&auto=format&fit=crop)'}}>
+    <div className={styles.playButton}>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95"/>
+        <path d="M26 20L42 32L26 44V20Z" fill="#081590"/>
+      </svg>
+    </div>
+    <div className={styles.courseMeta}>
+      <div className={styles.courseLevel}>Advanced</div>
+      <div className={styles.courseDuration}>20 min</div>
+    </div>
+  </div>
+  <div className={styles.courseContent}>
+    <h2>Boat club setup</h2>
+    <p>Configure memberships, internal bookings, member rates, and club-specific workflows for boat clubs.</p>
+  </div>
+</a>
 
-Next up
+<a href="./autonomous-operations" className={styles.courseCard}>
+  <div className={styles.courseImage} style={{backgroundImage: 'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop)'}}>
+    <div className={styles.playButton}>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="32" fill="white" fillOpacity="0.95"/>
+        <path d="M26 20L42 32L26 44V20Z" fill="#081590"/>
+      </svg>
+    </div>
+    <div className={styles.courseMeta}>
+      <div className={styles.courseLevel}>Advanced</div>
+      <div className={styles.courseDuration}>25 min</div>
+    </div>
+  </div>
+  <div className={styles.courseContent}>
+    <h2>Build autonomous operations</h2>
+    <p>Run a rental location with zero staff. Full automation: self-service bookings, payments, and remote access.</p>
+  </div>
+</a>
 
-Take lesson 2 when you are ready. Your customers will thank you and actually mean it this time.
+</div>
+
+</div>

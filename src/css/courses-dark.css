@@ -1,0 +1,67 @@
+/* TEMPORARY: Make everything blue until we can target courses specifically */
+body {
+  background: #081590;
+}
+
+.docs-wrapper {
+  background: #081590;
+}
+
+.main-wrapper {
+  background: #081590;
+}
+
+article[class*="theme-doc-markdown"] {
+  background: #081590;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Sidebar */
+.theme-doc-sidebar-container {
+  background: #050f6a;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu {
+  background: #050f6a;
+}
+
+.menu__link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.menu__link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.menu__link--active {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+article[class*="theme-doc-markdown"] h1 {
+  color: #ffffff;
+}
+
+article[class*="theme-doc-markdown"] h2,
+article[class*="theme-doc-markdown"] h3 {
+  color: #d1d4f2;
+}
+
+article[class*="theme-doc-markdown"] h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+article[class*="theme-doc-markdown"] a {
+  color: #12c19b;
+}
+
+article[class*="theme-doc-markdown"] strong {
+  color: #ffffff;
+}
+
+article[class*="theme-doc-markdown"] ul,
+article[class*="theme-doc-markdown"] ol {
+  color: rgba(255, 255, 255, 0.85);
+}
