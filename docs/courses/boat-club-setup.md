@@ -1,0 +1,50 @@
+---
+title: Boat club setup
+description: Configure memberships, internal bookings, and boat club workflows
+sidebar_position: 5
+---
+
+import CourseVideo from '@site/src/components/CourseVideo';
+
+# Boat club setup
+
+<CourseVideo videoId="VIDEO_ID_HERE" title="Boat club setup" />
+
+Running a boat club? Set up memberships, member-only rates, internal bookings, and club-specific workflows.
+
+## What you'll learn
+
+**Membership management** - Create and manage club memberships
+
+**Member-only pricing** - Special rates for members vs public
+
+**Internal booking system** - Members book directly through club portal
+
+**Priority access** - Give members first access to popular slots
+
+**Usage tracking** - Monitor member activity and boat usage
+
+**Club billing** - Membership fees and usage billing
+
+## Chapters
+
+- [0:00](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=0s) Boat club vs rental operation
+- [3:00](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=180s) Setting up membership tiers
+- [7:15](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=435s) Member-only pricing
+- [10:30](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=630s) Internal booking portal
+- [14:00](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=840s) Priority booking rules
+- [17:15](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=1035s) Usage tracking and reports
+- [20:00](https://www.youtube.com/watch?v=VIDEO_ID_HERE&t=1200s) Billing and subscriptions
+
+## Related guides
+
+Complete boat club configuration:
+
+- **[Memberships](/guides/boost-revenue/offer-memberships-or-subscriptions)** - Set up recurring memberships
+- **[Pricing strategies](/guides/settings/rental-pricing)** - Member vs public rates
+- **[Customer management](/guides/customers/add-customer)** - Member database
+- **[Choose the best plan](/guides/account/choose-best-plan)** - Custom boat club pricing
+
+## Questions?
+
+Contact [support@lets-book.com](mailto:support@lets-book.com) for custom boat club pricing and setup assistance.

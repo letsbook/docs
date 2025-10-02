@@ -1,0 +1,10 @@
+{
+  "label": "Courses",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "title": "Courses",
+    "description": "Video courses to master Let's Book",
+    "slug": "/courses"
+  }
+}

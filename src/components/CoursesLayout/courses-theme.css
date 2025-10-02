@@ -1,0 +1,75 @@
+.courses-theme-wrapper ~ div .docs-wrapper {
+  background: #081590 !important;
+}
+
+.courses-theme-wrapper ~ div .main-wrapper {
+  background: #081590 !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] {
+  background: #081590 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Sidebar */
+.courses-theme-wrapper ~ div .theme-doc-sidebar-container {
+  background: #050f6a !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.courses-theme-wrapper ~ div .menu {
+  background: #050f6a !important;
+}
+
+.courses-theme-wrapper ~ div .theme-doc-sidebar-menu .menu__link {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.courses-theme-wrapper ~ div .theme-doc-sidebar-menu .menu__link:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.courses-theme-wrapper ~ div .theme-doc-sidebar-menu .menu__link--active {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] h1 {
+  color: #ffffff !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] h2,
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] h3 {
+  color: #d1d4f2 !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] h2 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] a {
+  color: #12c19b !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] a:hover {
+  color: #14d9ae !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] strong {
+  color: #ffffff !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] ul,
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] ol {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.courses-theme-wrapper ~ div article[class*="theme-doc-markdown"] code {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #d1d4f2 !important;
+}

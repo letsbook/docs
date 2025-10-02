@@ -13,40 +13,58 @@ type Course = {
 
 const courses: Course[] = [
     {
-        title: "Let's Book Fundamentals",
+        title: 'Daily operations walkthrough',
         description:
-            "In this course you'll learn all the basic functions of Let's Book. From your first booking to setting up your payments.",
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
+            'Quick 10-minute tour of everything you do daily: bookings, planning, customer check-ins.',
+        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop',
         level: 'Beginner',
-        duration: '2h 15m',
-        slug: 'fundamentals',
+        duration: '10m',
+        slug: 'daily-operations-walkthrough',
     },
     {
-        title: 'Planning & Season Management',
+        title: 'Getting started guide',
         description:
-            'Optimize your planning for busy periods. Learn how to set seasonal rates and manage your fleet efficiently.',
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
-        level: 'Beginner - Intermediate',
-        duration: '1h 45m',
-        slug: 'planning',
-    },
-    {
-        title: 'Payments & Finance',
-        description:
-            'Manage your revenue professionally. From sending payment links to generating tax reports.',
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
+            'From zero to first booking in 30 minutes: setup, configuration, and going live.',
+        image: 'https://images.unsplash.com/photo-1551818255-e6e10975bc17?w=800&auto=format&fit=crop',
         level: 'Beginner',
-        duration: '3h 20m',
-        slug: 'payments',
+        duration: '30m',
+        slug: 'onboarding-guide',
     },
     {
-        title: 'Analytics & Growth',
+        title: 'Dock host operations',
         description:
-            'Use data to grow your business. Discover which boats are most popular and when you should expand.',
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
-        level: 'Beginner - Intermediate',
-        duration: '2h 5m',
-        slug: 'analytics',
+            'Run a marina or dock? Learn fleet management, multiple locations, and dock assignments.',
+        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&auto=format&fit=crop',
+        level: 'Intermediate',
+        duration: '20m',
+        slug: 'dock-host-operations',
+    },
+    {
+        title: 'Seasonal planning strategies',
+        description:
+            'Master schedules, blockouts, seasonal pricing, and managing high-demand periods.',
+        image: 'https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=800&auto=format&fit=crop',
+        level: 'Intermediate',
+        duration: '20m',
+        slug: 'seasonal-planning',
+    },
+    {
+        title: 'Boat club setup',
+        description:
+            'Configure memberships, internal bookings, member rates, and boat club workflows.',
+        image: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop',
+        level: 'Advanced',
+        duration: '20m',
+        slug: 'boat-club-setup',
+    },
+    {
+        title: 'Build autonomous operations',
+        description:
+            'Automate everything: self-service bookings, payments, check-ins, and remote boat access.',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
+        level: 'Advanced',
+        duration: '25m',
+        slug: 'autonomous-operations',
     },
 ];
 
