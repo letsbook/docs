@@ -10,7 +10,7 @@ Need to block your schedule for a few hours, days, or even months? With blockout
 
 ## What are blockout periods?
 
-Blockout periods temporarily remove availability from your booking system. You can block specific boats, entire docks, or your whole fleet for any time period - from minutes to months.
+Blockout periods temporarily remove availability from your booking system. You can block specific boats, entire docks, or your whole fleet for any time period (from minutes to months).
 
 **Common uses:**
 

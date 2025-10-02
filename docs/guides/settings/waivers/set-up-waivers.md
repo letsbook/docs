@@ -30,13 +30,8 @@ Pick the document and fine-tune:
 
 - **Title**: say it your way or add translations.
 - **Description**: we prefill it to save you time; tweak as needed.
-- **Who should sign**: Use "Primary renter" or "For every boat" when working with [contracts](../../day-to-day/work-with-contracts.md) and use "All passengers" or "unlimited" when working with [waivers](../../day-to-day/work-with-waivers.md).
+- **Who should sign**: Use "Primary renter" or "For every boat" when working with contracts and use "All passengers" or "unlimited" when working with waivers.
 
 :::info
 To collect a signature from every passenger, set your [boat model](https://dashboard.letsbook.app/models) to ask for passenger count. Not tracking headcount? Choose "Unlimited" for the document.
 :::
-
-### Next steps:
-
-- Learn how to [work with contracts](../../day-to-day/work-with-contracts.md).
-- Learn how to [work with waivers](../../day-to-day/work-with-waivers.md).

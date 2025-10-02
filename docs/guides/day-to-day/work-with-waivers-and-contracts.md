@@ -1,11 +1,12 @@
-# Work with contracts
+# Work with waivers and contracts
 
-Use our waiver integration to collect signatures on your rental agreement and other documents. If you have not set it up yet, start with the [setup guide](/guides/settings/waivers/set-up-waivers).
+Use the waiver integration to collect signatures on contracts, waivers, and other documents. If you have not set it up yet, start with the [setup guide](/guides/settings/waivers/set-up-waivers).
 
 ## How it works for customers
 
 - After payment, the renter lands on the booking details page.
-- The page shows a clear prompt to sign the contract.
+- The page shows a clear prompt to sign the contract or waiver.
+- Passengers get a direct link to the waiver.
 
 ![Screenshot of sign contract](graphics/sign-contract.png)
 
@@ -14,10 +15,12 @@ Use our waiver integration to collect signatures on your rental agreement and ot
 
 ## Track signatures in the dashboard
 
-Open any booking from the [Bookings overview](https://dashboard.letsbook.app/bookings) to see who signed the contract.
+Open any booking from the [Bookings overview](https://dashboard.letsbook.app/bookings) to see who has signed.
+
+For Unlimited, there is no progress indicator.
 
 :::info[Tip]
-Use the Document filter on the [Bookings overview](https://dashboard.letsbook.app/bookings) to find all bookings still awaiting signatures.
+Use the Document filter on the [Bookings overview](https://dashboard.letsbook.app/bookings) to find all bookings still awaiting signatures. This filter does not apply to Unlimited.
 :::
 
 If the customer arrives without signing, open the form for them with the "Show form" button. Or have them scan the QR code on their own device.
@@ -28,7 +31,7 @@ If the customer arrives without signing, open the form for them with the "Show f
 
 Right after booking, renters are excited. A short reminder helps.
 
-- Mention the rental agreement in your booking confirmation email.
+- Mention the rental agreement or waiver in your booking confirmation email.
 - Add a button that links to the booking details page. It always shows the latest signing status.
 
 Once this is in place, waivers are fully integrated into your Let's Book setup.

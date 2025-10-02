@@ -1,26 +1,20 @@
 ---
-title: Working with planning overview
 description: Navigate your daily operations using Timeline, Availability, and Fleet views
 sidebar_position: 1
+sidebar_label: Work with planning overview
 ---
 
-# Working with planning overview
+# Working with the planning overview
 
-The planning overview is your operational command center. It provides three different views to manage your daily bookings, monitor fleet status, and optimize availability across all your docks.
+Use the planning overview to run daily operations. Switch between three views to manage bookings, monitor your availability and manage your fleet.
 
 ## Accessing planning overview
 
 Go to your [planning overview](https://dashboard.letsbook.app/planning) to see all your operational views in one place. Use the date picker to jump to specific dates, navigate with arrow buttons for day-by-day browsing, or use quick shortcuts for "Today" and "Tomorrow".
 
-## View toggles
-
-Switch between the three planning views using the tabs:
-
-- **Timeline**: Detailed booking schedule view
-- **Availability**: Capacity utilization overview
-- **Fleet**: Individual boat status management
-
 ## The three views
+
+Switch between the three planning views using the tabs.
 
 ### Timeline view
 
@@ -30,8 +24,8 @@ Your detailed booking schedule showing exact trip timing and customer informatio
 
 **What you see:**
 
-- All bookings arranged chronologically across time slots
-- Customer names and booking details with member indicators
+- All bookings arranged chronologically by pickup time
+- Customer names and booking details with customer type indicators
 - Boat assignments and trip status with color-coded indicators:
     - **White/Default bars**: Standard confirmed bookings
     - **Green indicators**: On-time active trips
@@ -42,15 +36,19 @@ Your detailed booking schedule showing exact trip timing and customer informatio
 
 **Interactive features:**
 
-- Click on bookings to see full details and manage trips
+- Click on bookings to see full its details
 - Hover for quick booking information
 - Switch between Day, Week, and 30 Days view using the controls in bottom right
 - Use dock selector to filter by location (e.g., "Marina Bay", "Sunset Harbor", "Crystal Lake Marina", "South Dock") or select "All docks"
-- Filter by specific boat types using the boat model tabs
-- **Add booking**: Create new reservations directly from the planning view
+- Filter by specific boat types using the boat model buttons
+- **Add booking**: Create new bookings directly from the planning view
 - **Add blockout period**: Block availability for maintenance, events, or closures
 
 Perfect for tracking individual bookings throughout the day, managing customer service and special requests, coordinating multiple trips at once, and quickly identifying late returns or pick-ups.
+
+:::info[Tip]
+You can scroll horizontally by dragging or using the mouse wheel while holding down the shift button.
+:::
 
 ### Availability view
 

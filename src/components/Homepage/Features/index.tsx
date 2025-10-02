@@ -41,14 +41,9 @@ const categories: Category[] = [
                 link: '/guides/day-to-day/blockout-periods',
             },
             {
-                title: 'Work with waivers',
+                title: 'Work with waivers and contracts',
                 description: 'Collect digital signatures from customers',
-                link: '/guides/day-to-day/work-with-waivers',
-            },
-            {
-                title: 'Work with contracts',
-                description: 'Send and manage rental agreements',
-                link: '/guides/day-to-day/work-with-contracts',
+                link: '/guides/day-to-day/work-with-waivers-and-contracts',
             },
         ],
     },

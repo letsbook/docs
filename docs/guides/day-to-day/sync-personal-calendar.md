@@ -10,7 +10,7 @@ See your bookings automatically appear in your personal calendar by connecting L
 
 ## How it works
 
-Let's Book generates a unique calendar feed link for your account that syncs your booking schedule with your external calendar app. This is a view-only connection - you can see your bookings but cannot edit them from your personal calendar.
+Let's Book generates a unique calendar feed link for your account that syncs your booking schedule with your external calendar app. This is view-only. You can see your bookings but cannot edit them from your personal calendar.
 
 **What gets synced:**
 
@@ -53,7 +53,7 @@ Your bookings will appear within 12 hours.
 1. Open the Calendar app on your Mac
 2. Go to **File → New Calendar Subscription**
 3. Paste your Let's Book link and click **Subscribe**
-4. Choose a name, color, and refresh rate (recommend every 5 minutes)
+4. Choose a name, color, and refresh rate (set it to every 5 minutes)
 5. Click **OK**
 
 #### Apple Calendar (iPhone)
