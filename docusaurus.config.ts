@@ -218,8 +218,8 @@ const config: Config = {
                     position: 'left',
                 },
                 {
-                    type: 'docSidebar',
-                    sidebarId: 'coursesSidebar',
+                    // Prevent Docusaurus from auto-selecting the first sidebar item
+                    to: '/courses',
                     label: 'Courses',
                     position: 'left',
                 },
