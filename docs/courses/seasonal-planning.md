@@ -4,11 +4,11 @@ description: Master schedules, pricing, and high-demand period management
 sidebar_position: 4
 ---
 
-import CourseVideo from '@site/src/components/CourseVideo';
+import VideoPlayer from '@site/src/components/VideoPlayer';
 
 # Seasonal planning strategies
 
-<CourseVideo videoId="VIDEO_ID_HERE" title="Seasonal planning strategies" />
+<VideoPlayer videoId="VIDEO_ID_HERE" title="Seasonal planning strategies" />
 
 Maximize revenue across seasons. Configure schedules, blockouts, seasonal pricing, and handle peak demand like a pro.
 

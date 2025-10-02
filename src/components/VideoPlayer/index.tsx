@@ -1,12 +1,13 @@
 import React from 'react';
+
 import styles from './styles.module.css';
 
-interface CourseVideoProps {
+interface VideoPlayerProps {
     videoId: string;
     title: string;
 }
 
-export default function CourseVideo({ videoId, title }: CourseVideoProps) {
+export default function VideoPlayer({ videoId, title }: VideoPlayerProps) {
     return (
         <div className={styles.videoContainer}>
             <div className={styles.videoWrapper}>

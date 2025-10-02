@@ -218,7 +218,8 @@ const config: Config = {
                     position: 'left',
                 },
                 {
-                    to: '/courses',
+                    type: 'docSidebar',
+                    sidebarId: 'coursesSidebar',
                     label: 'Courses',
                     position: 'left',
                 },

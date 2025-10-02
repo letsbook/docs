@@ -4,11 +4,11 @@ description: Quick tour of your daily rental workflow
 sidebar_position: 1
 ---
 
-import CourseVideo from '@site/src/components/CourseVideo';
+import VideoPlayer from '@site/src/components/VideoPlayer';
 
 # Daily operations walkthrough
 
-<CourseVideo videoId="VIDEO_ID_HERE" title="Daily operations walkthrough" />
+<VideoPlayer videoId="VIDEO_ID_HERE" title="Daily operations walkthrough" />
 
 Everything you do daily in one 10-minute walkthrough. Perfect for staff training or quick refreshers.
 

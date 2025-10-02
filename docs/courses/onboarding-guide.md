@@ -4,11 +4,11 @@ description: From zero to first booking in 30 minutes
 sidebar_position: 2
 ---
 
-import CourseVideo from '@site/src/components/CourseVideo';
+import VideoPlayer from '@site/src/components/VideoPlayer';
 
 # Getting started guide
 
-<CourseVideo videoId="VIDEO_ID_HERE" title="Getting started guide" />
+<VideoPlayer videoId="VIDEO_ID_HERE" title="Getting started guide" />
 
 Complete onboarding in 30 minutes. Add your fleet, configure pricing, accept your first booking.
 

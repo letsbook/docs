@@ -4,11 +4,11 @@ description: Configure memberships, internal bookings, and boat club workflows
 sidebar_position: 5
 ---
 
-import CourseVideo from '@site/src/components/CourseVideo';
+import VideoPlayer from '@site/src/components/VideoPlayer';
 
 # Boat club setup
 
-<CourseVideo videoId="VIDEO_ID_HERE" title="Boat club setup" />
+<VideoPlayer videoId="VIDEO_ID_HERE" title="Boat club setup" />
 
 Running a boat club? Set up memberships, member-only rates, internal bookings, and club-specific workflows.
 

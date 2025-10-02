@@ -4,11 +4,11 @@ description: Multi-location fleet management for marinas and dock operators
 sidebar_position: 3
 ---
 
-import CourseVideo from '@site/src/components/CourseVideo';
+import VideoPlayer from '@site/src/components/VideoPlayer';
 
 # Dock host operations
 
-<CourseVideo videoId="VIDEO_ID_HERE" title="Dock host operations" />
+<VideoPlayer videoId="VIDEO_ID_HERE" title="Dock host operations" />
 
 Run a marina or dock with multiple boat owners? Learn fleet management, dock assignments, and multi-location operations.
 

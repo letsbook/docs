@@ -4,11 +4,11 @@ description: Automate bookings, payments, check-ins, and remote boat access
 sidebar_position: 6
 ---
 
-import CourseVideo from '@site/src/components/CourseVideo';
+import VideoPlayer from '@site/src/components/VideoPlayer';
 
 # Build autonomous operations
 
-<CourseVideo videoId="VIDEO_ID_HERE" title="Build autonomous operations" />
+<VideoPlayer videoId="VIDEO_ID_HERE" title="Build autonomous operations" />
 
 Run a rental location with zero staff. Full automation: online bookings, automatic payments, self-service check-ins, and remote boat access.
 
