@@ -43,10 +43,6 @@
 /**
  * Base styles
  */
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     word-wrap: normal;
 }
