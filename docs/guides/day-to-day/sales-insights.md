@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Track sales insights
 
-Turn your season into a scoreboard. The [Sales insights](https://dashboard.letsbook.app/sales) dashboard shows what’s working, what’s not, and what deserves a victory lap.
+Open [Sales insights](https://dashboard.letsbook.app/sales) to see what’s working and what needs attention. Turn your season into a simple scoreboard.
 
 ## Quick tour
 
@@ -16,7 +16,9 @@ Curious about every button, toggle, and gizmo? Start with the infographic below.
 
 ## Compare seasons
 
-Compare revenue year over year to see how this season stacks up against previous ones. Great for planning—better for winning.
+Compare revenue year over year to see how this season stacks up against previous ones. Great for planning. Better for winning.
+
+Example: Compare July this year to July last year to spot trends quickly.
 
 ## Admin-created bookings
 

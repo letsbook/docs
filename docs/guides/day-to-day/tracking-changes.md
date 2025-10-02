@@ -1,8 +1,9 @@
 # Track changes and activity
 
-Keep everyone on the same page without playing detective. Every booking has a timeline that shows exactly what changed, who changed it, and when it happened. No guesswork. No drama. Just facts.
+See exactly what changed on any booking. The timeline shows who changed it and when it happened. No guesswork. Just facts.
 
 The timeline shows:
+
 - Who made the change (teammate, customer, or system)
 - When it happened (date and time)
 - What changed (with the before and after where it matters)
@@ -20,7 +21,7 @@ See the full history for any booking in a few clicks.
 
 - **Booking created**: When a new booking is created from checkout, the dashboard or API.
 - **Booking expired**: When an unpaid booking reaches its expiration and auto-cancels.
-- **Booking recovered**: When an booking is paid after it expired, and there was still availability.
+- **Booking recovered**: When a booking is paid after it expired and there was still availability.
 - **Booking details updated**: When someone edits details like dock, boat, duration, etc.
 - **Booking confirmed**: When the booking is confirmed by full payment, or you mark it confirmed.
 - **Booking canceled**: When the booking is canceled by a teammate or the customer.
