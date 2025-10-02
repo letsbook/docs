@@ -213,8 +213,15 @@ const config: Config = {
                 },
                 {
                     type: 'docSidebar',
-                    sidebarId: 'docsSidebar',
+                    sidebarId: 'guidesSidebar',
                     label: 'Guides',
+                    position: 'left',
+                },
+                {
+                    type: 'docSidebar',
+                    docsPluginId: 'courses',
+                    sidebarId: 'coursesSidebar',
+                    label: 'Courses',
                     position: 'left',
                 },
                 {
