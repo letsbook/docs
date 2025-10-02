@@ -1,52 +1,31 @@
 # Track changes and activity
 
-See who changed a booking timeline image and when. This helps you spot whether a teammate or a customer updated it.
+Keep everyone on the same page without playing detective. Every booking has a timeline that shows exactly what changed, who changed it, and when it happened. No guesswork. No drama. Just facts.
+
+The timeline shows:
+- Who made the change (teammate, customer, or system)
+- When it happened (date and time)
+- What changed (with the before and after where it matters)
 
 ## Check activity on the booking
 
-https://dashboard.letsbook.app/bookings
+See the full history for any booking in a few clicks.
 
-1. Open the booking.
-2. Click Timeline.
-3. Hover any event to see who performed the action.
-4. Look for image related events like "Timeline image uploaded" or "Attachment replaced".
+1. Open the [booking overview](https://dashboard.letsbook.app/bookings).
+2. Find a booking and open it.
+3. Click the Timeline tab.
+4. Scroll to see every event in order, newest first.
 
-The actor label shows one of the following:
+## What is being tracked
 
-- Team member name
-- Customer name
-- System
-
-## View file history for bookingtimeline.png
-
-https://dashboard.letsbook.app/bookings/files
-
-1. Open the Files tab on the booking.
-2. Search for bookingtimeline.png.
-3. Click the file.
-4. Open the History panel.
-
-You see a list of versions with:
-
-- Who made the change
-- Customer or team role
-- Timestamp
-- Action, for example uploaded, replaced, or deleted
-
-Click any version to preview it.
-
-## Filter activity feed by images
-
-https://dashboard.letsbook.app/activity
-
-1. Open Activity.
-2. Set filters: Booking equals your booking code and Type equals Files.
-3. Apply the filter.
-
-Export the result as CSV if you need a record.
-
-## What if a customer changed it
-
-Customer actions are marked with a Customer badge next to the name. You also see the source, for example customer portal or email reply.
-
-If the change is not expected, click Revert in the file history to roll back to the previous version. The system records the revert as your action.
+- **Booking created**: When a new booking is created from checkout, the dashboard or API.
+- **Booking expired**: When an unpaid booking reaches its expiration and auto-cancels.
+- **Booking recovered**: When an booking is paid after it expired, and there was still availability.
+- **Booking details updated**: When someone edits details like dock, boat, duration, etc.
+- **Booking confirmed**: When the booking is confirmed by full payment, or you mark it confirmed.
+- **Booking canceled**: When the booking is canceled by a teammate or the customer.
+- **Booking completed**: When the rental ends and it auto-completes after the end time.
+- **Coupon attached to booking**: When a coupon code is applied to the booking.
+- **Coupon detached from booking**: When a coupon code is removed from the booking.
+- **Labels updated**: When booking labels are updated for this booking.
+- **Answers updated**: When custom question answers for the booking are changed.
