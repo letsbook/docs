@@ -22,6 +22,7 @@ Switch between Standard and Pro plans anytime:
 4. Confirm the change
 
 **What happens:**
+
 - New plan takes effect immediately
 - You're charged prorated amounts for the current billing period
 - Booking fees adjust to your new plan's rate
@@ -50,6 +51,7 @@ Need to cancel?
 4. Confirm cancellation
 
 **Important to know:**
+
 - You keep access until the end of your billing period
 - Your data stays available for 90 days after cancellation
 - Reactivate anytime during those 90 days
@@ -69,6 +71,7 @@ All your data, bookings, and settings are restored immediately.
 ## Questions about your subscription?
 
 Contact [support@lets-book.com](mailto:support@lets-book.com) for:
+
 - Custom pricing arrangements
 - Boat club pricing
 - Multiple location discounts

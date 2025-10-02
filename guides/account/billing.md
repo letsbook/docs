@@ -17,6 +17,7 @@ This article is temporary and waiting for input from Cox.
 When you go live, we meet to sign the contract and agree on which plan you'll start with. We set everything up, and from then on you receive monthly invoices via email.
 
 **You get two invoices each month:**
+
 - Invoice for your monthly subscription fee
 - €0 invoice with an overview of booking fees paid that month
 
@@ -33,6 +34,7 @@ Download past invoices for your records:
 ## Payment methods
 
 Pay with any supported payment method:
+
 - Credit card
 - Mobile Pay
 - iDEAL
@@ -71,6 +73,7 @@ We'll retry charging automatically. Your account stays active during retry attem
 ## Questions about billing?
 
 Contact [support@lets-book.com](mailto:support@lets-book.com) for:
+
 - Invoice questions
 - Payment issues
 - VAT documentation
