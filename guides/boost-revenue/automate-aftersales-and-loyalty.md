@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Automate reviews and loyalty
+# Automate aftersales and loyalty
 
 👉 **[Manage notifications](https://dashboard.letsbook.app/notifications)** | **[Setup guide](/guides/settings/rental-setups/edit-customer-notifications)**
 
