@@ -69,8 +69,8 @@ const config: Config = {
             'classic',
             {
                 docs: {
-                    path: 'guides',
-                    routeBasePath: 'guides',
+                    path: 'docs',
+                    routeBasePath: '',
                     sidebarPath: './sidebars.ts',
                     breadcrumbs: false,
                     editUrl:
@@ -219,7 +219,6 @@ const config: Config = {
                 },
                 {
                     type: 'docSidebar',
-                    docsPluginId: 'courses',
                     sidebarId: 'coursesSidebar',
                     label: 'Courses',
                     position: 'left',
