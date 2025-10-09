@@ -19,7 +19,7 @@ Coupons are a great way to offer special deals or discounts to customers. You ca
 
 Go to [add new coupon](https://dashboard.letsbook.app/coupons/add) and name your coupon.
 
-**Tip:** Use the title to briefly describe the discount. For example: "Summer discount 2024 - Mon & Tue -30%"
+**Tip:** Use the title to briefly describe the discount. For example: "Summer discount 2026 - Mon & Tue -30%"
 
 ### Choose coupon type
 
@@ -40,6 +40,8 @@ By default, coupons are always valid. However, you can add conditions to make th
 - **Days:** Restrict to certain weekdays (e.g., Monday-Tuesday only)
 - **Duration:** Set minimum or maximum trip lengths
 - **Exception dates:** Exclude specific dates when coupon shouldn't work
+
+![Add coupon](./graphics/add_coupon.gif)
 
 ## Step 2: Add coupon codes
 
@@ -64,6 +66,8 @@ After creating your coupon, you need to add the actual codes that customers will
 - Copy and paste multiple codes into text field
 - Gives you complete control over code format
 - Helpful for adding large numbers of codes
+
+![Generate coupon codes](./graphics/coupons_generate_codes.gif)
 
 ## Managing your coupons
 

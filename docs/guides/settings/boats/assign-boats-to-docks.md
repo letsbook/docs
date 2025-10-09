@@ -18,6 +18,8 @@ For efficiency when multiple boats of the same model need to go to the same dock
 4. Choose the dock where all boats of this model should be placed
 5. Set the date and time when this assignment takes effect
 
+![Batch assign boats to dock](../graphics/Batch_assign_to_docks.gif)
+
 ### Individual boat assignment
 
 For specific placement of individual boats:
@@ -26,6 +28,8 @@ For specific placement of individual boats:
 2. Navigate to the "Placement" section
 3. Set when and where the boat should be located
 4. View the complete timeline of the boat's scheduled locations
+
+![Add boat to dock](../graphics/add_boat_to_dock.gif)
 
 ## Managing boat placement
 
@@ -47,6 +51,8 @@ To schedule a boat relocation:
 3. Set the "From date" when the move should happen
 4. Choose the "Local time at dock" for the move
 5. Click "Add to timeline" to schedule the move
+
+![Move boat between docks](../graphics/move_boat.gif)
 
 **Important:** The boat remains available for booking at its original location until the scheduled move date and time.
 

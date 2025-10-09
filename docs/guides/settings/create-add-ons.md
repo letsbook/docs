@@ -12,6 +12,8 @@ Add-ons let customers enhance their trip with extras like drinks, snacks, equipm
 
 ## Setting up add-ons
 
+![Add add-on](./graphics/add_add_on.gif)
+
 ### Basic information
 
 **Name and descriptions:** Use clear names customers will recognize. The short description appears on overview pages, long description on detail pages.
@@ -54,7 +56,7 @@ Control when add-ons are available by setting conditions:
 
 **Category ordering:** Arrange categories to guide customers (essentials first, luxury items last).
 
-![Organizing add-ons](graphics/add-on-layouts.png)
+![Organizing add-ons](./graphics/add-on-layouts.png)
 
 ## Stock management
 

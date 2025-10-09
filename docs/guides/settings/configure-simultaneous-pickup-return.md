@@ -17,6 +17,8 @@ These limits apply to each departure time individually. If your rental setup all
 3. Click **Edit dock**
 4. Scroll down to the **Pickups and returns** section
 
+![Limit simultaneous pickups and returns](./graphics/limit_simultaneous.gif)
+
 ## Understanding the options
 
 ### Default behavior (unrestricted)

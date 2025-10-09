@@ -14,9 +14,11 @@ Answers are stored for up to 2 weeks after the trip.
 
 Go to [Booking Form > Additional questions > Add question](https://dashboard.letsbook.app/booking-form/additional-questions/add). Fill in:
 
-- The question.
-- Optional hint text (visible in the answer field).
+- The question (e.g., "Dietary requirements?")
+- Optional hint text visible in the answer field (e.g., "vegetarian, gluten-free")
 - Save.
+
+![Additional questions](../graphics/additional_questions.gif)
 
 ## Options
 

@@ -14,6 +14,14 @@ Set the calendar to match how you rent. Customers can still switch between singl
     - Primarily single day: Best if most bookings are hourly or same‑day.
     - Primarily multi day: Best for weekend or multi day charters.
 
+**Single day view:**
+
+![Single day picker](../graphics/single_day_picker.png)
+
+**Multi day view:**
+
+![Multi day picker](../graphics/multi_day_picker.png)
+
 ## Phone number
 
 Control whether customers must enter a phone number at checkout.
@@ -28,7 +36,7 @@ Control whether customers must enter a phone number at checkout.
 
 Set how prices appear to customers on the booking form.
 
-- Go to [Booking form > Pricing settings](https://dashboard.letsbook.app/booking-form/pricing)
+- Go to [Booking form > Pricing settings](https://dashboard.letsbook.app/booking-form/pricing-settings)
 - Choose how prices are displayed, then click Save
     - Including tax: Show prices with tax included everywhere while composing a booking. Easiest for most operators.
     - Excluding tax: Show prices before tax during booking. Customers see the final total, including tax, on the last step of the booking form. Often used by American companies.

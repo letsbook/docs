@@ -62,6 +62,8 @@ Limit how far ahead customers can book. Common settings: 30 days for seasonal op
 
 **Combining both:** Set a booking window, like "between 24 hours and 90 days in advance."
 
+![Customer conditions](./graphics/customer_conditions.gif)
+
 ## Configuring cancellation settings
 
 ### Basic cancellation control
@@ -74,6 +76,8 @@ Customize the message customers see when cancelling. Use this to explain your ca
 
 **Cancellation conditions (optional)**
 Set time requirements like minimum 24 hours notice before pickup.
+
+![Cancellation settings](./graphics/cancellation_settings.gif)
 
 ## Important notes
 

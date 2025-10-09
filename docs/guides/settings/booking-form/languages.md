@@ -8,11 +8,13 @@ We support virtually any left-to-right language for the booking form, so custome
 
 ## Adding a new language
 
-Go to [text & languages](https://dashboard.letsbook.app/localization) and open the My languages section to see what you’re using today. Click Add language. We provide 6 reviewed language packs and 5 AI-translated packs. AI packs are good, but not perfect; if you spot an error, tell us and we’ll fix it.
+Go to [text & languages](https://dashboard.letsbook.app/localization) and open the My languages section to see what you're using today. Click Add language. We provide 6 reviewed language packs and 5 AI-translated packs. AI packs are good, but not perfect; if you spot an error, tell us and we'll fix it.
 
-## Adding a language that’s not supported out of the box
+![Adding a language](../graphics/adding_language.gif)
 
-You can still do this, but you’ll need to translate the interface yourself using the overrides in our [modify texts and translations](texts-and-translations.md) guide.
+## Adding a language that's not supported out of the box
+
+You can still do this, but you'll need to translate the interface yourself using the overrides in our [modify texts and translations](texts-and-translations.md) guide.
 
 Choose a starting point for your translations when adding an unsupported language:
 

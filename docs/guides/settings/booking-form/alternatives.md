@@ -27,6 +27,8 @@ To enable, do this:
 1. Assign each [boat](https://dashboard.letsbook.app/models) to a category
 2. Enable [alternatives](https://dashboard.letsbook.app/booking-form/alternatives) for the categories that should suggest other models
 
+![Activate alternatives](../graphics/activate_alternatives.gif)
+
 Example: Put "Speedboats" together. If Speedboat X is booked at 2:00 PM, the system can suggest Speedboat Y at 2:00 PM.
 
 ## Turn alternatives off
