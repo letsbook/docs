@@ -45,7 +45,7 @@ export default function GettingStarted(): ReactNode {
                 <div className={styles.Content}>
                     <div className={styles.ImageContent}>
                         <img
-                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&auto=format&fit=crop"
+                            src="/img/support.jpg"
                             alt="Support team member"
                             className={styles.SupportImage}
                         />

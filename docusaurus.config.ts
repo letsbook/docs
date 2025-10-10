@@ -249,16 +249,20 @@ const config: Config = {
                     title: 'Documentation',
                     items: [
                         {
-                            label: 'Getting started guide',
-                            to: '/guides/get-started/step-setup-guide',
+                            label: 'Day to day use',
+                            to: '/guides/day-to-day',
                         },
                         {
-                            label: 'Planning overview',
-                            to: '/guides/day-to-day/planning-overview',
+                            label: 'Boost revenue',
+                            to: '/guides/boost-revenue',
                         },
                         {
-                            label: 'Manage bookings',
-                            to: '/guides/bookings/add-booking',
+                            label: 'Settings',
+                            to: '/guides/settings',
+                        },
+                        {
+                            label: 'Dive deeper',
+                            to: '/guides/dive-deeper',
                         },
                         {
                             label: 'All guides',
