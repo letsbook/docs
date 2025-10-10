@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+---
+
 # Track changes and activity
 
 See exactly what changed on any booking. The timeline shows who changed it and when it happened. No guesswork. Just facts.

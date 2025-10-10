@@ -22,7 +22,7 @@ Run daily operations fast. Jump straight to the tools you use all day.
 
     <CardLink
         href="./boat-handout-process"
-        imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+        imageSrc={require('./graphics/day-to-day/give_out.jpg').default}
         imageAlt=""
         title="Boat handout process"
     >
@@ -31,7 +31,8 @@ Run daily operations fast. Jump straight to the tools you use all day.
 
     <CardLink
         href="./add-on-orders"
-        imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+        imageSrc={require('./graphics/day-to-day/add_ons.jpg').default}
+        imageAlt=""
         title="Handle add-on orders"
     >
         Track add-on orders for fulfillment, simple reporting, and supplier reconciliation.
@@ -39,7 +40,7 @@ Run daily operations fast. Jump straight to the tools you use all day.
 
     <CardLink
         href="./blockout-periods"
-        imageSrc={require('./graphics/day-to-day/blockout.png').default}
+        imageSrc={require('./graphics/day-to-day/blockout.jpg').default}
         imageAlt=""
         title="Manage blockout periods"
     >
@@ -48,7 +49,7 @@ Run daily operations fast. Jump straight to the tools you use all day.
 
     <CardLink
         href="./sales-insights"
-        imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+        imageSrc={require('./graphics/day-to-day/sales_overview.jpg').default}
         imageAlt=""
         title="Sales insights"
     >
@@ -57,11 +58,29 @@ Run daily operations fast. Jump straight to the tools you use all day.
 
     <CardLink
         href="./sync-personal-calendar"
-        imageSrc="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop"
+        imageSrc={require('./graphics/day-to-day/sync_planning.jpg').default}
         imageAlt=""
         title="Sync personal calendar"
     >
         Sync planning with your calendar for quick, offline access.
+    </CardLink>
+
+    <CardLink
+        href="./work-with-waivers-and-contracts"
+        imageSrc={require('./graphics/day-to-day/sign_waver.jpg').default}
+        imageAlt=""
+        title="Work with waivers and contracts"
+    >
+        Set up liability waivers and rental contracts for customers to sign before trips.
+    </CardLink>
+
+    <CardLink
+        href="./tracking-changes"
+        imageSrc={require('./graphics/day-to-day/team_roles.jpg').default}
+        imageAlt=""
+        title="Track changes with team roles"
+    >
+        See who made changes to bookings and keep your team accountable.
     </CardLink>
 
 </CardGrid>
@@ -70,14 +89,12 @@ Run daily operations fast. Jump straight to the tools you use all day.
 
 Looking for something else? Here are other important areas of the documentation:
 
-- **[Bookings](../bookings/add-booking)** - Add, edit, cancel bookings and manage learn about booking statuses
+- **[Bookings](./bookings/add-booking)** - Add, edit, cancel bookings and learn about booking statuses
+- **[Customers](./customers/add-customer)** - Add customers, view history, and manage notifications
 - **[Boats](../settings/boats/manage-boats)** - Manage your fleet, connect hardware, and assign boats to docks
 - **[Settings](../settings/rental-setups/understanding-rental-setup)** - Configure pricing, schedules, cancellation rules, and rental methods
 - **[Booking form](../settings/booking-form/add-to-website)** - Customize your booking form, add it to your website, and match your branding
-- **[Customers](../customers/add-customer)** - Add customers, view history, and manage notifications
 - **[Payments](../settings/payments/receive-payments)** - Set up Stripe or Mollie and manage payment flows
 - **[Add-ons](../settings/create-add-ons)** - Create and manage extra services and products
 - **[Boost revenue](../boost-revenue)** - Discount codes, memberships, and booking fee strategies
 - **[Dive deeper](../dive-deeper/api)** - Advanced features like API access, formulas, and custom integrations
-- **[Waivers](./work-with-waivers-and-contracts)** - Set up liability waivers and (rental) contracts
-- **[Add-on orders](./add-on-orders)** - Manage add-on orders and inventory

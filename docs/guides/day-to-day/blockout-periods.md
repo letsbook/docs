@@ -1,7 +1,7 @@
 ---
 title: Manage blockout periods
 description: Block your schedule for private events, closures, or to pause availability
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 # Manage blockout periods

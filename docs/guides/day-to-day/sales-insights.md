@@ -1,7 +1,7 @@
 ---
 title: Track sales insights
 description: Turn your season into a scoreboard with sales analytics
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 # Track sales insights
@@ -12,7 +12,7 @@ Open [Sales insights](https://dashboard.letsbook.app/sales) to see what’s work
 
 Curious about every button, toggle, and gizmo? Start with the infographic below.
 
-![Screenshot of the Sales insights dashboard](graphics/sales-insights.png)
+![Screenshot of the Sales insights dashboard](graphics/day-to-day/sales_overview.jpg)
 
 ## Compare seasons
 

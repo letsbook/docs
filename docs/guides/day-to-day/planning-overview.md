@@ -1,6 +1,6 @@
 ---
 description: Navigate your daily operations using Timeline, Availability, and Fleet views
-sidebar_position: 1
+sidebar_position: 3
 sidebar_label: Work with planning overview
 ---
 

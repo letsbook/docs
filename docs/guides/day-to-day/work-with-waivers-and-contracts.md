@@ -1,3 +1,7 @@
+---
+sidebar_position: 9
+---
+
 # Work with waivers and contracts
 
 Use the waiver integration to collect signatures on contracts, waivers, and other documents. If you have not set it up yet, start with the [setup guide](/guides/settings/waivers/set-up-waivers).
