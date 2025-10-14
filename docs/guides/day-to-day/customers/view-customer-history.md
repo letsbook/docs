@@ -25,3 +25,8 @@ In the customer profile, use the dropdown to filter bookings:
 - **Upcoming** - Shows future bookings only
 
 Each booking shows dates, booking details, and current status. Booking records are kept for at least 3 years.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/customer_history.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>

@@ -21,6 +21,11 @@ When bookings are about to start (approximately 30 minutes before departure), yo
 
 This method efficiently assigns boats based on what's physically available. It's typically used by dock hosts managing multiple departures.
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/start_trip_method1.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ### Method 2: From booking details
 
 Use this when customers arrive and you want to look up their specific booking first:
@@ -30,6 +35,11 @@ Use this when customers arrive and you want to look up their specific booking fi
 3. Click **"Claim a boat"** to see available boats
 4. Select the boat from the dropdown list
 5. Click **Start trip** when customer departs
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/start_trip_method2.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Managing active trips
 
@@ -42,10 +52,20 @@ Once boats are assigned and trips are running, you have several control options:
 - **Pause trip:** Temporarily pause for lunch breaks, fuel stops, or other interruptions
 - **End trip:** Complete the rental and release the boat
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/switch_boat.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ### From fleet overview
 
 - **Stop button:** End any active trip directly from the fleet view
 - **Status monitoring:** See which boats are in use, available, along with which booking is assigned to each boat and expected return times
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/stop_trip.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Connected fleet features
 

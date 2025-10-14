@@ -9,6 +9,11 @@ sidebar_position: 5
 3. Set your filters to select exactly what you want to export
 4. The export will download as an Excel file (.xlsx)
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/export_bookings.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Using filters for exports
 
 You can use the same filters for exports as you can for the regular bookings overview.

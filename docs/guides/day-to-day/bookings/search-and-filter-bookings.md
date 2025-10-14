@@ -24,6 +24,11 @@ There are two ways to quickly find a specific booking in LetsBook:
 
 You can search by customer name or booking ID. The system shows results as you type.
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/find_booking.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Filtering bookings
 
 To filter your bookings, click the filter icon on the Bookings page. This opens the filter options where you can refine your results.
@@ -67,3 +72,8 @@ By default, bookings with "Confirmed" and "Completed" status are pre-selected, b
 ### Active filters
 
 Applied filters appear as blue tags below the filter options. You can remove individual filters by clicking the 'x' on each tag.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/filter_bookings.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>

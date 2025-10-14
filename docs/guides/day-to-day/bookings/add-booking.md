@@ -14,6 +14,11 @@ sidebar_position: 1
 - Existing customer? Type their name and select
 - New customer? Click **Add New customer**
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/add_customer.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Step 3: Fill booking details
 
 Fill in date, boat, duration, and extras.
@@ -24,7 +29,12 @@ By default, you follow the same rules as customers (availability, duration limit
 - **Ignore settings** - Book with different pick-up times or durations than allowed
 - **Ignore availability** - Place bookings even when no boats are available
 - **Ignore cost changes** - Skip automatic price calculations
-  :::
+:::
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/ignore_settings.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Step 4: Check and adjust
 
@@ -43,3 +53,8 @@ You'll find these confirmation options:
   :::
 
 **What happens next:** Your booking appears instantly in the overview. You can immediately edit details, add notes, or send payment requests.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/check_and_confirm.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
