@@ -152,3 +152,29 @@ body {
 .blog-wrapper {
     scroll-behavior: smooth;
 }
+
+/**
+ * Custom button styling for CTA buttons in docs
+ */
+.button-container {
+    margin: 2rem 0;
+}
+
+.button-container .button--primary {
+    background: var(--ifm-color-primary);
+    color: white;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.15s ease;
+}
+
+.button-container .button--primary:hover {
+    background: var(--ifm-color-primary-dark);
+    color: white;
+    text-decoration: none;
+}
