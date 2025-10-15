@@ -34,6 +34,11 @@ Let's Book generates a unique calendar feed link for your account that syncs you
 4. Toggle **"Enabled"** for your business
 5. Copy the generated calendar link
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/sync_calendar.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ### Step 2: Add to your calendar app
 
 Choose your calendar app below:

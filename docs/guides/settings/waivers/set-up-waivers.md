@@ -22,7 +22,10 @@ Now decide when renters see the document.
 1. Open [Rental Setup](https://dashboard.letsbook.app/rental-setup) and select the dock and boat model.
 1. Link the WaiverForever document to that combination.
 
-![Screenshot of how to link waivers](graphics/link-documents.png)
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/waiver_connect.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Configure how it is used
 

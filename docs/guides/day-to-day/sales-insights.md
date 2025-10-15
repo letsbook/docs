@@ -12,7 +12,7 @@ Open [Sales insights](https://dashboard.letsbook.app/sales) to see what’s work
 
 Curious about every button, toggle, and gizmo? Start with the infographic below.
 
-![Screenshot of the Sales insights dashboard](graphics/day-to-day/sales_overview.jpg)
+![Screenshot of the Sales insights dashboard](./graphics/sales-insights.png)
 
 ## Compare seasons
 
