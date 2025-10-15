@@ -55,6 +55,11 @@ Click on a combination to set up:
 
 Save your configuration and test the booking form to ensure everything works correctly.
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/rental_setup.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Advanced features
 
 ### Transition periods
