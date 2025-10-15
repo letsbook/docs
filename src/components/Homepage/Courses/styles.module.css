@@ -25,13 +25,34 @@
     margin-bottom: 3rem;
 }
 
-.CoursesGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+.SliderContainer {
+    position: relative;
+    margin: 0 auto 3rem;
+    padding: 0 60px;
+}
+
+.SliderTrack {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+}
+
+.SliderTrack::-webkit-scrollbar {
+    display: none;
+}
+
+.SliderTrack:active {
+    cursor: grabbing;
 }
 
 .CourseCard {
+    flex: 0 0 400px;
+    max-width: 400px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     overflow: hidden;
@@ -44,21 +65,14 @@
 }
 
 .CourseCard:hover {
-    transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(18, 193, 155, 0.3);
 }
 
 .CourseImage {
-    height: 200px;
+    height: 180px;
     position: relative;
     overflow: hidden;
-}
-
-.CourseImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .CourseImage::before {
@@ -68,12 +82,43 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(8, 22, 144, 0.3) 0%,
-        rgba(18, 193, 155, 0.3) 100%
-    );
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
     z-index: 1;
+}
+
+.CourseCard:nth-child(1) .CourseImage::before {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+}
+
+.CourseCard:nth-child(2) .CourseImage::before {
+    background: linear-gradient(135deg, rgba(240, 147, 251, 0.85) 0%, rgba(245, 87, 108, 0.85) 100%);
+}
+
+.CourseCard:nth-child(3) .CourseImage::before {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.85) 0%, rgba(0, 242, 254, 0.85) 100%);
+}
+
+.CourseCard:nth-child(4) .CourseImage::before {
+    background: linear-gradient(135deg, rgba(67, 233, 123, 0.85) 0%, rgba(56, 249, 215, 0.85) 100%);
+}
+
+.CourseCard:nth-child(5) .CourseImage::before {
+    background: linear-gradient(135deg, rgba(250, 112, 154, 0.85) 0%, rgba(254, 225, 64, 0.85) 100%);
+}
+
+.CourseCard:nth-child(6) .CourseImage::before {
+    background: linear-gradient(135deg, rgba(48, 207, 208, 0.85) 0%, rgba(51, 8, 103, 0.85) 100%);
+}
+
+.CourseImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.CourseCard:hover .CourseImage img {
+    transform: scale(1.05);
 }
 
 .PlayButton {
@@ -82,16 +127,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.CourseCard:hover .PlayButton {
-    transform: translate(-50%, -50%) scale(1.1);
+    pointer-events: none;
+    /* Play button stays fixed - doesn't scale */
 }
 
 .CourseContent {
-    padding: 2rem;
+    padding: 1.5rem;
     color: white;
 }
 
@@ -103,23 +144,24 @@
         'Segoe UI',
         Roboto,
         sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: white;
 }
 
 .CourseDescription {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     line-height: 1.5;
+    font-size: 0.9rem;
 }
 
 .CourseMeta {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .CourseLevel {
@@ -134,7 +176,85 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+.SliderArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #12c19b;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SliderArrow:hover {
+    background: #0fa886;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.SliderArrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.SliderArrowLeft {
+    left: 0;
+}
+
+.SliderArrowRight {
+    right: 0;
+}
+
+.ViewAllContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.ViewAllButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: white;
+    color: #081690;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.ViewAllButton:hover {
+    background: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+}
+
+.ViewAllArrow {
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.ViewAllButton:hover .ViewAllArrow {
+    transform: translateX(4px);
+}
+
 /* Responsive styles */
+@media (max-width: 1200px) {
+    .CourseCard {
+        min-width: calc(50% - 0.75rem);
+    }
+}
+
 @media (max-width: 768px) {
     .Root {
         padding: 3rem 0;
@@ -144,16 +264,33 @@
         font-size: 2rem;
     }
 
-    .CoursesGrid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    .SliderContainer {
+        padding: 0 50px;
+    }
+
+    .CourseCard {
+        min-width: calc(80% - 1.5rem);
+    }
+
+    .CourseImage {
+        height: 160px;
     }
 
     .CourseContent {
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
-    .FloatingIcon {
-        font-size: 2.5rem;
+    .SliderArrowLeft {
+        left: 0;
+    }
+
+    .SliderArrowRight {
+        right: 0;
+    }
+
+    .SliderArrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
     }
 }
