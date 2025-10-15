@@ -31,6 +31,11 @@ Use flexible pricing with "Additional charges" to create time-based rates. Add c
 
 Customers booking 30+ days ahead automatically see "Early Bird discount -€20" on a 2-hour booking.
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/early_bird.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Setting up last minute surcharges
 
 1. Go to [flexible pricing](https://dashboard.letsbook.app/pricing/flexible/add)

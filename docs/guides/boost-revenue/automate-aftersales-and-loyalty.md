@@ -68,6 +68,11 @@ Best time to ask for reviews. Memory is fresh, emotions are positive, damage dep
 **Example message:**
 "Loved your trip? Leave us a review on Google and get 10% off your next adventure: SUMMER10"
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/review.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 Create discount codes in [discount codes](/guides/boost-revenue/create-discount-codes-to-boost-bookings).
 
 ## 50 weeks later: Win them back
@@ -105,6 +110,11 @@ Booking canceled. Don't lose the customer forever.
 2. Go to "Ask for reviews"
 3. Copy short URL
 4. Add as button in email
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('./graphics/google_review.mov').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 **TripAdvisor:** Get review link from business dashboard.
 
