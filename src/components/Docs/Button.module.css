@@ -1,0 +1,39 @@
+.ButtonWrapper {
+  margin: 32px 0;
+}
+
+.Button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.Button.primary {
+  background-color: #0033A0;
+  color: white;
+}
+
+.Button.primary:hover {
+  background-color: #002a85;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 51, 160, 0.2);
+}
+
+.Button.secondary {
+  background-color: transparent;
+  color: #0033A0;
+  border: 2px solid #0033A0;
+}
+
+.Button.secondary:hover {
+  background-color: #f0f4ff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}

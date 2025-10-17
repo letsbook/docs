@@ -31,12 +31,12 @@ Let's Book comes with several predefined roles:
 
 ### Edit existing roles
 
-1. Go to your [team overview](https://dashboard.letsbook.app/users) and click [roles & permissions](https://dashboard.letsbook.app/roles)
+1. Go to [users](https://dashboard.letsbook.app/users) and click [roles & permissions](https://dashboard.letsbook.app/roles)
 2. Select a team role and adjust the settings
 
 ### Add new role
 
-1. Go to the [team overview](https://dashboard.letsbook.app/users) and click [roles & permissions](https://dashboard.letsbook.app/roles)
+1. Go to [users](https://dashboard.letsbook.app/users) and click [roles & permissions](https://dashboard.letsbook.app/roles)
 2. Click 'Add' and adjust the settings according to your needs
 
 ### Edit role hierarchy
@@ -46,11 +46,9 @@ Determine which roles can create and delete other roles. Roles lower in the list
 1. Go to [edit hierarchy](https://dashboard.letsbook.app/roles/hierarchy)
 2. Drag the roles into the desired order
 
-## Adding team members
-
-1. Go to the [team member overview](https://dashboard.letsbook.app/users)
-2. Click [add team member](https://dashboard.letsbook.app/users/add)
-3. Enter the email address and select the role for the new team member
-4. The new team member will receive an invitation email
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/roles_adding_role.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 This role-based system protects your business data while ensuring your team has the access they need to provide excellent customer service.

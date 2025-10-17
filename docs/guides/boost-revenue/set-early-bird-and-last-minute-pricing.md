@@ -4,8 +4,6 @@ sidebar_position: 5
 
 # Set early bird and last minute pricing
 
-👉 **[Create flexible pricing](https://dashboard.letsbook.app/pricing/flexible/add)**
-
 Reward early bookers with discounts or charge premium rates for last-minute bookings. Time-based pricing adjusts rates automatically based on how far ahead customers book.
 
 ## How it works

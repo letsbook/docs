@@ -30,6 +30,8 @@ Docks are pickup locations where customers collect their boats. Each dock has it
 
 **Map location:** The system automatically places a marker based on your address. Customers see this location in their booking confirmations. The address also determines the dock's timezone, allowing Let's Book to handle operations across multiple timezones when you have docks in different locations.
 
+![Dock location on map](./graphics/docks_point_location.gif)
+
 ### Visual elements
 
 **Photos:** Upload horizontal images (JPG, PNG, or WebP format) showing:
@@ -48,6 +50,8 @@ Docks are pickup locations where customers collect their boats. Each dock has it
 
 This prevents too many customers arriving at once and helps maintain smooth operations during busy periods.
 
+![Capacity management](./graphics/capacity_management.gif)
+
 ## Viewing docked boats
 
 On each dock's detail page, you can see:
@@ -58,6 +62,8 @@ On each dock's detail page, you can see:
 
 To modify which boats are at which dock, use the boat placement tools in the [boat management section](boats/assign-boats-to-docks.md).
 
+![Viewing docked boats](./graphics/docks_boat_placement.gif)
+
 ## Getting your dock ID
 
 Each dock has a unique identifier useful for API integration and booking form customization:
@@ -67,3 +73,5 @@ Each dock has a unique identifier useful for API integration and booking form cu
 3. Copy the dock ID for use in integrations or custom booking links
 
 Proper dock setup ensures customers can find your location easily while giving you operational control over pickup and return scheduling.
+
+![Getting dock ID](./graphics/docks_ID.gif)

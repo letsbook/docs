@@ -4,8 +4,6 @@ sidebar_position: 4
 
 # Automate aftersales and loyalty
 
-👉 **[Manage notifications](https://dashboard.letsbook.app/notifications)** | **[Setup guide](/guides/settings/rental-setups/edit-customer-notifications)**
-
 Send the right message at the right time. Automated emails drive reviews, repeat bookings, and upsells without manual work.
 
 ## Why email timing matters

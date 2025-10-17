@@ -4,8 +4,6 @@ sidebar_position: 6
 
 # Generate bookings through partners
 
-👉 **[Setup partner bookings](/guides/dive-deeper/partner-bookings)** | **[Pricing setup](https://dashboard.letsbook.app/pricing)**
-
 Get your booking form on partner websites. Track which bookings come from which partner and set partner-specific retail rates to build in commission.
 
 ## Why work with partners
@@ -30,7 +28,7 @@ Each partner gets a unique trackable URL. When customers book through that URL, 
 - Applies partner-specific pricing (if configured)
 - Shows booking source in your dashboard
 
-Full setup guide: [partner bookings](/guides/dive-deeper/partner-bookings)
+Full setup guide: [partner bookings](/guides/settings/dive-deeper/partner-bookings)
 
 ## Setting partner-specific pricing
 
@@ -103,7 +101,7 @@ Identify which partnerships drive real value vs which ones just add complexity.
 
 - Calculate your required net rate per booking
 - Decide on commission structure (10-20% is typical starting point)
-- Set up tracking URLs (see [partner bookings setup](/guides/dive-deeper/partner-bookings))
+- Set up tracking URLs (see [partner bookings setup](/guides/settings/dive-deeper/partner-bookings))
 
 **First 2-3 partners:**
 

@@ -4,13 +4,21 @@ sidebar_position: 1
 
 # Sell add-ons and extras
 
-👉 **[Create add-ons](https://dashboard.letsbook.app/add-ons/add)** | **[Setup guide](/guides/settings/create-add-ons)**
+Turn every booking into extra revenue. Customers already decided to rent - the marginal yes to extras is easier than the initial booking decision. Add-ons boost average transaction value by 20-40% with zero extra marketing effort.
 
-Turn every booking into extra revenue. Drinks, safety gear, insurance, food - all automatically offered during checkout.
+Drinks, safety gear, insurance, food packages - all automatically offered during checkout. No sales pitch needed, just smart positioning.
 
-## Why add-ons work
+<div class="button-container">
+  <a href="/guides/settings/create-add-ons" class="button button--primary">Setup guide</a>
+</div>
 
-Customers already decided to rent. The marginal yes to extras is easier than the initial booking decision. Add-ons boost average transaction value with zero extra marketing.
+## Revenue impact
+
+**The numbers speak:** Add-ons typically increase booking value by 20-40%. A €200 boat rental becomes €240-280 with strategic extras.
+
+**Why it works:** Customers already committed to spending. Adding €40 in extras to a €200 booking feels insignificant. The hard decision (renting the boat) is done. Everything after is impulse territory.
+
+**Low effort, high return:** Set up once, sell automatically forever. No marketing budget, no sales calls, no extra staff needed.
 
 ## What sells well
 
@@ -23,20 +31,6 @@ Customers already decided to rent. The marginal yes to extras is easier than the
 **Services:** Fuel packages (prepaid), captain service, cleaning service, delivery to alternative pickup/dropoff location
 
 **Special occasions:** Birthday decorations, celebration packages, photography service
-
-## Setting up add-ons
-
-Full setup guide in [create add-ons](/guides/settings/create-add-ons).
-
-**Layout style:** Grid (large photos) for visual items like drinks and gear. Bars (medium photos) for mixed content. Table (compact) for simple lists.
-
-**Pricing:** Choose per booking, per boat, per passenger, or per passenger per hour.
-
-**Quantity limits:** Set maximum items per booking, per boat, per passenger, or per passenger per hour.
-
-**Availability conditions:** Between times, between dates, only at dock using boat model, days of the week, trip duration, minimum time upfront.
-
-**Questions:** Collect preferences like beer/wine ratio, vegetarian options, or t-shirt sizes.
 
 ## Smart strategies
 
@@ -70,6 +64,6 @@ Daily workflow covered in [handle add-on orders](/guides/day-to-day/add-on-order
 
 Orders appear on planning overview. Filter by date, dock, boat model, category, or product. Print order lists for staff. Export summaries for supplier reconciliation.
 
-## Revenue impact
+## Start simple
 
-Add-ons typically increase booking value by 20-40%. Focus on 3-5 popular items first. Add more once you nail the basics.
+Focus on 3-5 popular items first. Add more once you nail the basics. Most revenue comes from a handful of well-positioned extras, not from having 50 options.
