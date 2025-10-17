@@ -1,62 +1,65 @@
 ---
-title: Change opening hours
-description: Set your business operating hours and availability for boat rentals
+title: Set opening hours
+description: Configure when customers can book boats through your schedules
 sidebar_position: 2
 ---
 
-# Change opening hours
+# Set opening hours
 
-Configure when customers can pick up and return boats. Opening hours control booking availability and automatically prevent reservations outside your operating times.
+Your opening hours are defined by your schedules. Create slots with specific times to control when customers can pick up and return boats.
 
-## Accessing opening hours settings
+## How schedules control availability
 
-1. Go to your [general information](https://dashboard.letsbook.app/general-information)
-2. Scroll down to the **Opening hours** section
-3. Click **Edit** to modify your schedule
+Schedules determine your operating hours through:
 
-## Setting up your schedule
+**Slot times** - When boats can be picked up and returned
 
-### Standard weekly hours
+**Booking windows** - In weekly schedules, the time range when bookings are available
 
-Configure your regular operating schedule for each day of the week:
+**Rental duration** - Customers can only book if pickup + rental duration fits within your schedule
 
-**Day selection:** Click on any day to enable/disable it for operations
+## Creating a split-day schedule
 
-**Time ranges:** Set opening and closing times using the time picker
+Example: Open 9-12 and 14-18 for bookings, but allow boats on water 9-18.
 
-- Opening time: When first pickups can occur
-- Closing time: When last returns must be completed
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/schedules_opening_times.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
-**Multiple time slots:** Add multiple time ranges for the same day if you have breaks or split shifts (e.g., 9:00-12:00 and 14:00-18:00)
+**Key points:**
 
-### Same hours for multiple days
+- Morning slot: 9:00-12:00 pickup, allows rentals until 18:00
+- Afternoon slot: 14:00-18:00 pickup, allows rentals until 18:00
+- Gap 12:00-14:00: No pickups, but existing rentals continue
+- Boats can be on water continuously 9:00-18:00
 
-Use **"Copy to"** to quickly apply the same schedule across multiple days instead of setting each day individually.
+## Schedule types
 
-### Closed days
+### Slot-based schedules
 
-Leave days unchecked or remove all time slots to mark them as closed. Customers won't see availability for closed days in the booking form.
+Define exact pickup times (e.g., 9:00, 11:00, 14:00, 16:00). Customers select from available slots.
 
-## Special considerations
+### Weekly schedules
 
-### Pickup vs return times
+Set a booking window (e.g., 9:00-18:00). Customers pick any time within that range.
 
-Opening hours apply to both pickup and return times. If a customer books a 4-hour rental starting at 16:00 and you close at 18:00, the system will prevent this booking since the return would be after closing.
+## Multiple schedules
 
-### Timezone handling
+Create different schedules for:
 
-Opening hours automatically use your dock's timezone. If you operate multiple locations across timezones, each dock can have different opening hours that display correctly for local customers.
+- **Seasonal hours** - Summer vs winter operating times
+- **Weekday vs weekend** - Different availability patterns
+- **Special events** - Temporary schedule changes
 
-### Buffer time
+Assign schedules to dock-boat combinations in [rental setup](/guides/settings/rental-setups/understanding-rental-setup).
 
-Consider setting closing times 30-60 minutes after your actual preferred end time to allow for late returns and equipment inspection.
+## Tips
 
-## Holiday and seasonal schedules
+**Buffer time:** End your last slot 30-60 minutes before actual closing to allow for returns and inspection.
 
-For temporary schedule changes:
+**Lunch breaks:** Use separate morning/afternoon slots to block midday pickups while allowing ongoing rentals.
 
-1. Create [blocked availability](../../../day-to-day/blockout-periods.md) for specific dates
-2. Use the dock-specific settings if only certain locations have different hours
-3. Update your general hours when seasonal changes begin and end
+**Timezone:** Schedules automatically use your dock's timezone for accurate local times.
 
-Your opening hours changes take effect immediately and apply to all new bookings. Existing confirmed bookings remain unaffected even if they fall outside your new schedule.
+**Immediate effect:** Schedule changes apply instantly to new bookings. Existing reservations remain valid.

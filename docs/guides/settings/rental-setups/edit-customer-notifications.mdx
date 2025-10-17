@@ -1,0 +1,199 @@
+---
+sidebar_position: 4
+---
+
+# Edit customer notifications
+
+Configure automated emails and SMS messages for your booking flow. Control what information is sent, when it's sent, and how it looks.
+
+<div class="button-container">
+  <a href="https://dashboard.letsbook.app/notifications" class="button button--primary" target="_blank" rel="noopener noreferrer">Manage notifications</a>
+</div>
+
+## Setting up notification flows
+
+A notification flow is the collection of all messages sent around a booking. Each flow can be customized independently.
+
+**Creating a new flow:**
+
+1. Go to [manage notifications](https://dashboard.letsbook.app/notifications)
+2. Click 'Add' in the 'All notifications' section
+3. Enter a title for your flow
+4. Click Save
+
+**Editing a flow:**
+
+1. Select your notification flow from the list
+2. Find the notification you want to edit
+3. Click to expand and modify content
+4. Add variables, buttons, or sections as needed
+5. Save your changes
+
+## Available notification types
+
+### Email notifications
+
+**Email when booking confirmed**
+Sent immediately after a booking is confirmed. Use for confirmation details and important information.
+
+**Email when trip updated**
+Automatically sent when booking details change (time, date, boat, etc.).
+
+**Email when booking canceled**
+Sent when a booking is canceled by you or the customer.
+
+**Email 6 hours before pickup**
+Sent 6 hours before the scheduled pickup time. Ideal for last-minute instructions.
+
+**Email 24 hours after trip ends**
+Sent one day after the trip concludes. Perfect timing for follow-up.
+
+**Email after 50 weeks of inactivity**
+Automated email sent to customers who haven't booked in 50 weeks.
+
+### SMS notifications
+
+**Text message 1 day before pickup**
+Reminder sent 24 hours before the scheduled pickup.
+
+**Text message 15 minutes before pickup**
+Final reminder sent 15 minutes before pickup, includes booking link.
+
+**SMS limitations:**
+- Content cannot be customized due to international regulations
+- Sent in customer's language (Dutch, English, Danish, Spanish, Swedish, Italian, Portuguese)
+- Default to English if customer language not supported
+
+## Customizing email content
+
+### Basic editing
+
+**Subject line:**
+Edit the email subject visible in customer inbox.
+
+**Message body:**
+Write or modify the main email content. Use the text editor for formatting.
+
+### Adding variables
+
+Click "Insert variable" to add dynamic content:
+
+- Customer name, email, phone
+- Booking dates, times, duration
+- Boat model, dock location
+- Pricing and payment details
+- Booking reference number
+
+Variables automatically populate with the correct information for each booking.
+
+### Adding buttons
+
+**Button types available:**
+
+- Booking details page
+- Dock location (Google Maps)
+- Your booking form
+- Company website
+- Custom URL
+
+**To add a button:**
+
+1. Click "Add button" in the email editor
+2. Choose button type or enter custom URL
+3. Enter button text
+4. Save
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/notifications_edit.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+### Adding sections
+
+**Available sections:**
+
+**Financial overview**
+Shows complete payment breakdown including deposit, remaining balance, and add-ons.
+
+**Add-ons list**
+Displays all extras included in the booking with quantities and prices.
+
+**Photo of dock**
+Inserts image of the pickup location.
+
+**Photo of boat model**
+Shows picture of the rented boat.
+
+**QR code**
+Generates scannable QR code linking to booking details (useful for staff).
+
+### Formatting options
+
+- Bold, italic, underline text
+- Bullet lists and numbered lists
+- Hyperlinks
+- Text alignment
+- Headings and subheadings
+
+## Multiple notification flows
+
+Create separate flows for different scenarios:
+
+**By boat type:**
+- Simple flow for hourly canoe rentals
+- Detailed flow for multi-day yacht charters
+
+**By location:**
+- Different pickup instructions per dock
+- Location-specific parking information
+
+**By rental setup:**
+- Member-only communications
+- Public booking confirmations
+
+**To assign a flow:**
+
+1. Go to your [rental setup](https://dashboard.letsbook.app/rental-setup)
+2. Select the rental setup to configure
+3. Choose notification flow from dropdown
+4. Save changes
+
+## Testing notifications
+
+**Test before going live:**
+
+1. Create a test booking in your system
+2. Check all notification timings
+3. Verify variables populate correctly
+4. Test all button links
+5. Review formatting on mobile and desktop
+
+**Test checklist:**
+
+- Subject lines display correctly
+- Variables show actual data (not placeholders)
+- Buttons link to correct destinations
+- Images load properly
+- QR codes scan successfully
+- Formatting looks good on mobile
+
+## Best practices
+
+**Keep it simple:**
+Clear, concise messages work best. Avoid information overload.
+
+**Mobile-first:**
+Most customers check email on phones. Test mobile view.
+
+**Clear CTAs:**
+Use obvious button text like "View booking" not "Click here".
+
+**Consistent timing:**
+Stick to notification schedule. Don't send too many emails.
+
+**Professional tone:**
+Match your brand voice but keep it professional and clear.
+
+---
+
+Want ideas on how to use notifications for revenue? See [Automate aftersales and loyalty](/guides/boost-revenue/automate-aftersales-and-loyalty) for strategies on upsells, reviews, and retention.

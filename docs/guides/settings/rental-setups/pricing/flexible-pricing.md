@@ -36,7 +36,7 @@ Set your base pricing calculation method:
 - Days booked in advance
 - Number of nights
 
-**Example:** €60 per hour = select "Duration in hours" and enter 60.
+**Example:** $100 per hour base rate = select "Duration in hours" and enter 100.
 
 **Fixed amount:** One set price regardless of variables. Add conditions to make it dynamic.
 
@@ -44,7 +44,30 @@ Set your base pricing calculation method:
 
 ### Adding pricing conditions
 
-Click **Add condition** to create complex rules:
+Click **Add condition** to create complex rules.
+
+**Example pricing structure:**
+
+**Base rate:** $100/hour for all rentals
+
+**Weekend surcharge:** +$20/hour on Saturdays and Sundays
+- Condition: Days of the week = Saturday, Sunday
+- Price: +$20 per hour
+
+**Member discount:** -$40/hour for members
+- Condition: Customer type = Member
+- Price: -$40 per hour
+
+**Result:**
+- Weekday non-member: $100/hour
+- Weekend non-member: $120/hour
+- Weekday member: $60/hour  
+- Weekend member: $80/hour
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_flexible_pricing.mov').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 **Available conditions:**
 
@@ -59,77 +82,39 @@ Click **Add condition** to create complex rules:
 - **Nth boat:** Special rate for specific boat position (e.g., 3rd boat free)
 - **Booked via partner:** Different rates for partner bookings
 
-**Example conditions:**
-
-- Monday and Wednesday: €10/hour discount
-- 4-hour trips between 9 AM-2 PM: €300 discount
-- Groups over 8 people: €5/person surcharge
-
-## Pricing elements
-
-Build complex pricing structures with multiple calculation parts:
-
-**Add pricing element** to layer additional costs or discounts on top of base rates.
-
-Each element can use different calculation methods (formula, fixed amount, table) and have its own conditions.
-
-**Example structure:**
-
-- Base rate: €50/hour
-- Peak season element: +€15/hour (July-August condition)
-- Group discount element: -€200 (8+ passengers condition)
-
 ## Additional charges
 
 Add extra costs beyond base pricing:
 
-**Name:** Internal reference for the charge
+**Name:** Internal reference
 **Customer display:** What customers see during booking
 **Tax settings:** Include/exclude tax and rate
-**Display timing:** Show during booking or only at payment step
 
 **Price calculation:**
 
 - **Formula:** Calculate based on variables
-- **Fixed amount:** Set fee (e.g., €30 cleaning charge)
+- **Fixed amount:** Set fee (e.g., $30 cleaning charge)
 - **Table:** Variable rates with conditions
 
-Use **Advanced mode** for complex formulas with multiple variables.
+**Advanced mode:** Use complex formulas with multiple variables and calculations. See [Working with pricing formulas](../../dive-deeper/pricing-formulas) for detailed formula syntax.
 
 ## Deposits
 
-Create sophisticated deposit requirements:
+Secure bookings with refundable deposits.
 
-**Price calculation methods:**
+- **Name:** Internal reference (e.g., "Deposit")
+- **Customer display:** What customers see on booking form (e.g., "Deposit; will be refunded within 3 days")
+- **Tax settings:** Include/exclude tax and rate
 
-- **Formula:** Calculate based on booking variables (e.g., 25% of total cost)
-- **Fixed amount:** Set deposit amount
+**Price options:**
+
+- **Formula:** Calculate based on variables (e.g., 20% of rental price)
+- **Fixed amount:** Set amount (e.g., $100.00)
 - **Table:** Different deposits for different scenarios
 
-**Multiple deposit parts:** Create deposits with different calculation methods combined.
+**Example:** Fixed $100 deposit, refunded within 3 days after return.
 
-**Conditional deposits:** Apply deposits only when specific conditions are met:
-
-- Seasonal requirements
-- Booking value thresholds
-- Customer type differences
-- Advance booking periods
-
-## Advanced features
-
-**Multiple price parts:** Combine different calculation methods in one pricing structure for ultimate flexibility.
-
-**Complex conditions:** Layer multiple conditions to create highly specific pricing rules.
-
-**Advanced mode:** Access advanced formula options for complex mathematical calculations. See [Working with pricing formulas](../../dive-deeper/pricing-formulas) for detailed formula syntax and examples.
-
-**Variable selection:** Use booking data in formulas:
-
-- Duration measurements
-- Passenger counts
-- Dock/boat information
-- Booking timing details
-- Previous pricing results
+Add conditions to apply deposits only in specific situations.
 
 ## Completing setup
 

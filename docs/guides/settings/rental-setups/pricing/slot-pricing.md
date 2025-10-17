@@ -18,9 +18,9 @@ Create a [slot schedule](../schedules/slot-schedule) first. Slot pricing connect
 
 ## Basic setup
 
-**Name:** Choose an internal name for this pricing structure (e.g., "Summer weekend packages").
+**Name:** Choose an internal name for this pricing structure (e.g., "Peak season pricing").
 
-**Slot schedule:** Select which slot schedule these prices apply to. Yellow dots indicate slots without pricing.
+**Slot schedule:** Select which slot schedule these prices apply to (e.g., "Summer slots"). Yellow dots indicate slots without pricing.
 
 **Tax settings:** Choose whether prices include or exclude tax, and select your tax rate.
 
@@ -28,9 +28,19 @@ Create a [slot schedule](../schedules/slot-schedule) first. Slot pricing connect
 
 Click on each slot to set its individual price. Each time slot in your schedule needs its own rate.
 
-**Single day slots:** Set one price per slot (e.g., €120 for "Morning adventure" 9 AM-1 PM).
+**Single day slots:** Set one price per slot
+- "Morning cruise" (9:00-12:00): $150
+- "Afternoon adventure" (13:00-17:00): $200
+- "Sundowner" (18:00-21:00): $180
+- "Full day explorer" (9:00-19:00): $350
 
-**Multi-day slots:** Set the full package price (e.g., €450 for "Weekend escape" Friday 4 PM-Sunday 6 PM).
+**Multi-day slots:** Set the full package price
+- "Weekend getaway" (Saturday 10:00 - Sunday 18:00): $600
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/settings_pricing_slots.mov').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Pricing elements
 
@@ -51,33 +61,49 @@ Add costs on top of base slot prices:
 
 ## Additional charges
 
-Calculate extra costs beyond slot and element pricing:
+Calculate extra costs beyond slot and element pricing.
 
-**Name:** Internal reference
-**Customer display:** What customers see (e.g., "Equipment rental")
+**Name:** Internal reference (e.g., "Passenger surcharge")
+
+**Customer display:** What customers see (e.g., "Extra charge per passenger")
+
 **Tax settings:** Include/exclude tax and rate
 
 **Charge options:**
 
-- **Formula:** Calculate based on booking variables
-- **Fixed amount:** Set price (e.g., €25 equipment fee)
+- **Formula:** Calculate based on booking variables (e.g., Number of passengers × $5.00)
+- **Fixed amount:** Set price (e.g., $25 equipment fee)
 - **Table:** Variable rates based on conditions
 
-Add conditions to apply charges selectively (e.g., cleaning fee only for rentals over 4 hours).
+**Example:** Charge $5.00 per passenger, added on top of the base slot price.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_additional_charge.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Deposits
 
-Secure slot bookings with deposits:
+Secure bookings with refundable deposits.
 
-**Price calculation:**
+- **Name:** Internal reference (e.g., "Deposit")
+- **Customer display:** What customers see on booking form (e.g., "Deposit; will be refunded within 3 days")
+- **Tax settings:** Include/exclude tax and rate
 
-- **Formula:** Percentage of total booking (e.g., 30% deposit)
-- **Fixed amount:** Set amount (e.g., €200 deposit)
-- **Table:** Different deposits for different slots/conditions
+**Price options:**
 
-**Customer display:** Explain deposit terms (e.g., "Deposit; will be refunded within 5 days").
+- **Formula:** Calculate based on variables (e.g., 20% of rental price)
+- **Fixed amount:** Set amount (e.g., $100.00)
+- **Table:** Different deposits for different scenarios
 
-Use **Add condition** to require deposits only for specific slots, seasons, or booking conditions.
+**Example:** Fixed $100 deposit, refunded within 3 days after return.
+
+Add conditions to apply deposits only in specific situations.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_deposit.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Advanced features
 

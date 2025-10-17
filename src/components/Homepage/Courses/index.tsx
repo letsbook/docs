@@ -75,16 +75,6 @@ export default function Courses(): ReactNode {
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
 
-    const scroll = (direction: 'left' | 'right') => {
-        if (sliderRef.current) {
-            const scrollAmount = sliderRef.current.offsetWidth * 0.8;
-            sliderRef.current.scrollBy({
-                left: direction === 'right' ? scrollAmount : -scrollAmount,
-                behavior: 'smooth',
-            });
-        }
-    };
-
     const handleMouseDown = (e: React.MouseEvent) => {
         if (!sliderRef.current) return;
         setIsDragging(true);
@@ -113,14 +103,6 @@ export default function Courses(): ReactNode {
                 </p>
 
                 <div className={styles.SliderContainer}>
-                    <button
-                        onClick={() => scroll('left')}
-                        className={styles.SliderArrow + ' ' + styles.SliderArrowLeft}
-                        aria-label="Previous course"
-                    >
-                        ‹
-                    </button>
-
                     <div
                         ref={sliderRef}
                         className={styles.SliderTrack}
@@ -138,6 +120,9 @@ export default function Courses(): ReactNode {
                             >
                                 <div className={styles.CourseImage}>
                                     <img src={course.image} alt={course.title} draggable={false} />
+                                    <h3 className={styles.CourseTitle}>
+                                        {course.title}
+                                    </h3>
                                     <div className={styles.PlayButton}>
                                         <svg
                                             width="56"
@@ -160,16 +145,7 @@ export default function Courses(): ReactNode {
                                     </div>
                                 </div>
                                 <div className={styles.CourseContent}>
-                                    <h3 className={styles.CourseTitle}>
-                                        {course.title}
-                                    </h3>
-                                    <p className={styles.CourseDescription}>
-                                        {course.description}
-                                    </p>
                                     <div className={styles.CourseMeta}>
-                                        <span className={styles.CourseLevel}>
-                                            {course.level}
-                                        </span>
                                         <span className={styles.CourseDuration}>
                                             {course.duration}
                                         </span>
@@ -179,13 +155,11 @@ export default function Courses(): ReactNode {
                         ))}
                     </div>
 
-                    <button
-                        onClick={() => scroll('right')}
-                        className={styles.SliderArrow + ' ' + styles.SliderArrowRight}
-                        aria-label="Next course"
-                    >
-                        ›
-                    </button>
+                    <div className={styles.SliderDots}>
+                        {courses.map((_, index) => (
+                            <div key={index} className={styles.SliderDot} />
+                        ))}
+                    </div>
                 </div>
 
                 <div className={styles.ViewAllContainer}>

@@ -1,35 +1,18 @@
 .videoContainer {
-    background: linear-gradient(135deg, #081590 0%, #050f6a 100%);
-    margin: -2rem -2rem 3rem -2rem;
-    padding: 5rem 2rem;
+    margin: 0 0 3rem 0;
     position: relative;
-}
-
-.videoContainer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 30% 50%, rgba(8, 21, 144, 0.2) 0%, transparent 60%),
-        radial-gradient(circle at 70% 80%, rgba(18, 193, 155, 0.15) 0%, transparent 60%);
-    pointer-events: none;
 }
 
 .videoWrapper {
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
     padding-bottom: 56.25%;
     height: 0;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 
-        0 40px 100px rgba(0, 0, 0, 0.6),
-        0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: #000;
 }
 
 .videoFrame {
@@ -41,19 +24,7 @@
     border: none;
 }
 
-@media (max-width: 996px) {
-    .videoContainer {
-        margin: -1.5rem -1.5rem 2rem -1.5rem;
-        padding: 3rem 1.5rem;
-    }
-}
-
 @media (max-width: 768px) {
-    .videoContainer {
-        margin: -1rem -1rem 1.5rem -1rem;
-        padding: 2rem 1rem;
-    }
-    
     .videoWrapper {
         border-radius: 8px;
     }

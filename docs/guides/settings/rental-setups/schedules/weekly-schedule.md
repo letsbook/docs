@@ -20,13 +20,18 @@ Choose a clear internal name for your schedule. This helps you organize multiple
 
 ## Set your timeline
 
-Define when boats can be picked up and returned using the timeline interface:
+Define when boats can be picked up and returned using the timeline interface.
 
-**Operating hours:** Set your opening and closing times. Boats cannot be picked up before opening or returned after closing.
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/schedules_opening_times.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+**Operating hours:** Set your opening and closing times for when boats are available.
 
 **Example:** 10 AM to 6 PM means customers can pick up anytime from 10:00 but must return by 18:00.
 
-**Multiple time blocks:** Add breaks by creating separate time periods (like 9 AM-12 PM and 2 PM-6 PM for a lunch break). Click **Add time** to create additional time slots. This blocks new pickups and returns during your break, but customers already on the water can keep sailing.
+**Split schedule (lunch break):** Create separate time blocks for morning and afternoon (like 9 AM-12 PM and 2 PM-6 PM). Click **Add time** to add additional slots. This prevents new pickups during your break while allowing existing rentals to continue.
 
 **Different days:** Configure each day of the week separately or copy settings across multiple days.
 
@@ -42,6 +47,11 @@ Offer specific duration choices like 2, 3, 4, or 6 hours.
 
 **Pickup frequency:** Set how often trips can start (every 15, 30, or 60 minutes).
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/Schedules_fixed_lenghts.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ### Within range
 
 Let the system generate all possible durations between your minimum and maximum.
@@ -49,6 +59,11 @@ Let the system generate all possible durations between your minimum and maximum.
 **Example:** 2-6 hour range creates options for 2, 3, 4, 5, and 6-hour trips.
 
 Choose fixed lengths for simpler choice, or within range for maximum flexibility.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/schedules_within_range.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Advanced settings
 
@@ -61,6 +76,11 @@ Allow customers to collect boats before their scheduled pickup time. Useful for 
 Add buffer time after each trip for boat cleaning or late returns.
 
 **Example:** 30-minute margin gives you cleanup time between rentals and handles boats returned slightly late.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/schedule_advanced_settings.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Finishing setup
 

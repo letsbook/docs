@@ -16,17 +16,22 @@ Slot schedules offer fixed departure times and trip durations. Perfect for multi
 
 Choose a descriptive internal name for your schedule. Customers won't see this name - it's purely for your organization.
 
-**Example names:** "Summer weekend packages", "Multi-day adventures", "Morning fishing trips"
+**Example names:** "Summer slots", "Winter slots", "Weekend packages"
 
 ## Adding slots
 
-Click **Add new** to create individual time slots for your schedule:
+Click **Add new** to create individual time slots for your schedule.
 
 ### Slot name
 
 Give each slot a descriptive name that helps you organize different options.
 
-**Examples:** "Early birds morning trip", "Weekend wanderlust", "Sunset cruise"
+**Examples for Summer slots:**
+- "Morning cruise" - Early start (9:00-12:00)
+- "Afternoon adventure" - Midday departure (13:00-17:00)
+- "Sundowner" - Evening trip (18:00-21:00)
+- "Full day explorer" - All-day rental (9:00-19:00)
+- "Weekend getaway" - Multi-day (Saturday 10:00 - Sunday 18:00)
 
 ### Single day vs Multi-day slots
 
@@ -38,11 +43,22 @@ Choose the slot type using the toggle buttons:
 - **Return time:** When they must bring it back (e.g., 6:00 PM)
 - **Duration:** Automatically calculated (8 hours in this example)
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/schedules_slots_add.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 **Multi-day:** Rentals spanning multiple days
 
 - **Pickup time:** Start time on first day (e.g., Friday 10:00 AM)
 - **Return options:** Choose from preset options like "one night later", "2 nights later", up to "21 nights later"
 - **Return time:** Final return time (e.g., Sunday 6:00 PM)
+- **Example:** "Weekend getaway" slot - Saturday 10:00 AM pickup, Sunday 18:00 return (one night later)
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/schedules_slots_multiday.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### Availability days
 

@@ -32,6 +32,10 @@ Set your base rates based on trip duration:
 
 **Time-based rates:** Enter prices for different rental lengths. If someone books an unusual duration (like 3.5 hours), the system charges the next highest rate you've set.
 
+**Example:**
+- 1 Hour: €200 for 1-4 passengers, €250 for 5-9 passengers, €300 for 10+ passengers
+- 2 Hours: €300 for 1-4 passengers, €350 for 5-9 passengers, €400 for 10+ passengers
+
 ### Passenger group pricing
 
 Add different rates based on group size:
@@ -41,6 +45,11 @@ Add different rates based on group size:
 3. **Add row** to create additional price tiers
 
 **Example:** Charge €40/hour for groups of 1-5 people, €50/hour for 6-10 people.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_simple_pricing_groups.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Additional charges
 
@@ -68,21 +77,33 @@ Click **Add condition** to create complex pricing rules:
 - Time period restrictions
 - Advance booking requirements
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_simple_pricing_additional_charges.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Deposits
 
-Secure bookings with refundable deposits:
+Secure bookings with refundable deposits.
 
-- **Name:** Internal reference
-- **Customer display:** What appears on booking form
+- **Name:** Internal reference (e.g., "Deposit")
+- **Customer display:** What customers see on booking form (e.g., "Deposit; will be refunded within 3 days")
 - **Tax settings:** Include/exclude tax and rate
 
 **Price options:**
 
-- **Formula:** Calculate based on variables (e.g., 20% of total cost)
-- **Fixed amount:** Set amount (e.g., €150 deposit)
+- **Formula:** Calculate based on variables (e.g., 20% of rental price)
+- **Fixed amount:** Set amount (e.g., $100.00)
 - **Table:** Different deposits for different scenarios
 
+**Example:** Fixed $100 deposit, refunded within 3 days after return.
+
 Add conditions to apply deposits only in specific situations.
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_deposit.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ## Completing setup
 
