@@ -171,12 +171,14 @@ body {
 }
 
 .breadcrumbs__item {
-    font-size: 16px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
 }
 
 /* Separator styling - Let's Book blue */
 .breadcrumbs__item:not(:last-child):after {
     color: #081590 !important;
+    margin: 0 0.35rem !important;
 }
 
 /* Clickable breadcrumb links - make ALL links clickable */
@@ -184,10 +186,27 @@ body {
     background: transparent !important;
     border-radius: 0.25rem;
     color: #12C19B !important;
-    padding: 0.25rem 0.5rem !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.35rem !important;
     transition: background 0.15s ease;
     cursor: pointer !important;
     pointer-events: auto !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* Add home icon to the FIRST breadcrumb link */
+.breadcrumbs__item:nth-child(2) .breadcrumbs__link:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2312C19B"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
 }
 
 /* Show background on hover for clickable items */
