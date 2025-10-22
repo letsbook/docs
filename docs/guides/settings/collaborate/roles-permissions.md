@@ -46,7 +46,7 @@ Determine which roles can create and delete other roles. Roles lower in the list
 1. Go to [edit hierarchy](https://dashboard.letsbook.app/roles/hierarchy)
 2. Drag the roles into the desired order
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../graphics/roles_adding_role.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

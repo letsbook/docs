@@ -43,7 +43,7 @@ Choose the slot type using the toggle buttons:
 - **Return time:** When they must bring it back (e.g., 6:00 PM)
 - **Duration:** Automatically calculated (8 hours in this example)
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/schedules_slots_add.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -55,7 +55,7 @@ Choose the slot type using the toggle buttons:
 - **Return time:** Final return time (e.g., Sunday 6:00 PM)
 - **Example:** "Weekend getaway" slot - Saturday 10:00 AM pickup, Sunday 18:00 return (one night later)
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/schedules_slots_multiday.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

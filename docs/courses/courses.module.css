@@ -1,67 +1,80 @@
 /* Clean hero */
 .coursesHero {
-  padding: 4rem 2rem 3rem;
-  text-align: center;
+  padding: 0;
   background: white;
+  margin-bottom: 2rem;
 }
 
 .heroContent {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.coursesHero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #081690;
-  margin: 0 0 1rem;
+  max-width: none;
+  margin: 0;
 }
 
 .coursesHero p {
-  font-size: 1.25rem;
-  color: #666;
-  margin: 0;
+  font-size: 1rem;
+  color: #000000;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
+  text-align: left;
 }
 
 /* Container */
 .coursesContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* Course cards grid */
+/* Course cards grid - same as CardGrid component */
 .coursesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
 }
 
-.courseCard {
-  display: block;
+a.courseCard {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
   text-decoration: none;
   color: inherit;
-  background: white;
-  border-radius: 16px;
+  transition: all 0.2s ease;
+  position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.courseCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  margin: 0;
 }
 
 .courseImage {
   width: 100%;
   height: 200px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0;
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+}
+
+.courseImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease;
+  border-radius: 0;
+}
+
+.courseCard:hover .courseImage img {
+  transform: scale(1.05);
 }
 
 .playButton {
@@ -70,9 +83,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease;
   cursor: pointer;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
 .courseCard:hover .playButton {
@@ -88,42 +100,65 @@
   z-index: 2;
 }
 
-.courseLevel {
-  background: #12c19b;
+.courseDuration {
+  background: rgba(0, 0, 0, 0.75);
   color: white;
-  padding: 0.375rem 0.875rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
   font-weight: 600;
+  backdrop-filter: blur(4px);
 }
 
-.courseDuration {
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 0.375rem 0.875rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 500;
+.courseBody {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-bottom: 4rem;
+  border-radius: 0;
+}
+
+.courseCard::after {
+  content: '→';
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.courseCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.courseCard:hover::after {
+  opacity: 1;
 }
 
 .courseContent {
-  padding: 1.5rem;
+  flex: 1;
 }
 
 .courseContent h2 {
-  font-size: 1.375rem;
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  color: #081690;
-  margin: 0 0 0.75rem;
+  color: var(--ifm-heading-color);
+  text-align: left;
   border: none;
   padding: 0;
 }
 
 .courseContent p {
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: #666;
   margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
 }
 
 /* Responsive */
@@ -146,18 +181,6 @@
   
   .coursesGrid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .courseImage {
-    height: 180px;
-  }
-  
-  .courseContent {
-    padding: 1.25rem;
-  }
-  
-  .courseContent h2 {
-    font-size: 1.25rem;
+    gap: 1rem;
   }
 }

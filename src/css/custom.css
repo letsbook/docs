@@ -178,3 +178,13 @@ body {
     color: white;
     text-decoration: none;
 }
+
+/**
+ * Remove image shadows from all documentation images
+ */
+.markdown img,
+article img,
+.theme-doc-markdown img {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}

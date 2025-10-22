@@ -18,7 +18,7 @@ Need more advanced options? Take a look at [custom integrations](./advanced-inte
 
 ## Share the URL and embed instructions
 
-- Share the unique URL with your partner and send these [embedding instructions](../settings/booking-form/add-to-website.mdx).
+- Share the unique URL with your partner and send these [embedding instructions](../booking-form/add-to-website.mdx).
 
 ## Track partner bookings
 

@@ -1,0 +1,116 @@
+---
+title: Working with deposits
+description: Set up and manage deposits, security deposits, and damage waivers for your boat rentals
+sidebar_position: 5
+---
+
+# Working with deposits
+
+Secure bookings and protect your business by requiring deposits (also called security deposits, damage deposits, or damage waivers). Configure deposit amounts, timing, and refund policies.
+
+**Quick links:** [How to add a deposit](#how-to-add-a-deposit) • [How to refund a deposit](#how-to-refund-a-deposit)
+
+## How to add a deposit
+
+1. Go to [Pricing](https://dashboard.letsbook.app/pricing)
+2. Click on any pricing slot to open the pricing structure
+3. Scroll down to the **Deposits** section at the bottom
+4. Click **Add**
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../../graphics/pricing_add_deposit.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+:::info What is a deposit?
+A deposit (security deposit, damage deposit, or damage waiver) is an amount you can (partially) refund to the customer after the booking. Your payment provider may charge transaction fees on the full deposit amount, even if it is refunded.
+:::
+
+### Name
+
+Give your deposit a clear name that customers see during booking (e.g., "Deposit; will be refunded within 5 days").
+
+### Tax settings
+
+Choose whether prices include or exclude tax, then select your tax rate.
+
+## Deposit amount
+
+Configure how much deposit customers must pay:
+
+### Formula-based
+
+Calculate deposit as a percentage or formula based on:
+- Duration in hours
+- Duration in days (24h)
+- Number of passengers in booking
+- Number of passengers on a boat
+- Hours booked in advance
+- Days booked in advance
+- Number of nights
+- Result of previous price parts
+- Result of rental pricing
+
+### Fixed amount
+
+Set a specific deposit amount in your currency.
+
+### Table pricing
+
+Create a pricing table with different deposit amounts based on conditions.
+
+## Conditions
+
+Add conditions to apply deposits only in specific situations:
+
+- **Booking duration** - Apply based on rental length
+- **Number of boats** - Require deposits for multiple boat bookings
+- **Number of passengers** - Set deposits based on group size
+- **Customer type** - Different deposits for members vs guests
+- **Days of the week** - Weekend vs weekday deposits
+- **Time period** - Seasonal deposit requirements
+- **Booked in advance** - Higher deposits for last-minute bookings
+- **Every nth boat** - Apply to specific boats in multi-boat bookings
+- **Nth boat** - Target individual boat positions
+- **Booked via partner** - Partner-specific deposits
+- **Add-ons** - Require deposits when specific add-ons are selected
+
+## Deposit timing
+
+Deposits are collected during the booking process before confirmation.
+
+## Refund policies
+
+Communicate your refund timeline in the deposit name. Common practices:
+- "Refunded within 5 days after return"
+- "Refunded immediately upon boat return"
+- "Refunded within 7 business days"
+
+## How to refund a deposit
+
+1. Go to [Bookings](https://dashboard.letsbook.app/bookings) and open the booking
+2. Click on the **Finance** tab
+3. Scroll down to find the deposit charge
+4. Click on the deposit line item
+5. You'll be redirected to your payment provider (Stripe or Mollie) to process the refund
+
+:::tip Coming soon
+We're working on a fully integrated refund flow directly in Let's Book. Stay tuned!
+:::
+
+## Managing deposits
+
+View all deposit charges in the [bookings overview](https://dashboard.letsbook.app/bookings) and individual booking details.
+
+Changes to deposits affect new bookings immediately. Existing confirmed bookings retain their original deposit requirements.
+
+## Common terms
+
+Depends on your region and business model, deposits may be called:
+- **Security deposit** - Common in US/UK for refundable protection amounts
+- **Damage deposit** - Focused on covering potential damage costs
+- **Damage waiver** - Often used when the amount is non-refundable insurance
+- **Caution deposit** - Common term in some European countries
+- **Holdback** - Sometimes used for amounts held from payment
+
+In Let's Book, all these work the same way - you configure the amount, conditions, and refund policy.

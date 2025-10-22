@@ -22,7 +22,7 @@ Choose a clear internal name for your schedule. This helps you organize multiple
 
 Define when boats can be picked up and returned using the timeline interface.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/schedules_opening_times.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -47,7 +47,7 @@ Offer specific duration choices like 2, 3, 4, or 6 hours.
 
 **Pickup frequency:** Set how often trips can start (every 15, 30, or 60 minutes).
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/Schedules_fixed_lenghts.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -60,7 +60,7 @@ Let the system generate all possible durations between your minimum and maximum.
 
 Choose fixed lengths for simpler choice, or within range for maximum flexibility.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/schedules_within_range.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -77,7 +77,7 @@ Add buffer time after each trip for boat cleaning or late returns.
 
 **Example:** 30-minute margin gives you cleanup time between rentals and handles boats returned slightly late.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/schedule_advanced_settings.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

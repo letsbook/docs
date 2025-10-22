@@ -10,8 +10,6 @@ You can customize all text that your customers see to match your own style and p
 
 Sometimes, a translation contains a variable. It will be displayed between curly braces. e.g. `{variableName}`. You should not translate or change these variables.
 
-See our [advanced translations](../../dive-deeper/advanced-translations.md) guide for a more thorough explanation.
-
 ## Translating your inventory
 
 Want Copenhagen in English and København in Danish? No problem. You can create translations for [docks](https://dashboard.letsbook.app/docks), [boat models](https://dashboard.letsbook.app/models) or [add-ons](https://dashboard.letsbook.app/add-ons) directly in the screens where you manage them.

@@ -64,7 +64,7 @@ Click **Add condition** to create complex rules.
 - Weekday member: $60/hour  
 - Weekend member: $80/hour
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/pricing_flexible_pricing.mov').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

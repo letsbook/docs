@@ -212,8 +212,7 @@ const config: Config = {
                     exact: true,
                 },
                 {
-                    type: 'docSidebar',
-                    sidebarId: 'guidesSidebar',
+                    to: '/guides/day-to-day',
                     label: 'Guides',
                     position: 'left',
                 },

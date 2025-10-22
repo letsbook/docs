@@ -7,7 +7,7 @@ sidebar_position: 60
 
 Need more control over the embed? This short guide is for developers.
 
-When you use the [embed script](../settings/booking-form/add-to-website.mdx), any link that points to your booking form URL opens the form over your site. Example:
+When you use the [embed script](../booking-form/add-to-website.mdx), any link that points to your booking form URL opens the form over your site. Example:
 
 ```html
 <a href="https://<your-slug>.letsbook.app/en-us/form">Book now</a>

@@ -46,7 +46,7 @@ Add different rates based on group size:
 
 **Example:** Charge €40/hour for groups of 1-5 people, €50/hour for 6-10 people.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/pricing_simple_pricing_groups.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -77,7 +77,7 @@ Click **Add condition** to create complex pricing rules:
 - Time period restrictions
 - Advance booking requirements
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/pricing_simple_pricing_additional_charges.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -100,7 +100,7 @@ Secure bookings with refundable deposits.
 
 Add conditions to apply deposits only in specific situations.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
   <source src={require('../../graphics/pricing_deposit.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
