@@ -14,8 +14,8 @@
     --ifm-color-primary-lightest: #f7f8fe;
 
     --ifm-menu-color: #081590;
-    --ifm-menu-color-background-active: var(--ifm-color-primary-lightest);
-    --ifm-menu-color-background-hover: var(--ifm-color-primary-lightest);
+    --ifm-menu-color-background-active: #E6E9FD;
+    --ifm-menu-color-background-hover: #F7F8FE;
     --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="%23081590" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
     --ifm-menu-link-padding-vertical: 0.5rem;
 
@@ -154,29 +154,210 @@ body {
 }
 
 /**
+ * Breadcrumbs styling - clean with hover backgrounds
+ */
+.theme-doc-breadcrumbs {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Hide home icon/link and its separator */
+.breadcrumbs__item:first-child {
+    display: none !important;
+}
+
+/* Hide breadcrumbs when there are only 2 items (home + current page) */
+.breadcrumbs__item:nth-child(2):nth-last-child(1) {
+    display: none !important;
+}
+
+.breadcrumbs__item {
+    font-size: 16px !important;
+}
+
+/* Separator styling - Let's Book blue */
+.breadcrumbs__item:not(:last-child):after {
+    color: #081590 !important;
+}
+
+/* Clickable breadcrumb links - make ALL links clickable */
+.breadcrumbs__link {
+    background: transparent !important;
+    border-radius: 0.25rem;
+    color: #12C19B !important;
+    padding: 0.25rem 0.5rem !important;
+    transition: background 0.15s ease;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
+/* Show background on hover for clickable items */
+.breadcrumbs__link:hover {
+    background: #E7FBF7 !important;
+    text-decoration: none !important;
+}
+
+/* Active/current page - normal text color, no background, not clickable */
+.breadcrumbs__item--active .breadcrumbs__link {
+    background: transparent !important;
+    color: var(--ifm-font-color-base) !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+/**
  * Custom button styling for CTA buttons in docs
  */
 .button-container {
     margin: 2rem 0;
 }
 
-.button-container .button--primary {
-    background: var(--ifm-color-primary);
-    color: white;
-    border: none;
-    padding: 0.65rem 1.5rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    border-radius: 8px;
+/* Override Docusaurus default button styles */
+.button,
+a.button,
+.button--primary,
+.button--secondary,
+.button--subtle,
+a.button--primary,
+a.button--secondary,
+a.button--subtle {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-weight: 600 !important;
+    border: none !important;
+    cursor: pointer;
+    transition: all 0.1s ease-out !important;
+    padding: 14px 24px !important;
+    font-size: 15px !important;
+    border-radius: 8px !important;
     text-decoration: none;
     display: inline-block;
-    transition: background 0.15s ease;
 }
 
-.button-container .button--primary:hover {
-    background: var(--ifm-color-primary-dark);
-    color: white;
-    text-decoration: none;
+/* Primary Button - Let's Book Blue with Gradient */
+.button--primary,
+a.button--primary {
+    background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%) !important;
+    color: white !important;
+    box-shadow: 
+        0 1px 3px rgba(8, 21, 144, 0.12),
+        0 1px 2px rgba(8, 21, 144, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.button--primary:hover,
+a.button--primary:hover {
+    background: linear-gradient(135deg, #2232BD 0%, #0c1fb5 100%) !important;
+    color: white !important;
+    text-decoration: none !important;
+    box-shadow: 
+        0 3px 6px rgba(34, 50, 189, 0.18),
+        0 3px 8px rgba(34, 50, 189, 0.12),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.button--primary:active,
+a.button--primary:active {
+    background: linear-gradient(135deg, #081590 0%, #061070 100%) !important;
+    box-shadow: 
+        0 1px 3px rgba(8, 21, 144, 0.15),
+        0 1px 2px rgba(8, 21, 144, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.button--primary:disabled,
+a.button--primary.disabled {
+    background: #e0e0e0 !important;
+    color: #9e9e9e !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+}
+
+/* Secondary Button - White with Border */
+.button--secondary,
+a.button--secondary {
+    background: white !important;
+    color: #081590 !important;
+    border: 2px solid #081690 !important;
+    padding: 12px 22px !important; /* Adjusted for border */
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.02) !important;
+}
+
+.button--secondary:hover,
+a.button--secondary:hover {
+    background: #f0f2fe !important;
+    color: #081590 !important;
+    text-decoration: none !important;
+    border-color: #081690 !important;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.03) !important;
+}
+
+.button--secondary:active,
+a.button--secondary:active {
+    background: #d8dcf8 !important;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.05) !important;
+}
+
+.button--secondary:disabled,
+a.button--secondary.disabled {
+    background: #f5f5f5 !important;
+    color: #bdbdbd !important;
+    border-color: #e0e0e0 !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+}
+
+/* Subtle Button - Light Blue Background */
+.button--subtle,
+a.button--subtle {
+    background: #E6E9FD !important;
+    color: #081590 !important;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.02) !important;
+}
+
+.button--subtle:hover,
+a.button--subtle:hover {
+    background: #f0f2fe !important;
+    color: #081590 !important;
+    text-decoration: none !important;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.03) !important;
+}
+
+.button--subtle:active,
+a.button--subtle:active {
+    background: #d8dcf8 !important;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.05) !important;
+}
+
+.button--subtle:disabled,
+a.button--subtle.disabled {
+    background: #f5f5f5 !important;
+    color: #bdbdbd !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+}
+
+/* Button Sizes */
+.button--sm {
+    padding: 10px 18px !important;
+    font-size: 14px !important;
+}
+
+.button--lg {
+    padding: 16px 28px !important;
+    font-size: 16px !important;
 }
 
 /**
@@ -187,4 +368,53 @@ article img,
 .theme-doc-markdown img {
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
+}
+
+/**
+ * Sidebar menu styling - arrows for categories and bold active items
+ */
+
+/* Top-level items WITHOUT submenu - regular weight */
+.theme-doc-sidebar-item-link .menu__link {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* Top-level category items (with submenu) - ALWAYS bold */
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible .menu__link {
+    font-weight: 600 !important;
+    font-size: 15px;
+}
+
+/* Submenu category items (with sub-submenu) - bold */
+.menu__list .menu__list .theme-doc-sidebar-item-category > .menu__list-item-collapsible .menu__link {
+    font-weight: 600 !important;
+    font-size: 14px;
+}
+
+/* Submenu items - smaller font, regular weight */
+.menu__list .menu__list .menu__link {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Keep the original Docusaurus arrow visible for ALL items with submenu */
+.menu__link--sublist:after {
+    display: inline-block !important;
+    background-size: 1.25rem 1.25rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-left: auto;
+}
+
+/* Sub-menu items indentation */
+.menu__list .menu__list {
+    margin-left: 0;
+    padding-left: 0.75rem;
+}
+
+/* Hover state for all menu links */
+.menu__link:hover {
+    background-color: var(--ifm-menu-color-background-hover);
+    text-decoration: none;
 }

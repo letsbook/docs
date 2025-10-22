@@ -58,45 +58,70 @@
 }
 
 .Btn {
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
-    font-size: 1.05rem;
-    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    padding: 14px 24px;
+    font-size: 15px;
+    border-radius: 8px;
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
 }
 
 .BtnPrimary {
-    background: #081690;
+    background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%);
     color: white;
-    box-shadow: 0 4px 16px rgba(8, 22, 144, 0.3);
+    box-shadow: 
+        0 1px 3px rgba(8, 21, 144, 0.12),
+        0 1px 2px rgba(8, 21, 144, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
 .BtnPrimary:hover {
-    background: #05115c;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(8, 22, 144, 0.4);
+    background: linear-gradient(135deg, #2232BD 0%, #0c1fb5 100%);
     text-decoration: none;
     color: white;
+    box-shadow: 
+        0 3px 6px rgba(34, 50, 189, 0.18),
+        0 3px 8px rgba(34, 50, 189, 0.12),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.BtnPrimary:active {
+    background: linear-gradient(135deg, #081590 0%, #061070 100%);
+    box-shadow: 
+        0 1px 3px rgba(8, 21, 144, 0.15),
+        0 1px 2px rgba(8, 21, 144, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
 .BtnSecondary {
-    background: white;
-    color: #081690;
-    border: 2px solid #081690;
+    background: #E6E9FD;
+    color: #081590;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.06),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.02);
 }
 
 .BtnSecondary:hover {
-    background: #f7f8fe;
-    transform: translateY(-2px);
+    background: #f0f2fe;
     text-decoration: none;
-    color: #081690;
+    color: #081590;
+    box-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.03);
+}
+
+.BtnSecondary:active {
+    background: #d8dcf8;
+    box-shadow: 
+        0 1px 2px rgba(0, 0, 0, 0.04),
+        inset 0 -1px 0 rgba(8, 21, 144, 0.05);
 }
 
 @media (max-width: 768px) {

@@ -72,7 +72,7 @@ const config: Config = {
                     path: 'docs',
                     routeBasePath: '',
                     sidebarPath: './sidebars.ts',
-                    breadcrumbs: false,
+                    breadcrumbs: true,
                     editUrl:
                         process.env.NODE_ENV === 'production'
                             ? undefined

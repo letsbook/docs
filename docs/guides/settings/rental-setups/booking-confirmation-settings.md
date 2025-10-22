@@ -2,6 +2,8 @@
 
 Control when and how customer bookings are confirmed in your system.
 
+**Quick links:** [Pay to confirm](#pay-to-confirm) • [Down payment to confirm](#down-payment-to-confirm) • [Activate in rental setup](#activate-in-rental-setup)
+
 Let's Book offers two confirmation methods:
 
 - **Pay to confirm** - Requires full payment upfront (most secure, prevents no-shows)

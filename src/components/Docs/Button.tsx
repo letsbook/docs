@@ -5,14 +5,26 @@ import styles from './Button.module.css';
 interface ButtonProps {
   href: string;
   children: React.ReactNode;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'subtle';
+  disabled?: boolean;
 }
 
 export default function Button({ 
   href, 
   children, 
-  variant = 'primary' 
+  variant = 'primary',
+  disabled = false 
 }: ButtonProps): JSX.Element {
+  if (disabled) {
+    return (
+      <div className={styles.ButtonWrapper}>
+        <span className={`${styles.Button} ${styles[variant]}`}>
+          {children}
+        </span>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.ButtonWrapper}>
       <Link 

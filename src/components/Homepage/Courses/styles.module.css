@@ -195,20 +195,24 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: white;
-    color: #081690;
-    border-radius: 12px;
-    font-weight: 600;
+    padding: 0.625rem 1.5rem;
+    background: #081690;
+    color: white;
+    border-radius: 6px;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
 
 .ViewAllButton:hover {
-    background: rgba(255, 255, 255, 0.95);
+    background: #05115c;
     text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.ViewAllButton:active {
+    background: #030d40;
 }
 
 .ViewAllArrow {
