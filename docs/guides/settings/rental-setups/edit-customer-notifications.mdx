@@ -29,6 +29,11 @@ A notification flow is the collection of all messages sent around a booking. Eac
 4. Add variables, buttons, or sections as needed
 5. Save your changes
 
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/notifications_edit.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Available notification types
 
 ### Email notifications
@@ -103,10 +108,13 @@ Variables automatically populate with the correct information for each booking.
 3. Enter button text
 4. Save
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
-  <source src={require('../graphics/notifications_edit.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+### Formatting options
+
+- Bold, italic, underline text
+- Bullet lists and numbered lists
+- Hyperlinks
+- Text alignment
+- Headings and subheadings
 
 ### Adding sections
 
@@ -127,37 +135,6 @@ Shows picture of the rented boat.
 **QR code**
 Generates scannable QR code linking to booking details (useful for staff).
 
-### Formatting options
-
-- Bold, italic, underline text
-- Bullet lists and numbered lists
-- Hyperlinks
-- Text alignment
-- Headings and subheadings
-
-## Multiple notification flows
-
-Create separate flows for different scenarios:
-
-**By boat type:**
-- Simple flow for hourly canoe rentals
-- Detailed flow for multi-day yacht charters
-
-**By location:**
-- Different pickup instructions per dock
-- Location-specific parking information
-
-**By rental setup:**
-- Member-only communications
-- Public booking confirmations
-
-**To assign a flow:**
-
-1. Go to your [rental setup](https://dashboard.letsbook.app/rental-setup)
-2. Select the rental setup to configure
-3. Choose notification flow from dropdown
-4. Save changes
-
 ## Testing notifications
 
 **Test before going live:**
@@ -176,23 +153,6 @@ Create separate flows for different scenarios:
 - Images load properly
 - QR codes scan successfully
 - Formatting looks good on mobile
-
-## Best practices
-
-**Keep it simple:**
-Clear, concise messages work best. Avoid information overload.
-
-**Mobile-first:**
-Most customers check email on phones. Test mobile view.
-
-**Clear CTAs:**
-Use obvious button text like "View booking" not "Click here".
-
-**Consistent timing:**
-Stick to notification schedule. Don't send too many emails.
-
-**Professional tone:**
-Match your brand voice but keep it professional and clear.
 
 ---
 
