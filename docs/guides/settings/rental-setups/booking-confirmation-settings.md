@@ -20,9 +20,14 @@ Customers must pay the full amount before their booking is confirmed. This is th
 1. Go to [Confirmation Methods](https://dashboard.letsbook.app/confirmation-methods)
 2. Click **Add**
 3. Select **when fully paid**
-4. Give your method a name (e.g., "Standard confirmation")
+4. Give your method a name (e.g., "Direct payment")
 5. Set the **draft booking timeout**: How long customers have to complete payment after starting their booking (default: 15 minutes)
 6. Click **Save**
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/settings_confirmations_pay_to_confirm.mov').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### How it works
 
@@ -50,26 +55,25 @@ Customers make a partial payment to secure their booking, with the remainder due
 3. Select **when a down payment is made**
 4. Give your method a name (e.g., "Down payment confirmation" or "Partial payment")
 5. Choose your down payment type:
-    - **Percentage**: Enter a percentage of the total amount (e.g., 30%)
+    - **Percentage**: Enter a percentage of the total amount (e.g., 20%)
     - **Fixed amount**: Enter a specific amount in your currency (e.g., €50)
 6. Set the **draft booking timeout** (same as pay to confirm)
 7. Click **Save**
+
+<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+  <source src={require('../graphics/settings_confirmation_downpayment.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
 ### How it works
 
 Customer completes booking → pays down payment → booking confirmed → you collect remaining balance before the trip.
 
-**Collecting the remaining balance:** You need to manually request payment for the remaining amount. Do this by:
-
-- Opening the booking in your dashboard
-- Going to the Finance tab
-- Sending a payment request link to the customer
-
-The customer receives an email with a secure payment link to complete their payment. Learn more about [receiving payments](/guides/settings/payments/receive-payments).
+**Collecting the remaining balance:** Open the booking in your dashboard, go to the Finance tab, and send a payment request link. The customer receives an email with a secure payment link to complete their payment. Learn more about [managing booking finances](/guides/day-to-day/bookings/manage-booking-finances).
 
 ### Payment options explained
 
-**Percentage**: Calculated over the total rental amount _excluding_ any separate deposit charges. For example, 30% of a €200 rental = €60 down payment.
+**Percentage**: Calculated over the total rental amount _excluding_ any separate deposit charges. For example, 20% of a €200 rental = €40 down payment.
 
 **Fixed amount**: Same amount regardless of rental price. Useful for consistent booking fees across all rentals.
 

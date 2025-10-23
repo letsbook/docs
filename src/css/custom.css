@@ -154,10 +154,10 @@ body {
 }
 
 /**
- * Breadcrumbs styling - clean with hover backgrounds
+ * Breadcrumbs styling - only show parent with back arrow
  */
 .theme-doc-breadcrumbs {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 2.5rem !important;
 }
 
 /* Hide home icon/link and its separator */
@@ -165,8 +165,23 @@ body {
     display: none !important;
 }
 
-/* Hide breadcrumbs when there are only 2 items (home + current page) */
-.breadcrumbs__item:nth-child(2):nth-last-child(1) {
+/* Hide the active/current page (last item) */
+.breadcrumbs__item--active {
+    display: none !important;
+}
+
+/* Hide all non-active items by default */
+.breadcrumbs__item:not(.breadcrumbs__item--active) {
+    display: none !important;
+}
+
+/* Show the FIRST non-home item that has a real link (the top-level section) */
+.breadcrumbs__item:nth-child(2):has(> a.breadcrumbs__link) {
+    display: inline-block !important;
+}
+
+/* Hide breadcrumb if we're on a top-level page (2nd item is also 2nd-to-last = only 3 total) */
+.breadcrumbs__item:nth-child(2):nth-last-child(2) {
     display: none !important;
 }
 
@@ -175,13 +190,12 @@ body {
     font-weight: 600 !important;
 }
 
-/* Separator styling - Let's Book blue */
-.breadcrumbs__item:not(:last-child):after {
-    color: #081590 !important;
-    margin: 0 0.35rem !important;
+/* Hide all separators */
+.breadcrumbs__item:after {
+    display: none !important;
 }
 
-/* Clickable breadcrumb links - make ALL links clickable */
+/* Parent link styling with back arrow */
 .breadcrumbs__link {
     background: transparent !important;
     border-radius: 0.25rem;
@@ -197,30 +211,17 @@ body {
     gap: 0.35rem;
 }
 
-/* Add home icon to the FIRST breadcrumb link */
-.breadcrumbs__item:nth-child(2) .breadcrumbs__link:before {
-    content: '';
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2312C19B"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>');
-    background-size: contain;
-    background-repeat: no-repeat;
-    flex-shrink: 0;
+/* Add back arrow before the parent link */
+.breadcrumbs__link:before {
+    content: '←';
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Show background on hover for clickable items */
+/* Show background on hover */
 .breadcrumbs__link:hover {
     background: #E7FBF7 !important;
     text-decoration: none !important;
-}
-
-/* Active/current page - normal text color, no background, not clickable */
-.breadcrumbs__item--active .breadcrumbs__link {
-    background: transparent !important;
-    color: var(--ifm-font-color-base) !important;
-    cursor: default !important;
-    pointer-events: none !important;
 }
 
 /**
@@ -420,9 +421,9 @@ article img,
 /* Keep the original Docusaurus arrow visible for ALL items with submenu */
 .menu__link--sublist:after {
     display: inline-block !important;
-    background-size: 1.25rem 1.25rem;
-    height: 1.25rem;
-    width: 1.25rem;
+    background-size: 1rem 1rem;
+    height: 1rem;
+    width: 1rem;
     margin-left: auto;
 }
 
