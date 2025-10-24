@@ -57,7 +57,7 @@ Formula-based pricing with conditions. Maximum control over complex pricing rule
 
 ## Booking fees
 
-Pass booking fees to customers instead of absorbing them yourself. See [Shift booking fee to customers](../../extra-revenue/shift-booking-fee) for detailed setup instructions.
+Pass booking fees to customers instead of absorbing them yourself. See [Shift booking fee to customers](/guides/boost-revenue/shift-booking-fee) for detailed setup instructions.
 
 ## Getting started
 

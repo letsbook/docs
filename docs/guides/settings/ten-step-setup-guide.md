@@ -176,7 +176,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 10: Connect your payment provider
 
-→ **[Connect payment provider](https://dashboard.letsbook.app/styling)** _(Note: This links to the payment setup section)_
+→ **[Connect payment provider](/guides/settings/payments/receive-payments)**
 
 **Get paid securely** by connecting a payment provider to handle customer transactions safely.
 

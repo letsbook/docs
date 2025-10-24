@@ -26,7 +26,7 @@ Rental setup connects your components into working rental operations:
 - **[Schedules](/guides/settings/rental-setups/schedules)** - When boats are available for rental
 - **[Pricing](/guides/settings/rental-setups/pricing)** - Rental rates and deposit structures
 - **[Confirmation methods](/guides/settings/rental-setups/booking-confirmation-settings)** - How bookings get approved
-- **[Notifications](https://dashboard.letsbook.app/notifications)** - Which emails customers receive (see [notification flows](https://support.letsbook.app/article/88-notifications))
+- **[Notifications](https://dashboard.letsbook.app/notifications)** - Which emails customers receive
 
 ### Optional extras
 
