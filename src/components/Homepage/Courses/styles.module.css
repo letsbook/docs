@@ -54,10 +54,10 @@
 .CourseCard {
     flex: 0 0 min(450px, 85vw);
     scroll-snap-align: center;
-    background: white;
+    background: #081690;
     border-radius: 24px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: none;
     text-decoration: none;
     display: block;
     color: inherit;
@@ -65,43 +65,45 @@
 }
 
 .CourseCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    transform: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .CourseImage {
-    height: 400px;
+    height: 500px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #12c19b 0%, #0fa886 100%);
+    background: transparent;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0;
+}
+
+.CourseImage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.5) 40%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.CourseHeader {
+    position: relative;
+    z-index: 2;
     padding: 2rem;
-}
-
-.CourseCard:nth-child(1) .CourseImage {
-    background: linear-gradient(135deg, #12c19b 0%, #0fa886 100%);
-}
-
-.CourseCard:nth-child(2) .CourseImage {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.CourseCard:nth-child(3) .CourseImage {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.CourseCard:nth-child(4) .CourseImage {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.CourseCard:nth-child(5) .CourseImage {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.CourseCard:nth-child(6) .CourseImage {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .CourseImage img {
@@ -111,13 +113,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.3;
+    opacity: 1;
     transition: all 0.3s ease;
     z-index: 0;
 }
 
 .CourseCard:hover .CourseImage img {
-    opacity: 0.4;
+    opacity: 1;
     transform: scale(1.05);
 }
 
@@ -133,23 +135,38 @@
     font-weight: 700;
     color: white;
     line-height: 1.2;
-    z-index: 1;
+    z-index: 2;
     position: relative;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    transition: none;
 }
 
 .PlayButton {
-    align-self: center;
-    z-index: 1;
     position: relative;
+    z-index: 2;
+    padding: 2rem;
+    align-self: flex-start;
 }
 
 .PlayButton svg {
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
+.PlayButton svg circle {
+    transition: r 0.3s ease;
+    transform-origin: center;
+}
+
+.CourseCard:hover .PlayButton svg circle {
+    r: 32;
+}
+
+.PlayButton svg path {
+    transition: none;
+}
+
 .CourseContent {
-    padding: 2rem;
-    background: white;
+    display: none;
 }
 
 .CourseMeta {
@@ -160,8 +177,15 @@
 }
 
 .CourseDuration {
-    color: #999;
-    font-weight: 500;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #12c19b;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    width: fit-content;
+    transition: none;
 }
 
 .SliderDots {

@@ -17,7 +17,7 @@ const courses: Course[] = [
         title: 'Daily operations walkthrough',
         description:
             'Quick 10-minute tour of everything you do daily: bookings, planning, customer check-ins.',
-        image: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&auto=format&fit=crop&q=80',
+        image: '/img/homepage/courses/team.jpg',
         level: 'Beginner',
         duration: '10m',
         slug: 'daily-operations-walkthrough',
@@ -26,7 +26,7 @@ const courses: Course[] = [
         title: 'Getting started guide',
         description:
             'From zero to first booking in 30 minutes: setup, configuration, and going live.',
-        image: 'https://images.unsplash.com/photo-1557683316-973673baf926?w=800&auto=format&fit=crop&q=80',
+        image: '/img/homepage/courses/daily_operations_walktrough.jpeg',
         level: 'Beginner',
         duration: '30m',
         slug: 'onboarding-guide',
@@ -35,7 +35,7 @@ const courses: Course[] = [
         title: 'Dock host operations',
         description:
             'Run a marina or dock? Learn fleet management, multiple locations, and dock assignments.',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=80',
+        image: '/img/homepage/courses/dock_operations.jpg',
         level: 'Intermediate',
         duration: '20m',
         slug: 'dock-host-operations',
@@ -120,36 +120,36 @@ export default function Courses(): ReactNode {
                             >
                                 <div className={styles.CourseImage}>
                                     <img src={course.image} alt={course.title} draggable={false} />
-                                    <h3 className={styles.CourseTitle}>
-                                        {course.title}
-                                    </h3>
+                                    <div className={styles.CourseHeader}>
+                                        <h3 className={styles.CourseTitle}>
+                                            {course.title}
+                                        </h3>
+                                        <span className={styles.CourseDuration}>
+                                            {course.duration}
+                                        </span>
+                                    </div>
                                     <div className={styles.PlayButton}>
                                         <svg
-                                            width="56"
-                                            height="56"
-                                            viewBox="0 0 56 56"
+                                            width="64"
+                                            height="64"
+                                            viewBox="0 0 64 64"
                                             fill="none"
                                         >
                                             <circle
-                                                cx="28"
-                                                cy="28"
+                                                cx="32"
+                                                cy="32"
                                                 r="28"
                                                 fill="white"
                                                 fillOpacity="0.95"
                                             />
                                             <path
-                                                d="M23 19C23 17.3431 24.7909 16.2988 26.2 17.2L37.6 24.2C38.8667 25.0111 38.8667 26.9889 37.6 27.8L26.2 34.8C24.7909 35.7012 23 34.6569 23 33V19Z"
+                                                d="M28 24C28 22.5 29 22 30 22.7L41 30.7C42 31.4 42 32.6 41 33.3L30 41.3C29 42 28 41.5 28 40V24Z"
                                                 fill="#081590"
                                             />
                                         </svg>
                                     </div>
                                 </div>
                                 <div className={styles.CourseContent}>
-                                    <div className={styles.CourseMeta}>
-                                        <span className={styles.CourseDuration}>
-                                            {course.duration}
-                                        </span>
-                                    </div>
                                 </div>
                             </a>
                         ))}
