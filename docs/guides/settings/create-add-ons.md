@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+title: Create add-ons
+sidebar_position: 10
 ---
 
 # Create add-ons

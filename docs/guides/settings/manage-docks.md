@@ -1,7 +1,7 @@
 ---
 title: Manage docks
 description: Set up and configure dock locations where customers pick up boats
-sidebar_position: 4
+sidebar_position: 11
 ---
 
 # Manage docks

@@ -70,6 +70,36 @@ body {
 }
 
 /**
+ * Breadcrumb styling - pill shaped
+ */
+/* Home icon - #081590 */
+.breadcrumbs__item:first-child .breadcrumbs__link {
+    color: #081590;
+}
+
+.breadcrumbs__item:first-child .breadcrumbs__link:hover {
+    color: #050f6a;
+}
+
+/* Breadcrumb links - pill vorm met afgeronde hoeken */
+.breadcrumbs__link {
+    background-color: transparent;
+    padding: 0.35rem 0.75rem;
+    border-radius: 16px; /* Pill shape - volledig ronde hoeken */
+    transition: background-color 0.2s ease;
+}
+
+/* Breadcrumb links hover - achtergrond #F7F8FE */
+.breadcrumbs__link:hover {
+    background-color: #f7f8fe;
+}
+
+/* Breadcrumb separator pijltje - #01094E */
+.breadcrumbs__item:not(:last-child):after {
+    color: #01094e;
+}
+
+/**
  * Hide the ugly search on the developer docs
  */
 .redoc-wrap [role='search'] {
