@@ -16,6 +16,7 @@ export default function InlineVideoPlayer({ videoSrc, title }: Props) {
             className={styles.Root}
             title={title}
             autoPlay
+            loop
         >
             <source src={videoSrc} type="video/mp4" />
             Your browser does not support the video tag.

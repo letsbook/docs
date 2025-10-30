@@ -49,16 +49,3 @@
     --ifm-h3-font-size: 1.2rem;
     margin-bottom: 1rem;
 }
-
-/**
- * Button styles
- */
-.main-wrapper a.button {
-    text-decoration: none;
-    background: var(--ifm-color-primary);
-}
-
-.main-wrapper a.button:hover {
-    text-decoration: none;
-    background: var(--ifm-color-primary-dark);
-}

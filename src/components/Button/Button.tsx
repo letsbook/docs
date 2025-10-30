@@ -1,36 +1,42 @@
 import Link from '@docusaurus/Link';
-import React from 'react';
+import ButtonWrapper from '@site/src/components/Button/ButtonWrapper';
+import clsx from 'clsx';
+import React, { ReactNode } from 'react';
 
 import styles from './Button.module.css';
 
 interface ButtonProps {
     href: string;
-    children: React.ReactNode;
+    children: ReactNode;
     variant?: 'primary' | 'secondary' | 'subtle';
-    disabled?: boolean;
+    align?: 'left' | 'center' | 'right';
 }
 
-export default function Button({
+const Button = ({
     href,
     children,
     variant = 'primary',
-    disabled = false,
-}: ButtonProps): JSX.Element {
-    if (disabled) {
-        return (
-            <div className={styles.ButtonWrapper}>
-                <span className={`${styles.Button} ${styles[variant]}`}>
-                    {children}
-                </span>
-            </div>
-        );
+    align,
+}: ButtonProps) => {
+    const button = (
+        <Link
+            to={href}
+            className={clsx(styles.Button, {
+                [styles.primary]: variant === 'primary',
+                [styles.secondary]: variant === 'secondary',
+            })}
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            {children}
+        </Link>
+    );
+
+    if (typeof align === 'undefined') {
+        return button;
     }
 
-    return (
-        <div className={styles.ButtonWrapper}>
-            <Link to={href} className={`${styles.Button} ${styles[variant]}`}>
-                {children}
-            </Link>
-        </div>
-    );
-}
+    return <ButtonWrapper align={align}>{button}</ButtonWrapper>;
+};
+
+export default Button;
