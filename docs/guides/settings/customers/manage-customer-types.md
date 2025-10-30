@@ -37,6 +37,7 @@ These two types form the foundation of your customer management system. You can 
 ### Additional settings
 
 **Customer only has to confirm the booking** - Enable this if customers don't need to pay during booking. Useful for:
+
 - Boat club members with monthly billing
 - Corporate accounts with invoicing
 - Staff bookings or test reservations
@@ -50,10 +51,12 @@ Each customer type can have specific booking conditions and cancellation policie
 ## Assigning customer types
 
 **During booking:**
+
 - Guests automatically get "Guest" type
 - When they create an account, they become "Member" type
 
 **Manual assignment:**
+
 1. Go to [Customers](https://dashboard.letsbook.app/customers)
 2. Find the customer and click their name
 3. Click **Edit** button
@@ -72,15 +75,18 @@ See [adding pricing conditions](../rental-setups/pricing/flexible-pricing#adding
 ## Common use cases
 
 **Boat clubs:**
+
 - Member type with flexible booking, no deposits, priority access
 - Guest type with stricter rules and higher pricing
 
 **Mixed operations:**
+
 - Corporate clients with monthly billing and extended booking windows
 - Walk-in customers with immediate payment and shorter durations
 - Season pass holders with unlimited bookings within time slots
 
 **Tiered memberships:**
+
 - Silver members: book 7 days ahead, 4-hour max
 - Gold members: book 14 days ahead, 8-hour max
 - Platinum members: book 30 days ahead, no time limit

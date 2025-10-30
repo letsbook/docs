@@ -70,18 +70,21 @@ Set time requirements like minimum 24 hours notice before pickup.
 ## Common configurations
 
 ### Boat club members
+
 - Book up to 14 days ahead
 - Maximum 1 booking per day
 - Free cancellation up to 2 hours before pickup
 - No payment required during booking
 
 ### Casual renters
+
 - Must book at least 2 hours ahead
 - Maximum 4-hour rental duration
 - Cancellation allowed up to 24 hours before pickup
 - Full payment required during booking
 
 ### Corporate clients
+
 - Book up to 90 days ahead
 - Maximum 8 hours per booking
 - Maximum 40 hours total per month

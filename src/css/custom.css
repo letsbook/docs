@@ -218,7 +218,7 @@ article img,
  * Releases (blog) list - zebra striping
  */
 .blog-wrapper article:nth-child(even) {
-    background-color: #F7F8FE;
+    background-color: #f7f8fe;
     padding: 2rem;
     border-radius: 8px;
     margin-bottom: 2rem;
