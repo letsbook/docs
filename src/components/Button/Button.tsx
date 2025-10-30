@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import ButtonWrapper from '@site/src/components/Button/ButtonWrapper';
+import extractTextContent from '@site/src/helpers/extractTextContent';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
@@ -28,7 +29,7 @@ const Button = ({
             rel="noopener noreferrer"
             target="_blank"
         >
-            {children}
+            {extractTextContent(children)}
         </Link>
     );
 
