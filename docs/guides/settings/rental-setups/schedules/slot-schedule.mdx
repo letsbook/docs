@@ -5,6 +5,8 @@ sidebar_position: 3
 ---
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+import scheduleSlotsAddVideo from '../../graphics/schedules_slots_add.mp4';
+import scheduleSlotsMultidayVideo from '../../graphics/schedules_slots_multiday.mp4';
 
 # Set up slot schedule
 
@@ -54,7 +56,7 @@ Choose the slot type using the toggle buttons:
 - **Duration:** Automatically calculated (8 hours in this example)
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/schedules_slots_add.mp4').default}
+    videoSrc={scheduleSlotsAddVideo}
 />
 
 **Multi-day:** Rentals spanning multiple days
@@ -65,7 +67,7 @@ Choose the slot type using the toggle buttons:
 - **Example:** "Weekend getaway" slot - Saturday 10:00 AM pickup, Sunday 18:00 return (one night later)
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/schedules_slots_multiday.mp4').default}
+    videoSrc={scheduleSlotsMultidayVideo}
 />
 
 ### Availability days

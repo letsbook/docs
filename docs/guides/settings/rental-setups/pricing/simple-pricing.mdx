@@ -5,6 +5,9 @@ sidebar_position: 2
 ---
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+import pricingSimplePricingGroupsVideo from '../../graphics/pricing_simple_pricing_groups.mp4';
+import pricingSimplePricingAdditionalChargesVideo from '../../graphics/pricing_simple_pricing_additional_charges.mp4';
+import pricingDepositVideo from '../../graphics/pricing_deposit.mp4';
 
 # Set up simple pricing
 
@@ -57,9 +60,7 @@ Add different rates based on group size:
 **Example:** Charge €40/hour for groups of 1-5 people, €50/hour for 6-10 people.
 
 <InlineVideoPlayer
-    videoSrc={
-        require('../../graphics/pricing_simple_pricing_groups.mp4').default
-    }
+    videoSrc={pricingSimplePricingGroupsVideo}
 />
 
 ## Additional charges
@@ -89,10 +90,7 @@ Click **Add condition** to create complex pricing rules:
 - Advance booking requirements
 
 <InlineVideoPlayer
-    videoSrc={
-        require('../../graphics/pricing_simple_pricing_additional_charges.mp4')
-            .default
-    }
+    videoSrc={pricingSimplePricingAdditionalChargesVideo}
 />
 
 ## Deposits
@@ -114,7 +112,7 @@ Secure bookings with refundable deposits.
 Add conditions to apply deposits only in specific situations.
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/pricing_deposit.mp4').default}
+    videoSrc={pricingDepositVideo}
 />
 
 ## Completing setup

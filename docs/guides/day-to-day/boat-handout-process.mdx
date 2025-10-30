@@ -5,6 +5,10 @@ sidebar_position: 4
 ---
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+import startTripMethod1Video from './graphics/start_trip_method1.mp4';
+import startTripMethod2Video from './graphics/start_trip_method2.mp4';
+import switchBoatVideo from './graphics/switch_boat.mp4';
+import stopTripVideo from './graphics/stop_trip.mp4';
 
 # Boat handout process
 
@@ -24,7 +28,7 @@ When bookings are about to start (approximately 30 minutes before departure), yo
 This method efficiently assigns boats based on what's physically available. It's typically used by dock hosts managing multiple departures.
 
 <InlineVideoPlayer
-    videoSrc={require('./graphics/start_trip_method1.mp4').default}
+    videoSrc={startTripMethod1Video}
     title="Assign from fleet overview"
 />
 
@@ -39,7 +43,7 @@ Use this when customers arrive and you want to look up their specific booking fi
 5. Click **Start trip** when customer departs
 
 <InlineVideoPlayer
-    videoSrc={require('./graphics/start_trip_method2.mp4').default}
+    videoSrc={startTripMethod2Video}
     title="Assign from booking details"
 />
 
@@ -55,7 +59,7 @@ Once boats are assigned and trips are running, you have several control options:
 - **End trip:** Complete the rental and release the boat
 
 <InlineVideoPlayer
-    videoSrc={require('./graphics/switch_boat.mp4').default}
+    videoSrc={switchBoatVideo}
     title="Switch boat during trip"
 />
 
@@ -65,7 +69,7 @@ Once boats are assigned and trips are running, you have several control options:
 - **Status monitoring:** See which boats are in use, available, along with which booking is assigned to each boat and expected return times
 
 <InlineVideoPlayer
-    videoSrc={require('./graphics/stop_trip.mp4').default}
+    videoSrc={stopTripVideo}
     title="Stop trip from fleet overview"
 />
 
