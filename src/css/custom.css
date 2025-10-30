@@ -16,7 +16,7 @@
     --ifm-menu-color: #081590;
     --ifm-menu-color-background-active: #e6e9fd;
     --ifm-menu-color-background-hover: #f7f8fe;
-    --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="%23081590" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
+    --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24"><path fill="%23081590" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
     --ifm-menu-link-padding-vertical: 0.5rem;
 
     --ifm-code-font-size: 95%;
@@ -197,14 +197,48 @@ article img,
  * Sidebar menu styling - arrows for categories and bold active items
  */
 
-/* Top-level items WITHOUT submenu - regular weight */
+/* Top-level items WITHOUT submenu - match navbar size */
 .theme-doc-sidebar-item-link .menu__link {
     font-weight: 400;
+    font-size: 16px;
+}
+
+/* Top-level category items (with submenu) - ALWAYS bold, match navbar size */
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible .menu__link {
+    font-weight: 600 !important;
+    font-size: 16px;
+}
+
+/* Nested submenu items - smaller than parent items */
+.theme-doc-sidebar-item-category .menu__list .menu__link {
     font-size: 15px;
 }
 
-/* Top-level category items (with submenu) - ALWAYS bold */
-.theme-doc-sidebar-item-category > .menu__list-item-collapsible .menu__link {
-    font-weight: 600 !important;
-    font-size: 15px;
+/**
+ * Releases (blog) list - zebra striping
+ */
+.blog-wrapper article:nth-child(even) {
+    background-color: #F7F8FE;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.blog-wrapper article:nth-child(odd) {
+    margin-bottom: 2rem;
+}
+
+/* Release header - version and date on one line */
+.blog-wrapper .margin-bottom--md header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.blog-wrapper .margin-bottom--md header h2 {
+    margin-bottom: 0;
+}
+
+.blog-wrapper .margin-bottom--md header time {
+    margin: 0;
 }
