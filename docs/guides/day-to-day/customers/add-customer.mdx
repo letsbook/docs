@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Add a customer
 
 Add new customers to your system and assign them to their role.
@@ -26,8 +28,4 @@ From customer profiles you can:
 - Add internal notes for your team
 - Edit their details and preferences
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('../graphics/add_john_doe.mov').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('../graphics/add_john_doe.mp4').default}/>

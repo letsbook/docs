@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Set early bird and last minute pricing
 
 Reward early bookers with discounts or charge premium rates for last-minute bookings. Time-based pricing adjusts rates automatically based on how far ahead customers book.
@@ -29,11 +31,7 @@ Use flexible pricing with "Additional charges" to create time-based rates. Add c
 
 Customers booking 30+ days ahead automatically see "Early Bird discount -€20" on a 2-hour booking.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('./graphics/early_bird.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('./graphics/early_bird.mp4').default}/>
 
 ## Setting up last minute surcharges
 

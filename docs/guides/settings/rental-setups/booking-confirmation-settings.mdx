@@ -1,3 +1,5 @@
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Booking confirmation settings
 
 Control when and how customer bookings are confirmed in your system.
@@ -24,11 +26,10 @@ Customers must pay the full amount before their booking is confirmed. This is th
 5. Set the **draft booking timeout**: How long customers have to complete payment after starting their booking (default: 15 minutes)
 6. Click **Save**
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('../graphics/settings_confirmations_pay_to_confirm.mov').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer
+  videoSrc={require('../graphics/settings_confirmations_pay_to_confirm.mp4').default}
+  title="Set opening times"
+/>
 
 ### How it works
 
@@ -61,11 +62,10 @@ Customers make a partial payment to secure their booking, with the remainder due
 6. Set the **draft booking timeout** (same as pay to confirm)
 7. Click **Save**
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
 
-  <source src={require('../graphics/settings_confirmation_downpayment.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer
+  videoSrc={require('../graphics/settings_confirmation_downpayment.mp4').default}
+/>
 
 ### How it works
 

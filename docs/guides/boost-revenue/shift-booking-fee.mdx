@@ -2,6 +2,8 @@
 sidebar_position: 7
 ---
 
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Pass booking fees to customers
 
 Instead of absorbing platform fees yourself, you can now pass them directly to your customers. This gives you more control over your profit margins and pricing strategy.
@@ -28,11 +30,7 @@ When enabled, the booking fee is automatically added to the final customer price
     - **Display only at payment step:** Fee only shows during checkout
 5. Click Save
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('./graphics/pass_booking_fee.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('./graphics/pass_booking_fee.mp4').default}/>
 
 ## Key benefits
 

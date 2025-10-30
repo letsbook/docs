@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Edit customer notifications
 
 Configure automated emails and SMS messages for your booking flow. Control what information is sent, when it's sent, and how it looks.
@@ -36,25 +38,9 @@ A notification flow is the collection of all messages sent around a booking. Eac
 4. Add variables, buttons, or sections as needed
 5. Save your changes
 
-<video
-    autoPlay
-    loop
-    muted
-    playsInline
-    width="100%"
-    style={{
-        maxWidth: '100%',
-        borderRadius: '14px',
-        margin: '1.5rem 0',
-        display: 'block',
-    }}
->
-    <source
-        src={require('../graphics/notifications_edit.mp4').default}
-        type="video/mp4"
-    />
-    Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer
+  videoSrc={require('../graphics/notifications_edit.mp4').default}
+/>
 
 ## Available notification types
 

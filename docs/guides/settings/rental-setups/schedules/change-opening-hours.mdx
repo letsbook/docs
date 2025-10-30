@@ -4,6 +4,8 @@ description: Configure when customers can book boats through your schedules
 sidebar_position: 2
 ---
 
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Set opening hours
 
 Your opening hours are defined by your schedules. Create slots with specific times to control when customers can pick up and return boats.
@@ -22,11 +24,7 @@ Schedules determine your operating hours through:
 
 Example: Open 9-12 and 14-18 for bookings, but allow boats on water 9-18.
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('../../graphics/schedules_opening_times.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('../../graphics/schedules_opening_times.mp4').default}/>
 
 **Key points:**
 

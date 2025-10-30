@@ -3,6 +3,8 @@ sidebar_label: Match your brand
 sidebar_position: 10
 ---
 
+import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+
 # Match the booking form to your brand
 
 Make the booking form feel like your site. Keep it clean, on-brand, and accessible.
@@ -42,11 +44,7 @@ To get started, go to [Styling](https://dashboard.letsbook.app/styling).
 - Use the booking form link in the dashboard to preview.
 - Then verify on your site after the form is [integrated](add-to-website.mdx).
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('../graphics/styling_and_preview.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('../graphics/styling_and_preview.mp4').default}/>
 
 ## Accessibility
 

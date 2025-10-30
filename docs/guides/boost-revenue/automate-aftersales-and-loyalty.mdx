@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+import LocalFileVideoPlayer from "../../../src/components/LocalFileVideoPlayer";
+
 # Automate aftersales and loyalty
 
 Send the right message at the right time. Automated emails drive reviews, repeat bookings, and upsells without manual work.
@@ -66,11 +68,7 @@ Best time to ask for reviews. Memory is fresh, emotions are positive, damage dep
 **Example message:**
 "Loved your trip? Leave us a review on Google and get 10% off your next adventure: SUMMER10"
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('./graphics/review.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('./graphics/review.mp4').default}/>
 
 Create discount codes in [discount codes](/guides/boost-revenue/create-discount-codes-to-boost-bookings).
 
@@ -110,11 +108,7 @@ Booking canceled. Don't lose the customer forever.
 3. Copy short URL
 4. Add as button in email
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
-
-  <source src={require('./graphics/google_review.mov').default} type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+<LocalFileVideoPlayer videoSrc={require('./graphics/google_review.mov').default}/>
 
 **TripAdvisor:** Get review link from business dashboard.
 
