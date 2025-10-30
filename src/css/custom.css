@@ -213,3 +213,32 @@ article img,
 .theme-doc-sidebar-item-category .menu__list .menu__link {
     font-size: 15px;
 }
+
+/**
+ * Releases (blog) list - zebra striping
+ */
+.blog-wrapper article:nth-child(even) {
+    background-color: #F7F8FE;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.blog-wrapper article:nth-child(odd) {
+    margin-bottom: 2rem;
+}
+
+/* Release header - version and date on one line */
+.blog-wrapper .margin-bottom--md header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+.blog-wrapper .margin-bottom--md header h2 {
+    margin-bottom: 0;
+}
+
+.blog-wrapper .margin-bottom--md header time {
+    margin: 0;
+}
