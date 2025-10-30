@@ -1,6 +1,10 @@
 import { CardGrid, CardLink } from '@site/src/components/CardGrid';
 import type { ReactNode } from 'react';
 
+import boostRevenue from '../../graphics/boost_revenue.jpg';
+import dayToDay from '../../graphics/day-to-day.png';
+import settings from '../../graphics/settings.jpg';
+
 import styles from './styles.module.css';
 
 export default function QuickActions(): ReactNode {
@@ -15,7 +19,7 @@ export default function QuickActions(): ReactNode {
                 <CardGrid>
                     <CardLink
                         href="/guides/day-to-day"
-                        imageSrc="/img/homepage/day-to-day/day-to-day.png"
+                        imageSrc={dayToDay}
                         imageAlt="Day to day operations"
                         title="Run your daily operations"
                     >
@@ -25,7 +29,7 @@ export default function QuickActions(): ReactNode {
 
                     <CardLink
                         href="/guides/boost-revenue"
-                        imageSrc="/img/homepage/boost-revenue/boost_revenue.jpg"
+                        imageSrc={boostRevenue}
                         imageAlt="Boost revenue"
                         title="Boost bookings and revenue"
                     >
@@ -35,7 +39,7 @@ export default function QuickActions(): ReactNode {
 
                     <CardLink
                         href="/guides/settings"
-                        imageSrc="/img/homepage/settings/settings.jpg"
+                        imageSrc={settings}
                         imageAlt="Settings"
                         title="Configure your settings"
                     >

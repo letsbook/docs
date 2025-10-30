@@ -1,35 +1,7 @@
-import Link from '@docusaurus/Link';
+import supportImage from '@site/static/img/support.jpg';
 import type { ReactNode } from 'react';
 
 import styles from './styles.module.css';
-
-type HelpOption = {
-    title: string;
-    description: string;
-    icon: string;
-    link?: string;
-};
-
-const helpOptions: HelpOption[] = [
-    {
-        title: 'Get instant help',
-        description: 'support@lets-book.com - we respond fast',
-        icon: '⚡',
-        link: 'mailto:support@lets-book.com',
-    },
-    {
-        title: 'Browse all guides',
-        description: 'Everything you need to know',
-        icon: '📚',
-        link: '/guides/get-started/step-setup-guide',
-    },
-    {
-        title: 'Book a call',
-        description: 'Get expert setup assistance',
-        icon: '🎯',
-        link: "javascript:Beacon('open')",
-    },
-];
 
 export default function GettingStarted(): ReactNode {
     const openBeacon = (e: React.MouseEvent) => {
@@ -45,7 +17,7 @@ export default function GettingStarted(): ReactNode {
                 <div className={styles.Content}>
                     <div className={styles.ImageContent}>
                         <img
-                            src="/img/support.jpg"
+                            src={supportImage}
                             alt="Support team member"
                             className={styles.SupportImage}
                         />

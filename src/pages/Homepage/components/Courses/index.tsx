@@ -1,3 +1,7 @@
+import dailyOperationsImage from '@site/docs/courses/graphics/daily_operations_walktrough.jpeg';
+import dockOperationsImage from '@site/docs/courses/graphics/dock_operations.jpg';
+import placeholderImage from '@site/docs/courses/graphics/placeholder.png';
+import teamImage from '@site/docs/courses/graphics/team.jpg';
 import { useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 
@@ -17,7 +21,7 @@ const courses: Course[] = [
         title: 'Daily operations walkthrough',
         description:
             'Quick 10-minute tour of everything you do daily: bookings, planning, customer check-ins.',
-        image: '/img/homepage/courses/team.jpg',
+        image: teamImage,
         level: 'Beginner',
         duration: '10m',
         slug: 'daily-operations-walkthrough',
@@ -26,7 +30,7 @@ const courses: Course[] = [
         title: 'Getting started guide',
         description:
             'From zero to first booking in 30 minutes: setup, configuration, and going live.',
-        image: '/img/homepage/courses/daily_operations_walktrough.jpeg',
+        image: dailyOperationsImage,
         level: 'Beginner',
         duration: '30m',
         slug: 'onboarding-guide',
@@ -35,7 +39,7 @@ const courses: Course[] = [
         title: 'Dock host operations',
         description:
             'Run a marina or dock? Learn fleet management, multiple locations, and dock assignments.',
-        image: '/img/homepage/courses/dock_operations.jpg',
+        image: dockOperationsImage,
         level: 'Intermediate',
         duration: '20m',
         slug: 'dock-host-operations',
@@ -44,7 +48,7 @@ const courses: Course[] = [
         title: 'Seasonal planning strategies',
         description:
             'Master schedules, blockouts, seasonal pricing, and managing high-demand periods.',
-        image: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=800&auto=format&fit=crop&q=80',
+        image: placeholderImage,
         level: 'Intermediate',
         duration: '20m',
         slug: 'seasonal-planning',
@@ -53,7 +57,7 @@ const courses: Course[] = [
         title: 'Boat club setup',
         description:
             'Configure memberships, internal bookings, member rates, and boat club workflows.',
-        image: 'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=800&auto=format&fit=crop&q=80',
+        image: placeholderImage,
         level: 'Advanced',
         duration: '20m',
         slug: 'boat-club-setup',
@@ -62,7 +66,7 @@ const courses: Course[] = [
         title: 'Build autonomous operations',
         description:
             'Automate everything: self-service bookings, payments, check-ins, and remote boat access.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80',
+        image: placeholderImage,
         level: 'Advanced',
         duration: '25m',
         slug: 'autonomous-operations',
