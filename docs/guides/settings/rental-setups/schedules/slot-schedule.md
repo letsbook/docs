@@ -27,6 +27,7 @@ Click **Add new** to create individual time slots for your schedule.
 Give each slot a descriptive name that helps you organize different options.
 
 **Examples for Summer slots:**
+
 - "Morning cruise" - Early start (9:00-12:00)
 - "Afternoon adventure" - Midday departure (13:00-17:00)
 - "Sundowner" - Evening trip (18:00-21:00)
@@ -44,6 +45,7 @@ Choose the slot type using the toggle buttons:
 - **Duration:** Automatically calculated (8 hours in this example)
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/schedules_slots_add.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -56,6 +58,7 @@ Choose the slot type using the toggle buttons:
 - **Example:** "Weekend getaway" slot - Saturday 10:00 AM pickup, Sunday 18:00 return (one night later)
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/schedules_slots_multiday.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

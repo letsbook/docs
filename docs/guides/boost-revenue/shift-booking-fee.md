@@ -29,6 +29,7 @@ When enabled, the booking fee is automatically added to the final customer price
 5. Click Save
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('./graphics/pass_booking_fee.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

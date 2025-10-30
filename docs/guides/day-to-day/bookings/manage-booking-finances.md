@@ -23,10 +23,11 @@ Request payment for unpaid or partially paid bookings.
 The customer receives an email with a secure payment link. You can track payment status in the Finance tab.
 
 :::tip[When to use payment requests]
+
 - Collecting remaining balance after a down payment
 - Requesting payment for manually added bookings
 - After editing a booking that changed the price
-:::
+  :::
 
 ## Add payment link to confirmation email
 
@@ -81,8 +82,8 @@ When editing a booking changes the price:
 1. Save the edited booking
 2. Check the new total in Finance tab
 3. Choose your next step:
-   - Send a payment request for additional amount
-   - Register a cash payment if already collected
-   - Process a refund if the price decreased
+    - Send a payment request for additional amount
+    - Register a cash payment if already collected
+    - Process a refund if the price decreased
 
 Learn more in [edit or cancel a booking](/guides/day-to-day/bookings/edit-or-cancel-a-booking).

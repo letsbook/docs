@@ -1,167 +1,167 @@
 /* Plan comparison container */
 .planContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin: 2rem 0 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0 3rem;
 }
 
 /* Individual plan card */
 .planCard {
-  background: #f7f8fe;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #e6e9fd;
-  transition: all 0.2s ease;
+    background: #f7f8fe;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #e6e9fd;
+    transition: all 0.2s ease;
 }
 
 .planCard:hover {
-  border-color: #d1d4f2;
-  box-shadow: 0 4px 12px rgba(8, 21, 144, 0.1);
+    border-color: #d1d4f2;
+    box-shadow: 0 4px 12px rgba(8, 21, 144, 0.1);
 }
 
 /* Plan header */
 .planHeader {
-  background: linear-gradient(135deg, #e6e9fd 0%, #f7f8fe 100%);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 2px solid #e6e9fd;
+    background: linear-gradient(135deg, #e6e9fd 0%, #f7f8fe 100%);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #e6e9fd;
 }
 
 .planHeader h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #081590;
-  margin: 0 0 1rem;
-  border: none;
-  padding: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #081590;
+    margin: 0 0 1rem;
+    border: none;
+    padding: 0;
 }
 
 .planPrice {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 0.25rem;
-  margin-bottom: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .priceAmount {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #081590;
-  line-height: 1;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #081590;
+    line-height: 1;
 }
 
 .pricePeriod {
-  font-size: 1.25rem;
-  color: #64748b;
-  font-weight: 500;
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: 500;
 }
 
 .planSubprice {
-  font-size: 0.9375rem;
-  color: #64748b;
-  font-weight: 500;
+    font-size: 0.9375rem;
+    color: #64748b;
+    font-weight: 500;
 }
 
 /* Plan body */
 .planBody {
-  padding: 1.5rem 2rem;
-  flex: 1;
+    padding: 1.5rem 2rem;
+    flex: 1;
 }
 
 .planDescription {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #1e293b;
-  margin: 0 0 1.5rem;
-  font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1e293b;
+    margin: 0 0 1.5rem;
+    font-weight: 500;
 }
 
 .planSection {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .planSection strong {
-  display: block;
-  color: #081590;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 0.9375rem;
+    display: block;
+    color: #081590;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
 }
 
 .planSection ul {
-  margin: 0.5rem 0 0;
-  padding-left: 1.5rem;
+    margin: 0.5rem 0 0;
+    padding-left: 1.5rem;
 }
 
 .planSection li {
-  color: #1e293b;
-  margin-bottom: 0.375rem;
-  line-height: 1.5;
+    color: #1e293b;
+    margin-bottom: 0.375rem;
+    line-height: 1.5;
 }
 
 .planSection p {
-  color: #1e293b;
-  line-height: 1.6;
-  margin: 0;
+    color: #1e293b;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Plan footer */
 .planFooter {
-  padding: 1rem 2rem 1.5rem;
-  text-align: center;
+    padding: 1rem 2rem 1.5rem;
+    text-align: center;
 }
 
 .planButton {
-  display: inline-block;
-  background-color: #081590 !important;
-  color: #ffffff !important;
-  padding: 0.875rem 1.25rem;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 0.9375rem;
-  text-decoration: none !important;
-  transition: all 0.15s ease;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  min-width: 200px;
+    display: inline-block;
+    background-color: #081590 !important;
+    color: #ffffff !important;
+    padding: 0.875rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none !important;
+    transition: all 0.15s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    min-width: 200px;
 }
 
 .planButton:hover {
-  background-color: #050f6a !important;
-  transform: translateY(-1px);
-  text-decoration: none !important;
-  color: #ffffff !important;
+    background-color: #050f6a !important;
+    transform: translateY(-1px);
+    text-decoration: none !important;
+    color: #ffffff !important;
 }
 
 .planButton:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 /* Responsive */
 @media (max-width: 968px) {
-  .planContainer {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .planHeader {
-    padding: 1.5rem;
-  }
-  
-  .priceAmount {
-    font-size: 2.5rem;
-  }
-  
-  .planBody {
-    padding: 1.5rem;
-  }
-  
-  .planFooter {
-    padding: 1rem 1.5rem 1.5rem;
-  }
+    .planContainer {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .planHeader {
+        padding: 1.5rem;
+    }
+
+    .priceAmount {
+        font-size: 2.5rem;
+    }
+
+    .planBody {
+        padding: 1.5rem;
+    }
+
+    .planFooter {
+        padding: 1rem 1.5rem 1.5rem;
+    }
 }

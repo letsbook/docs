@@ -259,17 +259,17 @@
     font-size: 15px;
     text-decoration: none;
     transition: all 0.1s ease-out;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.12),
         0 1px 2px rgba(8, 21, 144, 0.08),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
 .ViewMoreButton:hover {
-    background: linear-gradient(135deg, #2232BD 0%, #0c1fb5 100%);
+    background: linear-gradient(135deg, #2232bd 0%, #0c1fb5 100%);
     color: white;
     text-decoration: none;
-    box-shadow: 
+    box-shadow:
         0 3px 6px rgba(34, 50, 189, 0.18),
         0 3px 8px rgba(34, 50, 189, 0.12),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
@@ -277,7 +277,7 @@
 
 .ViewMoreButton:active {
     background: linear-gradient(135deg, #081590 0%, #061070 100%);
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.15),
         0 1px 2px rgba(8, 21, 144, 0.1),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);

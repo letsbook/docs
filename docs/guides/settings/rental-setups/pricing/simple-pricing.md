@@ -33,6 +33,7 @@ Set your base rates based on trip duration:
 **Time-based rates:** Enter prices for different rental lengths. If someone books an unusual duration (like 3.5 hours), the system charges the next highest rate you've set.
 
 **Example:**
+
 - 1 Hour: €200 for 1-4 passengers, €250 for 5-9 passengers, €300 for 10+ passengers
 - 2 Hours: €300 for 1-4 passengers, €350 for 5-9 passengers, €400 for 10+ passengers
 
@@ -47,6 +48,7 @@ Add different rates based on group size:
 **Example:** Charge €40/hour for groups of 1-5 people, €50/hour for 6-10 people.
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/pricing_simple_pricing_groups.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -78,6 +80,7 @@ Click **Add condition** to create complex pricing rules:
 - Advance booking requirements
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/pricing_simple_pricing_additional_charges.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -101,6 +104,7 @@ Secure bookings with refundable deposits.
 Add conditions to apply deposits only in specific situations.
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/pricing_deposit.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

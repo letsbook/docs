@@ -38,7 +38,7 @@ We'll retry charging automatically. Your account stays active during retry attem
 **Standard Plan:** $30/month (€25/month) + 2.5% booking fee  
 **Pro Plan:** $175/month (€150/month) + 1% booking fee
 
-*Please note you can only change plan once every 12 months.
+\*Please note you can only change plan once every 12 months.
 
 - Charged monthly starting on the day that you went live
 - Booking fees overview sent separately

@@ -19,7 +19,8 @@ export default function QuickActions(): ReactNode {
                         imageAlt="Day to day operations"
                         title="Run your daily operations"
                     >
-                        Essential tools for managing your daily rental operations
+                        Essential tools for managing your daily rental
+                        operations
                     </CardLink>
 
                     <CardLink
@@ -28,7 +29,8 @@ export default function QuickActions(): ReactNode {
                         imageAlt="Boost revenue"
                         title="Boost bookings and revenue"
                     >
-                        Strategies to increase bookings and maximize revenue from your fleet
+                        Strategies to increase bookings and maximize revenue
+                        from your fleet
                     </CardLink>
 
                     <CardLink
@@ -37,7 +39,8 @@ export default function QuickActions(): ReactNode {
                         imageAlt="Settings"
                         title="Configure your settings"
                     >
-                        Set up pricing, schedules, rental methods, and integrations
+                        Set up pricing, schedules, rental methods, and
+                        integrations
                     </CardLink>
                 </CardGrid>
             </div>

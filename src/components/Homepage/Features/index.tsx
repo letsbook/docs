@@ -1,36 +1,36 @@
 import Link from '@docusaurus/Link';
-import { 
-    Calendar, 
-    Monitor,
-    Ship, 
-    TrendingUp, 
-    Ban, 
-    FileSignature,
-    Clock,
-    Ticket,
-    Plus,
-    CreditCard,
-    Handshake,
-    Edit,
-    Search,
-    ClipboardList,
-    Download,
-    ShoppingCart,
-    User,
-    Users,
-    ScrollText,
-    Lock,
+import {
+    Anchor,
+    Ban,
+    Calendar,
     CalendarDays,
+    ClipboardList,
+    Clock,
+    CreditCard,
+    Download,
+    Edit,
+    FileSignature,
+    FileText,
+    Gift,
+    Handshake,
+    Lock,
+    Mail,
+    MapPin,
+    Monitor,
+    Plus,
+    RefreshCw,
+    Rocket,
+    Sailboat,
+    ScrollText,
+    Search,
+    Ship,
+    ShoppingCart,
     Smartphone,
     Star,
-    Mail,
-    Rocket,
-    FileText,
-    Anchor,
-    MapPin,
-    RefreshCw,
-    Gift,
-    Sailboat
+    Ticket,
+    TrendingUp,
+    User,
+    Users,
 } from 'lucide-react';
 import { useState } from 'react';
 import type { ReactNode } from 'react';
@@ -301,8 +301,16 @@ export default function Features(): ReactNode {
                                             to={link.link}
                                             className={styles.GuideLink}
                                         >
-                                            <div className={styles.GuideLinkContent}>
-                                                <div className={styles.GuideLinkIcon}>
+                                            <div
+                                                className={
+                                                    styles.GuideLinkContent
+                                                }
+                                            >
+                                                <div
+                                                    className={
+                                                        styles.GuideLinkIcon
+                                                    }
+                                                >
                                                     {link.icon}
                                                 </div>
                                                 <div>

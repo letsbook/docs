@@ -43,6 +43,7 @@ To get started, go to [Styling](https://dashboard.letsbook.app/styling).
 - Then verify on your site after the form is [integrated](add-to-website.mdx).
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../graphics/styling_and_preview.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

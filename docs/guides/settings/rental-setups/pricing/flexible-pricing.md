@@ -51,20 +51,24 @@ Click **Add condition** to create complex rules.
 **Base rate:** $100/hour for all rentals
 
 **Weekend surcharge:** +$20/hour on Saturdays and Sundays
+
 - Condition: Days of the week = Saturday, Sunday
 - Price: +$20 per hour
 
 **Member discount:** -$40/hour for members
+
 - Condition: Customer type = Member
 - Price: -$40 per hour
 
 **Result:**
+
 - Weekday non-member: $100/hour
 - Weekend non-member: $120/hour
-- Weekday member: $60/hour  
+- Weekday member: $60/hour
 - Weekend member: $80/hour
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/pricing_flexible_pricing.mov').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

@@ -75,17 +75,17 @@
 .BtnPrimary {
     background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%);
     color: white;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.12),
         0 1px 2px rgba(8, 21, 144, 0.08),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
 .BtnPrimary:hover {
-    background: linear-gradient(135deg, #2232BD 0%, #0c1fb5 100%);
+    background: linear-gradient(135deg, #2232bd 0%, #0c1fb5 100%);
     text-decoration: none;
     color: white;
-    box-shadow: 
+    box-shadow:
         0 3px 6px rgba(34, 50, 189, 0.18),
         0 3px 8px rgba(34, 50, 189, 0.12),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
@@ -93,16 +93,16 @@
 
 .BtnPrimary:active {
     background: linear-gradient(135deg, #081590 0%, #061070 100%);
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.15),
         0 1px 2px rgba(8, 21, 144, 0.1),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
 .BtnSecondary {
-    background: #E6E9FD;
+    background: #e6e9fd;
     color: #081590;
-    box-shadow: 
+    box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.06),
         inset 0 -1px 0 rgba(8, 21, 144, 0.02);
 }
@@ -111,7 +111,7 @@
     background: #f0f2fe;
     text-decoration: none;
     color: #081590;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.06),
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.03);
@@ -119,7 +119,7 @@
 
 .BtnSecondary:active {
     background: #d8dcf8;
-    box-shadow: 
+    box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.05);
 }

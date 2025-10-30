@@ -23,6 +23,7 @@ Now decide when renters see the document.
 1. Link the WaiverForever document to that combination.
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../graphics/waiver_connect.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

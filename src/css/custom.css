@@ -14,8 +14,8 @@
     --ifm-color-primary-lightest: #f7f8fe;
 
     --ifm-menu-color: #081590;
-    --ifm-menu-color-background-active: #E6E9FD;
-    --ifm-menu-color-background-hover: #F7F8FE;
+    --ifm-menu-color-background-active: #e6e9fd;
+    --ifm-menu-color-background-hover: #f7f8fe;
     --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"><path fill="%23081590" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
     --ifm-menu-link-padding-vertical: 0.5rem;
 
@@ -199,7 +199,7 @@ body {
 .breadcrumbs__link {
     background: transparent !important;
     border-radius: 0.25rem;
-    color: #12C19B !important;
+    color: #12c19b !important;
     font-size: 15px !important;
     font-weight: 600 !important;
     padding: 0.25rem 0.35rem !important;
@@ -220,7 +220,7 @@ body {
 
 /* Show background on hover */
 .breadcrumbs__link:hover {
-    background: #E7FBF7 !important;
+    background: #e7fbf7 !important;
     text-decoration: none !important;
 }
 
@@ -257,7 +257,7 @@ a.button--subtle {
 a.button--primary {
     background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%) !important;
     color: white !important;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.12),
         0 1px 2px rgba(8, 21, 144, 0.08),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08) !important;
@@ -265,10 +265,10 @@ a.button--primary {
 
 .button--primary:hover,
 a.button--primary:hover {
-    background: linear-gradient(135deg, #2232BD 0%, #0c1fb5 100%) !important;
+    background: linear-gradient(135deg, #2232bd 0%, #0c1fb5 100%) !important;
     color: white !important;
     text-decoration: none !important;
-    box-shadow: 
+    box-shadow:
         0 3px 6px rgba(34, 50, 189, 0.18),
         0 3px 8px rgba(34, 50, 189, 0.12),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08) !important;
@@ -277,7 +277,7 @@ a.button--primary:hover {
 .button--primary:active,
 a.button--primary:active {
     background: linear-gradient(135deg, #081590 0%, #061070 100%) !important;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.15),
         0 1px 2px rgba(8, 21, 144, 0.1),
         inset 0 -1px 0 rgba(0, 0, 0, 0.08) !important;
@@ -298,7 +298,7 @@ a.button--secondary {
     color: #081590 !important;
     border: 2px solid #081690 !important;
     padding: 12px 22px !important; /* Adjusted for border */
-    box-shadow: 
+    box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.06),
         inset 0 -1px 0 rgba(8, 21, 144, 0.02) !important;
 }
@@ -309,7 +309,7 @@ a.button--secondary:hover {
     color: #081590 !important;
     text-decoration: none !important;
     border-color: #081690 !important;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.06),
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.03) !important;
@@ -318,7 +318,7 @@ a.button--secondary:hover {
 .button--secondary:active,
 a.button--secondary:active {
     background: #d8dcf8 !important;
-    box-shadow: 
+    box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.05) !important;
 }
@@ -335,9 +335,9 @@ a.button--secondary.disabled {
 /* Subtle Button - Light Blue Background */
 .button--subtle,
 a.button--subtle {
-    background: #E6E9FD !important;
+    background: #e6e9fd !important;
     color: #081590 !important;
-    box-shadow: 
+    box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.06),
         inset 0 -1px 0 rgba(8, 21, 144, 0.02) !important;
 }
@@ -347,7 +347,7 @@ a.button--subtle:hover {
     background: #f0f2fe !important;
     color: #081590 !important;
     text-decoration: none !important;
-    box-shadow: 
+    box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.06),
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.03) !important;
@@ -356,7 +356,7 @@ a.button--subtle:hover {
 .button--subtle:active,
 a.button--subtle:active {
     background: #d8dcf8 !important;
-    box-shadow: 
+    box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.05) !important;
 }
@@ -407,7 +407,11 @@ article img,
 }
 
 /* Submenu category items (with sub-submenu) - bold */
-.menu__list .menu__list .theme-doc-sidebar-item-category > .menu__list-item-collapsible .menu__link {
+.menu__list
+    .menu__list
+    .theme-doc-sidebar-item-category
+    > .menu__list-item-collapsible
+    .menu__link {
     font-weight: 600 !important;
     font-size: 14px;
 }

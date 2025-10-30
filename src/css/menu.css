@@ -25,11 +25,8 @@
     opacity: 0;
 }
 
+.menu:has(.theme-doc-sidebar-item-category-level-1:hover) .menu__caret,
 .menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1:hover
-    .menu__caret,
-.menu:has(.theme-doc-sidebar-item-category-level-1:hover)
-    .theme-doc-sidebar-item-category-level-1:hover
     .menu__link--sublist-caret::after {
     opacity: 1;
 }

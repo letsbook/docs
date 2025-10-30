@@ -7,7 +7,14 @@ sidebar_position: 4
 Configure automated emails and SMS messages for your booking flow. Control what information is sent, when it's sent, and how it looks.
 
 <div class="button-container">
-  <a href="https://dashboard.letsbook.app/notifications" class="button button--primary" target="_blank" rel="noopener noreferrer">Manage notifications</a>
+    <a
+        href="https://dashboard.letsbook.app/notifications"
+        class="button button--primary"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Manage notifications
+    </a>
 </div>
 
 ## Setting up notification flows
@@ -29,9 +36,24 @@ A notification flow is the collection of all messages sent around a booking. Eac
 4. Add variables, buttons, or sections as needed
 5. Save your changes
 
-<video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
-  <source src={require('../graphics/notifications_edit.mp4').default} type="video/mp4" />
-  Your browser does not support the video tag.
+<video
+    autoPlay
+    loop
+    muted
+    playsInline
+    width="100%"
+    style={{
+        maxWidth: '100%',
+        borderRadius: '14px',
+        margin: '1.5rem 0',
+        display: 'block',
+    }}
+>
+    <source
+        src={require('../graphics/notifications_edit.mp4').default}
+        type="video/mp4"
+    />
+    Your browser does not support the video tag.
 </video>
 
 ## Available notification types
@@ -65,6 +87,7 @@ Reminder sent 24 hours before the scheduled pickup.
 Final reminder sent 15 minutes before pickup, includes booking link.
 
 **SMS limitations:**
+
 - Content cannot be customized due to international regulations
 - Sent in customer's language (Dutch, English, Danish, Spanish, Swedish, Italian, Portuguese)
 - Default to English if customer language not supported

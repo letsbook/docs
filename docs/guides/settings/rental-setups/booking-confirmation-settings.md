@@ -25,6 +25,7 @@ Customers must pay the full amount before their booking is confirmed. This is th
 6. Click **Save**
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../graphics/settings_confirmations_pay_to_confirm.mov').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -61,6 +62,7 @@ Customers make a partial payment to secure their booking, with the remainder due
 7. Click **Save**
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../graphics/settings_confirmation_downpayment.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

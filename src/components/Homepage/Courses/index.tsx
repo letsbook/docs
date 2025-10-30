@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 
 import styles from './styles.module.css';
@@ -119,7 +119,11 @@ export default function Courses(): ReactNode {
                                 draggable={false}
                             >
                                 <div className={styles.CourseImage}>
-                                    <img src={course.image} alt={course.title} draggable={false} />
+                                    <img
+                                        src={course.image}
+                                        alt={course.title}
+                                        draggable={false}
+                                    />
                                     <div className={styles.CourseHeader}>
                                         <h3 className={styles.CourseTitle}>
                                             {course.title}
@@ -149,8 +153,7 @@ export default function Courses(): ReactNode {
                                         </svg>
                                     </div>
                                 </div>
-                                <div className={styles.CourseContent}>
-                                </div>
+                                <div className={styles.CourseContent}></div>
                             </a>
                         ))}
                     </div>

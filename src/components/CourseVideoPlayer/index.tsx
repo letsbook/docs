@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+
 import styles from './styles.module.css';
 
 interface CourseVideoPlayerProps {
@@ -7,7 +8,11 @@ interface CourseVideoPlayerProps {
     thumbnailSrc?: string;
 }
 
-export default function CourseVideoPlayer({ videoSrc, title, thumbnailSrc }: CourseVideoPlayerProps) {
+export default function CourseVideoPlayer({
+    videoSrc,
+    title,
+    thumbnailSrc,
+}: CourseVideoPlayerProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
@@ -34,22 +39,37 @@ export default function CourseVideoPlayer({ videoSrc, title, thumbnailSrc }: Cou
             {!isPlaying && (
                 <div className={styles.thumbnail} onClick={handlePlay}>
                     {thumbnailSrc && (
-                        <img src={thumbnailSrc} alt={title} className={styles.thumbnailImage} />
+                        <img
+                            src={thumbnailSrc}
+                            alt={title}
+                            className={styles.thumbnailImage}
+                        />
                     )}
                     <div className={styles.playButton}>
-                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40" fill="rgba(18, 193, 155, 0.95)" />
+                        <svg
+                            width="80"
+                            height="80"
+                            viewBox="0 0 80 80"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <circle
+                                cx="40"
+                                cy="40"
+                                r="40"
+                                fill="rgba(18, 193, 155, 0.95)"
+                            />
                             <path d="M32 26L56 40L32 54V26Z" fill="white" />
                         </svg>
                     </div>
                 </div>
             )}
             {isPlaying && (
-                <video 
+                <video
                     ref={videoRef}
                     controls
                     playsInline
-                    width="100%" 
+                    width="100%"
                     className={styles.video}
                     title={title}
                     autoPlay

@@ -29,15 +29,18 @@ Create a [slot schedule](../schedules/slot-schedule) first. Slot pricing connect
 Click on each slot to set its individual price. Each time slot in your schedule needs its own rate.
 
 **Single day slots:** Set one price per slot
+
 - "Morning cruise" (9:00-12:00): $150
 - "Afternoon adventure" (13:00-17:00): $200
 - "Sundowner" (18:00-21:00): $180
 - "Full day explorer" (9:00-19:00): $350
 
 **Multi-day slots:** Set the full package price
+
 - "Weekend getaway" (Saturday 10:00 - Sunday 18:00): $600
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/settings_pricing_slots.mov').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -78,6 +81,7 @@ Calculate extra costs beyond slot and element pricing.
 **Example:** Charge $5.00 per passenger, added on top of the base slot price.
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/pricing_additional_charge.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -101,6 +105,7 @@ Secure bookings with refundable deposits.
 Add conditions to apply deposits only in specific situations.
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '14px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('../../graphics/pricing_deposit.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>

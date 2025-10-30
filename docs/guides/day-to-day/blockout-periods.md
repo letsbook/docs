@@ -33,6 +33,7 @@ Blockout periods temporarily remove availability from your booking system. You c
 3. Click **Save**
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('./graphics/add_block.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -60,6 +61,7 @@ Blockouts appear directly in your planning timeline:
 This visual integration ensures you never miss active blockouts when viewing your schedule.
 
 <video autoPlay loop muted playsInline width="100%" style={{maxWidth: '100%', borderRadius: '8px', margin: '1.5rem 0', display: 'block'}}>
+
   <source src={require('./graphics/block_availability.mp4').default} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
