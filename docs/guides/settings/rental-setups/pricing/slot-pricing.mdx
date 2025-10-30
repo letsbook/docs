@@ -11,7 +11,14 @@ import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
 Slot pricing sets fixed rates for specific time slots and packages. Connect prices directly to your slot schedules for structured rental offerings.
 
 <div class="button-container">
-  <a href="https://dashboard.letsbook.app/pricing/slots/add" class="button button--primary" target="_blank" rel="noopener noreferrer">Create slot pricing</a>
+    <a
+        href="https://dashboard.letsbook.app/pricing/slots/add"
+        class="button button--primary"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Create slot pricing
+    </a>
 </div>
 
 ## Prerequisites
@@ -41,7 +48,9 @@ Click on each slot to set its individual price. Each time slot in your schedule 
 
 - "Weekend getaway" (Saturday 10:00 - Sunday 18:00): $600
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/settings_pricing_slots.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={require('../../graphics/settings_pricing_slots.mp4').default}
+/>
 
 ## Pricing elements
 
@@ -78,7 +87,9 @@ Calculate extra costs beyond slot and element pricing.
 
 **Example:** Charge $5.00 per passenger, added on top of the base slot price.
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/pricing_additional_charge.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={require('../../graphics/pricing_additional_charge.mp4').default}
+/>
 
 ## Deposits
 
@@ -98,7 +109,9 @@ Secure bookings with refundable deposits.
 
 Add conditions to apply deposits only in specific situations.
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/pricing_deposit.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={require('../../graphics/pricing_deposit.mp4').default}
+/>
 
 ## Advanced features
 

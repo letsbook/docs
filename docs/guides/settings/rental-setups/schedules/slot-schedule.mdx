@@ -11,7 +11,14 @@ import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
 Slot schedules offer fixed departure times and trip durations. Perfect for multi-day rentals, guided trips, or structured packages.
 
 <div class="button-container">
-  <a href="https://dashboard.letsbook.app/schedules/slot/add" class="button button--primary" target="_blank" rel="noopener noreferrer">Create new slot schedule</a>
+    <a
+        href="https://dashboard.letsbook.app/schedules/slot/add"
+        class="button button--primary"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Create new slot schedule
+    </a>
 </div>
 
 ## Schedule name
@@ -46,7 +53,9 @@ Choose the slot type using the toggle buttons:
 - **Return time:** When they must bring it back (e.g., 6:00 PM)
 - **Duration:** Automatically calculated (8 hours in this example)
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/schedules_slots_add.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={require('../../graphics/schedules_slots_add.mp4').default}
+/>
 
 **Multi-day:** Rentals spanning multiple days
 
@@ -55,7 +64,9 @@ Choose the slot type using the toggle buttons:
 - **Return time:** Final return time (e.g., Sunday 6:00 PM)
 - **Example:** "Weekend getaway" slot - Saturday 10:00 AM pickup, Sunday 18:00 return (one night later)
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/schedules_slots_multiday.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={require('../../graphics/schedules_slots_multiday.mp4').default}
+/>
 
 ### Availability days
 

@@ -11,7 +11,14 @@ import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
 Simple pricing charges based on sailing time with optional passenger group tiers. Perfect for straightforward hourly or daily rental operations.
 
 <div class="button-container">
-  <a href="https://dashboard.letsbook.app/pricing/simple/add" class="button button--primary" target="_blank" rel="noopener noreferrer">Create simple pricing</a>
+    <a
+        href="https://dashboard.letsbook.app/pricing/simple/add"
+        class="button button--primary"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Create simple pricing
+    </a>
 </div>
 
 ## Basic setup
@@ -49,7 +56,11 @@ Add different rates based on group size:
 
 **Example:** Charge €40/hour for groups of 1-5 people, €50/hour for 6-10 people.
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/pricing_simple_pricing_groups.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={
+        require('../../graphics/pricing_simple_pricing_groups.mp4').default
+    }
+/>
 
 ## Additional charges
 
@@ -77,7 +88,12 @@ Click **Add condition** to create complex pricing rules:
 - Time period restrictions
 - Advance booking requirements
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/pricing_simple_pricing_additional_charges.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={
+        require('../../graphics/pricing_simple_pricing_additional_charges.mp4')
+            .default
+    }
+/>
 
 ## Deposits
 
@@ -97,7 +113,9 @@ Secure bookings with refundable deposits.
 
 Add conditions to apply deposits only in specific situations.
 
-<LocalFileVideoPlayer videoSrc={require('../../graphics/pricing_deposit.mp4').default}/>
+<LocalFileVideoPlayer
+    videoSrc={require('../../graphics/pricing_deposit.mp4').default}
+/>
 
 ## Completing setup
 
