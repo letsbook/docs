@@ -7,8 +7,8 @@ import type * as Redocusaurus from 'redocusaurus';
 const beaconId = process.env.HELPSCOUT_BEACON_ID;
 
 const config: Config = {
-    title: "Let's Book Documentation",
-    tagline: "Your comprehensive guide to Let's Book",
+    title: "Let's Book Support",
+    tagline: "Your comprehensive guide and support center to Let's Book",
     favicon: 'img/favicon.ico',
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
