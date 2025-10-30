@@ -216,12 +216,12 @@ const config: Config = {
                     label: 'Guides',
                     position: 'left',
                 },
-                {
-                    // Prevent Docusaurus from auto-selecting the first sidebar item
-                    to: '/courses',
-                    label: 'Courses',
-                    position: 'left',
-                },
+                // {
+                //     // Prevent Docusaurus from auto-selecting the first sidebar item
+                //     to: '/courses',
+                //     label: 'Courses',
+                //     position: 'left',
+                // },
                 {
                     to: '/releases',
                     label: 'Releases',
