@@ -15,7 +15,8 @@
     "typecheck": "tsc",
     "prettier-check": "prettier --check src docs releases",
     "prettier": "prettier -w src docs releases .junie docusaurus.config.ts | grep -v \"(unchanged)\"",
-    "find-unreferenced": "node scripts/find-unreferenced-files.js"
+    "find-unreferenced": "node scripts/find-unreferenced-files.js",
+    "compress-videos": "node scripts/compress-videos.js"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
