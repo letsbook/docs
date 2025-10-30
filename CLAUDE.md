@@ -4,8 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Docusaurus-based documentation website for Let's Book, a boat rental booking system. The site serves as both
-user documentation and API documentation for the platform.
+This is a Docusaurus-based documentation website for Let's Book, a boat rental booking system. The site serves as both user documentation and API documentation for the platform.
 
 ## Development Commands
 
@@ -48,36 +47,31 @@ npm run deploy          # Deploy to GitHub Pages
 - **Docusaurus Configuration**: `docusaurus.config.ts` - Main configuration with site metadata, plugins, and theme
   settings
 - **Content**: `docs/` directory contains all documentation organized by feature areas
-- **API Documentation**: `openapi/` directory contains OpenAPI specs served via Redocusaurus
+- **API Documentation**: `api/` directory contains OpenAPI specs served via Redocusaurus
 - **Release Notes**: `releases/` directory contains versioned release notes served as blog posts
-- **Custom Components**: `src/components/` contains React components for the homepage
+- **Custom Components**: `src/components/` contains React components that are used throughout the docs
 
 ### Key Features
 
-- **Search**: Uses `docusaurus-lunr-search` plugin for site search
+- **Guides**: Description of all features and how to use them. Maps to the `/guides` route
+- **Courses**: More strategic documents on how to improve your company, available at `/courses`
 - **API Docs**: Redocusaurus integration serves OpenAPI specs at `/api` route
 - **Release Notes**: Configured as blog posts under `/releases` route
 - **Help Integration**: HelpScout Beacon widget integrated for user support
 
 ### Content Organization
 
-Documentation is auto-generated from folder structure via `sidebars.ts`. Main sections include:
-
-- Getting Started guides
-- Fleet Management
-- Booking Forms & Integration
-- Customer Management
-- Pricing & Billing
-- Scheduling
-- Analytics & Reporting
-- Account Management
-- API & Advanced features
+Documentation is auto-generated from folder structure via `sidebars.ts`.
 
 ### Styling
 
-- Custom CSS in `src/css/custom.css`
+- Custom CSS in `src/css`. 
+  - Content related things (default styling of text and images) goes into `content.css`
+  - Footer styling: `footer.css`
+  - Menu tweaks (main navigation): `menu.css`
+  - Everything else in `custom.css`
 - IBM Plex Sans and Rubik fonts from Google Fonts
-- Dark/light theme support with custom primary color (#081590)
+- Only light theme support with custom primary color (#081590)
 
 ## Development Notes
 
@@ -93,6 +87,15 @@ Documentation is auto-generated from folder structure via `sidebars.ts`. Main se
 - Release notes are Markdown in `releases/` folder with date-based naming
 - Images are stored close to the content they're used in
 - Edit URLs configured for GitHub integration (disabled in production)
+
+### Code inside markdown
+
+- Markdown files that contain code must be renamed to `.mdx`
+- ALWAYS extract HTML to a React component at `src/components`
+- All imports should use ES6 syntax (`import`) and not the old skool `require()` function
+- Imports should use the `@site/` prefix
+- Imports must use single quotes
+- Use the `Button` component over custom `a.button` elements
 
 ## Writing Guidelines
 
