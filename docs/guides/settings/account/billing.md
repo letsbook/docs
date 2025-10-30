@@ -19,11 +19,6 @@ When you go live, you agree with our terms and conditions and choose on which pl
 
 **Payment is year-round:** You pay monthly throughout the year. We know boat rentals are seasonal, but our team works year-round improving the platform.
 
-## Payment methods
-
-- Credit card
-- iDEAL
-
 ## Payment failed?
 
 If a payment doesn't go through:
@@ -38,7 +33,7 @@ We'll retry charging automatically. Your account stays active during retry attem
 **Standard Plan:** $30/month (€25/month) + 2.5% booking fee  
 **Pro Plan:** $175/month (€150/month) + 1% booking fee
 
-\*Please note you can only change plan once every 12 months.
+\* Please note you can only change plan once every 12 months.
 
 - Charged monthly starting on the day that you went live
 - Booking fees overview sent separately
