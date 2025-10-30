@@ -21,7 +21,7 @@ const Button = ({
     const button = (
         <Link
             to={href}
-            className={clsx(styles.Button, {
+            className={clsx(styles.Root, {
                 [styles.primary]: variant === 'primary',
                 [styles.secondary]: variant === 'secondary',
             })}
