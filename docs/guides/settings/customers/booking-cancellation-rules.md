@@ -1,35 +1,23 @@
 ---
 title: Set booking and cancellation rules
-description: Configure standard booking conditions and cancellation policies for different customer types
-sidebar_position: 5
+description: Configure booking conditions and cancellation policies for different customer types
+sidebar_position: 2
 ---
 
 # Set booking and cancellation rules
 
 Set up booking restrictions and cancellation policies for different customer types. These rules automatically apply when customers make reservations, ensuring your operational requirements are met.
 
-## Understanding customer types
+## Quick access
 
-Every Let's Book setup starts with two default customer types:
-
-**Guest** - Customers without an account who book as visitors. They receive booking confirmations via email but cannot log in to view their bookings.
-
-**Member** - Originally a guest who created an account during the booking process. Members can log into Let's Book to view, modify, and manage their bookings through their personal dashboard.
-
-You can create additional custom customer types with specific rules, but these two form the foundation of your booking system.
-
-## Accessing the settings
-
-1. Go to your [customer types](https://dashboard.letsbook.app/customer-types)
-2. Click on the customer type you want to configure (Guest, Member, etc.)
-3. Scroll down to the **Booking conditions** and **Cancellation settings** sections
+Go to your [customer types](https://dashboard.letsbook.app/customer-types), click on any type (Guest, Member, or custom), then scroll to **Booking conditions** and **Cancellation settings**.
 
 ## Setting up booking conditions
 
 By default, bookings are unrestricted. You can add multiple conditions that work together:
 
 1. Click **Add condition**
-2. Select the first condition type from the dropdown
+2. Select the condition type from the dropdown
 3. Configure the specific parameters (times, numbers, dates)
 
 To add multiple restrictions, click **Add condition** again to layer additional rules. All conditions must be satisfied for the booking to be allowed.
@@ -62,7 +50,7 @@ Limit how far ahead customers can book. Common settings: 30 days for seasonal op
 
 **Combining both:** Set a booking window, like "between 24 hours and 90 days in advance."
 
-![Customer conditions](./graphics/customer_conditions.gif)
+![Customer conditions](../graphics/customer_conditions.gif)
 
 ## Configuring cancellation settings
 
@@ -77,7 +65,27 @@ Customize the message customers see when cancelling. Use this to explain your ca
 **Cancellation conditions (optional)**
 Set time requirements like minimum 24 hours notice before pickup.
 
-![Cancellation settings](./graphics/cancellation_settings.gif)
+![Cancellation settings](../graphics/cancellation_settings.gif)
+
+## Common configurations
+
+### Boat club members
+- Book up to 14 days ahead
+- Maximum 1 booking per day
+- Free cancellation up to 2 hours before pickup
+- No payment required during booking
+
+### Casual renters
+- Must book at least 2 hours ahead
+- Maximum 4-hour rental duration
+- Cancellation allowed up to 24 hours before pickup
+- Full payment required during booking
+
+### Corporate clients
+- Book up to 90 days ahead
+- Maximum 8 hours per booking
+- Maximum 40 hours total per month
+- Flexible cancellation with custom terms
 
 ## Important notes
 
