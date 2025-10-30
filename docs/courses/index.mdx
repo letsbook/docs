@@ -7,54 +7,53 @@ sidebar_label: All courses
 
 import CourseCard from './components/CourseCard';
 import CoursesGrid from './components/CoursesGrid';
-import CoursesHero from './components/CoursesHero';
 
-<CoursesHero>
-    <p>
-        Learn from real experts. Watch, follow along, and transform your rental
-        operations.
-    </p>
-</CoursesHero>
+import dailyOperationsImage from './graphics/daily_operations_walktrough.jpeg';
+import teamImage from './graphics/team.jpg';
+import dockOperationsImage from './graphics/dock_operations.jpg';
+import placeholderImage from './graphics/placeholder.svg';
+
+Learn from real experts. Watch, follow along, and transform your rental operations.
 
 <CoursesGrid>
     <CourseCard
         href="./daily-operations-walkthrough"
-        imageUrl="/img/homepage/courses/team.jpg"
+        imageUrl={teamImage}
         title="Daily operations walkthrough"
         duration="10 min"
         description="Quick tour of everything you do daily: bookings, planning, customer check-ins. Perfect for staff training."
     />
     <CourseCard
         href="./onboarding-guide"
-        imageUrl="/img/homepage/courses/daily_operations_walktrough.jpeg"
+        imageUrl={dailyOperationsImage}
         title="Getting started guide"
         duration="30 min"
         description="From zero to first booking in 30 minutes. Add your fleet, configure pricing, accept your first booking."
     />
     <CourseCard
         href="./dock-host-operations"
-        imageUrl="/img/homepage/courses/dock_operations.jpg"
+        imageUrl={dockOperationsImage}
         title="Multi-location operations"
         duration="20 min"
         description="Scale across multiple docks with fleet management, location-specific pricing, and cross-location bookings."
     />
     <CourseCard
         href="./seasonal-planning"
-        imageUrl="https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=1600&auto=format&fit=crop"
+        imageUrl={placeholderImage}
         title="Seasonal operations guide"
         duration="20 min"
         description="Maximize revenue across seasons with schedules, blockouts, and dynamic pricing strategies."
     />
     <CourseCard
         href="./boat-club-setup"
-        imageUrl="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1600&auto=format&fit=crop"
+        imageUrl={placeholderImage}
         title="Revenue optimization masterclass"
         duration="25 min"
         description="Increase average booking value by 30% with add-ons, dynamic pricing, and strategic automation."
     />
     <CourseCard
         href="./autonomous-operations"
-        imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop"
+        imageUrl={placeholderImage}
         title="Advanced automation"
         duration="20 min"
         description="Run your rental with zero staff through full automation: bookings, payments, and remote boat access."
