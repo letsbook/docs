@@ -2,36 +2,22 @@ import React, { useRef, useState } from 'react';
 
 import styles from './styles.module.css';
 
-interface CourseVideoPlayerProps {
+type Props = {
     videoSrc: string;
     title?: string;
     thumbnailSrc?: string;
-}
+};
 
-export default function CourseVideoPlayer({
+export default function LocalFileVideoPlayer({
     videoSrc,
     title,
     thumbnailSrc,
-}: CourseVideoPlayerProps) {
+}: Props) {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
     const handlePlay = () => {
         setIsPlaying(true);
-        // Wacht tot video geladen is en speel af in fullscreen
-        setTimeout(() => {
-            if (videoRef.current) {
-                videoRef.current.play();
-                // Probeer fullscreen te openen
-                if (videoRef.current.requestFullscreen) {
-                    videoRef.current.requestFullscreen();
-                } else if ((videoRef.current as any).webkitRequestFullscreen) {
-                    (videoRef.current as any).webkitRequestFullscreen();
-                } else if ((videoRef.current as any).mozRequestFullScreen) {
-                    (videoRef.current as any).mozRequestFullScreen();
-                }
-            }
-        }, 100);
     };
 
     return (
