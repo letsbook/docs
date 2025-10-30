@@ -4,6 +4,10 @@ sidebar_position: 1
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 
+import addCustomerVideo from '../graphics/add_customer.mp4';
+import checkAndConfirmVideo from '../graphics/check_and_confirm.mp4';
+import ignoreSettingsVideo from '../graphics/ignore_settings.mp4';
+
 # Add a booking manually
 
 ## Step 1: Start adding a booking
@@ -16,10 +20,7 @@ import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 - Existing customer? Type their name and select
 - New customer? Click **Add New customer**
 
-<InlineVideoPlayer
-    videoSrc={require('../graphics/add_customer.mp4').default}
-    title="Add a customer"
-/>
+<InlineVideoPlayer videoSrc={addCustomerVideo} title="Add a customer" />
 
 ## Step 3: Fill booking details
 
@@ -33,10 +34,7 @@ By default, you follow the same rules as customers (availability, duration limit
 - **Ignore cost changes** - Skip automatic price calculations
   :::
 
-<InlineVideoPlayer
-    videoSrc={require('../graphics/ignore_settings.mp4').default}
-    title="Use override mode"
-/>
+<InlineVideoPlayer videoSrc={ignoreSettingsVideo} title="Use override mode" />
 
 ## Step 4: Check and adjust
 
@@ -56,7 +54,4 @@ You'll find these confirmation options:
 
 **What happens next:** Your booking appears instantly in the overview. You can immediately edit details, add notes, or send payment requests.
 
-<InlineVideoPlayer
-    videoSrc={require('../graphics/check_and_confirm.mp4').default}
-    title="Use override mode"
-/>
+<InlineVideoPlayer videoSrc={checkAndConfirmVideo} title="Use override mode" />

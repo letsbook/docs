@@ -4,22 +4,18 @@ description: Connect schedules, pricing, and notifications to dock-boat combinat
 sidebar_position: 1
 ---
 
+import Button from '@site/src/components/Button/Button';
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import rentalSetupVideo from '../graphics/rental_setup.mp4';
 
 # Understanding rental setup
 
 Rental setup is where everything comes together. Connect your schedules, pricing, confirmation methods, and notifications to specific dock and boat model combinations.
 
-<div class="button-container">
-    <a
-        href="https://dashboard.letsbook.app/rental-setup"
-        class="button button--primary"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Open rental setup
-    </a>
-</div>
+<Button href="https://dashboard.letsbook.app/rental-setup">
+    Open rental setup
+</Button>
 
 ## How rental setup works
 
@@ -64,9 +60,7 @@ Click on a combination to set up:
 
 Save your configuration and test the booking form to ensure everything works correctly.
 
-<InlineVideoPlayer
-    videoSrc={require('../graphics/rental_setup.mp4').default}
-/>
+<InlineVideoPlayer videoSrc={rentalSetupVideo} />
 
 ## Advanced features
 

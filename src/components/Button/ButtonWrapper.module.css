@@ -1,0 +1,17 @@
+.Root {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.right {
+    justify-content: flex-end;
+}

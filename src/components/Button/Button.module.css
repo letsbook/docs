@@ -1,89 +1,52 @@
-.ButtonWrapper {
-    margin: 32px 0;
-}
-
-.Button {
-    font-family: 'IBM Plex Sans', sans-serif;
+a.Root,
+a.button {
     font-weight: 600;
     border: none;
     cursor: pointer;
     transition: all 0.1s ease-out;
-    padding: 14px 24px;
-    font-size: 15px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
     border-radius: 8px;
     text-decoration: none;
     display: inline-block;
 }
 
 /* Primary Button */
-.Button.primary {
-    background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%);
-    color: white;
+.primary {
+    background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%) !important;
+    color: white !important;
     box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.12),
-        0 1px 2px rgba(8, 21, 144, 0.08),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(8, 21, 144, 0.08);
 }
 
-.Button.primary:hover {
-    background: linear-gradient(135deg, #2232bd 0%, #0c1fb5 100%);
-    color: white;
-    text-decoration: none;
+.primary:hover {
+    background: linear-gradient(135deg, #2232bd 0%, #0c1fb5 100%) !important;
+    color: white !important;
     box-shadow:
         0 3px 6px rgba(34, 50, 189, 0.18),
-        0 3px 8px rgba(34, 50, 189, 0.12),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+        0 3px 8px rgba(34, 50, 189, 0.12);
 }
 
-.Button.primary:active {
-    background: linear-gradient(135deg, #081590 0%, #061070 100%);
+.primary:active {
+    background: linear-gradient(135deg, #081590 0%, #061070 100%) !important;
     box-shadow:
         0 1px 3px rgba(8, 21, 144, 0.15),
-        0 1px 2px rgba(8, 21, 144, 0.1),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
-}
-
-/* Secondary Button */
-.Button.secondary {
-    background: white;
-    color: #081590;
-    border: 2px solid #081690;
-    padding: 12px 22px;
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.06),
-        inset 0 -1px 0 rgba(8, 21, 144, 0.02);
-}
-
-.Button.secondary:hover {
-    background: #f0f2fe;
-    color: #081590;
-    text-decoration: none;
-    border-color: #081690;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.06),
-        0 1px 2px rgba(0, 0, 0, 0.04),
-        inset 0 -1px 0 rgba(8, 21, 144, 0.03);
-}
-
-.Button.secondary:active {
-    background: #d8dcf8;
-    box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.04),
-        inset 0 -1px 0 rgba(8, 21, 144, 0.05);
+        0 1px 2px rgba(8, 21, 144, 0.1);
 }
 
 /* Subtle Variant */
-.Button.subtle {
-    background: #e6e9fd;
-    color: #081590;
+.subtle {
+    background: #e6e9fd !important;
+    color: #081590 !important;
     box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.06),
         inset 0 -1px 0 rgba(8, 21, 144, 0.02);
 }
 
-.Button.subtle:hover {
-    background: #f0f2fe;
-    color: #081590;
+.subtle:hover {
+    background: #f0f2fe !important;
+    color: #081590 !important;
     text-decoration: none;
     box-shadow:
         0 1px 3px rgba(0, 0, 0, 0.06),
@@ -91,35 +54,18 @@
         inset 0 -1px 0 rgba(8, 21, 144, 0.03);
 }
 
-.Button.subtle:active {
-    background: #d8dcf8;
+.subtle:active {
+    background: #d8dcf8 !important;
     box-shadow:
         0 1px 2px rgba(0, 0, 0, 0.04),
         inset 0 -1px 0 rgba(8, 21, 144, 0.05);
 }
 
 /* Disabled State */
-.Button:disabled,
-.Button[disabled] {
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-.Button.primary:disabled,
-.Button.primary[disabled] {
-    background: #e0e0e0;
-    color: #9e9e9e;
-}
-
-.Button.secondary:disabled,
-.Button.secondary[disabled] {
-    background: #f5f5f5;
-    color: #bdbdbd;
-    border-color: #e0e0e0;
-}
-
-.Button.subtle:disabled,
-.Button.subtle[disabled] {
-    background: #f5f5f5;
-    color: #bdbdbd;
+.Root:disabled,
+.Root[disabled] {
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    background: #e0e0e0 !important;
+    color: #9e9e9e !important;
 }

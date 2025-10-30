@@ -4,22 +4,21 @@ description: Create flexible booking windows with customizable trip durations
 sidebar_position: 2
 ---
 
+import Button from '@site/src/components/Button/Button';
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import schedulesFixedLengthsVideo from '../../graphics/Schedules_fixed_lenghts.mp4';
+import scheduleAdvancedSettingsVideo from '../../graphics/schedule_advanced_settings.mp4';
+import schedulesOpeningTimesVideo from '../../graphics/schedules_opening_times.mp4';
+import schedulesWithinRangeVideo from '../../graphics/schedules_within_range.mp4';
 
 # Set up weekly schedule
 
 Weekly schedules let customers book trips within your operating hours. Set the times boats are available and define trip duration options.
 
-<div class="button-container">
-    <a
-        href="https://dashboard.letsbook.app/schedules/week/add"
-        class="button button--primary"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Create new weekly schedule
-    </a>
-</div>
+<Button href="https://dashboard.letsbook.app/schedules/week/add">
+    Create new weekly schedule
+</Button>
 
 ## Schedule name
 
@@ -32,7 +31,7 @@ Choose a clear internal name for your schedule. This helps you organize multiple
 Define when boats can be picked up and returned using the timeline interface.
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/schedules_opening_times.mp4').default}
+    videoSrc={schedulesOpeningTimesVideo}
     title="Set opening times"
 />
 
@@ -57,7 +56,7 @@ Offer specific duration choices like 2, 3, 4, or 6 hours.
 **Pickup frequency:** Set how often trips can start (every 15, 30, or 60 minutes).
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/Schedules_fixed_lenghts.mp4').default}
+    videoSrc={schedulesFixedLengthsVideo}
     title="Set fixed lengths"
 />
 
@@ -70,7 +69,7 @@ Let the system generate all possible durations between your minimum and maximum.
 Choose fixed lengths for simpler choice, or within range for maximum flexibility.
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/schedules_within_range.mp4').default}
+    videoSrc={schedulesWithinRangeVideo}
     title="Set durations within range"
 />
 
@@ -87,7 +86,7 @@ Add buffer time after each trip for boat cleaning or late returns.
 **Example:** 30-minute margin gives you cleanup time between rentals and handles boats returned slightly late.
 
 <InlineVideoPlayer
-    videoSrc={require('../../graphics/schedule_advanced_settings.mp4').default}
+    videoSrc={scheduleAdvancedSettingsVideo}
     title="Advanced schedule settings"
 />
 

@@ -4,22 +4,20 @@ description: Create time-based pricing with optional passenger group rates
 sidebar_position: 2
 ---
 
+import Button from '@site/src/components/Button/Button';
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import pricingDepositVideo from '../../graphics/pricing_deposit.mp4';
+import pricingSimplePricingAdditionalChargesVideo from '../../graphics/pricing_simple_pricing_additional_charges.mp4';
+import pricingSimplePricingGroupsVideo from '../../graphics/pricing_simple_pricing_groups.mp4';
 
 # Set up simple pricing
 
 Simple pricing charges based on sailing time with optional passenger group tiers. Perfect for straightforward hourly or daily rental operations.
 
-<div class="button-container">
-    <a
-        href="https://dashboard.letsbook.app/pricing/simple/add"
-        class="button button--primary"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Create simple pricing
-    </a>
-</div>
+<Button href="https://dashboard.letsbook.app/pricing/simple/add">
+    Create simple pricing
+</Button>
 
 ## Basic setup
 
@@ -56,11 +54,7 @@ Add different rates based on group size:
 
 **Example:** Charge €40/hour for groups of 1-5 people, €50/hour for 6-10 people.
 
-<InlineVideoPlayer
-    videoSrc={
-        require('../../graphics/pricing_simple_pricing_groups.mp4').default
-    }
-/>
+<InlineVideoPlayer videoSrc={pricingSimplePricingGroupsVideo} />
 
 ## Additional charges
 
@@ -88,12 +82,7 @@ Click **Add condition** to create complex pricing rules:
 - Time period restrictions
 - Advance booking requirements
 
-<InlineVideoPlayer
-    videoSrc={
-        require('../../graphics/pricing_simple_pricing_additional_charges.mp4')
-            .default
-    }
-/>
+<InlineVideoPlayer videoSrc={pricingSimplePricingAdditionalChargesVideo} />
 
 ## Deposits
 
@@ -113,9 +102,7 @@ Secure bookings with refundable deposits.
 
 Add conditions to apply deposits only in specific situations.
 
-<InlineVideoPlayer
-    videoSrc={require('../../graphics/pricing_deposit.mp4').default}
-/>
+<InlineVideoPlayer videoSrc={pricingDepositVideo} />
 
 ## Completing setup
 

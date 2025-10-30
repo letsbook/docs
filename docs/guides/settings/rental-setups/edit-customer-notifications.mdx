@@ -2,22 +2,18 @@
 sidebar_position: 4
 ---
 
+import Button from '@site/src/components/Button/Button';
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import notificationsEditVideo from '../graphics/notifications_edit.mp4';
 
 # Edit customer notifications
 
 Configure automated emails and SMS messages for your booking flow. Control what information is sent, when it's sent, and how it looks.
 
-<div class="button-container">
-    <a
-        href="https://dashboard.letsbook.app/notifications"
-        class="button button--primary"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Manage notifications
-    </a>
-</div>
+<Button href="https://dashboard.letsbook.app/notifications">
+    Manage notifications
+</Button>
 
 ## Setting up notification flows
 
@@ -38,9 +34,7 @@ A notification flow is the collection of all messages sent around a booking. Eac
 4. Add variables, buttons, or sections as needed
 5. Save your changes
 
-<InlineVideoPlayer
-    videoSrc={require('../graphics/notifications_edit.mp4').default}
-/>
+<InlineVideoPlayer videoSrc={notificationsEditVideo} />
 
 ## Available notification types
 

@@ -1,5 +1,8 @@
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 
+import downPaymentVideo from '../graphics/settings_confirmation_downpayment.mp4';
+import payToConfirmVideo from '../graphics/settings_confirmations_pay_to_confirm.mp4';
+
 # Booking confirmation settings
 
 Control when and how customer bookings are confirmed in your system.
@@ -26,12 +29,7 @@ Customers must pay the full amount before their booking is confirmed. This is th
 5. Set the **draft booking timeout**: How long customers have to complete payment after starting their booking (default: 15 minutes)
 6. Click **Save**
 
-<InlineVideoPlayer
-    videoSrc={
-        require('../graphics/settings_confirmations_pay_to_confirm.mp4').default
-    }
-    title="Set opening times"
-/>
+<InlineVideoPlayer videoSrc={payToConfirmVideo} title="Set opening times" />
 
 ### How it works
 
@@ -64,11 +62,7 @@ Customers make a partial payment to secure their booking, with the remainder due
 6. Set the **draft booking timeout** (same as pay to confirm)
 7. Click **Save**
 
-<InlineVideoPlayer
-    videoSrc={
-        require('../graphics/settings_confirmation_downpayment.mp4').default
-    }
-/>
+<InlineVideoPlayer videoSrc={downPaymentVideo} />
 
 ### How it works
 
