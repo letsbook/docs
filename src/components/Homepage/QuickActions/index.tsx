@@ -1,4 +1,4 @@
-import { CardGrid, CardLink } from '@site/src/components/Docs/CardGrid';
+import { CardGrid, CardLink } from '@site/src/components/CardGrid';
 import type { ReactNode } from 'react';
 
 import styles from './styles.module.css';

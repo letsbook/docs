@@ -1,9 +1,6 @@
 import Link from '@docusaurus/Link';
 import {
-    Anchor,
     Ban,
-    Calendar,
-    CalendarDays,
     ClipboardList,
     Clock,
     CreditCard,
@@ -32,8 +29,8 @@ import {
     User,
     Users,
 } from 'lucide-react';
-import { useState } from 'react';
 import type { ReactNode } from 'react';
+import { useState } from 'react';
 
 import styles from './styles.module.css';
 
