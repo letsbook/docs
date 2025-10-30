@@ -136,31 +136,31 @@ const categories: Category[] = [
             {
                 title: 'Add booking',
                 description: 'Create new reservations for customers',
-                link: '/guides/bookings/add-booking',
+                link: '/guides/day-to-day/bookings/add-booking',
                 icon: <Plus size={20} />,
             },
             {
                 title: 'Edit or cancel a booking',
                 description: 'Modify or cancel existing reservations',
-                link: '/guides/bookings/edit-or-cancel-a-booking',
+                link: '/guides/day-to-day/bookings/edit-or-cancel-a-booking',
                 icon: <Edit size={20} />,
             },
             {
                 title: 'Search and filter bookings',
                 description: 'Find specific bookings quickly',
-                link: '/guides/bookings/search-and-filter-bookings',
+                link: '/guides/day-to-day/bookings/search-and-filter-bookings',
                 icon: <Search size={20} />,
             },
             {
                 title: 'Booking statuses',
                 description: 'Understand different booking states',
-                link: '/guides/bookings/booking-statuses',
+                link: '/guides/day-to-day/bookings/booking-statuses',
                 icon: <ClipboardList size={20} />,
             },
             {
                 title: 'Export bookings',
                 description: 'Download booking data to CSV or Excel',
-                link: '/guides/bookings/export-bookings',
+                link: '/guides/day-to-day/bookings/export-bookings',
                 icon: <Download size={20} />,
             },
             {
@@ -177,19 +177,19 @@ const categories: Category[] = [
             {
                 title: 'Add customer',
                 description: 'Create customer profiles manually',
-                link: '/guides/customers/add-customer',
+                link: '/guides/day-to-day/customers/add-customer',
                 icon: <User size={20} />,
             },
             {
                 title: 'View customer history',
                 description: 'See all bookings and payments per customer',
-                link: '/guides/customers/view-customer-history',
+                link: '/guides/day-to-day/customers/view-customer-history',
                 icon: <ScrollText size={20} />,
             },
             {
                 title: 'Anonymize customers',
                 description: 'Remove personal data for GDPR compliance',
-                link: '/guides/customers/anonymize-customers',
+                link: '/guides/day-to-day/customers/anonymize-customers',
                 icon: <Lock size={20} />,
             },
             {
@@ -201,7 +201,7 @@ const categories: Category[] = [
             {
                 title: 'Customer communication',
                 description: 'Send emails and notifications to customers',
-                link: '/guides/customers/add-customer',
+                link: '/guides/day-to-day/customers/add-customer',
                 icon: <Mail size={20} />,
             },
         ],
@@ -212,13 +212,13 @@ const categories: Category[] = [
             {
                 title: '10 step setup guide',
                 description: 'Complete walkthrough to get started',
-                link: '/guides/settings/step-setup-guide',
+                link: '/guides/settings/ten-step-setup-guide',
                 icon: <Rocket size={20} />,
             },
             {
                 title: 'Booking and cancellation rules',
                 description: 'Set policies for reservations and refunds',
-                link: '/guides/settings/booking-cancellation-rules',
+                link: '/guides/settings/customers/booking-cancellation-rules',
                 icon: <FileText size={20} />,
             },
             {
