@@ -1,11 +1,12 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Courses from '@site/src/components/Homepage/Courses';
-import Features from '@site/src/components/Homepage/Features';
-import GettingStarted from '@site/src/components/Homepage/GettingStarted';
-import Hero from '@site/src/components/Homepage/Hero';
-import QuickActions from '@site/src/components/Homepage/QuickActions';
 import Layout from '@theme/Layout';
 import type { ReactNode } from 'react';
+
+import Courses from './Homepage/components/Courses';
+import Features from './Homepage/components/Features';
+import GettingStarted from './Homepage/components/GettingStarted';
+import Hero from './Homepage/components/Hero';
+import QuickActions from './Homepage/components/QuickActions';
 
 export default function Home(): ReactNode {
     const { siteConfig } = useDocusaurusContext();
@@ -15,6 +16,7 @@ export default function Home(): ReactNode {
             description="Your comprehensive guide to Let's Book - the complete boat rental management platform"
         >
             <Hero />
+
             <main>
                 <QuickActions />
                 <Features />
