@@ -5,227 +5,58 @@ sidebar_position: 0
 sidebar_label: All courses
 ---
 
-import styles from './courses.module.css';
+import CourseCard from './components/CourseCard';
+import CoursesGrid from './components/CoursesGrid';
+import CoursesHero from './components/CoursesHero';
 
-<div className={styles.coursesHero}>
-    <div className={styles.heroContent}>
-        <p>
-            Learn from real experts. Watch, follow along, and transform your
-            rental operations.
-        </p>
-    </div>
-</div>
+<CoursesHero>
+    <p>
+        Learn from real experts. Watch, follow along, and transform your rental
+        operations.
+    </p>
+</CoursesHero>
 
-<div className={styles.coursesContainer}>
-
-<div className={styles.coursesGrid}>
-
-<a href="./daily-operations-walkthrough" className={styles.courseCard}>
-    <div
-        className={styles.courseImage}
-        style={{ backgroundImage: 'url(/img/homepage/courses/team.jpg)' }}
-    >
-        <div className={styles.playButton}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle
-                    cx="28"
-                    cy="28"
-                    r="28"
-                    fill="white"
-                    fillOpacity="0.95"
-                />
-                <path d="M23 18L39 28L23 38V18Z" fill="#081590" />
-            </svg>
-        </div>
-    </div>
-    <div className={styles.courseBody}>
-        <div className={styles.courseHeader}>
-            <h2>Daily operations walkthrough</h2>
-            <div className={styles.courseDuration}>10 min</div>
-        </div>
-        <div className={styles.courseContent}>
-            <p>
-                Quick tour of everything you do daily: bookings, planning,
-                customer check-ins. Perfect for staff training.
-            </p>
-        </div>
-    </div>
-</a>
-
-<a href="./onboarding-guide" className={styles.courseCard}>
-    <div
-        className={styles.courseImage}
-        style={{
-            backgroundImage:
-                'url(/img/homepage/courses/daily_operations_walktrough.jpeg)',
-        }}
-    >
-        <div className={styles.playButton}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle
-                    cx="28"
-                    cy="28"
-                    r="28"
-                    fill="white"
-                    fillOpacity="0.95"
-                />
-                <path d="M23 18L39 28L23 38V18Z" fill="#081590" />
-            </svg>
-        </div>
-    </div>
-    <div className={styles.courseBody}>
-        <div className={styles.courseHeader}>
-            <h2>Getting started guide</h2>
-            <div className={styles.courseDuration}>30 min</div>
-        </div>
-        <div className={styles.courseContent}>
-            <p>
-                From zero to first booking in 30 minutes. Add your fleet,
-                configure pricing, accept your first booking.
-            </p>
-        </div>
-    </div>
-</a>
-
-<a href="./dock-host-operations" className={styles.courseCard}>
-    <div
-        className={styles.courseImage}
-        style={{
-            backgroundImage: 'url(/img/homepage/courses/dock_operations.jpg)',
-        }}
-    >
-        <div className={styles.playButton}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle
-                    cx="28"
-                    cy="28"
-                    r="28"
-                    fill="white"
-                    fillOpacity="0.95"
-                />
-                <path d="M23 18L39 28L23 38V18Z" fill="#081590" />
-            </svg>
-        </div>
-    </div>
-    <div className={styles.courseBody}>
-        <div className={styles.courseHeader}>
-            <h2>Multi-location operations</h2>
-            <div className={styles.courseDuration}>20 min</div>
-        </div>
-        <div className={styles.courseContent}>
-            <p>
-                Scale across multiple docks with fleet management,
-                location-specific pricing, and cross-location bookings.
-            </p>
-        </div>
-    </div>
-</a>
-
-<a href="./seasonal-planning" className={styles.courseCard}>
-    <div
-        className={styles.courseImage}
-        style={{
-            backgroundImage:
-                'url(https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=1600&auto=format&fit=crop)',
-        }}
-    >
-        <div className={styles.playButton}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle
-                    cx="28"
-                    cy="28"
-                    r="28"
-                    fill="white"
-                    fillOpacity="0.95"
-                />
-                <path d="M23 18L39 28L23 38V18Z" fill="#081590" />
-            </svg>
-        </div>
-        <div className={styles.courseMeta}>
-            <div className={styles.courseDuration}>20 min</div>
-        </div>
-    </div>
-    <div className={styles.courseBody}>
-        <div className={styles.courseContent}>
-            <h2>Seasonal operations guide</h2>
-            <p>
-                Maximize revenue across seasons with schedules, blockouts, and
-                dynamic pricing strategies.
-            </p>
-        </div>
-    </div>
-</a>
-
-<a href="./boat-club-setup" className={styles.courseCard}>
-    <div
-        className={styles.courseImage}
-        style={{
-            backgroundImage:
-                'url(https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1600&auto=format&fit=crop)',
-        }}
-    >
-        <div className={styles.playButton}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle
-                    cx="28"
-                    cy="28"
-                    r="28"
-                    fill="white"
-                    fillOpacity="0.95"
-                />
-                <path d="M23 18L39 28L23 38V18Z" fill="#081590" />
-            </svg>
-        </div>
-        <div className={styles.courseMeta}>
-            <div className={styles.courseDuration}>25 min</div>
-        </div>
-    </div>
-    <div className={styles.courseBody}>
-        <div className={styles.courseContent}>
-            <h2>Revenue optimization masterclass</h2>
-            <p>
-                Increase average booking value by 30% with add-ons, dynamic
-                pricing, and strategic automation.
-            </p>
-        </div>
-    </div>
-</a>
-
-<a href="./autonomous-operations" className={styles.courseCard}>
-    <div
-        className={styles.courseImage}
-        style={{
-            backgroundImage:
-                'url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop)',
-        }}
-    >
-        <div className={styles.playButton}>
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-                <circle
-                    cx="28"
-                    cy="28"
-                    r="28"
-                    fill="white"
-                    fillOpacity="0.95"
-                />
-                <path d="M23 18L39 28L23 38V18Z" fill="#081590" />
-            </svg>
-        </div>
-        <div className={styles.courseMeta}>
-            <div className={styles.courseDuration}>20 min</div>
-        </div>
-    </div>
-    <div className={styles.courseBody}>
-        <div className={styles.courseContent}>
-            <h2>Advanced automation</h2>
-            <p>
-                Run your rental with zero staff through full automation:
-                bookings, payments, and remote boat access.
-            </p>
-        </div>
-    </div>
-</a>
-
-</div>
-
-</div>
+<CoursesGrid>
+    <CourseCard
+        href="./daily-operations-walkthrough"
+        imageUrl="/img/homepage/courses/team.jpg"
+        title="Daily operations walkthrough"
+        duration="10 min"
+        description="Quick tour of everything you do daily: bookings, planning, customer check-ins. Perfect for staff training."
+    />
+    <CourseCard
+        href="./onboarding-guide"
+        imageUrl="/img/homepage/courses/daily_operations_walktrough.jpeg"
+        title="Getting started guide"
+        duration="30 min"
+        description="From zero to first booking in 30 minutes. Add your fleet, configure pricing, accept your first booking."
+    />
+    <CourseCard
+        href="./dock-host-operations"
+        imageUrl="/img/homepage/courses/dock_operations.jpg"
+        title="Multi-location operations"
+        duration="20 min"
+        description="Scale across multiple docks with fleet management, location-specific pricing, and cross-location bookings."
+    />
+    <CourseCard
+        href="./seasonal-planning"
+        imageUrl="https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=1600&auto=format&fit=crop"
+        title="Seasonal operations guide"
+        duration="20 min"
+        description="Maximize revenue across seasons with schedules, blockouts, and dynamic pricing strategies."
+    />
+    <CourseCard
+        href="./boat-club-setup"
+        imageUrl="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1600&auto=format&fit=crop"
+        title="Revenue optimization masterclass"
+        duration="25 min"
+        description="Increase average booking value by 30% with add-ons, dynamic pricing, and strategic automation."
+    />
+    <CourseCard
+        href="./autonomous-operations"
+        imageUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop"
+        title="Advanced automation"
+        duration="20 min"
+        description="Run your rental with zero staff through full automation: bookings, payments, and remote boat access."
+    />
+</CoursesGrid>

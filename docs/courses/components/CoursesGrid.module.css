@@ -1,0 +1,26 @@
+/* Container */
+.coursesContainer {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Course cards grid - same as CardGrid component */
+.coursesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .coursesContainer {
+        padding: 1.5rem 1rem;
+    }
+
+    .coursesGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
