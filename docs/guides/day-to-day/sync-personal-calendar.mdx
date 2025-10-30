@@ -4,7 +4,8 @@ description: Connect Let's Book to your Google Calendar, Apple Calendar, or Outl
 sidebar_position: 8
 ---
 
-import LocalFileVideoPlayer from '@site/src/components/LocalFileVideoPlayer';
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+import videoUrl from './graphics/sync_calendar.mp4';
 
 # Sync planning with personal calendar
 
@@ -36,10 +37,7 @@ Let's Book generates a unique calendar feed link for your account that syncs you
 4. Toggle **"Enabled"** for your business
 5. Copy the generated calendar link
 
-<LocalFileVideoPlayer
-    videoSrc={require('./graphics/sync_calendar.mp4').default}
-    title="Get your sync link"
-/>
+<InlineVideoPlayer videoSrc={videoUrl} title="Get your sync link"/>
 
 ### Step 2: Add to your calendar app
 
