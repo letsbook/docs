@@ -309,13 +309,13 @@ const config: Config = {
         prism: {
             theme: prismThemes.github,
         },
-        // algolia: {
-        // appId: '',
-        // apiKey: '',
-        // indexName: 'docs',
-        // contextualSearch: true,
-        // searchParameters: {},
-        // },
+        algolia: {
+            appId: 'YHKMFT0G3Q',
+            apiKey: 'b0c960a12055cf4661e6b0eb86b979ac',
+            indexName: 'docs',
+            contextualSearch: true,
+            searchParameters: {},
+        },
     } satisfies Preset.ThemeConfig,
 };
 
