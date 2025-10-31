@@ -12,7 +12,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 1: Set your general information
 
-→ **[Start here: General Information](https://dashboard.letsbook.app/general-info)**
+→ [Start here: General Information](https://dashboard.letsbook.app/general-info)
 
 **First things first** - let's establish your business basics. This information will appear throughout your booking system and in communications with customers.
 
@@ -30,7 +30,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 2: Compose your notifications
 
-→ **[Configure notifications](https://dashboard.letsbook.app/notifications)**
+→ [Configure notifications](https://dashboard.letsbook.app/notifications)
 
 **Stay connected** with your customers through automated notifications. Set up email templates for different booking scenarios.
 
@@ -48,7 +48,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 3: Create a dock to store your boats
 
-→ **[Create your first dock](https://dashboard.letsbook.app/docks/add)**
+→ [Create your first dock](https://dashboard.letsbook.app/docks/add)
 
 **Organize your fleet** by creating docks - these are locations where your boats are stored and where customers will pick them up.
 
@@ -65,7 +65,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 4: Add your boats and assign them to the dock
 
-→ **[Add your boats](https://dashboard.letsbook.app/models/add)**
+→ [Add your boats](https://dashboard.letsbook.app/models/add)
 
 **Time to add your fleet!** This is where you'll input all the details about each boat you want to rent out.
 
@@ -85,7 +85,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 5: Set up when the boats are available for rental
 
-→ **[Set up schedules](https://dashboard.letsbook.app/schedules)**
+→ [Set up schedules](https://dashboard.letsbook.app/schedules)
 
 **Control your availability** by creating weekly rental schedules. This determines when customers can book your boats.
 
@@ -103,7 +103,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 6: Decide on your pricing
 
-→ **[Configure pricing](https://dashboard.letsbook.app/pricing)**
+→ [Configure pricing](https://dashboard.letsbook.app/pricing)
 
 **Set your rates** with flexible pricing options that can adapt to different seasons, durations, and demand.
 
@@ -121,7 +121,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 7: Configure when a booking is confirmed
 
-→ **[Set confirmation methods](https://dashboard.letsbook.app/confirmation-methods)**
+→ [Set confirmation methods](https://dashboard.letsbook.app/confirmation-methods)
 
 **Decide your confirmation flow** - when do bookings become official and how do customers receive confirmation?
 
@@ -140,7 +140,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 8: Bind it all together in the rental setup
 
-→ **[Build your rental setup](https://dashboard.letsbook.app/rental-setup)**
+→ [Build your rental setup](https://dashboard.letsbook.app/rental-setup)
 
 **Connect all the pieces** by creating your rental flow. This combines boats, pricing, schedules, and settings into a bookable experience.
 
@@ -158,7 +158,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 9: Customize your styling
 
-→ **[Customize styling](https://dashboard.letsbook.app/styling)**
+→ [Customize styling](https://dashboard.letsbook.app/styling)
 
 **Make it yours** by customizing the look and feel of your booking interface to match your brand.
 
@@ -176,7 +176,7 @@ This step-by-step guide will help you get your boat rental platform fully operat
 
 ## Step 10: Connect your payment provider
 
-→ **[Connect payment provider](/guides/settings/payments/receive-payments)**
+→ [Connect payment provider](/guides/settings/payments/receive-payments)
 
 **Get paid securely** by connecting a payment provider to handle customer transactions safely.
 
