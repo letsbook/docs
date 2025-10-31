@@ -4,6 +4,7 @@ import styles from './styles.module.css';
 
 const SearchIcon = () => (
     <svg
+        className={styles.SearchIcon}
         width="20"
         height="20"
         viewBox="0 0 24 24"
@@ -17,6 +18,15 @@ const SearchIcon = () => (
         <path d="m21 21-4.35-4.35"></path>
     </svg>
 );
+
+const openDocSearch = () => {
+    window.dispatchEvent(
+        new KeyboardEvent('keydown', {
+            key: 'k',
+            metaKey: true, // Cmd+K
+        })
+    );
+};
 
 const Hero = (): ReactNode => (
     <section className={styles.Root}>
@@ -38,10 +48,18 @@ const Hero = (): ReactNode => (
                 </h1>
 
                 <div className={styles.SearchContainer}>
-                    <button className={styles.SearchButton}>
-                        <SearchIcon />
-                        <span className={styles.SearchInput}>
-                            How can we help you?
+                    <button
+                        className={styles.SearchButton}
+                        onClick={openDocSearch}
+                    >
+                        <span className={styles.SearchBackground} />
+                        <span className={styles.SearchContent}>
+                            <span className={styles.SearchInput}>
+                                Ask your question
+                            </span>
+                            <span className={styles.SearchIconWrapper}>
+                                <SearchIcon />
+                            </span>
                         </span>
                     </button>
                 </div>
