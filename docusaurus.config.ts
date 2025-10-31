@@ -65,6 +65,20 @@ const config: Config = {
 
     themes: ['@docusaurus/theme-mermaid'],
 
+    plugins: [
+        [
+            '@docusaurus/plugin-client-redirects',
+            {
+                redirects: [
+                    {
+                        from: '/guides',
+                        to: '/guides/day-to-day',
+                    },
+                ],
+            },
+        ],
+    ],
+
     presets: [
         [
             'classic',
