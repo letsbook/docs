@@ -47,22 +47,22 @@ export default function Hero(): ReactNode {
                         Support Center
                     </h1>
 
-                    <div className={styles.SearchContainer}>
-                        <form
-                            onSubmit={handleSearch}
-                            className={styles.SearchForm}
-                        >
-                            <div className={styles.SearchWrapper}>
-                                <SearchIcon />
-                                <input
-                                    type="text"
-                                    name="search"
-                                    placeholder="How can we help you?"
-                                    className={styles.SearchInput}
-                                />
-                            </div>
-                        </form>
-                    </div>
+                    {/*<div className={styles.SearchContainer}>*/}
+                    {/*    <form*/}
+                    {/*        onSubmit={handleSearch}*/}
+                    {/*        className={styles.SearchForm}*/}
+                    {/*    >*/}
+                    {/*        <div className={styles.SearchWrapper}>*/}
+                    {/*            <SearchIcon />*/}
+                    {/*            <input*/}
+                    {/*                type="text"*/}
+                    {/*                name="search"*/}
+                    {/*                placeholder="How can we help you?"*/}
+                    {/*                className={styles.SearchInput}*/}
+                    {/*            />*/}
+                    {/*        </div>*/}
+                    {/*    </form>*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </section>
