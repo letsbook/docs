@@ -10,6 +10,7 @@ const config: Config = {
     title: "Let's Book Support",
     tagline: "Your comprehensive guide and support center to Let's Book",
     favicon: 'img/favicon.ico',
+    trailingSlash: true,
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: {
