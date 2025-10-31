@@ -80,4 +80,4 @@ Steps:
 
 ## After connection
 
-Once hardware is connected, continue with [setting up your connected fleet](https://support.letsbook.app/article/140-get-started-with-connected-fleet) to configure customer permissions, rental rules, and operational settings.
+Once hardware is connected, continue to configure customer permissions, rental rules, and operational settings.

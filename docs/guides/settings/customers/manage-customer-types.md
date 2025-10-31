@@ -46,7 +46,7 @@ Payment can be collected later through the booking's finance tab.
 
 ## Configuring booking and cancellation rules
 
-Each customer type can have specific booking conditions and cancellation policies. See [Set booking and cancellation rules](booking-cancellation-rules) for detailed setup instructions.
+Each customer type can have specific booking conditions and cancellation policies. See [Set booking and cancellation rules](/guides/settings/customers/booking-cancellation-rules) for detailed setup instructions.
 
 ## Assigning customer types
 
@@ -70,7 +70,7 @@ You can't bulk-change customer types. Each customer must be updated individually
 
 You can create different pricing for different customer types using pricing conditions. For example, give members a 20% discount or charge corporate clients different rates.
 
-See [adding pricing conditions](../rental-setups/pricing/flexible-pricing#adding-pricing-conditions) for instructions on setting up customer type-based pricing.
+See [adding pricing conditions](/guides/settings/rental-setups/pricing/flexible-pricing#adding-pricing-conditions) for instructions on setting up customer type-based pricing.
 
 ## Common use cases
 

@@ -38,7 +38,7 @@ Conditions are combined with "and" logic - customers must meet every condition y
 - **Maximum total duration of bookings in the future** - Limit total reserved time
 - **Maximum total booking duration per month** - Monthly usage caps
 - **Maximum total booking duration on specific days of the week per month** - Weekend/weekday limits
-- **Custom condition** - Advanced rules using expressions. For complex scenarios, see [custom booking conditions](../dive-deeper/custom-booking-conditions) where you can create highly specific rules using code expressions.
+- **Custom condition** - Advanced rules using expressions. For complex scenarios, see [custom booking conditions](/guides/settings/dive-deeper/custom-booking-conditions) where you can create highly specific rules using code expressions.
 
 ## Control advance booking time
 

@@ -247,10 +247,10 @@ For more detailed information on specific features:
 **Website integration:**
 
 - [Add booking form to your website](/guides/settings/booking-form/add-to-website) - General integration guide with platform-specific instructions
-- [Advanced integration options](/guides/dive-deeper/advanced-integration) - Custom implementations
+- [Advanced integration options](/guides/settings/dive-deeper/advanced-integration) - Custom implementations
 
 **Additional resources:**
 
-- [Set custom return URL](/guides/dive-deeper/custom-return-url) - Redirect customers after booking
+- [Set custom return URL](/guides/settings/dive-deeper/custom-return-url) - Redirect customers after booking
 
 _This guide covers the essential setup steps. For more detailed information on any specific feature, check out our comprehensive documentation or contact our support team._

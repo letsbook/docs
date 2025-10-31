@@ -42,7 +42,7 @@ For each customer type:
 
 **Next steps:**
 
-1. [Create and manage customer types](manage-customer-types) - Set up new types or modify existing ones
-2. [Configure booking and cancellation rules](booking-cancellation-rules) - Define specific conditions for each type
+1. [Create and manage customer types](manage-customer-types.md) - Set up new types or modify existing ones
+2. [Configure booking and cancellation rules](booking-cancellation-rules.md) - Define specific conditions for each type
 
 Most operators start with just Guest and Member, then add custom types as their business grows.
