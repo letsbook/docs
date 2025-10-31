@@ -18,53 +18,36 @@ const SearchIcon = () => (
     </svg>
 );
 
-export default function Hero(): ReactNode {
-    const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const query = formData.get('search') as string;
-        if (query) {
-            window.location.href = `/search?q=${encodeURIComponent(query)}`;
-        }
-    };
+const Hero = (): ReactNode => (
+    <section className={styles.Root}>
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.VideoBackground}
+        >
+            <source src="/video/video_header.mp4" type="video/mp4" />
+        </video>
 
-    return (
-        <section className={styles.Root}>
-            <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className={styles.VideoBackground}
-            >
-                <source src="/video/video_header.mp4" type="video/mp4" />
-            </video>
+        <div className="container">
+            <div className={styles.HeaderContent}>
+                <h1 className={styles.Title}>
+                    <span className={styles.BrandName}>Let's Book</span>
+                    Support Center
+                </h1>
 
-            <div className="container">
-                <div className={styles.HeaderContent}>
-                    <h1 className={styles.Title}>
-                        <span className={styles.BrandName}>Let's Book</span>
-                        Support Center
-                    </h1>
-
-                    {/*<div className={styles.SearchContainer}>*/}
-                    {/*    <form*/}
-                    {/*        onSubmit={handleSearch}*/}
-                    {/*        className={styles.SearchForm}*/}
-                    {/*    >*/}
-                    {/*        <div className={styles.SearchWrapper}>*/}
-                    {/*            <SearchIcon />*/}
-                    {/*            <input*/}
-                    {/*                type="text"*/}
-                    {/*                name="search"*/}
-                    {/*                placeholder="How can we help you?"*/}
-                    {/*                className={styles.SearchInput}*/}
-                    {/*            />*/}
-                    {/*        </div>*/}
-                    {/*    </form>*/}
-                    {/*</div>*/}
+                <div className={styles.SearchContainer}>
+                    <button className={styles.SearchButton}>
+                        <SearchIcon />
+                        <span className={styles.SearchInput}>
+                            How can we help you?
+                        </span>
+                    </button>
                 </div>
             </div>
-        </section>
-    );
-}
+        </div>
+    </section>
+);
+
+export default Hero;
