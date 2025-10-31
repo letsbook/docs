@@ -322,6 +322,7 @@ const config: Config = {
             indexName: 'docs',
             contextualSearch: true,
             searchParameters: {},
+            askAi: 'uvhbkrE91SWx',
         },
     } satisfies Preset.ThemeConfig,
 };
