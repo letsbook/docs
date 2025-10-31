@@ -113,11 +113,47 @@ a.breadcrumbs__link:hover {
     margin-bottom: 1rem;
 }
 
-/**
- * Search bar color
- */
-.navbar--primary {
-    --ifm-navbar-search-input-color: var(--ifm-color-emphasis-500);
+/* Search input pill shape and styling */
+.DocSearch-Button {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.08) 100%);
+
+    border: none;
+    border-radius: 50px;
+
+    padding: 0.1rem 1.5rem;
+    min-width: 120px;
+}
+
+.DocSearch-Button:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+}
+
+.DocSearch-Button-Container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.DocSearch-Button-Placeholder {
+    padding: 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.DocSearch-Search-Icon {
+    color: #fff;
+}
+
+.DocSearch-Search-Icon circle {
+    stroke-width: 3;
+}
+
+.DocSearch-Search-Icon path {
+    stroke-width: 4;
+}
+
+.DocSearch-Button-Keys {
+    display: none;
 }
 
 /**
