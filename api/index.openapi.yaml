@@ -4,6 +4,9 @@ info:
   description: |
     # Changelog
 
+    ## 2025-10-17
+    - Added the 'booking_fee' cost type
+
     ## 2024-05-31
     - Renamed all references from VAT to tax. For backward compatibility, the legacy `VAT` properties remain available but are now deprecated.
     - Introduced the new `/v1/tax-rates` endpoint and deprecated the legacy `/v1/vat-rates` endpoint.
