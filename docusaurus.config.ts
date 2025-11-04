@@ -74,6 +74,10 @@ const config: Config = {
                         from: '/guides',
                         to: '/guides/day-to-day',
                     },
+                    {
+                        from: '/api',
+                        to: '/api/index',
+                    },
                 ],
             },
         ],
