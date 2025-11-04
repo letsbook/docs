@@ -72,7 +72,11 @@ const config: Config = {
                 redirects: [
                     {
                         from: '/guides',
-                        to: '/guides/day-to-day',
+                        to: '/guides/day-to-day/',
+                    },
+                    {
+                        from: '/api/index',
+                        to: '/api/',
                     },
                 ],
             },
