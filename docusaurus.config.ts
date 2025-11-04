@@ -74,10 +74,6 @@ const config: Config = {
                         from: '/guides',
                         to: '/guides/day-to-day',
                     },
-                    {
-                        from: '/api',
-                        to: '/api/index',
-                    },
                 ],
             },
         ],
@@ -134,25 +130,12 @@ const config: Config = {
         [
             'redocusaurus',
             {
-                openapi: {
-                    // Folder to scan for *.openapi.yaml files
-                    path: 'api',
-                    routeBasePath: '/api',
-                },
                 specs: [
-                    // Optionally provide individual files/urls to load
-                    // {
-                    //     // Pass it a path to a local OpenAPI YAML file
-                    //     spec: 'api.yaml',
-                    //     id: 'from-manual-file',
-                    //     route: '/api/from-manual-file',
-                    // },
-                    // // You can also pass it an OpenAPI spec URL
-                    // {
-                    //     spec: 'https://redocly.github.io/redoc/openapi.yaml',
-                    //     id: 'from-remote-file',
-                    //     route: '/api/from-remote-file',
-                    // },
+                    {
+                        spec: 'api/index.openapi.yaml',
+                        id: 'api',
+                        route: '/api/',
+                    },
                 ],
                 theme: {
                     primaryColor: '#081590',
@@ -231,7 +214,7 @@ const config: Config = {
                     exact: true,
                 },
                 {
-                    to: '/guides/day-to-day',
+                    to: '/guides/day-to-day/',
                     label: 'Guides',
                     position: 'left',
                 },
@@ -242,12 +225,12 @@ const config: Config = {
                 //     position: 'left',
                 // },
                 {
-                    to: '/releases',
+                    to: '/releases/',
                     label: 'Releases',
                     position: 'left',
                 },
                 {
-                    to: '/api/index',
+                    to: '/api/',
                     label: 'API docs',
                     position: 'left',
                 },
@@ -268,15 +251,15 @@ const config: Config = {
                     items: [
                         {
                             label: 'Day to day use',
-                            to: '/guides/day-to-day',
+                            to: '/guides/day-to-day/',
                         },
                         {
                             label: 'Boost revenue',
-                            to: '/guides/boost-revenue',
+                            to: '/guides/boost-revenue/',
                         },
                         {
                             label: 'Settings',
-                            to: '/guides/settings',
+                            to: '/guides/settings/',
                         },
                     ],
                 },
@@ -285,11 +268,11 @@ const config: Config = {
                     items: [
                         {
                             label: 'Releases',
-                            to: '/releases',
+                            to: '/releases/',
                         },
                         {
                             label: 'API documentation',
-                            to: '/api/index',
+                            to: '/api/',
                         },
                         {
                             label: 'GitHub',
