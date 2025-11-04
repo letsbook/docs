@@ -14,14 +14,15 @@ type Course = {
     level: string;
     duration: string;
     slug: string;
+    badge?: string;
 };
 
 const courses: Course[] = [
     {
-        title: 'Daily operations walkthrough',
+        title: 'Quick platform tour',
         description:
-            'Quick 10-minute tour of everything you do daily: bookings, planning, customer check-ins.',
-        image: teamImage,
+            'See everything Let\'s Book can do in 10 minutes. The full picture of your rental toolkit.',
+        image: dailyOperationsImage,
         level: 'Beginner',
         duration: '10m',
         slug: 'daily-operations-walkthrough',
@@ -30,46 +31,30 @@ const courses: Course[] = [
         title: 'Getting started guide',
         description:
             'From zero to first booking in 30 minutes: setup, configuration, and going live.',
-        image: dailyOperationsImage,
+        image: teamImage,
         level: 'Beginner',
         duration: '30m',
         slug: 'onboarding-guide',
     },
     {
-        title: 'Dock host operations',
+        title: 'Dock staff operations',
         description:
-            'Run a marina or dock? Learn fleet management, multiple locations, and dock assignments.',
+            'Everything dock staff needs: check-ins, boat handouts, safety briefings, and handling returns.',
         image: dockOperationsImage,
-        level: 'Intermediate',
-        duration: '20m',
-        slug: 'dock-host-operations',
+        level: 'Beginner',
+        duration: '15m',
+        slug: 'dock-staff-operations',
+        badge: 'Role training',
     },
     {
-        title: 'Seasonal planning strategies',
+        title: 'Bookings manager essentials',
         description:
-            'Master schedules, blockouts, seasonal pricing, and managing high-demand periods.',
+            'Master phone bookings, manage schedules, handle payments, and keep customers happy.',
         image: placeholderImage,
-        level: 'Intermediate',
+        level: 'Beginner',
         duration: '20m',
-        slug: 'seasonal-planning',
-    },
-    {
-        title: 'Boat club setup',
-        description:
-            'Configure memberships, internal bookings, member rates, and boat club workflows.',
-        image: placeholderImage,
-        level: 'Advanced',
-        duration: '20m',
-        slug: 'boat-club-setup',
-    },
-    {
-        title: 'Build autonomous operations',
-        description:
-            'Automate everything: self-service bookings, payments, check-ins, and remote boat access.',
-        image: placeholderImage,
-        level: 'Advanced',
-        duration: '25m',
-        slug: 'autonomous-operations',
+        slug: 'bookings-manager-essentials',
+        badge: 'Role training',
     },
 ];
 
@@ -128,6 +113,11 @@ export default function Courses(): ReactNode {
                                         alt={course.title}
                                         draggable={false}
                                     />
+                                    {course.badge && (
+                                        <div className={styles.CourseBadge}>
+                                            {course.badge}
+                                        </div>
+                                    )}
                                     <div className={styles.CourseHeader}>
                                         <h3 className={styles.CourseTitle}>
                                             {course.title}
