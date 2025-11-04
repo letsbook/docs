@@ -17,7 +17,7 @@ info:
     parameters, data should be transmitted as either a JSON body or form-encoded data.
     All responses are returned in JSON format. Every endpoint begins with the
     base URL: `https://api.letsbook.app`. The OpenAPI specification is
-    available at [https://developers.lets-book.com/api-spec.json](https://developers.lets-book.com/api-spec.json).
+    available at [https://support.letsbook.app/api.yaml](https://support.letsbook.app/api.yaml).
 
     You can be assured that all GET requests do not modify any data and are therefore
     idempotent, while POST/PUT/DELETE requests are not. We use HTTP status codes
