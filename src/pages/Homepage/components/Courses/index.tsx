@@ -2,6 +2,7 @@ import dailyOperationsImage from '@site/docs/courses/graphics/daily_operations_w
 import dockOperationsImage from '@site/docs/courses/graphics/dock_operations.jpg';
 import placeholderImage from '@site/docs/courses/graphics/placeholder.png';
 import teamImage from '@site/docs/courses/graphics/team.jpg';
+import walkImage from '@site/docs/courses/graphics/walk.webp';
 import { useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 
@@ -22,7 +23,7 @@ const courses: Course[] = [
         title: 'Quick platform tour',
         description:
             'See everything Let\'s Book can do in 10 minutes. The full picture of your rental toolkit.',
-        image: dailyOperationsImage,
+        image: walkImage,
         level: 'Beginner',
         duration: '10m',
         slug: 'daily-operations-walkthrough',
@@ -50,7 +51,7 @@ const courses: Course[] = [
         title: 'Bookings manager essentials',
         description:
             'Master phone bookings, manage schedules, handle payments, and keep customers happy.',
-        image: placeholderImage,
+        image: dailyOperationsImage,
         level: 'Beginner',
         duration: '20m',
         slug: 'bookings-manager-essentials',
@@ -63,10 +64,12 @@ export default function Courses(): ReactNode {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
+    const [hasMoved, setHasMoved] = useState(false);
 
     const handleMouseDown = (e: React.MouseEvent) => {
         if (!sliderRef.current) return;
         setIsDragging(true);
+        setHasMoved(false);
         setStartX(e.pageX - sliderRef.current.offsetLeft);
         setScrollLeft(sliderRef.current.scrollLeft);
     };
@@ -76,11 +79,24 @@ export default function Courses(): ReactNode {
         e.preventDefault();
         const x = e.pageX - sliderRef.current.offsetLeft;
         const walk = (x - startX) * 2;
+        
+        // Als er meer dan 5px beweging is, markeer als drag
+        if (Math.abs(walk) > 5) {
+            setHasMoved(true);
+        }
+        
         sliderRef.current.scrollLeft = scrollLeft - walk;
     };
 
     const handleMouseUp = () => {
         setIsDragging(false);
+    };
+
+    const handleClick = (e: React.MouseEvent, slug: string) => {
+        // Voorkom navigatie als er gedragged is
+        if (hasMoved) {
+            e.preventDefault();
+        }
     };
 
     return (
@@ -106,6 +122,7 @@ export default function Courses(): ReactNode {
                                 href={`/courses/${course.slug}`}
                                 className={styles.CourseCard}
                                 draggable={false}
+                                onClick={(e) => handleClick(e, course.slug)}
                             >
                                 <div className={styles.CourseImage}>
                                     <img
@@ -113,18 +130,20 @@ export default function Courses(): ReactNode {
                                         alt={course.title}
                                         draggable={false}
                                     />
-                                    {course.badge && (
-                                        <div className={styles.CourseBadge}>
-                                            {course.badge}
-                                        </div>
-                                    )}
                                     <div className={styles.CourseHeader}>
                                         <h3 className={styles.CourseTitle}>
                                             {course.title}
                                         </h3>
-                                        <span className={styles.CourseDuration}>
-                                            {course.duration}
-                                        </span>
+                                        <div className={styles.CourseMeta}>
+                                            <span className={styles.CourseDuration}>
+                                                {course.duration}
+                                            </span>
+                                            {course.badge && (
+                                                <span className={styles.CourseBadge}>
+                                                    {course.badge}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className={styles.PlayButton}>
                                         <svg

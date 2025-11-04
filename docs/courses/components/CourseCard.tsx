@@ -8,6 +8,7 @@ interface CourseCardProps {
     title: string;
     duration: string;
     description: string;
+    badge?: string;
 }
 
 export default function CourseCard({
@@ -16,6 +17,7 @@ export default function CourseCard({
     title,
     duration,
     description,
+    badge,
 }: CourseCardProps) {
     return (
         <a href={href} className={styles.courseCard}>
@@ -23,6 +25,9 @@ export default function CourseCard({
                 className={styles.courseImage}
                 style={{ backgroundImage: `url(${imageUrl})` }}
             >
+                {badge && (
+                    <div className={styles.courseBadge}>{badge}</div>
+                )}
                 <div className={styles.playButton}>
                     <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
                         <circle
