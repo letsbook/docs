@@ -281,3 +281,37 @@ article img,
 .blog-wrapper .margin-bottom--md header time {
     margin: 0;
 }
+
+/**
+ * Pagination navigation at bottom of releases - more spacing
+ */
+.pagination-nav {
+    margin-bottom: 4rem;
+}
+
+/**
+ * CTA button styling for release notes
+ */
+.markdown a.button-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 14px 24px;
+    background: linear-gradient(135deg, #0a1ba0 0%, #081590 100%);
+    color: white !important;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(8, 21, 144, 0.12), 0 1px 2px rgba(8, 21, 144, 0.08), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+    margin-top: 1rem;
+    transition: all 0.1s ease-out;
+}
+
+.markdown a.button-cta:hover {
+    background: linear-gradient(135deg, #2232bd 0%, #0c1fb5 100%);
+    color: white !important;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(34, 50, 189, 0.18), 0 3px 8px rgba(34, 50, 189, 0.12), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}

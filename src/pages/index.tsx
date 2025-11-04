@@ -6,6 +6,7 @@ import Features from './Homepage/components/Features';
 import GettingStarted from './Homepage/components/GettingStarted';
 import Hero from './Homepage/components/Hero';
 import QuickActions from './Homepage/components/QuickActions';
+import ReleaseBanner from './Homepage/components/ReleaseBanner';
 
 export default function Home(): ReactNode {
     const { siteConfig } = useDocusaurusContext();
@@ -18,6 +19,9 @@ export default function Home(): ReactNode {
 
             <main>
                 <QuickActions />
+                <div style={{ textAlign: 'center', paddingTop: '0rem', paddingBottom: '4rem' }}>
+                    <ReleaseBanner />
+                </div>
                 <Features />
                 <GettingStarted />
             </main>
