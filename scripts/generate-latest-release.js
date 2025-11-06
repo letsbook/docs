@@ -89,13 +89,13 @@ function generateLatestRelease() {
             '..',
             'src',
             'data',
-            'latest-release.json',
+            'latest-release.json'
         );
 
         fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + '\n');
 
         console.log(
-            `✅ Generated latest-release.json: ${latestRelease.version}`,
+            `✅ Generated latest-release.json: ${latestRelease.version}`
         );
     } catch (error) {
         console.error('Error generating latest-release.json:', error);
