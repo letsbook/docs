@@ -88,6 +88,32 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 - Images are stored close to the content they're used in
 - Edit URLs configured for GitHub integration (disabled in production)
 
+### Release Notes
+
+- Release files follow the pattern `v{major}.{minor}.md` (e.g., `v1.15.md`)
+- ALWAYS include a `description` field in the frontmatter
+- **Update `/src/data/latest-release.json` with every new release** - this controls the homepage banner
+- Description should be short and punchy (max ~60 characters)
+
+Example release frontmatter:
+```yaml
+---
+slug: v1.15
+date: 2025-11-04
+releaseVersion: v1.15
+description: Finance makeover, charge cards twice, and better discounts
+---
+```
+
+When creating a new release, update `latest-release.json`:
+```json
+{
+  "version": "v1.16",
+  "description": "Your short description here",
+  "url": "/releases/v1.16"
+}
+```
+
 ### Code inside markdown
 
 - Markdown files that contain code must be renamed to `.mdx`
@@ -95,7 +121,20 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 - All imports should use ES6 syntax (`import`) and not the old skool `require()` function
 - Imports should use the `@site/` prefix
 - Imports must use single quotes
-- Use the `Button` component over custom `a.button` elements
+
+### Button Component
+
+**ALWAYS use the Button component for any call-to-action links in markdown files.**
+
+- Import: `import Button from '@site/src/components/Button/Button';`
+- NEVER use inline HTML like `<a class="button-cta">` or custom styled anchor tags
+- NEVER add button styling to custom.css
+- The Button component handles all styling, target="_blank", and rel attributes automatically
+
+Example usage:
+```jsx
+<Button href="https://dashboard.letsbook.app/blocks">Create blockout →</Button>
+```
 
 ## Writing Guidelines
 

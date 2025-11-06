@@ -19,9 +19,7 @@ export default function Home(): ReactNode {
 
             <main>
                 <QuickActions />
-                <div style={{ textAlign: 'center', paddingTop: '0rem', paddingBottom: '4rem' }}>
-                    <ReleaseBanner />
-                </div>
+                <ReleaseBanner />
                 <Features />
                 <GettingStarted />
             </main>
