@@ -90,10 +90,10 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 
 ### Release Notes
 
-- Release files follow the pattern `v{major}.{minor}.md` (e.g., `v1.15.md`)
+- Release files follow the pattern `v{major}.{minor}.mdx` (e.g., `v1.15.mdx`)
 - ALWAYS include a `description` field in the frontmatter
-- **Update `/src/data/latest-release.json` with every new release** - this controls the homepage banner
 - Description should be short and punchy (max ~60 characters)
+- **The `/src/data/latest-release.json` file is auto-generated** from release frontmatter during build via `scripts/generate-latest-release.js`
 
 Example release frontmatter:
 ```yaml
@@ -105,14 +105,7 @@ description: Finance makeover, charge cards twice, and better discounts
 ---
 ```
 
-When creating a new release, update `latest-release.json`:
-```json
-{
-  "version": "v1.16",
-  "description": "Your short description here",
-  "url": "/releases/v1.16"
-}
-```
+The homepage banner automatically displays the most recent release based on the `date` field.
 
 ### Code inside markdown
 

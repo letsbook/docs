@@ -1,7 +1,7 @@
 import Link from '@docusaurus/Link';
+import latestRelease from '@site/src/data/latest-release.json';
 import type { ReactNode } from 'react';
 
-import latestRelease from '@site/src/data/latest-release.json';
 import styles from './styles.module.css';
 
 const ReleaseBanner = (): ReactNode => {
