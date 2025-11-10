@@ -20,7 +20,7 @@ properties:
   phoneNumber:
     type: string
     description: Phone number of the customer in E.164 format
-    example: "+49123456789"
+    example: '+49123456789'
   preferredLocale:
     type: string
     description: Preferred locale of the customer in `language_COUNTRY` format.

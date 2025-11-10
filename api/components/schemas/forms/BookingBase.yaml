@@ -38,7 +38,7 @@ properties:
       If set to true, the booking will be marked as paid by adding
       a cash payment equal to the unpaid costs. It will be ignored when the
       booking is already fully paid.
-      
+
       Note that slot based pricing may fail to calculate the correct amount
       as the slot is not known when the booking is created using the API.
     default: true
