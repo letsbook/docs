@@ -5,16 +5,17 @@ allOf:
       - financialDetails
     properties:
       url:
-        nullable: true
-        type: string
+        type:
+          - string
+          - 'null'
         description: URL to view the booking. Can be `null` when booking is still a `'draft'` booking.
         format: uri
         example: https://barrysboats.letsbook.app/bookings/BK8J3L
       customer:
-        nullable: true
         description: Customer details of the person who booked
-        allOf:
+        oneOf:
           - $ref: ./Customer.yaml
+          - type: 'null'
       financialDetails:
         description: Financial information about a booking
         required:
