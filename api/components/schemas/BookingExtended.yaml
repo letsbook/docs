@@ -7,7 +7,7 @@ allOf:
       url:
         nullable: true
         type: string
-        description: URL to view the booking. Can be `null` when booking is still being drafted.
+        description: URL to view the booking. Can be `null` when booking is still a `'draft'` booking.
         format: uri
         example: https://barrysboats.letsbook.app/bookings/BK8J3L
       customer:

@@ -26,7 +26,7 @@ get:
 
 post:
   summary: Add a webhook
-  description: Add a new webhook to be called when specific events happen
+  description: Add a new webhook endpoint to be called when specific events happen
   operationId: addWebhook
   tags:
     - Webhooks
@@ -48,7 +48,7 @@ post:
             url:
               type: string
               format: uri
-              description: URL to send the webhook to
+              description: URL (endpoint) that will be called when one of the webhook's events occur.
               example: https://example.com/webhooks/letsbook
             events:
               $ref: ../components/parameters/webhookEvent.yaml

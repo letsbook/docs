@@ -3,9 +3,13 @@ info:
   title: Let's Book API
   description: |
     # Changelog
+    
+    ## 2025-11-10
+    - Made the `url` property of a booking `nullable` when its status is still `'draft'`.
+    - Added the new [webhook](https://support.letsbook.app/api/#tag/Webhooks) endpoints
 
     ## 2025-10-17
-    - Added the 'booking_fee' cost type
+    - Added the `booking_fee` cost type
 
     ## 2024-05-31
     - Renamed all references from VAT to tax. For backward compatibility, the legacy `VAT` properties remain available but are now deprecated.
