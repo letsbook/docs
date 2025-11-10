@@ -2,12 +2,12 @@ allOf:
   - $ref: ./Booking.yaml
   - type: object
     required:
-      - url
       - financialDetails
     properties:
       url:
+        nullable: true
         type: string
-        description: URL to view the booking
+        description: URL to view the booking. Can be `null` when booking is still being drafted.
         format: uri
         example: https://barrysboats.letsbook.app/bookings/BK8J3L
       customer:

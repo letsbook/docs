@@ -1,0 +1,21 @@
+type: object
+properties:
+  name:
+    type: string
+    description: Name of the webhook
+    example: Zapier booking notifications
+  url:
+    type: string
+    format: uri
+    description: URL to send the webhook to
+    example: https://example.com/webhooks/letsbook
+  events:
+    $ref: ../../parameters/webhookEvent.yaml
+  tenantIds:
+    type: array
+    minItems: 1
+    items:
+      type: string
+    description: By default, you will receive updates on events of all tenants your API key has access to when creating this webhook. You can provide an explicit list of tenant IDs this webhook applies to.
+    example:
+      - 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278

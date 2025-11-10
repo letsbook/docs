@@ -1,29 +1,35 @@
 description: Webhook
 required:
   - id
-  - description
-  - events
+  - name
   - url
+  - secret
+  - events
+  - tenantIds
+  - enabled
 properties:
   id:
     type: string
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-    description: ID of the Webhook
-  description:
+    description: ID of the webhook
+  name:
     type: string
-    example: Get notified of all booking changes
-    description: Name of the Webhook
-  events:
-    type: array
-    items:
-      type: string
-      enum:
-        - booking.drafted
-        - booking.confirmed
-        - booking.canceled
-        - customer.registered
-      description: Event to get notified about
+    example: Receive booking updates
+    description: Get notified of all booking changes
   url:
     type: string
-    example: https://example.com/my-letsbook-webhook-endpoint
+    example: https://example.com/webhooks/letsbook
     description: URL to send the webhook to
+  secret:
+    type: string
+    example: 375cc73bb506dc31adff0612ec1e86dda34428951959dd3476727a7944474f90
+    description: You can use this secret to verify the URL call is coming from us
+  tenantIds:
+    type: array
+    description: The tenant this event applies to
+    example: ['8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278']
+    items:
+      type: string
+  enabled:
+    type: boolean
+    description: Determines if the webhook is currently enabled or not

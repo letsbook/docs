@@ -90,12 +90,14 @@ tags:
       A booking can be created by customers or staff members. It represents a
       reservation for a specific boat model, to be picked up at a designated time from a
       specific dock and returned at a specified time to that same dock.
-
-      Bookings can have various statuses.
   - name: Tax rates
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
       costs, and other charges.
+  - name: Webhooks
+    description: |
+      Get notified when things happen inside Let's Book using webhook URLs. We
+      will call your server when specific events happen.
   - name: Availability
     description: |
       Availability represents the availability of a boat model at a specific dock.
@@ -129,5 +131,13 @@ paths:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
     $ref: paths/vat-rates.yaml
+  /v1/webhooks:
+    $ref: paths/webhooks.yaml
+  /v1/webhooks/{id}:
+    $ref: paths/webhooks@{id}.yaml
+  /v1/webhooks/{id}/enable:
+    $ref: paths/webhooks@{id}@enable.yaml
+  /v1/webhooks/{id}/disable:
+    $ref: paths/webhooks@{id}@disable.yaml
   /v1/availability:
     $ref: paths/availability.yaml
