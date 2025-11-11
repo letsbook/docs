@@ -109,15 +109,15 @@ tags:
       specific boat model at a specific dock from the total number of boats available
       at that dock.
 security:
-  - BearerAuth: []
+  - AuthorizationHeader: []
 components:
   securitySchemes:
-    BearerAuth:
+    AuthorizationHeader:
       type: http
       scheme: bearer
       description: |
-        Use your API key as a Bearer token. Obtain your API key from the
-        [dashboard](https://dashboard.letsbook.app/integrations).
+        Use your API key as a Bearer token in a header: `Authorization: Bearer <API_KEY>`.
+        You can obtain your API key from the [dashboard](https://dashboard.letsbook.app/integrations).
 webhooks:
   $ref: webhook-payloads.yaml
 paths:
