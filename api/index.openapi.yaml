@@ -118,6 +118,13 @@ components:
       description: |
         Use your API key as a Bearer token in a header: `Authorization: Bearer <API_KEY>`.
         You can obtain your API key from the [dashboard](https://dashboard.letsbook.app/integrations).
+    WebhookSignature:
+      type: apiKey
+      in: header
+      name: X-Webhook-Signature
+      description: |
+        Outgoing webhooks include a signature header that you can use to verify the request came from Let's Book.
+        The signature is generated using the webhook secret configured in your [webhook settings](https://dashboard.letsbook.app/integrations/webhooks).
 webhooks:
   $ref: webhook-payloads.yaml
 paths:

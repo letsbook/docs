@@ -5,6 +5,8 @@ booking.drafted:
       - Webhooks payloads
     summary: Booking drafted
     description: Triggered when a booking is created in draft status
+    security:
+      - WebhookSignature: []
     requestBody:
       content:
         application/json:
@@ -28,6 +30,8 @@ booking.confirmed:
       - Webhooks payloads
     summary: Booking confirmed
     description: Triggered when a booking is confirmed
+    security:
+      - WebhookSignature: []
     requestBody:
       content:
         application/json:
@@ -51,6 +55,8 @@ booking.completed:
       - Webhooks payloads
     summary: Booking completed
     description: Triggered when a booking is completed
+    security:
+      - WebhookSignature: []
     requestBody:
       content:
         application/json:
@@ -74,6 +80,8 @@ booking.canceled:
       - Webhooks payloads
     summary: Booking canceled
     description: Triggered when a booking is canceled
+    security:
+      - WebhookSignature: []
     requestBody:
       content:
         application/json:
@@ -97,6 +105,8 @@ booking.expired:
       - Webhooks payloads
     summary: Booking expired
     description: Triggered when a booking expires
+    security:
+      - WebhookSignature: []
     requestBody:
       content:
         application/json:
@@ -120,6 +130,8 @@ order.canceled:
       - Webhooks payloads
     summary: Order canceled
     description: Triggered when an order is canceled
+    security:
+      - WebhookSignature: []
     requestBody:
       content:
         application/json:
