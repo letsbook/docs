@@ -23,12 +23,14 @@ properties:
   secret:
     type: string
     example: 375cc73bb506dc31adff0612ec1e86dda34428951959dd3476727a7944474f90
-    description: You can use this secret to verify the URL call is coming from us
+    description: You can store this secret in your app and use it to verify the
+      incoming webhook is coming from Let's Book.
   events:
     $ref: ../parameters/webhookEvent.yaml
   tenantIds:
     type: array
-    description: The tenant this event applies to
+    description: The tenant this event applies to. You can leave it empty to set
+      it to all tenants the current API key has access to.
     example: ['8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278']
     items:
       type: string

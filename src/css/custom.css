@@ -292,7 +292,7 @@ article img,
     td[kind='field']
     div:last-child,
 .redoc-wrap
-    div[data-section-id^='tag/Webhooks-payloads']
+    div[data-section-id^='tag/Webhook-events']
     td[kind='field']
     div:last-child {
     display: none;

@@ -98,16 +98,18 @@ tags:
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
       costs, and other charges.
-  - name: Webhooks
-    description: |
-      Get notified when things happen inside Let's Book using webhook URLs. We
-      will call your server when specific events happen.
   - name: Availability
     description: |
       Availability represents the availability of a boat model at a specific dock.
       Availability is calculated by subtracting the number of bookings for a
       specific boat model at a specific dock from the total number of boats available
       at that dock.
+  - name: Webhooks
+    description: |
+      A webhook is a way for one system to instantly notify another when something happens. Instead of your app constantly polling our API, Let's Book sends an HTTP POST request to your specified URL whenever an event occurs. See [webhook events](#tag/Webhooks-events) for details on what we're sending.
+  - name: Webhook events
+    description: |
+      A webhook event payload is a JSON object that contains event data for your app to process. You can then trigger actions, update databases, or run workflows. Here's a list of event details on what we're sending.
 security:
   - AuthorizationHeader: []
 components:
@@ -126,7 +128,7 @@ components:
         Outgoing webhooks include a signature header that you can use to verify the request came from Let's Book.
         The signature is generated using the webhook secret configured in your [webhook settings](https://dashboard.letsbook.app/integrations/webhooks).
 webhooks:
-  $ref: webhook-payloads.yaml
+  $ref: webhook-events.yaml
 paths:
   /me:
     $ref: paths/me.yaml

@@ -2,7 +2,7 @@ booking.drafted:
   post:
     operationId: webhook-booking-drafted
     tags:
-      - Webhooks payloads
+      - Webhook events
     summary: Booking drafted
     description: Triggered when a booking is created in draft status
     security:
@@ -27,7 +27,7 @@ booking.confirmed:
   post:
     operationId: webhook-booking-confirmed
     tags:
-      - Webhooks payloads
+      - Webhook events
     summary: Booking confirmed
     description: Triggered when a booking is confirmed
     security:
@@ -52,7 +52,7 @@ booking.completed:
   post:
     operationId: webhook-booking-completed
     tags:
-      - Webhooks payloads
+      - Webhook events
     summary: Booking completed
     description: Triggered when a booking is completed
     security:
@@ -77,7 +77,7 @@ booking.canceled:
   post:
     operationId: webhook-booking-canceled
     tags:
-      - Webhooks payloads
+      - Webhook events
     summary: Booking canceled
     description: Triggered when a booking is canceled
     security:
@@ -102,7 +102,7 @@ booking.expired:
   post:
     operationId: webhook-booking-expired
     tags:
-      - Webhooks payloads
+      - Webhook events
     summary: Booking expired
     description: Triggered when a booking expires
     security:
@@ -127,7 +127,7 @@ order.canceled:
   post:
     operationId: webhook-order-canceled
     tags:
-      - Webhooks payloads
+      - Webhook events
     summary: Order canceled
     description: Triggered when an order is canceled
     security:
