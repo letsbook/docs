@@ -67,6 +67,9 @@ info:
     name: Let's Book
     email: tech@lets-book.com
     url: https://lets-book.com
+  license:
+    name: Proprietary
+    url: https://lets-book.com
 servers:
   - url: https://api.letsbook.app
     description: Let's Book API v1
@@ -105,6 +108,18 @@ tags:
       Availability is calculated by subtracting the number of bookings for a
       specific boat model at a specific dock from the total number of boats available
       at that dock.
+security:
+  - BearerAuth: []
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: |
+        Use your API key as a Bearer token. Obtain your API key from the
+        [dashboard](https://dashboard.letsbook.app/integrations).
+webhooks:
+  $ref: webhook-payloads.yaml
 paths:
   /me:
     $ref: paths/me.yaml

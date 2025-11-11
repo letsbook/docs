@@ -1,0 +1,130 @@
+booking.drafted:
+  post:
+    operationId: webhook-booking-drafted
+    tags:
+      - Webhooks payloads
+    summary: Booking drafted
+    description: Triggered when a booking is created in draft status
+    requestBody:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ./components/schemas/BookingExtended.yaml
+              - type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - draft
+                    example: draft
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.confirmed:
+  post:
+    operationId: webhook-booking-confirmed
+    tags:
+      - Webhooks payloads
+    summary: Booking confirmed
+    description: Triggered when a booking is confirmed
+    requestBody:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ./components/schemas/BookingExtended.yaml
+              - type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - confirmed
+                    example: confirmed
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.completed:
+  post:
+    operationId: webhook-booking-completed
+    tags:
+      - Webhooks payloads
+    summary: Booking completed
+    description: Triggered when a booking is completed
+    requestBody:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ./components/schemas/BookingExtended.yaml
+              - type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - completed
+                    example: completed
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.canceled:
+  post:
+    operationId: webhook-booking-canceled
+    tags:
+      - Webhooks payloads
+    summary: Booking canceled
+    description: Triggered when a booking is canceled
+    requestBody:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ./components/schemas/BookingExtended.yaml
+              - type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - canceled
+                    example: canceled
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.expired:
+  post:
+    operationId: webhook-booking-expired
+    tags:
+      - Webhooks payloads
+    summary: Booking expired
+    description: Triggered when a booking expires
+    requestBody:
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ./components/schemas/BookingExtended.yaml
+              - type: object
+                properties:
+                  status:
+                    type: string
+                    enum:
+                      - expired
+                    example: expired
+    responses:
+      '200':
+        description: Webhook received successfully
+order.canceled:
+  post:
+    operationId: webhook-order-canceled
+    tags:
+      - Webhooks payloads
+    summary: Order canceled
+    description: Triggered when an order is canceled
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: ./components/schemas/BookingExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully

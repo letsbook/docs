@@ -290,6 +290,10 @@ article img,
     > div
     table
     td[kind='field']
+    div:last-child,
+.redoc-wrap
+    div[data-section-id^='tag/Webhooks-payloads']
+    td[kind='field']
     div:last-child {
     display: none;
 }
