@@ -1,12 +1,12 @@
 type: object
 description: Pagination to iterate large result sets.
 required:
-- totalItems
-- perPage
-- page
-- totalPages
-- nextPageUrl
-- previousPageUrl
+  - totalItems
+  - perPage
+  - page
+  - totalPages
+  - nextPageUrl
+  - previousPageUrl
 properties:
   totalItems:
     type: integer

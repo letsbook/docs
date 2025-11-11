@@ -35,14 +35,14 @@ properties:
       - completed
       - canceled
     description: Current status of the booking
-#  source:
-#    type: string
-#    example: api
-#    enum:
-#      - api
-#      - booking_form
-#      - dashboard
-#    description: Source of the booking
+  #  source:
+  #    type: string
+  #    example: api
+  #    enum:
+  #      - api
+  #      - booking_form
+  #      - dashboard
+  #    description: Source of the booking
   customerId:
     type: string
     nullable: true
