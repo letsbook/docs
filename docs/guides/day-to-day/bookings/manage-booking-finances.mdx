@@ -26,7 +26,7 @@ The top bar shows the overall payment status:
 
 The balance automatically updates when you add costs, discounts, or payments.
 
-If you've enabled card charging in [integrations](https://dashboard.letsbook.app/integrations), you'll see a **Charge card** button here to directly charge saved payment methods.
+If you've enabled **Keep card on file** in [integrations](https://dashboard.letsbook.app/integrations), you'll see a **Charge card** button here to directly charge saved payment methods.
 
 <InlineVideoPlayer videoSrc={chargeCardVideo} />
 
@@ -54,7 +54,11 @@ Charge for add-ons or damages that weren't part of the original booking.
 4. Choose your tax rate
 5. Click **Save**
 
-The new costs appear immediately and update the balance. Standard booking costs (the rental itself) can't be edited here.
+The extra costs appear immediately and update the balance. 
+
+:::info[Can't edit the rental price?]
+The base rental price (boat + duration) is calculated automatically and can't be changed here. To adjust the rental price, edit the booking itself (change boat, duration, or dates). Use costs and discounts to adjust the total without changing the booking details.
+:::
 
 <InlineVideoPlayer videoSrc={addCostsVideo} />
 
@@ -78,7 +82,7 @@ Share the payment link via:
 Payment requests expire after the deadline. Customers can pay via Mollie or Stripe (depending on your setup).
 
 :::tip[When to use payment requests]
-- Collecting remaining balance
+- Collecting outstanding amount
 - Charging for last-minute add-ons
 - Requesting payment for manually added bookings
 - After price changes from edits
@@ -88,7 +92,7 @@ Payment requests expire after the deadline. Customers can pay via Mollie or Stri
 
 ### Add cash payment
 
-Register payments made outside the system (cash, bank transfer).
+Register payments made outside Let's Book (cash, bank transfer).
 
 1. Click **Add cash payment** under Received
 2. Enter the amount customer gave you
@@ -115,8 +119,6 @@ When you edit a booking and the price changes:
 1. Check the new balance in Finance tab
 2. If price increased → Send a payment request
 3. If price decreased → Process refund via your payment provider
-
-Standard rental costs adjust automatically, but you might need to add or remove costs manually.
 
 ### Process refunds
 
