@@ -35,7 +35,7 @@ properties:
     description: Email address of the Customer
   phoneNumber:
     type: string
-    example: "+49123456789"
+    example: '+49123456789'
     description: Phone number of the Customer in E.164 format
   preferredLocale:
     type: string

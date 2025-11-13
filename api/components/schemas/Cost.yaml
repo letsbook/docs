@@ -20,18 +20,18 @@ properties:
   type:
     type: string
     description: |
-      
+
       `pricing_structure` costs are automatically calculated from the 
       pricing settings. This is usually the rental of the boat. 
 
       `manual` costs are manually added to the booking by a staff member. They 
       can be either positive or negative.
-      
+
       `add_on` costs are costs linked to an order line of an add-ons order.
-      
+
       `coupon` is a negative cost as it is a discount, given by using a coupon
       code.
-      
+
       `booking_fee` costs are used for shifting the Let's Book fee to the 
       customer or when calculating a custom fee over the total costs.
     enum:
