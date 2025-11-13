@@ -92,7 +92,7 @@ function generateLatestRelease() {
             'latest-release.json'
         );
 
-        fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + '\n');
+        fs.writeFileSync(outputPath, JSON.stringify(output, null, 4) + '\n');
 
         console.log(
             `✅ Generated latest-release.json: ${latestRelease.version}`
