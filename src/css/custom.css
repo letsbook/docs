@@ -281,3 +281,10 @@ article img,
 .blog-wrapper .margin-bottom--md header time {
     margin: 0;
 }
+
+/**
+ * Pagination navigation at bottom of releases - more spacing
+ */
+.pagination-nav {
+    margin-bottom: 4rem;
+}
