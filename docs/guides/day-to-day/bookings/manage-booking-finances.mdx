@@ -1,0 +1,131 @@
+---
+sidebar_position: 3
+---
+
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import chargeCardVideo from '../graphics/charge_card.mov';
+import birthdayDiscountVideo from '../graphics/birthday_discount.mp4';
+import addCostsVideo from '../graphics/add_costs.mp4';
+import paymentRequestVideo from '../graphics/payment_request.mp4';
+import cashPaymentVideo from '../graphics/cash_payment.mp4';
+
+# Booking finances
+
+[Open booking](https://dashboard.letsbook.app/bookings) → **Finance tab**
+
+The Finance tab shows your booking's financial overview in three sections: costs (left), received payments (right), and the balance at the top.
+
+## Understanding the balance
+
+The top bar shows the overall payment status:
+
+- **$0.00 Paid in full** (green) = Customer paid everything
+- **$X.XX Outstanding** (yellow) = Amount still owed
+- **$X.XX Overpaid** (yellow) = Customer paid too much
+
+The balance automatically updates when you add costs, discounts, or payments.
+
+If you've enabled **Keep card on file** in [integrations](https://dashboard.letsbook.app/integrations), you'll see a **Charge card** button here to directly charge saved payment methods.
+
+<InlineVideoPlayer videoSrc={chargeCardVideo} />
+
+## Managing costs
+
+### Add a discount
+
+Give discounts to adjust the booking total.
+
+1. Click **Add discount** under Costs
+2. Enter description and amount
+3. Click **Submit**
+
+Discounts appear as negative line items under costs.
+
+<InlineVideoPlayer videoSrc={birthdayDiscountVideo} />
+
+### Add extra costs
+
+Charge for add-ons or damages that weren't part of the original booking.
+
+1. Click **Add costs** under Costs
+2. Enter description and amount
+3. Select **Incl. tax** or **Excl. tax**
+4. Choose your tax rate
+5. Click **Save**
+
+The extra costs appear immediately and update the balance. 
+
+:::info[Can't edit the rental price?]
+The base rental price (boat + duration) is calculated automatically and can't be changed here. To adjust the rental price, edit the booking itself (change boat, duration, or dates). Use costs and discounts to adjust the total without changing the booking details.
+:::
+
+<InlineVideoPlayer videoSrc={addCostsVideo} />
+
+## Managing payments
+
+### Send a payment request
+
+Request payment for outstanding balances.
+
+1. Click **Request payment** (top right)
+2. Enter amount and description
+3. Set payment deadline (date & time)
+4. Toggle **Also charge a deposit** if needed
+5. Click **Save request**
+
+Share the payment link via:
+- **Copy link** → Paste it anywhere
+- **Send via email** → Direct to customer's inbox
+- **Send via text message** → SMS to customer's phone
+
+Payment requests expire after the deadline. Customers can pay via Mollie or Stripe (depending on your setup).
+
+:::tip[When to use payment requests]
+- Collecting outstanding amount
+- Charging for last-minute add-ons
+- Requesting payment for manually added bookings
+- After price changes from edits
+:::
+
+<InlineVideoPlayer videoSrc={paymentRequestVideo} />
+
+### Add cash payment
+
+Register payments made outside Let's Book (cash, bank transfer).
+
+1. Click **Add cash payment** under Received
+2. Enter the amount customer gave you
+3. Click **Add**
+
+The balance updates immediately. Cash payments don't go through payment providers.
+
+<InlineVideoPlayer videoSrc={cashPaymentVideo} />
+
+## Managing deposits
+
+### View deposits
+
+Deposits appear at the bottom of the Finance tab. Click the deposit line to open it in your payment provider (Stripe or Mollie) where you can process refunds.
+
+:::info[Deposit handling]
+Deposits are handled through your payment provider. Click the deposit to open the payment in Stripe or Mollie, then process the refund there.
+:::
+
+## Handle pricing changes
+
+When you edit a booking and the price changes:
+
+1. Check the new balance in Finance tab
+2. If price increased → Send a payment request
+3. If price decreased → Process refund via your payment provider
+
+### Process refunds
+
+Refund payments through your payment provider's dashboard.
+
+1. Click the payment you want to refund
+2. This opens Stripe or Mollie
+3. Process the refund there
+
+The refund appears in the Finance tab once complete. Learn more in [refunds and disputes](/guides/settings/payments/receive-payments#refunds-and-disputes).

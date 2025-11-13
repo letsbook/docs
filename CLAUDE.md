@@ -151,6 +151,7 @@ Example usage:
 - Maximum efficiency in word choice
 - Use dashboard links: `https://dashboard.letsbook.app/...`
 - Target audience: boat rental companies who want practical solutions
+- **Use US dollars ($) in examples** - we're targeting the US market, so use $ instead of € in prices, costs, and financial examples
 
 ### API Documentation
 

@@ -1,7 +1,5 @@
 .Root {
     margin: 1.5rem 0;
-    background: var(--ifm-color-primary-darkest);
-
     display: block;
     width: 100%;
     border-radius: 14px;
