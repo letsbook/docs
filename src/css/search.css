@@ -1,0 +1,37 @@
+.DocSearch-Modal {
+    border-radius: var(--docsearch-border-radius);
+}
+
+.DocSearch-Form {
+    border-top-left-radius: var(--docsearch-border-radius);
+    border-top-right-radius: var(--docsearch-border-radius);
+}
+
+.DocSearch-Footer {
+    border-bottom-left-radius: var(--docsearch-border-radius);
+    border-bottom-right-radius: var(--docsearch-border-radius);
+}
+
+.DocSearch-MagnifierLabel {
+    background: #13c19b;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.DocSearch-Search-Icon {
+    width: 18px;
+    height: 18px;
+}
+
+.DocSearch-Input {
+    padding-inline-start: 20px;
+    font-size: 1rem;
+
+    font-weight: 500;
+}
+
+.DocSearch-Input::placeholder {
+    color: #4c5e68;
+
+    font-weight: 400;
+}

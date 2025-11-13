@@ -314,6 +314,7 @@ const config: Config = {
             indexName: 'docs',
             contextualSearch: true,
             searchParameters: {},
+            placeholder: 'Ask your question',
             askAi: 'uvhbkrE91SWx',
         },
     } satisfies Preset.ThemeConfig,

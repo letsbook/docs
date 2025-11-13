@@ -31,6 +31,10 @@
     --ifm-heading-color: var(--ifm-color-primary);
     --ifm-font-family-base:
         'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --docsearch-container-background: #050f6aaa;
+    --docsearch-searchbox-height: 70px;
+    --docsearch-border-radius: 10px;
 }
 
 @media (min-width: 768px) {
