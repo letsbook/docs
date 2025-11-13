@@ -88,6 +88,25 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 - Images are stored close to the content they're used in
 - Edit URLs configured for GitHub integration (disabled in production)
 
+### Release Notes
+
+- Release files follow the pattern `v{major}.{minor}.mdx` (e.g., `v1.15.mdx`)
+- ALWAYS include a `description` field in the frontmatter
+- Description should be short and punchy (max ~60 characters)
+- **The `/src/data/latest-release.json` file is auto-generated** from release frontmatter during build via `scripts/generate-latest-release.js`
+
+Example release frontmatter:
+```yaml
+---
+slug: v1.15
+date: 2025-11-04
+releaseVersion: v1.15
+description: Finance makeover, charge cards twice, and better discounts
+---
+```
+
+The homepage banner automatically displays the most recent release based on the `date` field.
+
 ### Code inside markdown
 
 - Markdown files that contain code must be renamed to `.mdx`
@@ -95,7 +114,20 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 - All imports should use ES6 syntax (`import`) and not the old skool `require()` function
 - Imports should use the `@site/` prefix
 - Imports must use single quotes
-- Use the `Button` component over custom `a.button` elements
+
+### Button Component
+
+**ALWAYS use the Button component for any call-to-action links in markdown files.**
+
+- Import: `import Button from '@site/src/components/Button/Button';`
+- NEVER use inline HTML like `<a class="button-cta">` or custom styled anchor tags
+- NEVER add button styling to custom.css
+- The Button component handles all styling, target="_blank", and rel attributes automatically
+
+Example usage:
+```jsx
+<Button href="https://dashboard.letsbook.app/blocks">Create blockout →</Button>
+```
 
 ## Writing Guidelines
 
@@ -119,6 +151,7 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 - Maximum efficiency in word choice
 - Use dashboard links: `https://dashboard.letsbook.app/...`
 - Target audience: boat rental companies who want practical solutions
+- **Use US dollars ($) in examples** - we're targeting the US market, so use $ instead of € in prices, costs, and financial examples
 
 ### API Documentation
 

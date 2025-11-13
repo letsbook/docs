@@ -4,7 +4,9 @@
     "private": true,
     "scripts": {
         "docusaurus": "docusaurus",
+        "prestart": "node scripts/generate-latest-release.js",
         "start": "docusaurus start",
+        "prebuild": "node scripts/generate-latest-release.js",
         "build": "docusaurus build",
         "postbuild": "cp build/redocusaurus/api.yaml build/api.yaml",
         "swizzle": "docusaurus swizzle",
