@@ -125,6 +125,7 @@ const config: Config = {
                         './src/css/menu.css',
                         './src/css/footer.css',
                         './src/css/content.css',
+                        './src/css/search.css',
                         './src/css/custom.css',
                     ],
                 },
