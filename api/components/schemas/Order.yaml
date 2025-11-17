@@ -1,0 +1,61 @@
+description: An order works much like a webshop purchase. It includes one or more products (add-ons) booked alongside the boat trip. These are usually items or catering options, but can also include services such as hiring a tour guide.
+required:
+  - id
+  - bookingId
+  - currency
+  - plannedForDeliveryAt
+  - totalIncludingTax
+  - totalExcludingTax
+  - totalTax
+  - createdAt
+  - canceledAt
+  - updatedAt
+properties:
+  id:
+    type: string
+    example: 0e375f9f-6bcc-43b0-b3bf-e6bff97e0959
+    description: Unique identifier of the order
+  bookingId:
+    type: string
+    format: uuid
+    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
+    description: |
+      Unique identifier of the booking this order belongs to
+  currency:
+    type: string
+    description: Currency of the amount
+    example: EUR
+  plannedForDeliveryAt:
+    type: string
+    format: date-time
+    example: 2025-11-18T12:00:00+00:00
+    description: Timestamp of when the order should be delivered in ISO 8601 format. Usually this is the pickup date time of the booking the order belongs to.
+  totalIncludingTax:
+    type: integer
+    description: Total costs including tax in cents
+    example: 1750
+  totalExcludingTax:
+    type: integer
+    description: Total costs excluding tax in cents
+    example: 1466
+  totalTax:
+    type: integer
+    description: Total tax in cents (difference between `totalIncludingTax` and `totalExcludingTax`).
+    example: 284
+  createdAt:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Timestamp of when the order was created in ISO 8601 format
+  updatedAt:
+    type: string
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Timestamp of when the order was last updated in ISO 8601 format
+  canceledAt:
+    type:
+      - string
+      - 'null'
+    format: date-time
+    example: 2022-01-01T00:00:00Z
+    description: Timestamp of when the order was canceled in ISO 8601 format
