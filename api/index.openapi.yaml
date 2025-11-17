@@ -128,7 +128,7 @@ components:
         Outgoing webhooks include a signature header that you can use to verify the request came from Let's Book.
         The signature is generated using the webhook secret configured in your [webhook settings](https://dashboard.letsbook.app/integrations/webhooks).
 webhooks:
-  $ref: webhook-events.yaml
+  $ref: paths/webhook-events.yaml
 paths:
   /me:
     $ref: paths/me.yaml

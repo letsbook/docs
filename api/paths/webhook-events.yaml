@@ -1,0 +1,203 @@
+booking.drafted:
+  post:
+    operationId: webhook-booking-drafted
+    tags:
+      - Webhook events
+    summary: Booking drafted
+    description: Triggered when a booking is created in draft status
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.drafted
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      customer:
+                        type: null
+                      customerId:
+                        type: null
+                      url:
+                        type: null
+                      status:
+                        type: string
+                        enum:
+                          - draft
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.confirmed:
+  post:
+    operationId: webhook-booking-confirmed
+    tags:
+      - Webhook events
+    summary: Booking confirmed
+    description: Triggered when a booking is confirmed
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.drafted
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - confirmed
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.completed:
+  post:
+    operationId: webhook-booking-completed
+    tags:
+      - Webhook events
+    summary: Booking completed
+    description: Triggered when a booking is completed
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.drafted
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - completed
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.canceled:
+  post:
+    operationId: webhook-booking-canceled
+    tags:
+      - Webhook events
+    summary: Booking canceled
+    description: Triggered when a booking is canceled
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.drafted
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - canceled
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.expired:
+  post:
+    operationId: webhook-booking-expired
+    tags:
+      - Webhook events
+    summary: Booking expired
+    description: Triggered when a booking expires
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.drafted
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - expired
+    responses:
+      '200':
+        description: Webhook received successfully
+order.canceled:
+  post:
+    operationId: webhook-order-canceled
+    tags:
+      - Webhook events
+    summary: Order canceled
+    description: Triggered when an order is canceled
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - order.canceled
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/OrderExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
