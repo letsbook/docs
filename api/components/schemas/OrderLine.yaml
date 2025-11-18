@@ -1,3 +1,4 @@
+description: Each product in an order has its own order line.
 required:
   - productId
   - description
@@ -8,83 +9,30 @@ required:
   - taxRateId
 properties:
   productId:
-  balance:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the product
+  description:
+    type: string
+    example: Coca-Cola original can (12 fl oz)
+    description: Name of the product. Can be up to 255 characters long.
+  quantity:
+    type: number
+    example: 3
+    description: The product quantity
+  priceIncludingTax:
     type: integer
-    description: Balance between costs and payments in cents
-    example: 0
-  applicationFee:
-    type: object
-    description: Application fee charged by Let's Book in cents
-    properties:
-      amount:
-        type: integer
-        description: The amount paid in cents
-        example: 35
-      currency:
-        type: string
-        description: The currency of the amount
-        example: EUR
-  costs:
-    type: object
-    description: |
-      Costs of the booking. Can be both rental costs or other costs like add-ons
-      or insurance.
-    required:
-      - totalIncludingTax
-      - totalExcludingTax
-      - lines
-    properties:
-      totalIncludingTax:
-        type: integer
-        description: Total costs including tax in cents
-        example: 1750
-      totalExcludingTax:
-        type: integer
-        description: Total costs excluding tax in cents
-        example: 1466
-      totalIncludingVat:
-        deprecated: true
-        type: integer
-        description: Deprecated. Use totalIncludingTax instead.
-        example: 1750
-      totalExcludingVat:
-        deprecated: true
-        type: integer
-        description: Deprecated. Use totalExcludingTax instead.
-        example: 1466
-      lines:
-        type: array
-        items:
-          $ref: ./Cost.yaml
-  payments:
-    type: object
-    description: |
-      Payments made for the booking. Can be both payments made by the customer
-      or 'cash' payments, manually added by a staff member.
-    required:
-      - total
-      - lines
-    properties:
-      total:
-        type: integer
-        description: Total paid in cents
-        example: 1750
-      lines:
-        type: array
-        items:
-          $ref: ./Payment.yaml
-  deposits:
-    type: object
-    description: Open deposits for the booking.
-    required:
-      - total
-      - lines
-    properties:
-      total:
-        type: integer
-        description: Total paid in cents
-        example: 15000
-      lines:
-        type: array
-        items:
-          $ref: ./Deposit.yaml
+    description: Order line price including tax in cents for this order line
+    example: 1750
+  priceExcludingTax:
+    type: integer
+    description: Order line price excluding tax in cents for this order line
+    example: 1466
+  tax:
+    type: integer
+    description: Order line tax in cents (difference between `priceIncludingTax` and `priceExcludingTax`).
+    example: 284
+  taxRateId:
+    type: string
+    example: d8f8feb5-b8cc-4b8e-9d5c-a9d9d9d9d9d9
+    description: ID of the tax rate for this product

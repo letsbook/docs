@@ -8,4 +8,4 @@ allOf:
         description: Details about the contents of the order
         type: array
         items:
-          type: string
+          $ref: ./OrderLine.yaml
