@@ -44,5 +44,5 @@ properties:
   registeredAt:
     type: string
     format: date-time
-    example: 2022-01-01T13:37:00Z
+    example: 2025-11-17T18:34:11+00:00
     description: Date and time when the customer was registered in ISO 8601 format

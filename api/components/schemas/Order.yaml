@@ -1,4 +1,4 @@
-description: An order works much like a webshop purchase. It includes one or more products (add-ons) booked alongside the boat trip. These are usually items or catering options, but can also include services such as hiring a tour guide.
+description: Object containing the order details. It includes one or more products (add-ons) booked alongside the boat trip.
 required:
   - id
   - bookingId

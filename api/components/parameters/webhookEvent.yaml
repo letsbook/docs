@@ -8,7 +8,12 @@ items:
     - booking.completed
     - booking.canceled
     - booking.expired
+    - order.confirmed
+    - order.lines_updated
     - order.canceled
+    - customer.anonymized
+    - customer.registered
+    - customer.updated
 description: Events to get notified about
 example:
   - booking.confirmed
