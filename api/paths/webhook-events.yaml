@@ -4,7 +4,7 @@ booking.drafted:
     tags:
       - Webhook events
     summary: Booking drafted
-    description: Triggered when a booking is created. This can either be a customer who's filling out the booking form or by an admin user who created a booking in the dashboard. Draft bookings reserve availability but need to be paid on time.
+    description: Triggered when a booking is created. This happens when a customer fills out the booking form or when an admin creates a booking in the dashboard. Draft bookings reserve availability but must be confirmed on time.
     security:
       - WebhookSignature: []
     requestBody:
@@ -44,7 +44,7 @@ booking.confirmed:
     tags:
       - Webhook events
     summary: Booking confirmed
-    description: Triggered when a booking is confirmed. This usually means the customer has completed their payment, converting the draft booking into a confirmed booking. An admin user can also manually confirm a booking in the dashboard.
+    description: Triggered when a booking is confirmed. This happens when the customer completes payment, converting the draft booking into a confirmed booking. An admin can also manually confirm a booking in the dashboard.
     security:
       - WebhookSignature: []
     requestBody:
@@ -78,7 +78,7 @@ booking.completed:
     tags:
       - Webhook events
     summary: Booking completed
-    description: Triggered when a booking is completed. This happens when the return date time has passed, and the trip has ended (e.g. the boat was switched off).
+    description: Triggered when a booking is completed. This happens when the return date time has passed and the trip has ended (when the boat was switched off).
     security:
       - WebhookSignature: []
     requestBody:
@@ -112,7 +112,7 @@ booking.canceled:
     tags:
       - Webhook events
     summary: Booking canceled
-    description: Triggered when a booking is canceled. Either the customer or an admin user can cancel a booking. Once canceled, a booking cannot get another status.
+    description: Triggered when a booking is canceled. Either the customer or an admin can cancel a booking. Once canceled, a booking cannot change to another status.
     security:
       - WebhookSignature: []
     requestBody:
@@ -146,7 +146,7 @@ booking.expired:
     tags:
       - Webhook events
     summary: Booking expired
-    description: Triggered when a booking expires. This usually means that the draft booking wasn't paid in time.
+    description: Triggered when a booking expires. This happens when the draft booking isn't paid in time.
     security:
       - WebhookSignature: []
     requestBody:
@@ -207,7 +207,7 @@ order.lines_updated:
     tags:
       - Webhook events
     summary: Order lines updated
-    description: Triggered when an order is updated. Either a product was added/removed or the quantity of an existing product in the order has changed.
+    description: Triggered when an order is updated. This happens when a product is added or removed, or when the quantity of an existing product changes.
     security:
       - WebhookSignature: []
     requestBody:
@@ -234,7 +234,7 @@ order.canceled:
     tags:
       - Webhook events
     summary: Order canceled
-    description: Triggered when an order is canceled
+    description: Triggered when an order is canceled.
     security:
       - WebhookSignature: []
     requestBody:
@@ -261,7 +261,7 @@ customer.registered:
     tags:
       - Webhook events
     summary: Customer registered
-    description: Triggered when a new customer registered. This can be either a new guest customer or a cusomer who just created an account.
+    description: Triggered when a new customer registers. This happens when a guest customer books or when a customer creates an account.
     security:
       - WebhookSignature: []
     requestBody:

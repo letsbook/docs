@@ -22,15 +22,15 @@ properties:
     description: The product quantity
   priceIncludingTax:
     type: integer
-    description: Order line price including tax in cents for this order line
+    description: Price including tax in cents
     example: 1750
   priceExcludingTax:
     type: integer
-    description: Order line price excluding tax in cents for this order line
+    description: Price excluding tax in cents
     example: 1466
   tax:
     type: integer
-    description: Order line tax in cents (difference between `priceIncludingTax` and `priceExcludingTax`).
+    description: Tax amount in cents (difference between `priceIncludingTax` and `priceExcludingTax`)
     example: 284
   taxRateId:
     type: string

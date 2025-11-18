@@ -4,60 +4,55 @@ info:
   description: |
     # Changelog
 
-    ## 2025-11-10
-    - Made the `url` property of a booking `nullable` when its status is still `'draft'`.
-    - Added the new [webhook](https://support.letsbook.app/api/#tag/Webhooks) endpoints
+    ## 2025-11-18
+    - Made the `url` property of a booking `nullable` when its status is `'draft'`
+    - Added new [webhook endpoints](https://support.letsbook.app/api/#tag/Webhooks) 
+    - Added new [webhook requests](https://support.letsbook.app/api/#tag/Webhook-events)
 
     ## 2025-10-17
     - Added the `booking_fee` cost type
 
     ## 2024-05-31
-    - Renamed all references from VAT to tax. For backward compatibility, the legacy `VAT` properties remain available but are now deprecated.
-    - Introduced the new `/v1/tax-rates` endpoint and deprecated the legacy `/v1/vat-rates` endpoint.
+    - Renamed all references from VAT to tax. Legacy `VAT` properties remain available for backward compatibility but are deprecated.
+    - Introduced the `/v1/tax-rates` endpoint and deprecated the `/v1/vat-rates` endpoint
 
     # Introduction
 
-    The Let's Book API adheres to REST standards. When an endpoint accepts
-    parameters, data should be transmitted as either a JSON body or form-encoded data.
-    All responses are returned in JSON format. Every endpoint begins with the
-    base URL: `https://api.letsbook.app`. The OpenAPI specification is
-    available at [https://support.letsbook.app/api.yaml](https://support.letsbook.app/api.yaml).
+    The Let's Book API follows REST standards. Send parameters as JSON body or form-encoded data.
+    All responses return in JSON format. Every endpoint starts with `https://api.letsbook.app`. 
+    Download the OpenAPI specification at [https://support.letsbook.app/api.yaml](https://support.letsbook.app/api.yaml).
 
-    You can be assured that all GET requests do not modify any data and are therefore
-    idempotent, while POST/PUT/DELETE requests are not. We use HTTP status codes
-    to communicate errors whenever possible.
+    GET requests never modify data and are idempotent. POST/PUT/DELETE requests are not. 
+    We use HTTP status codes to communicate errors.
 
     # Authentication
 
-    To access the API, you need an API key, which can be obtained from the
-    [dashboard](https://dashboard.letsbook.app/integrations). The API key is
-    used as a Bearer Authentication token. Please note that the API key is case-
-    sensitive. Most tooling supports Bearer Authentication natively.
-    If you are using a tool that does not support it, you can construct the Authorization
-    header manually as follows: `Authorization: Bearer <API_KEY>`.
+    Get your API key from the [dashboard](https://dashboard.letsbook.app/integrations). 
+    Use it as a Bearer Authentication token. The API key is case-sensitive.
+
+    Most tools support Bearer Authentication natively. If yours doesn't, construct the 
+    Authorization header manually: `Authorization: Bearer <API_KEY>`.
 
     ### Example
 
-    For instance, when your API key is
-    `ac11f67b-1dcb-460c-aff3-f1ef35cd3c1c|pMKSUHcHXd7706zhHwBE040alh1BSY9RPsu6ZQ04`,
-    you should configure the header as follows:
+    When your API key is `ac11f67b-1dcb-460c-aff3-f1ef35cd3c1c|pMKSUHcHXd7706zhHwBE040alh1BSY9RPsu6ZQ04`, 
+    configure the header like this:
 
     ```
     Authorization: Bearer ac11f67b-1dcb-460c-aff3-f1ef35cd3c1c|pMKSUHcHXd7706zhHwBE040alh1BSY9RPsu6ZQ04
     ```
 
-    # Multiple Tenants
+    # Multiple tenants
 
-    If your API user has access to multiple [tenants](#tag/Me), you should
-    include the `X-Tenant-Id` header with every request. If no header is
-    provided, we will default to your primary tenant.
+    If your API user has access to multiple [tenants](#tag/Me), include the `X-Tenant-Id` 
+    header with every request. Without this header, we default to your primary tenant.
 
     ### Example
 
-    You can use the `/me` endpoint to retrieve a list of all tenants to which you
-    have access. You can then use the `id` of the desired tenant.
-    For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`,
-    you would configure the header as follows:
+    Use the `/me` endpoint to retrieve all tenants you can access. Then use the `id` of your 
+    desired tenant. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
+    configure the header like this:
+
     ```
     X-Tenant-Id: 9366b305-e315-4abe-ba8a-90e326ad8e81
     ```

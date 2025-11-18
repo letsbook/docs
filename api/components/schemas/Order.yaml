@@ -1,4 +1,4 @@
-description: Object containing the order details. It includes one or more products (add-ons) booked alongside the boat trip.
+description: Order details containing one or more products (add-ons) booked alongside the boat trip.
 required:
   - id
   - bookingId
@@ -19,8 +19,7 @@ properties:
     type: string
     format: uuid
     example: 551ceb1c-6fbc-479b-819d-734f4044eca2
-    description: |
-      Unique identifier of the booking this order belongs to
+    description: Unique identifier of the booking this order belongs to
   currency:
     type: string
     description: Currency of the amount
@@ -29,7 +28,7 @@ properties:
     type: string
     format: date-time
     example: 2025-11-18T12:00:00+00:00
-    description: Timestamp of when the order should be delivered in ISO 8601 format. Usually this is the pickup date time of the booking the order belongs to.
+    description: Planned delivery timestamp in ISO 8601 format (typically matches the booking pickup time)
   totalIncludingTax:
     type: integer
     description: Total costs including tax in cents
