@@ -14,7 +14,7 @@ get:
     - Customers
   responses:
     '200':
-      description: Success
+      description: OK
       content:
         application/json:
           schema:
@@ -51,7 +51,7 @@ post:
           $ref: ../components/schemas/forms/CustomerUpdate.yaml
   responses:
     '200':
-      description: Success
+      description: OK
       content:
         application/json:
           schema:

@@ -6,7 +6,7 @@ get:
     - Webhooks
   responses:
     '200':
-      description: Success
+      description: OK
       content:
         application/json:
           schema:
@@ -62,7 +62,7 @@ post:
                 - 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
   responses:
     '200':
-      description: Success
+      description: OK
       content:
         application/json:
           schema:

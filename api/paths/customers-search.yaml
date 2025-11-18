@@ -16,7 +16,7 @@ get:
     - $ref: ../components/parameters/page.yaml
   responses:
     '200':
-      description: Success
+      description: OK
       content:
         application/json:
           schema:
