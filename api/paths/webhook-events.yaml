@@ -179,7 +179,7 @@ booking.details_updated:
     operationId: webhookBookingUpdated
     tags:
       - Webhook events
-    summary: Booking updated
+    summary: Booking details updated
     description: Triggered when booking details are updated. This happens when the booking dates, time, boat, or other details change.
     security:
       - WebhookSignature: []
