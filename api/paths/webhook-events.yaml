@@ -360,7 +360,28 @@ customer.anonymized:
                 format: date-time
                 example: 2025-11-17T18:34:11+00:00
               data:
-                $ref: ../components/schemas/Customer.yaml
+                allOf:
+                  - $ref: ../components/schemas/Customer.yaml
+                  - type: object
+                    properties:
+                      givenName:
+                        type: string
+                        example: Anonymous
+                        description: Anonymized first name of the customer
+                      familyName:
+                        type: string
+                        example: Anonymous
+                        description: Anonymized last name of the customer
+                      fullName:
+                        type: string
+                        example: Anonymous Anonymous
+                        description: Anonymized full name of the customer
+                      emailAddress:
+                        type: null
+                        description: Erased email address of the customer
+                      phoneNumber:
+                        type: null
+                        description: Erased phone number of the customer
     responses:
       '200':
         description: Webhook received successfully
