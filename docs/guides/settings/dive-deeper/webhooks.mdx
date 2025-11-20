@@ -44,50 +44,67 @@ When we call your webhook URL, we send along a `X-Webhook-Signature` header. The
 
 ### How to verify
 
-<Tabs groupId="language" queryString="language">
+<Tabs groupId="language" queryString="language" defaultValue="node">
 
 <TabItem value="node" label="Node (Express)">
 
 ```javascript
+const express = require('express');
 const crypto = require('crypto');
+const path = require('path');
+
+// Load environment variables via dotenv (most popular package)
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+
+const app = express();
 
 function verifyWebhookSignature(payload, signature, secret) {
-    const calculatedSignature = crypto
+    if (!signature || typeof signature !== 'string') return false;
+
+    // Compute HMAC using the raw payload
+    const calculatedSignatureHex = crypto
         .createHmac('sha256', secret)
         .update(payload)
         .digest('hex');
 
-    return crypto.timingSafeEqual(
-        Buffer.from(calculatedSignature),
-        Buffer.from(signature)
-    );
+    // Compare in constant time using 32-byte buffers
+    const expected = Buffer.from(calculatedSignatureHex, 'hex');
+    const provided = Buffer.from(signature, 'hex');
+
+    return crypto.timingSafeEqual(expected, provided);
 }
 
 // Express.js example
 app.post(
     '/webhooks/letsbook',
-    express.raw({ type: 'application/json' }),
+    // Parse the body as raw Buffer so we can verify the signature
+    express.raw({type: 'application/json'}),
     (req, res) => {
-        const payload = req.body.toString();
+        const secret = process.env.LETSBOOK_WEBHOOK_SECRET; // Place the secret in your environment
         const signature = req.headers['x-webhook-signature'];
-        const secret = 'your_webhook_secret_from_dashboard';
+
+        const payloadBuffer = req.body;
+        const payload = Buffer.isBuffer(payloadBuffer) ? payloadBuffer.toString() : '';
 
         if (!verifyWebhookSignature(payload, signature, secret)) {
             return res.status(401).send('Invalid signature');
         }
 
-        const event = JSON.parse(payload);
-        // Process the event
+        // ...parse JSON safely
 
-        res.status(200).send('OK');
+        return res.status(200).send('OK');
     }
 );
+
+app.listen(3000, () => {
+    console.log(`Server is humming on http://localhost:3000`);
+});
 ```
 
 </TabItem>
 <TabItem value="laravel" label="PHP (Laravel)">
 
-Using Laravel, you can leverage middleware. Create the new middleware using `php artisan make:middleware ValidateWebhookSignature` and use the code below:
+Using Laravel, you can leverage middleware. Create the new middleware using `php artisan make:middleware ValidateLetsBookWebhookSignature` and use the code below:
 
 ```php
 <?php
@@ -98,7 +115,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class ValidateWebhookSignature
+class ValidateLetsBookWebhookSignature
 {
     public function handle(Request $request, Closure $next): Response
     {
@@ -135,7 +152,7 @@ Add the middleware to the route:
 
 ```php
 Route::post('/webhooks/letsbook', [WebhookController::class, 'handle'])
-    ->middleware([\App\Http\Middleware\ValidateWebhookSignature::class]);
+    ->middleware([\App\Http\Middleware\ValidateLetsBookWebhookSignature::class]);
 ```
 
 </TabItem>
@@ -145,24 +162,19 @@ Route::post('/webhooks/letsbook', [WebhookController::class, 'handle'])
 
 declare(strict_types=1);
 
-function verifyWebhookSignature(
-string $payload,
-string $signature,
-string $secret
-): bool {
-$calculated = hash_hmac('sha256', $payload, $secret);
+function verifyWebhookSignature(string $payload, string $signature, string $secret): bool {
+    $calculated = hash_hmac('sha256', $payload, $secret);
 
     return hash_equals($calculated, $signature);
-
 }
 
 $payload = file_get_contents('php://input') ?: '';
 $signature = $_SERVER['HTTP_X_WEBHOOK_SIGNATURE'] ?? '';
-$secret = $\_ENV['WEBHOOK_SECRET'] ?? 'your_webhook_secret_from_dashboard';
+$secret = $_ENV['WEBHOOK_SECRET'];
 
 if (!verifyWebhookSignature($payload, $signature, $secret)) {
-http_response_code(401);
-exit('Invalid signature');
+    http_response_code(401);
+    exit('Invalid signature');
 }
 
 $event = json_decode($payload, associative: true, flags: JSON_THROW_ON_ERROR);
@@ -210,30 +222,50 @@ def webhook():
 <TabItem value="ruby" label="Ruby">
 
 ```ruby
-require 'openssl'
-require 'json'
+# app/controllers/webhooks_controller.rb
+class WebhooksController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  before_action :verify_webhook_signature
 
-def verify_webhook_signature(payload, signature, secret)
-  calculated_signature = OpenSSL::HMAC.hexdigest('SHA256', secret, payload)
-  Rack::Utils.secure_compare(calculated_signature, signature)
-end
+  def letsbook
+    event = JSON.parse(request.raw_post)
+    # Process the event
 
-# Sinatra example
-post '/webhooks/letsbook' do
-  payload = request.body.read
-  signature = request.env['HTTP_X_WEBHOOK_SIGNATURE'] || ''
-  secret = 'your_webhook_secret_from_dashboard'
-
-  unless verify_webhook_signature(payload, signature, secret)
-    halt 401, 'Invalid signature'
+    head :ok
   end
 
-  event = JSON.parse(payload)
-  # Process the event
+  private
 
-  status 200
-  body 'OK'
+  def verify_webhook_signature
+    payload = request.raw_post
+    signature = request.headers['X-Webhook-Signature'].to_s
+    secret = Rails.application.credentials.letsbook_webhook_secret
+
+    calculated_signature = OpenSSL::HMAC.hexdigest('SHA256', secret, payload)
+
+    unless Rack::Utils.secure_compare(calculated_signature, signature)
+      render plain: 'Invalid signature', status: :unauthorized
+    end
+  end
 end
+```
+
+Add to your `config/routes.rb`:
+
+```ruby
+post '/webhooks/letsbook', to: 'webhooks#letsbook'
+```
+
+Store the webhook secret in your credentials:
+
+```bash
+rails credentials:edit
+```
+
+Add:
+
+```yaml
+letsbook_webhook_secret: your_webhook_secret_from_dashboard
 ```
 
 </TabItem>
@@ -279,61 +311,6 @@ public async Task<IActionResult> Webhook()
     // Process the event
 
     return Ok();
-}
-```
-
-</TabItem>
-<TabItem value="java" label="Java">
-
-```java
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-
-public class WebhookSignatureValidator {
-
-    public static boolean verifyWebhookSignature(String payload, String signature, String secret) {
-        try {
-            Mac hmac = Mac.getInstance("HmacSHA256");
-            SecretKeySpec secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "HmacSHA256");
-            hmac.init(secretKey);
-
-            byte[] hash = hmac.doFinal(payload.getBytes(StandardCharsets.UTF_8));
-            String calculatedSignature = bytesToHex(hash);
-
-            return MessageDigest.isEqual(
-                calculatedSignature.getBytes(StandardCharsets.UTF_8),
-                signature.getBytes(StandardCharsets.UTF_8)
-            );
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    private static String bytesToHex(byte[] bytes) {
-        StringBuilder result = new StringBuilder();
-        for (byte b : bytes) {
-            result.append(String.format("%02x", b));
-        }
-        return result.toString();
-    }
-}
-
-// Spring Boot example
-@PostMapping("/webhooks/letsbook")
-public ResponseEntity<String> webhook(@RequestBody String payload, @RequestHeader("X-Webhook-Signature") String signature) {
-    String secret = "your_webhook_secret_from_dashboard";
-
-    if (!WebhookSignatureValidator.verifyWebhookSignature(payload, signature, secret)) {
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid signature");
-    }
-
-    // Parse and process the event
-    ObjectMapper mapper = new ObjectMapper();
-    WebhookEvent event = mapper.readValue(payload, WebhookEvent.class);
-
-    return ResponseEntity.ok("OK");
 }
 ```
 
