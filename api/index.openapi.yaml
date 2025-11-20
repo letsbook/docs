@@ -3,9 +3,10 @@ info:
   title: Let's Book API
   description: |
     # Changelog
-    
+
     ## 2025-11-18
     - Made the `url` property of a booking `nullable` when its status is `'draft'`
+    - Made the `phoneNumber` property of a customer `nullable` instead of empty string when not known
     - Added new [webhook endpoints](/api/#tag/Webhooks) 
     - Added new [webhook requests](/api/#tag/Webhook-events)
 
@@ -102,12 +103,12 @@ tags:
   - name: Webhooks
     description: |
       A webhook is a way for one system to instantly notify another when something happens. Instead of your app constantly polling our API, Let's Book sends an HTTP POST request to your specified URL whenever an event occurs. See [webhook events](#tag/Webhooks-events) for details on what we're sending. We consider the webhook call successful when your server returns a response with a `2xx` status code.
-      
+
       > NOTE: The webhook endpoints are currently in private beta
   - name: Webhook events
     description: |
       A webhook event payload is a JSON object that contains event data for your app to process. When a relevant event occurs, we'll send the payload using a POST request to your webhook endpoint. Here's a list of event details on what we're sending.
-      
+
       > NOTE: The webhook events are currently in private beta
 security:
   - AuthorizationHeader: []
