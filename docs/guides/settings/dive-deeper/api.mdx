@@ -8,9 +8,23 @@ Read the full reference in our [API docs](/api/). The API lets one key talk to m
 
 <Button href="/api/">To the API docs</Button>
 
-## Webhooks (Coming soon)
+## Webhooks
 
-Webhooks are in the works, so your app can nap until something changes instead of polling like a caffeine enthusiast.
+Webhooks let you receive instant notifications when something happens in your Let's Book account. Instead of constantly checking the API for updates, we send an HTTP POST request to your server the moment an event occurs.
+
+**What you can do with webhooks:**
+
+**Sync with your CRM or accounting software** - Automatically create customer records in Salesforce or invoices in QuickBooks when bookings are confirmed.
+
+**Send custom notifications** - Alert your team on Slack when high-value bookings come in, or send SMS confirmations through Twilio.
+
+**Update your own database** - Keep your internal systems in sync with booking changes, cancellations, and customer updates without polling.
+
+**Trigger workflows** - Start automated processes like sending welcome emails, preparing equipment, or scheduling maintenance when rentals complete.
+
+**Build dashboards** - Push real-time booking data to your analytics platform or custom dashboard.
+
+See [Webhooks](/guides/settings/dive-deeper/webhooks) for setup instructions and code examples.
 
 ## Obtaining an API key
 
