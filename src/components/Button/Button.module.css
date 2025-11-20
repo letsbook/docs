@@ -9,6 +9,8 @@ a.button {
     border-radius: 8px;
     text-decoration: none;
     display: inline-block;
+
+    margin-bottom: var(--ifm-leading);
 }
 
 /* Primary Button */

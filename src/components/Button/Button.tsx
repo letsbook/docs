@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import ButtonWrapper from '@site/src/components/Button/ButtonWrapper';
+import isExternalHref from '@site/src/components/Button/helpers/isExternalHref';
 import extractTextContent from '@site/src/helpers/extractTextContent';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
@@ -19,6 +20,8 @@ const Button = ({
     variant = 'primary',
     align,
 }: ButtonProps) => {
+    const external = isExternalHref(href);
+
     const button = (
         <Link
             to={href}
@@ -26,8 +29,9 @@ const Button = ({
                 [styles.primary]: variant === 'primary',
                 [styles.secondary]: variant === 'secondary',
             })}
-            rel="noopener noreferrer"
-            target="_blank"
+            {...(external
+                ? { target: '_blank', rel: 'noopener noreferrer' }
+                : {})}
         >
             {extractTextContent(children)}
         </Link>
