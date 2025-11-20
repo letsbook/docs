@@ -41,20 +41,3 @@ properties:
     type: integer
     description: Total tax in cents (difference between `totalIncludingTax` and `totalExcludingTax`).
     example: 284
-  createdAt:
-    type: string
-    format: date-time
-    example: 2022-01-01T00:00:00Z
-    description: Timestamp of when the order was created in ISO 8601 format
-  updatedAt:
-    type: string
-    format: date-time
-    example: 2022-01-01T00:00:00Z
-    description: Timestamp of when the order was last updated in ISO 8601 format
-  canceledAt:
-    type:
-      - string
-      - 'null'
-    format: date-time
-    example: 2022-01-01T00:00:00Z
-    description: Timestamp of when the order was canceled in ISO 8601 format
