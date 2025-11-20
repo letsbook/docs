@@ -174,6 +174,34 @@ booking.expired:
     responses:
       '200':
         description: Webhook received successfully
+booking.details_updated:
+  post:
+    operationId: webhookBookingUpdated
+    tags:
+      - Webhook events
+    summary: Booking updated
+    description: Triggered when booking details are updated. This happens when the booking dates, time, boat, or other details change.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.details_updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
 order.confirmed:
   post:
     operationId: webhookOrderConfirmed
@@ -327,6 +355,33 @@ customer.anonymized:
                 type: string
                 enum:
                   - customer.anonymized
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Customer.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+customer.removed:
+  post:
+    operationId: webhookCustomerRemoved
+    tags:
+      - Webhook events
+    summary: Customer removed
+    description: Triggered when a customer is removed from the system.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - customer.removed
               occurredOn:
                 type: string
                 format: date-time

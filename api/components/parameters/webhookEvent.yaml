@@ -5,6 +5,7 @@ items:
   enum:
     - booking.drafted
     - booking.confirmed
+    - booking.details_updated
     - booking.completed
     - booking.canceled
     - booking.expired
@@ -14,6 +15,7 @@ items:
     - customer.anonymized
     - customer.registered
     - customer.updated
+    - customer.removed
 description: Events to get notified about
 example:
   - booking.confirmed
