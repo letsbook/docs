@@ -1,0 +1,414 @@
+booking.drafted:
+  post:
+    operationId: webhookBookingDrafted
+    tags:
+      - Webhook events
+    summary: Booking drafted
+    description: Triggered when a booking is created. This happens when a customer fills out the booking form or when an admin creates a booking in the dashboard. Draft bookings reserve availability but must be confirmed on time.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.drafted
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      customer:
+                        type: null
+                      customerId:
+                        type: null
+                      url:
+                        type: null
+                      status:
+                        type: string
+                        enum:
+                          - draft
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.confirmed:
+  post:
+    operationId: webhookBookingConfirmed
+    tags:
+      - Webhook events
+    summary: Booking confirmed
+    description: Triggered when a booking is confirmed. This happens when the customer completes payment, converting the draft booking into a confirmed booking. An admin can also manually confirm a booking in the dashboard.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.confirmed
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - confirmed
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.completed:
+  post:
+    operationId: webhookBookingCompleted
+    tags:
+      - Webhook events
+    summary: Booking completed
+    description: Triggered when a booking is completed. This happens when the return date time has passed and the trip has ended (when the boat was switched off).
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.completed
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - completed
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.canceled:
+  post:
+    operationId: webhookBookingCanceled
+    tags:
+      - Webhook events
+    summary: Booking canceled
+    description: Triggered when a booking is canceled. Either the customer or an admin can cancel a booking. Once canceled, a booking cannot change to another status.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.canceled
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - canceled
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.expired:
+  post:
+    operationId: webhookBookingExpired
+    tags:
+      - Webhook events
+    summary: Booking expired
+    description: Triggered when a booking expires. This happens when the draft booking isn't paid in time.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.expired
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+                  - type: object
+                    properties:
+                      status:
+                        type: string
+                        enum:
+                          - expired
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.details_updated:
+  post:
+    operationId: webhookBookingUpdated
+    tags:
+      - Webhook events
+    summary: Booking updated
+    description: Triggered when booking details are updated. This happens when the booking dates, time, boat, or other details change.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.details_updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/BookingExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+order.confirmed:
+  post:
+    operationId: webhookOrderConfirmed
+    tags:
+      - Webhook events
+    summary: Order confirmed
+    description: Triggered when an order is confirmed. This happens when the customer proceeds to the next step after compiling their draft order.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - order.confirmed
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/OrderExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+order.lines_updated:
+  post:
+    operationId: webhookOrderLinesUpdated
+    tags:
+      - Webhook events
+    summary: Order lines updated
+    description: Triggered when an order is updated. This happens when a product is added or removed, or when the quantity of an existing product changes.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - order.lines_updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/OrderExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+order.canceled:
+  post:
+    operationId: webhookOrderCanceled
+    tags:
+      - Webhook events
+    summary: Order canceled
+    description: Triggered when an order is canceled.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - order.canceled
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/OrderExtended.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+customer.registered:
+  post:
+    operationId: webhookCustomerRegistered
+    tags:
+      - Webhook events
+    summary: Customer registered
+    description: Triggered when a new customer registers. This happens when a guest customer books or when a customer creates an account.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - customer.registered
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Customer.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+customer.updated:
+  post:
+    operationId: webhookCustomerUpdated
+    tags:
+      - Webhook events
+    summary: Customer updated
+    description: Triggered when the customer details are updated.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - customer.updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Customer.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+customer.anonymized:
+  post:
+    operationId: webhookCustomerAnonymized
+    tags:
+      - Webhook events
+    summary: Customer anonymized
+    description: Triggered when a customer is anonymized. This means their details have been erased.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - customer.anonymized
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                allOf:
+                  - $ref: ../components/schemas/Customer.yaml
+                  - type: object
+                    properties:
+                      givenName:
+                        type: string
+                        example: Anonymous
+                        description: Anonymized first name of the customer
+                      familyName:
+                        type: string
+                        example: Anonymous
+                        description: Anonymized last name of the customer
+                      fullName:
+                        type: string
+                        example: Anonymous Anonymous
+                        description: Anonymized full name of the customer
+                      emailAddress:
+                        type: null
+                        description: Erased email address of the customer
+                      phoneNumber:
+                        type: null
+                        description: Erased phone number of the customer
+    responses:
+      '200':
+        description: Webhook received successfully
+customer.removed:
+  post:
+    operationId: webhookCustomerRemoved
+    tags:
+      - Webhook events
+    summary: Customer removed
+    description: Triggered when a customer is removed from the system.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            properties:
+              event:
+                type: string
+                enum:
+                  - customer.removed
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Customer.yaml
+    responses:
+      '200':
+        description: Webhook received successfully

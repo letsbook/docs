@@ -44,8 +44,9 @@ properties:
   #      - dashboard
   #    description: Source of the booking
   customerId:
-    type: string
-    nullable: true
+    type:
+      - string
+      - 'null'
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
     description: Unique identifier of the customer. Can be null for draft bookings.
   dockId:

@@ -1,0 +1,22 @@
+type: array
+minItems: 1
+items:
+  type: string
+  enum:
+    - booking.drafted
+    - booking.confirmed
+    - booking.details_updated
+    - booking.completed
+    - booking.canceled
+    - booking.expired
+    - order.confirmed
+    - order.lines_updated
+    - order.canceled
+    - customer.anonymized
+    - customer.registered
+    - customer.updated
+    - customer.removed
+description: Events to get notified about
+example:
+  - booking.confirmed
+  - booking.canceled

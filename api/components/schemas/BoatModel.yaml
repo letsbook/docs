@@ -39,7 +39,8 @@ properties:
     items:
       $ref: ./Media.yaml
   categoryId:
-    type: string
-    nullable: true
+    type:
+      - string
+      - 'null'
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
     description: ID of the category. Can also be `null`.

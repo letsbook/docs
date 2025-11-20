@@ -1,0 +1,39 @@
+post:
+  summary: Disable a webhook
+  description: Disable a webhook to stop receiving notifications
+  operationId: disableWebhook
+  tags:
+    - Webhooks
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the webhook
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                allOf:
+                  - $ref: ../components/schemas/Webhook.yaml
+                  - type: object
+                    properties:
+                      enabled:
+                        example: false
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

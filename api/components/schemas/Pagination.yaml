@@ -25,12 +25,14 @@ properties:
     example: 14
     description: Total number of pages
   nextPageUrl:
-    type: string
-    nullable: true
+    type:
+      - string
+      - 'null'
     example: https://api.letsbook.localhost/v1/customers?page=2,
     description: URL to the next page. Null if last page.
   previousPageUrl:
-    type: string
-    nullable: true
+    type:
+      - string
+      - 'null'
     example: null
     description: URL to the previous page. Null if first page.

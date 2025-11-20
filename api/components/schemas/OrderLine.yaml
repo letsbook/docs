@@ -1,0 +1,38 @@
+description: Each product in an order has its own order line.
+required:
+  - productId
+  - description
+  - quantity
+  - priceIncludingTax
+  - priceExcludingTax
+  - tax
+  - taxRateId
+properties:
+  productId:
+    type: string
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the product
+  description:
+    type: string
+    example: Coca-Cola original can (12 fl oz)
+    description: Name of the product. Can be up to 255 characters long.
+  quantity:
+    type: number
+    example: 3
+    description: The product quantity
+  priceIncludingTax:
+    type: integer
+    description: Price including tax in cents
+    example: 1750
+  priceExcludingTax:
+    type: integer
+    description: Price excluding tax in cents
+    example: 1466
+  tax:
+    type: integer
+    description: Tax amount in cents (difference between `priceIncludingTax` and `priceExcludingTax`)
+    example: 284
+  taxRateId:
+    type: string
+    example: d8f8feb5-b8cc-4b8e-9d5c-a9d9d9d9d9d9
+    description: ID of the tax rate for this product

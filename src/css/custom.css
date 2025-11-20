@@ -286,6 +286,22 @@ article img,
     margin: 0;
 }
 
+/** Super hack fix to hide the confusing 'required' labels on response objects */
+.redoc-wrap
+    div[data-section-id]
+    > div
+    > div
+    > div
+    table
+    td[kind='field']
+    div:last-child,
+.redoc-wrap
+    div[data-section-id^='tag/Webhook-events']
+    td[kind='field']
+    div:last-child {
+    display: none;
+}
+
 /**
  * Pagination navigation at bottom of releases - more spacing
  */

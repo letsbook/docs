@@ -1,0 +1,115 @@
+get:
+  summary: Retrieve a webhook
+  description: Retrieve details of a specific webhook
+  operationId: getWebhook
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the webhook
+  tags:
+    - Webhooks
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: ../components/schemas/Webhook.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
+post:
+  summary: Update a webhook
+  description: Update an existing webhook
+  operationId: updateWebhook
+  tags:
+    - Webhooks
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the webhook
+  requestBody:
+    required: true
+    description: Update webhook parameters. None of the fields are required.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/WebhookUpdate.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: ../components/schemas/Webhook.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      $ref: ../components/responses/WebhookValidationError.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
+delete:
+  summary: Delete a webhook
+  description: Delete a webhook
+  operationId: deleteWebhook
+  tags:
+    - Webhooks
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the webhook
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            description: Not found response
+              - message
+            properties:
+              message:
+                type: string
+                description: Result message
+                example: Webhook subscription deleted.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

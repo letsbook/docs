@@ -1,0 +1,11 @@
+allOf:
+  - $ref: ./Order.yaml
+  - type: object
+    required:
+      - orderLines
+    properties:
+      orderLines:
+        description: Details about the contents of the order
+        type: array
+        items:
+          $ref: ./OrderLine.yaml

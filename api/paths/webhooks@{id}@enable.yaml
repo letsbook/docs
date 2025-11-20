@@ -1,7 +1,9 @@
-get:
-  summary: Retrieve a boat model
-  description: Retrieve a BoatModel object by ID.
-  operationId: getBoatModel
+post:
+  summary: Enable a webhook
+  description: Enable a webhook to start receiving notifications
+  operationId: enableWebhook
+  tags:
+    - Webhooks
   parameters:
     - name: id
       in: path
@@ -9,9 +11,7 @@ get:
       schema:
         type: string
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the boat model
-  tags:
-    - Boat models
+        description: ID of the webhook
   responses:
     '200':
       description: OK
@@ -23,8 +23,12 @@ get:
               - data
             properties:
               data:
-                $ref: ../components/schemas/BoatModel.yaml
+                $ref: ../components/schemas/Webhook.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

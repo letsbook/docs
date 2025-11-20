@@ -145,6 +145,7 @@ const config: Config = {
                 theme: {
                     primaryColor: '#081590',
                     options: {
+                        scrollYOffset: 60,
                         hideDownloadButton: true,
                         expandResponses: '200',
                         jsonSampleExpandLevel: 3,

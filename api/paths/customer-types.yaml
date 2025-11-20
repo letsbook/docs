@@ -6,7 +6,7 @@ get:
     - Customers
   responses:
     '200':
-      description: Success
+      description: OK
       content:
         application/json:
           schema:

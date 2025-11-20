@@ -1,0 +1,21 @@
+description: Validation error
+content:
+  application/json:
+    schema:
+      type: object
+      required:
+        - errors
+      properties:
+        errors:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+          example:
+            name:
+              - The name field is required
+            url:
+              - The url must be a valid URL
+            events:
+              - The events field is required
