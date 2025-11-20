@@ -1,0 +1,204 @@
+# Webhooks
+
+Webhooks send instant notifications to your systems when events happen in Let's Book. No polling, no delays—just real-time updates pushed directly to any URL you specify.
+
+## What are webhooks?
+
+Think of webhooks as reverse API calls. Instead of you constantly checking if something happened (polling), Let's Book tells you the moment it happens by sending an HTTP POST request to your specified endpoint.
+
+**Example flow:**
+1. Customer confirms a booking
+2. Let's Book instantly sends a POST request to your webhook URL
+3. Your system receives the booking data and takes action
+
+## Setting up webhooks
+
+### Via the API
+
+Create a webhook by making a POST request to `/webhooks`:
+
+```bash
+curl -X POST https://api.letsbook.app/v1/webhooks \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Booking notifications",
+    "url": "https://your-domain.com/webhooks/letsbook",
+    "events": [
+      "booking.confirmed",
+      "booking.canceled"
+    ]
+  }'
+```
+
+You'll receive a response with your webhook details including a `secret` key. **Save this secret** - you'll need it to verify incoming webhooks.
+
+### Via the dashboard
+
+1. Go to [Settings → Integrations](https://dashboard.letsbook.app/integrations)
+2. Click "Add webhook"
+3. Enter a name and your endpoint URL
+4. Select which events to listen for
+5. Save and copy your secret key
+
+## Available events
+
+### Booking events
+
+- **booking.drafted** - Someone started creating a booking but hasn't paid yet
+- **booking.confirmed** - Payment successful, booking is locked in
+- **booking.details_updated** - Date, time, boat, or number of people changed
+- **booking.completed** - Rental finished, customer returned the boat
+- **booking.canceled** - Booking got canceled
+- **booking.expired** - Draft booking timed out without payment
+
+### Order events
+
+- **order.confirmed** - Customer ordered add-ons or extras
+- **order.lines_updated** - Add-ons changed
+- **order.canceled** - Order got canceled
+
+### Customer events
+
+- **customer.registered** - New customer created an account
+- **customer.updated** - Customer info changed
+- **customer.removed** - Customer deleted from system
+- **customer.anonymized** - Customer data anonymized for GDPR
+
+## Webhook payload
+
+Every webhook includes a JSON payload with event details:
+
+```json
+{
+  "event": "booking.confirmed",
+  "timestamp": "2025-11-20T14:30:00Z",
+  "data": {
+    "id": "bk_abc123",
+    "customer_name": "Jan de Vries",
+    "customer_email": "jan@example.com",
+    "boat_name": "Sunset Cruiser",
+    "start_time": "2025-11-25T10:00:00Z",
+    "end_time": "2025-11-25T12:00:00Z",
+    "total_amount": 150.00,
+    "currency": "EUR"
+  }
+}
+```
+
+## Use cases
+
+### Sync with Google Sheets
+
+Track all bookings in a spreadsheet automatically using Zapier:
+1. Trigger: Webhooks by Zapier - Catch Hook
+2. Action: Google Sheets - Create Spreadsheet Row
+3. Map fields: booking ID, customer name, boat, date, amount
+
+### Automate accounting
+
+Create invoices automatically when payments succeed. Use Make (formerly Integromat) to route booking data to QuickBooks or Xero.
+
+### Team notifications
+
+Alert your team in Slack when bookings come in:
+1. Set up webhook in Let's Book
+2. Use Zapier to filter for `booking.confirmed` events
+3. Send formatted message to your Slack channel
+
+### Custom integrations
+
+Build your own integrations with any tool that receives HTTP requests. Perfect for custom CRM systems, internal dashboards, or specialized workflows.
+
+## Security
+
+### Verifying webhook signatures
+
+Let's Book signs every webhook with your secret key. Always verify signatures to ensure requests are authentic.
+
+**Example (Node.js):**
+```javascript
+const crypto = require('crypto');
+
+app.post('/webhooks/letsbook', (req, res) => {
+  const signature = req.headers['x-letsbook-signature'];
+  const secret = process.env.WEBHOOK_SECRET;
+  
+  const hmac = crypto
+    .createHmac('sha256', secret)
+    .update(JSON.stringify(req.body))
+    .digest('hex');
+  
+  if (hmac !== signature) {
+    return res.status(401).send('Invalid signature');
+  }
+  
+  // Process webhook
+  res.status(200).send('OK');
+});
+```
+
+**Example (Python):**
+```python
+import hmac
+import hashlib
+
+@app.route('/webhooks/letsbook', methods=['POST'])
+def handle_webhook():
+    signature = request.headers.get('X-Letsbook-Signature')
+    secret = os.environ.get('WEBHOOK_SECRET')
+    
+    calculated = hmac.new(
+        secret.encode(),
+        request.data,
+        hashlib.sha256
+    ).hexdigest()
+    
+    if calculated != signature:
+        return 'Invalid signature', 401
+    
+    # Process webhook
+    return '', 200
+```
+
+## Best practices
+
+### Return 200 quickly
+
+Respond with a 200 status code as fast as possible. If you need to do heavy processing, queue it for later.
+
+### Handle retries gracefully
+
+Let's Book retries failed webhooks up to 3 times with exponential backoff. Make your endpoint idempotent - processing the same webhook multiple times should be safe.
+
+### Use HTTPS
+
+Always use HTTPS endpoints. Let's Book won't send webhooks to insecure HTTP URLs in production.
+
+### Monitor webhook health
+
+Track failed webhooks and set up alerts. Check your webhook logs in the dashboard to see delivery status and retry attempts.
+
+## Troubleshooting
+
+**Webhooks not arriving?**
+- Check your endpoint is accessible via HTTPS
+- Verify your firewall isn't blocking requests
+- Review webhook logs in the dashboard
+
+**Getting 401 errors?**
+- Verify you're using the correct secret key
+- Make sure you're hashing the raw request body
+- Compare the full hex digest
+
+**Timeouts?**
+- Your endpoint must respond within 5 seconds
+- Return 200 immediately and process async
+
+## API Reference
+
+For complete API documentation including all webhook endpoints, see the [Webhooks API reference](/api/#tag/Webhooks).
+
+## Need help?
+
+Can't figure something out? [Contact support](https://support.letsbook.app) and we'll help you get set up.
