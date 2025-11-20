@@ -1,5 +1,6 @@
 ---
 sidebar_label: Webhooks
+sidebar_position: 11
 ---
 
 import TabItem from '@theme/TabItem';
@@ -78,13 +79,15 @@ function verifyWebhookSignature(payload, signature, secret) {
 app.post(
     '/webhooks/letsbook',
     // Parse the body as raw Buffer so we can verify the signature
-    express.raw({type: 'application/json'}),
+    express.raw({ type: 'application/json' }),
     (req, res) => {
         const secret = process.env.LETSBOOK_WEBHOOK_SECRET; // Place the secret in your environment
         const signature = req.headers['x-webhook-signature'];
 
         const payloadBuffer = req.body;
-        const payload = Buffer.isBuffer(payloadBuffer) ? payloadBuffer.toString() : '';
+        const payload = Buffer.isBuffer(payloadBuffer)
+            ? payloadBuffer.toString()
+            : '';
 
         if (!verifyWebhookSignature(payload, signature, secret)) {
             return res.status(401).send('Invalid signature');
