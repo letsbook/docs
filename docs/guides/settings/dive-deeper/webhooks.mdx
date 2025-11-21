@@ -12,7 +12,7 @@ Let's Book sends real-time notifications to your server when events happen. No p
 
 ## How webhooks work
 
-When a booking gets confirmed, a customer registers, or any other event occurs, we send an HTTP POST request to your webhook URL with event details. Your server processes the data and responds within 5 seconds with a 2xx status code to confirm receipt. If we don't get a 2xx response, we'll retry the webhooks a few times.
+When a booking gets confirmed, a customer registers, or any other event occurs, we send an HTTP POST request to your webhook URL with event details. Your server processes the data and responds within 5 seconds with a `2xx` status code to confirm receipt. If we don't get a `2xx` response, we'll retry the webhooks a few times.
 
 ## What you need to do
 
@@ -330,6 +330,6 @@ public async Task<IActionResult> Webhook()
 ## Best practices checklist
 
 1. **Always verify signatures** - Check the `X-Webhook-Signature` header on every request. Don't process webhooks without verification.
-2. **Return 2xx quickly** - Respond fast. Process heavy operations in a background job after acknowledging receipt.
+2. **Return `2xx` quickly** - Respond fast. Process heavy operations in a background job after acknowledging receipt.
 3. **Handle duplicates** - Network issues can cause duplicate deliveries. Use the event data to detect and skip duplicates.
 4. **Log everything** - Keep webhook logs for debugging. Store the raw payload, headers, and your processing results.
