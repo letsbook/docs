@@ -266,7 +266,7 @@ booking.labels_updated:
                     description: Unique identifier of the booking
                   current:
                     type: array
-                    description: The booking labels after the event has happened
+                    description: The booking labels assigned to the booking after the event has happened.
                     items:
                       $ref: ../components/schemas/BookingLabel.yaml
                   changes:
