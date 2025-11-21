@@ -4,11 +4,11 @@ sidebar_position: 3
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 
-import chargeCardVideo from '../graphics/charge_card.mov';
-import birthdayDiscountVideo from '../graphics/birthday_discount.mp4';
 import addCostsVideo from '../graphics/add_costs.mp4';
-import paymentRequestVideo from '../graphics/payment_request.mp4';
+import birthdayDiscountVideo from '../graphics/birthday_discount.mp4';
 import cashPaymentVideo from '../graphics/cash_payment.mp4';
+import chargeCardVideo from '../graphics/charge_card.mov';
+import paymentRequestVideo from '../graphics/payment_request.mp4';
 
 # Booking finances
 
@@ -54,7 +54,7 @@ Charge for add-ons or damages that weren't part of the original booking.
 4. Choose your tax rate
 5. Click **Save**
 
-The extra costs appear immediately and update the balance. 
+The extra costs appear immediately and update the balance.
 
 :::info[Can't edit the rental price?]
 The base rental price (boat + duration) is calculated automatically and can't be changed here. To adjust the rental price, edit the booking itself (change boat, duration, or dates). Use costs and discounts to adjust the total without changing the booking details.
@@ -75,6 +75,7 @@ Request payment for outstanding balances.
 5. Click **Save request**
 
 Share the payment link via:
+
 - **Copy link** → Paste it anywhere
 - **Send via email** → Direct to customer's inbox
 - **Send via text message** → SMS to customer's phone
@@ -82,11 +83,12 @@ Share the payment link via:
 Payment requests expire after the deadline. Customers can pay via Mollie or Stripe (depending on your setup).
 
 :::tip[When to use payment requests]
+
 - Collecting outstanding amount
 - Charging for last-minute add-ons
 - Requesting payment for manually added bookings
 - After price changes from edits
-:::
+  :::
 
 <InlineVideoPlayer videoSrc={paymentRequestVideo} />
 
