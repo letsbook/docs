@@ -2,6 +2,7 @@ type: object
 properties:
   customerTypeId:
     type: string
+    format: uuid
     description: Customer type ID
     example: a6fe15b1-8131-4f48-8082-311e0369f599
   givenName:

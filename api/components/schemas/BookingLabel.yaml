@@ -1,0 +1,19 @@
+description: A label which can be assigned to a booking
+required:
+  - id
+  - name
+  - description
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the label
+  name:
+    type: string
+    example: Special request
+    description: Name of the label
+  description:
+    type: string
+    example: Short description of what the label is used for
+    description: Booking with special requests or requirements

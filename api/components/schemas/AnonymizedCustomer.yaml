@@ -10,10 +10,12 @@ required:
 properties:
   id:
     type: string
+    format: uuid
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
     description: ID of the customer
   customerTypeId:
     type: string
+    format: uuid
     example: a6fe15b1-8131-4f48-8082-311e0369f599
     description: ID of the customer type
   givenName:
