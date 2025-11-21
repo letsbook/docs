@@ -1,16 +1,21 @@
+---
+sidebar_position: 10
+---
+
 import Button from '@site/src/components/Button/Button';
 
 # Implement our API
 
 ## How the API works
 
-Read the full reference in our [API docs](/api/). The API lets one key talk to multiple boat rental companies, so your integrations do not need a key per brand.
+An API lets different software systems talk to each other in a controlled way, making it easy to share data, trigger actions, and connect services. It’s the digital handshake that keeps everything working together.
+Read the full reference in our [API docs](/api/).
 
 <Button href="/api/">To the API docs</Button>
 
-## Webhooks (Coming soon)
-
-Webhooks are in the works, so your app can nap until something changes instead of polling like a caffeine enthusiast.
+:::info[Multiple companies?]
+The API lets one key talk to multiple boat rental companies using the same API key, so your integrations do not need a dedicated key per brand.
+:::
 
 ## Obtaining an API key
 
@@ -21,3 +26,23 @@ If your user has access to multiple companies, you see a company selector. You c
 :::warning
 API keys are not tied to a specific dock and automatically have administrator rights.
 :::
+
+## Webhooks
+
+Webhooks let you receive instant notifications when something happens in your Let's Book account. Instead of constantly checking the API for updates, we send an HTTP POST request to your server the moment an event occurs.
+
+**What you can do with webhooks:**
+
+**Sync with your CRM or accounting software** - Automatically create customer records in Salesforce or invoices in QuickBooks when bookings are confirmed.
+
+**Send custom notifications** - Alert your team on Slack when high-value bookings come in, or send SMS confirmations through Twilio.
+
+**Update your own database** - Keep your internal systems in sync with booking changes, cancellations, and customer updates without polling.
+
+**Trigger workflows** - Start automated processes like sending welcome emails, preparing equipment, or scheduling maintenance when rentals complete.
+
+**Build dashboards** - Push real-time booking data to your analytics platform or custom dashboard.
+
+<Button href="/guides/settings/dive-deeper/webhooks">
+    Learn more about webhooks
+</Button>
