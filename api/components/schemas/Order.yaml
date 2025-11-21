@@ -1,6 +1,5 @@
 description: Order details containing one or more products (add-ons) booked alongside the boat trip.
 required:
-  - id
   - bookingId
   - currency
   - plannedForDeliveryAt
@@ -11,10 +10,6 @@ required:
   - canceledAt
   - updatedAt
 properties:
-  id:
-    type: string
-    example: 0e375f9f-6bcc-43b0-b3bf-e6bff97e0959
-    description: Unique identifier of the order
   bookingId:
     type: string
     format: uuid
