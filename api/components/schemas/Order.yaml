@@ -6,9 +6,6 @@ required:
   - totalIncludingTax
   - totalExcludingTax
   - totalTax
-  - createdAt
-  - canceledAt
-  - updatedAt
 properties:
   bookingId:
     type: string

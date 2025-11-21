@@ -18,25 +18,22 @@ properties:
     description: ID of the customer type
   givenName:
     type: string
-    example: John
-    description: First name of the customer
+    example: Anonymous
+    description: Anonymized first name of the customer
   familyName:
     type: string
-    example: Doe
-    description: Last name of the customer
+    example: Anonymous
+    description: Anonymized last name of the customer
   fullName:
     type: string
-    example: John Doe
-    description: Full name of the customer
+    example: Anonymous Anonymous
+    description: Anonymized full name of the customer
   emailAddress:
-    type: string
-    format: email
-    example: john.doe@example.com
-    description: Email address of the customer
+    type: 'null'
+    description: Erased email address of the customer
   phoneNumber:
-    type: string
-    example: '+49123456789'
-    description: Phone number of the customer in E.164 format
+    type: 'null'
+    description: Erased phone number of the customer
   preferredLocale:
     type: string
     example: sv_SE
