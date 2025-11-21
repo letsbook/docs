@@ -6,6 +6,7 @@ items:
     - booking.drafted
     - booking.confirmed
     - booking.details_updated
+    - booking.labels_updated
     - booking.completed
     - booking.canceled
     - booking.expired
