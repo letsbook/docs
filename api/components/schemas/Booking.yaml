@@ -14,6 +14,7 @@ required:
 properties:
   id:
     type: string
+    format: uuid
     example: 551ceb1c-6fbc-479b-819d-734f4044eca2
     description: Unique identifier of the booking
   reference:
@@ -47,14 +48,17 @@ properties:
     type:
       - string
       - 'null'
+    format: uuid
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
     description: Unique identifier of the customer. Can be null for draft bookings.
   dockId:
     type: string
+    format: uuid
     example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
     description: Unique identifier of the dock
   boatModelId:
     type: string
+    format: uuid
     example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
     description: Unique identifier of the boat model
   pickup:

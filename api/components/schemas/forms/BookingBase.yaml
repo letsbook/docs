@@ -2,14 +2,17 @@ description: Booking
 properties:
   customerId:
     type: string
+    format: uuid
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
     description: ID of the customer
   dockId:
     type: string
+    format: uuid
     example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
     description: ID of the dock
   boatModelId:
     type: string
+    format: uuid
     example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
     description: ID of the boat model
   pickup:

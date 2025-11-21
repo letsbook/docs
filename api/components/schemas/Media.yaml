@@ -7,6 +7,7 @@ required:
 properties:
   id:
     type: string
+    format: uuid
     example: a74c7c12-90f1-45ab-88ca-d2a63a424ed1
     description: ID of the media item
   type:
