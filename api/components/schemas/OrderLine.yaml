@@ -10,6 +10,7 @@ required:
 properties:
   productId:
     type: string
+    format: uuid
     example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
     description: ID of the product
   description:
@@ -34,5 +35,6 @@ properties:
     example: 284
   taxRateId:
     type: string
+    format: uuid
     example: d8f8feb5-b8cc-4b8e-9d5c-a9d9d9d9d9d9
     description: ID of the tax rate for this product

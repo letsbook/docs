@@ -73,6 +73,7 @@ post:
                 properties:
                   bookingId:
                     type: string
+                    format: uuid
                     description: The ID of the updated booking.
                     example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
     '401':

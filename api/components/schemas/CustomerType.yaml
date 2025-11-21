@@ -7,6 +7,7 @@ required:
 properties:
   id:
     type: string
+    format: uuid
     example: d1f59518-9be6-441f-8ce8-c810d1d9b332
     description: ID of the customer type
   name:
