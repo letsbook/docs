@@ -225,6 +225,71 @@ booking.details_updated:
     responses:
       '200':
         description: Webhook received successfully
+booking.labels_updated:
+  post:
+    operationId: webhookBookingLabelsUpdated
+    tags:
+      - Webhook events
+    summary: Booking labels updated
+    description: Triggered when a label is added or removed from a booking
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.labels_updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                type: object
+                required:
+                  - bookingId
+                  - current
+                  - changes
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
+                    description: Unique identifier of the booking
+                  current:
+                    type: array
+                    description: The booking labels after the event has happened
+                    items:
+                      $ref: ../components/schemas/BookingLabel.yaml
+                  changes:
+                    type: object
+                    description: An overview of the added and removed labels
+                    required:
+                      - added
+                      - removed
+                    properties:
+                      added:
+                        type: array
+                        description:
+                        items:
+                          $ref: ../components/schemas/BookingLabel.yaml
+                      removed:
+                        type: array
+                        example: []
+                        items:
+                          $ref: ../components/schemas/BookingLabel.yaml
+
+    responses:
+      '200':
+        description: Webhook received successfully
 order.confirmed:
   post:
     operationId: webhookOrderConfirmed
