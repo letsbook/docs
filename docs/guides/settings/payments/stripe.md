@@ -4,7 +4,7 @@ Collect online payments in your Let's Book checkout using Stripe Connect.
 
 ## Connect Stripe
 
-Open the [Integrations page](https://dashboard.letsbook.app/integrations).
+Open the [Integrations page](https://dashboard.letsbook.app/integrations/psp).
 
 ### 1. Create your Stripe account
 
@@ -22,7 +22,7 @@ You approve the connection from Stripe.
 
 ### 3. Connect from Let's Book
 
-- Go to the [Integrations page](https://dashboard.letsbook.app/integrations)
+- Go to the [Integrations page](https://dashboard.letsbook.app/integrations/psp)
 - Click Connect via Stripe
 
 ### 4. Approve the Stripe Connect screen
@@ -56,7 +56,7 @@ Payments can succeed while verification is pending. Payouts start once Stripe ap
 
 Switch from test to live when you are ready to charge real customers.
 
-- Go to the [Integrations page](https://dashboard.letsbook.app/integrations)
+- Go to the [Integrations page](https://dashboard.letsbook.app/integrations/psp)
 - Select Stripe as the current payment provider and click Save
 - Your checkout now charges real cards and supported local methods
 
