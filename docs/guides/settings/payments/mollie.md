@@ -22,7 +22,7 @@ Access your Mollie settings and profiles.
 
 Connect from your Let's Book dashboard.
 
-- Go to [Integrations](https://dashboard.letsbook.app/integrations)
+- Go to [Integrations](https://dashboard.letsbook.app/integrations/psp)
 - Click Connect via Mollie
 
 ### 4. Approve the Mollie Connect screen
@@ -71,7 +71,7 @@ Mollie may perform extra verification. Payments can succeed while verification i
 
 When you are ready to accept real payments, set the integration to Live.
 
-- Go to the [Integrations](https://dashboard.letsbook.app/integrations)
+- Go to the [Integrations](https://dashboard.letsbook.app/integrations/psp)
 - Select Mollie as the current payment provider and hit Save.
 - Your checkout now charges real cards and local methods.
 

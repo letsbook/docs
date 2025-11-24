@@ -41,7 +41,7 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 **Steps:**
 
-1. Go to [Integrations](https://dashboard.letsbook.app/integrations) in Let's Book
+1. Go to [Integrations](https://dashboard.letsbook.app/integrations/hardware) in Let's Book
 2. Find Trackunit and click "Connect" (keep modal open)
 3. In separate tab, go to [Trackunit Administration](https://new.manager.trackunit.com/administration)
 4. Select "API Access" → "Create API user"
