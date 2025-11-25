@@ -1,10 +1,10 @@
 get:
-  summary: Retrieve an add-ons order
+  summary: Retrieve booking add-ons
   description: |
-    Retrieve the booking's order. Will return a 404 when no order exists.
+    Retrieve the booking's add-ons order. Will return a 404 when no order exists.
   operationId: getOrderOfBooking
   parameters:
-    - name: bookingId
+    - name: id
       in: path
       required: true
       schema:
