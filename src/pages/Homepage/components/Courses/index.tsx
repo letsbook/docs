@@ -2,6 +2,7 @@ import dailyOperationsImage from '@site/docs/courses/graphics/daily_operations_w
 import dockOperationsImage from '@site/docs/courses/graphics/dock_operations.jpg';
 import placeholderImage from '@site/docs/courses/graphics/placeholder.png';
 import teamImage from '@site/docs/courses/graphics/team.jpg';
+import walkImage from '@site/docs/courses/graphics/walk.webp';
 import { useRef, useState } from 'react';
 import type { ReactNode } from 'react';
 
@@ -14,14 +15,15 @@ type Course = {
     level: string;
     duration: string;
     slug: string;
+    badge?: string;
 };
 
 const courses: Course[] = [
     {
-        title: 'Daily operations walkthrough',
+        title: 'Quick platform tour',
         description:
-            'Quick 10-minute tour of everything you do daily: bookings, planning, customer check-ins.',
-        image: teamImage,
+            'See everything Let\'s Book can do in 10 minutes. The full picture of your rental toolkit.',
+        image: walkImage,
         level: 'Beginner',
         duration: '10m',
         slug: 'daily-operations-walkthrough',
@@ -30,46 +32,30 @@ const courses: Course[] = [
         title: 'Getting started guide',
         description:
             'From zero to first booking in 30 minutes: setup, configuration, and going live.',
-        image: dailyOperationsImage,
+        image: teamImage,
         level: 'Beginner',
         duration: '30m',
         slug: 'onboarding-guide',
     },
     {
-        title: 'Dock host operations',
+        title: 'Dock staff operations',
         description:
-            'Run a marina or dock? Learn fleet management, multiple locations, and dock assignments.',
+            'Everything dock staff needs: check-ins, boat handouts, safety briefings, and handling returns.',
         image: dockOperationsImage,
-        level: 'Intermediate',
-        duration: '20m',
-        slug: 'dock-host-operations',
+        level: 'Beginner',
+        duration: '15m',
+        slug: 'dock-staff-operations',
+        badge: 'Role training',
     },
     {
-        title: 'Seasonal planning strategies',
+        title: 'Bookings manager essentials',
         description:
-            'Master schedules, blockouts, seasonal pricing, and managing high-demand periods.',
-        image: placeholderImage,
-        level: 'Intermediate',
+            'Master phone bookings, manage schedules, handle payments, and keep customers happy.',
+        image: dailyOperationsImage,
+        level: 'Beginner',
         duration: '20m',
-        slug: 'seasonal-planning',
-    },
-    {
-        title: 'Boat club setup',
-        description:
-            'Configure memberships, internal bookings, member rates, and boat club workflows.',
-        image: placeholderImage,
-        level: 'Advanced',
-        duration: '20m',
-        slug: 'boat-club-setup',
-    },
-    {
-        title: 'Build autonomous operations',
-        description:
-            'Automate everything: self-service bookings, payments, check-ins, and remote boat access.',
-        image: placeholderImage,
-        level: 'Advanced',
-        duration: '25m',
-        slug: 'autonomous-operations',
+        slug: 'bookings-manager-essentials',
+        badge: 'Role training',
     },
 ];
 
@@ -78,10 +64,12 @@ export default function Courses(): ReactNode {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [scrollLeft, setScrollLeft] = useState(0);
+    const [hasMoved, setHasMoved] = useState(false);
 
     const handleMouseDown = (e: React.MouseEvent) => {
         if (!sliderRef.current) return;
         setIsDragging(true);
+        setHasMoved(false);
         setStartX(e.pageX - sliderRef.current.offsetLeft);
         setScrollLeft(sliderRef.current.scrollLeft);
     };
@@ -91,11 +79,24 @@ export default function Courses(): ReactNode {
         e.preventDefault();
         const x = e.pageX - sliderRef.current.offsetLeft;
         const walk = (x - startX) * 2;
+        
+        // Als er meer dan 5px beweging is, markeer als drag
+        if (Math.abs(walk) > 5) {
+            setHasMoved(true);
+        }
+        
         sliderRef.current.scrollLeft = scrollLeft - walk;
     };
 
     const handleMouseUp = () => {
         setIsDragging(false);
+    };
+
+    const handleClick = (e: React.MouseEvent, slug: string) => {
+        // Voorkom navigatie als er gedragged is
+        if (hasMoved) {
+            e.preventDefault();
+        }
     };
 
     return (
@@ -121,6 +122,7 @@ export default function Courses(): ReactNode {
                                 href={`/courses/${course.slug}`}
                                 className={styles.CourseCard}
                                 draggable={false}
+                                onClick={(e) => handleClick(e, course.slug)}
                             >
                                 <div className={styles.CourseImage}>
                                     <img
@@ -132,9 +134,16 @@ export default function Courses(): ReactNode {
                                         <h3 className={styles.CourseTitle}>
                                             {course.title}
                                         </h3>
-                                        <span className={styles.CourseDuration}>
-                                            {course.duration}
-                                        </span>
+                                        <div className={styles.CourseMeta}>
+                                            <span className={styles.CourseDuration}>
+                                                {course.duration}
+                                            </span>
+                                            {course.badge && (
+                                                <span className={styles.CourseBadge}>
+                                                    {course.badge}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                     <div className={styles.PlayButton}>
                                         <svg

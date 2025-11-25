@@ -2,6 +2,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import type { ReactNode } from 'react';
 
+import Courses from './Homepage/components/Courses';
 import Features from './Homepage/components/Features';
 import GettingStarted from './Homepage/components/GettingStarted';
 import Hero from './Homepage/components/Hero';
@@ -21,6 +22,7 @@ export default function Home(): ReactNode {
                 <QuickActions />
                 <ReleaseBanner />
                 <Features />
+                <Courses />
                 <GettingStarted />
             </main>
         </Layout>
