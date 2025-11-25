@@ -152,6 +152,8 @@ paths:
     $ref: paths/bookings.yaml
   /v1/bookings/{id}:
     $ref: paths/bookings@{id}.yaml
+  /v1/bookings/{id}/order:
+    $ref: paths/bookings@{id}@order.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
