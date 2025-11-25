@@ -13,10 +13,12 @@ properties:
     example: 551ceb1c-6fbc-479b-819d-734f4044eca2
     description: Unique identifier of the booking this order belongs to
   plannedForDeliveryAt:
-    type: string
+    type:
+      - string
+      - 'null'
     format: date-time
     example: 2025-11-18T12:00:00+00:00
-    description: Planned delivery timestamp in ISO 8601 format (typically matches the booking pickup time)
+    description: Planned delivery timestamp in ISO 8601 format (typically matches the booking pickup time). Will be `null` when the booking is not yet confirmed.
   currency:
     type: string
     description: Currency of the amount
