@@ -115,6 +115,26 @@ The homepage banner automatically displays the most recent release based on the 
 - Imports should use the `@site/` prefix
 - Imports must use single quotes
 
+### Video Component
+
+**Use InlineVideoPlayer for embedding mp4 videos in documentation.**
+
+1. Import the component and the video file as a module:
+```jsx
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import myVideo from '../graphics/my_video.mp4';
+```
+
+2. Use the component with curly braces (not a string path):
+```jsx
+<InlineVideoPlayer videoSrc={myVideo} />
+```
+
+Videos autoplay, loop, and are muted. Store mp4 files in the nearest `graphics/` folder.
+
+For YouTube videos, use `YoutubeVideoPlayer` with a `videoId` prop instead.
+
 ### Button Component
 
 **ALWAYS use the Button component for any call-to-action links in markdown files.**
