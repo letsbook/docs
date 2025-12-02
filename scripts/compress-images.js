@@ -4,7 +4,11 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const DOCS_DIR = path.join(__dirname, '..', 'docs');
+const PROJECT_ROOT = path.join(__dirname, '..');
+const DOCS_DIR = path.join(PROJECT_ROOT, 'docs');
+const RELEASES_DIR = path.join(PROJECT_ROOT, 'releases');
+
+const TARGET_DIRS = [DOCS_DIR, RELEASES_DIR];
 const COMPRESSION_MARKER = 'letsbook-compressed';
 const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp'];
 
@@ -53,14 +57,13 @@ function findImageFiles(dir) {
 /**
  * Compress an image file
  */
-async function compressImage(filePath) {
+async function compressImage(filePath, rootDir) {
     const dir = path.dirname(filePath);
     const ext = path.extname(filePath);
     const basename = path.basename(filePath, ext);
     const tempOutput = path.join(dir, `${basename}.temp${ext}`);
 
-    console.log(`  Compressing: 
-${path.relative(DOCS_DIR, filePath)}`);
+    console.log(`  Compressing: \n${path.relative(rootDir, filePath)}`);
 
     try {
         const originalSize = fs.statSync(filePath).size;
@@ -110,8 +113,8 @@ ${path.relative(DOCS_DIR, filePath)}`);
 
         const compressedSize = fs.statSync(tempOutput).size;
 
-        /* Only replace if we actually saved space (at least 1%) */
-        if (compressedSize < originalSize * 0.99) {
+        /* Only replace if the compressed file is strictly smaller */
+        if (compressedSize < originalSize) {
             const savings = (
                 ((originalSize - compressedSize) / originalSize) *
                 100
@@ -124,29 +127,17 @@ ${path.relative(DOCS_DIR, filePath)}`);
             const originalKB = (originalSize / 1024).toFixed(2);
             const compressedKB = (compressedSize / 1024).toFixed(2);
 
-            console.log(`  ✅ Compressed: ${originalKB}KB 
-→ ${compressedKB}KB (${savings}% smaller)`);
+            console.log(
+                `  ✅ Compressed: ${originalKB}KB \n→ ${compressedKB}KB (${savings}% smaller)`
+            );
             return true;
         } else {
-            /* Compressed version is not smaller, keep original and mark it */
-            fs.unlinkSync(tempOutput);
+            /* Compressed version is not smaller, keep original bytes unchanged and do not add any metadata */
+            if (fs.existsSync(tempOutput)) {
+                fs.unlinkSync(tempOutput);
+            }
 
-            // Just add metadata without recompressing
-            await sharp(filePath)
-                .withMetadata({
-                    exif: {
-                        IFD0: {
-                            ImageDescription: COMPRESSION_MARKER,
-                        },
-                    },
-                })
-                .toFile(tempOutput);
-
-            fs.unlinkSync(filePath);
-            fs.renameSync(tempOutput, filePath);
-
-            console.log(`  ℹ️  Already optimal, marked as 
-processed`);
+            console.log(`  ℹ️  Already optimal, original kept unchanged`);
             return true;
         }
     } catch (error) {
@@ -164,46 +155,68 @@ processed`);
 async function main() {
     console.log('🖼️  Image Compression Script\n');
 
-    console.log(`📁 Scanning for images in: 
-${DOCS_DIR}\n`);
+    let totalCompressed = 0;
+    let totalSkipped = 0;
+    let totalFailed = 0;
+    let totalFiles = 0;
 
-    const imageFiles = findImageFiles(DOCS_DIR);
+    for (const dir of TARGET_DIRS) {
+        if (!fs.existsSync(dir)) continue;
 
-    if (imageFiles.length === 0) {
-        console.log('No image files found.');
-        return;
-    }
+        console.log(`📁 Scanning for images in: \n${dir}\n`);
 
-    console.log(`Found ${imageFiles.length} image 
-file(s)\n`);
+        const imageFiles = findImageFiles(dir);
+        totalFiles += imageFiles.length;
 
-    let compressed = 0;
-    let skipped = 0;
-    let failed = 0;
+        if (imageFiles.length === 0) {
+            console.log('No image files found in this folder.');
+            continue;
+        }
 
-    for (const file of imageFiles) {
-        const alreadyCompressed = await isAlreadyCompressed(file);
+        console.log(`Found ${imageFiles.length} image \nfile(s)\n`);
 
-        if (alreadyCompressed) {
-            console.log(`⏭️  Skipping (already 
-compressed): ${path.relative(DOCS_DIR, file)}`);
-            skipped++;
-        } else {
-            const success = await compressImage(file);
-            if (success) {
-                compressed++;
+        let compressed = 0;
+        let skipped = 0;
+        let failed = 0;
+
+        for (const file of imageFiles) {
+            const alreadyCompressed = await isAlreadyCompressed(file);
+
+            if (alreadyCompressed) {
+                console.log(
+                    `⏭️  Skipping (already \ncompressed): ${path.relative(dir, file)}`
+                );
+                skipped++;
             } else {
-                failed++;
+                const success = await compressImage(file, dir);
+                if (success) {
+                    compressed++;
+                } else {
+                    failed++;
+                }
             }
+            console.log('');
+        }
+
+        console.log('📊 Folder summary:');
+        console.log(`  ✅ Compressed: ${compressed}`);
+        console.log(`  ⏭️  Skipped: ${skipped}`);
+        if (failed > 0) {
+            console.log(`  ❌ Failed: ${failed}`);
         }
         console.log('');
+
+        totalCompressed += compressed;
+        totalSkipped += skipped;
+        totalFailed += failed;
     }
 
-    console.log('📊 Summary:');
-    console.log(`  ✅ Compressed: ${compressed}`);
-    console.log(`  ⏭️  Skipped: ${skipped}`);
-    if (failed > 0) {
-        console.log(`  ❌ Failed: ${failed}`);
+    console.log('📈 Overall summary:');
+    console.log(`  🖼️  Files scanned: ${totalFiles}`);
+    console.log(`  ✅ Compressed: ${totalCompressed}`);
+    console.log(`  ⏭️  Skipped: ${totalSkipped}`);
+    if (totalFailed > 0) {
+        console.log(`  ❌ Failed: ${totalFailed}`);
     }
 }
 
