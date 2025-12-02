@@ -5,6 +5,9 @@ sidebar_position: 11
 
 import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import newWebhookVideo from '../graphics/new_webhook.mp4';
 
 # Webhooks
 
@@ -20,6 +23,8 @@ When a booking gets confirmed, a customer registers, or any other event occurs, 
 - Create a webhook from the [integrations dashboard](https://dashboard.letsbook.app/integrations/webhooks) or through the [API](/api/#tag/Webhooks).
 - Select which events you want to receive
 - Store the webhook secret for [signature verification](#verify-webhook-signatures)
+
+<InlineVideoPlayer videoSrc={newWebhookVideo} />
 
 ## Webhook payload structure
 
