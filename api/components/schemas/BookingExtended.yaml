@@ -2,6 +2,8 @@ allOf:
   - $ref: ./Booking.yaml
   - type: object
     required:
+      - url
+      - customer
       - financialDetails
     properties:
       url:
@@ -46,6 +48,9 @@ allOf:
           applicationFee:
             type: object
             description: Application fee charged by Let's Book in cents
+            required:
+              - amount
+              - currency
             properties:
               amount:
                 type: integer

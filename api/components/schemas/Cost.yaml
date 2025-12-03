@@ -4,6 +4,7 @@ description: |
 required:
   - id
   - description
+  - type
   - taxRateId
   - amountIncludingTax
   - amountExcludingTax
