@@ -36,7 +36,7 @@ Your detailed booking schedule showing exact trip timing and customer informatio
 
 **Interactive features:**
 
-- Click on bookings to see full its details
+- Click on bookings to see its details
 - Hover for quick booking information
 - Switch between Day, Week, and 30 Days view using the controls in bottom right
 - Use dock selector to filter by location (e.g., "Marina Bay", "Sunset Harbor", "Crystal Lake Marina", "South Dock") or select "All docks"
