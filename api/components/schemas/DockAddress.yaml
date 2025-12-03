@@ -3,8 +3,10 @@ description: The address of the dock
 required:
   - country
   - line1
+  - line2
   - city
   - postalCode
+  - stateOrRegion
   - gps
   - timeZoneName
 properties:
