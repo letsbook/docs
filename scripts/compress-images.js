@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import sharp from 'sharp';
-import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const sharp = require('sharp');
+const fs = require('fs');
+const path = require('path');
+
 const PROJECT_ROOT = path.join(__dirname, '..');
 const DOCS_DIR = path.join(PROJECT_ROOT, 'docs');
 const RELEASES_DIR = path.join(PROJECT_ROOT, 'releases');
