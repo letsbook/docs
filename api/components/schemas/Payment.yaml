@@ -2,10 +2,6 @@ description: |
   Payment for a booking. It can be the full amount, or paid in installments and
   it can be paid by the customer or 'cash' payments, manually added by a
   staff member.
-#discriminator:
-#  propertyName: source
-#  mapping:
-#    payment_request: ./PaymentRequestPayment.yaml
 required:
   - id
   - source
