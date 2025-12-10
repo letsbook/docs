@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+import { execSync, spawnSync } from 'child_process';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const { execSync, spawnSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
-
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DOCS_DIR = path.join(__dirname, '..', 'docs');
 const COMPRESSION_MARKER = 'letsbook-compressed';
 

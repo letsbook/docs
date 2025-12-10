@@ -1,9 +1,10 @@
 #!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import readline from 'readline';
+import { fileURLToPath } from 'url';
 
-const fs = require('fs');
-const path = require('path');
-const readline = require('readline');
-
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DOCS_DIR = path.join(__dirname, '../docs');
 const ALLOWED_EXTENSIONS = ['.md', '.mdx', '.json'];
 const SKIP_FILES = ['.DS_Store'];
