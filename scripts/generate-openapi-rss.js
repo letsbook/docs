@@ -1,8 +1,6 @@
-import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+#!/usr/bin/env node
+const { existsSync, readFileSync, writeFileSync } = require('fs');
+const { join } = require('path');
 
 /**
  * @typedef {Object} ChangelogEntry
@@ -114,7 +112,7 @@ function entryToRssItem(entry, baseUrl) {
         .join('\n');
 
     return {
-        title: `API Changelog - ${entry.date}`,
+        title: `Change of ${entry.date}`,
         link: `${baseUrl}/api/#section/Changelog`,
         description: `<ul>\n${description}\n</ul>`,
         pubDate: dateObj.toUTCString(),
