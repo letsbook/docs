@@ -1,0 +1,69 @@
+post:
+  summary: Replace booking labels
+  description: |
+    Replace the complete set of labels assigned to the booking. Labels not listed in
+    the request are removed. Labels listed are added if not already present.
+  operationId: replaceBookingLabels
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/BookingLabelsReplace.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - bookingId
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    description: The ID of the updated booking.
+                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  labelIds:
+                    - Invalid label ID supplied
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
