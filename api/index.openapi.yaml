@@ -97,6 +97,9 @@ tags:
       A booking can be created by customers or staff members. It represents a
       reservation for a specific boat model, to be picked up at a designated time from a
       specific dock and returned at a specified time to that same dock.
+  - name: Booking labels
+    description: |
+      A booking label is a tag you can assign to bookings to categorize or highlight them. Use labels to filter and organize bookings in your workflows.
   - name: Tax rates
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
@@ -161,6 +164,8 @@ paths:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
     $ref: paths/vat-rates.yaml
+  /v1/booking-labels:
+    $ref: paths/booking-labels.yaml
   /v1/webhooks:
     $ref: paths/webhooks.yaml
   /v1/webhooks/{id}:
