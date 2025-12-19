@@ -88,7 +88,7 @@ post:
 delete:
   summary: Cancel a booking
   description: |
-    Cancel an existing booking. The booking status will be set to `canceled`.
+    Cancel an existing booking by setting its status to `canceled`. Only bookings with status `option`, `confirmed`, or `completed` can be canceled. For `confirmed` bookings, cancellation is only allowed if none of the trips are currently in progress.
   operationId: cancelBooking
   tags:
     - Bookings
@@ -131,6 +131,25 @@ delete:
       $ref: ../components/responses/Unauthorized.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  reason:
+                    - Cannot cancel booking because it has one or more active trips.
+
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
     '500':
