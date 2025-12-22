@@ -20,6 +20,9 @@ info:
 
     ### Cancel booking
     - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
+    
+    ### Additional questions and answers
+    - Added new [additionalQuestions](/api/#tag/Bookings/operation/getBooking) property to the booking response
 
     ## 2025-11-18
     - Made the `url` property of a booking `nullable` when its status is `'draft'`
