@@ -1,5 +1,6 @@
 name = "docs"
-pages_build_output_dir = "./build"
+compatibility_date = "2025-12-22"
 
-[vars]
-SITE_URL = "$CF_PAGES_URL"
+[assets]
+directory = "./build/"
+not_found_handling = "404-page"
