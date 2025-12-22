@@ -1,0 +1,10 @@
+type: object
+description: Parameters for canceling a booking.
+required:
+  - reason
+properties:
+  reason:
+    type: string
+    description: The reason for canceling the booking.
+    example: Customer requested cancellation
+    minLength: 1
