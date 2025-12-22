@@ -5,6 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
 
 const beaconId = process.env.HELPSCOUT_BEACON_ID;
+const siteUrl = process.env.SITE_URL || 'https://support.letsbook.app';
 
 const config: Config = {
     title: "Let's Book Support",
@@ -18,7 +19,7 @@ const config: Config = {
     },
 
     // Set the production url of your site here
-    url: 'https://support.letsbook.app',
+    url: siteUrl,
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
