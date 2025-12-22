@@ -27,7 +27,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: npm run build
         env:
-          HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
+          HELPSCOUT_BEACON_ID: ${{ vars.HELPSCOUT_BEACON_ID }}
           SITE_URL: "https://support.letsbook.app"
           NO_INDEX: 0
 
@@ -35,7 +35,7 @@ jobs:
         if: github.ref == 'refs/heads/dev'
         run: npm run build
         env:
-          HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
+          HELPSCOUT_BEACON_ID: ${{ vars.HELPSCOUT_BEACON_ID }}
           SITE_URL: "https://support.letsbook.dev"
           NO_INDEX: 1
 
