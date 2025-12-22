@@ -1,7 +1,7 @@
 name = "support-docs"
 compatibility_date = "2025-12-22"
 workers_dev = true
-route = { pattern = "support2.letsbook.app/*", zone_name = "letsbook.app" }
+custom_domain = "support2.letsbook.app"
 
 [assets]
 directory = "./build/"
@@ -9,4 +9,4 @@ not_found_handling = "404-page"
 
 [env.staging]
 name = "support-docs-staging"
-route = { pattern = "support.letsbook.dev/*", zone_name = "letsbook.dev" }
+custom_domain = "support.letsbook.dev"
