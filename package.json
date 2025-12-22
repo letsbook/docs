@@ -21,8 +21,7 @@
         "prettier": "prettier -w api src docs scripts releases .junie docusaurus.config.ts | grep -v \"(unchanged)\"",
         "find-unreferenced": "node scripts/find-unreferenced-files.js",
         "compress-videos": "node scripts/compress-videos.js",
-        "compress-images": "node scripts/compress-images.js",
-        "deploy": "node scripts/deploy-to-r2.js"
+        "compress-images": "node scripts/compress-images.js"
     },
     "dependencies": {
         "@docusaurus/core": "^3.9.2",
@@ -47,9 +46,7 @@
         "playwright": "^1.55.0",
         "prettier": "^3.6.2",
         "sharp": "^0.34.4",
-        "typescript": "~5.6.2",
-        "mime-types": "^3.0.2",
-        "@aws-sdk/client-s3": "^3.956.0"
+        "typescript": "~5.6.2"
     },
     "browserslist": {
         "production": [
