@@ -21,25 +21,8 @@ post:
         schema:
           $ref: ../components/schemas/forms/BookingLabelsReplace.yaml
   responses:
-    '200':
-      description: OK
-      content:
-        application/json:
-          schema:
-            type: object
-            required:
-              - data
-            properties:
-              data:
-                type: object
-                required:
-                  - bookingId
-                properties:
-                  bookingId:
-                    type: string
-                    format: uuid
-                    description: The ID of the updated booking.
-                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+    '204':
+      description: No content.
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

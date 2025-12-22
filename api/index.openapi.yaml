@@ -11,6 +11,16 @@ info:
       RSS feed
     </a> to stay up to date. 
 
+    ## 2025-12-22
+    ### Booking labels
+    - Added new [booking labels](/api/#tag/Booking-labels) endpoint
+    - Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
+    - Added new `labels` property to the [booking response](/api/#operation/getBooking)
+    - You can now filter bookings [by booking label(s)](/api/#operation/listBookings)
+
+    ### Cancel booking
+    - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
+
     ## 2025-11-18
     - Made the `url` property of a booking `nullable` when its status is `'draft'`
     - Made the `phoneNumber` property of a customer `nullable` instead of empty string when not known

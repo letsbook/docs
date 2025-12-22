@@ -28,7 +28,7 @@ get:
         example: 2022-01-01T00:00:00Z
     - name: labelIds
       in: query
-      description: Display only bookings that have at least one of the specified booking label IDs
+      description: Display only bookings that have all of the specified booking labels assigned.
       style: form
       explode: true
       schema:
