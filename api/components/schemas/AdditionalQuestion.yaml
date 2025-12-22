@@ -1,0 +1,24 @@
+description: Additional question answered by the customer during booking
+required:
+  - questionId
+  - question
+  - value
+  - containsSensitiveData
+properties:
+  questionId:
+    type: string
+    format: uuid
+    description: ID of the question
+    example: 566122bb-15cf-41c5-8437-1728bacae785
+  question:
+    type: string
+    description: The question text
+    example: Do you eat meat?
+  value:
+    type: string
+    description: The customer's answer to the question
+    example: Sometimes
+  containsSensitiveData:
+    type: boolean
+    description: Whether this answer contains sensitive personal data
+    example: true

@@ -11,6 +11,19 @@ info:
       RSS feed
     </a> to stay up to date. 
 
+    ## 2025-12-22
+    ### Booking labels
+    - Added new [booking labels](/api/#tag/Booking-labels) endpoint
+    - Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
+    - Added new `labels` property to the [booking response](/api/#operation/getBooking)
+    - You can now filter bookings [by booking label(s)](/api/#operation/listBookings)
+
+    ### Cancel booking
+    - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
+    
+    ### Additional questions and answers
+    - Added new [additionalQuestions](/api/#tag/Bookings/operation/getBooking) property to the booking response
+
     ## 2025-11-18
     - Made the `url` property of a booking `nullable` when its status is `'draft'`
     - Made the `phoneNumber` property of a customer `nullable` instead of empty string when not known
@@ -97,6 +110,9 @@ tags:
       A booking can be created by customers or staff members. It represents a
       reservation for a specific boat model, to be picked up at a designated time from a
       specific dock and returned at a specified time to that same dock.
+  - name: Booking labels
+    description: |
+      A booking label is a tag you can assign to bookings to categorize or highlight them. Use labels to filter and organize bookings in your workflows.
   - name: Tax rates
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
@@ -157,10 +173,14 @@ paths:
     $ref: paths/bookings@{id}.yaml
   /v1/bookings/{id}/order:
     $ref: paths/bookings@{id}@order.yaml
+  /v1/bookings/{id}/labels:
+    $ref: paths/bookings@{id}@labels.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
     $ref: paths/vat-rates.yaml
+  /v1/booking-labels:
+    $ref: paths/booking-labels.yaml
   /v1/webhooks:
     $ref: paths/webhooks.yaml
   /v1/webhooks/{id}:
