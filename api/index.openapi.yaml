@@ -5,7 +5,7 @@ info:
     # Changelog
 
     We take backward compatibility seriously. Breaking changes are always announced ahead of time and include a migration period. Deprecated features remain available for a minimum of six months. New endpoints and optional fields may be added, as they don’t affect existing integrations.
-    
+
     You can subscribe to our changelog &thinsp;<a href="https://support.letsbook.app/api/changelog.rss" target="_blank">
       <img src="/img/rss.svg" width="14" height="14" alt="" style="vertical-align: middle;"  />
       RSS feed
