@@ -5,7 +5,7 @@ module.exports = function noIndexApiPlugin(context, options) {
     return {
         name: 'noindex-api-plugin',
         injectHtmlTags({ pathname }) {
-            if (!noIndex || !pathname.startsWith('/api')) {
+            if (!noIndex || !pathname?.startsWith('/api')) {
                 return {};
             }
 
