@@ -40,7 +40,7 @@ jobs:
       - name: Build website
         run: npm run build
         env:
-          HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
+          HELPSCOUT_BEACON_ID: ${{ vars.HELPSCOUT_BEACON_ID }}
 
       - name: Deploy to R2
         env:

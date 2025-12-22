@@ -39,7 +39,7 @@ const s3Client = new S3Client({
     },
 });
 
-const SOURCE_DIR = 'public';
+const SOURCE_DIR = 'build';
 
 /**
  * Recursively get all files in a directory
