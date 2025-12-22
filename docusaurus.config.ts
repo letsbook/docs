@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
 
 const beaconId = process.env.HELPSCOUT_BEACON_ID;
-const noIndex = process.env.NO_INDEX;
+const noIndex = !!parseInt(process.env.NO_INDEX);
 const siteUrl = process.env.SITE_URL || 'https://support.letsbook.app';
 
 const config: Config = {
@@ -13,7 +13,7 @@ const config: Config = {
     tagline: "Your comprehensive guide and support center to Let's Book",
     favicon: 'img/favicon.ico',
     trailingSlash: true,
-    noIndex: !!noIndex,
+    noIndex: noIndex,
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: {
@@ -84,6 +84,8 @@ const config: Config = {
                 ],
             },
         ],
+        './plugins/noindex-blog-plugin.js',
+        './plugins/noindex-api-plugin.js',
     ],
 
     presets: [
