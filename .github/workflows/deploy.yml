@@ -29,6 +29,7 @@ jobs:
         env:
           HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
           SITE_URL: "https://support.letsbook.app"
+          NO_INDEX: 0
 
       - name: Build site for staging
         if: github.ref == 'refs/heads/dev'
@@ -36,6 +37,7 @@ jobs:
         env:
           HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
           SITE_URL: "https://support.letsbook.dev"
+          NO_INDEX: 1
 
       - name: Deploy to production
         if: github.ref == 'refs/heads/main'

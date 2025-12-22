@@ -17,7 +17,6 @@ export default function Home(): ReactNode {
             <Hero />
 
             <main>
-                STAGING
                 <QuickActions />
                 <ReleaseBanner />
                 <Features />
