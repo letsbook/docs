@@ -21,7 +21,8 @@
         "prettier": "prettier -w api src docs scripts releases .junie docusaurus.config.ts | grep -v \"(unchanged)\"",
         "find-unreferenced": "node scripts/find-unreferenced-files.js",
         "compress-videos": "node scripts/compress-videos.js",
-        "compress-images": "node scripts/compress-images.js"
+        "compress-images": "node scripts/compress-images.js",
+        "deploy": "node scripts/deploy-to-r2.js"
     },
     "dependencies": {
         "@docusaurus/core": "^3.9.2",
