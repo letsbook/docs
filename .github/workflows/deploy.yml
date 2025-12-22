@@ -1,0 +1,54 @@
+name: Deploy to Cloudflare
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy to Cloudflare Workers
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site for production
+        if: github.ref == 'refs/heads/main'
+        run: npm run build
+        env:
+          HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
+          SITE_URL: "https://support.letsbook.app"
+
+      - name: Build site for staging
+        if: github.ref == 'refs/heads/dev'
+        run: npm run build
+        env:
+          HELPSCOUT_BEACON_ID: ${{ secrets.HELPSCOUT_BEACON_ID }}
+          SITE_URL: "https://support.letsbook.dev"
+
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/main'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+
+      - name: Deploy to staging
+        if: github.ref == 'refs/heads/dev'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --env staging
