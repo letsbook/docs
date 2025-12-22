@@ -10,6 +10,7 @@ required:
   - return
   - boats
   - passengers
+  - labels
   - createdAt
   - updatedAt
 properties:
@@ -82,6 +83,11 @@ properties:
     example: 1
     description: Number of passengers including the customer who booked the boat
     default: 1
+  labels:
+    type: array
+    description: Labels assigned to this booking
+    items:
+      $ref: ./BookingLabel.yaml
   createdAt:
     type: string
     format: date-time

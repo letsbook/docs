@@ -26,6 +26,19 @@ get:
         type: string
         format: date-time
         example: 2022-01-01T00:00:00Z
+    - name: labelIds
+      in: query
+      description: Display only bookings that have all of the specified booking labels assigned.
+      style: form
+      explode: true
+      schema:
+        type: array
+        items:
+          type: string
+          format: uuid
+        example:
+          - 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+          - 551ceb1c-6fbc-479b-819d-734f4044eca2
   responses:
     '200':
       description: OK
