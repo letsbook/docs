@@ -1,6 +1,5 @@
-name = "support-docs"
+name = "docs"
 pages_build_output_dir = "./build"
 
 [vars]
 SITE_URL = "$CF_PAGES_URL"
-HELPSCOUT_BEACON_ID = "803eefa7-8958-4834-83b7-0ab7dc5c0e04"
