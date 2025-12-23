@@ -56,14 +56,48 @@ jobs:
           command: deploy --env staging
 
       - name: Notify Slack
+        if: always()
         uses: slackapi/slack-github-action@v2.1.1
+        env:
+          ENV_NAME: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}
+          SITE_URL: ${{ github.ref == 'refs/heads/main' && 'https://support.letsbook.app' || 'https://support.letsbook.dev' }}
+          STATUS: ${{ job.status }}
+          COLOR: ${{ job.status == 'success' && '#2eb886' || '#a30200' }}
         with:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            text: "*Support docs deploy*: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
-            blocks:
-              - type: "section"
-                text:
-                  type: "mrkdwn"
-                  text: "Support docs deploy: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+            {
+              "attachments": [
+                {
+                  "color": "${{ env.COLOR }}",
+                  "blocks": [
+                    {
+                      "type": "header",
+                      "text": { "type": "plain_text", "text": "[letsbook-docs-${{ env.ENV_NAME }}] Deployment ${{ env.STATUS }}" }
+                    },
+                    {
+                      "type": "section",
+                      "text": { "type": "mrkdwn", "text": "*Deployment ${{ env.STATUS }}*\n${{ env.SITE_URL }}" }
+                    },
+                    {
+                      "type": "section",
+                      "fields": [
+                        { "type": "mrkdwn", "text": "*Deployment logs*\n<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View workflow run>" },
+                        { "type": "mrkdwn", "text": "*Branch*\n`${{ github.ref_name }}`" },
+                        { "type": "mrkdwn", "text": "*Commit*\n<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|`${{ github.sha }}`>" },
+                        { "type": "mrkdwn", "text": "*Pusher*\n${{ github.actor }}" }
+                      ]
+                    },
+                    { "type": "divider" },
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "*Last commit*\n${{ github.event.head_commit.message }}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
