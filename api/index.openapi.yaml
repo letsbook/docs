@@ -9,14 +9,17 @@ info:
     You can subscribe to our changelog &thinsp;<a href="https://support.letsbook.app/api/changelog.rss" target="_blank">
       <img src="/img/rss.svg" width="14" height="14" alt="" style="vertical-align: middle;"  />
       RSS feed
-    </a> to stay up to date. 
+    </a> to stay up to date.
 
     ## 2025-12-22
     ### Booking labels
     - Added new [booking labels](/api/#tag/Booking-labels) endpoint
     - Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
     - Added new `labels` property to the [booking response](/api/#operation/getBooking)
-    - You can now filter bookings [by booking label(s)](/api/#operation/listBookings)
+    
+    ### Booking filters
+    - Added new `pickupAfter` and `pickupBefore` filters to [list bookings](/api/#operation/listBookings) to filter by pickup time
+    - Added new `labelIds` filter to [list bookings](/api/#operation/listBookings) to filter by booking labels
 
     ### Cancel booking
     - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
