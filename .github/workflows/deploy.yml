@@ -57,40 +57,18 @@ jobs:
 
       - name: Notify Slack on success
         if: success()
-        uses: slackapi/slack-github-action@v1
+        uses: slackapi/slack-github-action@v2.1.1
         with:
-          payload: |
-            {
-              "text": "Support docs deploy success",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": ":white_check_mark: *Deployment succeeded*\n• Branch: `${{ github.ref_name }}`\n• Environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}\n• Commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.message }}>\n• Author: ${{ github.actor }}"
-                  }
-                }
-              ]
-            }
+          payload-delimiter: '_'
+          payload: _{"text":"Support docs deploy completed","blocks":[{"type":"section","text":{"type":"mrkdwn","text":":white_check_mark: *Deployment succeeded*\n• Branch: `${{ github.ref_name }}`\n• Environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}\n• Commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.message }}>\n• Author: ${{ github.actor }}"}}]}_
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
       - name: Notify Slack on failure
         if: failure()
-        uses: slackapi/slack-github-action@v1
+        uses: slackapi/slack-github-action@v2.1.1
         with:
-          payload: |
-            {
-              "text": "Support docs deploy failed",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": ":x: *Deployment failed*\n• Branch: `${{ github.ref_name }}`\n• Environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}\n• Commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.message }}>\n• Author: ${{ github.actor }}"
-                  }
-                }
-              ]
-            }
+          payload-delimiter: '_'
+          payload: _{"text":"Support docs deploy failed","blocks":[{"type":"section","text":{"type":"mrkdwn","text":":x: *Deployment failed*\n• Branch: `${{ github.ref_name }}`\n• Environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}\n• Commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.message }}>\n• Author: ${{ github.actor }}"}}]}_
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
