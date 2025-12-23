@@ -55,20 +55,15 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: deploy --env staging
 
-      - name: Notify Slack on success
-        if: success()
+      - name: Notify Slack
         uses: slackapi/slack-github-action@v2.1.1
         with:
-          payload-delimiter: '_'
-          payload: _{"text":"Support docs deploy completed","blocks":[{"type":"section","text":{"type":"mrkdwn","text":":white_check_mark: *Deployment succeeded*\n• Branch: `${{ github.ref_name }}`\n• Environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}\n• Commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.message }}>\n• Author: ${{ github.actor }}"}}]}_
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-      - name: Notify Slack on failure
-        if: failure()
-        uses: slackapi/slack-github-action@v2.1.1
-        with:
-          payload-delimiter: '_'
-          payload: _{"text":"Support docs deploy failed","blocks":[{"type":"section","text":{"type":"mrkdwn","text":":x: *Deployment failed*\n• Branch: `${{ github.ref_name }}`\n• Environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'staging' }}\n• Commit: <${{ github.event.head_commit.url }}|${{ github.event.head_commit.message }}>\n• Author: ${{ github.actor }}"}}]}_
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: "*Support docs deploy*: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: "Support docs deploy: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
