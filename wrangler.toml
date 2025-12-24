@@ -1,0 +1,12 @@
+name = "support-docs"
+compatibility_date = "2025-12-22"
+workers_dev = false
+custom_domain = "support.letsbook.app"
+
+[assets]
+directory = "./build/"
+not_found_handling = "404-page"
+
+[env.staging]
+name = "support-docs-staging"
+custom_domain = "support.letsbook.dev"

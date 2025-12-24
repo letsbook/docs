@@ -1,0 +1,26 @@
+get:
+  summary: List all booking labels
+  description: |
+    Returns a list of all booking labels that can be assigned to bookings. The response is not paginated.
+  operationId: listBookingLabels
+  tags:
+    - Booking labels
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/BookingLabel.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

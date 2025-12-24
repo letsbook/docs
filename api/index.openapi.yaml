@@ -5,11 +5,27 @@ info:
     # Changelog
 
     We take backward compatibility seriously. Breaking changes are always announced ahead of time and include a migration period. Deprecated features remain available for a minimum of six months. New endpoints and optional fields may be added, as they don’t affect existing integrations.
-    
+
     You can subscribe to our changelog &thinsp;<a href="https://support.letsbook.app/api/changelog.rss" target="_blank">
       <img src="/img/rss.svg" width="14" height="14" alt="" style="vertical-align: middle;"  />
       RSS feed
-    </a> to stay up to date. 
+    </a> to stay up to date.
+
+    ## 2025-12-22
+    ### Booking labels
+    - Added new [booking labels](/api/#tag/Booking-labels) endpoint
+    - Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
+    - Added new `labels` property to the [booking response](/api/#operation/getBooking)
+    
+    ### Booking filters
+    - Added new `pickupAfter` and `pickupBefore` filters to [list bookings](/api/#operation/listBookings) to filter by pickup time
+    - Added new `labelIds` filter to [list bookings](/api/#operation/listBookings) to filter by booking labels
+
+    ### Cancel booking
+    - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
+    
+    ### Additional questions and answers
+    - Added new [additionalQuestions](/api/#tag/Bookings/operation/getBooking) property to the booking response
 
     ## 2025-11-18
     - Made the `url` property of a booking `nullable` when its status is `'draft'`
@@ -97,6 +113,9 @@ tags:
       A booking can be created by customers or staff members. It represents a
       reservation for a specific boat model, to be picked up at a designated time from a
       specific dock and returned at a specified time to that same dock.
+  - name: Booking labels
+    description: |
+      A booking label is a tag you can assign to bookings to categorize or highlight them. Use labels to filter and organize bookings in your workflows.
   - name: Tax rates
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
@@ -157,10 +176,14 @@ paths:
     $ref: paths/bookings@{id}.yaml
   /v1/bookings/{id}/order:
     $ref: paths/bookings@{id}@order.yaml
+  /v1/bookings/{id}/labels:
+    $ref: paths/bookings@{id}@labels.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
     $ref: paths/vat-rates.yaml
+  /v1/booking-labels:
+    $ref: paths/booking-labels.yaml
   /v1/webhooks:
     $ref: paths/webhooks.yaml
   /v1/webhooks/{id}:
