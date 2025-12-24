@@ -45,7 +45,7 @@ get:
         type: string
         format: date-time
         example: 2022-01-01T00:00:00Z
-    - name: labelIds
+    - name: labelIds[]
       in: query
       description: Display only bookings that have all of the specified booking labels assigned.
       style: form
