@@ -68,7 +68,7 @@ properties:
     type: string
     format: uuid
     example: d8f8feb5-b8cc-4b8e-9d5c-a9d9d9d9d9d9
-    description: ID of the tax rate applied to this product. Can be null if no tax applies.
+    description: ID of the tax rate applied to this product.
   inStock:
     type: boolean
     example: true
