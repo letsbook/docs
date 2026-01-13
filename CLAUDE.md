@@ -175,6 +175,24 @@ Example usage:
 
 ### API Documentation
 
-- OpenAPI specs split across multiple YAML files in `openapi/` directory
+- OpenAPI specs split across multiple YAML files in `api/` directory
 - Components organized in `schemas/`, `parameters/`, and `responses/` subdirectories
-- Main spec file: `openapi/index.openapi.yaml`
+- Main spec file: `api/index.openapi.yaml`
+- **ALWAYS update the changelog** when making API changes (new endpoints, new properties, etc.)
+
+#### API Changelog
+
+The changelog lives in `api/index.openapi.yaml` inside the `info.description` field. When making API changes:
+
+1. Add a new date header (`## YYYY-MM-DD`) at the top if today's date isn't already there
+2. Use `###` subheaders to group related changes
+3. Write bullet points with links to relevant endpoints using the format `[text](/api/#tag/Tag/operation/operationId)` or `[text](/api/#operation/operationId)`
+4. Keep entries concise and action-oriented ("Added new X endpoint", "Made Y property nullable")
+
+Example:
+```yaml
+## 2025-12-24
+### Booking labels
+- Added new [booking labels](/api/#tag/Booking-labels) endpoint
+- Added new `labels` property to the [booking response](/api/#operation/getBooking)
+```
