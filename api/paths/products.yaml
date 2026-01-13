@@ -1,18 +1,13 @@
 get:
-  summary: Search customers
-  description: Returns a list of all customers matching the query.
-  operationId: searchCustomers
+  summary: List all products
+  description: |
+    Retrieves a paginated list of all products available for purchase.
+
+    Products are called "add-ons" in the dashboard.
+  operationId: listProducts
   tags:
-    - Customers
+    - Products
   parameters:
-    - name: emailAddress
-      in: query
-      required: false
-      description: The email address to search for
-      schema:
-        type: string
-        format: email
-        example: john.doe@example.com
     - $ref: ../components/parameters/page.yaml
   responses:
     '200':
@@ -27,13 +22,13 @@ get:
               data:
                 type: array
                 items:
-                  $ref: ../components/schemas/Customer.yaml
+                  $ref: ../components/schemas/Product.yaml
               pagination:
                 allOf:
                   - $ref: ../components/schemas/Pagination.yaml
                   - properties:
                       nextPageUrl:
-                        example: https://api.letsbook.app/v1/customers/search?page=2
+                        example: https://api.letsbook.app/v1/products?page=2
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '429':
