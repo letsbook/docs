@@ -20,7 +20,7 @@ info:
 
     ### Confirm booking
     - Added new endpoint to [confirm a booking](/api/#operation/confirmBooking)
-    - Added new `confirmed` property to [create](/api/#operation/createBooking) and [update](/api/#operation/updateBooking) booking requests
+    - Added new `confirmed` property to [create](/api/#operation/createBooking) booking requests
     - Bookings created without `confirmed: true` will be created as drafts
     - **Deprecated:** The `paid` property is now deprecated in favor of `confirmed`. Previously, `paid: true` would add a cash payment. Now it simply confirms the booking without creating payments.
 
@@ -130,11 +130,6 @@ tags:
       A booking can be created by customers or staff members. It represents a
       reservation for a specific boat model, to be picked up at a designated time from a
       specific dock and returned at a specified time to that same dock.
-  - name: Booking costs
-    description: |
-      A booking cost is a line item on a booking. Costs can be added manually through the API
-      or calculated automatically by the system (rental fees, add-ons, discounts, etc.).
-      Only manual costs can be added, updated, or deleted through the API.
   - name: Booking labels
     description: |
       A booking label is a tag you can assign to bookings to categorize or highlight them. Use labels to filter and organize bookings in your workflows.
@@ -202,6 +197,8 @@ paths:
     $ref: paths/bookings.yaml
   /v1/bookings/{id}:
     $ref: paths/bookings@{id}.yaml
+  /v1/bookings/{id}/confirm:
+    $ref: paths/bookings@{id}@confirm.yaml
   /v1/bookings/{id}/order:
     $ref: paths/bookings@{id}@order.yaml
   /v1/bookings/{id}/labels:
@@ -210,8 +207,6 @@ paths:
     $ref: paths/bookings@{id}@costs.yaml
   /v1/bookings/{id}/costs/{costId}:
     $ref: paths/bookings@{id}@costs@{costId}.yaml
-  /v1/bookings/{id}/confirm:
-    $ref: paths/bookings@{id}@confirm.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:

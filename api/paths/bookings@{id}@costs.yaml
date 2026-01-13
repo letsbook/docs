@@ -6,7 +6,7 @@ post:
     the API. Other cost types are managed automatically by the system.
   operationId: createBookingCost
   tags:
-    - Booking costs
+    - Bookings
   parameters:
     - name: id
       in: path

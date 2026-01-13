@@ -5,7 +5,7 @@ post:
     updated. Attempting to update other cost types will result in an error.
   operationId: updateBookingCost
   tags:
-    - Booking costs
+    - Bookings
   parameters:
     - name: id
       in: path
@@ -75,7 +75,7 @@ delete:
     removed. Attempting to delete other cost types will result in an error.
   operationId: removeBookingCost
   tags:
-    - Booking costs
+    - Bookings
   parameters:
     - name: id
       in: path
