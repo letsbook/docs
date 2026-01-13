@@ -28,7 +28,7 @@ properties:
     type:
       - string
       - 'null'
-    example: https://api.letsbook.app/v1/customers?page=2,
+    example: https://api.letsbook.app/v1/customers?page=2
     description: URL to the next page. Null if last page.
   previousPageUrl:
     type:
