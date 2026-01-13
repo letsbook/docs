@@ -1,0 +1,71 @@
+post:
+  summary: Add a manual cost
+  description: |
+    Add a manual cost to a booking. Manual costs can be positive (additional charge)
+    or negative (discount). Only manual costs can be added, edited, or deleted through
+    the API. Other cost types are managed automatically by the system.
+  operationId: createBookingCost
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+  requestBody:
+    required: true
+    description: Cost details.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/CostCreate.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - costId
+                properties:
+                  costId:
+                    type: string
+                    format: uuid
+                    description: The ID of the created cost.
+                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  taxRateId:
+                    - Invalid tax rate ID supplied
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

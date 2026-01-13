@@ -35,15 +35,25 @@ properties:
     example: 1
     description: Number of passengers including the customer who booked the boat
     default: 1
-  paid:
+  confirmed:
     type: boolean
     description: |
-      If set to true, the booking will be marked as paid by adding
-      a cash payment equal to the unpaid costs. It will be ignored when the
-      booking is already fully paid.
+      If set to true, the booking will be marked as confirmed. If set to false
+      or omitted, the booking will be created as a draft. Use the
+      [confirm endpoint](/api/#operation/confirmBooking) to confirm a draft
+      booking later.
+    default: false
+    example: true
+  paid:
+    deprecated: true
+    type: boolean
+    description: |
+      **Deprecated.** Use `confirmed` instead.
 
-      Note that slot based pricing may fail to calculate the correct amount
-      as the slot is not known when the booking is created using the API.
+      If set to true, the booking will be marked as confirmed. Previously, this
+      property would add a cash payment equal to the unpaid costs. This behavior
+      has been removed in favor of explicit confirmation without automatic
+      payment creation.
     default: true
     example: true
   createdAt:
