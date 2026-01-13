@@ -130,6 +130,11 @@ tags:
       A booking can be created by customers or staff members. It represents a
       reservation for a specific boat model, to be picked up at a designated time from a
       specific dock and returned at a specified time to that same dock.
+  - name: Booking costs
+    description: |
+      A booking cost is a line item on a booking. Costs can be added manually through the API
+      or calculated automatically by the system (rental fees, add-ons, discounts, etc.).
+      Only manual costs can be added, updated, or deleted through the API.
   - name: Booking labels
     description: |
       A booking label is a tag you can assign to bookings to categorize or highlight them. Use labels to filter and organize bookings in your workflows.
