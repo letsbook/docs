@@ -1,5 +1,5 @@
 post:
-  summary: Add a manual cost
+  summary: Add a cost
   description: |
     Add a manual cost to a booking. Manual costs can be positive (additional charge)
     or negative (discount). Only manual costs can be added, edited, or deleted through
@@ -33,15 +33,7 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - costId
-                properties:
-                  costId:
-                    type: string
-                    format: uuid
-                    description: The ID of the created cost.
-                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+                $ref: ../components/schemas/Cost.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

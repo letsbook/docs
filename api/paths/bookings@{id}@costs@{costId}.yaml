@@ -1,5 +1,5 @@
 post:
-  summary: Update a manual cost
+  summary: Update a cost
   description: |
     Update an existing manual cost on a booking. Only costs with type `manual` can be
     updated. Attempting to update other cost types will result in an error.
@@ -39,15 +39,7 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - costId
-                properties:
-                  costId:
-                    type: string
-                    format: uuid
-                    description: The ID of the updated cost.
-                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+                $ref: ../components/schemas/Cost.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
@@ -77,11 +69,11 @@ post:
       $ref: ../components/responses/InternalServerError.yaml
 
 delete:
-  summary: Delete a manual cost
+  summary: Remove a cost
   description: |
-    Delete an existing manual cost from a booking. Only costs with type `manual` can be
-    deleted. Attempting to delete other cost types will result in an error.
-  operationId: deleteBookingCost
+    Remove an existing manual cost from a booking. Only costs with type `manual` can be
+    removed. Attempting to delete other cost types will result in an error.
+  operationId: removeBookingCost
   tags:
     - Booking costs
   parameters:
@@ -107,18 +99,12 @@ delete:
           schema:
             type: object
             required:
-              - data
+              - message
             properties:
-              data:
-                type: object
-                required:
-                  - costId
-                properties:
-                  costId:
-                    type: string
-                    format: uuid
-                    description: The ID of the deleted cost.
-                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+              message:
+                type: string
+                description: Result message
+                example: Cost removed.
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
@@ -140,7 +126,7 @@ delete:
                     type: string
                 example:
                   costId:
-                    - Only manual costs can be deleted.
+                    - Only manual costs can be removed.
 
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
