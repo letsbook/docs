@@ -1,6 +1,9 @@
 get:
   summary: List all product categories
-  description: Returns a list of all product categories. The response is not paginated.
+  description: |
+    Returns a list of all product categories. The response is not paginated.
+
+    Product categories are called "add-on categories" in the dashboard.
   operationId: listProductCategories
   tags:
     - Products

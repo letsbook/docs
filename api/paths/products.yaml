@@ -1,6 +1,9 @@
 get:
   summary: List all products
-  description: Retrieves a paginated list of all products available for purchase.
+  description: |
+    Retrieves a paginated list of all products available for purchase.
+
+    Products are called "add-ons" in the dashboard.
   operationId: listProducts
   tags:
     - Products

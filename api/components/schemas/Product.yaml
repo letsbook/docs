@@ -1,5 +1,5 @@
 type: object
-description: A product available for purchase
+description: A product available for purchase. Products are called "add-ons" in the dashboard.
 required:
   - id
   - name

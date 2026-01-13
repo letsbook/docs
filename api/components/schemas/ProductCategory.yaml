@@ -1,5 +1,5 @@
 type: object
-description: A product category groups related products together
+description: A product category groups related products together. Product categories are called "add-on categories" in the dashboard.
 required:
   - id
   - name
