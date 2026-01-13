@@ -11,6 +11,10 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-01-13
+    - Added new [products](/api/#tag/Products/operation/listProducts) endpoint to list all products (called "add-ons" in the dashboard)
+    - Added new [product categories](/api/#tag/Products/operation/listProductCategories) endpoint to list all product categories.
+
     ## 2025-12-24
     ### Booking labels
     - Added new [booking labels](/api/#tag/Booking-labels) endpoint
@@ -120,6 +124,8 @@ tags:
     description: |
       A product is an item available for purchase, such as equipment rentals,
       snacks, or accessories. Products can be organized into categories.
+
+      Products are called "add-ons" in the dashboard, and product categories are called "add-on categories".
   - name: Tax rates
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
