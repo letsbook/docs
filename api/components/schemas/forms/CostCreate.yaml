@@ -1,0 +1,20 @@
+description: Create a manual cost
+required:
+  - description
+  - taxRateId
+  - amountIncludingTax
+properties:
+  description:
+    type: string
+    description: Description of the cost
+    example: Cleaning fee
+  taxRateId:
+    type: string
+    format: uuid
+    description: ID of the tax rate to apply
+    example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+  amountIncludingTax:
+    type: integer
+    description: |
+      Amount including tax in cents. Can be negative to apply a discount.
+    example: 2500

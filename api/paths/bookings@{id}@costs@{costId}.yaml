@@ -1,0 +1,148 @@
+post:
+  summary: Update a manual cost
+  description: |
+    Update an existing manual cost on a booking. Only costs with type `manual` can be
+    updated. Attempting to update other cost types will result in an error.
+  operationId: updateBookingCost
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+    - name: costId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+        description: ID of the cost
+  requestBody:
+    required: true
+    description: Cost details to update. All fields are optional.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/CostUpdate.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - costId
+                properties:
+                  costId:
+                    type: string
+                    format: uuid
+                    description: The ID of the updated cost.
+                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  costId:
+                    - Only manual costs can be updated.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
+delete:
+  summary: Delete a manual cost
+  description: |
+    Delete an existing manual cost from a booking. Only costs with type `manual` can be
+    deleted. Attempting to delete other cost types will result in an error.
+  operationId: deleteBookingCost
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+    - name: costId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+        description: ID of the cost
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - costId
+                properties:
+                  costId:
+                    type: string
+                    format: uuid
+                    description: The ID of the deleted cost.
+                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  costId:
+                    - Only manual costs can be deleted.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

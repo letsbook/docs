@@ -1,0 +1,63 @@
+post:
+  summary: Confirm a booking
+  description: |
+    Confirm a draft booking by setting its status to `confirmed`. Only bookings with
+    status `draft` can be confirmed using this endpoint.
+  operationId: confirmBooking
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - bookingId
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    description: The ID of the confirmed booking.
+                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  status:
+                    - Only draft bookings can be confirmed.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
