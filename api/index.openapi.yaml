@@ -116,6 +116,10 @@ tags:
   - name: Booking labels
     description: |
       A booking label is a tag you can assign to bookings to categorize or highlight them. Use labels to filter and organize bookings in your workflows.
+  - name: Products
+    description: |
+      A product is an item available for purchase, such as equipment rentals,
+      snacks, or accessories. Products can be organized into categories.
   - name: Tax rates
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
@@ -184,6 +188,10 @@ paths:
     $ref: paths/vat-rates.yaml
   /v1/booking-labels:
     $ref: paths/booking-labels.yaml
+  /v1/products:
+    $ref: paths/products.yaml
+  /v1/product-categories:
+    $ref: paths/product-categories.yaml
   /v1/webhooks:
     $ref: paths/webhooks.yaml
   /v1/webhooks/{id}:

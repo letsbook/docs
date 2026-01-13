@@ -1,0 +1,15 @@
+type: object
+description: Summary of a product category
+required:
+  - id
+  - name
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 3f8a92c1-7b5d-4e2f-9c8a-1d6e3f2b4a5c
+    description: ID of the product category
+  name:
+    type: string
+    example: Snacks & Drinks
+    description: Name of the product category

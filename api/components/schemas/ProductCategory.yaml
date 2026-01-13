@@ -1,0 +1,34 @@
+type: object
+description: A product category groups related products together
+required:
+  - id
+  - name
+  - description
+  - sortingOrder
+  - viewType
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 3f8a92c1-7b5d-4e2f-9c8a-1d6e3f2b4a5c
+    description: ID of the product category
+  name:
+    type: string
+    example: Snacks & Drinks
+    description: Name of the product category
+  description:
+    type: string
+    example: Refreshments and snacks available for purchase
+    description: Description of the product category
+  sortingOrder:
+    type: integer
+    example: 1
+    description: Order in which the category appears in lists
+  viewType:
+    type: string
+    enum:
+      - grid
+      - bars
+      - table
+    example: grid
+    description: How products in this category are displayed

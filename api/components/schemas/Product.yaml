@@ -1,0 +1,75 @@
+type: object
+description: A product available for purchase
+required:
+  - id
+  - name
+  - shortDescription
+  - description
+  - media
+  - categories
+  - priceExcludingTax
+  - priceIncludingTax
+  - pricingMethod
+  - taxRateId
+  - inStock
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 9c2d8f4a-6e1b-4a3c-8d7f-5e9a2b1c3d4e
+    description: ID of the product
+  name:
+    type: string
+    example: Life Jacket
+    description: Name of the product
+  shortDescription:
+    type:
+      - string
+      - 'null'
+    example: USCG approved life jacket
+    description: A short description of the product
+  description:
+    type:
+      - string
+      - 'null'
+    example: USCG Type III approved life jacket suitable for all water activities. Available in multiple sizes.
+    description: A longer description of the product
+  media:
+    type: array
+    description: Photos of the product
+    items:
+      $ref: ./Media.yaml
+  categories:
+    type: array
+    description: Categories this product belongs to
+    items:
+      $ref: ./ProductCategorySummary.yaml
+  priceExcludingTax:
+    type: number
+    example: 1240
+    description: Price of the product in cents excluding tax
+  priceIncludingTax:
+    type: number
+    example: 1500
+    description: Price of the product in cents including tax
+  pricingMethod:
+    type: string
+    enum:
+      - Unit
+      - Boat
+      - Passenger
+      - HourPerBoat
+      - DayPerBoat
+      - WholeHourPerBoat
+      - WholeDayPerBoat
+    example: Unit
+    description: How the product is priced. This feature is not yet visible to customers.
+  taxRateId:
+    type: string
+    format: uuid
+    example: d8f8feb5-b8cc-4b8e-9d5c-a9d9d9d9d9d9
+    description: ID of the tax rate applied to this product. Can be null if no tax applies.
+  inStock:
+    type: boolean
+    example: true
+    description: Whether the product is currently in stock
