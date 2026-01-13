@@ -12,6 +12,19 @@ info:
     </a> to stay up to date.
 
     ## 2026-01-13
+    ### Manual costs
+    - Added new endpoint to [add a manual cost](/api/#operation/createBookingCost) to a booking
+    - Added new endpoint to [update a manual cost](/api/#operation/updateBookingCost) on a booking
+    - Added new endpoint to [delete a manual cost](/api/#operation/deleteBookingCost) from a booking
+    - Only costs with type `manual` can be added, updated, or deleted through the API
+
+    ### Confirm booking
+    - Added new endpoint to [confirm a booking](/api/#operation/confirmBooking)
+    - Added new `confirmed` property to [create](/api/#operation/createBooking) booking requests
+    - Bookings created without `confirmed: true` will be created as drafts
+    - **Deprecated:** The `paid` property is now deprecated in favor of `confirmed`. Previously, `paid: true` would add a cash payment. Now it simply confirms the booking without creating payments.
+
+    ### Products
     - Added new [products](/api/#tag/Products/operation/listProducts) endpoint to list all products (called "add-ons" in the dashboard)
     - Added new [product categories](/api/#tag/Products/operation/listProductCategories) endpoint to list all product categories.
 
@@ -184,10 +197,16 @@ paths:
     $ref: paths/bookings.yaml
   /v1/bookings/{id}:
     $ref: paths/bookings@{id}.yaml
+  /v1/bookings/{id}/confirm:
+    $ref: paths/bookings@{id}@confirm.yaml
   /v1/bookings/{id}/order:
     $ref: paths/bookings@{id}@order.yaml
   /v1/bookings/{id}/labels:
     $ref: paths/bookings@{id}@labels.yaml
+  /v1/bookings/{id}/costs:
+    $ref: paths/bookings@{id}@costs.yaml
+  /v1/bookings/{id}/costs/{costId}:
+    $ref: paths/bookings@{id}@costs@{costId}.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
