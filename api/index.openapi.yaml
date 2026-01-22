@@ -11,7 +11,7 @@ info:
       RSS feed
     </a> to stay up to date.
 
-    ## 2026-01-13
+    ## 2026-01-20
     ### Manual costs
     - Added new endpoint to [add a manual cost](/api/#operation/createBookingCost) to a booking
     - Added new endpoint to [update a manual cost](/api/#operation/updateBookingCost) on a booking
