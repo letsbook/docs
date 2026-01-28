@@ -11,6 +11,12 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-01-28
+    ### Product webhooks
+    - Added new [product.added](/api/#operation/webhookProductAdded) webhook event
+    - Added new [product.updated](/api/#operation/webhookProductUpdated) webhook event
+    - Added new [product.removed](/api/#operation/webhookProductRemoved) webhook event
+
     ## 2026-01-20
     ### Manual costs
     - Added new endpoint to [add a manual cost](/api/#operation/createBookingCost) to a booking
@@ -33,14 +39,14 @@ info:
     - Added new [booking labels](/api/#tag/Booking-labels) endpoint
     - Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
     - Added new `labels` property to the [booking response](/api/#operation/getBooking)
-    
+
     ### Booking filters
     - Added new `pickupAfter` and `pickupBefore` filters to [list bookings](/api/#operation/listBookings) to filter by pickup time
     - Added new `labelIds` filter to [list bookings](/api/#operation/listBookings) to filter by booking labels
 
     ### Cancel booking
     - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
-    
+
     ### Additional questions and answers
     - Added new [additionalQuestions](/api/#tag/Bookings/operation/getBooking) property to the booking response
 
