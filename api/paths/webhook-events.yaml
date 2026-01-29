@@ -515,3 +515,99 @@ customer.removed:
     responses:
       '200':
         description: Webhook received successfully
+product.added:
+  post:
+    operationId: webhookProductAdded
+    tags:
+      - Webhook events
+    summary: Product added
+    description: Triggered when a new product is created in the dashboard.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - product.added
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Product.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+product.updated:
+  post:
+    operationId: webhookProductUpdated
+    tags:
+      - Webhook events
+    summary: Product updated
+    description: Triggered when a product is updated. This includes changes to name, description, price, stock status, or categories.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - product.updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Product.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+product.removed:
+  post:
+    operationId: webhookProductRemoved
+    tags:
+      - Webhook events
+    summary: Product removed
+    description: Triggered when a product is removed from the system.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - product.removed
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                $ref: ../components/schemas/Product.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
