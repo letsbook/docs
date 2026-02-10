@@ -23,15 +23,11 @@ properties:
     example: Life Jacket
     description: Name of the product
   shortDescription:
-    type:
-      - string
-      - 'null'
+    type: string
     example: USCG approved life jacket
     description: A short description of the product
   description:
-    type:
-      - string
-      - 'null'
+    type: string
     example: USCG Type III approved life jacket suitable for all water activities. Available in multiple sizes.
     description: A longer description of the product
   media:
