@@ -88,6 +88,13 @@ properties:
     description: Labels assigned to this booking
     items:
       $ref: ./BookingLabel.yaml
+  partnerCode:
+    type:
+      - string
+      - 'null'
+    description: Partner code associated with the booking, if any.
+    pattern: "^[a-z0-9\\-_]{1,32}$"
+    example: hotel-xyz
   createdAt:
     type: string
     format: date-time
