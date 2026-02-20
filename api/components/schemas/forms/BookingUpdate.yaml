@@ -18,5 +18,5 @@ allOf:
           Partner code to associate with the booking. Send null to clear
           an existing partner code. Omit the field entirely to leave it
           unchanged.
-        pattern: "^[a-zA-Z0-9\\-_]{1,32}$"
+        pattern: "^[a-z0-9\\-_]{1,32}$"
         example: hotel-xyz
