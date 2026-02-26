@@ -24,3 +24,8 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+tsconfig.tsbuildinfo
+src/theme/BlogPostPage/index.tsx
+package-lock.json
+package.json
+package.json
