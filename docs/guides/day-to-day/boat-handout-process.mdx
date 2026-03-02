@@ -6,9 +6,7 @@ sidebar_position: 4
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 
-import startTripMethod1Video from './graphics/start_trip_method1.mp4';
 import startTripMethod2Video from './graphics/start_trip_method2.mp4';
-import stopTripVideo from './graphics/stop_trip.mp4';
 import switchBoatVideo from './graphics/switch_boat.mp4';
 
 # Boat handout process
@@ -28,12 +26,6 @@ When bookings are about to start (approximately 30 minutes before departure), yo
 
 This method efficiently assigns boats based on what's physically available. It's typically used by dock hosts managing multiple departures.
 
-🔴 **VERVANG:**
-<InlineVideoPlayer
-    videoSrc={startTripMethod1Video}
-    title="Assign from fleet overview"
-/>
-
 ### Method 2: From booking details
 
 Use this when customers arrive and you want to look up their specific booking first:
@@ -44,7 +36,6 @@ Use this when customers arrive and you want to look up their specific booking fi
 4. Select the boat from the dropdown list
 5. Click **Start trip** when customer departs
 
-🔴 **VERVANG:**
 <InlineVideoPlayer
     videoSrc={startTripMethod2Video}
     title="Assign from booking details"
@@ -61,19 +52,12 @@ Once boats are assigned and trips are running, you have several control options:
 - **Pause trip:** Temporarily pause for lunch breaks, fuel stops, or other interruptions
 - **End trip:** Complete the rental and release the boat
 
-🔴 **VERVANG:**
 <InlineVideoPlayer videoSrc={switchBoatVideo} title="Switch boat during trip" />
 
 ### From fleet view
 
 - **Stop button:** End any active trip directly from the [Fleet view](https://dashboard.letsbook.app/fleet)
 - **Status monitoring:** See which boats are in use, available, along with which booking is assigned to each boat and expected return times
-
-🔴 **VERVANG:**
-<InlineVideoPlayer
-    videoSrc={stopTripVideo}
-    title="Stop trip from fleet overview"
-/>
 
 ## Connected fleet features
 
@@ -84,7 +68,7 @@ If your boats have hardware connections:
 
 ## Planning philosophy
 
-:::info[Why flexible boat assignments work]
+:::info[How flexible boat assignments work]
 
 Let's Book uses a two-tier planning system that maximizes your booking capacity:
 
@@ -98,5 +82,3 @@ Let's Book uses a two-tier planning system that maximizes your booking capacity:
 You only assign the specific physical boat when the trip is about to start, giving you maximum flexibility while maintaining full operational control.
 
 :::
-
-This system balances operational efficiency with planning flexibility, letting you run a tight operation while keeping customers happy with reliable boat availability.
