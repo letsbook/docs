@@ -6,7 +6,9 @@ sidebar_position: 4
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 
+import startTripMethod1Video from './graphics/start_trip_method1.mp4';
 import startTripMethod2Video from './graphics/start_trip_method2.mp4';
+import stopTripVideo from './graphics/stop_trip.mp4';
 import switchBoatVideo from './graphics/switch_boat.mp4';
 
 # Boat handout process
@@ -19,12 +21,17 @@ When bookings are about to start (approximately 30 minutes before departure), yo
 
 ### Method 1: Fleet overview (primary)
 
-1. Go to [Fleet view](https://dashboard.letsbook.app/fleet)
+1. Go to [planning overview](https://dashboard.letsbook.app/planning), then open the Fleet view
 2. Click **Start** next to any available boat
 3. Select the booking from the popup list
 4. Click **"Start trip"** to begin
 
 This method efficiently assigns boats based on what's physically available. It's typically used by dock hosts managing multiple departures.
+
+<InlineVideoPlayer
+    videoSrc={startTripMethod1Video}
+    title="Assign from fleet overview"
+/>
 
 ### Method 2: From booking details
 
@@ -59,6 +66,11 @@ Once boats are assigned and trips are running, you have several control options:
 - **Stop button:** End any active trip directly from the fleet view
 - **Status monitoring:** See which boats are in use, available, along with which booking is assigned to each boat and expected return times
 
+<InlineVideoPlayer
+    videoSrc={stopTripVideo}
+    title="Stop trip from fleet overview"
+/>
+
 ## Connected fleet features
 
 If your boats have hardware connections:
@@ -82,3 +94,5 @@ Let's Book uses a two-tier planning system that maximizes your booking capacity:
 You only assign the specific physical boat when the trip is about to start, giving you maximum flexibility while maintaining full operational control.
 
 :::
+
+This system balances operational efficiency with planning flexibility, letting you run a tight operation while keeping customers happy with reliable boat availability.
