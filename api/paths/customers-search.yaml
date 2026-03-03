@@ -29,7 +29,11 @@ get:
                 items:
                   $ref: ../components/schemas/Customer.yaml
               pagination:
-                $ref: ../components/schemas/Pagination.yaml
+                allOf:
+                  - $ref: ../components/schemas/Pagination.yaml
+                  - properties:
+                      nextPageUrl:
+                        example: https://api.letsbook.app/v1/customers/search?page=2
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '429':

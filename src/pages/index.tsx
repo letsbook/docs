@@ -1,12 +1,11 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Features from '@site/src/pages/_home/components/Features';
+import GettingStarted from '@site/src/pages/_home/components/GettingStarted';
+import Hero from '@site/src/pages/_home/components/Hero';
+import QuickActions from '@site/src/pages/_home/components/QuickActions';
+import ReleaseBanner from '@site/src/pages/_home/components/ReleaseBanner';
 import Layout from '@theme/Layout';
 import type { ReactNode } from 'react';
-
-import Features from './Homepage/components/Features';
-import GettingStarted from './Homepage/components/GettingStarted';
-import Hero from './Homepage/components/Hero';
-import QuickActions from './Homepage/components/QuickActions';
-import ReleaseBanner from './Homepage/components/ReleaseBanner';
 
 export default function Home(): ReactNode {
     const { siteConfig } = useDocusaurusContext();

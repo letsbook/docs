@@ -1,0 +1,14 @@
+type: object
+description: Parameters for replacing all labels on a booking.
+required:
+  - labelIds
+properties:
+  labelIds:
+    type: array
+    description: The complete set of label IDs to assign to the booking. Any labels not listed here are removed.
+    items:
+      type: string
+      format: uuid
+    example:
+      - 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+      - 551ceb1c-6fbc-479b-819d-734f4044eca2

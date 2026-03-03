@@ -17,6 +17,9 @@ items:
     - customer.registered
     - customer.updated
     - customer.removed
+    - product.added
+    - product.updated
+    - product.removed
 description: Events to get notified about
 example:
   - booking.confirmed

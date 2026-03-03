@@ -5,6 +5,7 @@ allOf:
       - url
       - customer
       - financialDetails
+      - additionalQuestions
     properties:
       url:
         type:
@@ -124,3 +125,8 @@ allOf:
                 type: array
                 items:
                   $ref: ./Deposit.yaml
+      additionalQuestions:
+        type: array
+        description: Additional questions answered by the customer during booking
+        items:
+          $ref: ./AdditionalQuestion.yaml

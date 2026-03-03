@@ -10,6 +10,7 @@ required:
   - return
   - boats
   - passengers
+  - labels
   - createdAt
   - updatedAt
 properties:
@@ -82,6 +83,18 @@ properties:
     example: 1
     description: Number of passengers including the customer who booked the boat
     default: 1
+  labels:
+    type: array
+    description: Labels assigned to this booking
+    items:
+      $ref: ./BookingLabel.yaml
+  partnerCode:
+    type:
+      - string
+      - 'null'
+    description: Partner code associated with the booking, if any.
+    pattern: "^[a-z0-9\\-_]{1,32}$"
+    example: hotel-xyz
   createdAt:
     type: string
     format: date-time

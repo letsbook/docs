@@ -84,3 +84,73 @@ post:
       $ref: ../components/responses/TooManyAttempts.yaml
     '500':
       $ref: ../components/responses/InternalServerError.yaml
+
+delete:
+  summary: Cancel a booking
+  description: |
+    Cancel an existing booking by setting its status to `canceled`. Only bookings with status `confirmed` or `completed` can be canceled. For `confirmed` bookings, cancellation is only allowed if none of the trips are currently in progress.
+  operationId: cancelBooking
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+  requestBody:
+    required: true
+    description: Cancellation parameters.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/BookingCancel.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - bookingId
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    description: The ID of the canceled booking.
+                    example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  reason:
+                    - Cannot cancel booking because it has one or more active trips.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

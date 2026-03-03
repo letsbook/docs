@@ -8,9 +8,9 @@
         "start": "docusaurus start",
         "prebuild": "node scripts/generate-latest-release.js",
         "build": "docusaurus build",
-        "postbuild": "cp build/redocusaurus/api.yaml build/api.yaml",
+        "postbuild": "cp build/redocusaurus/api.yaml build/api.yaml && npm run generate-api-rss",
+        "generate-api-rss": "node scripts/generate-openapi-rss.js",
         "swizzle": "docusaurus swizzle",
-        "deploy": "docusaurus deploy",
         "clear": "docusaurus clear",
         "serve": "docusaurus serve",
         "write-translations": "docusaurus write-translations",
@@ -35,7 +35,8 @@
         "prism-react-renderer": "^2.3.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "redocusaurus": "^2.5.0"
+        "redocusaurus": "^2.5.0",
+        "wrangler": "^4.56.0"
     },
     "devDependencies": {
         "@docusaurus/module-type-aliases": "^3.9.2",
@@ -43,12 +44,9 @@
         "@docusaurus/types": "^3.9.2",
         "@redocly/cli": "^2.11.1",
         "@trivago/prettier-plugin-sort-imports": "^5.2.2",
-        "autoprefixer": "^10.4.22",
         "playwright": "^1.55.0",
-        "postcss": "^8.5.6",
         "prettier": "^3.6.2",
         "sharp": "^0.34.4",
-        "tailwindcss": "^4.1.17",
         "typescript": "~5.6.2"
     },
     "browserslist": {
