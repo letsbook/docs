@@ -15,6 +15,6 @@ allOf:
         default: false
         type: boolean
         description: |
-          If set to true, the customer will receive an email containing
-          their login credentials.
+          If set to true, the customer will receive a welcome email
+          containing a password reset link to set up their account.
         example: true

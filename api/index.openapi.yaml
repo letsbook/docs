@@ -11,6 +11,11 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-03-31
+    ### Customers
+    - The `password` property is now ignored on the [create customer](/api/#operation/createCustomer) and [update customer](/api/#operation/updateCustomer) endpoints
+    - When `notifyCustomer` is set to true, the [create customer](/api/#operation/createCustomer) endpoint now sends a welcome email with a password reset link instead of login credentials
+
     ## 2026-01-28
     ### Product webhooks
     - Added new [product.added](/api/#operation/webhookProductAdded) webhook event

@@ -28,10 +28,9 @@ properties:
     example: sv_SE
   password:
     type: string
+    deprecated: true
     description: |
-      Password of the customer. Should be left empty if you don't want to
-      change the password. It will be set to a random password if you don't
-      specify one when creating a new customer.
-
-      **Note:** The password must be at least 8 characters long.
+      This property is deprecated and will be ignored. Passwords can no longer
+      be set through the API. When creating a customer with `notifyCustomer`
+      set to true, a welcome email with a password reset link is sent instead.
     example: correcthorsebatterystaple
