@@ -37,4 +37,11 @@ Set partner-specific prices in [pricing](https://dashboard.letsbook.app/pricing)
 - Under Conditions, select Booked via partner, then pick the partner identifier.
 - Save.
 
-By following these steps, you can efficiently manage partner bookings and foster collaboration with your affiliates. For additional assistance or inquiries, reach out to our dedicated support team at support@lets-book.com.
+## Manually assign a partner to a booking
+
+When a partner sends you a booking request directly, you can assign them when creating a booking as an admin. The booking then automatically applies that partner's pricing, add-ons, and other settings.
+
+1. Go to [Add booking](https://dashboard.letsbook.app/bookings/add)
+2. Fill in the customer and booking details
+3. Under **Partner**, select the partner identifier
+4. Complete and confirm the booking as usual
