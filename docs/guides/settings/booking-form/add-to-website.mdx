@@ -12,7 +12,7 @@ Get your booking form live in two steps: first add our script to load the widget
 
 ## Step 1: Add the script
 
-Paste this snippet on your site to load the booking widget. You can also find it in the [integration instructions](https://dashboard.letsbook.app/booking-form/integration-instructions).
+Add the following snippet to the `<head>` section of your website. You can also find it in the [integration instructions](https://dashboard.letsbook.app/booking-form/integration-instructions).
 
 ```html
 <!-- Start of Let's Book widget -->
@@ -24,10 +24,12 @@ Paste this snippet on your site to load the booking widget. You can also find it
 <!-- End of Let's Book widget -->
 ```
 
-Pick your platform:
+Using WordPress, Wix, or Squarespace? Follow the steps for your platform:
 
 <Tabs queryString="platform">
     <TabItem label="WordPress" value="wordpress" default>
+        Our WordPress plugin handles the script for you, so you can skip the snippet above.
+
         1. Download our [WordPress plugin](https://lets-book.com/s/letsbook-easy-embed-fpes.zip).
         1. Log in to WordPress. Go to Plugins, then Add New Plugin.
         1. Click Upload Plugin. Select the zip you downloaded (letsbook-easy-embed.zip).
@@ -48,10 +50,6 @@ Pick your platform:
         1. Go to Pages > Custom code > Code injection. You may need to scroll to the bottom of the page.
         1. In the Header field, paste the snippet.
         1. Click Save.
-    </TabItem>
-
-    <TabItem label="Other" value="general">
-        Add the snippet to your site by placing it in the <code>&lt;head&gt;</code> section.
     </TabItem>
 
 </Tabs>
