@@ -51,4 +51,4 @@ Once it's live, make a booking from your phone just to be sure.
 
 ---
 
-That's it. Five checks, and you're ready to accept real bookings. Switch your dashboard to live mode and let the bookings roll in.
+That's it. Five checks, and you're ready to accept real bookings. Switch to live mode on your dashboard and let the bookings roll in.
