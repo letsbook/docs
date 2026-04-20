@@ -30,8 +30,9 @@ properties:
     $ref: ../parameters/webhookEvent.yaml
   tenantIds:
     type: array
-    description: The tenant this event applies to. You can leave it empty to set
-      it to all tenants the current API key has access to.
+    description:
+      The organisation this event applies to. You can leave it empty to set
+      it to all organisations the current API key has access to.
     example: ['8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278']
     items:
       type: string
