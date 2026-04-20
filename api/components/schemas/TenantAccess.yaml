@@ -1,5 +1,5 @@
 type: object
-description: Tenant the user has access to
+description: Organisation the user has access to
 required:
   - id
   - name
@@ -9,12 +9,12 @@ properties:
     type: string
     format: uuid
     example: '1e48f449-d111-4323-87c5-eeab2d2ceb91'
-    description: The ID of the tenant
+    description: The ID of the organisation
   name:
     type: string
-    example: 'My tenant'
-    description: The name of the tenant
+    example: 'My organisation'
+    description: The name of the organisation
   slug:
     type: string
-    example: 'my-tenant'
+    example: 'my-organisation'
     description: The slug which is used in the customer facing URLs

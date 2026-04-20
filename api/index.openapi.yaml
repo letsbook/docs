@@ -94,15 +94,15 @@ info:
     Authorization: Bearer ac11f67b-1dcb-460c-aff3-f1ef35cd3c1c|pMKSUHcHXd7706zhHwBE040alh1BSY9RPsu6ZQ04
     ```
 
-    # Multiple tenants
+    # Multiple organisations
 
-    If your API user has access to multiple [tenants](#tag/Me), include the `X-Tenant-Id` 
-    header with every request. Without this header, we default to your primary tenant.
+    If your API user has access to multiple [organisations](#tag/Me) (tenants), include the `X-Tenant-Id` 
+    header with every request. Without this header, we default to your primary organisation.
 
     ### Example
 
-    Use the `/me` endpoint to retrieve all tenants you can access. Then use the `id` of your 
-    desired tenant. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
+    Use the `/me` endpoint to retrieve all organisation you can access. Then use the `id` of your 
+    desired organisation. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
     configure the header like this:
 
     ```

@@ -28,15 +28,15 @@ get:
                     description: The description of the API key as provided in the dashboard
                   currentTenant:
                     description: |
-                      The primary tenant when no other tenant is
-                      [selected](#section/Multiple-tenants), or null when the
-                      user has no access to any tenant.
+                      The primary organisation (tenant) when no other organisation is
+                      [selected](#section/Multiple-organisation), or null when the
+                      user has no access to any organisation.
                     oneOf:
                       - $ref: ../components/schemas/TenantAccess.yaml
                       - type: 'null'
                   tenants:
                     type: array
-                    description: The tenants to which the API key has access
+                    description: The organisations (tenants) to which the API key has access
                     example:
                       - id: 1e48f449-d111-4323-87c5-eeab2d2ceb91
                         name: Barry's boats
