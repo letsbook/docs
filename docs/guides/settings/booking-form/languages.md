@@ -29,3 +29,7 @@ You can remove a language. Note that any custom translations will be removed wit
 :::note
 You cannot remove your default language
 :::
+
+## Language-specific URLs
+
+In [General Info](https://dashboard.letsbook.app/general-info), click the globe icon next to your terms & conditions URL or [custom return URL](/guides/settings/dive-deeper/custom-return-url) to set a different URL per activated language. The booking form serves the right one based on the customer's language.

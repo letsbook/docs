@@ -27,6 +27,7 @@ Each partner gets a unique trackable URL. When customers book through that URL, 
 - Tags the booking with partner identifier
 - Applies partner-specific pricing (if configured)
 - Shows booking source in your dashboard
+- Includes the partner code in your booking confirmation, update, and cancellation emails
 
 Full setup guide: [partner bookings](/guides/settings/dive-deeper/partner-bookings)
 
