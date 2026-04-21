@@ -27,7 +27,7 @@ const Button = ({
             to={href}
             className={clsx(styles.Root, {
                 [styles.primary]: variant === 'primary',
-                [styles.secondary]: variant === 'secondary',
+                [styles.subtle]: variant === 'subtle',
             })}
             {...(external
                 ? { target: '_blank', rel: 'noopener noreferrer' }
