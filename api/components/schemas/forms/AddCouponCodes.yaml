@@ -1,0 +1,20 @@
+type: object
+description: Parameters for adding manually specified codes to a coupon.
+required:
+  - codes
+properties:
+  codes:
+    type: array
+    description: List of codes to add to the coupon. Each code must be unique within the coupon.
+    items:
+      type: string
+      maxLength: 255
+      example: SUMMER2026
+  maxUsages:
+    type: integer
+    minimum: 1
+    maximum: 100000
+    default: 1
+    description: |
+      Maximum number of times each code can be used. Defaults to `1` when omitted.
+    example: 5

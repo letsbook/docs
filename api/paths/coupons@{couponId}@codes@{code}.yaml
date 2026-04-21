@@ -1,0 +1,35 @@
+delete:
+  summary: Archive a coupon code
+  description: |
+    Archive a single code belonging to a coupon. Archived codes are hidden from all
+    listing and retrieval endpoints. Returns a 404 response when the code is already
+    archived or does not exist.
+  operationId: archiveCouponCode
+  tags:
+    - Coupons
+  parameters:
+    - name: couponId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the coupon
+    - name: code
+      in: path
+      required: true
+      schema:
+        type: string
+        example: SUMMER2026
+        description: The coupon code to archive
+  responses:
+    '204':
+      description: No content.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

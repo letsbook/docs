@@ -1,0 +1,18 @@
+type: object
+description: Parameters for creating a fixed-amount coupon.
+required:
+  - name
+  - amount
+properties:
+  name:
+    type: string
+    maxLength: 255
+    description: Name of the coupon
+    example: Welcome gift
+  amount:
+    type: number
+    minimum: 1
+    description: |
+      Discount amount applied when a code of this coupon is used, in the organisation's
+      default currency (major units, e.g. euros).
+    example: 25

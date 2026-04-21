@@ -1,0 +1,71 @@
+post:
+  summary: Generate coupon codes
+  description: |
+    Generate new codes for a coupon. Each generated code consists of a random alphanumeric
+    string of the requested `length`, optionally wrapped with the supplied `prefix` and
+    `suffix`. Returns a 404 response when the coupon is archived or does not exist.
+  operationId: generateCouponCodes
+  tags:
+    - Coupons
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the coupon
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/GenerateCouponCodes.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - pagination
+            properties:
+              data:
+                type: array
+                description: The codes that were just generated.
+                items:
+                  $ref: ../components/schemas/CouponCode.yaml
+              pagination:
+                allOf:
+                  - $ref: ../components/schemas/Pagination.yaml
+                  - properties:
+                      nextPageUrl:
+                        example: https://api.letsbook.app/v1/coupons/8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278/codes?page=2
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  length:
+                    - The length must be between 4 and 32.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

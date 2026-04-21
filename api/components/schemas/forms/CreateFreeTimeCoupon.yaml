@@ -1,0 +1,17 @@
+type: object
+description: Parameters for creating a free-time coupon.
+required:
+  - name
+  - freeTime
+properties:
+  name:
+    type: string
+    maxLength: 255
+    description: Name of the coupon
+    example: 2 hours free
+  freeTime:
+    type: string
+    description: |
+      Duration of free time granted when a code of this coupon is used, expressed as a
+      number followed by a unit (`minutes`, `hours`, or `days`).
+    example: 2 hours

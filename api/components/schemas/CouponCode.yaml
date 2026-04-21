@@ -1,0 +1,21 @@
+description: A single code belonging to a coupon.
+required:
+  - code
+  - usages
+  - maxUsages
+properties:
+  code:
+    type: string
+    description: The coupon code as it is entered by the customer.
+    example: SUMMER2026
+  usages:
+    type: integer
+    description: Number of times this code has been used.
+    example: 3
+  maxUsages:
+    type:
+      - integer
+      - 'null'
+    description: |
+      Maximum number of times this code can be used. Null when there is no limit.
+    example: 5

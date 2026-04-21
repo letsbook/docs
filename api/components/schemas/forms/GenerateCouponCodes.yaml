@@ -1,0 +1,37 @@
+type: object
+description: Parameters for generating codes for a coupon.
+required:
+  - quantity
+  - length
+properties:
+  quantity:
+    type: integer
+    minimum: 1
+    maximum: 10000
+    description: Number of codes to generate. Must be between `1` and `10000`.
+    example: 100
+  length:
+    type: integer
+    minimum: 4
+    maximum: 32
+    description: Length of each generated code, excluding any `prefix` or `suffix`.
+    example: 8
+  prefix:
+    type: string
+    maxLength: 255
+    description: Optional prefix prepended to every generated code.
+    example: SUMMER-
+  suffix:
+    type: string
+    maxLength: 255
+    description: Optional suffix appended to every generated code.
+    example: '-2026'
+  maxUsages:
+    type: integer
+    minimum: 1
+    maximum: 100000
+    default: 1
+    description: |
+      Maximum number of times each generated code can be used. Defaults to `1` when
+      omitted.
+    example: 1

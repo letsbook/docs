@@ -1,0 +1,52 @@
+description: A coupon that gives away a specific product when redeemed.
+required:
+  - id
+  - name
+  - type
+  - giveawayProductId
+  - codesCount
+  - totalUsages
+  - maxUsages
+  - createdAt
+properties:
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier of the coupon
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+  name:
+    type: string
+    description: Name of the coupon
+    example: Free drink
+  type:
+    type: string
+    enum:
+      - giveaway
+    description: The coupon type discriminator.
+    example: giveaway
+  giveawayProductId:
+    type: string
+    format: uuid
+    description: ID of the product that is given away when a code of this coupon is used.
+    example: 3462e0cd-a446-49b7-bf18-b5e1c78098ca
+  codesCount:
+    type: integer
+    description: Number of codes associated with this coupon.
+    example: 10
+  totalUsages:
+    type: integer
+    description: Total number of times codes of this coupon have been used.
+    example: 3
+  maxUsages:
+    type:
+      - integer
+      - 'null'
+    description: |
+      Maximum number of times codes of this coupon can be used in total. Null when there
+      is no overall limit.
+    example: null
+  createdAt:
+    type: string
+    format: date-time
+    description: Timestamp of when the coupon was created in ISO 8601 format
+    example: 2026-04-20T12:00:00+00:00

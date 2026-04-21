@@ -1,0 +1,60 @@
+post:
+  summary: Create a fixed-amount coupon
+  description: |
+    Creates a new coupon that discounts a fixed amount off the booking total.
+  operationId: createFixedAmountCoupon
+  tags:
+    - Coupons
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/CreateFixedAmountCoupon.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - couponId
+                properties:
+                  couponId:
+                    type: string
+                    format: uuid
+                    description: The unique identifier of the newly created coupon.
+                    example: '8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  name:
+                    - The name field is required.
+                  amount:
+                    - The amount must be at least 1.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

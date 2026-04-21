@@ -1,0 +1,17 @@
+type: object
+description: Parameters for creating a giveaway coupon.
+required:
+  - name
+  - productId
+properties:
+  name:
+    type: string
+    maxLength: 255
+    description: Name of the coupon
+    example: Free drink
+  productId:
+    type: string
+    format: uuid
+    description: |
+      ID of the product that will be given away when a code of this coupon is used.
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278

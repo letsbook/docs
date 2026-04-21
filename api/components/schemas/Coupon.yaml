@@ -1,0 +1,19 @@
+description: |
+  A coupon. The specific shape depends on the coupon `type`:
+
+  - `percentage` — discounts a percentage off the booking total
+  - `fixedAmount` — discounts a fixed amount off the booking total
+  - `freeTime` — grants a fixed amount of free rental time
+  - `giveaway` — gives away a specific product
+oneOf:
+  - $ref: ./PercentageCoupon.yaml
+  - $ref: ./FixedAmountCoupon.yaml
+  - $ref: ./FreeTimeCoupon.yaml
+  - $ref: ./GiveawayCoupon.yaml
+discriminator:
+  propertyName: type
+  mapping:
+    percentage: ./PercentageCoupon.yaml
+    fixedAmount: ./FixedAmountCoupon.yaml
+    freeTime: ./FreeTimeCoupon.yaml
+    giveaway: ./GiveawayCoupon.yaml
