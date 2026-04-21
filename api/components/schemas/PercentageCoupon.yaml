@@ -25,9 +25,12 @@ properties:
     description: The coupon type discriminator.
     example: percentage
   percentage:
-    type: number
-    description: Discount percentage applied when a code of this coupon is used.
-    example: 10
+    type: string
+    pattern: '^-?\d+(\.\d+)?$'
+    description: >
+      Discount percentage applied when a code of this coupon is used. Expressed
+      as a numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision.
+    example: "10"
   codesCount:
     type: integer
     description: Number of codes associated with this coupon.
