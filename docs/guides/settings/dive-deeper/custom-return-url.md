@@ -15,7 +15,7 @@ Use our [automatic Google Analytics integration](/guides/settings/dive-deeper/co
 1. Find Custom return URL.
 1. Enter the URL of your confirmation page.
 
-Running in multiple languages? Click the globe icon next to the field to set a different return URL per activated language. The booking form picks the right one based on the customer's language.
+Running in multiple languages? Click the translation icon inside the field to set a different return URL per activated language. The booking form picks the right one based on the customer's language.
 
 :::note
 When you use a custom return URL, you are responsible for sending purchase events to your analytics tool.
