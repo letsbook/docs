@@ -12,20 +12,10 @@ info:
     </a> to stay up to date.
 
     ## 2026-04-20
-
-    ### Coupons (new)
-    - Added [list coupons](/api/#operation/listCoupons) endpoint (GET /v1/coupons)
-    - Added [retrieve coupon](/api/#operation/retrieveCoupon) endpoint (GET /v1/coupons/{id})
-    - Added [update coupon](/api/#operation/updateCoupon) endpoint (POST /v1/coupons/{id})
-    - Added [archive coupon](/api/#operation/archiveCoupon) endpoint (DELETE /v1/coupons/{id})
-    - Added [create percentage coupon](/api/#operation/createPercentageCoupon) endpoint (POST /v1/coupons/percentage)
-    - Added [create fixed-amount coupon](/api/#operation/createFixedAmountCoupon) endpoint (POST /v1/coupons/fixedAmount)
-    - Added [create free-time coupon](/api/#operation/createFreeTimeCoupon) endpoint (POST /v1/coupons/freeTime)
-    - Added [create giveaway coupon](/api/#operation/createGiveawayCoupon) endpoint (POST /v1/coupons/giveaway)
-    - Added [list coupon codes](/api/#operation/listCouponCodes) endpoint (GET /v1/coupons/{id}/codes)
-    - Added [add coupon codes](/api/#operation/addCouponCodes) endpoint (POST /v1/coupons/{id}/codes)
-    - Added [generate coupon codes](/api/#operation/generateCouponCodes) endpoint (POST /v1/coupons/{id}/codes/generate)
-    - Added [archive coupon code](/api/#operation/archiveCouponCode) endpoint (DELETE /v1/coupons/{couponId}/codes/{code})
+    ### Coupons
+    - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed-amount](/api/#operation/createFixedAmountCoupon), [free-time](/api/#operation/createFreeTimeCoupon), and [giveaway](/api/#operation/createGiveawayCoupon) coupons
+    - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/retrieveCoupon), [update](/api/#operation/updateCoupon), and [archive](/api/#operation/archiveCoupon) coupons
+    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), and [archive](/api/#operation/archiveCouponCode) coupon codes
 
     ## 2026-03-31
     ### Customers
