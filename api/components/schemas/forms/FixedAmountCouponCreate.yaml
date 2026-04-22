@@ -10,9 +10,9 @@ properties:
     description: Name of the coupon
     example: Welcome gift
   amount:
-    type: number
+    type: integer
     minimum: 1
     description: |
-      Discount amount applied when a code of this coupon is used, in the organisation's
-      default currency (major units, e.g. euros).
-    example: 25
+      Discount amount applied when a code of this coupon is used, in cents of the
+      organisation's default currency.
+    example: 2500

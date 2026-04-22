@@ -10,7 +10,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CreatePercentageCoupon.yaml
+          $ref: ../components/schemas/forms/PercentageCouponCreate.yaml
   responses:
     '200':
       description: OK

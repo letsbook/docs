@@ -1,14 +1,14 @@
 delete:
-  summary: Archive a coupon code
+  summary: Remove a coupon code
   description: |
-    Archive a single code belonging to a coupon. Archived codes are hidden from all
-    listing and retrieval endpoints. Returns a 404 response when the code is already
-    archived or does not exist.
-  operationId: archiveCouponCode
+    Remove a single code from a coupon. Removed codes are hidden from all listing and
+    retrieval endpoints. Returns a 404 response when the code does not exist or has
+    already been removed.
+  operationId: removeCouponCode
   tags:
     - Coupons
   parameters:
-    - name: couponId
+    - name: id
       in: path
       required: true
       schema:
@@ -21,7 +21,7 @@ delete:
       schema:
         type: string
         example: SUMMER2026
-        description: The coupon code to archive
+        description: The coupon code to remove
   responses:
     '204':
       description: No content.

@@ -1,8 +1,9 @@
 get:
   summary: List coupon codes
   description: |
-    Retrieves a paginated list of all codes belonging to a coupon. Archived codes are
-    not returned. Returns a 404 response when the coupon is archived or does not exist.
+    Retrieves a paginated list of all codes belonging to a coupon. Removed codes are
+    not returned. Returns a 404 response when the coupon does not exist or has been
+    removed.
   operationId: listCouponCodes
   tags:
     - Coupons
@@ -49,7 +50,7 @@ post:
   description: |
     Add one or more manually specified codes to a coupon. All codes must be unique within
     the coupon; the request fails if any of the provided codes already exist. Returns a
-    404 response when the coupon is archived or does not exist.
+    404 response when the coupon does not exist or has been removed.
   operationId: addCouponCodes
   tags:
     - Coupons
@@ -66,7 +67,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/AddCouponCodes.yaml
+          $ref: ../components/schemas/forms/CouponCodesAdd.yaml
   responses:
     '200':
       description: OK
@@ -75,19 +76,12 @@ post:
           schema:
             required:
               - data
-              - pagination
             properties:
               data:
                 type: array
                 description: The codes that were just added.
                 items:
                   $ref: ../components/schemas/CouponCode.yaml
-              pagination:
-                allOf:
-                  - $ref: ../components/schemas/Pagination.yaml
-                  - properties:
-                      nextPageUrl:
-                        example: https://api.letsbook.app/v1/coupons/8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278/codes?page=2
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

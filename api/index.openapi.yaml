@@ -14,8 +14,8 @@ info:
     ## 2026-04-20
     ### Coupons
     - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed-amount](/api/#operation/createFixedAmountCoupon), [free-time](/api/#operation/createFreeTimeCoupon), and [giveaway](/api/#operation/createGiveawayCoupon) coupons
-    - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/retrieveCoupon), [update](/api/#operation/updateCoupon), and [archive](/api/#operation/archiveCoupon) coupons
-    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), and [archive](/api/#operation/archiveCouponCode) coupon codes
+    - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/getCoupon), [update](/api/#operation/updateCoupon), and [remove](/api/#operation/removeCoupon) coupons
+    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), and [remove](/api/#operation/removeCouponCode) coupon codes
 
     ## 2026-03-31
     ### Customers
@@ -244,10 +244,10 @@ paths:
     $ref: paths/coupons.yaml
   /v1/coupons/percentage:
     $ref: paths/coupons@percentage.yaml
-  /v1/coupons/fixedAmount:
-    $ref: paths/coupons@fixedAmount.yaml
-  /v1/coupons/freeTime:
-    $ref: paths/coupons@freeTime.yaml
+  /v1/coupons/fixed-amount:
+    $ref: paths/coupons@fixed-amount.yaml
+  /v1/coupons/free-time:
+    $ref: paths/coupons@free-time.yaml
   /v1/coupons/giveaway:
     $ref: paths/coupons@giveaway.yaml
   /v1/coupons/{id}:
@@ -256,8 +256,8 @@ paths:
     $ref: paths/coupons@{id}@codes.yaml
   /v1/coupons/{id}/codes/generate:
     $ref: paths/coupons@{id}@codes@generate.yaml
-  /v1/coupons/{couponId}/codes/{code}:
-    $ref: paths/coupons@{couponId}@codes@{code}.yaml
+  /v1/coupons/{id}/codes/{code}:
+    $ref: paths/coupons@{id}@codes@{code}.yaml
   /v1/webhooks:
     $ref: paths/webhooks.yaml
   /v1/webhooks/{id}:

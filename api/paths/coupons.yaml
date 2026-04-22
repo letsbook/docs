@@ -1,7 +1,7 @@
 get:
   summary: List all coupons
   description: |
-    Retrieves a paginated list of all coupons. Archived coupons are not returned.
+    Retrieves a paginated list of all coupons.
   operationId: listCoupons
   tags:
     - Coupons
