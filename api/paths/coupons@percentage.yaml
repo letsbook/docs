@@ -22,15 +22,7 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - couponId
-                properties:
-                  couponId:
-                    type: string
-                    format: uuid
-                    description: The unique identifier of the newly created coupon.
-                    example: '8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278'
+                $ref: ../components/schemas/PercentageCoupon.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '422':
