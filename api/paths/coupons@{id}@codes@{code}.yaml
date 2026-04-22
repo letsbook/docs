@@ -1,9 +1,7 @@
 delete:
   summary: Remove a coupon code
   description: |
-    Remove a single code from a coupon. Removed codes are hidden from all listing and
-    retrieval endpoints. Returns a 404 response when the code does not exist or has
-    already been removed.
+    Remove a single code from a coupon.
   operationId: removeCouponCode
   tags:
     - Coupons

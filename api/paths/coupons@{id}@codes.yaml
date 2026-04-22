@@ -1,9 +1,7 @@
 get:
   summary: List coupon codes
   description: |
-    Retrieves a paginated list of all codes belonging to a coupon. Removed codes are
-    not returned. Returns a 404 response when the coupon does not exist or has been
-    removed.
+    Retrieves a paginated list of all codes belonging to a coupon.
   operationId: listCouponCodes
   tags:
     - Coupons
@@ -49,8 +47,7 @@ post:
   summary: Add coupon codes
   description: |
     Add one or more manually specified codes to a coupon. All codes must be unique within
-    the coupon; the request fails if any of the provided codes already exist. Returns a
-    404 response when the coupon does not exist or has been removed.
+    the coupon; the request fails if any of the provided codes already exist.
   operationId: addCouponCodes
   tags:
     - Coupons

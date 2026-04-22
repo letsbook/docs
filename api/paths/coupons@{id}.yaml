@@ -1,8 +1,7 @@
 get:
   summary: Retrieve a coupon
   description: |
-    Retrieve a single coupon by ID. Removed coupons are treated as missing and return
-    a 404 response.
+    Retrieve a single coupon by ID.
   operationId: getCoupon
   tags:
     - Coupons
@@ -39,7 +38,6 @@ post:
   summary: Update a coupon
   description: |
     Update an existing coupon. Only fields present in the request body are updated.
-    Removed coupons cannot be updated and return a 404 response.
   operationId: updateCoupon
   tags:
     - Coupons
@@ -101,9 +99,7 @@ post:
 delete:
   summary: Remove a coupon
   description: |
-    Remove an existing coupon. Removed coupons and their codes are hidden from all
-    listing and retrieval endpoints. Attempting to remove a coupon that does not exist
-    or has already been removed returns a 404 response.
+    Remove an existing coupon and all of its codes.
   operationId: removeCoupon
   tags:
     - Coupons

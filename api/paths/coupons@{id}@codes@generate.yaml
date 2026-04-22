@@ -3,7 +3,7 @@ post:
   description: |
     Generate new codes for a coupon. Each generated code consists of a random alphanumeric
     string of the requested `length`, optionally wrapped with the supplied `prefix` and
-    `suffix`. Returns a 404 response when the coupon does not exist or has been removed.
+    `suffix`.
   operationId: generateCouponCodes
   tags:
     - Coupons
