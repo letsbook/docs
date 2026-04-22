@@ -39,13 +39,9 @@ properties:
     description: Total number of times codes of this coupon have been used.
     example: 17
   maxUsages:
-    type:
-      - integer
-      - 'null'
-    description: |
-      Maximum number of times codes of this coupon can be used in total. Null when there
-      is no overall limit.
-    example: null
+    type: integer
+    description: Maximum number of times codes of this coupon can be used in total.
+    example: 500
   createdAt:
     type: string
     format: date-time

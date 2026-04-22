@@ -19,7 +19,7 @@ delete:
       schema:
         type: string
         example: SUMMER2026
-        description: The coupon code to remove
+        description: The coupon code
   responses:
     '204':
       description: No content.
