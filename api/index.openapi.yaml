@@ -13,7 +13,7 @@ info:
 
     ## 2026-04-20
     ### Coupons
-    - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed-amount](/api/#operation/createFixedAmountCoupon), [free-time](/api/#operation/createFreeTimeCoupon), and [giveaway](/api/#operation/createGiveawayCoupon) coupons
+    - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed amount](/api/#operation/createFixedAmountCoupon), and [free time](/api/#operation/createFreeTimeCoupon) coupons
     - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/getCoupon), [update](/api/#operation/updateCoupon), and [remove](/api/#operation/removeCoupon) coupons
     - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), and [remove](/api/#operation/removeCouponCode) coupon codes
 
@@ -162,10 +162,9 @@ tags:
       costs, and other charges.
   - name: Coupons
     description: |
-      A coupon is a discount or giveaway that can be applied to a booking by entering a
-      code. Every coupon has one of four types — percentage, fixed-amount, free-time, or
-      giveaway — and can have any number of codes. Codes can be added manually or
-      generated in bulk.
+      A coupon is a discount that can be applied to a booking by entering a code. Every
+      coupon has one of three types — percentage, fixed amount, or free time — and can
+      have any number of codes. Codes can be added manually or generated in bulk.
   - name: Availability
     description: |
       Availability represents the availability of a boat model at a specific dock.
@@ -248,8 +247,6 @@ paths:
     $ref: paths/coupons@fixed-amount.yaml
   /v1/coupons/free-time:
     $ref: paths/coupons@free-time.yaml
-  /v1/coupons/giveaway:
-    $ref: paths/coupons@giveaway.yaml
   /v1/coupons/{id}:
     $ref: paths/coupons@{id}.yaml
   /v1/coupons/{id}/codes:
