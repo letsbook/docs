@@ -10,7 +10,7 @@
 .obsidian
 
 # AI Tools
-.claude
+/.claude/settings.local.json
 
 # Logs
 npm-debug.log*
