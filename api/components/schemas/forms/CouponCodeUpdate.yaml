@@ -8,4 +8,4 @@ properties:
     minimum: 1
     maximum: 100000
     description: Maximum number of times this code can be used.
-    example: 10
+    example: 5

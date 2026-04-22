@@ -68,6 +68,16 @@ post:
             properties:
               data:
                 $ref: ../components/schemas/Coupon.yaml
+          example:
+            data:
+              id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+              name: Summer Sale 2026
+              type: percentage
+              percentage: "10"
+              codesCount: 100
+              totalUsages: 42
+              maxUsages: 500
+              createdAt: 2026-04-20T12:00:00+00:00
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

@@ -35,6 +35,14 @@ post:
                 description: The codes that were just generated.
                 items:
                   $ref: ../components/schemas/CouponCode.yaml
+          example:
+            data:
+              - code: SUMMER-A1B2C3D4-2026
+                usages: 0
+                maxUsages: 1
+              - code: SUMMER-E5F6G7H8-2026
+                usages: 0
+                maxUsages: 1
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

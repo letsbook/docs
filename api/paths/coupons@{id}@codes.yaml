@@ -79,6 +79,11 @@ post:
                 description: The codes that were just added.
                 items:
                   $ref: ../components/schemas/CouponCode.yaml
+          example:
+            data:
+              - code: SUMMER2026
+                usages: 0
+                maxUsages: 5
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
