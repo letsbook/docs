@@ -1,5 +1,5 @@
 post:
-  summary: Create a free-time coupon
+  summary: Create a free time coupon
   description: |
     Creates a new coupon that grants a fixed amount of free rental time.
   operationId: createFreeTimeCoupon

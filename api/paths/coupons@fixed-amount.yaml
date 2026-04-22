@@ -1,5 +1,5 @@
 post:
-  summary: Create a fixed-amount coupon
+  summary: Create a fixed amount coupon
   description: |
     Creates a new coupon that discounts a fixed amount off the booking total.
   operationId: createFixedAmountCoupon

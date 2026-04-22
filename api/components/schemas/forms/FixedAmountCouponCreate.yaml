@@ -1,5 +1,5 @@
 type: object
-description: Parameters for creating a fixed-amount coupon.
+description: Parameters for creating a fixed amount coupon.
 required:
   - name
   - amount
