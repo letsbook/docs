@@ -1,5 +1,5 @@
 type: object
-description: Parameters for creating a free-time coupon.
+description: Parameters for creating a free time coupon.
 required:
   - name
   - freeTime
@@ -11,7 +11,9 @@ properties:
     example: 2 hours free
   freeTime:
     type: string
+    pattern: '^[0-9]+(\.[0-9]+)?[mhd]$'
     description: |
       Duration of free time granted when a code of this coupon is used, expressed as a
-      number followed by a unit (`minutes`, `hours`, or `days`).
-    example: 2 hours
+      number followed by a single-character unit: `m` (minutes), `h` (hours), or `d`
+      (days). Examples: `"30m"`, `"2h"`, `"1.5h"`, `"4d"`.
+    example: 2h
