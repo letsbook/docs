@@ -1,0 +1,11 @@
+type: object
+description: |
+  Parameters for updating a coupon code. All fields are optional; only fields present in
+  the request body are updated.
+properties:
+  maxUsages:
+    type: integer
+    minimum: 1
+    maximum: 100000
+    description: Maximum number of times this code can be used.
+    example: 10

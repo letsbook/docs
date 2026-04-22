@@ -1,3 +1,72 @@
+post:
+  summary: Update a coupon code
+  description: |
+    Update an existing coupon code. Only fields present in the request body are updated.
+  operationId: updateCouponCode
+  tags:
+    - Coupons
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the coupon
+    - name: code
+      in: path
+      required: true
+      schema:
+        type: string
+        example: SUMMER2026
+        description: The coupon code
+  requestBody:
+    required: true
+    description: Update coupon code parameters. All fields are optional.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/CouponCodeUpdate.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: ../components/schemas/CouponCode.yaml
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  maxUsages:
+                    - The maxUsages must be between 1 and 100000.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
 delete:
   summary: Remove a coupon code
   description: |

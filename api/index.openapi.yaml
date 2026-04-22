@@ -15,7 +15,7 @@ info:
     ### Coupons
     - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed amount](/api/#operation/createFixedAmountCoupon), and [free time](/api/#operation/createFreeTimeCoupon) coupons
     - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/getCoupon), [update](/api/#operation/updateCoupon), and [remove](/api/#operation/removeCoupon) coupons
-    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), and [remove](/api/#operation/removeCouponCode) coupon codes
+    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), [update](/api/#operation/updateCouponCode), and [remove](/api/#operation/removeCouponCode) coupon codes
 
     ## 2026-03-31
     ### Customers
