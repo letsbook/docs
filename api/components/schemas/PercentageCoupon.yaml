@@ -14,8 +14,9 @@ allOf:
         example: percentage
       percentage:
         type: string
-        pattern: '^-?\d+(\.\d+)?$'
-        description: >
-          Discount percentage applied when a code of this coupon is used. Expressed
-          as a numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision.
+        pattern: '^\d+(\.\d+)?$'
+        description: |
+          Discount percentage applied when a code of this coupon is used. Expressed as a
+          numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision when parsed
+          by clients that would otherwise round floating-point values.
         example: "10"

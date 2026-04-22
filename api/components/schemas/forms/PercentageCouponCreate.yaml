@@ -10,10 +10,11 @@ properties:
     description: Name of the coupon
     example: Summer Sale
   percentage:
-    type: number
-    minimum: 0.01
-    maximum: 100
+    type: string
+    pattern: '^\d+(\.\d+)?$'
     description: |
-      Discount percentage applied when a code of this coupon is used. Must be between `0.01`
-      and `100`.
-    example: 10
+      Discount percentage applied when a code of this coupon is used. Expressed as a
+      numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision when parsed
+      by clients that would otherwise round floating-point values. Must be between
+      `"0.01"` and `"100"`.
+    example: "10"
