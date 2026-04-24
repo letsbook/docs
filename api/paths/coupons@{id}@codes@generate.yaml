@@ -3,7 +3,7 @@ post:
   description: |
     Generate new codes for a coupon. Each generated code consists of a random alphanumeric
     string of the requested `length`, optionally wrapped with the supplied `prefix` and
-    `suffix`. Returns a 404 response when the coupon is archived or does not exist.
+    `suffix`.
   operationId: generateCouponCodes
   tags:
     - Coupons
@@ -20,7 +20,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/GenerateCouponCodes.yaml
+          $ref: ../components/schemas/forms/CouponCodesGenerate.yaml
   responses:
     '200':
       description: OK
@@ -29,19 +29,20 @@ post:
           schema:
             required:
               - data
-              - pagination
             properties:
               data:
                 type: array
                 description: The codes that were just generated.
                 items:
                   $ref: ../components/schemas/CouponCode.yaml
-              pagination:
-                allOf:
-                  - $ref: ../components/schemas/Pagination.yaml
-                  - properties:
-                      nextPageUrl:
-                        example: https://api.letsbook.app/v1/coupons/8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278/codes?page=2
+          example:
+            data:
+              - code: SUMMER-A1B2C3D4-2026
+                usages: 0
+                maxUsages: 1
+              - code: SUMMER-E5F6G7H8-2026
+                usages: 0
+                maxUsages: 1
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

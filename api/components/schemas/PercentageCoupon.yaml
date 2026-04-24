@@ -1,54 +1,22 @@
 description: A coupon that discounts a percentage off the booking total.
-required:
-  - id
-  - name
-  - type
-  - percentage
-  - codesCount
-  - totalUsages
-  - maxUsages
-  - createdAt
-properties:
-  id:
-    type: string
-    format: uuid
-    description: Unique identifier of the coupon
-    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-  name:
-    type: string
-    description: Name of the coupon
-    example: Summer Sale
-  type:
-    type: string
-    enum:
+allOf:
+  - $ref: ./CouponBase.yaml
+  - type: object
+    required:
+      - type
       - percentage
-    description: The coupon type discriminator.
-    example: percentage
-  percentage:
-    type: string
-    pattern: '^-?\d+(\.\d+)?$'
-    description: >
-      Discount percentage applied when a code of this coupon is used. Expressed
-      as a numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision.
-    example: "10"
-  codesCount:
-    type: integer
-    description: Number of codes associated with this coupon.
-    example: 100
-  totalUsages:
-    type: integer
-    description: Total number of times codes of this coupon have been used.
-    example: 42
-  maxUsages:
-    type:
-      - integer
-      - 'null'
-    description: |
-      Maximum number of times codes of this coupon can be used in total. Null when there
-      is no overall limit.
-    example: null
-  createdAt:
-    type: string
-    format: date-time
-    description: Timestamp of when the coupon was created in ISO 8601 format
-    example: 2026-04-20T12:00:00+00:00
+    properties:
+      type:
+        type: string
+        enum:
+          - percentage
+        description: The coupon type discriminator.
+        example: percentage
+      percentage:
+        type: string
+        pattern: '^\d+(\.\d+)?$'
+        description: |
+          Discount percentage applied when a code of this coupon is used. Expressed as a
+          numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision when parsed
+          by clients that would otherwise round floating-point values.
+        example: "10"

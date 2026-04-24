@@ -13,9 +13,6 @@ properties:
     description: Number of times this code has been used.
     example: 3
   maxUsages:
-    type:
-      - integer
-      - 'null'
-    description: |
-      Maximum number of times this code can be used. Null when there is no limit.
+    type: integer
+    description: Maximum number of times this code can be used.
     example: 5

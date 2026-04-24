@@ -1,53 +1,22 @@
 description: A coupon that grants a fixed amount of free rental time.
-required:
-  - id
-  - name
-  - type
-  - freeTime
-  - codesCount
-  - totalUsages
-  - maxUsages
-  - createdAt
-properties:
-  id:
-    type: string
-    format: uuid
-    description: Unique identifier of the coupon
-    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-  name:
-    type: string
-    description: Name of the coupon
-    example: 2 hours free
-  type:
-    type: string
-    enum:
+allOf:
+  - $ref: ./CouponBase.yaml
+  - type: object
+    required:
+      - type
       - freeTime
-    description: The coupon type discriminator.
-    example: freeTime
-  freeTime:
-    type: string
-    description: |
-      Duration of free time granted when a code of this coupon is used, expressed as a
-      number followed by a unit (`minutes`, `hours`, or `days`).
-    example: 2 hours
-  codesCount:
-    type: integer
-    description: Number of codes associated with this coupon.
-    example: 20
-  totalUsages:
-    type: integer
-    description: Total number of times codes of this coupon have been used.
-    example: 8
-  maxUsages:
-    type:
-      - integer
-      - 'null'
-    description: |
-      Maximum number of times codes of this coupon can be used in total. Null when there
-      is no overall limit.
-    example: null
-  createdAt:
-    type: string
-    format: date-time
-    description: Timestamp of when the coupon was created in ISO 8601 format
-    example: 2026-04-20T12:00:00+00:00
+    properties:
+      type:
+        type: string
+        enum:
+          - freeTime
+        description: The coupon type discriminator.
+        example: freeTime
+      freeTime:
+        type: string
+        pattern: '^[0-9]+(\.[0-9]+)?[mhd]$'
+        description: |
+          Duration of free time granted when a code of this coupon is used, expressed as a
+          number followed by a single-character unit: `m` (minutes), `h` (hours), or `d`
+          (days). Examples: `"30m"`, `"2h"`, `"1.5h"`, `"4d"`.
+        example: 2h

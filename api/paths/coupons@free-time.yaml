@@ -1,8 +1,8 @@
 post:
-  summary: Create a giveaway coupon
+  summary: Create a free time coupon
   description: |
-    Creates a new coupon that gives away a specific product when redeemed.
-  operationId: createGiveawayCoupon
+    Creates a new coupon that grants a fixed amount of free rental time.
+  operationId: createFreeTimeCoupon
   tags:
     - Coupons
   requestBody:
@@ -10,7 +10,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CreateGiveawayCoupon.yaml
+          $ref: ../components/schemas/forms/FreeTimeCouponCreate.yaml
   responses:
     '200':
       description: OK
@@ -22,15 +22,17 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - couponId
-                properties:
-                  couponId:
-                    type: string
-                    format: uuid
-                    description: The unique identifier of the newly created coupon.
-                    example: '8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278'
+                $ref: ../components/schemas/FreeTimeCoupon.yaml
+          example:
+            data:
+              id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+              name: 2 hours free
+              type: freeTime
+              freeTime: 2h
+              codesCount: 0
+              totalUsages: 0
+              maxUsages: 500
+              createdAt: 2026-04-20T12:00:00+00:00
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '422':
@@ -51,8 +53,8 @@ post:
                 example:
                   name:
                     - The name field is required.
-                  productId:
-                    - Invalid product ID supplied.
+                  freeTime:
+                    - The freeTime field is required.
 
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml

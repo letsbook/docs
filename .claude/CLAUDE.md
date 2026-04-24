@@ -266,6 +266,59 @@ Before publishing any content, verify:
 - Main spec file: `api/index.openapi.yaml`
 - **ALWAYS update the changelog** when making API changes (new endpoints, new properties, etc.)
 
+### API conventions
+
+When adding or editing endpoints, follow these conventions so new routes stay consistent with the rest of the API.
+
+**URL paths**
+
+- Use **kebab-case** for multi-word path segments: `/v1/tax-rates`, `/v1/booking-labels`, `/v1/coupons/fixed-amount`. Never camelCase or snake_case.
+- Use `{id}` as the path parameter for the **primary** resource (`/v1/bookings/{id}`, `/v1/coupons/{id}`).
+- Use a specific name (`{costId}`, `{code}`, etc.) only for **nested** sub-resources, e.g. `/v1/bookings/{id}/costs/{costId}`.
+- Spec filenames mirror the path with `@` as separator: `paths/bookings@{id}@costs@{costId}.yaml`.
+
+**HTTP methods**
+
+- `GET` — list or retrieve
+- `POST` — create, update (no PATCH/PUT), and state-changing actions like `confirm`, `enable`, `disable`
+- `DELETE` — destructive and soft-delete operations. Respond with `204 No Content`. Do not return a `{message}` body for new endpoints.
+
+**Operation IDs**
+
+- `list<Resource>` — list endpoints (`listBookings`)
+- `get<Resource>` — single-item retrieval (`getBooking`, never `retrieveBooking`)
+- `create<Resource>` — creation (`createBooking`); for variant creates use `create<Variant><Resource>` (`createPercentageCoupon`)
+- `update<Resource>` — updates (`updateBooking`)
+- `remove<Resource>` / `delete<Resource>` — removal. Prefer `remove` for soft-deletes and sub-resource removals. Avoid exposing internal terminology like "archive" — use the verb the dashboard user would expect. Never mention soft-delete behavior in descriptions (no "removed X are hidden", no "archived X return 404"). To the API consumer, removed means gone.
+- Action endpoints: `<verb><Resource>` (`confirmBooking`, `enableWebhook`)
+
+**Tags**
+
+- Title Case with spaces: `Bookings`, `Booking labels`, `Tax rates`, `Boat models`.
+- Sub-resources share the parent resource's tag.
+
+**Form schemas**
+
+- Location: `api/components/schemas/forms/`
+- Naming: `<Noun><Verb>.yaml` suffix pattern — `BookingCreate.yaml`, `CouponUpdate.yaml`, `CouponCodesAdd.yaml`. Do **not** use the reverse `<Verb><Noun>.yaml` prefix pattern.
+
+**Response shapes**
+
+- Envelope all success payloads under a `data` key.
+- Single-item: `{data: <Resource>}`.
+- Lists: `{data: [<Resource>], pagination: <Pagination>}`.
+- Creates: `{data: {<resource>Id: "<uuid>"}}` (just the ID).
+- `DELETE`: `204 No Content`.
+- Do **not** include a `pagination` envelope on responses that return only the items the caller just created or modified.
+
+**Monetary values**
+
+- Always expressed as **integers in cents** of the organisation's default currency, on both request and response. Never mix major and minor units across request/response for the same field.
+
+**Nullable fields**
+
+- Use OpenAPI 3.1 array syntax: `type: [string, 'null']`. Do not use the 3.0-style `nullable: true`.
+
 ### API changelog
 
 The changelog lives in `api/index.openapi.yaml` inside the `info.description` field. When making API changes:

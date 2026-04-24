@@ -1,30 +1,13 @@
 get:
   summary: List all coupons
   description: |
-    Retrieves a paginated list of all coupons. Archived coupons are not returned.
+    Retrieves a paginated list of all coupons, ordered from newest to oldest by creation
+    date.
   operationId: listCoupons
   tags:
     - Coupons
   parameters:
     - $ref: ../components/parameters/page.yaml
-    - name: sort
-      in: query
-      description: Property to sort the results by. Defaults to `name`.
-      schema:
-        type: string
-        enum:
-          - name
-          - createdAt
-        default: name
-    - name: direction
-      in: query
-      description: Direction to sort the results in. Defaults to `asc`.
-      schema:
-        type: string
-        enum:
-          - asc
-          - desc
-        default: asc
   responses:
     '200':
       description: OK
@@ -47,25 +30,6 @@ get:
                         example: https://api.letsbook.app/v1/coupons?page=2
     '401':
       $ref: ../components/responses/Unauthorized.yaml
-    '422':
-      description: Validation error
-      content:
-        application/json:
-          schema:
-            type: object
-            required:
-              - errors
-            properties:
-              errors:
-                type: object
-                additionalProperties:
-                  type: array
-                  items:
-                    type: string
-                example:
-                  sort:
-                    - The selected sort is invalid.
-
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
     '500':

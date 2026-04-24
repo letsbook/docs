@@ -10,7 +10,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CreatePercentageCoupon.yaml
+          $ref: ../components/schemas/forms/PercentageCouponCreate.yaml
   responses:
     '200':
       description: OK
@@ -22,15 +22,17 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - couponId
-                properties:
-                  couponId:
-                    type: string
-                    format: uuid
-                    description: The unique identifier of the newly created coupon.
-                    example: '8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278'
+                $ref: ../components/schemas/PercentageCoupon.yaml
+          example:
+            data:
+              id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+              name: Summer Sale
+              type: percentage
+              percentage: "10"
+              codesCount: 0
+              totalUsages: 0
+              maxUsages: 500
+              createdAt: 2026-04-20T12:00:00+00:00
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '422':
@@ -52,7 +54,7 @@ post:
                   name:
                     - The name field is required.
                   percentage:
-                    - The percentage must be between 0.01 and 100.
+                    - The percentage must be a numeric string between "0.01" and "100".
 
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml

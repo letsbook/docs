@@ -1,44 +1,8 @@
-get:
-  summary: Retrieve a coupon
-  description: |
-    Retrieve a single coupon by ID.
-  operationId: getCoupon
-  tags:
-    - Coupons
-  parameters:
-    - name: id
-      in: path
-      required: true
-      schema:
-        type: string
-        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the coupon
-  responses:
-    '200':
-      description: OK
-      content:
-        application/json:
-          schema:
-            type: object
-            required:
-              - data
-            properties:
-              data:
-                $ref: ../components/schemas/Coupon.yaml
-    '401':
-      $ref: ../components/responses/Unauthorized.yaml
-    '404':
-      $ref: ../components/responses/NotFound.yaml
-    '429':
-      $ref: ../components/responses/TooManyAttempts.yaml
-    '500':
-      $ref: ../components/responses/InternalServerError.yaml
-
 post:
-  summary: Update a coupon
+  summary: Update a coupon code
   description: |
-    Update an existing coupon. Only fields present in the request body are updated.
-  operationId: updateCoupon
+    Update an existing coupon code. Only fields present in the request body are updated.
+  operationId: updateCouponCode
   tags:
     - Coupons
   parameters:
@@ -49,13 +13,20 @@ post:
         type: string
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
         description: ID of the coupon
+    - name: code
+      in: path
+      required: true
+      schema:
+        type: string
+        example: SUMMER2026
+        description: The coupon code
   requestBody:
     required: true
-    description: Update coupon parameters. All fields are optional.
+    description: Update coupon code parameters. All fields are optional.
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CouponUpdate.yaml
+          $ref: ../components/schemas/forms/CouponCodeUpdate.yaml
   responses:
     '200':
       description: OK
@@ -67,17 +38,12 @@ post:
               - data
             properties:
               data:
-                $ref: ../components/schemas/Coupon.yaml
+                $ref: ../components/schemas/CouponCode.yaml
           example:
             data:
-              id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-              name: Summer Sale 2026
-              type: percentage
-              percentage: "10"
-              codesCount: 100
-              totalUsages: 42
-              maxUsages: 500
-              createdAt: 2026-04-20T12:00:00+00:00
+              code: SUMMER2026
+              usages: 3
+              maxUsages: 5
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
@@ -98,8 +64,8 @@ post:
                   items:
                     type: string
                 example:
-                  name:
-                    - The name may not be greater than 255 characters.
+                  maxUsages:
+                    - The maxUsages must be between 1 and 100000.
 
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
@@ -107,10 +73,10 @@ post:
       $ref: ../components/responses/InternalServerError.yaml
 
 delete:
-  summary: Remove a coupon
+  summary: Remove a coupon code
   description: |
-    Remove an existing coupon and all of its codes.
-  operationId: removeCoupon
+    Remove a single code from a coupon.
+  operationId: removeCouponCode
   tags:
     - Coupons
   parameters:
@@ -121,6 +87,13 @@ delete:
         type: string
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
         description: ID of the coupon
+    - name: code
+      in: path
+      required: true
+      schema:
+        type: string
+        example: SUMMER2026
+        description: The coupon code
   responses:
     '204':
       description: No content.

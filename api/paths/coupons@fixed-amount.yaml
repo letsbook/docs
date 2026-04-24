@@ -1,5 +1,5 @@
 post:
-  summary: Create a fixed-amount coupon
+  summary: Create a fixed amount coupon
   description: |
     Creates a new coupon that discounts a fixed amount off the booking total.
   operationId: createFixedAmountCoupon
@@ -10,7 +10,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CreateFixedAmountCoupon.yaml
+          $ref: ../components/schemas/forms/FixedAmountCouponCreate.yaml
   responses:
     '200':
       description: OK
@@ -22,15 +22,17 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - couponId
-                properties:
-                  couponId:
-                    type: string
-                    format: uuid
-                    description: The unique identifier of the newly created coupon.
-                    example: '8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278'
+                $ref: ../components/schemas/FixedAmountCoupon.yaml
+          example:
+            data:
+              id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+              name: Welcome gift
+              type: fixedAmount
+              amount: 2500
+              codesCount: 0
+              totalUsages: 0
+              maxUsages: 500
+              createdAt: 2026-04-20T12:00:00+00:00
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '422':

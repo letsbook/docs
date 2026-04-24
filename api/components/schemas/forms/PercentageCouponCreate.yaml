@@ -1,0 +1,20 @@
+type: object
+description: Parameters for creating a percentage coupon.
+required:
+  - name
+  - percentage
+properties:
+  name:
+    type: string
+    maxLength: 255
+    description: Name of the coupon
+    example: Summer Sale
+  percentage:
+    type: string
+    pattern: '^\d+(\.\d+)?$'
+    description: |
+      Discount percentage applied when a code of this coupon is used. Expressed as a
+      numeric string (e.g. `"10"`, `"12.5"`) to preserve decimal precision when parsed
+      by clients that would otherwise round floating-point values. Must be between
+      `"0.01"` and `"100"`.
+    example: "10"
