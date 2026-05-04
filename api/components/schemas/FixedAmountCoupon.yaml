@@ -1,0 +1,20 @@
+description: A coupon that discounts a fixed amount off the booking total.
+allOf:
+  - $ref: ./CouponBase.yaml
+  - type: object
+    required:
+      - type
+      - amount
+    properties:
+      type:
+        type: string
+        enum:
+          - fixedAmount
+        description: The coupon type discriminator.
+        example: fixedAmount
+      amount:
+        type: integer
+        description: |
+          Discount amount applied when a code of this coupon is used, in cents of the
+          organisation's default currency.
+        example: 2500

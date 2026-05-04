@@ -11,6 +11,12 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-04-20
+    ### Coupons
+    - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed amount](/api/#operation/createFixedAmountCoupon), and [free time](/api/#operation/createFreeTimeCoupon) coupons
+    - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/getCoupon), [update](/api/#operation/updateCoupon), and [remove](/api/#operation/removeCoupon) coupons
+    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), [update](/api/#operation/updateCouponCode), and [remove](/api/#operation/removeCouponCode) coupon codes
+
     ## 2026-03-31
     ### Customers
     - The `password` property is now ignored on the [create customer](/api/#operation/createCustomer) and [update customer](/api/#operation/updateCustomer) endpoints
@@ -94,15 +100,15 @@ info:
     Authorization: Bearer ac11f67b-1dcb-460c-aff3-f1ef35cd3c1c|pMKSUHcHXd7706zhHwBE040alh1BSY9RPsu6ZQ04
     ```
 
-    # Multiple tenants
+    # Multiple organisations
 
-    If your API user has access to multiple [tenants](#tag/Me), include the `X-Tenant-Id` 
-    header with every request. Without this header, we default to your primary tenant.
+    If your API user has access to multiple [organisations](#tag/Me) (tenants), include the `X-Tenant-Id` 
+    header with every request. Without this header, we default to your primary organisation.
 
     ### Example
 
-    Use the `/me` endpoint to retrieve all tenants you can access. Then use the `id` of your 
-    desired tenant. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
+    Use the `/me` endpoint to retrieve all organisation you can access. Then use the `id` of your 
+    desired organisation. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
     configure the header like this:
 
     ```
@@ -154,6 +160,11 @@ tags:
     description: |
       A tax rate is a named percentage used to calculate taxes on add-ons,
       costs, and other charges.
+  - name: Coupons
+    description: |
+      A coupon is a discount that can be applied to a booking by entering a code. Every
+      coupon has one of three types — percentage, fixed amount, or free time — and can
+      have any number of codes. Codes can be added manually or generated in bulk.
   - name: Availability
     description: |
       Availability represents the availability of a boat model at a specific dock.
@@ -228,6 +239,22 @@ paths:
     $ref: paths/products.yaml
   /v1/product-categories:
     $ref: paths/product-categories.yaml
+  /v1/coupons:
+    $ref: paths/coupons.yaml
+  /v1/coupons/percentage:
+    $ref: paths/coupons@percentage.yaml
+  /v1/coupons/fixed-amount:
+    $ref: paths/coupons@fixed-amount.yaml
+  /v1/coupons/free-time:
+    $ref: paths/coupons@free-time.yaml
+  /v1/coupons/{id}:
+    $ref: paths/coupons@{id}.yaml
+  /v1/coupons/{id}/codes:
+    $ref: paths/coupons@{id}@codes.yaml
+  /v1/coupons/{id}/codes/generate:
+    $ref: paths/coupons@{id}@codes@generate.yaml
+  /v1/coupons/{id}/codes/{code}:
+    $ref: paths/coupons@{id}@codes@{code}.yaml
   /v1/webhooks:
     $ref: paths/webhooks.yaml
   /v1/webhooks/{id}:

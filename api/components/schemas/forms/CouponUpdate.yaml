@@ -1,0 +1,10 @@
+type: object
+description: |
+  Parameters for updating a coupon. All fields are optional; only fields present in the
+  request body are updated.
+properties:
+  name:
+    type: string
+    maxLength: 255
+    description: Name of the coupon
+    example: Summer Sale 2026

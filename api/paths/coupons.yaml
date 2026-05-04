@@ -1,0 +1,36 @@
+get:
+  summary: List all coupons
+  description: |
+    Retrieves a paginated list of all coupons, ordered from newest to oldest by creation
+    date.
+  operationId: listCoupons
+  tags:
+    - Coupons
+  parameters:
+    - $ref: ../components/parameters/page.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - pagination
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/Coupon.yaml
+              pagination:
+                allOf:
+                  - $ref: ../components/schemas/Pagination.yaml
+                  - properties:
+                      nextPageUrl:
+                        example: https://api.letsbook.app/v1/coupons?page=2
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

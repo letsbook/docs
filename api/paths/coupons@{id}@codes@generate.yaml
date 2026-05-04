@@ -1,0 +1,72 @@
+post:
+  summary: Generate coupon codes
+  description: |
+    Generate new codes for a coupon. Each generated code consists of a random alphanumeric
+    string of the requested `length`, optionally wrapped with the supplied `prefix` and
+    `suffix`.
+  operationId: generateCouponCodes
+  tags:
+    - Coupons
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the coupon
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/CouponCodesGenerate.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+            properties:
+              data:
+                type: array
+                description: The codes that were just generated.
+                items:
+                  $ref: ../components/schemas/CouponCode.yaml
+          example:
+            data:
+              - code: SUMMER-A1B2C3D4-2026
+                usages: 0
+                maxUsages: 1
+              - code: SUMMER-E5F6G7H8-2026
+                usages: 0
+                maxUsages: 1
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  length:
+                    - The length must be between 4 and 32.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml

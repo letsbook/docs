@@ -17,6 +17,7 @@ Go to your [fleet view](https://dashboard.letsbook.app/fleet) to see the current
 ![Planning Fleet View](./graphics/planning-fleet.png)
 
 **Current status of each boat:**
+
 - **Green dots**: Active trips in progress
 - **Red dots**: Overdue rentals (with delay time like "+5 min.")
 - **Grey/No dot**: Available boats ready for rental

@@ -24,7 +24,7 @@ properties:
     example: BK8J3L
     description: |
       A 6-character alphanumeric booking reference. The reference is unique
-      to the booking (per tenant) and is used to identify the booking by both
+      to the booking (per organisation) and is used to identify the booking by both
       customers and staff.
   status:
     type: string

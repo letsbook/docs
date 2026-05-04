@@ -1,6 +1,6 @@
 get:
   summary: List all webhooks
-  description: Retrieves all webhooks for the current tenant
+  description: Retrieves all webhooks for the current organisation
   operationId: listWebhooks
   tags:
     - Webhooks
@@ -57,7 +57,7 @@ post:
               minItems: 1
               items:
                 type: string
-              description: By default, you will receive updates on events of all tenants your API key has access to when creating this webhook. You can provide an explicit list of tenant IDs this webhook applies to.
+              description: By default, you will receive updates on events of all organisations (tenants) your API key has access to when creating this webhook. You can provide an explicit list of tenant IDs this webhook applies to.
               example:
                 - 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
   responses:
