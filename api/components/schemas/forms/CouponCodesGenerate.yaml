@@ -3,6 +3,7 @@ description: Parameters for generating codes for a coupon.
 required:
   - quantity
   - length
+  - maxUsages
 properties:
   quantity:
     type: integer
@@ -30,8 +31,5 @@ properties:
     type: integer
     minimum: 1
     maximum: 100000
-    default: 1
-    description: |
-      Maximum number of times each generated code can be used. Defaults to `1` when
-      omitted.
+    description: Maximum number of times each generated code can be used.
     example: 1
