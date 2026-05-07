@@ -1,0 +1,8 @@
+{
+    "$schema": "https://conductor.build/schema/conductor.json",
+    "scripts": {
+        "setup": "npm install",
+        "run": "npm start",
+        "archive": "npm run clear"
+    }
+}
