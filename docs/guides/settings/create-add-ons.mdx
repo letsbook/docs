@@ -25,14 +25,26 @@ Add-ons let customers enhance their trip with extras like drinks, snacks, equipm
 
 **Photos:** Upload square images (JPG or PNG). The first photo shows on overview pages. [Crop photos online](https://www.befunky.com/create/crop-photo/) for best results.
 
-### Pricing and limits
+### Pricing methods
 
-Set price per item with optional quantity limits:
+Choose how the add-on price scales with the booking:
 
-- **Per booking** - Maximum items per entire booking
-- **Per boat** - Limit based on boat capacity
-- **Per passenger** - Items per person
-- **Per passenger per hour** - Useful for consumables (e.g. 2 beers per person per hour)
+- **Per unit** (default) - Fixed price per item.
+- **Per boat** - Multiplies by the number of boats in the booking.
+- **Per passenger** - Multiplies by the number of passengers.
+- **Per hour per boat** - Multiplies by hours × boats. Toggle "Round up to nearest hour" for whole-hour billing.
+- **Per day per boat** - Same idea but in days. Toggle "Round up to nearest day" for whole-day billing.
+
+The booking form shows the unit upfront (e.g. "$10 per passenger"). The order summary reflects the actual total once booking details are set, and recalculates if the booking changes.
+
+### Quantity limits
+
+Cap how many items can be added to a booking:
+
+- **Per booking** - Maximum items per entire booking.
+- **Per boat** - Limit based on boat capacity.
+- **Per passenger** - Items per person.
+- **Per passenger per hour** - Useful for consumables (e.g. 2 beers per person per hour).
 
 ### Availability conditions
 

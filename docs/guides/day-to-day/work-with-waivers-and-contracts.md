@@ -11,6 +11,7 @@ Use the waiver integration to collect signatures on contracts, waivers, and othe
 - After payment, the renter lands on the booking details page.
 - The page shows a clear prompt to sign the contract or waiver.
 - Passengers get a direct link to the waiver.
+- Mapped fields arrive pre-filled, so customers don't retype data you already collected. Set this up on the [Waivers integration page](https://dashboard.letsbook.app/integrations/waivers).
 
 ![Screenshot of sign contract](graphics/sign-contract.png)
 

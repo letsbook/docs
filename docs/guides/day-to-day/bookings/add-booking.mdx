@@ -42,16 +42,26 @@ Your booking is now created but needs confirmation. You can still make manual ad
 
 ## Step 5: Confirm the booking
 
-Hit **Confirm Booking** to complete the process.
+You land on the booking detail page with a **confirmation bar** pinned to the top. It stays visible across every tab, so you can finalize from anywhere.
 
-:::note[confirmation options]
-You'll find these confirmation options:
+Click **Confirm** when you're ready.
 
-- **Send confirmation email to customer** - Toggle on/off
-- **Add payment link in email** - Include payment request in the confirmation
-- **Payment deadline** - Click the suggested date to set how long customers have to pay
-  :::
+:::note[Confirmation options]
+Expand the bar to fine-tune what happens on confirm:
 
-**What happens next:** Your booking appears instantly in the overview. You can immediately edit details, add notes, or send payment requests.
+- **Notify customer** - Sends the booking confirmation email plus any other trip messages you have configured.
+- **Include payment link** - Adds a payment request to the confirmation email for the outstanding amount.
+- **Payment due** - Pick when the payment link expires:
+    - **Before start of trip** - At pickup time.
+    - **Before end of trip** (default) - At dropoff. Lets last-minute walk-ups still pay through the link.
+    - **In 2 weeks** - 14 days from now, capped at the trip end.
+    - **Custom** - Pick your own date and time.
+      :::
 
-<InlineVideoPlayer videoSrc={checkAndConfirmVideo} title="Use override mode" />
+:::tip[In override mode]
+The bar shows a yellow left border and a "check costs" label. Open the **Finance** tab to enter your manual prices, then come back and confirm.
+:::
+
+**What happens next:** The booking flips to confirmed and the bar disappears. From here you can still edit details, add notes, or send fresh payment requests.
+
+<InlineVideoPlayer videoSrc={checkAndConfirmVideo} />
