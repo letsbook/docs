@@ -37,7 +37,7 @@ const Hero = (): ReactNode => (
             playsInline
             className={styles.VideoBackground}
         >
-            <source src="/video/video_header.mp4" type="video/mp4" />
+            <source src="/video/video_header_v2.mp4" type="video/mp4" />
         </video>
 
         <div className="container">
