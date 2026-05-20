@@ -32,8 +32,10 @@ Choose how the add-on price scales with the booking:
 - **Per unit** (default) - Fixed price per item.
 - **Per boat** - Multiplies by the number of boats in the booking.
 - **Per passenger** - Multiplies by the number of passengers.
-- **Per hour per boat** - Multiplies by hours × boats. Toggle "Round up to nearest hour" for whole-hour billing.
-- **Per day per boat** - Same idea but in days. Toggle "Round up to nearest day" for whole-day billing.
+- **Per passenger per hour** - Multiplies by passengers × hours.
+- **Per hour per boat (exact time)** - A 1h45 booking is charged for 1.75 hours, per boat.
+- **Per day per boat (exact time)** - A 26-hour booking is charged for 1.08 days, per boat.
+- **Per day per boat (rounded up)** - A 26-hour booking is charged for 2 days, per boat.
 
 The booking form shows the unit upfront (e.g. "$10 per passenger"). The order summary reflects the actual total once booking details are set, and recalculates if the booking changes.
 
