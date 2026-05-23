@@ -27,7 +27,7 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 ## Hardware partners
 
-**Trackunit:** Advanced fleet monitoring with GPS tracking, engine hours, battery voltage, and maintenance alerts. Perfect for professional operations needing comprehensive data.
+**Sentinel:** Remote control, real-time equipment monitoring, predictive maintenance, and location alerts. Professional-grade fleet management.
 
 **Qondor:** Real-time fleet monitoring with route history and geofencing alerts. Ideal for ensuring boats stay within designated areas.
 
@@ -35,25 +35,23 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 ## Connecting boats to software
 
-### Trackunit integration
+### Sentinel integration
 
-**Prerequisites:** Trackunit hardware installed and active Trackunit account
+**Prerequisites:** Sentinel hardware installed in boats and an active Sentinel account
 
-**Steps:**
+**Connect your account:**
 
 1. Go to [Integrations](https://dashboard.letsbook.app/integrations/hardware) in Let's Book
-2. Find Trackunit and click "Connect" (keep modal open)
-3. In separate tab, go to [Trackunit Administration](https://new.manager.trackunit.com/administration)
-4. Select "API Access" → "Create API user"
-5. Enter name ("Let's Book") and description ("API key for Let's Book")
-6. Copy the four generated values: Client ID, Client Secret, Username, Password
-7. Paste all values into Let's Book modal and click "Save"
+2. Find Sentinel and click "Connect with Sentinel"
+3. Authorize Let's Book in the Sentinel page that opens
+4. You're returned to Let's Book once connected
 
-Steps:
+**Connect each boat:**
 
-![Trackunit steps 1](graphics/trackunit_steps_1.jpg)
-
-![Trackunit steps 2](graphics/trackunit_steps_2.jpg)
+1. Go to [your boat models](https://dashboard.letsbook.app/models)
+2. Select the boat model and click on specific boat
+3. In "Connect boat" section, select "Sentinel"
+4. Enter the serial number and save
 
 ### Qondor integration
 
