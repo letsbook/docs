@@ -27,7 +27,7 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 ## Hardware partners
 
-**[Sentinel Marine](https://sentinelmarine.net):** Our recommended partner. Connects via OAuth, locks and unlocks the engine automatically at trip start and end, and pairs with each boat through a serial number.
+**[Sentinel Marine](https://sentinelmarine.net):** Our recommended partner. One-click connect (no API keys to copy), automatic engine lock and unlock at trip start and end, paired to each boat by serial number.
 
 **Qondor:** Real-time fleet monitoring with route history and geofencing alerts. Ideal for ensuring boats stay within designated areas.
 
