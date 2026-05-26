@@ -27,7 +27,7 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 ## Hardware partners
 
-**Trackunit:** Advanced fleet monitoring with GPS tracking, engine hours, battery voltage, and maintenance alerts. Perfect for professional operations needing comprehensive data.
+**[Sentinel Marine](https://sentinelmarine.net):** Our recommended partner. Connects via OAuth, locks and unlocks the engine automatically at trip start and end, and pairs with each boat through a serial number.
 
 **Qondor:** Real-time fleet monitoring with route history and geofencing alerts. Ideal for ensuring boats stay within designated areas.
 
@@ -35,25 +35,20 @@ Connected fleet creates a seamless link between your bookings and physical boats
 
 ## Connecting boats to software
 
-### Trackunit integration
+### Sentinel Marine integration
 
-**Prerequisites:** Trackunit hardware installed and active Trackunit account
+**Prerequisites:** Sentinel Marine hardware installed and an active Sentinel account.
 
 **Steps:**
 
-1. Go to [Integrations](https://dashboard.letsbook.app/integrations/hardware) in Let's Book
-2. Find Trackunit and click "Connect" (keep modal open)
-3. In separate tab, go to [Trackunit Administration](https://new.manager.trackunit.com/administration)
-4. Select "API Access" → "Create API user"
-5. Enter name ("Let's Book") and description ("API key for Let's Book")
-6. Copy the four generated values: Client ID, Client Secret, Username, Password
-7. Paste all values into Let's Book modal and click "Save"
+1. Go to [Hardware integrations](https://dashboard.letsbook.app/integrations/hardware) in Let's Book.
+1. Find the Sentinel Marine card and click **Connect with Sentinel**.
+1. Authorize Let's Book on Sentinel's page. You return to Let's Book automatically.
+1. Open [your boat models](https://dashboard.letsbook.app/models) and pick the boat you want to connect.
+1. In the **Connect boat** section, select **Sentinel**.
+1. Paste the serial number and save.
 
-Steps:
-
-![Trackunit steps 1](graphics/trackunit_steps_1.jpg)
-
-![Trackunit steps 2](graphics/trackunit_steps_2.jpg)
+Engine lock and unlock now fires automatically when a trip starts and ends.
 
 ### Qondor integration
 
