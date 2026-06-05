@@ -1,0 +1,6 @@
+# Cross-origin read access + caching for the release notes JSON Feed.
+# Consumed by the tenant dashboard (dashboard.letsbook.app) "What's new" panel.
+/releases/feed.json
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET
+  Cache-Control: public, max-age=900
