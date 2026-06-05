@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "setup": "herd link",
+    "setup": "npm install && npm run build && cd build && herd link \"$(basename \"$(dirname \"$PWD\")\")\"",
     "archive": "herd unlink"
   },
   "preview": {

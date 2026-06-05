@@ -28,7 +28,7 @@ post:
               id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
               name: Summer Sale
               type: percentage
-              percentage: "10"
+              percentage: '10'
               codesCount: 0
               totalUsages: 0
               maxUsages: 500
