@@ -8,6 +8,8 @@ required:
   - boatModelId
   - pickup
   - return
+  - adjustedPickup
+  - adjustedReturn
   - boats
   - passengers
   - labels
@@ -73,6 +75,39 @@ properties:
     format: date-time
     example: 2022-01-03T00:00:00Z
     description: Return date and time
+  adjustedPickup:
+    type: string
+    format: date-time
+    example: 2026-06-10T09:30:00+00:00
+    description: >-
+      Pickup shifted earlier by the before-margin (pickup − beforeInMinutes).
+      Equals pickup when the booking has no margins.
+  adjustedReturn:
+    type: string
+    format: date-time
+    example: 2026-06-10T14:15:00+00:00
+    description: >-
+      Return shifted later by the after-margin (return + afterInMinutes).
+      Equals return when the booking has no margins.
+  margins:
+    type:
+      - object
+      - 'null'
+    description: >-
+      Cleaning/charging buffer applied around the booking. Present only when the
+      booking has margins assigned.
+    properties:
+      beforeInMinutes:
+        type: integer
+        example: 30
+        description: Buffer in minutes before pickup.
+      afterInMinutes:
+        type: integer
+        example: 15
+        description: Buffer in minutes after return.
+    required:
+      - beforeInMinutes
+      - afterInMinutes
   boats:
     type: integer
     example: 1
