@@ -17,7 +17,6 @@ type Bubble = {
     morphPhase: number;
 };
 
-const BUBBLE_COUNT = 16;
 const BUBBLE_COLOR = '#0a1cb5';
 
 const SHAPE_COUNT = NORMALIZED_PATHS.length;
@@ -52,14 +51,17 @@ const buildShuffledSequence = (
 const buildBubbles = (
     canvasWidth: number,
     canvasHeight: number,
-    count: number
+    count: number,
+    sizeMultiplier: number,
+    opacityBase: number,
+    opacityRange: number
 ): Bubble[] => {
     const rng = seededRandom(20260508);
     const bubbles: Bubble[] = [];
     const cyclesPool = [1, 1, 2];
     for (let i = 0; i < count; i += 1) {
         const morphSteps = 3 + Math.floor(rng() * 3);
-        const size = 80 + rng() * 220;
+        const size = (80 + rng() * 220) * sizeMultiplier;
         const cycles = cyclesPool[Math.floor(rng() * cyclesPool.length)];
         const lanePadding = size * 0.6;
         const centerX =
@@ -73,7 +75,7 @@ const buildBubbles = (
             size,
             cycles,
             yPhase: rng(),
-            opacity: 0.18 + rng() * 0.45,
+            opacity: opacityBase + rng() * opacityRange,
             morphPhase: rng(),
         });
     }
@@ -111,13 +113,33 @@ const getMorphedPath = (sequence: number[], progress: number): string => {
     return getInterpolator(sequence[segIndex], sequence[segIndex + 1])(eased);
 };
 
-const BubbleHeader = (): ReactElement => {
+type BubbleHeaderProps = {
+    bubbleCount: number;
+    sizeMultiplier?: number;
+    opacityBase?: number;
+    opacityRange?: number;
+};
+
+const BubbleHeader = ({
+    bubbleCount,
+    sizeMultiplier = 1,
+    opacityBase = 0.18,
+    opacityRange = 0.45,
+}: BubbleHeaderProps): ReactElement => {
     const frame = useCurrentFrame();
     const { width, height, durationInFrames } = useVideoConfig();
 
     const bubbles = useMemo(
-        () => buildBubbles(width, height, BUBBLE_COUNT),
-        [width, height]
+        () =>
+            buildBubbles(
+                width,
+                height,
+                bubbleCount,
+                sizeMultiplier,
+                opacityBase,
+                opacityRange
+            ),
+        [width, height, bubbleCount, sizeMultiplier, opacityBase, opacityRange]
     );
 
     const verticalSpan = height + 400;

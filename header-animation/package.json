@@ -7,7 +7,10 @@
         "dev": "remotion studio src/index.ts",
         "render-raw": "remotion render src/index.ts BubbleHeader out/bubble-header.raw.mp4 --codec=h264 --crf=15",
         "encode-web": "ffmpeg -y -i out/bubble-header.raw.mp4 -c:v libx264 -tune animation -crf 17 -preset slow -pix_fmt yuv420p -x264-params deblock=2,2 -movflags +faststart -an out/bubble-header.mp4",
-        "render": "npm run render-raw && npm run encode-web"
+        "render": "npm run render-raw && npm run encode-web",
+        "render-small-raw": "remotion render src/index.ts BubbleHeaderSmall out/bubble-header-small.raw.mp4 --codec=h264 --crf=15",
+        "encode-small-web": "ffmpeg -y -i out/bubble-header-small.raw.mp4 -c:v libx264 -tune animation -crf 17 -preset slow -pix_fmt yuv420p -x264-params deblock=2,2 -movflags +faststart -an out/bubble-header-small.mp4",
+        "render-small": "npm run render-small-raw && npm run encode-small-web"
     },
     "dependencies": {
         "@remotion/cli": "4.0.380",
