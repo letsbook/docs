@@ -73,7 +73,7 @@ post:
               id: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
               name: Summer Sale 2026
               type: percentage
-              percentage: "10"
+              percentage: '10'
               codesCount: 100
               totalUsages: 42
               maxUsages: 500

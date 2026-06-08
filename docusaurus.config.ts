@@ -115,6 +115,36 @@ const config: Config = {
                         title: "Let's Book releases",
                         description:
                             "Stay updated with the latest Let's Book releases",
+                        limit: 5,
+                        createFeedItems: async ({
+                            blogPosts,
+                            defaultCreateFeedItems,
+                            ...rest
+                        }) => {
+                            const items = await defaultCreateFeedItems({
+                                blogPosts,
+                                ...rest,
+                            });
+
+                            return items.map((item, index) => {
+                                const richTextSummary = blogPosts[index]
+                                    .metadata.frontMatter.richTextSummary as
+                                    | string
+                                    | undefined;
+
+                                if (richTextSummary) {
+                                    item.extensions = [
+                                        ...(item.extensions ?? []),
+                                        {
+                                            name: '_richTextSummary',
+                                            objects: richTextSummary,
+                                        },
+                                    ];
+                                }
+
+                                return item;
+                            });
+                        },
                     },
                     editUrl:
                         process.env.NODE_ENV === 'production'

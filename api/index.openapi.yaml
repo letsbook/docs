@@ -11,6 +11,10 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-06-05
+    ### Bookings
+    - Added `margins`, `marginAdjustedPickup`, and `marginAdjustedReturn` properties to the [booking response](/api/#operation/getBooking) describing the cleaning/charging buffer around a booking
+
     ## 2026-04-20
     ### Coupons
     - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed amount](/api/#operation/createFixedAmountCoupon), and [free time](/api/#operation/createFreeTimeCoupon) coupons
