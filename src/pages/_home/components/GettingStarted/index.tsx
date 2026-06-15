@@ -4,10 +4,10 @@ import type { ReactNode } from 'react';
 import styles from './styles.module.css';
 
 export default function GettingStarted(): ReactNode {
-    const openBeacon = (e: React.MouseEvent) => {
+    const openIntercom = (e: React.MouseEvent) => {
         e.preventDefault();
-        if (typeof window !== 'undefined' && (window as any).Beacon) {
-            (window as any).Beacon('open');
+        if (typeof window !== 'undefined' && (window as any).Intercom) {
+            (window as any).Intercom('show');
         }
     };
 
@@ -34,7 +34,7 @@ export default function GettingStarted(): ReactNode {
 
                         <div className={styles.Actions}>
                             <button
-                                onClick={openBeacon}
+                                onClick={openIntercom}
                                 className={`${styles.Btn} ${styles.BtnPrimary}`}
                             >
                                 Contact support

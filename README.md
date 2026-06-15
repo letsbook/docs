@@ -32,7 +32,7 @@ Just push to `main` to deploy to https://support.letsbook.app/ or push to `dev` 
 
 ## Variables and secrets
 
-Github needs only the `HELPSCOUT_BEACON_ID` [secret](https://github.com/letsbook/docs/settings/variables/actions). It is used during the build process to hook up the Helpscout widget. The widget is hidden when the variable is not set.
+Github needs only the `INTERCOM_APP_ID` [variable](https://github.com/letsbook/docs/settings/variables/actions). It is used during the build process to hook up the Intercom Messenger widget. The widget is hidden when the variable is not set.
 
 In order to deploy to Cloudflare workers, the following [secrets](https://github.com/letsbook/docs/settings/secrets/actions) need to be set: `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN`. They can be created in the Cloudflare dashboard using [account tokens](https://dash.cloudflare.com/77412db46d17841ed3bb3e0be58c2dcc/api-tokens). 
 
