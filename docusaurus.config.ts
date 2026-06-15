@@ -4,7 +4,7 @@ import 'dotenv/config';
 import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
 
-const beaconId = process.env.HELPSCOUT_BEACON_ID;
+const intercomAppId = process.env.INTERCOM_APP_ID;
 const noIndex = !!parseInt(process.env.NO_INDEX);
 const siteUrl = process.env.SITE_URL || 'https://support.letsbook.app';
 
@@ -45,22 +45,27 @@ const config: Config = {
         'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap',
     ],
 
-    headTags: [
-        {
-            tagName: 'script',
-            attributes: {
-                type: 'text/javascript',
-            },
-            innerHTML: `!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});`,
-        },
-        {
-            tagName: 'script',
-            attributes: {
-                type: 'text/javascript',
-            },
-            innerHTML: `window.Beacon('init', '${beaconId}');`,
-        },
-    ],
+    // Intercom Messenger. Only loaded when INTERCOM_APP_ID is set, so the
+    // widget stays hidden in local dev. Visitors here are anonymous, so no
+    // identity verification (JWT) is needed.
+    headTags: intercomAppId
+        ? [
+              {
+                  tagName: 'script',
+                  attributes: {
+                      type: 'text/javascript',
+                  },
+                  innerHTML: `window.intercomSettings={app_id:'${intercomAppId}',api_base:'https://api-iam.intercom.io'};`,
+              },
+              {
+                  tagName: 'script',
+                  attributes: {
+                      type: 'text/javascript',
+                  },
+                  innerHTML: `(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/'+w.intercomSettings.app_id;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();`,
+              },
+          ]
+        : [],
 
     markdown: {
         mermaid: true,

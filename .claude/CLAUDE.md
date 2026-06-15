@@ -68,7 +68,7 @@ Only run build/format/type-check commands when changing files with one of the fo
 - **Courses**: More strategic documents on how to improve your company, available at `/courses`
 - **API docs**: Redocusaurus integration serves OpenAPI specs at `/api` route
 - **Release notes**: Configured as blog posts under `/releases` route
-- **Help integration**: HelpScout Beacon widget integrated for user support
+- **Help integration**: Intercom Messenger widget integrated for user support
 
 ### Content organization
 
@@ -90,7 +90,7 @@ Documentation is auto-generated from folder structure via `sidebars.ts`.
 
 - Automatic deployment on push to `main` branch
 - Deployed to GitHub Pages at `letsbook.github.io`
-- Environment variables: `HELPSCOUT_BEACON_ID` for help widget
+- Environment variables: `INTERCOM_APP_ID` for help widget
 
 ### Content editing
 
