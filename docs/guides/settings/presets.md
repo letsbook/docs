@@ -6,7 +6,7 @@ description: Save costs and discounts once, apply them in one click
 
 # Cost and discount presets
 
-[Manage presets](https://dashboard.letsbook.app/settings/presets)
+[Manage presets](https://dashboard.letsbook.app/settings/cost-presets)
 
 Stop retyping the same cleaning fee or loyalty discount on every booking. Presets are reusable templates you drop onto a booking's Finance tab in one click.
 
@@ -55,7 +55,7 @@ Percentages shine for cancellation fees and loyalty discounts, where the charge 
 
 ## Reorder presets
 
-Click **Rearrange** and drag presets into the order you want. That's the order they show up in the picker on the booking, so put your most-used ones on top.
+Click **Rearrange** and drag presets into the order you want. That's the order they show up in the picker on the booking, so put your most-used ones on top and bundle related ones together to keep the list easy to scan.
 
 ## Edit or delete a preset
 

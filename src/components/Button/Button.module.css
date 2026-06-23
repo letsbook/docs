@@ -11,6 +11,7 @@ a.button {
     display: inline-block;
 
     margin-bottom: var(--ifm-leading);
+    margin-right: 0.75rem;
 }
 
 /* Primary Button */
