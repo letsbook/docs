@@ -4,6 +4,12 @@ sidebar_position: 13
 description: Save costs and discounts once, apply them in one click
 ---
 
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import createCostPresetVideo from './graphics/add_costs_presets.mp4';
+import createDiscountPresetVideo from './graphics/add_discount_presets.mp4';
+import applyPresetVideo from './graphics/apply_discounts_costss.mp4';
+
 # Cost and discount presets
 
 [Manage presets](https://dashboard.letsbook.app/settings/cost-presets)
@@ -27,9 +33,7 @@ Two types, two tabs:
 
 The tax setting is part of the preset, so it lands on the booking already filled in. You can still adjust it before saving the cost.
 
-:::danger[🎥 TODO]
-Record and embed a flow video of creating a cost preset.
-:::
+<InlineVideoPlayer videoSrc={createCostPresetVideo} />
 
 ## Create a discount preset
 
@@ -42,9 +46,7 @@ Record and embed a flow video of creating a cost preset.
 
 Discounts have no tax setting. They subtract straight from the booking total.
 
-:::danger[🎥 TODO]
-Record and embed a flow video of creating a discount preset.
-:::
+<InlineVideoPlayer videoSrc={createDiscountPresetVideo} />
 
 ## Fixed amount vs percentage
 
@@ -65,9 +67,7 @@ Click any preset to change it or delete it. Deleting a preset leaves existing bo
 
 Open a booking from [Bookings](https://dashboard.letsbook.app/bookings), go to the [Finance tab](/guides/day-to-day/bookings/manage-booking-finances), click **Add costs** or **Add discount**, and pick your preset from **Quick presets**. The whole form fills in one click.
 
-:::danger[🎥 TODO]
-Record and embed a flow video of picking a preset on the Add costs / Add discount form.
-:::
+<InlineVideoPlayer videoSrc={applyPresetVideo} />
 
 ## Presets worth setting up
 
