@@ -1,0 +1,38 @@
+---
+slug: v1.21
+date: 2026-06-23
+releaseVersion: v1.21
+description: Reusable cost and discount presets in one click
+richTextSummary: '<p>Less typing, more renting in this release!</p><ul><li>Save recurring costs and discounts as one-click presets, now with percentage support</li><li>Booking notes, cash payments, and add-on changes show up on the activity timeline</li><li>Cleaner waiver prefill, plus security improvements</li></ul>'
+hide_table_of_contents: true
+---
+
+import Button from '@site/src/components/Button/Button';
+
+# Costs and discounts, one click away
+
+![Cost and discount presets applied to a booking](./images/v1.21_presets.png)
+
+## No more retyping the same fees
+
+You kept hand-filling the same cleaning fee, fuel charge, and loyalty discount on every booking. Now you save them once as **presets** and drop them onto a booking in a single click, with the description, amount, and tax already filled in.
+
+Need a percentage instead of a fixed amount? The new percentage mode does the math against the booking total and shows you the result before you save.
+
+<Button href="https://dashboard.letsbook.app/settings/cost-presets">
+    Create presets →
+</Button>
+<Button href="/guides/settings/presets" variant="subtle">
+    See how it works →
+</Button>
+
+## Other updates
+
+- **Your booking timeline tracks more.** Booking notes, cash payments, and add-on changes now appear on the [activity timeline](/guides/day-to-day/tracking-changes), so you can see what changed, who did it, and when.
+- **Cleaner [waiver prefill](/guides/settings/waivers/set-up-waivers#prefill-fields).** We took number fields out of waiver prefill mapping. They showed up with confusing labels and there was no real reason to map them, so removing them keeps your setup clear.
+- We tightened security in a few places, including two-factor authentication and the customer login area.
+
+## Bugfixes
+
+- Fixed statistics not matching your dashboard after moving a boat to another location.
+- Fixed bookings showing at the wrong time on the planning timeline when your docks span multiple timezones.
