@@ -25,3 +25,6 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 tsconfig.tsbuildinfo
+
+# Local preview-tool workaround (cwd = docs/guides)
+/docs/guides/.claude/
