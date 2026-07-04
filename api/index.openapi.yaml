@@ -11,6 +11,10 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-07-04
+    ### Trips
+    - Added new endpoint to [list the trips of a booking](/api/#operation/listBookingTrips), including which boats were used and the actual on-water times
+
     ## 2026-06-05
     ### Bookings
     - Added `margins`, `marginAdjustedPickup`, and `marginAdjustedReturn` properties to the [booking response](/api/#operation/getBooking) describing the cleaning/charging buffer around a booking
@@ -233,6 +237,8 @@ paths:
     $ref: paths/bookings@{id}@costs.yaml
   /v1/bookings/{id}/costs/{costId}:
     $ref: paths/bookings@{id}@costs@{costId}.yaml
+  /v1/bookings/{id}/trips:
+    $ref: paths/bookings@{id}@trips.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:
