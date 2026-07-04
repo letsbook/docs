@@ -1,0 +1,10 @@
+type: object
+description: Update a note
+required:
+  - text
+properties:
+  text:
+    type: string
+    maxLength: 65535
+    description: New text content of the note
+    example: 'Pickup at Hotel Astoria at 10:00, drop-off at the main dock.'
