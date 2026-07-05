@@ -1,0 +1,110 @@
+post:
+  summary: Update a note
+  description: |
+    Update the text of an existing note on a booking.
+  operationId: updateBookingNote
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+    - name: noteId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+        description: ID of the note
+  requestBody:
+    required: true
+    description: The new note text.
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/forms/NoteUpdate.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                type: object
+                required:
+                  - noteId
+                properties:
+                  noteId:
+                    type: string
+                    format: uuid
+                    description: The ID of the updated note.
+                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '422':
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  text:
+                    - The text field is required.
+
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
+
+delete:
+  summary: Remove a note
+  description: |
+    Remove a note from a booking.
+  operationId: removeBookingNote
+  tags:
+    - Bookings
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+        description: ID of the booking
+    - name: noteId
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+        description: ID of the note
+  responses:
+    '204':
+      description: No content.
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
