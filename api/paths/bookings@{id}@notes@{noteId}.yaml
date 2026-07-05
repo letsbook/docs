@@ -9,17 +9,19 @@ post:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
     - name: noteId
       in: path
       required: true
+      description: ID of the note
       schema:
         type: string
+        format: uuid
         example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
-        description: ID of the note
   requestBody:
     required: true
     description: The new note text.
@@ -86,17 +88,19 @@ delete:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
     - name: noteId
       in: path
       required: true
+      description: ID of the note
       schema:
         type: string
+        format: uuid
         example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
-        description: ID of the note
   responses:
     '204':
       description: No content.

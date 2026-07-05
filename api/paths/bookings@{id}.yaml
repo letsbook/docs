@@ -7,10 +7,11 @@ get:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
   tags:
     - Bookings
   responses:
@@ -45,10 +46,11 @@ post:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
   requestBody:
     required: true
     description: Update booking parameters. None of the fields are required.
@@ -78,6 +80,8 @@ post:
                     example: '4a974b2a-2d35-4313-a2e9-5aee4e83601f'
     '401':
       $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
     '422':
       $ref: ../components/responses/BookingValidationError.yaml
     '429':
@@ -96,10 +100,11 @@ delete:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
   requestBody:
     required: true
     description: Cancellation parameters.

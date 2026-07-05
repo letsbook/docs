@@ -8,10 +8,11 @@ get:
     - name: id
       in: path
       required: true
+      description: ID of the boat
       schema:
         type: string
+        format: uuid
         example: 61f7c8a2-52cf-4f39-8f2a-9c1d1a2b3c4d
-        description: ID of the boat
   tags:
     - Boats
   responses:

@@ -6,10 +6,11 @@ get:
     - name: id
       in: path
       required: true
+      description: ID of the customer
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the customer
   tags:
     - Customers
   responses:
@@ -28,6 +29,10 @@ get:
       $ref: ../components/responses/Unauthorized.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
 
 post:
   summary: Update a customer
@@ -39,10 +44,11 @@ post:
     - name: id
       in: path
       required: true
+      description: ID of the customer
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the customer
   requestBody:
     required: true
     content:
@@ -63,6 +69,8 @@ post:
                 $ref: ../components/schemas/Customer.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
+    '404':
+      $ref: ../components/responses/NotFound.yaml
     '422':
       $ref: ../components/responses/CustomerValidationError.yaml
     '429':

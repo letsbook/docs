@@ -10,17 +10,19 @@ post:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
     - name: costId
       in: path
       required: true
+      description: ID of the cost
       schema:
         type: string
+        format: uuid
         example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
-        description: ID of the cost
   requestBody:
     required: true
     description: Cost details to update. All fields are optional.
@@ -80,17 +82,19 @@ delete:
     - name: id
       in: path
       required: true
+      description: ID of the booking
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the booking
     - name: costId
       in: path
       required: true
+      description: ID of the cost
       schema:
         type: string
+        format: uuid
         example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
-        description: ID of the cost
   responses:
     '200':
       description: OK
