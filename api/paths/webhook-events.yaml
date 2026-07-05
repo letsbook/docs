@@ -291,6 +291,150 @@ booking.labels_updated:
     responses:
       '200':
         description: Webhook received successfully
+booking.note_added:
+  post:
+    operationId: webhookBookingNoteAdded
+    tags:
+      - Webhook events
+    summary: Booking note added
+    description: Triggered when a note is added to a booking, by your team, the customer, or the system.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.note_added
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                type: object
+                required:
+                  - bookingId
+                  - bookingReference
+                  - note
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
+                    description: Unique identifier of the booking the note belongs to
+                  bookingReference:
+                    type: string
+                    example: BK8J3L
+                    description: The reference of the booking the note belongs to
+                  note:
+                    $ref: ../components/schemas/Note.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.note_updated:
+  post:
+    operationId: webhookBookingNoteUpdated
+    tags:
+      - Webhook events
+    summary: Booking note updated
+    description: Triggered when the text of a booking note is edited.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.note_updated
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                type: object
+                required:
+                  - bookingId
+                  - bookingReference
+                  - note
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
+                    description: Unique identifier of the booking the note belongs to
+                  bookingReference:
+                    type: string
+                    example: BK8J3L
+                    description: The reference of the booking the note belongs to
+                  note:
+                    $ref: ../components/schemas/Note.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
+booking.note_removed:
+  post:
+    operationId: webhookBookingNoteRemoved
+    tags:
+      - Webhook events
+    summary: Booking note removed
+    description: Triggered when a note is removed from a booking.
+    security:
+      - WebhookSignature: []
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - event
+              - occurredOn
+              - data
+            properties:
+              event:
+                type: string
+                enum:
+                  - booking.note_removed
+              occurredOn:
+                type: string
+                format: date-time
+                example: 2025-11-17T18:34:11+00:00
+              data:
+                type: object
+                required:
+                  - bookingId
+                  - bookingReference
+                  - note
+                properties:
+                  bookingId:
+                    type: string
+                    format: uuid
+                    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
+                    description: Unique identifier of the booking the note belongs to
+                  bookingReference:
+                    type: string
+                    example: BK8J3L
+                    description: The reference of the booking the note belongs to
+                  note:
+                    $ref: ../components/schemas/Note.yaml
+    responses:
+      '200':
+        description: Webhook received successfully
 booking.trip_started:
   post:
     operationId: webhookBookingTripStarted
