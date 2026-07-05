@@ -24,8 +24,10 @@ properties:
     enum:
       - open
       - boatClaimed
+      - boatReleased
       - started
       - paused
+      - resumed
       - ended
       - untracked
     description: |
@@ -33,8 +35,10 @@ properties:
 
       - `open`: no boat is claimed for the trip yet
       - `boatClaimed`: a boat is claimed, but the trip has not started
+      - `boatReleased`: the claimed boat was returned without ending the trip; a new boat can be claimed
       - `started`: the trip is on the water
       - `paused`: the trip is temporarily paused
+      - `resumed`: the trip is back on the water after a pause
       - `ended`: the trip has ended
       - `untracked`: the trip was not tracked, so no on-water data is available
   startedAt:
