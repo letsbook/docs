@@ -1,8 +1,8 @@
 get:
-  summary: Me
+  summary: Retrieve the current user
   description: |
     Retrieves user information for the currently authenticated user.
-  operationId: me
+  operationId: getMe
   tags:
     - Me
   responses:
@@ -29,7 +29,7 @@ get:
                   currentTenant:
                     description: |
                       The primary organisation (tenant) when no other organisation is
-                      [selected](#section/Multiple-organisation), or null when the
+                      [selected](#section/Multiple-organisations), or null when the
                       user has no access to any organisation.
                     oneOf:
                       - $ref: ../components/schemas/TenantAccess.yaml

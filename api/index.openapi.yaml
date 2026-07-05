@@ -17,7 +17,7 @@ info:
     All responses return in JSON format. Every endpoint starts with `https://api.letsbook.app`. 
     Download the OpenAPI specification at [https://support.letsbook.app/api.yaml](https://support.letsbook.app/api.yaml).
 
-    GET requests never modify data and are idempotent. POST/PUT/DELETE requests are not. 
+    GET requests never modify data and are idempotent. POST/DELETE requests are not. 
     We use HTTP status codes to communicate errors.
 
     # Authentication
@@ -44,7 +44,7 @@ info:
 
     ### Example
 
-    Use the `/me` endpoint to retrieve all organisation you can access. Then use the `id` of your 
+    Use the `/me` endpoint to retrieve all organisations you can access. Then use the `id` of your 
     desired organisation. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
     configure the header like this:
 
@@ -114,7 +114,7 @@ tags:
       at that dock.
   - name: Webhooks
     description: |
-      A webhook is a way for one system to instantly notify another when something happens. Instead of your app constantly polling our API, Let's Book sends an HTTP POST request to your specified URL whenever an event occurs. See [webhook events](#tag/Webhooks-events) for details on what we're sending. We consider the webhook call successful when your server returns a response with a `2xx` status code.
+      A webhook is a way for one system to instantly notify another when something happens. Instead of your app constantly polling our API, Let's Book sends an HTTP POST request to your specified URL whenever an event occurs. See [webhook events](#tag/Webhook-events) for details on what we're sending. We consider the webhook call successful when your server returns a response with a `2xx` status code.
   - name: Webhook events
     description: |
       A webhook event payload is a JSON object that contains event data for your app to process. When a relevant event occurs, we'll send the payload using a POST request to your webhook endpoint. Here's a list of event details on what we're sending.

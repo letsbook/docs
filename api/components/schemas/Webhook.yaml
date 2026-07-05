@@ -27,7 +27,7 @@ properties:
     description: You can store this secret in your app and use it to verify the
       incoming webhook is coming from Let's Book.
   events:
-    $ref: ../parameters/webhookEvent.yaml
+    $ref: ./WebhookEvents.yaml
   tenantIds:
     type: array
     description:

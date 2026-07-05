@@ -6,10 +6,11 @@ get:
     - name: id
       in: path
       required: true
+      description: ID of the boat model
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the boat model
   tags:
     - Boat models
   responses:
@@ -28,3 +29,7 @@ get:
       $ref: ../components/responses/Unauthorized.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
