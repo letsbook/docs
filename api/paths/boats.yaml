@@ -1,0 +1,37 @@
+get:
+  summary: List all boats
+  description: |
+    Returns a paginated list of the individual boats, sorted by name.
+    Archived boats are not included. A boat is a physical vessel of a boat
+    model — trips reference the ID of the specific boat used on the water.
+  operationId: listBoats
+  tags:
+    - Boats
+  parameters:
+    - $ref: ../components/parameters/page.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            required:
+              - data
+              - pagination
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: ../components/schemas/Boat.yaml
+              pagination:
+                allOf:
+                  - $ref: ../components/schemas/Pagination.yaml
+                  - properties:
+                      nextPageUrl:
+                        example: https://api.letsbook.app/v1/boats?page=2
+    '401':
+      $ref: ../components/responses/Unauthorized.yaml
+    '429':
+      $ref: ../components/responses/TooManyAttempts.yaml
+    '500':
+      $ref: ../components/responses/InternalServerError.yaml
