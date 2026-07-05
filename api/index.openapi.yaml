@@ -11,6 +11,10 @@ info:
       RSS feed
     </a> to stay up to date.
 
+    ## 2026-07-05
+    ### Boats
+    - Added new endpoints to [list](/api/#operation/listBoats) and [retrieve](/api/#operation/getBoat) individual boats, including the dock a boat is currently placed at
+
     ## 2026-07-04
     ### Trips
     - Added new endpoint to [list the trips of a booking](/api/#operation/listBookingTrips), including which boats were used and the actual on-water times
@@ -150,6 +154,10 @@ tags:
     description: |
       A boat model represents a type of boat. Many boat rental companies maintain multiple
       interchangeable boats of the same type, which we refer to as a boat model.
+  - name: Boats
+    description: |
+      An individual, physical boat of a boat model. Trips reference the
+      specific boat used on the water.
   - name: Customers
     description: |
       A customer is an individual who rents a boat.
@@ -218,6 +226,10 @@ paths:
     $ref: paths/boat-models.yaml
   /v1/boat-models/{id}:
     $ref: paths/boat-models@{id}.yaml
+  /v1/boats:
+    $ref: paths/boats.yaml
+  /v1/boats/{id}:
+    $ref: paths/boats@{id}.yaml
   /v1/customers:
     $ref: paths/customers.yaml
   /v1/customers/search:
