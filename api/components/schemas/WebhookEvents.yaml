@@ -13,6 +13,8 @@ items:
     - booking.completed
     - booking.canceled
     - booking.expired
+    - booking.trip_started
+    - booking.trip_ended
     - order.confirmed
     - order.lines_updated
     - order.canceled
