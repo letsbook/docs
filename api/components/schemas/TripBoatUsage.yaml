@@ -1,0 +1,30 @@
+description: A boat used during a trip
+required:
+  - boatId
+  - boatName
+  - claimedAt
+  - startedAt
+properties:
+  boatId:
+    type: string
+    format: uuid
+    example: 7c9e6679-7425-40de-944b-e07fc1f90ae7
+    description: Unique identifier of the boat
+  boatName:
+    type: string
+    example: Sloop 12
+    description: Name of the boat
+  claimedAt:
+    type: string
+    format: date-time
+    example: 2026-06-10T09:32:00+00:00
+    description: When the boat was claimed for the trip
+  startedAt:
+    type:
+      - string
+      - 'null'
+    format: date-time
+    example: 2026-06-10T09:35:00+00:00
+    description: >-
+      When the trip started with this boat on the water. Null when the trip
+      never started while this boat was claimed.
