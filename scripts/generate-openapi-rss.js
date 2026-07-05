@@ -18,37 +18,6 @@ const { join } = require('path');
  */
 
 /**
- * Extracts the changelog section from the OpenAPI description
- * @param {string} yamlContent - The raw YAML file content
- * @returns {string|null} The changelog markdown section or null if not found
- */
-function extractChangelog(yamlContent) {
-    // Find the description field in the info section
-    // Handles both literal (|) and folded (>) block scalars
-    const descriptionMatch = yamlContent.match(
-        /info:\s*\n\s*title:[^\n]*\n\s*description:\s*[|>]\s*\n([\s\S]*?)\n\s*version:/
-    );
-
-    if (!descriptionMatch) {
-        return null;
-    }
-
-    const description = descriptionMatch[1];
-
-    // Extract the changelog section (from # Changelog to next # heading)
-    // The # Introduction heading may appear with varying whitespace
-    const changelogMatch = description.match(
-        /# Changelog\s*([\s\S]*?)(?=\s*# Introduction|$)/
-    );
-
-    if (!changelogMatch) {
-        return null;
-    }
-
-    return changelogMatch[1].trim();
-}
-
-/**
  * Parses the changelog markdown into structured entries
  * @param {string} changelogMarkdown - The changelog markdown content
  * @returns {ChangelogEntry[]} Array of parsed changelog entries
@@ -57,7 +26,8 @@ function parseChangelog(changelogMarkdown) {
     /** @type {ChangelogEntry[]} */
     const entries = [];
 
-    // Split by date headers (## YYYY-MM-DD)
+    // Split by date headers (## YYYY-MM-DD). Everything before the first
+    // date header (frontmatter, intro) ends up in sections[0] and is skipped.
     const dateRegex = /##\s*(\d{4}-\d{2}-\d{2})/g;
     const sections = changelogMarkdown.split(dateRegex);
 
@@ -66,15 +36,21 @@ function parseChangelog(changelogMarkdown) {
         const date = sections[i];
         const content = sections[i + 1] || '';
 
-        // Extract bullet points, handling multi-line items (from folded YAML)
-        // Lines that don't start with - are continuations of the previous bullet
+        // Extract bullet points, handling multi-line items.
+        // Lines that don't start with - or # are continuations of the previous bullet
         const lines = content.split('\n').map((line) => line.trim());
         /** @type {string[]} */
         const changes = [];
         let currentChange = '';
 
         for (const line of lines) {
-            if (line.startsWith('-')) {
+            if (line.startsWith('#')) {
+                // Subheading (### Group) - flush the current change
+                if (currentChange) {
+                    changes.push(currentChange);
+                }
+                currentChange = '';
+            } else if (line.startsWith('-')) {
                 // Save previous change if exists
                 if (currentChange) {
                     changes.push(currentChange);
@@ -113,7 +89,7 @@ function entryToRssItem(entry, baseUrl) {
 
     return {
         title: `Change of ${entry.date}`,
-        link: `${baseUrl}/api/#section/Changelog`,
+        link: `${baseUrl}/api/changelog/#${entry.date}`,
         description: `<ul>\n${description}\n</ul>`,
         pubDate: dateObj.toUTCString(),
         guid: `${baseUrl}/api/changelog/${entry.date}`,
@@ -168,30 +144,28 @@ ${itemsXml}
 }
 
 /**
- * Main function to generate the RSS feed from the OpenAPI changelog
+ * Main function to generate the RSS feed from the API changelog page
  */
 function generateOpenApiRss() {
     const baseUrl = 'https://support.letsbook.app';
-    const inputPath = join(__dirname, '..', 'build', 'api.yaml');
+    const inputPath = join(
+        __dirname,
+        '..',
+        'src',
+        'pages',
+        'api',
+        'changelog.mdx'
+    );
     const outputPath = join(__dirname, '..', 'build', 'api', 'changelog.rss');
 
     try {
         // Check if input file exists
         if (!existsSync(inputPath)) {
             console.error(`❌ Input file not found: ${inputPath}`);
-            console.error(
-                'Make sure to run this script after the build process.'
-            );
             process.exit(1);
         }
 
-        const yamlContent = readFileSync(inputPath, 'utf8');
-
-        const changelogMarkdown = extractChangelog(yamlContent);
-        if (!changelogMarkdown) {
-            console.error('❌ Could not find changelog in OpenAPI description');
-            process.exit(1);
-        }
+        const changelogMarkdown = readFileSync(inputPath, 'utf8');
 
         const entries = parseChangelog(changelogMarkdown);
         if (entries.length === 0) {

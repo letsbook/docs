@@ -321,18 +321,20 @@ When adding or editing endpoints, follow these conventions so new routes stay co
 
 ### API changelog
 
-The changelog lives in `api/index.openapi.yaml` inside the `info.description` field. When making API changes:
+The changelog lives in `src/pages/api/changelog.mdx`, published at `/api/changelog/`. The API page links to it from the changelog section in `api/index.openapi.yaml`. The RSS feed is generated from the page by `scripts/generate-openapi-rss.js` during postbuild. When making API changes:
 
-1. Add a new date header (`## YYYY-MM-DD`) at the top if today's date isn't already there
+1. Add a new date header (`## YYYY-MM-DD`) above the most recent entry if today's date isn't already there
 2. Use `###` subheaders to group related changes
 3. Write bullet points with links to relevant endpoints using the format `[text](/api/#tag/Tag/operation/operationId)` or `[text](/api/#operation/operationId)`
 4. Keep entries concise and action-oriented ("Added new X endpoint", "Made Y property nullable")
 
 Example:
 
-```yaml
+```markdown
 ## 2025-12-24
+
 ### Booking labels
+
 - Added new [booking labels](/api/#tag/Booking-labels) endpoint
 - Added new `labels` property to the [booking response](/api/#operation/getBooking)
 ```
