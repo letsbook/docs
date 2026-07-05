@@ -1,8 +1,8 @@
 get:
   summary: List all notes
   description: |
-    Retrieves a paginated list of all notes on a booking. Notes are free-text
-    messages added by your team, the customer, or the system.
+    Retrieves a list of all notes on a booking. Notes are free-text messages
+    added by your team, the customer, or the system. The response is not paginated.
   operationId: listBookingNotes
   tags:
     - Bookings
@@ -14,7 +14,6 @@ get:
         type: string
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
         description: ID of the booking
-    - $ref: ../components/parameters/page.yaml
   responses:
     '200':
       description: OK
@@ -23,18 +22,11 @@ get:
           schema:
             required:
               - data
-              - pagination
             properties:
               data:
                 type: array
                 items:
                   $ref: ../components/schemas/Note.yaml
-              pagination:
-                allOf:
-                  - $ref: ../components/schemas/Pagination.yaml
-                  - properties:
-                      nextPageUrl:
-                        example: https://api.letsbook.app/v1/bookings/8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278/notes?page=2
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
