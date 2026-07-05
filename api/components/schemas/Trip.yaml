@@ -1,0 +1,66 @@
+description: A trip run for a booking
+required:
+  - id
+  - tripIndex
+  - status
+  - startedAt
+  - endedAt
+  - boats
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 61f7c8a2-52cf-4f39-8f2a-9c1d1a2b3c4d
+    description: Unique identifier of the trip
+  tripIndex:
+    type: integer
+    example: 1
+    description: >-
+      Sequential number of the trip within its booking, starting at 1. A
+      booking has one trip per booked boat.
+  status:
+    type: string
+    example: ended
+    enum:
+      - open
+      - boatClaimed
+      - boatReleased
+      - started
+      - paused
+      - resumed
+      - ended
+      - untracked
+    description: |
+      Current status of the trip.
+
+      - `open`: no boat is claimed for the trip yet
+      - `boatClaimed`: a boat is claimed, but the trip has not started
+      - `boatReleased`: the claimed boat was returned without ending the trip; a new boat can be claimed
+      - `started`: the trip is on the water
+      - `paused`: the trip is temporarily paused
+      - `resumed`: the trip is back on the water after a pause
+      - `ended`: the trip has ended
+      - `untracked`: the trip was not tracked, so no on-water data is available
+  startedAt:
+    type:
+      - string
+      - 'null'
+    format: date-time
+    example: 2026-06-10T09:35:00+00:00
+    description: >-
+      When the trip actually started. Null when the trip has not started.
+  endedAt:
+    type:
+      - string
+      - 'null'
+    format: date-time
+    example: 2026-06-10T14:10:00+00:00
+    description: When the trip ended. Null when the trip has not ended.
+  boats:
+    type: array
+    description: >-
+      All boats used during the trip, in order of first use. A trip can claim
+      and release more than one boat over its life. Empty when no boat was
+      claimed yet.
+    items:
+      $ref: ./TripBoatUsage.yaml
