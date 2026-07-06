@@ -40,15 +40,7 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - noteId
-                properties:
-                  noteId:
-                    type: string
-                    format: uuid
-                    description: The ID of the updated note.
-                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+                $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
@@ -80,7 +72,7 @@ post:
 delete:
   summary: Remove a note
   description: |
-    Remove a note from a booking.
+    Remove a note from a booking. The removed note is returned in the response.
   operationId: removeBookingNote
   tags:
     - Bookings
@@ -102,8 +94,17 @@ delete:
         format: uuid
         example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
   responses:
-    '204':
-      description: No content.
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - data
+            properties:
+              data:
+                $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
