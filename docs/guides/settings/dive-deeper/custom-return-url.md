@@ -28,7 +28,7 @@ We append these query parameters to your return URL. Use them for receipts and a
 | Parameter name         | Explanation                                                                      |
 | ---------------------- | -------------------------------------------------------------------------------- |
 | `lbBookingReference`   | The booking reference                                                            |
-| `lbPaymentRequestId`   | A unique ID for the paid payment request                                         |
+| `lbPaymentRequestId`   | A unique ID for the paid payment link                                            |
 | `lbDockId`             | The ID of the dock where the trip starts                                         |
 | `lbDockName`           | The name of the dock                                                             |
 | `lbBoatModelId`        | The ID of the boat model the booking is for                                      |
@@ -64,7 +64,7 @@ Overlay integrations have [built‑in tracking](/guides/settings/dive-deeper/con
             items: [
                 {
                     item_id: args.get('lbBookingReference'),
-                    item_name: 'Payment request',
+                    item_name: 'Payment link',
                     item_category: args.get('lbDockName'),
                     item_category2: args.get('lbBoatModelName'),
                 },
