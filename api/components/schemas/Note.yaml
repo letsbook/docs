@@ -3,8 +3,8 @@ description: |
   system.
 required:
   - id
+  - bookingId
   - text
-  - createdAt
   - lastEditedAt
 properties:
   id:
@@ -12,19 +12,17 @@ properties:
     format: uuid
     description: ID of the note
     example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
+  bookingId:
+    type: string
+    format: uuid
+    description: ID of the booking the note belongs to
+    example: 551ceb1c-6fbc-479b-819d-734f4044eca2
   text:
     type: string
     description: Text content of the note
     example: 'Pickup at Hotel Astoria at 09:30, drop-off at the main dock.'
-  createdAt:
+  lastEditedAt:
     type: string
     format: date-time
-    description: When the note was created
-    example: 2026-04-20T12:00:00+00:00
-  lastEditedAt:
-    type:
-      - string
-      - 'null'
-    format: date-time
-    description: When the note was last edited. Null when the note has never been edited.
+    description: When the note was last edited. Equals the creation date when the note has never been edited.
     example: 2026-04-21T09:15:00+00:00
