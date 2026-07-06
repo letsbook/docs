@@ -441,7 +441,7 @@ booking.trip_started:
     tags:
       - Webhook events
     summary: Trip started
-    description: Triggered when a trip starts (when the boat goes on the water). Because a booking has one trip per booked boat, this event fires per trip. The payload contains the trip with the id and reference of its parent booking.
+    description: Triggered when a trip starts (when the boat goes on the water). Because a booking has one trip per booked boat, this event fires per trip. The payload contains the trip with the id of its parent booking.
     security:
       - WebhookSignature: []
     requestBody:
@@ -468,7 +468,6 @@ booking.trip_started:
                   - type: object
                     required:
                       - bookingId
-                      - bookingReference
                     properties:
                       status:
                         type: string
@@ -479,10 +478,6 @@ booking.trip_started:
                         format: uuid
                         example: 551ceb1c-6fbc-479b-819d-734f4044eca2
                         description: Unique identifier of the parent booking
-                      bookingReference:
-                        type: string
-                        example: A1B2C3
-                        description: Reference of the parent booking
     responses:
       '200':
         description: Webhook received successfully
@@ -492,7 +487,7 @@ booking.trip_ended:
     tags:
       - Webhook events
     summary: Trip ended
-    description: Triggered when a trip ends (when the boat is switched off after its run). Because a booking has one trip per booked boat, this event fires per trip. The payload contains the trip with the id and reference of its parent booking.
+    description: Triggered when a trip ends (when the boat is switched off after its run). Because a booking has one trip per booked boat, this event fires per trip. The payload contains the trip with the id of its parent booking.
     security:
       - WebhookSignature: []
     requestBody:
@@ -519,7 +514,6 @@ booking.trip_ended:
                   - type: object
                     required:
                       - bookingId
-                      - bookingReference
                     properties:
                       status:
                         type: string
@@ -530,10 +524,6 @@ booking.trip_ended:
                         format: uuid
                         example: 551ceb1c-6fbc-479b-819d-734f4044eca2
                         description: Unique identifier of the parent booking
-                      bookingReference:
-                        type: string
-                        example: A1B2C3
-                        description: Reference of the parent booking
     responses:
       '200':
         description: Webhook received successfully
