@@ -72,15 +72,7 @@ post:
               - data
             properties:
               data:
-                type: object
-                required:
-                  - noteId
-                properties:
-                  noteId:
-                    type: string
-                    format: uuid
-                    description: The unique identifier of the newly created note.
-                    example: '3d0ed9eb-95d3-4e21-a389-2218adab7850'
+                $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
