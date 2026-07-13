@@ -6,77 +6,10 @@ info:
 
     We take backward compatibility seriously. Breaking changes are always announced ahead of time and include a migration period. Deprecated features remain available for a minimum of six months. New endpoints and optional fields may be added, as they don’t affect existing integrations.
 
-    You can subscribe to our changelog &thinsp;<a href="https://support.letsbook.app/api/changelog.rss" target="_blank">
+    Browse the full [changelog](/api/changelog/) to see what changed and when. You can also subscribe to our changelog &thinsp;<a href="https://support.letsbook.app/api/changelog.rss" target="_blank">
       <img src="/img/rss.svg" width="14" height="14" alt="" style="vertical-align: middle;"  />
       RSS feed
     </a> to stay up to date.
-
-    ## 2026-06-05
-    ### Bookings
-    - Added `margins`, `marginAdjustedPickup`, and `marginAdjustedReturn` properties to the [booking response](/api/#operation/getBooking) describing the cleaning/charging buffer around a booking
-
-    ## 2026-04-20
-    ### Coupons
-    - Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed amount](/api/#operation/createFixedAmountCoupon), and [free time](/api/#operation/createFreeTimeCoupon) coupons
-    - Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/getCoupon), [update](/api/#operation/updateCoupon), and [remove](/api/#operation/removeCoupon) coupons
-    - Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), [update](/api/#operation/updateCouponCode), and [remove](/api/#operation/removeCouponCode) coupon codes
-
-    ## 2026-03-31
-    ### Customers
-    - The `password` property is now ignored on the [create customer](/api/#operation/createCustomer) and [update customer](/api/#operation/updateCustomer) endpoints
-    - When `notifyCustomer` is set to true, the [create customer](/api/#operation/createCustomer) endpoint now sends a welcome email with a password reset link instead of login credentials
-
-    ## 2026-01-28
-    ### Product webhooks
-    - Added new [product.added](/api/#operation/webhookProductAdded) webhook event
-    - Added new [product.updated](/api/#operation/webhookProductUpdated) webhook event
-    - Added new [product.removed](/api/#operation/webhookProductRemoved) webhook event
-
-    ## 2026-01-20
-    ### Manual costs
-    - Added new endpoint to [add a manual cost](/api/#operation/createBookingCost) to a booking
-    - Added new endpoint to [update a manual cost](/api/#operation/updateBookingCost) on a booking
-    - Added new endpoint to [delete a manual cost](/api/#operation/deleteBookingCost) from a booking
-    - Only costs with type `manual` can be added, updated, or deleted through the API
-
-    ### Confirm booking
-    - Added new endpoint to [confirm a booking](/api/#operation/confirmBooking)
-    - Added new `confirmed` property to [create](/api/#operation/createBooking) booking requests
-    - Bookings created without `confirmed: true` will be created as drafts
-    - **Deprecated:** The `paid` property is now deprecated in favor of `confirmed`. Previously, `paid: true` would add a cash payment. Now it simply confirms the booking without creating payments.
-
-    ### Products
-    - Added new [products](/api/#tag/Products/operation/listProducts) endpoint to list all products (called "add-ons" in the dashboard)
-    - Added new [product categories](/api/#tag/Products/operation/listProductCategories) endpoint to list all product categories.
-
-    ## 2025-12-24
-    ### Booking labels
-    - Added new [booking labels](/api/#tag/Booking-labels) endpoint
-    - Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
-    - Added new `labels` property to the [booking response](/api/#operation/getBooking)
-
-    ### Booking filters
-    - Added new `pickupAfter` and `pickupBefore` filters to [list bookings](/api/#operation/listBookings) to filter by pickup time
-    - Added new `labelIds` filter to [list bookings](/api/#operation/listBookings) to filter by booking labels
-
-    ### Cancel booking
-    - Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
-
-    ### Additional questions and answers
-    - Added new [additionalQuestions](/api/#tag/Bookings/operation/getBooking) property to the booking response
-
-    ## 2025-11-18
-    - Made the `url` property of a booking `nullable` when its status is `'draft'`
-    - Made the `phoneNumber` property of a customer `nullable` instead of empty string when not known
-    - Added new [webhook endpoints](/api/#tag/Webhooks) 
-    - Added new [webhook requests](/api/#tag/Webhook-events)
-
-    ## 2025-10-17
-    - Added the `booking_fee` cost type
-
-    ## 2024-05-31
-    - Renamed all references from VAT to tax. Legacy `VAT` properties remain available for backward compatibility but are deprecated.
-    - Introduced the `/v1/tax-rates` endpoint and deprecated the `/v1/vat-rates` endpoint
 
     # Introduction
 
@@ -84,7 +17,7 @@ info:
     All responses return in JSON format. Every endpoint starts with `https://api.letsbook.app`. 
     Download the OpenAPI specification at [https://support.letsbook.app/api.yaml](https://support.letsbook.app/api.yaml).
 
-    GET requests never modify data and are idempotent. POST/PUT/DELETE requests are not. 
+    GET requests never modify data and are idempotent. POST/DELETE requests are not. 
     We use HTTP status codes to communicate errors.
 
     # Authentication
@@ -111,7 +44,7 @@ info:
 
     ### Example
 
-    Use the `/me` endpoint to retrieve all organisation you can access. Then use the `id` of your 
+    Use the `/me` endpoint to retrieve all organisations you can access. Then use the `id` of your 
     desired organisation. For example, if the ID is `9366b305-e315-4abe-ba8a-90e326ad8e81`, 
     configure the header like this:
 
@@ -143,6 +76,10 @@ tags:
     description: |
       A boat model represents a type of boat. Many boat rental companies maintain multiple
       interchangeable boats of the same type, which we refer to as a boat model.
+  - name: Boats
+    description: |
+      An individual, physical boat of a boat model. Trips reference the
+      specific boat used on the water.
   - name: Customers
     description: |
       A customer is an individual who rents a boat.
@@ -177,7 +114,7 @@ tags:
       at that dock.
   - name: Webhooks
     description: |
-      A webhook is a way for one system to instantly notify another when something happens. Instead of your app constantly polling our API, Let's Book sends an HTTP POST request to your specified URL whenever an event occurs. See [webhook events](#tag/Webhooks-events) for details on what we're sending. We consider the webhook call successful when your server returns a response with a `2xx` status code.
+      A webhook is a way for one system to instantly notify another when something happens. Instead of your app constantly polling our API, Let's Book sends an HTTP POST request to your specified URL whenever an event occurs. See [webhook events](#tag/Webhook-events) for details on what we're sending. We consider the webhook call successful when your server returns a response with a `2xx` status code.
   - name: Webhook events
     description: |
       A webhook event payload is a JSON object that contains event data for your app to process. When a relevant event occurs, we'll send the payload using a POST request to your webhook endpoint. Here's a list of event details on what we're sending.
@@ -211,6 +148,10 @@ paths:
     $ref: paths/boat-models.yaml
   /v1/boat-models/{id}:
     $ref: paths/boat-models@{id}.yaml
+  /v1/boats:
+    $ref: paths/boats.yaml
+  /v1/boats/{id}:
+    $ref: paths/boats@{id}.yaml
   /v1/customers:
     $ref: paths/customers.yaml
   /v1/customers/search:
@@ -233,6 +174,12 @@ paths:
     $ref: paths/bookings@{id}@costs.yaml
   /v1/bookings/{id}/costs/{costId}:
     $ref: paths/bookings@{id}@costs@{costId}.yaml
+  /v1/bookings/{id}/trips:
+    $ref: paths/bookings@{id}@trips.yaml
+  /v1/bookings/{id}/notes:
+    $ref: paths/bookings@{id}@notes.yaml
+  /v1/bookings/{id}/notes/{noteId}:
+    $ref: paths/bookings@{id}@notes@{noteId}.yaml
   /v1/tax-rates:
     $ref: paths/tax-rates.yaml
   /v1/vat-rates:

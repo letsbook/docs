@@ -1,0 +1,20 @@
+description: An individual, physical boat of a boat model
+required:
+  - id
+  - name
+  - boatModelId
+properties:
+  id:
+    type: string
+    format: uuid
+    example: 61f7c8a2-52cf-4f39-8f2a-9c1d1a2b3c4d
+    description: ID of the boat
+  name:
+    type: string
+    example: Sloop 12
+    description: Name of the boat
+  boatModelId:
+    type: string
+    format: uuid
+    example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+    description: ID of the boat model this boat belongs to

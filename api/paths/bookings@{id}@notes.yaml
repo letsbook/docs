@@ -1,30 +1,33 @@
 get:
-  summary: Retrieve a customer
-  description: Retrieve a Customer object by ID.
-  operationId: getCustomer
+  summary: List all notes
+  description: |
+    Retrieves a list of all notes on a booking. Notes are free-text messages
+    added by your team, the customer, or the system. The response is not paginated.
+  operationId: listBookingNotes
+  tags:
+    - Bookings
   parameters:
     - name: id
       in: path
       required: true
-      description: ID of the customer
+      description: ID of the booking
       schema:
         type: string
         format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-  tags:
-    - Customers
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            type: object
             required:
               - data
             properties:
               data:
-                $ref: ../components/schemas/Customer.yaml
+                type: array
+                items:
+                  $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
@@ -35,26 +38,29 @@ get:
       $ref: ../components/responses/InternalServerError.yaml
 
 post:
-  summary: Update a customer
-  description: Update an existing customer.
-  operationId: updateCustomer
+  summary: Add a note
+  description: |
+    Add a free-text note to a booking, for example a hotel pickup address or
+    special instructions for your team.
+  operationId: createBookingNote
   tags:
-    - Customers
+    - Bookings
   parameters:
     - name: id
       in: path
       required: true
-      description: ID of the customer
+      description: ID of the booking
       schema:
         type: string
         format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
   requestBody:
     required: true
+    description: Note details.
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CustomerUpdate.yaml
+          $ref: ../components/schemas/forms/NoteCreate.yaml
   responses:
     '200':
       description: OK
@@ -66,13 +72,30 @@ post:
               - data
             properties:
               data:
-                $ref: ../components/schemas/Customer.yaml
+                $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
     '422':
-      $ref: ../components/responses/CustomerValidationError.yaml
+      description: Validation error
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - errors
+            properties:
+              errors:
+                type: object
+                additionalProperties:
+                  type: array
+                  items:
+                    type: string
+                example:
+                  text:
+                    - The text field is required.
+
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
     '500':

@@ -1,0 +1,121 @@
+---
+title: API changelog
+description: All changes to the Let's Book API
+toc_max_heading_level: 2
+---
+
+# API changelog
+
+We take backward compatibility seriously. Breaking changes are always announced ahead of time and include a migration period. Deprecated features remain available for a minimum of six months. New endpoints and optional fields may be added, as they don’t affect existing integrations.
+
+Subscribe to the [RSS feed](https://support.letsbook.app/api/changelog.rss) to stay up to date.
+
+## 2026-07-10
+
+### Boats
+
+- Added new endpoints to [list](/api/#operation/listBoats) and [retrieve](/api/#operation/getBoat) individual boats, including the dock a boat is currently placed at
+
+### Trips
+
+- Added new endpoint to [list the trips of a booking](/api/#operation/listBookingTrips), including which boats were used and the actual on-water times
+- Added new [booking.trip_started](/api/#operation/webhookBookingTripStarted) webhook event
+- Added new [booking.trip_ended](/api/#operation/webhookBookingTripEnded) webhook event
+
+### Booking notes
+
+- Added new endpoints to [list](/api/#operation/listBookingNotes), [add](/api/#operation/createBookingNote), [update](/api/#operation/updateBookingNote), and [remove](/api/#operation/removeBookingNote) notes on a booking
+- Added new [booking.note_added](/api/#operation/webhookBookingNoteAdded) webhook event
+- Added new [booking.note_updated](/api/#operation/webhookBookingNoteUpdated) webhook event
+- Added new [booking.note_removed](/api/#operation/webhookBookingNoteRemoved) webhook event
+
+### Coupons
+
+- [Removing a coupon](/api/#operation/removeCoupon) that is already archived now returns a `422` validation error instead of a `404`
+
+## 2026-06-05
+
+### Bookings
+
+- Added `margins`, `marginAdjustedPickup`, and `marginAdjustedReturn` properties to the [booking response](/api/#operation/getBooking) describing the cleaning/charging buffer around a booking
+
+## 2026-04-20
+
+### Coupons
+
+- Added new endpoints to create [percentage](/api/#operation/createPercentageCoupon), [fixed amount](/api/#operation/createFixedAmountCoupon), and [free time](/api/#operation/createFreeTimeCoupon) coupons
+- Added new endpoints to [list](/api/#operation/listCoupons), [retrieve](/api/#operation/getCoupon), [update](/api/#operation/updateCoupon), and [remove](/api/#operation/removeCoupon) coupons
+- Added new endpoints to [list](/api/#operation/listCouponCodes), [add](/api/#operation/addCouponCodes), [generate](/api/#operation/generateCouponCodes), [update](/api/#operation/updateCouponCode), and [remove](/api/#operation/removeCouponCode) coupon codes
+
+## 2026-03-31
+
+### Customers
+
+- The `password` property is now ignored on the [create customer](/api/#operation/createCustomer) and [update customer](/api/#operation/updateCustomer) endpoints
+- When `notifyCustomer` is set to true, the [create customer](/api/#operation/createCustomer) endpoint now sends a welcome email with a password reset link instead of login credentials
+
+## 2026-01-28
+
+### Product webhooks
+
+- Added new [product.added](/api/#operation/webhookProductAdded) webhook event
+- Added new [product.updated](/api/#operation/webhookProductUpdated) webhook event
+- Added new [product.removed](/api/#operation/webhookProductRemoved) webhook event
+
+## 2026-01-20
+
+### Manual costs
+
+- Added new endpoint to [add a manual cost](/api/#operation/createBookingCost) to a booking
+- Added new endpoint to [update a manual cost](/api/#operation/updateBookingCost) on a booking
+- Added new endpoint to [delete a manual cost](/api/#operation/removeBookingCost) from a booking
+- Only costs with type `manual` can be added, updated, or deleted through the API
+
+### Confirm booking
+
+- Added new endpoint to [confirm a booking](/api/#operation/confirmBooking)
+- Added new `confirmed` property to [create](/api/#operation/createBooking) booking requests
+- Bookings created without `confirmed: true` will be created as drafts
+- **Deprecated:** The `paid` property is now deprecated in favor of `confirmed`. Previously, `paid: true` would add a cash payment. Now it simply confirms the booking without creating payments.
+
+### Products
+
+- Added new [products](/api/#tag/Products/operation/listProducts) endpoint to list all products (called "add-ons" in the dashboard)
+- Added new [product categories](/api/#tag/Products/operation/listProductCategories) endpoint to list all product categories.
+
+## 2025-12-24
+
+### Booking labels
+
+- Added new [booking labels](/api/#tag/Booking-labels) endpoint
+- Added new endpoint to [update the booking labels](/api/#tag/Bookings/operation/replaceBookingLabels) assigned to a booking
+- Added new `labels` property to the [booking response](/api/#operation/getBooking)
+
+### Booking filters
+
+- Added new `pickupAfter` and `pickupBefore` filters to [list bookings](/api/#operation/listBookings) to filter by pickup time
+- Added new `labelIds` filter to [list bookings](/api/#operation/listBookings) to filter by booking labels
+
+### Cancel booking
+
+- Added new endpoint to [cancel a booking](/api/#operation/cancelBooking)
+
+### Additional questions and answers
+
+- Added new [additionalQuestions](/api/#tag/Bookings/operation/getBooking) property to the booking response
+
+## 2025-11-18
+
+- Made the `url` property of a booking `nullable` when its status is `'draft'`
+- Made the `phoneNumber` property of a customer `nullable` instead of empty string when not known
+- Added new [webhook endpoints](/api/#tag/Webhooks)
+- Added new [webhook requests](/api/#tag/Webhook-events)
+
+## 2025-10-17
+
+- Added the `booking_fee` cost type
+
+## 2024-05-31
+
+- Renamed all references from VAT to tax. Legacy `VAT` properties remain available for backward compatibility but are deprecated.
+- Introduced the `/v1/tax-rates` endpoint and deprecated the `/v1/vat-rates` endpoint

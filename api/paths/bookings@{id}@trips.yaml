@@ -1,18 +1,22 @@
 get:
-  summary: Retrieve a dock
-  description: Retrieve a Dock object by ID.
-  operationId: getDock
+  summary: List booking trips
+  description: |
+    List the trips run for a booking, including which boats were used and the
+    actual on-water times. Trips are created when a booking is confirmed, one
+    per booked boat. Trips are read-only through the API. The response is not
+    paginated.
+  operationId: listBookingTrips
   parameters:
     - name: id
       in: path
       required: true
-      description: ID of the dock
+      description: ID of the booking
       schema:
         type: string
         format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
   tags:
-    - Docks
+    - Bookings
   responses:
     '200':
       description: OK
@@ -24,7 +28,9 @@ get:
               - data
             properties:
               data:
-                $ref: ../components/schemas/Dock.yaml
+                type: array
+                items:
+                  $ref: ../components/schemas/Trip.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':

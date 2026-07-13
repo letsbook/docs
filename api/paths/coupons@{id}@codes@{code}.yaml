@@ -9,17 +9,18 @@ post:
     - name: id
       in: path
       required: true
+      description: ID of the coupon
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the coupon
     - name: code
       in: path
       required: true
+      description: The coupon code
       schema:
         type: string
         example: SUMMER2026
-        description: The coupon code
   requestBody:
     required: true
     description: Update coupon code parameters. All fields are optional.
@@ -83,17 +84,18 @@ delete:
     - name: id
       in: path
       required: true
+      description: ID of the coupon
       schema:
         type: string
+        format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-        description: ID of the coupon
     - name: code
       in: path
       required: true
+      description: The coupon code
       schema:
         type: string
         example: SUMMER2026
-        description: The coupon code
   responses:
     '204':
       description: No content.

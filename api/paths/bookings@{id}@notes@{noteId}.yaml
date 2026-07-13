@@ -1,9 +1,8 @@
 post:
-  summary: Update a cost
+  summary: Update a note
   description: |
-    Update an existing manual cost on a booking. Only costs with type `manual` can be
-    updated. Attempting to update other cost types will result in an error.
-  operationId: updateBookingCost
+    Update the text of an existing note on a booking.
+  operationId: updateBookingNote
   tags:
     - Bookings
   parameters:
@@ -15,21 +14,21 @@ post:
         type: string
         format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-    - name: costId
+    - name: noteId
       in: path
       required: true
-      description: ID of the cost
+      description: ID of the note
       schema:
         type: string
         format: uuid
         example: 3d0ed9eb-95d3-4e21-a389-2218adab7850
   requestBody:
     required: true
-    description: Cost details to update. All fields are optional.
+    description: The new note text.
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/forms/CostUpdate.yaml
+          $ref: ../components/schemas/forms/NoteUpdate.yaml
   responses:
     '200':
       description: OK
@@ -41,7 +40,7 @@ post:
               - data
             properties:
               data:
-                $ref: ../components/schemas/Cost.yaml
+                $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
@@ -62,8 +61,8 @@ post:
                   items:
                     type: string
                 example:
-                  costId:
-                    - Only manual costs can be updated.
+                  text:
+                    - The text field is required.
 
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
@@ -71,11 +70,10 @@ post:
       $ref: ../components/responses/InternalServerError.yaml
 
 delete:
-  summary: Remove a cost
+  summary: Remove a note
   description: |
-    Remove an existing manual cost from a booking. Only costs with type `manual` can be
-    removed. Attempting to delete other cost types will result in an error.
-  operationId: removeBookingCost
+    Remove a note from a booking. The removed note is returned in the response.
+  operationId: removeBookingNote
   tags:
     - Bookings
   parameters:
@@ -87,10 +85,10 @@ delete:
         type: string
         format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
-    - name: costId
+    - name: noteId
       in: path
       required: true
-      description: ID of the cost
+      description: ID of the note
       schema:
         type: string
         format: uuid
@@ -103,35 +101,14 @@ delete:
           schema:
             type: object
             required:
-              - message
+              - data
             properties:
-              message:
-                type: string
-                description: Result message
-                example: Cost removed.
+              data:
+                $ref: ../components/schemas/Note.yaml
     '401':
       $ref: ../components/responses/Unauthorized.yaml
     '404':
       $ref: ../components/responses/NotFound.yaml
-    '422':
-      description: Validation error
-      content:
-        application/json:
-          schema:
-            type: object
-            required:
-              - errors
-            properties:
-              errors:
-                type: object
-                additionalProperties:
-                  type: array
-                  items:
-                    type: string
-                example:
-                  costId:
-                    - Only manual costs can be removed.
-
     '429':
       $ref: ../components/responses/TooManyAttempts.yaml
     '500':

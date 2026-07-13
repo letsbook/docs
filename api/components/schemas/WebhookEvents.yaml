@@ -7,9 +7,14 @@ items:
     - booking.confirmed
     - booking.details_updated
     - booking.labels_updated
+    - booking.note_added
+    - booking.note_updated
+    - booking.note_removed
     - booking.completed
     - booking.canceled
     - booking.expired
+    - booking.trip_started
+    - booking.trip_ended
     - order.confirmed
     - order.lines_updated
     - order.canceled

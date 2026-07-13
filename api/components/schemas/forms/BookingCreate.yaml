@@ -43,7 +43,7 @@ allOf:
           property would add a cash payment equal to the unpaid costs. This behavior
           has been removed in favor of explicit confirmation without automatic
           payment creation.
-        default: true
+        default: false
         example: true
       partnerCode:
         type: string

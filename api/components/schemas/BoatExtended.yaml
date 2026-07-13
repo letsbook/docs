@@ -1,0 +1,32 @@
+allOf:
+  - $ref: ./Boat.yaml
+  - type: object
+    required:
+      - currentDock
+    properties:
+      currentDock:
+        description: >-
+          The dock the boat is currently placed at. Null when the boat is
+          currently out of service.
+        oneOf:
+          - type: object
+            required:
+              - id
+              - name
+              - placedAt
+            properties:
+              id:
+                type: string
+                format: uuid
+                example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+                description: ID of the dock
+              name:
+                type: string
+                example: Main dock
+                description: Name of the dock
+              placedAt:
+                type: string
+                format: date-time
+                example: 2026-06-01T10:00:00+00:00
+                description: When the boat was placed at this dock
+          - type: 'null'
