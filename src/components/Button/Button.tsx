@@ -12,6 +12,7 @@ interface ButtonProps {
     children: ReactNode;
     variant?: 'primary' | 'secondary' | 'subtle';
     align?: 'left' | 'center' | 'right';
+    onClick?: (e: React.MouseEvent) => void;
 }
 
 const Button = ({
@@ -19,6 +20,7 @@ const Button = ({
     children,
     variant = 'primary',
     align,
+    onClick,
 }: ButtonProps) => {
     const external = isExternalHref(href);
 
@@ -29,6 +31,7 @@ const Button = ({
                 [styles.primary]: variant === 'primary',
                 [styles.subtle]: variant === 'subtle',
             })}
+            onClick={onClick}
             {...(external
                 ? { target: '_blank', rel: 'noopener noreferrer' }
                 : {})}
