@@ -18,7 +18,7 @@ Each notification shows its channel (email or text), the recipient, and the deli
 Use the filter at the top to narrow the list:
 
 - **All**: everything, including upcoming notifications
-- **Needs attention**: only notifications where the latest attempt bounced or failed
+- **Needs attention**: only notifications where the latest attempt could not be delivered
 - **Delivered**: confirmed deliveries
 
 Under the All filter, an **Upcoming** card lists notifications that are scheduled but not sent yet, like pick-up reminders, with the planned time and recipient. It disappears when nothing is scheduled.
@@ -28,11 +28,13 @@ Under the All filter, an **Upcoming** card lists notifications that are schedule
 - **Sent**: handed off to the email or SMS provider
 - **Delivered**: confirmed to have reached the recipient
 - **Delayed**: the provider is retrying, usually resolves on its own
-- **Bounced / Failed**: the message did not arrive, time to take action
+- **Could not be delivered**: the message did not arrive, time to take action
+
+Upcoming notifications show as **Scheduled** until they go out.
 
 ## Spot delivery problems
 
-When a booking's latest delivery attempt bounced or failed, you'll know without digging:
+When a booking's latest message could not be delivered, you'll know without digging:
 
 - A dot on the booking's Notifications tab
 - A banner on the booking's Details tab
