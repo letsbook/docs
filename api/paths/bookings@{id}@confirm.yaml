@@ -15,6 +15,29 @@ post:
         type: string
         format: uuid
         example: 8d159bbe-f6bc-4ddd-8c9a-6091d7ebd278
+  requestBody:
+    required: false
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            notifyCustomer:
+              type: boolean
+              description: |
+                Whether the customer receives a booking confirmation email and
+                SMS. When you omit this field, the stored value of the booking
+                stays as it is.
+              example: true
+            includePaymentLink:
+              type: boolean
+              default: true
+              description: |
+                Whether the booking confirmation email contains a payment
+                request link. It is only applicable when the effective
+                notifyCustomer is true. The amount is the stored costs of the
+                booking minus the amount that the booking already paid.
+              example: true
   responses:
     '200':
       description: OK
