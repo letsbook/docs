@@ -7,8 +7,6 @@ import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 import addCostsVideo from '../graphics/add_costs.mp4';
 import birthdayDiscountVideo from '../graphics/birthday_discount.mp4';
 import cashPaymentVideo from '../graphics/cash_payment.mp4';
-import chargeCardVideo from '../graphics/charge_card.mov';
-import paymentRequestVideo from '../graphics/payment_request.mp4';
 
 # Booking finances
 
@@ -26,9 +24,7 @@ The top bar shows the overall payment status:
 
 The balance automatically updates when you add costs, discounts, or payments.
 
-If you've enabled **Keep card on file** in [integrations](https://dashboard.letsbook.app/integrations/psp), you'll see a **Charge card** button here to directly charge saved payment methods.
-
-<InlineVideoPlayer videoSrc={chargeCardVideo} />
+When there's an outstanding balance, the Collect payment button next to it opens one modal for every way to get paid. See [managing payments](#managing-payments).
 
 ## Managing costs
 
@@ -79,23 +75,15 @@ The base rental price (boat + duration) is calculated automatically and can't be
 
 ## Managing payments
 
-### Send a payment link
+### Collect a payment
 
-Request payment for outstanding balances.
+One Collect payment button covers every way to settle an outstanding balance. Click it and the modal opens on the easiest method available for this customer, with the amount and description pre-filled. Switch methods at the top; whatever you filled in comes along.
 
-1. Click **Request payment** (top right)
-2. Enter amount and description
-3. Set payment deadline (date & time)
-4. Toggle **Also charge a deposit** if needed
-5. Click **Save request**
+**Charge the card on file.** Available when you've enabled Keep card on file in [integrations](https://dashboard.letsbook.app/integrations/psp) and the customer has a saved payment method. One confirmation and it's paid.
 
-Share the payment link via:
+**Charge on a terminal.** Take the payment on your card reader while the customer is standing right there. See [payment terminals](/guides/settings/payments/terminals).
 
-- **Copy link** → Paste it anywhere
-- **Send via email** → Direct to customer's inbox
-- **Send via text message** → SMS to customer's phone
-
-Payment links expire after the deadline. Customers can pay via Mollie or Stripe (depending on your setup).
+**Send a payment link.** Send it by email or text message (address and language pre-filled), or copy the link to share it anywhere. Set when the payment is due, and toggle a deposit onto the request if needed.
 
 :::tip[When to use payment links]
 
@@ -105,7 +93,11 @@ Payment links expire after the deadline. Customers can pay via Mollie or Stripe 
 - After price changes from edits
   :::
 
-<InlineVideoPlayer videoSrc={paymentRequestVideo} />
+:::danger TODO: outdated videos
+
+The charge-card and payment-request videos showed the old separate flows and were removed. Record one new video of the Collect payment modal.
+
+:::
 
 ### Add cash payment
 
@@ -123,26 +115,18 @@ The balance updates immediately. Cash payments don't go through payment provider
 
 ### View deposits
 
-Deposits appear at the bottom of the Finance tab. Click the deposit line to open it in your payment provider (Stripe or Mollie) where you can process refunds.
-
-:::info[Deposit handling]
-Deposits are handled through your payment provider. Click the deposit to open the payment in Stripe or Mollie, then process the refund there.
-:::
+Deposits appear at the bottom of the Finance tab, with their current balance. Once the trip has ended, return them straight from the booking: see [return deposits and refunds](/guides/day-to-day/bookings/return-deposits-and-refunds).
 
 ## Handle pricing changes
 
 When you edit a booking and the price changes:
 
 1. Check the new balance in Finance tab
-2. If price increased → Send a payment link
-3. If price decreased → Process refund via your payment provider
+2. If price increased → Collect the difference via [Collect payment](#collect-a-payment)
+3. If price decreased → Refund the overpayment from the booking
 
 ### Process refunds
 
-Refund payments through your payment provider's dashboard.
+Refunds happen right on the booking. The next-step card on the Finance tab shows what's open and hands you the button, whether it's a deposit to return, an overpayment to refund, or a cancelled booking to settle.
 
-1. Click the payment you want to refund
-2. This opens Stripe or Mollie
-3. Process the refund there
-
-The refund appears in the Finance tab once complete. Learn more in [refunds and disputes](/guides/settings/payments/receive-payments#refunds-and-disputes).
+See [return deposits and refunds](/guides/day-to-day/bookings/return-deposits-and-refunds) for the full flow.
