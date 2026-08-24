@@ -115,7 +115,11 @@ The balance updates immediately. Cash payments don't go through payment provider
 
 ### View deposits
 
-Deposits appear at the bottom of the Finance tab, with their current balance. Once the trip has ended, return them straight from the booking: see [return deposits and refunds](/guides/day-to-day/bookings/return-deposits-and-refunds).
+Deposits appear at the bottom of the Finance tab. Click the deposit line to open it in your payment provider (Stripe or Mollie) where you can process refunds.
+
+:::info[Deposit handling]
+Deposits are handled through your payment provider. Click the deposit to open the payment in Stripe or Mollie, then process the refund there.
+:::
 
 ## Handle pricing changes
 
@@ -123,10 +127,14 @@ When you edit a booking and the price changes:
 
 1. Check the new balance in Finance tab
 2. If price increased → Collect the difference via [Collect payment](#collect-a-payment)
-3. If price decreased → Refund the overpayment from the booking
+3. If price decreased → Process refund via your payment provider
 
 ### Process refunds
 
-Refunds happen right on the booking. The next-step card on the Finance tab shows what's open and hands you the button, whether it's a deposit to return, an overpayment to refund, or a cancelled booking to settle.
+Refund payments through your payment provider's dashboard.
 
-See [return deposits and refunds](/guides/day-to-day/bookings/return-deposits-and-refunds) for the full flow.
+1. Click the payment you want to refund
+2. This opens Stripe or Mollie
+3. Process the refund there
+
+The refund appears in the Finance tab once complete. Learn more in [refunds and disputes](/guides/settings/payments/receive-payments#refunds-and-disputes).
