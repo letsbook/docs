@@ -5,6 +5,9 @@ description: Charge bookings on a card reader at the counter, or use Tap to Pay 
 ---
 
 import Button from '@site/src/components/Button/Button';
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import chargeTerminalVideo from './graphics/charge_terminal.mp4';
 
 # Payment terminals
 
@@ -50,11 +53,7 @@ The list shows each terminal's live status (Online, Offline, or Pending), synced
 
 You follow the payment live in the modal: connecting, waiting for the tap, paid. The payment lands on the booking like any other, so your books stay right automatically.
 
-:::danger TODO: video or photo
-
-Video of a terminal charge (Collect payment → Terminal → live progress → paid), or a photo of a reader in action at the counter.
-
-:::
+<InlineVideoPlayer videoSrc={chargeTerminalVideo} />
 
 ## Good to know
 
