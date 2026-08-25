@@ -338,6 +338,10 @@ const config: Config = {
                             href: 'https://lets-book.com',
                         },
                         {
+                            label: 'System status',
+                            href: 'https://status.letsbook.app',
+                        },
+                        {
                             label: 'Contact support',
                             href: 'mailto:support@lets-book.com',
                         },
