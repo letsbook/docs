@@ -134,8 +134,7 @@ const config: Config = {
                             return items.map((item, index) => {
                                 const richTextSummary = blogPosts[index]
                                     .metadata.frontMatter.richTextSummary as
-                                    | string
-                                    | undefined;
+                                    string | undefined;
 
                                 if (richTextSummary) {
                                     item.extensions = [
