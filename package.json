@@ -44,7 +44,7 @@
         "@docusaurus/tsconfig": "^3.10.2",
         "@docusaurus/types": "^3.10.2",
         "@redocly/cli": "^2.11.1",
-        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@trivago/prettier-plugin-sort-imports": "^6.0.2",
         "playwright": "^1.55.0",
         "prettier": "^3.6.2",
         "sharp": "^0.35.4",
