@@ -10,6 +10,14 @@ We take backward compatibility seriously. Breaking changes are always announced 
 
 Subscribe to the [RSS feed](https://support.letsbook.app/api/changelog.rss) to stay up to date.
 
+## 2026-08-02
+
+### Bookings
+
+- The [confirm booking](/api/#operation/confirmBooking) endpoint now accepts an optional `notifyCustomer` property. When you omit it, the stored value of the booking stays as it is
+- The [confirm booking](/api/#operation/confirmBooking) endpoint now accepts an optional `includePaymentLink` property, which defaults to `true`. It only applies when the effective `notifyCustomer` is true. The amount is the stored costs of the booking minus the amount that the booking already paid
+- The [create booking](/api/#operation/createBooking) endpoint no longer accepts the `includePaymentLink` property. A new booking has no costs yet, so it can never produce a correct payment request. Use the [cost endpoints](/api/#operation/createBookingCost) to set the price, then confirm the booking with `includePaymentLink`
+
 ## 2026-07-10
 
 ### Boats
