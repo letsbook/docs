@@ -10,6 +10,7 @@ const extractTextContent = (children: ReactNode): ReactNode => {
             isValidElement(onlyChild) &&
             onlyChild.type === 'p' &&
             typeof onlyChild.props === 'object' &&
+            onlyChild.props !== null &&
             'children' in onlyChild.props
         ) {
             return onlyChild.props.children as ReactNode;

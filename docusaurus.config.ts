@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type * as Redocusaurus from 'redocusaurus';
 
 const intercomAppId = process.env.INTERCOM_APP_ID;
-const noIndex = !!parseInt(process.env.NO_INDEX);
+const noIndex = !!parseInt(process.env.NO_INDEX ?? '0');
 const siteUrl = process.env.SITE_URL || 'https://support.letsbook.app';
 
 const config: Config = {
