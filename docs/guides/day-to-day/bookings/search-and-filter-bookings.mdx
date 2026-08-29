@@ -4,75 +4,58 @@ sidebar_position: 3
 
 import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
 
-import filterBookingsVideo from '../graphics/filter_bookings.mp4';
 import findBookingVideo from '../graphics/find_booking.mp4';
 
 # Search and filter bookings
 
+The [bookings overview](https://dashboard.letsbook.app/bookings) is your operational home base. Bookings are grouped by pick-up day under headers like "Today" and "Tomorrow", filters sit in an always-visible rail on the left, and a scope switch above the list keeps you focused on what's ahead.
+
+## Choosing your view
+
+The scope control above the list decides which bookings you see:
+
+- **Upcoming**: everything from today onward, with quick presets for All, Today, Next 7 days, and Next 30 days
+- **Past**: finished bookings, with presets for the last 3, 7, or 30 days
+- **Custom**: pick your own date range
+
 ## Finding bookings
 
-There are two ways to quickly find a specific booking in LetsBook:
+There are two ways to quickly find a specific booking:
 
-### Method 1: Via Dashboard
+**From anywhere:** use the search field in the top of your [dashboard](https://dashboard.letsbook.app/) and start typing.
 
-1. Go to your [dashboard](https://dashboard.letsbook.app/)
-2. Use the search field in the center top of the page (next to the magnifying glass icon)
-3. Start typing to search immediately
-
-### Method 2: Via Bookings page
-
-1. Navigate to your [bookings](https://dashboard.letsbook.app/bookings)
-2. Click in the search field at the top of the page
-3. Start typing directly - the system searches automatically as you type
-
-### How to search
-
-You can search by customer name or booking ID. The system shows results as you type.
+**On the bookings page:** use the Find booking field in the top bar. Search by customer name, email, phone number, or booking reference. Results appear as you type.
 
 <InlineVideoPlayer videoSrc={findBookingVideo} />
 
 ## Filtering bookings
 
-To filter your bookings, click the filter icon on the Bookings page. This opens the filter options where you can refine your results.
+On large screens the filters are always visible in the left rail. On smaller screens, click the filter icon in the top bar to open them. Filters apply instantly and combine, so "RIBs at the north dock that haven't paid" is three clicks away.
 
 ### Available filters
 
-**Date range:** Set a specific time period using the date picker
+**Dock:** filter by pick-up location
 
-**Dock:** Filter by specific dock location
+**Boat model:** filter by boat type or model
 
-**Boat model:** Filter by boat type or model
+**Status:** by default you see Confirmed and Completed bookings. Tick **Cancelled** to include those too, or switch to **Custom** to hand-pick from Draft, Confirmed, Completed, Cancelled, and Expired
 
-**Status:** Filter by booking status
+**Payment:** Unpaid, Partly paid, Paid, or Overpaid
 
-- Draft
-- Expired
-- In option
-- Confirmed (selected by default)
-- Completed (selected by default)
-- Canceled
+**Documents:** waivers awaiting signing or completed
 
-**Payment:** Filter by payment status
+**Partner:** filter by [partner](/guides/settings/dive-deeper/partner-bookings)
 
-- Unpaid
-- Partially paid
-- Paid
-- Overpaid
+**Labels:** filter using your custom booking labels
 
-**Partner:** Filter by specific partners
+**Flagged:** show only bookings [flagged for attention](/guides/day-to-day/bookings/flag-bookings)
 
-**Document:** Filter by specific waiver types
+**Delivery issues:** show only bookings where an email or text [failed to arrive](/guides/day-to-day/bookings/booking-notifications)
 
-**Labels:** Filter using your custom labels
-
-**Add-ons:** Toggle to show only bookings with add-ons. For more specific features around orders with add-ons, you can also use [the order overview](https://dashboard.letsbook.app/orders)
-
-### Default filters
-
-By default, bookings with "Confirmed" and "Completed" status are pre-selected, but you can adjust these filters according to your needs.
+Looking for bookings with add-ons? The rail links straight to the [order overview](https://dashboard.letsbook.app/orders), which is built for exactly that.
 
 ### Active filters
 
-Applied filters appear as blue tags below the filter options. You can remove individual filters by clicking the 'x' on each tag.
+Active filters show as removable chips, so you always see exactly what's narrowing the list. Remove them one by one, or hit **Clear all** to reset the filters while keeping your search and date scope.
 
-<InlineVideoPlayer videoSrc={filterBookingsVideo} />
+Your filters are reflected in the page URL, so refreshing keeps your view and sharing the link gives a colleague the exact same slice.
