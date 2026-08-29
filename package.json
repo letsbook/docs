@@ -64,5 +64,8 @@
     },
     "engines": {
         "node": ">=24.0"
+    },
+    "overrides": {
+        "redoc": "^2.5.3"
     }
 }
