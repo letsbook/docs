@@ -61,10 +61,10 @@ Select chooses a branch based on a string value. Use it for types, statuses, or 
 
 - Status message:
   `{status, select,
-  pending {Your booking is pending approval}
-  confirmed {Your booking is confirmed}
-  cancelled {Your booking was cancelled}
-  other {Booking status: {status}}
+pending {Your booking is pending approval}
+confirmed {Your booking is confirmed}
+cancelled {Your booking was cancelled}
+other {Booking status: {status}}
 }`
 
 You can nest formats, for example a select inside a plural.
