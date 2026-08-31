@@ -1,1 +1,11 @@
+# Allowlist: ignore everything at the root, then re-include the areas we format
+/*
+!/api
+!/docs
+!/releases
+!/scripts
+!/src
+!/docusaurus.config.ts
+
+# Files excluded from formatting
 docs/guides/settings/dive-deeper/webhooks.mdx
