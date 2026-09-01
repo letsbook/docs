@@ -1,0 +1,43 @@
+---
+slug: v1.24
+date: 2026-08-20
+releaseVersion: v1.24
+description: Payment terminals are here, charge right at the counter
+richTextSummary: '<p>The counter just got smarter!</p><ul><li>Payment terminals are live: charge bookings on a card reader, or use Tap to Pay on your phone</li><li>One Collect payment button for card, terminal, and payment link</li><li>Plus editable margins per booking, flag pennants on the planning, and smarter booking search</li></ul>'
+hide_table_of_contents: true
+---
+
+import Button from '@site/src/components/Button/Button';
+
+# Charge right at the counter
+
+![A family paying with a card reader at the dock](./images/v1.24_terminals.png)
+
+Payment terminals are here. A remaining balance, a walk-in, or a drink someone grabs on the way out: add it to the booking and tap it off on a card reader, so nobody gets sent off to pay somewhere else.
+
+Order a reader from Mollie or Stripe and you're in business. With Mollie you can even skip the hardware and use Tap to Pay from your own phone.
+
+<Button href="/guides/settings/payments/terminals">
+    Get started with terminals →
+</Button>
+
+## Other updates
+
+- **Collect a payment, your way.** One [Collect payment button](/guides/day-to-day/bookings/manage-booking-finances#collect-a-payment) now covers the card on file, your terminal, and payment links. Pick the method, the rest is pre-filled.
+- **Margins, per booking.** Edit the turnaround [margins](/guides/settings/rental-setups/schedules/slot-schedule#margins) on a single booking, without touching your schedule.
+- **Flags fly on the planning.** Flagged bookings show a pennant right on the booking bar, and notes now open the moment you enter a booking.
+- **Find any booking.** Search covers all your bookings instead of just the current view, and an empty result offers one click to search without filters.
+- **Update emails that show the update.** The booking-updated email can list exactly what changed, old and new side by side.
+- **Notification settings, together.** Turn off booking-update emails for your whole account and point technical notifications at your tech person, both in your [general settings](https://dashboard.letsbook.app/general-info).
+- **Additional charges, your order.** Drag the additional charges on a pricing into the order you want.
+- **New accounts ask for a phone number.** Almost everyone wants one for last-minute changes, so it's now the default for new booking forms. Your own [setting](https://dashboard.letsbook.app/booking-form/phone-number-requirement) stays as you left it.
+- **A status page for the "is it just me?" moments.** Bookmark [status.letsbook.app](https://status.letsbook.app/) to see what's going on when Let's Book feels slow or unreachable.
+- **Stronger sign-in security.** Signing in got a round of hardening, and your phone now offers to fill in the SMS code.
+- Various performance and reliability improvements under the hood.
+
+## Bugfixes
+
+- Cancelled bookings keep their add-on orders and charges visible, so you can see what was ordered and refund the right amount.
+- The signed-documents icon found its way back to the bookings overview.
+- Switching the planning overview from monthly to daily view behaves properly again.
+- Add-on translations keep their line breaks, plus small polish across the add-on screens and the booking-form date picker.
