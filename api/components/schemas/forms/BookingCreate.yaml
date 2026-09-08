@@ -17,13 +17,6 @@ allOf:
           If set to true, the customer will receive a booking
           confirmation email.
         example: false
-      includePaymentLink:
-        default: true
-        type: boolean
-        description: |
-          Whether or not the booking confirmation email should contain a
-          payment request link. Only applicable if notifyCustomer is true.
-        example: true
       confirmed:
         type: boolean
         description: |

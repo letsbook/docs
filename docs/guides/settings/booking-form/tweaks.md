@@ -28,9 +28,11 @@ Control whether customers must enter a phone number at checkout.
 
 - Go to [Booking form > Phone number](https://dashboard.letsbook.app/booking-form/phone-number-requirement)
 - Choose the field rule, then click Save
-    - Required: Pick this if you coordinate last minute changes or dockside handoffs.
-    - Optional (default): Keeps checkout fast for quick bookings.
+    - Required: Pick this if you coordinate last minute changes or dockside handoffs. This is the default for new accounts.
+    - Optional: Keeps checkout fast for quick bookings.
     - Hidden: Use this if you collect numbers in your waiver or CRM instead.
+
+Already using Let's Book? Your current choice stays as it is.
 
 ## Tax / VAT settings
 
