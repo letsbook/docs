@@ -1,0 +1,68 @@
+---
+title: Return deposits and refunds
+sidebar_label: Deposits & refunds
+description: Return security deposits, withhold costs, and refund customers straight from the booking
+sidebar_position: 8
+---
+
+import Button from '@site/src/components/Button/Button';
+
+# Return deposits and refunds
+
+Return a security deposit, refund an overpayment, or settle a cancelled booking straight from the booking's Finance tab. No more detours through your payment provider's dashboard.
+
+## The next-step card
+
+Once a trip has ended (or the booking is cancelled), a next-step card appears on the Finance tab whenever money still needs to move. It tells you what's open and gives you one button to handle it:
+
+- **Return the deposit**: balance settled, the customer gets the full deposit back
+- **Return the remaining deposit**: the customer still owes you something. It comes off the deposit first, and if they owe more than the deposit, you collect the rest after the deduction
+- **Return the deposit and overpayment**: both go back together
+- **Refund the overpayment**: the customer paid more than the booking total
+- **Collect the open balance**: the rental has ended and nothing is on its way
+- **Waiting for the customer to pay**: a payment link is open, nothing to do until it's paid or expires
+
+If the customer no longer owes anything but old payment links are still open, the card offers to revoke them so nobody pays by accident. Once the money is flat, the card disappears.
+
+If the booking carries [flagged notes](/guides/day-to-day/bookings/flag-bookings), the card shows them right there, so you check the damage report before you return the deposit.
+
+## Return a security deposit
+
+1. Open the booking and go to the Finance tab
+2. Click Return security deposit
+3. Choose Return in full, or Partially return to withhold costs
+4. Click Return now
+
+With a partial return you add cost lines for what you're keeping: $50 for that scratch, $25 for the fuel top-up, each with its tax rate. The modal shows the deposit, the costs, and the amount to return, so both of you see exactly what was withheld and why. You can also hold part of the deposit back for now and return the remainder later.
+
+Want a note for your own records? Toggle Add internal note. The customer never sees it.
+
+The money returns through the original payment method and the customer gets an email. A refund cannot be cancelled once it is sent, which is why the modal asks you to confirm. Mollie holds refunds for about 10 minutes before executing them.
+
+## When the customer still owes you
+
+If there's an open balance and you're holding a deposit, tick Collect open balance from the security deposit. The modal shows how much the deposit covers and what stays open. If the deposit covers it all, the booking is settled in one go.
+
+## Refund an overpayment
+
+Paid too much? The next-step card offers to refund the difference. If a deposit is being returned at the same time, both go back in one action.
+
+## Cancelled bookings
+
+For a cancelled booking with payments on it, the card offers to handle the cancellation. Choose Full refund, or Cancellation fee to keep part of it.
+
+The fee comes off the rental refund first. Only what's left over is covered by the security deposit, and the rest of the deposit goes back. If you're not refunding the rental at all, the deposit covers the fee. The breakdown shows the rental payment, the deposit, the fee, and the amount to refund, which is always exactly what the customer receives.
+
+After you confirm, the booking's costs are written down to what you kept, so the balance is flat and the booking leaves the wrap-up list on its own.
+
+## When there's nothing to refund
+
+If the costs you withhold add up to the whole deposit, the deposit is captured and no refund is sent. The customer doesn't get an email either, because nothing changed for them.
+
+## Who can do this
+
+Returning deposits and refunding requires the refund permission on your role. Set it under [roles and permissions](/guides/settings/collaborate/roles-permissions).
+
+---
+
+Settling one booking is nice. Settling the whole day is nicer: see the [Booking wrap-up page](/guides/day-to-day/bookings/booking-wrap-up).
