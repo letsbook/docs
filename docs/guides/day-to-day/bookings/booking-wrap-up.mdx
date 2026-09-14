@@ -15,14 +15,15 @@ The Booking wrap-up page collects every finished booking that still needs someth
     Open booking wrap-up →
 </Button>
 
-You'll also find it under Wrap-up on the [bookings overview](https://dashboard.letsbook.app/bookings). Your dashboard keeps count of what still needs wrapping up from the last 14 days, and tells you when everything is done.
+You'll also find it on the [bookings overview](https://dashboard.letsbook.app/bookings), as a pill next to the date scope that reads how many bookings are waiting to wrap up. Your dashboard shows the same count for the last 14 days, and says All wrapped up when you're done.
 
-## Two tabs
+## Three tabs
 
 - **To do**: bookings that need an action from you. Opens on Last 3 days, with a 4–14 days ago pill next to it. Anything older lives under Custom, where you pick a return date range or All.
 - **Awaiting payment**: bookings with a payment request out. Nothing to do here, they complete on their own once the customer pays.
+- **Processing refund**: bookings with a refund on its way. Stripe can take hours, sometimes days, to confirm one. They move on automatically once it lands, and they don't take up room on your To do tab meanwhile.
 
-Both tabs carry a count badge, so you know the size of the pile before you open it.
+Every tab carries a count badge, so you know the size of the pile before you open it.
 
 ## Working the list
 
@@ -39,7 +40,7 @@ Search by reference or customer, or open the filters to narrow the list by next 
 
 Select the bookings whose next step is Return security deposit, or hit Select all, and click Return selected. You'll see the number of refunds and the total before you confirm.
 
-A refund cannot be cancelled once it is sent, which is why every return asks once. After that the row shows a Refund processing indicator until your payment provider is done. Mollie holds refunds for about 10 minutes before executing them, so give it a moment.
+A refund cannot be cancelled once it is sent, which is why every return asks once. After that the booking moves to the Processing refund tab until your payment provider confirms it. Mollie holds refunds for about 10 minutes before executing them, so give it a moment.
 
 ## Auto-flag the ones that need a look
 
