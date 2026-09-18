@@ -1,0 +1,42 @@
+---
+slug: v1.25
+date: 2026-09-18
+releaseVersion: v1.25
+description: Wrap up finished bookings and return deposits
+richTextSummary: '<p>The one you have been waiting for!</p><ul><li>Return deposits with one click and settle finished bookings from one page</li><li>Your booking form greys out what is not available before customers click</li><li>Plus a calmer Collect payment window and another round of security hardening</li></ul>'
+hide_table_of_contents: true
+---
+
+import Button from '@site/src/components/Button/Button';
+
+# Finished trips, finished finances
+
+![Returning a deposit to a customer at the dock](./images/v1.25_wrap_up.png)
+
+A trip that's over isn't always done. A balance still open, an overpayment to refund, and the big one: a deposit waiting to go back to your customer. Returning deposits is finally here, with one click, in full or partly if the boat came back with a scratch. The new next-step card on the booking's Finance tab shows exactly what's left and hands you the button to handle it.
+
+With the new Booking wrap-up page you settle the whole day in one sitting: every finished booking that still needs something in one list, handled one by one or in batch. Bookings that deserve a closer look get flagged automatically, and the timeline now tells you why.
+
+<Button href="/guides/day-to-day/bookings/booking-wrap-up">
+    See how it works →
+</Button>
+
+## Your booking form knows what's free before they click
+
+Until now a customer picked a date, filled in the rest, and only then found out the boat was gone. We'd suggest an alternative, but the dead end was already there. Now the form greys out what isn't available up front: dates in every picker, and after a date is chosen also docks, boat models and group sizes, each with a short note explaining why.
+
+Smart Alternatives still catches the rest, only now there's a lot less for it to catch.
+
+<Button href="/guides/settings/booking-form/tweaks#unavailable-dates">
+    See what your customers see →
+</Button>
+
+## Other updates
+
+- **A calmer Collect payment window.** Switching between terminal, payment link and card on file no longer jumps around while it resizes.
+- **Tighter locks on the customer area.** Booking details now need their secret link, reset tokens are stored safely, and sign-in got another round of hardening.
+- Various performance and reliability improvements under the hood.
+
+## Bugfixes
+
+- Various smaller fixes and cleanups.

@@ -22,6 +22,16 @@ Set the calendar to match how you rent. Customers can still switch between singl
 
 ![Multi day picker](../graphics/multi_day_picker.png)
 
+### Unavailable dates
+
+Your form knows what's free before customers click. Dates without any availability grey out in every date picker, single day and multi day alike. Once a date is picked, docks, boat models, and group sizes that can't be booked on that date grey out too, with a short note saying so.
+
+![Date picker with unavailable dates greyed out](../graphics/unavailable_dates.png)
+
+Nothing to set up. Availability follows your schedules, blockouts, and existing bookings automatically. And if a spot fills up while a customer is still composing, the form flags the conflict before they submit.
+
+Customers who still run into a full day get [alternatives](/guides/settings/booking-form/alternatives) suggested as before.
+
 ## Phone number
 
 Control whether customers must enter a phone number at checkout.

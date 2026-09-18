@@ -7,6 +7,8 @@ sidebar_label: Offer alternatives
 
 Keep bookings moving even when a boat is taken. Smart alternatives suggest another boat, time, or date - so your customer stays in the flow and your calendar stays full.
 
+Most dead ends never happen: the form already [greys out dates, docks, and boats without availability](/guides/settings/booking-form/tweaks#unavailable-dates) before anyone clicks. Alternatives catch whatever slips through.
+
 ## Offer different times and dates
 
 If no boats are available at the requested time, we suggest nearby time slots or another date.
