@@ -1,5 +1,5 @@
 {
-    "version": "v1.24",
-    "description": "Payment terminals are here, charge right at the counter",
-    "url": "/releases/v1.24"
+    "version": "v1.25",
+    "description": "Wrap up finished bookings and return deposits",
+    "url": "/releases/v1.25"
 }

@@ -1,0 +1,57 @@
+---
+title: Wrap up finished bookings
+sidebar_label: Booking wrap-up
+description: Settle finished bookings in one place, return security deposits in batch, and auto-flag the ones that need a look
+sidebar_position: 9
+---
+
+import Button from '@site/src/components/Button/Button';
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import batchReturnVideo from '../graphics/wrap-up-batch_return.mov';
+
+# Wrap up finished bookings
+
+The Booking wrap-up page collects every finished booking that still needs something: a security deposit to return, a balance to collect, an overpayment to refund, a cancellation to settle. Work through them one by one or return deposits in batch, and end the day with a clean slate.
+
+<Button href="https://dashboard.letsbook.app/bookings/wrap-up">
+    Open booking wrap-up →
+</Button>
+
+You'll also find it on the [bookings overview](https://dashboard.letsbook.app/bookings), as a pill next to the date scope that reads how many bookings are waiting to wrap up. Your dashboard shows the same count for the last 14 days, and says All wrapped up when you're done.
+
+## Three tabs
+
+- **To do**: bookings that need an action from you. Opens on Last 3 days, with a 4–14 days ago pill next to it. Anything older lives under Custom, where you pick a return date range or All.
+- **Awaiting payment**: bookings with a payment request out. Nothing to do here, they complete on their own once the customer pays.
+- **Processing refund**: bookings with a refund on its way. Stripe can take hours, sometimes days, to confirm one. They move on automatically once it lands, and they don't take up room on your To do tab meanwhile.
+
+Every tab carries a count badge, so you know the size of the pile before you open it.
+
+## Working the list
+
+Bookings are grouped under their return day (Today, Yesterday, or the date), with the headers pinned while you scroll. A cancelled booking sorts by its cancellation date instead. Every row shows the security deposit, the balance, and the next step:
+
+- **Return security deposit**: settles right from the list. Confirm, and the refund is on its way
+- **Collect payment**, **Refund overpayment**, **Handle security deposit**, **Handle cancellation**: these take you to the booking's Finance tab, where the [next-step card](/guides/day-to-day/bookings/return-deposits-and-refunds) walks you through it
+
+[Flagged bookings](/guides/day-to-day/bookings/flag-bookings) carry their red pennant, so you check those before returning anything.
+
+Search by reference or customer, or open the filters to narrow the list by next step, labels, or flagged bookings only. Filters live in the page link, so a shared link opens the exact same view.
+
+## Return deposits in batch
+
+Select the bookings whose next step is Return security deposit, or hit Select all, and click Return selected. You'll see the number of refunds and the total before you confirm.
+
+<InlineVideoPlayer videoSrc={batchReturnVideo} />
+
+A refund cannot be cancelled once it is sent, which is why every return asks once. After that the booking moves to the Processing refund tab until your payment provider confirms it. Mollie holds refunds for about 10 minutes before executing them, so give it a moment.
+
+## Auto-flag the ones that need a look
+
+Under [booking wrap-up settings](https://dashboard.letsbook.app/booking-wrap-up) you can enable two automation rules:
+
+- **Flag cancelled bookings**: cancelled bookings get flagged automatically, so you decide about their money deliberately
+- **Auto-flag late returns**: boats that came back late get flagged, handy when a late return means withholding part of the deposit
+
+Both rules are off by default. An auto-flagged booking shows why it was flagged on its timeline and in the flag pill, so nobody has to guess.
