@@ -6,6 +6,9 @@ sidebar_position: 9
 ---
 
 import Button from '@site/src/components/Button/Button';
+import InlineVideoPlayer from '@site/src/components/InlineVideoPlayer';
+
+import batchReturnVideo from '../graphics/wrap-up-batch_return.mov';
 
 # Wrap up finished bookings
 
@@ -27,12 +30,6 @@ Every tab carries a count badge, so you know the size of the pile before you ope
 
 ## Working the list
 
-:::danger TODO: screenshot
-
-The To do tab with a few rows: return-day headers, a Return security deposit row, a Handle cancellation row, a pennant, and the count badges on the three tabs. Save it as `../graphics/wrap_up_queue.png`.
-
-:::
-
 Bookings are grouped under their return day (Today, Yesterday, or the date), with the headers pinned while you scroll. A cancelled booking sorts by its cancellation date instead. Every row shows the security deposit, the balance, and the next step:
 
 - **Return security deposit**: settles right from the list. Confirm, and the refund is on its way
@@ -44,13 +41,9 @@ Search by reference or customer, or open the filters to narrow the list by next 
 
 ## Return deposits in batch
 
-:::danger TODO: video
-
-Short video of a batch return: tick two rows, Return selected, the confirmation with the total, then the Sent banner. Save it as `../graphics/wrap_up_batch_return.mp4`.
-
-:::
-
 Select the bookings whose next step is Return security deposit, or hit Select all, and click Return selected. You'll see the number of refunds and the total before you confirm.
+
+<InlineVideoPlayer videoSrc={batchReturnVideo} />
 
 A refund cannot be cancelled once it is sent, which is why every return asks once. After that the booking moves to the Processing refund tab until your payment provider confirms it. Mollie holds refunds for about 10 minutes before executing them, so give it a moment.
 
