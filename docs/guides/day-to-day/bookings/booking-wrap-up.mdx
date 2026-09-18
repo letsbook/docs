@@ -12,18 +12,18 @@ import batchReturnVideo from '../graphics/wrap-up-batch_return.mov';
 
 # Wrap up finished bookings
 
-The Booking wrap-up page collects every finished booking that still needs something: a security deposit to return, a balance to collect, an overpayment to refund, a cancellation to settle. Work through them one by one or return deposits in batch, and end the day with a clean slate.
+The Booking wrap-up page collects every finished booking, meaning every booking whose trip has ended, that still needs something: a security deposit to return, a balance to collect, an overpayment to refund, a cancellation to settle. Work through them one by one or return deposits in batch, and end the day with a clean slate.
 
 <Button href="https://dashboard.letsbook.app/bookings/wrap-up">
     Open booking wrap-up →
 </Button>
 
-You'll also find it on the [bookings overview](https://dashboard.letsbook.app/bookings), as a pill next to the date scope that reads how many bookings are waiting to wrap up. Your dashboard shows the same count for the last 14 days, and says All wrapped up when you're done.
+Next to the dedicated page, the [bookings overview](https://dashboard.letsbook.app/bookings) shows a Wrap-up button beside the date scope, with the number of bookings waiting. Your dashboard shows the same count for the last 14 days, and says All wrapped up when you're done.
 
 ## Three tabs
 
-- **To do**: bookings that need an action from you. Opens on Last 3 days, with a 4–14 days ago pill next to it. Anything older lives under Custom, where you pick a return date range or All.
-- **Awaiting payment**: bookings with a payment request out. Nothing to do here, they complete on their own once the customer pays.
+- **To do**: bookings where money still has to move: a balance that isn't settled, or a security deposit still to return even when the balance is already paid. Opens on Last 3 days, with a 4–14 days ago pill next to it. Anything older lives under Custom, where you pick a return date range or All.
+- **Awaiting payment**: bookings with a payment request out. Nothing to do here, they complete on their own once the customer pays. If the request expires unpaid, the booking moves back to To do so you can collect another way.
 - **Processing refund**: bookings with a refund on its way. Stripe can take hours, sometimes days, to confirm one. They move on automatically once it lands, and they don't take up room on your To do tab meanwhile.
 
 Every tab carries a count badge, so you know the size of the pile before you open it.
